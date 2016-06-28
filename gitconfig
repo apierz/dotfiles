@@ -1,0 +1,10 @@
+[credential]
+	helper = osxkeychain
+[core]
+	editor = emacs -nw
+	excludesfile = /Users/Andy/.gitignore_global
+[color]
+	ui = true
+[user]
+	email = andy@andypierz.com
+	name = Andy Pierz

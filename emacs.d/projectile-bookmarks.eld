@@ -1,0 +1,1 @@
+("~/Sites/simple_cms/" "~/" "~/Documents/Programming_Projects/food_finder/" "/usr/local/")

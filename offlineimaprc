@@ -1,0 +1,46 @@
+[general]
+accounts = personal, work
+maxsyncaccounts = 3
+pythonfile = /Users/Andy/.offlineimap.py
+
+[Account personal]
+localrepository = personalLocal
+remoterepository = personalRemote
+quick = 0
+
+[Repository personalLocal]
+type = Maildir
+localfolders = /Users/Andy/.Maildir/personal
+
+[Repository personalRemote]
+type = IMAP
+remotehost = mail.hover.com
+remoteuser = andy@andypierz.com
+remotepasseval = get_keychain_pass_personal(account="andy@andypierz.com", server="mail.hover.com")
+
+remoteport = 993
+ssl = yes
+maxconnections = 2
+realdelete = no
+cert_fingerprint = dd029615341b1388233e85e868ecd91df4a15a68
+
+[Account work]
+localrepository = workLocal
+remoterepository = workRemote
+quick = 0
+
+[Repository workLocal]
+type = Maildir
+localfolders = /Users/Andy/.Maildir/work
+
+[Repository workRemote]
+type = IMAP
+remotehost = mail.hover.com
+remoteuser = andy@mutdut.com
+remotepasseval = get_keychain_pass_work(account="andy@mutdut.com", server="mail.hover.com")
+remoteport = 993
+ssl = yes
+maxconnections = 2
+realdelete = no
+cert_fingerprint = dd029615341b1388233e85e868ecd91df4a15a68
+
