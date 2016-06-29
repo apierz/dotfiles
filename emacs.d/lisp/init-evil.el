@@ -72,18 +72,26 @@
   (evil-leader/set-leader ",")
   (setq evil-leader/in-all-states 1)
   (evil-leader/set-key
+    "k"  'switch-to-previous-buffer
+    "m"  'previous-buffer
+    "."  'next-buffer
+    ":"  'eval-expression
+    "b"  'helm-mini
+    "d"  'kill-this-buffer
     "e"  'find-file
     "f"  'fontify-and-browse
     "p"  'cycle-powerline-separators
     "b"  'switch-to-buffer
-    "k"  'kill-buffer
     "."  'switch-to-previous-buffer
     "l"  'whitespace-mode       ;; Show invisible characters
     "nn" 'narrow-and-set-normal ;; Narrow to region and enter normal mode
     "nw" 'widen
     "o"  'delete-other-windows  ;; C-w o
     "S"  'delete-trailing-whitespace
-    "w"  'save-buffer ))
+    "t"  'gtags-reindex
+    "T"  'gtags-find-tag
+    "w"  'save-buffer
+    "x"  'helm-M-x))
 
 (global-evil-leader-mode)
 (air--config-evil-leader)

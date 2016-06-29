@@ -9,6 +9,8 @@ alias gb='git branch'
 source ~/.git-completion.bash
 source ~/.bash_git
 
+GIT_PS1_SHOWDIRTYSTATE=1
+
 PS1='\[\033[30;43m\]\[\033[43;90m\]\W\[\033[33;42m\]\[\033[42;90m\]$(__git_ps1 "  %s ")\[\033[32;44m\]  \[\033[0m\]\[\033[34m\]\[\033[0m\] '
 
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$PATH"

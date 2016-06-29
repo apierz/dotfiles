@@ -76,6 +76,31 @@ Version 2015-06-12"
     (funcall (and initial-major-mode))
     (setq buffer-offer-save t)))
 
+(defun rename-this-file-and-buffer (new-name)
+  "Renames both current buffer and file it's visiting to NEW-NAME."
+  (interactive "sNew name: ")
+  (let ((name (buffer-name))
+        (filename (buffer-file-name)))
+    (unless filename
+      (error "Buffer '%s' is not visiting a file!" name))
+    (if (get-buffer new-name)
+        (message "A buffer named '%s' already exists!" new-name)
+      (progn
+        (when (file-exists-p filename)
+         (rename-file filename new-name 1))
+        (rename-buffer new-name)
+(set-visited-file-name new-name)))))
+
+(defun delete-this-file ()
+  "Delete the current file, and kill the buffer."
+  (interactive)
+  (or (buffer-file-name) (error "No file is currently being edited"))
+  (when (yes-or-no-p (format "Really delete '%s'?"
+                             (file-name-nondirectory buffer-file-name)))
+    (delete-file (buffer-file-name))
+(kill-this-buffer)))
+
+
 (require 'htmlfontify)
 (defun fontify-and-browse ()
   "Fontify the current buffer into HTML, write it to a temp file, and open it in a browser."
@@ -119,6 +144,15 @@ Repeated invocations toggle between the two most recently open buffers."
     (set-selective-display
      (if (< (- selective-display 1) 1)
          nil
+
+(defun narrow-and-set-normal ()
+  "Narrow to the region and, if in a visual mode, set normal mode."
+  (interactive)
+  (narrow-to-region (region-beginning) (region-end))
+  (if (string= evil-state "visual")
+      (progn (evil-normal-state nil)
+(evil-goto-first-line))))
+
 
  (defun narrow-and-set-normal ()
   "Narrow to the region and, if in a visual mode, set normal mode."
