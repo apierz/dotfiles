@@ -77,7 +77,7 @@
           (decode-char 'ucs #x259F))
                            "Deja Vu Sans Mono")
 
-;; Write backups to ~/.emacs.d/backup/
+;; Write backups to Dropbox
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (setq backup-directory-alist '(("." . "~/Dropbox/emacs_backups"))
@@ -91,9 +91,9 @@
 ;;; Require Nothing Further
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (use-package magit)
-;; (use-package flycheck
-;;   :config
-;;   (global-flycheck-mode))
+(use-package flycheck
+  :config
+  (global-flycheck-mode))
 (use-package evil-magit)
 (use-package fill-column-indicator)
 (use-package unbound)
@@ -109,7 +109,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (load-theme 'dracula t)
 (set-face-attribute 'default nil
-                     :family "Menlo" :height 140)
+                     :family "Hack" :height 140)
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

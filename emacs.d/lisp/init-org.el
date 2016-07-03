@@ -51,7 +51,7 @@
 
 ;; For Dracula
 (custom-set-faces
-  '(org-level-1 ((t (:height 1.0 :foreground "#8be9fd" :height 2.0 :weight bold))))
+  '(org-level-1 ((t (:foreground "#8be9fd" :height 2.0 :weight bold))))
   '(org-level-2 ((t (:foreground "#ffb86c" :weight bold :height 1.0))))
   '(org-level-3 ((t (:foreground "#ff79c6" :height 1.0))))
   '(org-level-4 ((t (:foreground "#bd93f9" :height 1.0))))

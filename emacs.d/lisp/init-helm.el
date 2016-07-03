@@ -17,8 +17,6 @@
 
 (with-eval-after-load
   'helm (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)
-     (define-key helm-map (kbd "i") 'helm-previous-line)
-     (define-key helm-map (kbd "k") 'helm-next-line)
      (define-key helm-map (kbd "ESC") 'helm-keyboard-quit)
 )
 

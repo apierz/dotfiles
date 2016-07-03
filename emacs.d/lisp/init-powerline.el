@@ -1,22 +1,23 @@
 (provide 'init.powerline)
 ;; For Dracula Theme
+
 (defface my-pl-segment1-active
   '((t (:foreground "#f1fa8c" :background "#3a2e58")))
   "Powerline first segment active face.")
 (defface my-pl-segment1-inactive
- '((t (:foreground "#f8f8f2" :background "#3a2e58")))
+ '((t (:foreground "#f8f8f2" :background "#545565")))
   "Powerline first segment inactive face.")
 (defface my-pl-segment2-active
   '((t (:foreground "#f8f8f2" :background "#bd93f9")))
   "Powerline second segment active face.")
 (defface my-pl-segment2-inactive
-  '((t (:foreground "#f8f8f2" :background "#3a2e58")))
+  '((t (:foreground "#f8f8f2" :background "#545565")))
   "Powerline second segment inactive face.")
 (defface my-pl-segment3-active
   '((t (:foreground "#bd93f9" :background "#3a2e58")))
   "Powerline third segment active face.")
 (defface my-pl-segment3-inactive
-  '((t (:foreground "#f8f8f2" :background "#3a2e58")))
+  '((t (:foreground "#f8f8f2" :background "#545565")))
   "Powerline third segment inactive face.")
 (defface my-pl-segment4-active
   '((t (:foreground "#ffffff" :background "#f1fa8c")))
@@ -28,11 +29,18 @@
   '((t (:foreground "#ff79c6" :background "#3a2e58")))
   "Powerline buffersize segment active face.")
 (defface my-pl-segment5-inactive
-  '((t (:foreground "#f8f8f2" :background "#3a2e58")))
+  '((t (:foreground "#f8f8f2" :background "#545565")))
   "Powerline buffersize segment inactive face.")
+(defface my-pl-segment6-active
+ '((t (:foreground "#f1fa8c" :background "#3a2e58" :weight bold)))
+  "Powerline buffer-id  segment active face.")
+(defface my-pl-segment6-inactive
+ '((t (:foreground "#f8f8f2" :background "#545565" :weight bold)))
+  "Powerline buffer-id  segment inactive face.")
 
 
-;; Alt Background color: #44475a
+;; Alt Background color: #44475A
+;; Alt Background color: #3a2E58
 
 (defun andy--powerline-default-theme ()
   "Set up my custom Powerline with Evil indicators."
@@ -46,6 +54,7 @@
          (seg3 (if active 'my-pl-segment3-active 'my-pl-segment3-inactive))
          (seg4 (if active 'my-pl-segment4-active 'my-pl-segment4-inactive))
          (seg5 (if active 'my-pl-segment5-active 'my-pl-segment5-inactive))
+         (seg6 (if active 'my-pl-segment6-active 'my-pl-segment6-inactive))
          (separator-left (intern (format "powerline-%s-%s"
                                (powerline-current-separator)
                                (car powerline-default-separator-dir))))
@@ -61,7 +70,7 @@
                          (powerline-raw "[%*]" seg1 'l)
                          (when powerline-display-buffer-size
                            (powerline-buffer-size seg5 'l))
-                         (powerline-buffer-id seg1 'l)
+                         (powerline-buffer-id seg6 'l)
                          (when (and (boundp 'which-func-mode) which-func-mode)
                            (powerline-raw which-func-format seg1 'l))
                          (powerline-raw " " seg1)
@@ -76,8 +85,6 @@
                          (powerline-minor-modes seg3 'l)
                          ))
                          (rhs (list (powerline-raw global-mode-string seg3 'r)
-                         (when (bound-and-true-p nyan-mode)
-                           (powerline-raw (list (nyan-create)) seg3 'l))
                          (funcall separator-left seg3 seg2)
                          (powerline-vc seg2 'r) 
                          (powerline-raw "|" seg2 'r)
