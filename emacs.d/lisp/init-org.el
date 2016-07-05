@@ -1,4 +1,15 @@
+;;; package --- Summary:
+
+;;; Commentary:
+
+;;; Code:
+
 (provide 'init-org)
+
+(use-package org)
+(use-package ox)
+(use-package org-grep)
+(use-package org-capture)
 
 ;; The Basic Bindings
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -64,6 +75,7 @@
 (add-to-list 'linum-disabled-modes-list "org-mode")
 
 (setq org-cycle-separator-lines 0)
+(setq org-startup-truncated nil)
 
 
 ;; org-capture stuff
@@ -101,13 +113,12 @@
 
 
 (defun mark-done-and-archive ()
-  "Mark the state of an org-mode item as DONE and archive it."
+  "Mark the state of an 'org-mode' item as DONE and archive it."
   (interactive)
   (org-todo 'done)
   (org-archive-subtree))
 
 (define-key global-map "\C-c\C-x\C-s" 'mark-done-and-archive)
-;; (setq org-log-done 'time)
 
 ;; Exporting
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -134,3 +145,4 @@
 (setq org-grep-directories (list "~/Dropbox/Notes"))
 
 (provide 'init-org)
+;;; init-org.el ends here

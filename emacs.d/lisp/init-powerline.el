@@ -1,5 +1,12 @@
+;;; package --- Summary
+
+;;; Commentary:
+
+;;; Code:
 (provide 'init.powerline)
 ;; For Dracula Theme
+
+(defgroup segments-group nil "My powerline line segments" :group 'segments)
 
 (defface my-pl-segment1-active
   '((t (:foreground "#f1fa8c" :background "#3a2e58")))
@@ -86,7 +93,7 @@
                          ))
                          (rhs (list (powerline-raw global-mode-string seg3 'r)
                          (funcall separator-left seg3 seg2)
-                         (powerline-vc seg2 'r) 
+                         (powerline-vc seg2 'r)
                          (powerline-raw "|" seg2 'r)
                          (unless window-system
                            (powerline-raw (char-to-string #xe0a1) seg2 'l))
@@ -116,4 +123,4 @@
 (require 'powerline)
 
 (provide 'init-powerline)
-
+;;; init-powerline.el ends here

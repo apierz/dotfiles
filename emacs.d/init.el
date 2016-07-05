@@ -1,3 +1,9 @@
+;;; package --- Summary
+
+;;; Commentary:
+
+;;; Code:
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Package and load path stuff
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -12,18 +18,17 @@
 (package-initialize)
 
 (require 'use-package)
+(require 'advice)
+(require 'evil)
+(require 'helm)
+(require 'powerline)
 
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 (add-to-list 'auto-mode-alist '("\\.org\\;" . org-mode))
 (add-to-list 'load-path "~/.emacs.d/plugins/evil-org-mode")
-(add-to-list 'load-path "/usr/local/share/emacs/site-lisp/mu4e")
+(add-to-list 'load-path "/usr/local/Cellar/mu/HEAD/bin/mu")
 (add-to-list 'exec-path "/usr/local/bin")
-(add-to-list 'load-path "/Users/Andy/.emacs.d/elpa/benchmark-init")
 (add-to-list 'load-path "/Users/Andy/Documents/Programming_Projects/dracula-theme/emacs")
-
-(require 'benchmark-init-loaddefs)
-(benchmark-init/activate)
-
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Essential settings
@@ -45,16 +50,14 @@
 (setq split-width-threshold nil)
 (setq custom-safe-themes t)
 (put 'narrow-to-region 'disabled nil)
-(setq evil-want-C-i-jump nil)
 (setq global-visual-line-mode t)
-(setq org-startup-truncated nil)
 (setq word-wrap t)
 (setq initial-major-mode 'org-mode)
 (setq initial-scratch-message "")
-(setq ns-use-srgb-colorspace t)
+;; (setq ns-use-srgb-colorspace t)
 (add-to-list 'default-frame-alist '(height . 50))
 (add-to-list 'default-frame-alist '(width . 80))
-(setq-default fill-column 80)        
+(setq-default fill-column 80)
 (setq-default tab-width 2)
 (put 'dired-find-alternate-file 'disabled nil)
 
@@ -65,8 +68,7 @@
 (set-default-coding-systems 'utf-8)
 (set-terminal-coding-system 'utf-8)
 (set-keyboard-coding-system 'utf-8)
-(setq default-buffer-file-coding-system 'utf-8)                      
-(setq x-select-request-type '(UTF8_STRING COMPOUND_TEXT TEXT STRING))
+(setq buffer-file-coding-system 'utf-8)
 
 (use-package unicode-fonts
   :config
@@ -99,7 +101,7 @@
 (use-package unbound)
 (use-package diminish)
 (use-package nnir)
-(require 'dracula-theme)
+(use-package dracula-theme)
 (use-package dumb-jump
   :config
   (dumb-jump-mode))
@@ -111,24 +113,29 @@
 (set-face-attribute 'default nil
                      :family "Hack" :height 140)
 
+;; set transparency
+(set-frame-parameter (selected-frame) 'alpha '(90 90))
+(add-to-list 'default-frame-alist '(alpha 90 90))
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Other Dot Files
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-(require 'init-utils)        ;; Various useful functions
-(require 'init-powerline)    ;; My Awesome Bottom Bar
-(require 'init-org)          ;; color/capture settings, etc.
-(require 'init-helm)         ;; some minor keybindings
-(require 'init-engine)       ;; search from within Emacs "C-c /"
-(require 'init-projectile)   ;; project mgmt
-(require 'init-evil)         ;; Hail Satan! plus all other keybindings
-(require 'init-mu4e)         ;; my email setup
+(use-package init-utils)        ;; Various useful functions
+(use-package init-powerline)    ;; My Awesome Bottom Bar
+(use-package init-org)          ;; color/capture settings, etc.
+(use-package init-helm)         ;; some minor keybindings
+(use-package init-engine)       ;; search from within Emacs "C-c /"
+(use-package init-projectile)   ;; project mgmt
+(use-package init-evil)         ;; Hail Satan! plus all other keybindings
+(use-package init-mu4e)         ;; my email setup
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Hide some modes from the powerline
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
 (diminish-minor-mode 'auto-complete 'auto-complete-mode " ⓐ ")
 (diminish-minor-mode 'flycheck 'flycheck-mode " ⓕ ")
 (diminish-minor-mode 'projectile 'projectile-mode " ⓟ ")
@@ -169,10 +176,12 @@
 
 ;; Python
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(setq python-indent 2)
+(use-package python)
+(setq python-indent-offset 2)
 
 ;; sh
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(use-package sh-script)
 (add-hook 'sh-mode-hook
           (lambda ()
             (rainbow-delimiters-mode)
@@ -181,6 +190,7 @@
 
 ;; Ruby
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(use-package ruby-mode)
 (add-hook 'ruby-mode-hook
   (lambda ()
     (setq ruby-insert-encoding-magic-comment nil)
@@ -214,7 +224,7 @@
 
 (linum-mode)
 (global-linum-mode)
-(setq linum-format "%4d \u2502 ") 
+(setq linum-format "%4d \u2502 ")
 (set-face-attribute 'linum nil :slant 'normal)
 (with-eval-after-load 'linum
 (linum-relative-toggle))
@@ -236,4 +246,5 @@
   :config
   (epa-file-enable))
 
-
+(provide 'init)
+;;; init.el ends here

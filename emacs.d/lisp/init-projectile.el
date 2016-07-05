@@ -1,3 +1,9 @@
+;;; package --- Summary
+
+;;; Commentary:
+
+;;; Code:
+
 (provide 'init-projectile)
 
 (require 'projectile)
@@ -14,3 +20,4 @@
 (set-face-attribute 'helm-source-header nil :foreground "#ffb86c" :height 1.44)
 
 (provide 'init-projectile)
+;;; init-projectile.el ends here

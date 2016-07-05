@@ -1,7 +1,12 @@
-(provide 'init-mu4e)
-(require 'mu4e)
+;;; package --- Summary
+;;; Commentary:
+;;; Code:
 
-(require 'mu4e-multi)
+
+(provide 'init-mu4e)
+(use-package mu4e)
+(use-package mu4e-multi)
+(use-package evil-mu4e)
 
 (setq mu4e-mu-binary "/usr/local/Cellar/mu/HEAD/bin/mu")
 (setq mu4e-maildir "/Users/Andy/.Maildir")
@@ -110,7 +115,7 @@
         (account-vars (cdr (assoc account my-mu4e-account-alist))))
     (if account-vars
       (mapc #'(lambda (var)
-b       (set (car var) (cadr var)))
+       (set (car var) (cadr var)))
           account-vars)
     (error "No email account found"))))
 
@@ -119,7 +124,7 @@ b       (set (car var) (cadr var)))
 
 ;;; Keybindings for mu4e
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(require 'evil-mu4e)
+(use-package evil-mu4e)
 
 (define-key mu4e-headers-mode-map "p" 'mu4e-headers-mark-for-flag)
 
@@ -155,4 +160,4 @@ b       (set (car var) (cadr var)))
 
 
 (provide 'init-mu4e)
-
+;;; init-mu4e.el ends here

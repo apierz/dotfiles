@@ -1,3 +1,9 @@
+;;; package --- Summary:
+
+;;; Commentary:
+
+;;; Code:
+
 (provide 'init-utils)
 
 ;; Use abeiber's function to cycle the powerline seperators
@@ -18,7 +24,7 @@
 
 
 (defun set-exec-path-from-shell-PATH ()
-  "Sets the exec-path to the same value used by the user shell"
+  "Set the 'exec-path' to the same value used by the user shell."
   (let ((path-from-shell
          (replace-regexp-in-string
           "[[:space:]\n]*$" ""
@@ -30,26 +36,18 @@
 
 
 (defmacro diminish-minor-mode (filename mode &optional abbrev)
+  "Supply a FILENAME, to hide a minor MODE or replace with an ABBREV."
   `(eval-after-load (symbol-name ,filename)
      '(diminish ,mode ,abbrev)))
 
 (defmacro diminish-major-mode (mode-hook abbrev)
+  "Supply a MODE-HOOK, to hide a major MODE or replace with an ABBREV."
   `(add-hook ,mode-hook
              (lambda () (setq mode-name ,abbrev))))
 
 
-(defmacro rename-major-mode (package-name mode new-name)
- `(eval-after-load ,package-name
-   '(defadvice ,mode (after rename-modeline activate)
-      (setq mode-name ,new-name))))
-
-(defmacro rename-minor-mode (package mode new-name)
- `(eval-after-load ,package
-   '(diminish ',mode ,new-name)))
-
-
-
 (defun search-my-notes (searchforthis)
+  "Search for SEARCHFORTHIS."
   (interactive "sSearch Query: ")
   (rgrep searchforthis "*.txt"  "~/Dropbox/Notes"))
 
@@ -133,18 +131,6 @@ Repeated invocations toggle between the two most recently open buffers."
   (interactive)
   (switch-to-buffer (other-buffer (current-buffer) 1)))
 
-(defun selective-display-increase ()
-  (interactive)
-  (set-selective-display
-   (if selective-display (+ selective-display 1) 1)))
-
-(defun selective-display-decrease ()
-  (interactive)
-  (when selective-display
-    (set-selective-display
-     (if (< (- selective-display 1) 1)
-         nil
-
 (defun narrow-and-set-normal ()
   "Narrow to the region and, if in a visual mode, set normal mode."
   (interactive)
@@ -153,15 +139,5 @@ Repeated invocations toggle between the two most recently open buffers."
       (progn (evil-normal-state nil)
 (evil-goto-first-line))))
 
-
- (defun narrow-and-set-normal ()
-  "Narrow to the region and, if in a visual mode, set normal mode."
-  (interactive)
-  (narrow-to-region (region-beginning) (region-end))
-  (if (string= evil-state "visual")
-      (progn (evil-normal-state nil)
-             (evil-goto-first-line))))      (- selective-display 1)))))
-
-
 (provide 'init-utils)
-
+;;; init-utils.el ends here

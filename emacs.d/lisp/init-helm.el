@@ -1,5 +1,12 @@
-(provide 'init-helm)
+;;; package -- SUmmary
 
+;;; Commentary:
+
+;;; Code:
+
+
+(provide 'init-helm)
+(require 'helm)
 (require 'helm-config)
 
 ;; helm key-bindings
@@ -21,3 +28,4 @@
 )
 
 (provide 'init-helm)
+;;; init-helm.el ends here

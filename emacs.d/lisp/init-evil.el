@@ -1,9 +1,14 @@
+;;; package --- Summary
+
+;;; Commentary:
+
+;;; Code:
 (provide 'init-evil)
 
 (require 'key-chord)
 (key-chord-mode 1)
+
 (require 'dired)
-(require 'evil)
 (require 'evil-leader)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -26,15 +31,15 @@
 ;; Switch Mac Meta Key
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(defun mac-switch-meta nil 
-  "switch meta between Option and Command"
+(defun mac-switch-meta nil
+  "Switch meta between Option and Command."
   (interactive)
   (if (eq mac-option-modifier nil)
       (progn
-	(setq mac-option-modifier 'meta)
-	(setq mac-command-modifier 'hyper)
-	)
-    (progn 
+  (setq mac-option-modifier 'meta)
+  (setq mac-command-modifier 'hyper)
+)
+    (progn
       (setq mac-option-modifier nil)
       (setq mac-command-modifier 'meta)
       )
@@ -46,15 +51,18 @@
 
 
 (defun pbcopy ()
+  "Use OSXs pasterboard for copying."
   (interactive)
   (call-process-region (point) (mark) "pbcopy")
   (setq deactivate-mark t))
 
 (defun pbpaste ()
+  "Use OSXs pasterboard for pasting."
   (interactive)
   (call-process-region (point) (if mark-active (mark) (point)) "pbpaste" t t))
 
 (defun pbcut ()
+  "Use OSXs pasterboard for cutting."
   (interactive)
   (pbcopy)
   (delete-region (region-beginning) (region-end)))
@@ -197,5 +205,8 @@
 (evil-commentary-mode)
 
 
-(provide 'init-evil)
+(setq evil-want-C-i-jump nil)
 
+
+(provide 'init-evil)
+;;; init-evil.el ends here
