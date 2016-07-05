@@ -21,7 +21,6 @@
 (require 'advice)
 (require 'evil)
 (require 'helm)
-(require 'powerline)
 
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 (add-to-list 'auto-mode-alist '("\\.org\\;" . org-mode))
