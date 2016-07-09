@@ -46,6 +46,13 @@
 (setq-default tab-width 2)
 (put 'dired-find-alternate-file 'disabled nil)
 
+(setq backup-directory-alist '(("." . "~/Dropbox/emacs_backups"))
+      backup-by-copying      t  ; Don't de-link hard links
+      version-control        t  ; Use version numbers on backups
+      delete-old-versions    t  ; Automatically delete excess backups:
+      kept-new-versions      5 ; how many of the newest versions to keep
+      kept-old-versions      5) ; and how many of the old
+
 (defun cycle-powerline-separators (&optional reverse)
   "Set Powerline separators in turn.  If REVERSE is not nil, go backwards."
  (interactive)
@@ -137,7 +144,6 @@ Repeated invocations toggle between the two most recently open buffers."
   `(add-hook ,mode-hook
              (lambda () (setq mode-name ,abbrev))))
 
-
 (defun search-my-notes (searchforthis)
   "Search for SEARCHFORTHIS."
   (interactive "Search Query: ")
@@ -185,6 +191,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 (diminish-minor-mode 'projectile 'projectile-mode " ⓟ ")
 (diminish-minor-mode 'robe 'robe-mode " ⓡ ")
 (diminish-minor-mode 'flymake 'flymake-mode " ⓜ ")
+(diminish-minor-mode 'evil-snipe 'evil-snipe-mode)
 (diminish-minor-mode 'evil-surround 'evil-surround-mode )
 (diminish-minor-mode 'evil-commentary 'evil-commentary-mode)
 (diminish-minor-mode 'yasnippet 'yas-minor-mode)
@@ -210,7 +217,11 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
   (global-evil-surround-mode 1))
 (use-package evil-commentary
   :config
-(evil-commentary-mode))
+  (evil-commentary-mode))
+(use-package evil-snipe
+  :config
+  (evil-snipe-mode 1)
+  (evil-snipe-override-mode 1))
 
 (use-package key-chord
   :config
@@ -346,15 +357,32 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 (setq evil-normal-state-modes (append evil-motion-state-modes
   evil-normal-state-modes))
 
-(global-set-key "\C-cl" 'org-store-link)
-(global-set-key "\C-ca" 'org-agenda)
-(global-set-key "\C-cc" 'org-capture)
-(global-set-key "\C-cb" 'org-iswitchb)
+(use-package org)
+(use-package ox)
+(use-package org-grep)
+(use-package org-capture)
 
 (global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cc" 'org-capture)
 (global-set-key "\C-cb" 'org-iswitchb)
+
+(setq org-export-coding-system 'utf-8)
+(setq org-agenda-files (list "~/Dropbox/Notes"))
+(setq org-agenda-file-regexp "\\`[^.].*\\.txt\\|[0-9]\\{8\\}\\'")
+(add-to-list 'auto-mode-alist '("\\.txt$" . org-mode))
+(setq org-agenda-text-search-extra-files (list nil ))
+
+
+(add-hook 'find-file-hooks 
+  (lambda ()
+    (let ((file (buffer-file-name)))
+    (when (and file (equal (file-name-directory file) "~/Dropbox/Notes"))
+    (org-mode)))))
+
+(use-package linum-off
+  :config
+  (add-to-list 'linum-disabled-modes-list "org-mode"))
 
 (setq org-todo-keywords
   '((sequence "TODO(t)" "ONDECK(o)" "WAITING(w)" "SOMEDAY(s)" "CURRENT(c)" "|" "DONE(d)")))
@@ -436,6 +464,11 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 (use-package dumb-jump
   :config
   (dumb-jump-mode))
+
+(use-package diff-hl)
+
+(add-hook 'prog-mode-hook 'turn-on-diff-hl-mode)
+(add-hook 'vc-dir-mode-hook 'turn-on-diff-hl-mode)
 
 (add-hook 'emacs-lisp-mode-hook
           (lambda ()
@@ -769,3 +802,8 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 
 (use-package magit)
 (use-package evil-magit)
+
+(use-package epa-file
+  :config
+  (unless (memq epa-file-handler file-name-handler-alist)
+  (epa-file-enable)))

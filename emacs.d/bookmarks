@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("simple_cms"
+(("config.org"
+ (filename . "~/Documents/dotfiles/emacs.d/config.org")
+ (front-context-string . "\n  (global-set-k")
+ (rear-context-string . "ge helm-config)\n")
+ (position . 31526))
+("simple_cms"
  (filename . "~/Sites/simple_cms/")
  (front-context-string . ".DS_Store\n  drwx")
  (rear-context-string . "96 May 16 07:57 ")
@@ -27,39 +32,19 @@
  (front-context-string . "dracula-theme.el")
  (rear-context-string . "08 Jun 12 11:03 ")
  (position . 494))
-("init-powerline.el"
- (filename . "~/.emacs.d/lisp/init-powerline.el")
- (front-context-string . "(provide 'init.p")
- (rear-context-string)
- (position . 1))
 ("ruby-fles"
  (filename . "~/Documents/Ruby/")
  (front-context-string . " .DS_Store\n  -rw")
  (rear-context-string . "148 May 17 21:09")
  (position . 227))
-("org.el"
- (filename . "~/.emacs.d/lisp/init-org.el")
- (front-context-string . "\n  '(org-level-3")
- (rear-context-string . " :height 1.0))))")
- (position . 1200))
 ("todo.txt"
  (filename . "~/Dropbox/Notes/todo.txt")
  (front-context-string . "-*- mode: org; -")
  (rear-context-string)
  (position . 1))
-("init-evil.el"
- (filename . "~/.emacs.d/lisp/init-evil.el")
- (front-context-string . "\n    \"w\"  'save-")
- (rear-context-string . "iling-whitespace")
- (position . 665))
 ("init.el"
  (filename . "~/.emacs.d/init.el")
  (front-context-string . "\n(tool-bar-mode ")
  (rear-context-string . "enu-bar-mode -1)")
  (position . 780))
-("init-helm.el"
- (filename . "~/.emacs.d/lisp/init-helm.el")
- (front-context-string . ")\n\n(provide 'ini")
- (rear-context-string . " 'helm-bookmarks")
- (position . 166))
 )

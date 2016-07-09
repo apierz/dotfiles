@@ -5,8 +5,8 @@
 
 This is my personal Emacs configuration. I use the [[https://github.com/railwaycat/homebrew-emacsmacport][Railwaycat Emacs for Mac]] port. It has two main advantages over the Emacs for Mac OSX port for me: 1. it renders colors in my Powerline better, and 2. It lets me use 2 finger swiping to navigate through buffers, which is very handy when I am looking at Emacs while working on something else.
 
-[[[[https://github.com/apierz/dotfiles/blob/master/Screen%20Shot%202016-07-03%20at%201.05.39%20PM.png?raw=true]]]] 
-** Screenshot of my config
+*** Screenshot of my config
+[[https://github.com/apierz/dotfiles/blob/master/Screen%20Shot%202016-07-03%20at%201.05.39%20PM.png?raw=true]] 
 
 * Personal Information
 
@@ -17,7 +17,7 @@ This is my personal Emacs configuration. I use the [[https://github.com/railwayc
 #+END_SRC
 * Packages and Paths
 
-The first thing that gets loaded is =package=, Emacs package manager. I then add some common repositories for Emacs packages and initialize package.
+The first thing that gets loaded is =package=, Emacs' package manager. I then add some common repositories for Emacs packages and initialize package.
 
 #+BEGIN_SRC emacs-lisp
   (require 'package)
@@ -30,7 +30,7 @@ The first thing that gets loaded is =package=, Emacs package manager. I then add
   (package-initialize)
 #+END_SRC
 
-Next I want to set my load paths, its mostly the standard folders, plus one for my working Dracula Theme Directory.
+Next I want to set my load paths, it's mostly the standard folders, plus one for my working Dracula Theme Directory.
 
 #+BEGIN_SRC emacs-lisp
   (add-to-list 'load-path (expand-file-name "snippets" user-emacs-directory))
@@ -77,6 +77,18 @@ These are basic Emacs settings. They include inhibiting the startup screen and m
   (setq-default fill-column 80)
   (setq-default tab-width 2)
   (put 'dired-find-alternate-file 'disabled nil)
+
+#+END_SRC
+
+I prefer for Emacs to store automatic backups in a central location, rather than leaving them strewn about.
+
+#+BEGIN_SRC emacs-lisp
+  (setq backup-directory-alist '(("." . "~/Dropbox/emacs_backups"))
+        backup-by-copying      t  ; Don't de-link hard links
+        version-control        t  ; Use version numbers on backups
+        delete-old-versions    t  ; Automatically delete excess backups:
+        kept-new-versions      5 ; how many of the newest versions to keep
+        kept-old-versions      5) ; and how many of the old
 
 #+END_SRC
 
@@ -170,7 +182,7 @@ From [[https://github.com/aaronbieber][aaronbieber]]
 
 #+END_SRC
 
-Mine and Unkown origin
+From [[http://www.github.com/hrs][hrs]]
 
 #+BEGIN_SRC emacs-lisp
   (defmacro diminish-minor-mode (filename mode &optional abbrev)
@@ -182,7 +194,11 @@ Mine and Unkown origin
     "Supply a MODE-HOOK, to hide a major MODE or replace with an ABBREV."
     `(add-hook ,mode-hook
                (lambda () (setq mode-name ,abbrev))))
+#+END_SRC
 
+Mine + Unknown
+
+#+BEGIN_SRC emacs-lisp
 
   (defun search-my-notes (searchforthis)
     "Search for SEARCHFORTHIS."
@@ -246,6 +262,7 @@ I use some diminsh functions I got from [[https://github.com/hrs][hrs]]. This le
   (diminish-minor-mode 'projectile 'projectile-mode " ⓟ ")
   (diminish-minor-mode 'robe 'robe-mode " ⓡ ")
   (diminish-minor-mode 'flymake 'flymake-mode " ⓜ ")
+  (diminish-minor-mode 'evil-snipe 'evil-snipe-mode)
   (diminish-minor-mode 'evil-surround 'evil-surround-mode )
   (diminish-minor-mode 'evil-commentary 'evil-commentary-mode)
   (diminish-minor-mode 'yasnippet 'yas-minor-mode)
@@ -277,6 +294,8 @@ I prefer the Vim keybindings and use them wherever possible in Emacs. I make a s
 
 ** Addons, based on Vim plugins
 
+=evil-surround= is based on tpope's plugin and makes it easy to change surrounding syntax luke ", ', (, {, etc. =evil-commentary= is also based on a tpope plugin that makes it easy to comment a line or lines. [g-c-c] will comment a line [g-c-4-k] will comment the next 4 lines, etc. 
+
 #+BEGIN_SRC emacs-lisp
   (use-package evil-leader)
   (use-package evil-surround
@@ -284,7 +303,12 @@ I prefer the Vim keybindings and use them wherever possible in Emacs. I make a s
     (global-evil-surround-mode 1))
   (use-package evil-commentary
     :config
-  (evil-commentary-mode))
+    (evil-commentary-mode))
+  (use-package evil-snipe
+    :config
+    (evil-snipe-mode 1)
+    (evil-snipe-override-mode 1))
+
 #+END_SRC
 
 ** IJKL Controls
@@ -488,6 +512,14 @@ I prefer the Vim keybindings and use them wherever possible in Emacs. I make a s
 
 =Org= is Emacs famous markup language with all kinds of useful features. You can even write your Emacs config in =Org=, which is what I have done here.
 
+#+BEGIN_SRC emacs-lisp
+  (use-package org)
+  (use-package ox)
+  (use-package org-grep)
+  (use-package org-capture)
+
+#+END_SRC
+
 These are the basic bindings =Org= recommends you use.
 
 #+BEGIN_SRC emacs-lisp
@@ -500,10 +532,27 @@ These are the basic bindings =Org= recommends you use.
 I want everything in my notes folder to open in =Org-mode= and for .txt files to open in =Org-mode=. It is very rare I want to edit a plain text file without Org.
 
 #+BEGIN_SRC emacs-lisp
-  (global-set-key "\C-cl" 'org-store-link)
-  (global-set-key "\C-ca" 'org-agenda)
-  (global-set-key "\C-cc" 'org-capture)
-  (global-set-key "\C-cb" 'org-iswitchb)
+  (setq org-export-coding-system 'utf-8)
+  (setq org-agenda-files (list "~/Dropbox/Notes"))
+  (setq org-agenda-file-regexp "\\`[^.].*\\.txt\\|[0-9]\\{8\\}\\'")
+  (add-to-list 'auto-mode-alist '("\\.txt$" . org-mode))
+  (setq org-agenda-text-search-extra-files (list nil ))
+
+
+  (add-hook 'find-file-hooks 
+    (lambda ()
+      (let ((file (buffer-file-name)))
+      (when (and file (equal (file-name-directory file) "~/Dropbox/Notes"))
+      (org-mode)))))
+#+END_SRC
+
+I prefer to turn line numbers off while in =Org-mode=.
+
+#+BEGIN_SRC emacs-lisp
+  (use-package linum-off
+    :config
+    (add-to-list 'linum-disabled-modes-list "org-mode"))
+
 #+END_SRC
 
 ** Keywords
@@ -565,9 +614,9 @@ My todo system is fairly simple. =TODO= = unsorted, =ONDECK= = could be done at 
 ** Org Capture
 
    =Org= allows for capturing, which allows you to create/edit Org files whereever you are in Emacs. I have three kinds of Org Captures:
-- TODO: adds a todo file to my Inbox heading in my main todo.txt file
-- New Note: creates a new note and saves it to my notes file
-- Kill Ring Note: creates a new note with whatever is currently saved to a new note. I am considering changing this to add to an ongoing file instead.
+- TODO: adds a todo item to my Inbox heading in my main todo.txt file
+- New Note: creates a new note file and saves it to my notes folder
+- Kill Ring Note: creates a new note with whatever is currently at the head of my kill ring to a new note. I am considering changing this to add to an ongoing file instead.
 
 #+BEGIN_SRC emacs-lisp
   (defun capture-report-date-file (path)
@@ -602,7 +651,7 @@ My todo system is fairly simple. =TODO= = unsorted, =ONDECK= = could be done at 
      (gnuplot . t)))
 #+END_SRC
 
-
+   
 * Programming Stuff
 
 This section is for stuff that helps with programming and coding. (note to self, look into diff-hl)
@@ -648,6 +697,15 @@ A few other useful packages for coding.
   (use-package dumb-jump
     :config
     (dumb-jump-mode))
+#+END_SRC
+
+=Diff-HL= highlights the differences between the commited version of a file and hte current buffer.
+
+#+BEGIN_SRC emacs-lisp
+  (use-package diff-hl)
+
+  (add-hook 'prog-mode-hook 'turn-on-diff-hl-mode)
+  (add-hook 'vc-dir-mode-hook 'turn-on-diff-hl-mode)
 #+END_SRC
 
 ** Emacs-lisp
@@ -705,9 +763,9 @@ A few other useful packages for coding.
 
 * Powerline
 
-[[https://github.com/milkypostman/powerline][Powerline]] is a mode line replacement for Emacs, based on Vim powerline. I've spend far too much time tweaking my Powerline and it shows no sign of stopping.
+[[https://github.com/milkypostman/powerline][Powerline]] is a mode line replacement for Emacs, based on Vim powerline. I've spent far too much time tweaking my Powerline and it shows no sign of stopping.
 
-You customize the look of your powerline by defining faces for when the powerline is on the active buffer, or is in active. I've taken my colors from Dracula Theme, so it matches the rest of my config. 
+You customize the look of your powerline by defining faces for when the powerline is on the active buffer, or it's inactive. I've taken my colors from Dracula Theme, so it matches the rest of my config. 
 
 #+BEGIN_SRC emacs-lisp
   (defgroup segments-group nil "My powerline line segments" :group 'segments)
@@ -748,7 +806,6 @@ You customize the look of your powerline by defining faces for when the powerlin
   (defface my-pl-segment6-inactive
    '((t (:foreground "#f8f8f2" :background "#545565" :weight bold)))
     "Powerline buffer-id  segment inactive face.")
-
 #+END_SRC
 
 
@@ -825,7 +882,7 @@ Then I use them to define a theme in a function. It looks a little confusing at 
 
 #+END_SRC
 
-I use =powerline-evil= to put a color changing evil state face on my powerline.
+I use =powerline-evil= to put a color changing evil state face on my powerline. If you are using Dracula theme, they will be Dracula colors. That change was my first accepted pull request to an open source project!
 
 #+BEGIN_SRC emacs-lisp
   (use-package powerline-evil
@@ -1071,4 +1128,13 @@ Magit is Emacs' Git interface.
   (use-package evil-magit)
 
 
+#+END_SRC
+
+This is to encrypt my password so I can use it when sending email. If anyone knows how to set this up so it doesn't trigger an error everytime I re eval my buffer please let me know:
+
+#+BEGIN_SRC emacs-lisp
+  (use-package epa-file
+    :config
+    (unless (memq epa-file-handler file-name-handler-alist)
+    (epa-file-enable)))
 #+END_SRC
