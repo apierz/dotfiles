@@ -1,5 +1,6 @@
 #+Title: config.org
 #+OPTIONS: TOC:nil
+#+STARTUP: overview
 
 * Emacs Configuration
 
@@ -72,8 +73,6 @@ These are basic Emacs settings. They include inhibiting the startup screen and m
   (setq word-wrap t)
   (setq initial-major-mode 'org-mode)
   (setq initial-scratch-message "")
-  (add-to-list 'default-frame-alist '(height . 50))
-  (add-to-list 'default-frame-alist '(width . 80))
   (setq-default fill-column 80)
   (setq-default tab-width 2)
   (put 'dired-find-alternate-file 'disabled nil)
@@ -200,37 +199,39 @@ Mine + Unknown
 
 #+BEGIN_SRC emacs-lisp
 
-  (defun search-my-notes (searchforthis)
-    "Search for SEARCHFORTHIS."
-    (interactive "Search Query: ")
-    (rgrep searchforthis "*.txt"  "~/Dropbox/Notes"))
+    (defun search-my-notes (searchforthis)
+      "Search for SEARCHFORTHIS."
+      (interactive "sSearch Query: ")
+      (rgrep searchforthis "*.txt"  "~/Dropbox/Notes"))
 
-  (eval-after-load "grep"
-    '(grep-compute-defaults))
+    (eval-after-load "grep"
+      '(grep-compute-defaults))
 
-  (defun minibuffer-keyboard-quit ()
-    "Abort recursive edit.
-  In Delete Selection mode, if the mark is active, just deactivate it;
-  then it takes a second \\[keyboard-quit] to abort the minibuffer."
-    (interactive)
-    (if (and delete-selection-mode transient-mark-mode mark-active)
-        (setq deactivate-mark  t)
-      (when (get-buffer "*Completions*") (delete-windows-on "*Completions*"))
-      (abort-recursive-edit)))
+    (defun minibuffer-keyboard-quit ()
+      "Abort recursive edit.
+    In Delete Selection mode, if the mark is active, just deactivate it;
+    then it takes a second \\[keyboard-quit] to abort the minibuffer."
+      (interactive)
+      (if (and delete-selection-mode transient-mark-mode mark-active)
+          (setq deactivate-mark  t)
+        (when (get-buffer "*Completions*") (delete-windows-on "*Completions*"))
+        (abort-recursive-edit)))
 
-  (defun andy-new-empty-buffer ()
-    "Open a new empty buffer."
-    (interactive)
-    (let ((ξbuf (generate-new-buffer "untitled")))
-      (switch-to-buffer ξbuf)
-      (funcall (and initial-major-mode))
-      (setq buffer-offer-save t)))
+    (defun andy-new-empty-buffer ()
+      "Open a new empty buffer."
+      (interactive)
+      (let ((ξbuf (generate-new-buffer "untitled")))
+        (switch-to-buffer ξbuf)
+        (funcall (and initial-major-mode))
+        (setq buffer-offer-save t)))
+
+
 
 #+END_SRC
 
 * Visual Stuff
 
-I use my own version of [[https://github.com/dracula/dracula-theme][Dracua Theme]], which includes some extra coloring for Helm, mu4e and some changes to the syntax highlighting. My version is availble at my [[https://github.com/apierz][Github page]]. I also use [[http://sourcefoundry.org/hack/][Hack]] as my font. Right now I'm trying out transparency to see how I like it.
+I use my own version of [[https://github.com/dracula/dracula-theme][Dracua Theme]], which includes some extra coloring for Helm, mu4e, some changes to the syntax highlighting and correcting the background color when using Emacs in the terminal. My version is availble at my [[https://github.com/apierz][Github page]]. I also use [[http://sourcefoundry.org/hack/][Hack]] as my font. Right now I'm trying out transparency to see how I like it.
 
 #+BEGIN_SRC emacs-lisp
   (use-package dracula-theme)
@@ -262,7 +263,7 @@ I use some diminsh functions I got from [[https://github.com/hrs][hrs]]. This le
   (diminish-minor-mode 'projectile 'projectile-mode " ⓟ ")
   (diminish-minor-mode 'robe 'robe-mode " ⓡ ")
   (diminish-minor-mode 'flymake 'flymake-mode " ⓜ ")
-  (diminish-minor-mode 'evil-snipe 'evil-snipe-mode)
+  (diminish-minor-mode 'evil-snipe 'evil-snipe-local-mode)
   (diminish-minor-mode 'evil-surround 'evil-surround-mode )
   (diminish-minor-mode 'evil-commentary 'evil-commentary-mode)
   (diminish-minor-mode 'yasnippet 'yas-minor-mode)
@@ -507,6 +508,28 @@ I prefer the Vim keybindings and use them wherever possible in Emacs. I make a s
     evil-normal-state-modes))
 #+END_SRC
 
+* Helm
+
+Helm is useful for searching through Emacs. I prefer Helm for searching through my buffers, kill ring and other things.
+
+#+BEGIN_SRC emacs-lisp
+  (use-package helm)
+  (use-package helm-config)
+
+  (global-set-key (kbd "C-x b") 'helm-buffers-list)
+  (global-set-key (kbd "C-x r b") 'helm-bookmarks)
+  (global-set-key (kbd "C-X m") 'helm-M-x)
+  (global-set-key (kbd "M-y") 'helm-show-kill-ring)
+  (global-set-key (kbd "C-x C-f") 'helm-find-files)
+
+  (setq helm-split-window-in-side-p t)
+
+  (with-eval-after-load
+    'helm (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)
+       (define-key helm-map (kbd "ESC") 'helm-keyboard-quit)
+  )
+
+#+END_SRC
 
 * Org-mode
 
@@ -585,17 +608,9 @@ My todo system is fairly simple. =TODO= = unsorted, =ONDECK= = could be done at 
     (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
 #+END_SRC
 
-   These are colors from Dracula Theme. I use a single character ellipsis, though sometimes switch to an arrow or other /fancy/ symbol.
+   Dracula Theme has recently revamped their =Org-mode= colors so I have switched to their defaults. I use a single character ellipsis, though sometimes switch to an arrow or other /fancy/ symbol.
 
 #+BEGIN_SRC emacs-lisp
-  (custom-set-faces
-    '(org-level-1 ((t (:foreground "#8be9fd" :height 2.0 :weight bold))))
-    '(org-level-2 ((t (:foreground "#ffb86c" :weight bold :height 1.0))))
-    '(org-level-3 ((t (:foreground "#ff79c6" :height 1.0))))
-    '(org-level-4 ((t (:foreground "#bd93f9" :height 1.0))))
-    '(org-level-5 ((t (:foreground "#6272a4" :height 1.0))))
-    '(org-level-6 ((t (:foreground "#6272a4" :height 1.0)))))
-
   (setq org-ellipsis " …")
 #+END_SRC
 
@@ -651,7 +666,6 @@ My todo system is fairly simple. =TODO= = unsorted, =ONDECK= = could be done at 
      (gnuplot . t)))
 #+END_SRC
 
-   
 * Programming Stuff
 
 This section is for stuff that helps with programming and coding. (note to self, look into diff-hl)
@@ -661,7 +675,18 @@ This section is for stuff that helps with programming and coding. (note to self,
 I like yasnippet for snippets, but I generally rely on auto-complete to speed up my coding.
 
 #+BEGIN_SRC emacs-lisp
-  (use-package yasnippet)
+  (use-package yasnippet
+    :ensure t
+    :defer t
+    :config
+    (yas-reload-all)
+    (setq yas-snippet-dirs '("~/.emacs.d/snippets"
+                             "~/.emacs.d/remote-snippets"))
+    (setq tab-always-indent 'complete)
+    (setq yas-prompt-functions '(yas-completing-prompt
+                                 yas-ido-prompt
+                                 yas-dropdown-prompt))
+  (define-key yas-minor-mode-map (kbd "<escape>") 'yas-exit-snippet))
   (ac-config-default)
 #+END_SRC
 
@@ -697,15 +722,6 @@ A few other useful packages for coding.
   (use-package dumb-jump
     :config
     (dumb-jump-mode))
-#+END_SRC
-
-=Diff-HL= highlights the differences between the commited version of a file and hte current buffer.
-
-#+BEGIN_SRC emacs-lisp
-  (use-package diff-hl)
-
-  (add-hook 'prog-mode-hook 'turn-on-diff-hl-mode)
-  (add-hook 'vc-dir-mode-hook 'turn-on-diff-hl-mode)
 #+END_SRC
 
 ** Emacs-lisp
@@ -761,6 +777,26 @@ A few other useful packages for coding.
 
 #+END_SRC
 
+** web-mode
+
+=Web-mode= is an Emacs major mode that gives syntax highlighting for web source files with multiple languages like html with php or .erb files.
+
+#+BEGIN_SRC emacs-lisp
+  (use-package web-mode
+    :ensure t
+    :defer t
+    :config
+    (add-to-list 'auto-mode-alist '("\\.html$" . web-mode))
+    (add-to-list 'auto-mode-alist '("\\.erb$" . web-mode))
+    (add-to-list 'auto-mode-alist '("\\.twig$" . web-mode))
+    (setq web-mode-attr-indent-offset 2)
+    (setq web-mode-code-indent-offset 2)
+    (setq web-mode-css-indent-offset 2)
+    (setq web-mode-indent-style 2)
+    (setq web-mode-markup-indent-offset 2)
+    (setq web-mode-sql-indent-offset 2))
+#+END_SRC
+
 * Powerline
 
 [[https://github.com/milkypostman/powerline][Powerline]] is a mode line replacement for Emacs, based on Vim powerline. I've spent far too much time tweaking my Powerline and it shows no sign of stopping.
@@ -768,6 +804,13 @@ A few other useful packages for coding.
 You customize the look of your powerline by defining faces for when the powerline is on the active buffer, or it's inactive. I've taken my colors from Dracula Theme, so it matches the rest of my config. 
 
 #+BEGIN_SRC emacs-lisp
+
+  (setq display-time-format "%H:%M")
+  (setq display-time-mail-directory "~/.Maildir/Personal/INBOX/new")
+  (setq display-time-default-load-average nil)
+  (display-time-mode 1)
+
+
   (defgroup segments-group nil "My powerline line segments" :group 'segments)
 
   (defface my-pl-segment1-active
@@ -789,10 +832,16 @@ You customize the look of your powerline by defining faces for when the powerlin
     '((t (:foreground "#f8f8f2" :background "#545565")))
     "Powerline third segment inactive face.")
   (defface my-pl-segment4-active
-    '((t (:foreground "#ffffff" :background "#f1fa8c")))
+    '((t (:foreground "#ffffff" :background "#3a2e58")))
     "Powerline hud segment active face.")
   (defface my-pl-segment4-inactive
-    '((t (:foreground "#ffffff" :background "#f8f8f2")))
+    '((t (:foreground "#ffffff" :background "#545565")))
+    "Powerline hud segment inactive face.")
+  (defface my-pl-segment4b-active
+    '((t (:foreground "#3a2e58" :background "#f1fa8c")))
+    "Powerline hud segment active face.")
+  (defface my-pl-segment4b-inactive
+    '((t (:foreground "#3a2e58" :background "#f1fa8c")))
     "Powerline hud segment inactive face.")
   (defface my-pl-segment5-active
     '((t (:foreground "#ff79c6" :background "#3a2e58")))
@@ -823,6 +872,7 @@ Then I use them to define a theme in a function. It looks a little confusing at 
            (seg2 (if active 'my-pl-segment2-active 'my-pl-segment2-inactive))
            (seg3 (if active 'my-pl-segment3-active 'my-pl-segment3-inactive))
            (seg4 (if active 'my-pl-segment4-active 'my-pl-segment4-inactive))
+           (seg4b (if active 'my-pl-segment4b-active 'my-pl-segment4b-inactive))
            (seg5 (if active 'my-pl-segment5-active 'my-pl-segment5-inactive))
            (seg6 (if active 'my-pl-segment6-active 'my-pl-segment6-inactive))
            (separator-left (intern (format "powerline-%s-%s"
@@ -836,7 +886,7 @@ Then I use them to define a theme in a function. It looks a little confusing at 
                                  (powerline-raw (powerline-evil-tag) evil-face)
                                ))
                            (if evil-mode
-                               (funcall separator-right (powerline-evil-face) seg1))
+                               (funcall separator-left (powerline-evil-face) seg1))
                            (powerline-raw "[%*]" seg1 'l)
                            (when powerline-display-buffer-size
                              (powerline-buffer-size seg5 'l))
@@ -851,11 +901,11 @@ Then I use them to define a theme in a function. It looks a little confusing at 
                            (powerline-process seg2)
                            (powerline-narrow seg2 'l)
                            (powerline-raw " " seg2)
-                           (funcall separator-right seg2 seg3)
+                           (funcall separator-left seg2 seg3)
                            (powerline-minor-modes seg3 'l)
                            ))
-                           (rhs (list (powerline-raw global-mode-string seg3 'r)
-                           (funcall separator-left seg3 seg2)
+                           (rhs (list 
+                           (funcall separator-right seg3 seg2)
                            (powerline-vc seg2 'r)
                            (powerline-raw "|" seg2 'r)
                            (unless window-system
@@ -863,11 +913,13 @@ Then I use them to define a theme in a function. It looks a little confusing at 
                            (powerline-raw "%l" seg2 'l)
                            (powerline-raw ":" seg2 'r)
                            (powerline-raw "%c" seg2 'r)
-                           (funcall separator-left seg2 seg1)
+                           (funcall separator-right seg2 seg1)
                            (powerline-raw " " seg1)
-                           (powerline-raw "%6p" seg1 'r)
+                           (powerline-raw global-mode-string seg3 'r)
+                           (funcall separator-right seg1 seg4b)
+                           (powerline-raw "%6p" seg4b 'r)
                            (when powerline-display-hud
-                             (powerline-hud seg1 seg4)))))
+                             (powerline-hud seg4b seg4)))))
            (concat (powerline-render lhs)
                    (powerline-fill seg3 (powerline-width rhs))
                    (powerline-render rhs)))))))
@@ -876,7 +928,7 @@ Then I use them to define a theme in a function. It looks a little confusing at 
     :ensure t
     :config
     (setq powerline-height 26)
-    (setq powerline-default-separator (if (display-graphic-p) 'slant
+    (setq powerline-default-separator (if (display-graphic-p) 'arrow-fade
                                         nil))
     (andy--powerline-default-theme))
 
@@ -887,31 +939,6 @@ I use =powerline-evil= to put a color changing evil state face on my powerline. 
 #+BEGIN_SRC emacs-lisp
   (use-package powerline-evil
     :ensure t)
-#+END_SRC
-
-* Helm
-
-=Helm= is useful for searching through Emacs. I prefer Helm for searching through my buffers, kill ring and other things.
-
-#+BEGIN_SRC emacs-lisp
-  (use-package helm)
-  (use-package helm-config)
-
-  (global-set-key (kbd "C-x b") 'helm-buffers-list)
-  (global-set-key (kbd "C-x r b") 'helm-bookmarks)
-  (global-set-key (kbd "C-X m") 'helm-M-x)
-  (global-set-key (kbd "M-y") 'helm-show-kill-ring)
-  (global-set-key (kbd "C-x C-f") 'helm-find-files)
-
-  ;; other helm configurations
-  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-  (setq helm-split-window-in-side-p t)
-
-  (with-eval-after-load
-    'helm (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)
-       (define-key helm-map (kbd "ESC") 'helm-keyboard-quit)
-  )
-
 #+END_SRC
 
 * Projectile
@@ -973,8 +1000,6 @@ General Configuragtion
 
     (setq mu4e-drafts-folder "/drafts")
 
-    ;; don't save message to Sent Messages, Gmail/IMAP takes care of this
-    (setq mu4e-sent-messages-behavior 'delete)
 
     ;;set attachment downloads directory
     (setq mu4e-attachment-dir  "~/Downloads")
@@ -990,10 +1015,13 @@ General Configuragtion
          ("/personal/Trash"       . ?t)
          ("/personal/Archive"    . ?a)
          ("/personal/Starred"    . ?p)
+         ("/personal/Drafts"    . ?d)
            
          ("/work/INBOX"      . ?w)
+         ("/work/Drafts"      . ?z)
          ("/work/Sent\ Items"       . ?f)
          ("/work/Archive"    . ?o)))
+
 
     ;; allow for updating mail using 'U' in the main view:
     (setq mu4e-get-mail-command "offlineimap")
@@ -1026,7 +1054,7 @@ General Configuragtion
       (user-mail-address      "andy@andypierz.com")
       (user-full-name         "Andy Pierz")
       ;; smtp
-      (smtpmail-stream-type 'ssl)
+      (smtpmail-stream-type ssl)
       (smtpmail-starttls-credentials '(("mail.hover.com" 587 nil nil)))
       (smtpmail-default-smtp-server "mail.hover.com")
       (smtpmail-smtp-server "mail.hover.com")
@@ -1038,7 +1066,7 @@ General Configuragtion
       ;;(mu4e-compose-signature "0xAX")
 
       ;; smtp
-      (smtpmail-stream-type 'ssl)
+      (smtpmail-stream-type ssl)
       (smtpmail-auth-credentials '(("mail.hover.com" 25 "andy@mutdut.com" nil)))
       (smtpmail-default-smtp-server "mail.hover.com")
       (smtpmail-smtp-service 465))))

@@ -40,8 +40,6 @@
 (setq word-wrap t)
 (setq initial-major-mode 'org-mode)
 (setq initial-scratch-message "")
-(add-to-list 'default-frame-alist '(height . 50))
-(add-to-list 'default-frame-alist '(width . 80))
 (setq-default fill-column 80)
 (setq-default tab-width 2)
 (put 'dired-find-alternate-file 'disabled nil)
@@ -146,7 +144,7 @@ Repeated invocations toggle between the two most recently open buffers."
 
 (defun search-my-notes (searchforthis)
   "Search for SEARCHFORTHIS."
-  (interactive "Search Query: ")
+  (interactive "sSearch Query: ")
   (rgrep searchforthis "*.txt"  "~/Dropbox/Notes"))
 
 (eval-after-load "grep"
@@ -191,7 +189,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 (diminish-minor-mode 'projectile 'projectile-mode " ⓟ ")
 (diminish-minor-mode 'robe 'robe-mode " ⓡ ")
 (diminish-minor-mode 'flymake 'flymake-mode " ⓜ ")
-(diminish-minor-mode 'evil-snipe 'evil-snipe-mode)
+(diminish-minor-mode 'evil-snipe 'evil-snipe-local-mode)
 (diminish-minor-mode 'evil-surround 'evil-surround-mode )
 (diminish-minor-mode 'evil-commentary 'evil-commentary-mode)
 (diminish-minor-mode 'yasnippet 'yas-minor-mode)
@@ -357,6 +355,22 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 (setq evil-normal-state-modes (append evil-motion-state-modes
   evil-normal-state-modes))
 
+(use-package helm)
+(use-package helm-config)
+
+(global-set-key (kbd "C-x b") 'helm-buffers-list)
+(global-set-key (kbd "C-x r b") 'helm-bookmarks)
+(global-set-key (kbd "C-X m") 'helm-M-x)
+(global-set-key (kbd "M-y") 'helm-show-kill-ring)
+(global-set-key (kbd "C-x C-f") 'helm-find-files)
+
+(setq helm-split-window-in-side-p t)
+
+(with-eval-after-load
+  'helm (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)
+     (define-key helm-map (kbd "ESC") 'helm-keyboard-quit)
+)
+
 (use-package org)
 (use-package ox)
 (use-package org-grep)
@@ -401,14 +415,6 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
   :config
   (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
 
-(custom-set-faces
-  '(org-level-1 ((t (:foreground "#8be9fd" :height 2.0 :weight bold))))
-  '(org-level-2 ((t (:foreground "#ffb86c" :weight bold :height 1.0))))
-  '(org-level-3 ((t (:foreground "#ff79c6" :height 1.0))))
-  '(org-level-4 ((t (:foreground "#bd93f9" :height 1.0))))
-  '(org-level-5 ((t (:foreground "#6272a4" :height 1.0))))
-  '(org-level-6 ((t (:foreground "#6272a4" :height 1.0)))))
-
 (setq org-ellipsis " …")
 
 (setq org-cycle-separator-lines 0)
@@ -440,7 +446,18 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
    (dot . t)
    (gnuplot . t)))
 
-(use-package yasnippet)
+(use-package yasnippet
+  :ensure t
+  :defer t
+  :config
+  (yas-reload-all)
+  (setq yas-snippet-dirs '("~/.emacs.d/snippets"
+                           "~/.emacs.d/remote-snippets"))
+  (setq tab-always-indent 'complete)
+  (setq yas-prompt-functions '(yas-completing-prompt
+                               yas-ido-prompt
+                               yas-dropdown-prompt))
+(define-key yas-minor-mode-map (kbd "<escape>") 'yas-exit-snippet))
 (ac-config-default)
 
 (require 'linum-relative)
@@ -464,11 +481,6 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 (use-package dumb-jump
   :config
   (dumb-jump-mode))
-
-(use-package diff-hl)
-
-(add-hook 'prog-mode-hook 'turn-on-diff-hl-mode)
-(add-hook 'vc-dir-mode-hook 'turn-on-diff-hl-mode)
 
 (add-hook 'emacs-lisp-mode-hook
           (lambda ()
@@ -506,6 +518,26 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 (add-to-list 'auto-mode-alist
   '("\\(?:Brewfile\\|Capfile\\|Gemfile\\(?:\\.[a-zA-Z0-9._-]+\\)?\\|[rR]akefile\\)\\'" . ruby-mode))
 
+(use-package web-mode
+  :ensure t
+  :defer t
+  :config
+  (add-to-list 'auto-mode-alist '("\\.html$" . web-mode))
+  (add-to-list 'auto-mode-alist '("\\.erb$" . web-mode))
+  (add-to-list 'auto-mode-alist '("\\.twig$" . web-mode))
+  (setq web-mode-attr-indent-offset 2)
+  (setq web-mode-code-indent-offset 2)
+  (setq web-mode-css-indent-offset 2)
+  (setq web-mode-indent-style 2)
+  (setq web-mode-markup-indent-offset 2)
+  (setq web-mode-sql-indent-offset 2))
+
+(setq display-time-format "%H:%M")
+(setq display-time-mail-directory "~/.Maildir/Personal/INBOX/new")
+(setq display-time-default-load-average nil)
+(display-time-mode 1)
+
+
 (defgroup segments-group nil "My powerline line segments" :group 'segments)
 
 (defface my-pl-segment1-active
@@ -527,10 +559,16 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
   '((t (:foreground "#f8f8f2" :background "#545565")))
   "Powerline third segment inactive face.")
 (defface my-pl-segment4-active
-  '((t (:foreground "#ffffff" :background "#f1fa8c")))
+  '((t (:foreground "#ffffff" :background "#3a2e58")))
   "Powerline hud segment active face.")
 (defface my-pl-segment4-inactive
-  '((t (:foreground "#ffffff" :background "#f8f8f2")))
+  '((t (:foreground "#ffffff" :background "#545565")))
+  "Powerline hud segment inactive face.")
+(defface my-pl-segment4b-active
+  '((t (:foreground "#3a2e58" :background "#f1fa8c")))
+  "Powerline hud segment active face.")
+(defface my-pl-segment4b-inactive
+  '((t (:foreground "#3a2e58" :background "#f1fa8c")))
   "Powerline hud segment inactive face.")
 (defface my-pl-segment5-active
   '((t (:foreground "#ff79c6" :background "#3a2e58")))
@@ -556,6 +594,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
          (seg2 (if active 'my-pl-segment2-active 'my-pl-segment2-inactive))
          (seg3 (if active 'my-pl-segment3-active 'my-pl-segment3-inactive))
          (seg4 (if active 'my-pl-segment4-active 'my-pl-segment4-inactive))
+         (seg4b (if active 'my-pl-segment4b-active 'my-pl-segment4b-inactive))
          (seg5 (if active 'my-pl-segment5-active 'my-pl-segment5-inactive))
          (seg6 (if active 'my-pl-segment6-active 'my-pl-segment6-inactive))
          (separator-left (intern (format "powerline-%s-%s"
@@ -569,7 +608,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
                                (powerline-raw (powerline-evil-tag) evil-face)
                              ))
                          (if evil-mode
-                             (funcall separator-right (powerline-evil-face) seg1))
+                             (funcall separator-left (powerline-evil-face) seg1))
                          (powerline-raw "[%*]" seg1 'l)
                          (when powerline-display-buffer-size
                            (powerline-buffer-size seg5 'l))
@@ -584,11 +623,11 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
                          (powerline-process seg2)
                          (powerline-narrow seg2 'l)
                          (powerline-raw " " seg2)
-                         (funcall separator-right seg2 seg3)
+                         (funcall separator-left seg2 seg3)
                          (powerline-minor-modes seg3 'l)
                          ))
-                         (rhs (list (powerline-raw global-mode-string seg3 'r)
-                         (funcall separator-left seg3 seg2)
+                         (rhs (list 
+                         (funcall separator-right seg3 seg2)
                          (powerline-vc seg2 'r)
                          (powerline-raw "|" seg2 'r)
                          (unless window-system
@@ -596,11 +635,13 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
                          (powerline-raw "%l" seg2 'l)
                          (powerline-raw ":" seg2 'r)
                          (powerline-raw "%c" seg2 'r)
-                         (funcall separator-left seg2 seg1)
+                         (funcall separator-right seg2 seg1)
                          (powerline-raw " " seg1)
-                         (powerline-raw "%6p" seg1 'r)
+                         (powerline-raw global-mode-string seg3 'r)
+                         (funcall separator-right seg1 seg4b)
+                         (powerline-raw "%6p" seg4b 'r)
                          (when powerline-display-hud
-                           (powerline-hud seg1 seg4)))))
+                           (powerline-hud seg4b seg4)))))
          (concat (powerline-render lhs)
                  (powerline-fill seg3 (powerline-width rhs))
                  (powerline-render rhs)))))))
@@ -609,30 +650,12 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
   :ensure t
   :config
   (setq powerline-height 26)
-  (setq powerline-default-separator (if (display-graphic-p) 'slant
+  (setq powerline-default-separator (if (display-graphic-p) 'arrow-fade
                                       nil))
   (andy--powerline-default-theme))
 
 (use-package powerline-evil
   :ensure t)
-
-(use-package helm)
-(use-package helm-config)
-
-(global-set-key (kbd "C-x b") 'helm-buffers-list)
-(global-set-key (kbd "C-x r b") 'helm-bookmarks)
-(global-set-key (kbd "C-X m") 'helm-M-x)
-(global-set-key (kbd "M-y") 'helm-show-kill-ring)
-(global-set-key (kbd "C-x C-f") 'helm-find-files)
-
-;; other helm configurations
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(setq helm-split-window-in-side-p t)
-
-(with-eval-after-load
-  'helm (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)
-     (define-key helm-map (kbd "ESC") 'helm-keyboard-quit)
-)
 
 (use-package projectile)
 (use-package helm-projectile)
@@ -674,8 +697,6 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 
 (setq mu4e-drafts-folder "/drafts")
 
-;; don't save message to Sent Messages, Gmail/IMAP takes care of this
-(setq mu4e-sent-messages-behavior 'delete)
 
 ;;set attachment downloads directory
 (setq mu4e-attachment-dir  "~/Downloads")
@@ -691,10 +712,13 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
      ("/personal/Trash"       . ?t)
      ("/personal/Archive"    . ?a)
      ("/personal/Starred"    . ?p)
+     ("/personal/Drafts"    . ?d)
        
      ("/work/INBOX"      . ?w)
+     ("/work/Drafts"      . ?z)
      ("/work/Sent\ Items"       . ?f)
      ("/work/Archive"    . ?o)))
+
 
 ;; allow for updating mail using 'U' in the main view:
 (setq mu4e-get-mail-command "offlineimap")
@@ -727,7 +751,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
   (user-mail-address      "andy@andypierz.com")
   (user-full-name         "Andy Pierz")
   ;; smtp
-  (smtpmail-stream-type 'ssl)
+  (smtpmail-stream-type ssl)
   (smtpmail-starttls-credentials '(("mail.hover.com" 587 nil nil)))
   (smtpmail-default-smtp-server "mail.hover.com")
   (smtpmail-smtp-server "mail.hover.com")
@@ -739,7 +763,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
   ;;(mu4e-compose-signature "0xAX")
 
   ;; smtp
-  (smtpmail-stream-type 'ssl)
+  (smtpmail-stream-type ssl)
   (smtpmail-auth-credentials '(("mail.hover.com" 25 "andy@mutdut.com" nil)))
   (smtpmail-default-smtp-server "mail.hover.com")
   (smtpmail-smtp-service 465))))
