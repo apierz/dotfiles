@@ -2,21 +2,16 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("config.org"
+(("config"
  (filename . "~/Documents/dotfiles/emacs.d/config.org")
- (front-context-string . "\n  (global-set-k")
- (rear-context-string . "ge helm-config)\n")
- (position . 31526))
+ (front-context-string . "#+Title: config.")
+ (rear-context-string)
+ (position . 1))
 ("simple_cms"
  (filename . "~/Sites/simple_cms/")
  (front-context-string . ".DS_Store\n  drwx")
  (rear-context-string . "96 May 16 07:57 ")
  (position . 230))
-("org-capture-last-stored"
- (filename . "~/Dropbox/Notes/pulse-keycap-test.txt.txt")
- (front-context-string . "* -*- mode: org;")
- (rear-context-string)
- (position . 1))
 ("Bash-Class"
  (filename . "~/Documents/Programming_Projects/Bash-Class/")
  (front-context-string)

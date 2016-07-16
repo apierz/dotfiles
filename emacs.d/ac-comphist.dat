@@ -299,7 +299,7 @@
   ("auto-revert-mode" .
    [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
   ("setq" .
-   [9 0 0 0])
+   [10 0 0 0])
   ("mu4e-headers-mode-map" .
    [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
   ("mu4e-headers-mark-for-flag" .
@@ -353,7 +353,7 @@
   ("k" .
    [1])
   (":foreground" .
-   [0 0 0 0 0 2 0 1 0 0 0])
+   [1 0 0 0 0 2 0 1 0 0 0])
   ("separator-right" .
    [5 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
   ("powerline-buffer-size" .
@@ -479,4 +479,6 @@
   ("mu4e-main-mode-hook" .
    [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
   ("unless" .
-   [1 0 0 0 0 0])))
+   [1 0 0 0 0 0])
+  ("display-graphic-p" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])))

@@ -225,18 +225,10 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
   :config
   (key-chord-mode 1))
 
-(define-key evil-normal-state-map "i" 'evil-previous-line)
-(define-key evil-normal-state-map "j" 'evil-backward-char)
-(define-key evil-normal-state-map "k" 'evil-next-line)
-(define-key evil-normal-state-map "l" 'evil-forward-char)
-(define-key evil-normal-state-map "h" 'evil-insert-state)
 (key-chord-define evil-insert-state-map "hh" 'evil-normal-state)
 (key-chord-define evil-replace-state-map "hh" 'evil-normal-state)
 (key-chord-define evil-visual-state-map "hh" 'evil-normal-state)
 (key-chord-define evil-motion-state-map "hh" 'evil-normal-state)
-(evil-define-key 'normal dired-mode-map "k" 'dired-next-line)
-(evil-define-key 'normal dired-mode-map "i" 'dired-previous-line)
-(evil-define-key 'normal dired-mode-map "h" 'dired-up-directory)
 (evil-define-key 'normal dired-mode-map "l" 'dired-find-alternate-file)
 (evil-define-key 'normal dired-mode-map "v" 'dired-toggle-marks)
 (evil-define-key 'normal dired-mode-map "m" 'dired-mark)
@@ -246,26 +238,20 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 (evil-define-key 'normal dired-mode-map "n" 'evil-search-next)
 (evil-define-key 'normal dired-mode-map "N" 'evil-search-previous)
 (evil-define-key 'normal dired-mode-map "q" 'kill-this-buffer)
-(define-key evil-motion-state-map "i" 'evil-previous-line)
-(define-key evil-motion-state-map "j" 'evil-backward-char)
-(define-key evil-motion-state-map "k" 'evil-next-line)
-(define-key evil-motion-state-map "l" 'evil-forward-char)
-(define-key evil-motion-state-map "h" 'evil-insert-state)
 (setq evil-shift-width 2)
-(evil-define-key 'motion mu4e-headers-mode-map "k" 'mu4e-headers-next)
 
 (use-package evil-org)
-(evil-define-key 'normal evil-org-mode-map (kbd "M-i") 'org-metaup)
-(evil-define-key 'normal evil-org-mode-map (kbd "M-j") 'org-metaleft)
-(evil-define-key 'normal evil-org-mode-map (kbd "M-k") 'org-metadown)
-(evil-define-key 'normal evil-org-mode-map (kbd "M-i") 'org-metaup)
-(evil-define-key 'normal evil-org-mode-map (kbd "M-I") 'org-shiftmetaup)
-(evil-define-key 'normal evil-org-mode-map (kbd "M-J") 'org-shiftmetaleft)
-(evil-define-key 'normal evil-org-mode-map (kbd "M-K") 'org-shiftmetadown)
+(evil-define-key 'normal evil-org-mode-map (kbd "M-k") 'org-metaup)
+(evil-define-key 'normal evil-org-mode-map (kbd "M-h") 'org-metaleft)
+(evil-define-key 'normal evil-org-mode-map (kbd "M-j") 'org-metadown)
+(evil-define-key 'normal evil-org-mode-map (kbd "M-l") 'org-metaright)
+(evil-define-key 'normal evil-org-mode-map (kbd "M-K") 'org-shiftmetaup)
+(evil-define-key 'normal evil-org-mode-map (kbd "M-H") 'org-shiftmetaleft)
+(evil-define-key 'normal evil-org-mode-map (kbd "M-J") 'org-shiftmetadown)
 (evil-define-key 'normal evil-org-mode-map (kbd "M-L") 'org-shiftmetaright)
-(evil-define-key 'normal evil-org-mode-map (kbd "I") 'org-shiftup)
-(evil-define-key 'normal evil-org-mode-map (kbd "J") 'org-shiftleft)
-(evil-define-key 'normal evil-org-mode-map (kbd "K") 'org-shiftdown)
+(evil-define-key 'normal evil-org-mode-map (kbd "K") 'org-shiftup)
+(evil-define-key 'normal evil-org-mode-map (kbd "H") 'org-shiftleft)
+(evil-define-key 'normal evil-org-mode-map (kbd "J") 'org-shiftdown)
 (evil-define-key 'normal evil-org-mode-map (kbd "L") 'org-shiftright)
 
 (defun andy--config-evil-leader ()
@@ -336,6 +322,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 
 (global-set-key [f4] 'fci-mode)
 (global-set-key [f5] 'search-my-notes)
+(global-set-key [f6] 'linum-relative-mode)
 
 (global-set-key (kbd "M-j") 'robe-jump)
 
@@ -357,7 +344,6 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 
 (use-package helm)
 (use-package helm-config)
-
 (global-set-key (kbd "C-x b") 'helm-buffers-list)
 (global-set-key (kbd "C-x r b") 'helm-bookmarks)
 (global-set-key (kbd "C-X m") 'helm-M-x)
@@ -532,56 +518,74 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
   (setq web-mode-markup-indent-offset 2)
   (setq web-mode-sql-indent-offset 2))
 
-(setq display-time-format "%H:%M")
+(setq display-time-format "%I:%M")
 (setq display-time-mail-directory "~/.Maildir/Personal/INBOX/new")
 (setq display-time-default-load-average nil)
+(setq display-time-use-mail-icon t)
 (display-time-mode 1)
 
+  (defgroup segments-group nil "My powerline line segments" :group 'segments)
 
-(defgroup segments-group nil "My powerline line segments" :group 'segments)
+(if (display-graphic-p)
+  (defface my-pl-segment1-active
+    '((t (:foreground "#f1fa8c" :background "#3a2e58")))
+    "Powerline first segment active face.")
+  (defface my-pl-segment1-active
+    '((t (:foreground "#f1fa8c" :background "#5f00af")))
+    "Powerline first segment active face."))
 
-(defface my-pl-segment1-active
-  '((t (:foreground "#f1fa8c" :background "#3a2e58")))
-  "Powerline first segment active face.")
-(defface my-pl-segment1-inactive
- '((t (:foreground "#f8f8f2" :background "#545565")))
-  "Powerline first segment inactive face.")
-(defface my-pl-segment2-active
-  '((t (:foreground "#f8f8f2" :background "#bd93f9")))
-  "Powerline second segment active face.")
-(defface my-pl-segment2-inactive
-  '((t (:foreground "#f8f8f2" :background "#545565")))
-  "Powerline second segment inactive face.")
-(defface my-pl-segment3-active
-  '((t (:foreground "#bd93f9" :background "#3a2e58")))
-  "Powerline third segment active face.")
-(defface my-pl-segment3-inactive
-  '((t (:foreground "#f8f8f2" :background "#545565")))
-  "Powerline third segment inactive face.")
-(defface my-pl-segment4-active
-  '((t (:foreground "#ffffff" :background "#3a2e58")))
-  "Powerline hud segment active face.")
-(defface my-pl-segment4-inactive
-  '((t (:foreground "#ffffff" :background "#545565")))
-  "Powerline hud segment inactive face.")
-(defface my-pl-segment4b-active
-  '((t (:foreground "#3a2e58" :background "#f1fa8c")))
-  "Powerline hud segment active face.")
-(defface my-pl-segment4b-inactive
-  '((t (:foreground "#3a2e58" :background "#f1fa8c")))
-  "Powerline hud segment inactive face.")
-(defface my-pl-segment5-active
-  '((t (:foreground "#ff79c6" :background "#3a2e58")))
-  "Powerline buffersize segment active face.")
-(defface my-pl-segment5-inactive
-  '((t (:foreground "#f8f8f2" :background "#545565")))
-  "Powerline buffersize segment inactive face.")
-(defface my-pl-segment6-active
- '((t (:foreground "#f1fa8c" :background "#3a2e58" :weight bold)))
-  "Powerline buffer-id  segment active face.")
-(defface my-pl-segment6-inactive
- '((t (:foreground "#f8f8f2" :background "#545565" :weight bold)))
-  "Powerline buffer-id  segment inactive face.")
+  (defface my-pl-segment1-inactive
+   '((t (:foreground "#f8f8f2" :background "#545565")))
+    "Powerline first segment inactive face.")
+  (defface my-pl-segment2-active
+    '((t (:foreground "#f8f8f2" :background "#bd93f9")))
+    "Powerline second segment active face.")
+  (defface my-pl-segment2-inactive
+    '((t (:foreground "#f8f8f2" :background "#545565")))
+    "Powerline second segment inactive face.")
+
+(if (display-graphic-p)
+  (defface my-pl-segment3-active
+    '((t (:foreground "#bd93f9" :background "#3a2e58")))
+    "Powerline third segment active face.")
+  (defface my-pl-segment3-active
+    '((t (:foreground "#bd93f9" :background "#5f00af")))
+    "Powerline third segment active face."))
+
+  (defface my-pl-segment3-inactive
+    '((t (:foreground "#f8f8f2" :background "#545565")))
+    "Powerline third segment inactive face.")
+  (defface my-pl-segment4-active
+    '((t (:foreground "#ffffff" :background "#ff79c6")))
+    "Powerline hud segment active face.")
+  (defface my-pl-segment4-inactive
+    '((t (:foreground "#ffffff" :background "#f8f8f2")))
+    "Powerline hud segment inactive face.")
+
+
+(if (display-graphic-p)
+  (defface my-pl-segment5-active
+    '((t (:foreground "#ff79c6" :background "#3a2e58")))
+    "Powerline buffersize segment active face.")
+  (defface my-pl-segment5-active
+    '((t (:foreground "#ff79c6" :background "#5f00af")))
+    "Powerline buffersize segment active face."))
+
+  (defface my-pl-segment5-inactive
+    '((t (:foreground "#f8f8f2" :background "#545565")))
+    "Powerline buffersize segment inactive face.")
+
+(if (display-graphic-p)
+  (defface my-pl-segment6-active
+   '((t (:foreground "#f1fa8c" :background "#3a2e58" :weight bold)))
+    "Powerline buffer-id  segment active face.")
+  (defface my-pl-segment6-active
+   '((t (:foreground "#f1fa8c" :background "#5f00af" :weight bold)))
+    "Powerline buffer-id  segment active face."))
+  
+  (defface my-pl-segment6-inactive
+   '((t (:foreground "#f8f8f2" :background "#545565" :weight bold)))
+    "Powerline buffer-id  segment inactive face.")
 
 (defun andy--powerline-default-theme ()
   "Set up my custom Powerline with Evil indicators."
@@ -594,7 +598,6 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
          (seg2 (if active 'my-pl-segment2-active 'my-pl-segment2-inactive))
          (seg3 (if active 'my-pl-segment3-active 'my-pl-segment3-inactive))
          (seg4 (if active 'my-pl-segment4-active 'my-pl-segment4-inactive))
-         (seg4b (if active 'my-pl-segment4b-active 'my-pl-segment4b-inactive))
          (seg5 (if active 'my-pl-segment5-active 'my-pl-segment5-inactive))
          (seg6 (if active 'my-pl-segment6-active 'my-pl-segment6-inactive))
          (separator-left (intern (format "powerline-%s-%s"
@@ -638,10 +641,10 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
                          (funcall separator-right seg2 seg1)
                          (powerline-raw " " seg1)
                          (powerline-raw global-mode-string seg3 'r)
-                         (funcall separator-right seg1 seg4b)
-                         (powerline-raw "%6p" seg4b 'r)
+                         (funcall separator-right seg1 seg2)
+                         (powerline-raw "%6p" seg2 'r)
                          (when powerline-display-hud
-                           (powerline-hud seg4b seg4)))))
+                           (powerline-hud seg4 seg1)))))
          (concat (powerline-render lhs)
                  (powerline-fill seg3 (powerline-width rhs))
                  (powerline-render rhs)))))))
@@ -818,9 +821,6 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 (when (fboundp 'imagemagick-register-types)
   (imagemagick-register-types))
 (setq mu4e-view-prefer-html nil)
-
-(evil-define-key 'motion mu4e-headers-mode-map "k" 'mu4e-headers-next)
-(evil-define-key 'motion mu4e-main-mode-map    "k" 'evil-next-line)
 
 (setq mu4e-html2text-command 'mu4e-shr2text)
 

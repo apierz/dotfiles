@@ -1,4 +1,5 @@
 #+Title: config.org
+
 #+OPTIONS: TOC:nil
 #+STARTUP: overview
 
@@ -284,7 +285,7 @@ I use some diminsh functions I got from [[https://github.com/hrs][hrs]]. This le
 
 * evil-mode
 
-I prefer the Vim keybindings and use them wherever possible in Emacs. I make a small change on account of my main keyboard being a =Pok3r= and use =IJKL= for navigation and =h= for =insert-state=. As a result I now pronounce insert as /hinsert/ internally.
+I prefer the Vim keybindings and use them wherever possible in Emacs. I recently made a switch to HJKL from IJKL when I learned the arrow keys on my =Pok3r= keyboard could be reprogrammed to use HJKL everywhere so I'm currently tring to unlearn my old bad habits.
 
 ** Main package:
 
@@ -312,7 +313,7 @@ I prefer the Vim keybindings and use them wherever possible in Emacs. I make a s
 
 #+END_SRC
 
-** IJKL Controls
+** Controls
 
    These give me IJKL controls the places that I want them. Also I use 'hh' as a quick shortcut to return to =evil-normal-state=.
 
@@ -321,18 +322,10 @@ I prefer the Vim keybindings and use them wherever possible in Emacs. I make a s
     :config
     (key-chord-mode 1))
 
-  (define-key evil-normal-state-map "i" 'evil-previous-line)
-  (define-key evil-normal-state-map "j" 'evil-backward-char)
-  (define-key evil-normal-state-map "k" 'evil-next-line)
-  (define-key evil-normal-state-map "l" 'evil-forward-char)
-  (define-key evil-normal-state-map "h" 'evil-insert-state)
   (key-chord-define evil-insert-state-map "hh" 'evil-normal-state)
   (key-chord-define evil-replace-state-map "hh" 'evil-normal-state)
   (key-chord-define evil-visual-state-map "hh" 'evil-normal-state)
   (key-chord-define evil-motion-state-map "hh" 'evil-normal-state)
-  (evil-define-key 'normal dired-mode-map "k" 'dired-next-line)
-  (evil-define-key 'normal dired-mode-map "i" 'dired-previous-line)
-  (evil-define-key 'normal dired-mode-map "h" 'dired-up-directory)
   (evil-define-key 'normal dired-mode-map "l" 'dired-find-alternate-file)
   (evil-define-key 'normal dired-mode-map "v" 'dired-toggle-marks)
   (evil-define-key 'normal dired-mode-map "m" 'dired-mark)
@@ -342,13 +335,7 @@ I prefer the Vim keybindings and use them wherever possible in Emacs. I make a s
   (evil-define-key 'normal dired-mode-map "n" 'evil-search-next)
   (evil-define-key 'normal dired-mode-map "N" 'evil-search-previous)
   (evil-define-key 'normal dired-mode-map "q" 'kill-this-buffer)
-  (define-key evil-motion-state-map "i" 'evil-previous-line)
-  (define-key evil-motion-state-map "j" 'evil-backward-char)
-  (define-key evil-motion-state-map "k" 'evil-next-line)
-  (define-key evil-motion-state-map "l" 'evil-forward-char)
-  (define-key evil-motion-state-map "h" 'evil-insert-state)
   (setq evil-shift-width 2)
-  (evil-define-key 'motion mu4e-headers-mode-map "k" 'mu4e-headers-next)
 
 #+END_SRC
 
@@ -356,17 +343,17 @@ I prefer the Vim keybindings and use them wherever possible in Emacs. I make a s
 
 #+BEGIN_SRC emacs-lisp
   (use-package evil-org)
-  (evil-define-key 'normal evil-org-mode-map (kbd "M-i") 'org-metaup)
-  (evil-define-key 'normal evil-org-mode-map (kbd "M-j") 'org-metaleft)
-  (evil-define-key 'normal evil-org-mode-map (kbd "M-k") 'org-metadown)
-  (evil-define-key 'normal evil-org-mode-map (kbd "M-i") 'org-metaup)
-  (evil-define-key 'normal evil-org-mode-map (kbd "M-I") 'org-shiftmetaup)
-  (evil-define-key 'normal evil-org-mode-map (kbd "M-J") 'org-shiftmetaleft)
-  (evil-define-key 'normal evil-org-mode-map (kbd "M-K") 'org-shiftmetadown)
+  (evil-define-key 'normal evil-org-mode-map (kbd "M-k") 'org-metaup)
+  (evil-define-key 'normal evil-org-mode-map (kbd "M-h") 'org-metaleft)
+  (evil-define-key 'normal evil-org-mode-map (kbd "M-j") 'org-metadown)
+  (evil-define-key 'normal evil-org-mode-map (kbd "M-l") 'org-metaright)
+  (evil-define-key 'normal evil-org-mode-map (kbd "M-K") 'org-shiftmetaup)
+  (evil-define-key 'normal evil-org-mode-map (kbd "M-H") 'org-shiftmetaleft)
+  (evil-define-key 'normal evil-org-mode-map (kbd "M-J") 'org-shiftmetadown)
   (evil-define-key 'normal evil-org-mode-map (kbd "M-L") 'org-shiftmetaright)
-  (evil-define-key 'normal evil-org-mode-map (kbd "I") 'org-shiftup)
-  (evil-define-key 'normal evil-org-mode-map (kbd "J") 'org-shiftleft)
-  (evil-define-key 'normal evil-org-mode-map (kbd "K") 'org-shiftdown)
+  (evil-define-key 'normal evil-org-mode-map (kbd "K") 'org-shiftup)
+  (evil-define-key 'normal evil-org-mode-map (kbd "H") 'org-shiftleft)
+  (evil-define-key 'normal evil-org-mode-map (kbd "J") 'org-shiftdown)
   (evil-define-key 'normal evil-org-mode-map (kbd "L") 'org-shiftright)
 #+END_SRC
 
@@ -471,6 +458,7 @@ I prefer the Vim keybindings and use them wherever possible in Emacs. I make a s
 
   (global-set-key [f4] 'fci-mode)
   (global-set-key [f5] 'search-my-notes)
+  (global-set-key [f6] 'linum-relative-mode)
 #+END_SRC
 
    Robe Mode Commands
@@ -509,13 +497,11 @@ I prefer the Vim keybindings and use them wherever possible in Emacs. I make a s
 #+END_SRC
 
 * Helm
-
 Helm is useful for searching through Emacs. I prefer Helm for searching through my buffers, kill ring and other things.
 
 #+BEGIN_SRC emacs-lisp
   (use-package helm)
   (use-package helm-config)
-
   (global-set-key (kbd "C-x b") 'helm-buffers-list)
   (global-set-key (kbd "C-x r b") 'helm-bookmarks)
   (global-set-key (kbd "C-X m") 'helm-M-x)
@@ -528,7 +514,6 @@ Helm is useful for searching through Emacs. I prefer Helm for searching through 
     'helm (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)
        (define-key helm-map (kbd "ESC") 'helm-keyboard-quit)
   )
-
 #+END_SRC
 
 * Org-mode
@@ -801,136 +786,152 @@ A few other useful packages for coding.
 
 [[https://github.com/milkypostman/powerline][Powerline]] is a mode line replacement for Emacs, based on Vim powerline. I've spent far too much time tweaking my Powerline and it shows no sign of stopping.
 
-You customize the look of your powerline by defining faces for when the powerline is on the active buffer, or it's inactive. I've taken my colors from Dracula Theme, so it matches the rest of my config. 
+You customize the look of your powerline by defining faces for when the powerline is on the active buffer, or it's inactive. I've taken my colors from Dracula Theme, so it matches the rest of my config. Emacs in the terminal is limited to 256 colors, almost all of them bright, so darker colors don't look good when using the terminal. =(display-graphic-p)= lets me check if I'm on a terminal or not and set colors that look better if so.
 
 #+BEGIN_SRC emacs-lisp
 
-  (setq display-time-format "%H:%M")
+  (setq display-time-format "%I:%M")
   (setq display-time-mail-directory "~/.Maildir/Personal/INBOX/new")
   (setq display-time-default-load-average nil)
   (display-time-mode 1)
 
+    (defgroup segments-group nil "My powerline line segments" :group 'segments)
 
-  (defgroup segments-group nil "My powerline line segments" :group 'segments)
+  (if (display-graphic-p)
+    (defface my-pl-segment1-active
+      '((t (:foreground "#f1fa8c" :background "#3a2e58")))
+      "Powerline first segment active face.")
+    (defface my-pl-segment1-active
+      '((t (:foreground "#f1fa8c" :background "#5f00af")))
+      "Powerline first segment active face."))
 
-  (defface my-pl-segment1-active
-    '((t (:foreground "#f1fa8c" :background "#3a2e58")))
-    "Powerline first segment active face.")
-  (defface my-pl-segment1-inactive
-   '((t (:foreground "#f8f8f2" :background "#545565")))
-    "Powerline first segment inactive face.")
-  (defface my-pl-segment2-active
-    '((t (:foreground "#f8f8f2" :background "#bd93f9")))
-    "Powerline second segment active face.")
-  (defface my-pl-segment2-inactive
-    '((t (:foreground "#f8f8f2" :background "#545565")))
-    "Powerline second segment inactive face.")
-  (defface my-pl-segment3-active
-    '((t (:foreground "#bd93f9" :background "#3a2e58")))
-    "Powerline third segment active face.")
-  (defface my-pl-segment3-inactive
-    '((t (:foreground "#f8f8f2" :background "#545565")))
-    "Powerline third segment inactive face.")
-  (defface my-pl-segment4-active
-    '((t (:foreground "#ffffff" :background "#3a2e58")))
-    "Powerline hud segment active face.")
-  (defface my-pl-segment4-inactive
-    '((t (:foreground "#ffffff" :background "#545565")))
-    "Powerline hud segment inactive face.")
-  (defface my-pl-segment4b-active
-    '((t (:foreground "#3a2e58" :background "#f1fa8c")))
-    "Powerline hud segment active face.")
-  (defface my-pl-segment4b-inactive
-    '((t (:foreground "#3a2e58" :background "#f1fa8c")))
-    "Powerline hud segment inactive face.")
-  (defface my-pl-segment5-active
-    '((t (:foreground "#ff79c6" :background "#3a2e58")))
-    "Powerline buffersize segment active face.")
-  (defface my-pl-segment5-inactive
-    '((t (:foreground "#f8f8f2" :background "#545565")))
-    "Powerline buffersize segment inactive face.")
-  (defface my-pl-segment6-active
-   '((t (:foreground "#f1fa8c" :background "#3a2e58" :weight bold)))
-    "Powerline buffer-id  segment active face.")
-  (defface my-pl-segment6-inactive
-   '((t (:foreground "#f8f8f2" :background "#545565" :weight bold)))
-    "Powerline buffer-id  segment inactive face.")
+    (defface my-pl-segment1-inactive
+     '((t (:foreground "#f8f8f2" :background "#545565")))
+      "Powerline first segment inactive face.")
+    (defface my-pl-segment2-active
+      '((t (:foreground "#f8f8f2" :background "#bd93f9")))
+      "Powerline second segment active face.")
+    (defface my-pl-segment2-inactive
+      '((t (:foreground "#f8f8f2" :background "#545565")))
+      "Powerline second segment inactive face.")
+
+  (if (display-graphic-p)
+    (defface my-pl-segment3-active
+      '((t (:foreground "#bd93f9" :background "#3a2e58")))
+      "Powerline third segment active face.")
+    (defface my-pl-segment3-active
+      '((t (:foreground "#bd93f9" :background "#5f00af")))
+      "Powerline third segment active face."))
+
+    (defface my-pl-segment3-inactive
+      '((t (:foreground "#f8f8f2" :background "#545565")))
+      "Powerline third segment inactive face.")
+    (defface my-pl-segment4-active
+      '((t (:foreground "#ffffff" :background "#ff79c6")))
+      "Powerline hud segment active face.")
+    (defface my-pl-segment4-inactive
+      '((t (:foreground "#ffffff" :background "#f8f8f2")))
+      "Powerline hud segment inactive face.")
+
+
+  (if (display-graphic-p)
+    (defface my-pl-segment5-active
+      '((t (:foreground "#ff79c6" :background "#3a2e58")))
+      "Powerline buffersize segment active face.")
+    (defface my-pl-segment5-active
+      '((t (:foreground "#ff79c6" :background "#5f00af")))
+      "Powerline buffersize segment active face."))
+
+    (defface my-pl-segment5-inactive
+      '((t (:foreground "#f8f8f2" :background "#545565")))
+      "Powerline buffersize segment inactive face.")
+
+  (if (display-graphic-p)
+    (defface my-pl-segment6-active
+     '((t (:foreground "#f1fa8c" :background "#3a2e58" :weight bold)))
+      "Powerline buffer-id  segment active face.")
+    (defface my-pl-segment6-active
+     '((t (:foreground "#f1fa8c" :background "#5f00af" :weight bold)))
+      "Powerline buffer-id  segment active face."))
+    
+    (defface my-pl-segment6-inactive
+     '((t (:foreground "#f8f8f2" :background "#545565" :weight bold)))
+      "Powerline buffer-id  segment inactive face.")
 #+END_SRC
 
 
 Then I use them to define a theme in a function. It looks a little confusing at first but it becomes easy with a little experimentation. The powerline is broken into two halves, the left (lhs) and right (rhs) with a section in the middle that fills any empty space.
 
 #+BEGIN_SRC emacs-lisp
-  (defun andy--powerline-default-theme ()
-    "Set up my custom Powerline with Evil indicators."
-    (interactive)
-    (setq-default mode-line-format
-      '("%e"
-        (:eval
-         (let* ((active (powerline-selected-window-active))
-           (seg1 (if active 'my-pl-segment1-active 'my-pl-segment1-inactive))
-           (seg2 (if active 'my-pl-segment2-active 'my-pl-segment2-inactive))
-           (seg3 (if active 'my-pl-segment3-active 'my-pl-segment3-inactive))
-           (seg4 (if active 'my-pl-segment4-active 'my-pl-segment4-inactive))
-           (seg4b (if active 'my-pl-segment4b-active 'my-pl-segment4b-inactive))
-           (seg5 (if active 'my-pl-segment5-active 'my-pl-segment5-inactive))
-           (seg6 (if active 'my-pl-segment6-active 'my-pl-segment6-inactive))
-           (separator-left (intern (format "powerline-%s-%s"
-                                 (powerline-current-separator)
-                                 (car powerline-default-separator-dir))))
-           (separator-right (intern (format "powerline-%s-%s"
-                                  (powerline-current-separator)
-                                  (cdr powerline-default-separator-dir))))
-                (lhs (list (let ((evil-face (powerline-evil-face)))
+    (defun andy--powerline-default-theme ()
+      "Set up my custom Powerline with Evil indicators."
+      (interactive)
+      (setq-default mode-line-format
+        '("%e"
+          (:eval
+           (let* ((active (powerline-selected-window-active))
+             (seg1 (if active 'my-pl-segment1-active 'my-pl-segment1-inactive))
+             (seg2 (if active 'my-pl-segment2-active 'my-pl-segment2-inactive))
+             (seg3 (if active 'my-pl-segment3-active 'my-pl-segment3-inactive))
+             (seg4 (if active 'my-pl-segment4-active 'my-pl-segment4-inactive))
+             (seg5 (if active 'my-pl-segment5-active 'my-pl-segment5-inactive))
+             (seg6 (if active 'my-pl-segment6-active 'my-pl-segment6-inactive))
+             (separator-left (intern (format "powerline-%s-%s"
+                                   (powerline-current-separator)
+                                   (car powerline-default-separator-dir))))
+             (separator-right (intern (format "powerline-%s-%s"
+                                    (powerline-current-separator)
+                                    (cdr powerline-default-separator-dir))))
+                  (lhs (list (let ((evil-face (powerline-evil-face)))
+                               (if evil-mode
+                                   (powerline-raw (powerline-evil-tag) evil-face)
+                                 ))
                              (if evil-mode
-                                 (powerline-raw (powerline-evil-tag) evil-face)
-                               ))
-                           (if evil-mode
-                               (funcall separator-left (powerline-evil-face) seg1))
-                           (powerline-raw "[%*]" seg1 'l)
-                           (when powerline-display-buffer-size
-                             (powerline-buffer-size seg5 'l))
-                           (powerline-buffer-id seg6 'l)
-                           (when (and (boundp 'which-func-mode) which-func-mode)
-                             (powerline-raw which-func-format seg1 'l))
-                           (powerline-raw " " seg1)
-                           (funcall separator-left seg1 seg2)
-                           (when (boundp 'erc-modified-channels-object)
-                             (powerline-raw erc-modified-channels-object seg2 'l))
-                           (powerline-major-mode seg2 'l)
-                           (powerline-process seg2)
-                           (powerline-narrow seg2 'l)
-                           (powerline-raw " " seg2)
-                           (funcall separator-left seg2 seg3)
-                           (powerline-minor-modes seg3 'l)
-                           ))
-                           (rhs (list 
-                           (funcall separator-right seg3 seg2)
-                           (powerline-vc seg2 'r)
-                           (powerline-raw "|" seg2 'r)
-                           (unless window-system
-                             (powerline-raw (char-to-string #xe0a1) seg2 'l))
-                           (powerline-raw "%l" seg2 'l)
-                           (powerline-raw ":" seg2 'r)
-                           (powerline-raw "%c" seg2 'r)
-                           (funcall separator-right seg2 seg1)
-                           (powerline-raw " " seg1)
-                           (powerline-raw global-mode-string seg3 'r)
-                           (funcall separator-right seg1 seg4b)
-                           (powerline-raw "%6p" seg4b 'r)
-                           (when powerline-display-hud
-                             (powerline-hud seg4b seg4)))))
-           (concat (powerline-render lhs)
-                   (powerline-fill seg3 (powerline-width rhs))
-                   (powerline-render rhs)))))))
+                                 (funcall separator-left (powerline-evil-face) seg1))
+                             (powerline-raw "[%*]" seg1 'l)
+                             (when powerline-display-buffer-size
+                               (powerline-buffer-size seg5 'l))
+                             (powerline-buffer-id seg6 'l)
+                             (when (and (boundp 'which-func-mode) which-func-mode)
+                               (powerline-raw which-func-format seg1 'l))
+                             (powerline-raw " " seg1)
+                             (funcall separator-left seg1 seg2)
+                             (when (boundp 'erc-modified-channels-object)
+                               (powerline-raw erc-modified-channels-object seg2 'l))
+                             (powerline-major-mode seg2 'l)
+                             (powerline-process seg2)
+                             (powerline-narrow seg2 'l)
+                             (powerline-raw " " seg2)
+                             (funcall separator-left seg2 seg3)
+                             (powerline-minor-modes seg3 'l)
+                             ))
+                             (rhs (list 
+                             (funcall separator-right seg3 seg2)
+                             (powerline-vc seg2 'r)
+                             (powerline-raw "|" seg2 'r)
+                             (unless window-system
+                               (powerline-raw (char-to-string #xe0a1) seg2 'l))
+                             (powerline-raw "%l" seg2 'l)
+                             (powerline-raw ":" seg2 'r)
+                             (powerline-raw "%c" seg2 'r)
+                             (funcall separator-right seg2 seg1)
+                             (powerline-raw " " seg1)
+                             (powerline-raw global-mode-string seg3 'r)
+                             (funcall separator-right seg1 seg2)
+                             (powerline-raw "%6p" seg2 'r)
+                             (when powerline-display-hud
+                               (powerline-hud seg4 seg1)))))
+             (concat (powerline-render lhs)
+                     (powerline-fill seg3 (powerline-width rhs))
+                     (powerline-render rhs)))))))
 
-  (use-package powerline
-    :ensure t
-    :config
-    (setq powerline-height 26)
-    (setq powerline-default-separator (if (display-graphic-p) 'arrow-fade
-                                        nil))
-    (andy--powerline-default-theme))
+    (use-package powerline
+      :ensure t
+      :config
+      (setq powerline-height 26)
+      (setq powerline-default-separator (if (display-graphic-p) 'arrow-fade
+                                          nil))
+      (andy--powerline-default-theme))
 
 #+END_SRC
 
@@ -1134,13 +1135,6 @@ Show some images in email messages.
 
 #+END_SRC
 
-Use 'k' as the down key while in =mu4e=.
-
-#+BEGIN_SRC emacs-lisp
-    (evil-define-key 'motion mu4e-headers-mode-map "k" 'mu4e-headers-next)
-    (evil-define-key 'motion mu4e-main-mode-map    "k" 'evil-next-line)
-
-#+END_SRC
 
 Convert html emails to text.
 
