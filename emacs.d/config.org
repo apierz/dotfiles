@@ -8,7 +8,7 @@
 This is my personal Emacs configuration. I use the [[https://github.com/railwaycat/homebrew-emacsmacport][Railwaycat Emacs for Mac]] port. It has two main advantages over the Emacs for Mac OSX port for me: 1. it renders colors in my Powerline better, and 2. It lets me use 2 finger swiping to navigate through buffers, which is very handy when I am looking at Emacs while working on something else.
 
 *** Screenshot of my config
-[[https://github.com/apierz/dotfiles/blob/master/Screen%20Shot%202016-07-03%20at%201.05.39%20PM.png?raw=true]] 
+[[https://github.com/apierz/dotfiles/blob/master/screenshot.png?raw=true]] 
 
 * Personal Information
 
@@ -916,11 +916,12 @@ Then I use them to define a theme in a function. It looks a little confusing at 
                              (powerline-raw "%c" seg2 'r)
                              (funcall separator-right seg2 seg1)
                              (powerline-raw " " seg1)
-                             (powerline-raw global-mode-string seg3 'r)
-                             (funcall separator-right seg1 seg2)
-                             (powerline-raw "%6p" seg2 'r)
+                             (powerline-raw "%6p" seg3 'r)
                              (when powerline-display-hud
-                               (powerline-hud seg4 seg1)))))
+                               (powerline-hud seg4 seg1))
+                             (funcall separator-right seg1 seg2)
+                             (powerline-raw global-mode-string seg2 'r)
+)))
              (concat (powerline-render lhs)
                      (powerline-fill seg3 (powerline-width rhs))
                      (powerline-render rhs)))))))

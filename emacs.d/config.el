@@ -521,7 +521,6 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 (setq display-time-format "%I:%M")
 (setq display-time-mail-directory "~/.Maildir/Personal/INBOX/new")
 (setq display-time-default-load-average nil)
-(setq display-time-use-mail-icon t)
 (display-time-mode 1)
 
   (defgroup segments-group nil "My powerline line segments" :group 'segments)
@@ -588,74 +587,75 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
     "Powerline buffer-id  segment inactive face.")
 
 (defun andy--powerline-default-theme ()
-  "Set up my custom Powerline with Evil indicators."
-  (interactive)
-  (setq-default mode-line-format
-    '("%e"
-      (:eval
-       (let* ((active (powerline-selected-window-active))
-         (seg1 (if active 'my-pl-segment1-active 'my-pl-segment1-inactive))
-         (seg2 (if active 'my-pl-segment2-active 'my-pl-segment2-inactive))
-         (seg3 (if active 'my-pl-segment3-active 'my-pl-segment3-inactive))
-         (seg4 (if active 'my-pl-segment4-active 'my-pl-segment4-inactive))
-         (seg5 (if active 'my-pl-segment5-active 'my-pl-segment5-inactive))
-         (seg6 (if active 'my-pl-segment6-active 'my-pl-segment6-inactive))
-         (separator-left (intern (format "powerline-%s-%s"
-                               (powerline-current-separator)
-                               (car powerline-default-separator-dir))))
-         (separator-right (intern (format "powerline-%s-%s"
-                                (powerline-current-separator)
-                                (cdr powerline-default-separator-dir))))
-              (lhs (list (let ((evil-face (powerline-evil-face)))
-                           (if evil-mode
-                               (powerline-raw (powerline-evil-tag) evil-face)
+      "Set up my custom Powerline with Evil indicators."
+      (interactive)
+      (setq-default mode-line-format
+        '("%e"
+          (:eval
+           (let* ((active (powerline-selected-window-active))
+             (seg1 (if active 'my-pl-segment1-active 'my-pl-segment1-inactive))
+             (seg2 (if active 'my-pl-segment2-active 'my-pl-segment2-inactive))
+             (seg3 (if active 'my-pl-segment3-active 'my-pl-segment3-inactive))
+             (seg4 (if active 'my-pl-segment4-active 'my-pl-segment4-inactive))
+             (seg5 (if active 'my-pl-segment5-active 'my-pl-segment5-inactive))
+             (seg6 (if active 'my-pl-segment6-active 'my-pl-segment6-inactive))
+             (separator-left (intern (format "powerline-%s-%s"
+                                   (powerline-current-separator)
+                                   (car powerline-default-separator-dir))))
+             (separator-right (intern (format "powerline-%s-%s"
+                                    (powerline-current-separator)
+                                    (cdr powerline-default-separator-dir))))
+                  (lhs (list (let ((evil-face (powerline-evil-face)))
+                               (if evil-mode
+                                   (powerline-raw (powerline-evil-tag) evil-face)
+                                 ))
+                             (if evil-mode
+                                 (funcall separator-left (powerline-evil-face) seg1))
+                             (powerline-raw "[%*]" seg1 'l)
+                             (when powerline-display-buffer-size
+                               (powerline-buffer-size seg5 'l))
+                             (powerline-buffer-id seg6 'l)
+                             (when (and (boundp 'which-func-mode) which-func-mode)
+                               (powerline-raw which-func-format seg1 'l))
+                             (powerline-raw " " seg1)
+                             (funcall separator-left seg1 seg2)
+                             (when (boundp 'erc-modified-channels-object)
+                               (powerline-raw erc-modified-channels-object seg2 'l))
+                             (powerline-major-mode seg2 'l)
+                             (powerline-process seg2)
+                             (powerline-narrow seg2 'l)
+                             (powerline-raw " " seg2)
+                             (funcall separator-left seg2 seg3)
+                             (powerline-minor-modes seg3 'l)
                              ))
-                         (if evil-mode
-                             (funcall separator-left (powerline-evil-face) seg1))
-                         (powerline-raw "[%*]" seg1 'l)
-                         (when powerline-display-buffer-size
-                           (powerline-buffer-size seg5 'l))
-                         (powerline-buffer-id seg6 'l)
-                         (when (and (boundp 'which-func-mode) which-func-mode)
-                           (powerline-raw which-func-format seg1 'l))
-                         (powerline-raw " " seg1)
-                         (funcall separator-left seg1 seg2)
-                         (when (boundp 'erc-modified-channels-object)
-                           (powerline-raw erc-modified-channels-object seg2 'l))
-                         (powerline-major-mode seg2 'l)
-                         (powerline-process seg2)
-                         (powerline-narrow seg2 'l)
-                         (powerline-raw " " seg2)
-                         (funcall separator-left seg2 seg3)
-                         (powerline-minor-modes seg3 'l)
-                         ))
-                         (rhs (list 
-                         (funcall separator-right seg3 seg2)
-                         (powerline-vc seg2 'r)
-                         (powerline-raw "|" seg2 'r)
-                         (unless window-system
-                           (powerline-raw (char-to-string #xe0a1) seg2 'l))
-                         (powerline-raw "%l" seg2 'l)
-                         (powerline-raw ":" seg2 'r)
-                         (powerline-raw "%c" seg2 'r)
-                         (funcall separator-right seg2 seg1)
-                         (powerline-raw " " seg1)
-                         (powerline-raw global-mode-string seg3 'r)
-                         (funcall separator-right seg1 seg2)
-                         (powerline-raw "%6p" seg2 'r)
-                         (when powerline-display-hud
-                           (powerline-hud seg4 seg1)))))
-         (concat (powerline-render lhs)
-                 (powerline-fill seg3 (powerline-width rhs))
-                 (powerline-render rhs)))))))
+                             (rhs (list 
+                             (funcall separator-right seg3 seg2)
+                             (powerline-vc seg2 'r)
+                             (powerline-raw "|" seg2 'r)
+                             (unless window-system
+                               (powerline-raw (char-to-string #xe0a1) seg2 'l))
+                             (powerline-raw "%l" seg2 'l)
+                             (powerline-raw ":" seg2 'r)
+                             (powerline-raw "%c" seg2 'r)
+                             (funcall separator-right seg2 seg1)
+                             (powerline-raw " " seg1)
+                             (powerline-raw "%6p" seg3 'r)
+                             (when powerline-display-hud
+                               (powerline-hud seg4 seg1))
+                             (funcall separator-right seg1 seg2)
+                             (powerline-raw global-mode-string seg2 'r)
+)))
+             (concat (powerline-render lhs)
+                     (powerline-fill seg3 (powerline-width rhs))
+                     (powerline-render rhs)))))))
 
-(use-package powerline
-  :ensure t
-  :config
-  (setq powerline-height 26)
-  (setq powerline-default-separator (if (display-graphic-p) 'arrow-fade
-                                      nil))
-  (andy--powerline-default-theme))
+    (use-package powerline
+      :ensure t
+      :config
+      (setq powerline-height 26)
+      (setq powerline-default-separator (if (display-graphic-p) 'arrow-fade
+                                          nil))
+      (andy--powerline-default-theme))
 
 (use-package powerline-evil
   :ensure t)
