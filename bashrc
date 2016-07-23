@@ -6,6 +6,7 @@ alias mkdir='mkdir -p'
 alias gitla='git log --graph --oneline --all --decorate'
 alias gs='git status'
 alias gb='git branch'
+alias rc='rails console'
 
 
 source ~/.git-completion.bash

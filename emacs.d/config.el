@@ -44,6 +44,11 @@
 (setq-default tab-width 2)
 (put 'dired-find-alternate-file 'disabled nil)
 
+(setq frame-title-format
+  '("" invocation-name ": "(:eval (if (buffer-file-name)
+                (abbreviate-file-name (buffer-file-name))
+                  "%b"))))
+
 (setq backup-directory-alist '(("." . "~/Dropbox/emacs_backups"))
       backup-by-copying      t  ; Don't de-link hard links
       version-control        t  ; Use version numbers on backups
@@ -642,6 +647,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
                              (powerline-raw "%6p" seg3 'r)
                              (when powerline-display-hud
                                (powerline-hud seg4 seg1))
+                             (powerline-raw " " seg1 'r)
                              (funcall separator-right seg1 seg2)
                              (powerline-raw global-mode-string seg2 'r)
 )))

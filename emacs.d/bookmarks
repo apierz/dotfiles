@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("config"
+(("pokemon_I_want.txt"
+ (filename . "~/Dropbox/Notes/pokemon_I_want.txt")
+ (front-context-string . "\n* Dugtrio\n* Sta")
+ (rear-context-string . "okemon Fire Red\n")
+ (position . 63))
+("config"
  (filename . "~/Documents/dotfiles/emacs.d/config.org")
  (front-context-string . "#+Title: config.")
  (rear-context-string)
