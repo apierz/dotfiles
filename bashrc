@@ -1,6 +1,6 @@
 #!/bin/bash
 
-alias emc='LANG=en_US.UTF-8 TERM=xterm-256color emacsclient -nw'
+alias emc='emacsclient -nw'
 alias ll='ls -lahG'
 alias mkdir='mkdir -p'
 alias gitla='git log --graph --oneline --all --decorate'

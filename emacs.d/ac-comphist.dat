@@ -1,4 +1,6 @@
-((("display-time-load-average" .
+((("r" .
+   [1])
+  ("display-time-load-average" .
    [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
   ("-" .
    [1])
@@ -315,7 +317,7 @@
   ("length" .
    [1 0 0 0 0 0])
   ("use-package" .
-   [1 0 0 10 5 0 4 0 1 0 0])
+   [1 0 0 11 5 0 4 0 1 0 0])
   (":config" .
    [3 0 0 0 1 0 0])
   ("diminish" .

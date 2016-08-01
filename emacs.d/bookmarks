@@ -2,7 +2,17 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("pokemon_I_want.txt"
+(("powerline"
+ (filename . "~/Documents/Programming_Projects/powerline/")
+ (front-context-string . ".git\n  -rw-r--r-")
+ (rear-context-string . "42 Aug  1 07:22 ")
+ (position . 258))
+("keymap.c"
+ (filename . "~/Documents/dotfiles/andykeymap/keymap.c")
+ (front-context-string . "#include \"planck")
+ (rear-context-string)
+ (position . 1))
+("pokemon_I_want.txt"
  (filename . "~/Dropbox/Notes/pokemon_I_want.txt")
  (front-context-string . "\n* Dugtrio\n* Sta")
  (rear-context-string . "okemon Fire Red\n")

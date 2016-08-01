@@ -176,7 +176,6 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 (use-package dracula-theme)
 (load-theme 'dracula t)
 
-(load-theme 'dracula t)
 (set-face-attribute 'default nil
                      :family "Hack" :height 140)
 
@@ -231,6 +230,8 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
   (key-chord-mode 1))
 
 (key-chord-define evil-insert-state-map "hh" 'evil-normal-state)
+(key-chord-define evil-insert-state-map ",," "<")
+(key-chord-define evil-insert-state-map ".." ">")
 (key-chord-define evil-replace-state-map "hh" 'evil-normal-state)
 (key-chord-define evil-visual-state-map "hh" 'evil-normal-state)
 (key-chord-define evil-motion-state-map "hh" 'evil-normal-state)
@@ -398,6 +399,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
      ("WAITING" . (:foreground "#bd93f9" :weight bold)) 
      ("CANCELED" . (:foreground "#ff5555" :weight bold))
      ("CURRENT" . (:foreground "#50fa7b" :weight bold))
+     ("DONE" . (:foreground "#ff5555" :weight bold))
      ("SOMEDAY" . (:foreground "#6272a4" :weight bold))))
 
 (setq org-hide-leading-stars t)
@@ -436,6 +438,26 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
    (ruby . t)
    (dot . t)
    (gnuplot . t)))
+
+;; (push "<path-to-this-file>" load-path)
+;; (require 'org-toodledo)
+;; (setq org-toodledo-userid "<toodledo-userid>")      << *NOT* your email!
+;; (setq org-toodledo-password "<toodled-password>")
+
+;; ;; Useful key bindings for org-mode
+;; (add-hook 'org-mode-hook
+;;        (lambda ()
+;;          (local-unset-key "\C-o")
+;;          (local-set-key "\C-od" 'org-toodledo-mark-task-deleted)
+;;          (local-set-key "\C-os" 'org-toodledo-sync)
+;;          )
+;;        )
+;; (add-hook 'org-agenda-mode-hook
+;;        (lambda ()
+;;          (local-unset-key "\C-o")
+;;          (local-set-key "\C-od" 'org-toodledo-agenda-mark-task-deleted)
+;;          )
+       ;; )
 
 (use-package yasnippet
   :ensure t
@@ -516,6 +538,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
   (add-to-list 'auto-mode-alist '("\\.html$" . web-mode))
   (add-to-list 'auto-mode-alist '("\\.erb$" . web-mode))
   (add-to-list 'auto-mode-alist '("\\.twig$" . web-mode))
+  (rainbow-delimiters-mode)
   (setq web-mode-attr-indent-offset 2)
   (setq web-mode-code-indent-offset 2)
   (setq web-mode-css-indent-offset 2)
@@ -670,6 +693,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 (use-package helm-projectile)
 
 (add-hook 'ruby-mode-hook 'projectile-mode)
+(add-hook 'web-mode-hook 'projectile-mode)
 (setq projectile-indexing-method 'alien)
 (setq projectile-switch-project-action 'projectile-find-file)
 (setq projectile-completion-system 'default)

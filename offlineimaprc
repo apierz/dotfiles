@@ -1,5 +1,5 @@
 [general]
-accounts = personal, work
+accounts = personal,work
 maxsyncaccounts = 3
 pythonfile = /Users/Andy/.offlineimap.py
 
