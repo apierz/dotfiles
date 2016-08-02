@@ -1,4 +1,6 @@
-((("display-graphic-p" .
+((("powerline-encoding" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("display-graphic-p" .
    [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
   ("unless" .
    [1 0 0 0 0 0])
@@ -381,7 +383,7 @@
   ("projectile-root-local" .
    [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
   ("seg3" .
-   [3 0 0 0])
+   [4 0 0 0])
   ("restaurants" .
    [2 0 0 0 0 1 0 0 0 0 0])
   ("saved_restaurants" .
@@ -483,4 +485,8 @@
   ("display-time-load-average" .
    [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
   ("r" .
-   [1])))
+   [1])
+  ("l" .
+   [1])
+  (":load-path" .
+   [0 0 0 0 0 0 0 1 0 0])))

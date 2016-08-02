@@ -640,8 +640,10 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
                              (if evil-mode
                                  (funcall separator-left (powerline-evil-face) seg1))
                              (powerline-raw "[%*]" seg1 'l)
-                             (when powerline-display-buffer-size
-                               (powerline-buffer-size seg5 'l))
+                             
+                             ;; (when powerline-display-buffer-size
+                               ;; (powerline-buffer-size seg5 'l))
+                             (powerline-vc seg5 'l)
                              (powerline-buffer-id seg6 'l)
                              (when (and (boundp 'which-func-mode) which-func-mode)
                                (powerline-raw which-func-format seg1 'l))
@@ -658,10 +660,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
                              ))
                              (rhs (list 
                              (funcall separator-right seg3 seg2)
-                             (powerline-vc seg2 'r)
-                             (powerline-raw "|" seg2 'r)
-                             (unless window-system
-                               (powerline-raw (char-to-string #xe0a1) seg2 'l))
+                             (powerline-raw (char-to-string #xe0a1) seg2 'l)
                              (powerline-raw "%l" seg2 'l)
                              (powerline-raw ":" seg2 'r)
                              (powerline-raw "%c" seg2 'r)
@@ -679,6 +678,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
                      (powerline-render rhs)))))))
 
     (use-package powerline
+      :load-path "~/Documents/Programming_Projects/powerline"
       :ensure t
       :config
       (setq powerline-height 26)
