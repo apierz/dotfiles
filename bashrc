@@ -7,7 +7,7 @@ alias gitla='git log --graph --oneline --all --decorate'
 alias gs='git status'
 alias gb='git branch'
 alias rc='rails console'
-
+alias ks='tmux kill-session'
 
 source ~/.git-completion.bash
 source ~/.bash_git
@@ -19,6 +19,7 @@ PS1='\[\033[30;43m\]\[\033[43;90m\]\W\[\033[33;42m\]\[\033[42;90m\]$(__git
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$PATH"
 eval "$(rbenv init -)"
 
+export MPD_HOST="/Users/Andy/.mpd/socket"
 
 extract () {
    if [ -f $1 ] ; then

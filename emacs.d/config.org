@@ -259,6 +259,7 @@ I use my own version of [[https://github.com/dracula/dracula-theme][Dracua Theme
 
   (set-frame-parameter (selected-frame) 'alpha '(90 90))
   (add-to-list 'default-frame-alist '(alpha 90 90))
+
 #+END_SRC
 
 Just to be double-dog sure it ends up as utf-8...
@@ -577,6 +578,20 @@ I prefer to turn line numbers off while in =Org-mode=.
   (use-package linum-off
     :config
     (add-to-list 'linum-disabled-modes-list "org-mode"))
+
+#+END_SRC
+
+
+#+BEGIN_SRC emacs-lisp
+
+  (add-to-list 'org-latex-classes
+               '("article"
+                 "\\documentclass{article}"
+                 ("\\section{%s}" . "\\section*{%s}")
+                 ("\\subsection{%s}" . "\\subsection*{%s}")
+                 ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+                 ("\\paragraph{%s}" . "\\paragraph*{%s}")
+                 ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
 
 #+END_SRC
 
@@ -1029,127 +1044,126 @@ I use a few basic settings and have =projectile= auto load whenever I'm in =ruby
 General Configuragtion
 
 #+BEGIN_SRC emacs-lisp
-    (setq mu4e-mu-binary "/usr/local/Cellar/mu/HEAD/bin/mu")
-    (setq mu4e-maildir "/Users/Andy/.Maildir")
+  (setq mu4e-mu-binary "/usr/local/Cellar/mu/HEAD/bin/mu")
+  (setq mu4e-maildir "/Users/Andy/.Maildir")
 
-    (setq mu4e-multi-account-alist
-      '(("personal"
-         (user-mail-address .  "andy@andypierz.com")
-         (user-full-name  .   "Andy Pierz")
-         (mu4e-sent-folder .  "/personal/Sent\ Items")
-         (mu4e-drafts-folder . "/personal/Drafts")
-         (mu4e-trash-folder .  "/personal/Trash")
-         (mu4e-refile-folder . "/personal/Archive"))
-        ("work"
-         (user-mail-address .  "andy@mutdut.com")
-         (user-fullname . "Andy Pierz")
-         (mu4e-sent-folder .  "/work/Sent\ Items")
-         (mu4e-drafts-folder . "/work/Drafts")
-         (mu4e-trash-folder .  "/work/Trash")
-         (mu4e-refile-folder . "/work/Archive"))))
-
-    (mu4e-multi-enable)
-
-    (setq mu4e-drafts-folder "/drafts")
-
-
-    ;;set attachment downloads directory
-    (setq mu4e-attachment-dir  "~/Downloads")
-
-    ;; setup some handy shortcuts
-    ;; you can quickly switch to your Inbox -- press ``ji''
-    ;; then, when you want archive some messages, move them to
-    ;; the 'All Mail' folder by pressing ``ma''.
-
-    (setq mu4e-maildir-shortcuts
-      '( ("/personal/INBOX"              . ?i)
-         ("/personal/Sent\ Items"   . ?s)
-         ("/personal/Trash"       . ?t)
-         ("/personal/Archive"    . ?a)
-         ("/personal/Starred"    . ?p)
-         ("/personal/Drafts"    . ?d)
-           
-         ("/work/INBOX"      . ?w)
-         ("/work/Drafts"      . ?z)
-         ("/work/Sent\ Items"       . ?f)
-         ("/work/Archive"    . ?o)))
-
-
-    ;; allow for updating mail using 'U' in the main view:
-    (setq mu4e-get-mail-command "offlineimap")
-    (setq mu4e-update-interval 300)
-
-    ;; something about ourselves
-    (setq
-      user-mail-address "andy@andypierz.com"
-      user-full-name  "Andy Pierz"
-      mu4e-compose-signature
-      (concat
-        ""
-        ""))
-
-
-    (require 'smtpmail)
-
-    (setq message-send-mail-function 'smtpmail-send-it
-      smtpmail-stream-type 'ssl
-      smtpmail-default-smtp-server "mail.hover.com"
-      smtpmail-smtp-server "mail.hover.com"
-      smtpmail-smtp-service 465)
-
-    ;; don't keep message buffers around
-    (setq message-kill-buffer-on-exit t)
-
-    (defvar my-mu4e-account-alist
-      '(("personal"
-      ;; about me
-      (user-mail-address      "andy@andypierz.com")
-      (user-full-name         "Andy Pierz")
-      ;; smtp
-      (smtpmail-stream-type ssl)
-      (smtpmail-starttls-credentials '(("mail.hover.com" 587 nil nil)))
-      (smtpmail-default-smtp-server "mail.hover.com")
-      (smtpmail-smtp-server "mail.hover.com")
-      (smtpmail-smtp-service 465))
+  (setq mu4e-multi-account-alist
+    '(("personal"
+       (user-mail-address .  "andy@andypierz.com")
+       (user-full-name  .   "Andy Pierz")
+       (mu4e-drafts-folder . "/personal/Drafts")
+       (mu4e-trash-folder .  "/personal/Trash")
+       (mu4e-refile-folder . "/personal/Archive"))
       ("work"
-      ;; about me
-      (user-mail-address      "andy@mutdut.com")
-      (user-full-name         "Andy Pierz")
-      ;;(mu4e-compose-signature "0xAX")
+       (user-mail-address .  "andy@mutdut.com")
+       (user-fullname . "Andy Pierz")
+       (mu4e-drafts-folder . "/work/Drafts")
+       (mu4e-trash-folder .  "/work/Trash")
+       (mu4e-refile-folder . "/work/Archive"))))
 
-      ;; smtp
-      (smtpmail-stream-type ssl)
-      (smtpmail-auth-credentials '(("mail.hover.com" 25 "andy@mutdut.com" nil)))
-      (smtpmail-default-smtp-server "mail.hover.com")
-      (smtpmail-smtp-service 465))))
+  (mu4e-multi-enable)
 
-    (defun my-mu4e-set-account ()
-      "Set the account for composing a message."
-      (let* ((account
-        (if mu4e-compose-parent-message
-          (let ((maildir (mu4e-message-field mu4e-compose-parent-message :maildir)))
-          (string-match "/\\(.*?\\)/" maildir)
-          (match-string 1 maildir))
-          (completing-read (format "Compose with account: (%s) "
-            (mapconcat #'(lambda (var) (car var)) my-mu4e-account-alist "/"))
-            (mapcar #'(lambda (var) (car var)) my-mu4e-account-alist)
-              nil t nil nil (car my-mu4e-account-alist))))
-            (account-vars (cdr (assoc account my-mu4e-account-alist))))
-        (if account-vars
-          (mapc #'(lambda (var)
-           (set (car var) (cadr var)))
-              account-vars)
-        (error "No email account found"))))
-
-    (add-hook 'mu4e-compose-pre-hook 'my-mu4e-set-account)
+  (setq mu4e-drafts-folder "/drafts")
+  (setq mu4e-sent-folder "/personal/Sent\ Items")
 
 
-    (use-package evil-mu4e)
+  ;;set attachment downloads directory
+  (setq mu4e-attachment-dir  "~/Downloads")
 
-    (define-key mu4e-headers-mode-map "p" 'mu4e-headers-mark-for-flag)
+  ;; setup some handy shortcuts
+  ;; you can quickly switch to your Inbox -- press ``ji''
+  ;; then, when you want archive some messages, move them to
+  ;; the 'All Mail' folder by pressing ``ma''.
 
-    (add-hook 'mu4e-main-mode-hook 'evil-motion-state)
-    (add-hook 'mu4e-headers-mode-hook 'evil-motion-state)
+  (setq mu4e-maildir-shortcuts
+    '( ("/personal/INBOX"              . ?i)
+       ("/personal/Sent\ Items"   . ?s)
+       ("/personal/Trash"       . ?t)
+       ("/personal/Archive"    . ?a)
+       ("/personal/Starred"    . ?p)
+       ("/personal/Drafts"    . ?d)
+         
+       ("/work/INBOX"      . ?w)
+       ("/work/Drafts"      . ?z)
+       ("/work/Sent\ Items"       . ?f)
+       ("/work/Archive"    . ?o)))
+
+
+  ;; allow for updating mail using 'U' in the main view:
+  (setq mu4e-get-mail-command "offlineimap")
+  (setq mu4e-update-interval 300)
+
+  ;; something about ourselves
+  (setq
+    user-mail-address "andy@andypierz.com"
+    user-full-name  "Andy Pierz"
+    mu4e-compose-signature
+    (concat
+      ""
+      ""))
+
+
+  (require 'smtpmail)
+
+  (setq message-send-mail-function 'smtpmail-send-it
+    smtpmail-stream-type 'ssl
+    smtpmail-default-smtp-server "mail.hover.com"
+    smtpmail-smtp-server "mail.hover.com"
+    smtpmail-smtp-service 465)
+
+  ;; don't keep message buffers around
+  (setq message-kill-buffer-on-exit t)
+
+  (defvar my-mu4e-account-alist
+    '(("personal"
+    ;; about me
+    (user-mail-address      "andy@andypierz.com")
+    (user-full-name         "Andy Pierz")
+    ;; smtp
+    (smtpmail-stream-type ssl)
+    (smtpmail-starttls-credentials '(("mail.hover.com" 587 nil nil)))
+    (smtpmail-default-smtp-server "mail.hover.com")
+    (smtpmail-smtp-server "mail.hover.com")
+    (smtpmail-smtp-service 465))
+    ("work"
+    ;; about me
+    (user-mail-address      "andy@mutdut.com")
+    (user-full-name         "Andy Pierz")
+    ;;(mu4e-compose-signature "0xAX")
+
+    ;; smtp
+    (smtpmail-stream-type ssl)
+    (smtpmail-auth-credentials '(("mail.hover.com" 25 "andy@mutdut.com" nil)))
+    (smtpmail-default-smtp-server "mail.hover.com")
+    (smtpmail-smtp-service 465))))
+
+  (defun my-mu4e-set-account ()
+    "Set the account for composing a message."
+    (let* ((account
+      (if mu4e-compose-parent-message
+        (let ((maildir (mu4e-message-field mu4e-compose-parent-message :maildir)))
+        (string-match "/\\(.*?\\)/" maildir)
+        (match-string 1 maildir))
+        (completing-read (format "Compose with account: (%s) "
+          (mapconcat #'(lambda (var) (car var)) my-mu4e-account-alist "/"))
+          (mapcar #'(lambda (var) (car var)) my-mu4e-account-alist)
+            nil t nil nil (car my-mu4e-account-alist))))
+          (account-vars (cdr (assoc account my-mu4e-account-alist))))
+      (if account-vars
+        (mapc #'(lambda (var)
+         (set (car var) (cadr var)))
+            account-vars)
+      (error "No email account found"))))
+
+  (add-hook 'mu4e-compose-pre-hook 'my-mu4e-set-account)
+
+
+  (use-package evil-mu4e)
+
+  (define-key mu4e-headers-mode-map "p" 'mu4e-headers-mark-for-flag)
+
+  (add-hook 'mu4e-main-mode-hook 'evil-motion-state)
+  (add-hook 'mu4e-headers-mode-hook 'evil-motion-state)
 #+END_SRC
 
 

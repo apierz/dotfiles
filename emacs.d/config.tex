@@ -1,7 +1,54 @@
+% Created 2016-08-03 Wed 14:19
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\tolerance=1000
+\author{Andy Pierz}
+\date{\today}
+\title{config.org}
+\hypersetup{
+  pdfkeywords={},
+  pdfsubject={},
+  pdfcreator={Emacs 24.5.1 (Org mode 8.2.10)}}
+\begin{document}
 
+\maketitle
+
+\section{Emacs Configuration}
+\label{sec-1}
+
+This is my personal Emacs configuration. I use the \href{https://github.com/railwaycat/homebrew-emacsmacport}{Railwaycat Emacs for Mac} port. It has two main advantages over the Emacs for Mac OSX port for me: 1. it renders colors in my Powerline better, and 2. It lets me use 2 finger swiping to navigate through buffers, which is very handy when I am looking at Emacs while working on something else.
+
+\subsubsection{Screenshot of my config}
+\label{sec-1-0-1}
+\url{https://github.com/apierz/dotfiles/blob/master/screenshot.png?raw=true} 
+
+\section{Personal Information}
+\label{sec-2}
+
+\begin{verbatim}
 (setq user-full-name "Andy Pierz"
       user-mail-address "andy@andypierz.com")
+\end{verbatim}
+\section{Packages and Paths}
+\label{sec-3}
 
+The first thing that gets loaded is \texttt{package}, Emacs' package manager. I then add some common repositories for Emacs packages and initialize package.
+
+\begin{verbatim}
 (require 'package)
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
@@ -10,16 +57,34 @@
 
 (setq package-enable-at-startup nil)
 (package-initialize)
+\end{verbatim}
 
+Next I want to set my load paths, it's mostly the standard folders, plus one for my working Dracula Theme Directory.
+
+\begin{verbatim}
 (add-to-list 'load-path (expand-file-name "snippets" user-emacs-directory))
 (add-to-list 'load-path "~/.emacs.d/plugins")
 (add-to-list 'load-path "~/.emacs.d/plugins/evil-org-mode")
 (add-to-list 'load-path "/usr/local/Cellar/mu/HEAD/bin/mu")
 (add-to-list 'exec-path "/usr/local/bin")
 (add-to-list 'load-path "/Users/Andy/Documents/Programming_Projects/dracula-theme/emacs")
+\end{verbatim}
 
+\texttt{use-package} is a \texttt{require} replacement that helps Emacs load faster. Might be a placebo.
+
+\begin{verbatim}
 (require 'use-package)
+\end{verbatim}
 
+\section{Essential Settings}
+\label{sec-4}
+
+\subsection{Simple Configuration Settings}
+\label{sec-4-1}
+
+These are basic Emacs settings. They include inhibiting the startup screen and menu-bar and various small visual preferences.
+
+\begin{verbatim}
 (setq inhibit-splash-screen t
       inhibit-startup-message t
       inhibit-startup-echo-area-message t) (menu-bar-mode -1)
@@ -43,19 +108,44 @@
 (setq-default fill-column 80)
 (setq-default tab-width 2)
 (put 'dired-find-alternate-file 'disabled nil)
+\end{verbatim}
 
+\subsection{Title Bar Configuration}
+\label{sec-4-2}
+
+Emacs@hostname is not very useful information for the title bar.
+
+\begin{verbatim}
 (setq frame-title-format
   '("" invocation-name ": "(:eval (if (buffer-file-name)
                 (abbreviate-file-name (buffer-file-name))
                   "%b"))))
+\end{verbatim}
 
+
+\subsection{Backup Configuration}
+\label{sec-4-3}
+
+I prefer for Emacs to store automatic backups in a central location, rather than leaving them strewn about.
+
+\begin{verbatim}
 (setq backup-directory-alist '(("." . "~/Dropbox/emacs_backups"))
       backup-by-copying      t  ; Don't de-link hard links
       version-control        t  ; Use version numbers on backups
       delete-old-versions    t  ; Automatically delete excess backups:
       kept-new-versions      5 ; how many of the newest versions to keep
       kept-old-versions      5) ; and how many of the old
+\end{verbatim}
 
+\section{Utility Functions}
+\label{sec-5}
+
+Small utility functions, mostly collected from others.
+
+\subsection{From \href{https://github.com/aaronbieber}{aaronbieber}}
+\label{sec-5-1}
+
+\begin{verbatim}
 (defun cycle-powerline-separators (&optional reverse)
   "Set Powerline separators in turn.  If REVERSE is not nil, go backwards."
  (interactive)
@@ -136,7 +226,12 @@ Repeated invocations toggle between the two most recently open buffers."
   (if (string= evil-state "visual")
       (progn (evil-normal-state nil)
 (evil-goto-first-line))))
+\end{verbatim}
 
+\subsection{From \href{http://www.github.com/hrs}{hrs}}
+\label{sec-5-2}
+
+\begin{verbatim}
 (defmacro diminish-minor-mode (filename mode &optional abbrev)
   "Supply a FILENAME, to hide a minor MODE or replace with an ABBREV."
   `(eval-after-load (symbol-name ,filename)
@@ -146,7 +241,12 @@ Repeated invocations toggle between the two most recently open buffers."
   "Supply a MODE-HOOK, to hide a major MODE or replace with an ABBREV."
   `(add-hook ,mode-hook
              (lambda () (setq mode-name ,abbrev))))
+\end{verbatim}
 
+\subsection{Mine + Unknown}
+\label{sec-5-3}
+
+\begin{verbatim}
 (defun search-my-notes (searchforthis)
   "Search for SEARCHFORTHIS."
   (interactive "sSearch Query: ")
@@ -172,7 +272,14 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
     (switch-to-buffer ξbuf)
     (funcall (and initial-major-mode))
     (setq buffer-offer-save t)))
+\end{verbatim}
 
+\section{Visual Stuff}
+\label{sec-6}
+
+I use my own version of \href{https://github.com/dracula/dracula-theme}{Dracua Theme}, which includes some extra coloring for Helm, mu4e, some changes to the syntax highlighting and correcting the background color when using Emacs in the terminal. My version is availble at my \href{https://github.com/apierz}{Github page}. I also use \href{http://sourcefoundry.org/hack/}{Hack} as my font. Right now I'm trying out transparency to see how I like it.
+
+\begin{verbatim}
 (use-package dracula-theme)
 (load-theme 'dracula t)
 
@@ -181,13 +288,21 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 
 (set-frame-parameter (selected-frame) 'alpha '(90 90))
 (add-to-list 'default-frame-alist '(alpha 90 90))
+\end{verbatim}
 
+Just to be double-dog sure it ends up as utf-8\ldots{}
+
+\begin{verbatim}
 (prefer-coding-system       'utf-8)
 (set-default-coding-systems 'utf-8)
 (set-terminal-coding-system 'utf-8)
 (set-keyboard-coding-system 'utf-8)
 (setq buffer-file-coding-system 'utf-8)
+\end{verbatim}
 
+I use some diminsh functions I got from \href{https://github.com/hrs}{hrs}. This lets me hide some minor modes and rename others as encircled unicode characters. I also rename some major modes to save a little space in my powerline.
+
+\begin{verbatim}
 (diminish-minor-mode 'auto-complete 'auto-complete-mode " ⓐ ")
 (diminish-minor-mode 'flycheck 'flycheck-mode " ⓕ ")
 (diminish-minor-mode 'projectile 'projectile-mode " ⓟ ")
@@ -209,10 +324,27 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 (diminish-major-mode 'ruby-mode-hook ".rb")
 (diminish-major-mode 'sh-mode-hook ".sh")
 (diminish-major-mode 'markdown-mode-hook ".md")
+\end{verbatim}
 
+\section{evil-mode}
+\label{sec-7}
+
+I prefer the Vim keybindings and use them wherever possible in Emacs. I recently made a switch to HJKL from IJKL when I learned the arrow keys on my \texttt{Pok3r} keyboard could be reprogrammed to use HJKL everywhere so I'm currently tring to unlearn my old bad habits.
+
+\subsection{Main package:}
+\label{sec-7-1}
+
+\begin{verbatim}
 (use-package evil)
 (evil-mode t)
+\end{verbatim}
 
+\subsection{Addons, based on Vim plugins}
+\label{sec-7-2}
+
+\texttt{evil-surround} is based on tpope's plugin and makes it easy to change surrounding syntax luke ", ', (, \{, etc. \texttt{evil-commentary} is also based on a tpope plugin that makes it easy to comment a line or lines. [g-c-c] will comment a line [g-c-4-k] will comment the next 4 lines, etc. 
+
+\begin{verbatim}
 (use-package evil-leader)
 (use-package evil-surround
   :config
@@ -224,7 +356,14 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
   :config
   (evil-snipe-mode 1)
   (evil-snipe-override-mode 1))
+\end{verbatim}
 
+\subsection{Controls}
+\label{sec-7-3}
+
+I make a few changes to the \texttt{dired} control map to make it more natural when using Vim style navigation. Also I use 'hh' as a quick shortcut to return to \texttt{evil-normal-state}.
+
+\begin{verbatim}
 (use-package key-chord
   :config
   (key-chord-mode 1))
@@ -245,7 +384,11 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 (evil-define-key 'normal dired-mode-map "N" 'evil-search-previous)
 (evil-define-key 'normal dired-mode-map "q" 'kill-this-buffer)
 (setq evil-shift-width 2)
+\end{verbatim}
 
+I made some changes to the normal \texttt{evil-org} keybindings because I think these bindings are more intuitive.
+
+\begin{verbatim}
 (use-package evil-org)
 (evil-define-key 'normal evil-org-mode-map (kbd "M-k") 'org-metaup)
 (evil-define-key 'normal evil-org-mode-map (kbd "M-h") 'org-metaleft)
@@ -259,7 +402,14 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 (evil-define-key 'normal evil-org-mode-map (kbd "H") 'org-shiftleft)
 (evil-define-key 'normal evil-org-mode-map (kbd "J") 'org-shiftdown)
 (evil-define-key 'normal evil-org-mode-map (kbd "L") 'org-shiftright)
+\end{verbatim}
 
+\subsection{Evil Leader}
+\label{sec-7-4}
+
+\texttt{Evil Leader} is a package that let's you do quick shortcuts in \texttt{evil-mode}. While in \texttt{evil-normal-state} you press and hold your leader key ( for me its ,) and then press another key to trigger a function. It's very handy and great for triggering little utility functions you come accross.
+
+\begin{verbatim}
 (defun andy--config-evil-leader ()
   "Configure evil leader mode."
   (evil-leader/set-leader ",")
@@ -287,7 +437,14 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 
 (global-evil-leader-mode)
 (andy--config-evil-leader)
+\end{verbatim}
 
+\subsection{macOS Specific Stuff}
+\label{sec-7-5}
+
+Use the standard OSX keys for cut/copy/paste.
+
+\begin{verbatim}
 (defun pbcopy ()
   "Use OSX' pasteboard for copying."
   (interactive)
@@ -308,7 +465,11 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 (global-set-key (kbd "M-c") 'pbcopy)
 (global-set-key (kbd "C-c x") 'pbcut)
 (global-set-key (kbd "M-v") 'pbpaste)
+\end{verbatim}
 
+Switch the macOS \texttt{Command} button to be Emacs \texttt{Meta} key.
+
+\begin{verbatim}
 (defun mac-switch-meta nil
   "Switch meta between Option and Command."
   (interactive)
@@ -320,21 +481,45 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
     (progn
       (setq mac-option-modifier nil)
       (setq mac-command-modifier 'meta))))
+\end{verbatim}
 
+
+\subsection{Minor evil Configurations}
+\label{sec-7-6}
+
+Stop that terrible cursor move back nonsense!
+
+\begin{verbatim}
 (setq evil-move-cursor-back nil)
+\end{verbatim}
 
+Set some shortcuts to the function buttons.
+
+\begin{verbatim}
 (global-set-key [f1]  'mu4e)
 (global-set-key [f2] 'andy-new-empty-buffer)
 
 (global-set-key [f4] 'fci-mode)
 (global-set-key [f5] 'search-my-notes)
 (global-set-key [f6] 'linum-relative-mode)
+\end{verbatim}
 
+Robe Mode Commands
+
+\begin{verbatim}
 (global-set-key (kbd "M-j") 'robe-jump)
+\end{verbatim}
 
+Magit Commands
+
+\begin{verbatim}
 (global-set-key (kbd "C-x g") 'magit-status)
 (global-set-key (kbd "C-x M-g") 'magit-dispatch-popup)
+\end{verbatim}
 
+Use ESC to quit non-evil stuff
+
+\begin{verbatim}
 (define-key evil-normal-state-map [escape] 'keyboard-quit)
 (define-key evil-motion-state-map [escape] 'keyboard-quit)
 (define-key evil-visual-state-map [escape] 'keyboard-quit)
@@ -344,10 +529,20 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 (define-key minibuffer-local-completion-map [escape] 'minibuffer-keyboard-quit)
 (define-key minibuffer-local-must-match-map [escape]'minibuffer-keyboard-quit)
 (define-key minibuffer-local-isearch-map [escape] 'minibuffer-keyboard-quit)
+\end{verbatim}
 
+Use \texttt{evil} controls in \texttt{Dired} and other \texttt{motion-state} modes.
+
+\begin{verbatim}
 (setq evil-normal-state-modes (append evil-motion-state-modes
   evil-normal-state-modes))
+\end{verbatim}
 
+\section{Helm}
+\label{sec-8}
+Helm is useful for searching through Emacs. I prefer Helm for searching through my buffers, kill ring and other things.
+
+\begin{verbatim}
 (use-package helm)
 (use-package helm-config)
 (global-set-key (kbd "C-x b") 'helm-buffers-list)
@@ -362,17 +557,32 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
   'helm (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)
      (define-key helm-map (kbd "ESC") 'helm-keyboard-quit)
 )
+\end{verbatim}
 
+\section{Org-mode}
+\label{sec-9}
+
+\texttt{Org} is Emacs famous markup language with all kinds of useful features. You can even write your Emacs config in \texttt{Org}, which is what I have done here.
+
+\begin{verbatim}
 (use-package org)
 (use-package ox)
 (use-package org-grep)
 (use-package org-capture)
+\end{verbatim}
 
+These are the basic bindings \texttt{Org} recommends you use.
+
+\begin{verbatim}
 (global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cc" 'org-capture)
 (global-set-key "\C-cb" 'org-iswitchb)
+\end{verbatim}
 
+I want everything in my notes folder to open in \texttt{Org-mode} and for .txt files to open in \texttt{Org-mode}. It is very rare I want to edit a plain text file without Org.
+
+\begin{verbatim}
 (setq org-export-coding-system 'utf-8)
 (setq org-agenda-files (list "~/Dropbox/Notes"))
 (setq org-agenda-file-regexp "\\`[^.].*\\.txt\\|[0-9]\\{8\\}\\'")
@@ -385,11 +595,18 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
     (let ((file (buffer-file-name)))
     (when (and file (equal (file-name-directory file) "~/Dropbox/Notes"))
     (org-mode)))))
+\end{verbatim}
 
+I prefer to turn line numbers off while in \texttt{Org-mode}.
+
+\begin{verbatim}
 (use-package linum-off
   :config
   (add-to-list 'linum-disabled-modes-list "org-mode"))
+\end{verbatim}
 
+
+\begin{verbatim}
 (add-to-list 'org-latex-classes
              '("article"
                "\\documentclass{article}"
@@ -399,6 +616,53 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
                ("\\paragraph{%s}" . "\\paragraph*{%s}")
                ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
 
+(add-to-list org-latex-classes
+   '(("my-article" "
+\\documentclass[10pt,a4paper]{article}
+\\usepackage[margin=2cm]{geometry}
+\\usepackage{fontspec}
+
+\\XeTeXlinebreakskip = 0pt plus 1pt
+\\linespread{1.36}
+
+\\setcounter{tocdepth}{5}
+
+\\usepackage{multicol}
+
+\\usepackage{hyperref}
+\\hypersetup{
+  colorlinks=true,
+  linkcolor=[rgb]{0,0.37,0.53},
+  citecolor=[rgb]{0,0.47,0.68},
+  filecolor=[rgb]{0,0.37,0.53},
+  urlcolor=[rgb]{0,0.37,0.53},
+  pagebackref=true,
+  linktoc=all,}"
+      ("\\section{%s}" . "\\section*{%s}")
+      ("\\subsection{%s}" . "\\subsection*{%s}")
+      ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+      ("\\paragraph{%s}" . "\\paragraph*{%s}")
+      ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))))
+  (with-temp-buffer
+(insert
+ (mapconcat 'identity
+        '("#+LATEX_CLASS: my-article"
+          "#+OPTIONS: h:5 num:3"
+          "* section"
+          "** subsection"
+          "*** subsubsection"
+          "**** paragraph"
+          "***** subparagraph")
+        "\n"))
+(org-latex-export-as-latex nil nil nil t)
+\end{verbatim}
+
+\subsection{Keywords}
+\label{sec-9-1}
+
+My todo system is fairly simple. \texttt{TODO} = unsorted, \texttt{ONDECK} = could be done at anytime, \texttt{WAITING} = waiting on something out of my control, \texttt{SOMEDAY} = not urgent, \texttt{CURRENT} = the thing I am currently working on. I've given these keywords colors from Dracula theme.
+
+\begin{verbatim}
 (setq org-todo-keywords
   '((sequence "TODO(t)" "ONDECK(o)" "WAITING(w)" "SOMEDAY(s)" "CURRENT(c)" "|" "DONE(d)")))
 
@@ -410,19 +674,50 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
      ("CURRENT" . (:foreground "#50fa7b" :weight bold))
      ("DONE" . (:foreground "#ff5555" :weight bold))
      ("SOMEDAY" . (:foreground "#6272a4" :weight bold))))
+\end{verbatim}
 
+\subsection{Visual Styling}
+\label{sec-9-2}
+
+I prefer to use fancy bullets, rather than a row of *s. Though every now and then I like to go back to a simpler style with one font size and regular bullets.
+
+\begin{verbatim}
 (setq org-hide-leading-stars t)
 (use-package org-bullets
   :ensure t
   :config
   (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
+\end{verbatim}
 
+Dracula Theme has recently revamped their \texttt{Org-mode} colors so I have switched to their defaults. I use a single character ellipsis, though sometimes switch to an arrow or other \emph{fancy} symbol.
+
+\begin{verbatim}
 (setq org-ellipsis " …")
+\end{verbatim}
 
+I like some whitespace between my headings.
+
+\begin{verbatim}
 (setq org-cycle-separator-lines 0)
+\end{verbatim}
 
+I prefer my text to wrap.
+
+\begin{verbatim}
 (setq org-startup-truncated nil)
+\end{verbatim}
 
+\subsection{Org Capture}
+\label{sec-9-3}
+
+\texttt{Org} allows for capturing, which allows you to create/edit Org files whereever you are in Emacs. I have three kinds of Org Captures:
+\begin{itemize}
+\item TODO: adds a todo item to my Inbox heading in my main todo.txt file
+\item New Note: creates a new note file and saves it to my notes folder
+\item Kill Ring Note: creates a new note with whatever is currently at the head of my kill ring to a new note. I am considering changing this to add to an ongoing file instead.
+\end{itemize}
+
+\begin{verbatim}
 (defun capture-report-date-file (path)
   (let ((name (read-string "Name: ")))
     (expand-file-name (format "%s.txt" name) path)))
@@ -435,7 +730,14 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
      "** %^{prompt}\n %a\n%U\n")
     ("k" "Kill Ring Note" entry (file (capture-report-date-file "~/Dropbox/Notes"))
      "** %c\n %? %a\n %U\n")))
+\end{verbatim}
 
+\subsection{Org-babel}
+\label{sec-9-4}
+
+Org-babel is a system that allows for source code blocks within an Org mode document. It is very nice for notes, or for literate progamming, like this config file.
+
+\begin{verbatim}
 (setq org-src-fontify-natively t)
 (setq org-src-tab-acts-natively t)
 (setq org-src-window-setup 'current-window)
@@ -447,7 +749,15 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
    (ruby . t)
    (dot . t)
    (gnuplot . t)))
+\end{verbatim}
 
+
+\subsection{Org-Toodledo}
+\label{sec-9-5}
+
+Something to work on, need to find a way to hide my password.
+
+\begin{verbatim}
 ;; (push "<path-to-this-file>" load-path)
 ;; (require 'org-toodledo)
 ;; (setq org-toodledo-userid "<toodledo-userid>")      << *NOT* your email!
@@ -467,7 +777,19 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 ;;          (local-set-key "\C-od" 'org-toodledo-agenda-mark-task-deleted)
 ;;          )
        ;; )
+\end{verbatim}
 
+\section{Programming Stuff}
+\label{sec-10}
+
+This section is for stuff that helps with programming and coding. (note to self, look into diff-hl)
+
+\subsection{General Stuff}
+\label{sec-10-1}
+
+I like yasnippet for snippets, but I generally rely on auto-complete to speed up my coding.
+
+\begin{verbatim}
 (use-package yasnippet
   :ensure t
   :defer t
@@ -481,7 +803,11 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
                                yas-dropdown-prompt))
 (define-key yas-minor-mode-map (kbd "<escape>") 'yas-exit-snippet))
 (ac-config-default)
+\end{verbatim}
 
+I use relative line numbers, which helps with the Vim bindings. I use a 0 offset, so if I want to delete to a line and it says its line 4 I can press \texttt{d-4-k}.
+
+\begin{verbatim}
 (require 'linum-relative)
 
 (linum-mode)
@@ -492,30 +818,58 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 (linum-relative-toggle))
 (setq linum-relative-current-symbol "->")
 (setq linum-relative-plusp-offset 0)
+\end{verbatim}
 
+I use smooth scrolling, it might be a placebo.
+
+\begin{verbatim}
 (use-package smooth-scrolling
   :config
   (smooth-scrolling-mode 1))
+\end{verbatim}
 
+A few other useful packages for coding.
+
+\begin{verbatim}
 (use-package fill-column-indicator)
 (use-package unbound)
 (use-package nnir)
 (use-package dumb-jump
   :config
   (dumb-jump-mode))
+\end{verbatim}
 
+\subsection{Emacs-lisp}
+\label{sec-10-2}
+
+\begin{verbatim}
 (add-hook 'emacs-lisp-mode-hook
           (lambda ()
             (rainbow-delimiters-mode)))
+\end{verbatim}
 
+\subsection{Python}
+\label{sec-10-3}
+
+\begin{verbatim}
 (setq python-indent-offset 2)
+\end{verbatim}
 
+\subsection{Shell and bash scripting}
+\label{sec-10-4}
+
+\begin{verbatim}
 (add-hook 'sh-mode-hook
           (lambda ()
             (rainbow-delimiters-mode)
             (setq sh-basic-offset 2
                   sh-indentation 2)))
+\end{verbatim}
 
+\subsection{Ruby}
+\label{sec-10-5}
+
+\begin{verbatim}
 (add-hook 'ruby-mode-hook
   (lambda ()
     (setq ruby-insert-encoding-magic-comment nil)
@@ -539,7 +893,14 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
   '("\\.\\(?:cap\\|gemspec\\|irbrc\\|gemrc\\|rake\\|rb\\|ru\\|thor\\)\\'" . ruby-mode))
 (add-to-list 'auto-mode-alist
   '("\\(?:Brewfile\\|Capfile\\|Gemfile\\(?:\\.[a-zA-Z0-9._-]+\\)?\\|[rR]akefile\\)\\'" . ruby-mode))
+\end{verbatim}
 
+\subsection{web-mode}
+\label{sec-10-6}
+
+\texttt{Web-mode} is an Emacs major mode that gives syntax highlighting for web source files with multiple languages like html with php or .erb files.
+
+\begin{verbatim}
 (use-package web-mode
   :ensure t
   :defer t
@@ -554,7 +915,16 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
   (setq web-mode-indent-style 2)
   (setq web-mode-markup-indent-offset 2)
   (setq web-mode-sql-indent-offset 2))
+\end{verbatim}
 
+\section{Powerline}
+\label{sec-11}
+
+\href{https://github.com/milkypostman/powerline}{Powerline} is a mode line replacement for Emacs, based on Vim powerline. I've spent far too much time tweaking my Powerline and it shows no sign of stopping.
+
+You customize the look of your powerline by defining faces for when the powerline is on the active buffer, or it's inactive. I've taken my colors from Dracula Theme, so it matches the rest of my config. Emacs in the terminal is limited to 256 colors, almost all of them bright, so darker colors don't look good when using the terminal. \texttt{(display-graphic-p)} lets me check if I'm on a terminal or not and set colors that look better if so.
+
+\begin{verbatim}
 (setq display-time-format "%I:%M")
 (setq display-time-mail-directory "~/.Maildir/Personal/INBOX/new")
 (setq display-time-default-load-average nil)
@@ -618,12 +988,17 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
   (defface my-pl-segment6-active
    '((t (:foreground "#f1fa8c" :background "#5f00af" :weight bold)))
     "Powerline buffer-id  segment active face."))
-  
+
   (defface my-pl-segment6-inactive
    '((t (:foreground "#f8f8f2" :background "#545565" :weight bold)))
     "Powerline buffer-id  segment inactive face.")
+\end{verbatim}
 
-(defun andy--powerline-default-theme ()
+
+Then I use them to define a theme in a function. It looks a little confusing at first but it becomes easy with a little experimentation. The powerline is broken into two halves, the left (lhs) and right (rhs) with a section in the middle that fills any empty space.
+
+\begin{verbatim}
+    (defun andy--powerline-default-theme ()
       "Set up my custom Powerline with Evil indicators."
       (interactive)
       (setq-default mode-line-format
@@ -649,7 +1024,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
                              (if evil-mode
                                  (funcall separator-left (powerline-evil-face) seg1))
                              (powerline-raw "[%*]" seg1 'l)
-                             
+
                              ;; (when powerline-display-buffer-size
                                ;; (powerline-buffer-size seg5 'l))
                              (powerline-vc seg5 'l)
@@ -694,13 +1069,28 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
       (setq powerline-default-separator (if (display-graphic-p) 'arrow-fade
                                           nil))
       (andy--powerline-default-theme))
+\end{verbatim}
 
+I use \texttt{powerline-evil} to put a color changing evil state face on my powerline. If you are using Dracula theme, they will be Dracula colors. That change was my first accepted pull request to an open source project!
+
+\begin{verbatim}
 (use-package powerline-evil
   :ensure t)
+\end{verbatim}
 
+\section{Projectile}
+\label{sec-12}
+
+\texttt{projectile} is a helpful way to search through files in a project.
+
+\begin{verbatim}
 (use-package projectile)
 (use-package helm-projectile)
+\end{verbatim}
 
+I use a few basic settings and have \texttt{projectile} auto load whenever I'm in \texttt{ruby-mode}.
+
+\begin{verbatim}
 (add-hook 'ruby-mode-hook 'projectile-mode)
 (add-hook 'web-mode-hook 'projectile-mode)
 (setq projectile-indexing-method 'alien)
@@ -711,11 +1101,22 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 (helm-projectile-on)
 
 (set-face-attribute 'helm-source-header nil :foreground "#ffb86c" :height 1.66)
+\end{verbatim}
 
+\section{mu4e}
+\label{sec-13}
+
+\texttt{mu4e} is an email client that works within Emacs. I use \texttt{mu4e-multi} to manage my work and personal accounts and \texttt{evil-mu4e} for some keybinding changes.
+
+\begin{verbatim}
 (use-package mu4e)
 (require 'mu4e-multi)
 (use-package evil-mu4e)
+\end{verbatim}
 
+General Configuragtion
+
+\begin{verbatim}
 (setq mu4e-mu-binary "/usr/local/Cellar/mu/HEAD/bin/mu")
 (setq mu4e-maildir "/Users/Andy/.Maildir")
 
@@ -723,12 +1124,14 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
   '(("personal"
      (user-mail-address .  "andy@andypierz.com")
      (user-full-name  .   "Andy Pierz")
+     (mu4e-sent-folder .  "/personal/Sent\ Items")
      (mu4e-drafts-folder . "/personal/Drafts")
      (mu4e-trash-folder .  "/personal/Trash")
      (mu4e-refile-folder . "/personal/Archive"))
     ("work"
      (user-mail-address .  "andy@mutdut.com")
      (user-fullname . "Andy Pierz")
+     (mu4e-sent-folder .  "/work/Sent\ Items")
      (mu4e-drafts-folder . "/work/Drafts")
      (mu4e-trash-folder .  "/work/Trash")
      (mu4e-refile-folder . "/work/Archive"))))
@@ -736,7 +1139,6 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 (mu4e-multi-enable)
 
 (setq mu4e-drafts-folder "/drafts")
-(setq mu4e-sent-folder "/personal/Sent\ Items")
 
 
 ;;set attachment downloads directory
@@ -754,7 +1156,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
      ("/personal/Archive"    . ?a)
      ("/personal/Starred"    . ?p)
      ("/personal/Drafts"    . ?d)
-       
+
      ("/work/INBOX"      . ?w)
      ("/work/Drafts"      . ?z)
      ("/work/Sent\ Items"       . ?f)
@@ -836,7 +1238,12 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 
 (add-hook 'mu4e-main-mode-hook 'evil-motion-state)
 (add-hook 'mu4e-headers-mode-hook 'evil-motion-state)
+\end{verbatim}
 
+
+Use Dired to add attachments to emails.
+
+\begin{verbatim}
 (require 'gnus-dired)
 ;; make the `gnus-dired-mail-buffers' function also work on
 ;; message-mode derived modes, such as mu4e-compose-mode
@@ -853,19 +1260,41 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 
 (setq gnus-dired-mail-mode 'mu4e-user-agent)
 (add-hook 'dired-mode-hook 'turn-on-gnus-dired-mode)
+\end{verbatim}
 
+Show some images in email messages.
+
+\begin{verbatim}
 (setq mu4e-view-show-images t)
 (setq mu4e-view-show-image-max-width 800)
 (when (fboundp 'imagemagick-register-types)
   (imagemagick-register-types))
 (setq mu4e-view-prefer-html nil)
+\end{verbatim}
 
+
+Convert html emails to text.
+
+\begin{verbatim}
 (setq mu4e-html2text-command 'mu4e-shr2text)
+\end{verbatim}
+\section{Magit}
+\label{sec-14}
 
+Magit is Emacs' Git interface.
+
+\begin{verbatim}
 (use-package magit)
 (use-package evil-magit)
+\end{verbatim}
 
+This is to encrypt my password so I can use it when sending email. If anyone knows how to set this up so it doesn't trigger an error everytime I re eval my buffer please let me know:
+
+\begin{verbatim}
 (use-package epa-file
   :config
   (unless (memq epa-file-handler file-name-handler-alist)
   (epa-file-enable)))
+\end{verbatim}
+% Emacs 24.5.1 (Org mode 8.2.10)
+\end{document}

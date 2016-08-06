@@ -676,16 +676,15 @@
 		((:url . "http://elpa.gnu.org/packages/rainbow-mode.html")
 		 (:keywords "faces"))])
  (realgud .
-	  [(1 4 0)
+	  [(1 4 3)
 	   ((load-relative
 	     (1 2))
 	    (loc-changes
 	     (1 2))
 	    (test-simple
 	     (1 2 0)))
-	   "A modular front-end for interacting with external debuggers" single
-	   ((:url . "http://github.com/realgud/realgud/")
-	    (:keywords))])
+	   "A modular front-end for interacting with external debuggers" tar
+	   ((:url . "http://github.com/realgud/realgud/"))])
  (register-list .
 		[(0 1)
 		 nil "Interactively list/edit registers" single
@@ -776,7 +775,7 @@
 	   ((:url . "https://github.com/Malabarba/spinner.el")
 	    (:keywords "processes" "mode-line"))])
  (stream .
-	 [(2 2 0)
+	 [(2 2 1)
 	  ((emacs
 	    (25)))
 	  "Implementation of streams" single

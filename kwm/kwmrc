@@ -86,6 +86,8 @@ kwmc config spawn right
    This is because some applications do not have the
    AXWindowRole and AXStandardWindowSubRole */
 kwmc rule owner="iTerm2" properties={role="AXDialog"}
+kwmc rule owner="Fantastical" properties={float="true"}
+kwmc rule owner="Pixelmator" properties={float="true"}
 
 /* The following commands create rules that
    blacklists an application from Kwms tiling
