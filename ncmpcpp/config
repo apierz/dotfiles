@@ -533,7 +533,7 @@ statusbar_color = blue
 alternative_ui_separator_color = red
 #
 #active_column_color = red
-active_column_color = magenta
+active_column_color = green
 #
 #visualizer_color = yellow
 visualizer_color = green

@@ -89,6 +89,9 @@ kwmc rule owner="iTerm2" properties={role="AXDialog"}
 kwmc rule owner="Fantastical" properties={float="true"}
 kwmc rule owner="Pixelmator" properties={float="true"}
 
+kwmc rule properties={float="true"} owner="Deluge" name="Add Torrents"
+kwmc rule properties={float="true"} owner="Deluge" name="From URL"
+
 /* The following commands create rules that
    blacklists an application from Kwms tiling
 
