@@ -515,7 +515,7 @@ main_window_color = blue
 color1 = blue
 #
 #color2 = green
-color2 = red
+color2 = yellow
 #
 #main_window_highlight_color = yellow
 main_window_highlight_color = magenta
@@ -530,7 +530,7 @@ progressbar_elapsed_color = green
 statusbar_color = blue
 #
 #alternative_ui_separator_color = black
-alternative_ui_separator_color = red
+alternative_ui_separator_color = yellow
 #
 #active_column_color = red
 active_column_color = green
