@@ -530,7 +530,7 @@ progressbar_elapsed_color = green
 statusbar_color = blue
 #
 #alternative_ui_separator_color = black
-alternative_ui_separator_color = yellow
+alternative_ui_separator_color = magenta
 #
 #active_column_color = red
 active_column_color = green

@@ -8,6 +8,8 @@ alias gs='git status'
 alias gb='git branch'
 alias rc='rails console'
 alias ks='tmux kill-session'
+alias df='cd ~/Documents/dotfiles'
+alias todo='emacs ~/Dropbox\ (Personal)\notes\todo.txt'
 
 source ~/.git-completion.bash
 source ~/.bash_git

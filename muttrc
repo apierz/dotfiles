@@ -1,0 +1,41 @@
+source "gpg -d ~/.mutt/password.gpg |"
+
+set mbox_type   = Maildir
+
+set folder      = ~/.Maildir
+set spoolfile   = "+/personal/INBOX"
+set postponed   = "+/Drafts"
+set record = "+/personal/Sent\ Items"
+set editor="emacsclient"
+
+mailboxes +personal/INBOX
+mailboxes +personal/archive
+mailboxes = "+personal/Sent Items"
+
+bind pager j next-line
+bind pager k previous-line
+
+
+macro index c "<change-folder>?<toggle-mailboxes>" "open a different folder"
+macro pager c "<change-folder>?<toggle-mailboxes>" "open a different folder"
+macro index A ":set confirmappend=no delete=yes\n<save-message>=archive\n<sync-mailbox>:set confirmappend=yes delete=ask-yes\n"
+macro index,pager S "<tag-prefix><save-message>=archive<enter>\
+  :set delete=yes<enter><sync-mailbox>:set delete=no<enter>"
+
+ color status    black blue
+ color indicator black green
+ color search    black blue 
+ color markers   black blue
+
+#SMTP
+
+set smtp_url="smtps://andy@andypierz.com@mail.hover.com:465/"
+set from="andy@andypierz.com"
+set realname="Andy Pierz"
+set ssl_starttls = yes
+
+# view html automatically
+auto_view text/html    
+alternative_order text/plain text/enriched text/html     # save html for last
+
+

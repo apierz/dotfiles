@@ -193,6 +193,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 (diminish-minor-mode 'projectile 'projectile-mode " ⓟ ")
 (diminish-minor-mode 'robe 'robe-mode " ⓡ ")
 (diminish-minor-mode 'flymake 'flymake-mode " ⓜ ")
+(diminish-minor-mode 'server 'server-mode)
 (diminish-minor-mode 'evil-snipe 'evil-snipe-local-mode)
 (diminish-minor-mode 'evil-surround 'evil-surround-mode )
 (diminish-minor-mode 'evil-commentary 'evil-commentary-mode)
@@ -736,7 +737,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 (mu4e-multi-enable)
 
 (setq mu4e-drafts-folder "/drafts")
-(setq mu4e-sent-folder "/personal/Sent\ Items")
+(setq mu4e-sent-folder "/personal/Sent Items")
 
 
 ;;set attachment downloads directory
@@ -749,7 +750,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 
 (setq mu4e-maildir-shortcuts
   '( ("/personal/INBOX"              . ?i)
-     ("/personal/Sent\ Items"   . ?s)
+     ("/personal/Sent Items"   . ?s)
      ("/personal/Trash"       . ?t)
      ("/personal/Archive"    . ?a)
      ("/personal/Starred"    . ?p)
@@ -757,7 +758,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
        
      ("/work/INBOX"      . ?w)
      ("/work/Drafts"      . ?z)
-     ("/work/Sent\ Items"       . ?f)
+     ("/work/Sent Items"       . ?f)
      ("/work/Archive"    . ?o)))
 
 
