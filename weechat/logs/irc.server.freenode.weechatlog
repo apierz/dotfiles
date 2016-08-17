@@ -375,3 +375,625 @@
 2016-08-16 19:28:15	--	NickServ (NickServ@services.): This nickname is registered. Please choose a different nickname, or identify via /msg NickServ identify <password>.
 2016-08-16 19:28:17	--	MSG(NickServ): identify *******
 2016-08-16 19:28:20	--	NickServ (NickServ@services.): You are now identified for TheFactIs.
+2016-08-16 19:42:52	--	irc: connecting to server chat.freenode.net/6667...
+2016-08-16 19:42:52	--	irc: connected to chat.freenode.net/6667 (2610:150:3b0f::2)
+2016-08-16 19:42:52	--	morgan.freenode.net: *** Looking up your hostname...
+2016-08-16 19:42:52	--	morgan.freenode.net: *** Checking Ident
+2016-08-16 19:42:52	--	morgan.freenode.net: *** Couldn't look up your hostname
+2016-08-16 19:43:01	--	morgan.freenode.net: *** No Ident response
+2016-08-16 19:43:01	--	Welcome to the freenode Internet Relay Chat Network TheFactIs
+2016-08-16 19:43:01	--	Your host is morgan.freenode.net[2610:150:3b0f::2/6667], running version ircd-seven-1.1.3
+2016-08-16 19:43:01	--	This server was created Fri May 20 2016 at 17:41:03 UTC
+2016-08-16 19:43:01	--	morgan.freenode.net ircd-seven-1.1.3 DOQRSZaghilopswz CFILMPQSbcefgijklmnopqrstvz bkloveqjfI
+2016-08-16 19:43:01	--	CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQScgimnprstz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode KNOCK STATUSMSG=@+ CALLERID=g :are supported by this server
+2016-08-16 19:43:01	--	CASEMAPPING=rfc1459 CHARSET=ascii NICKLEN=16 CHANNELLEN=50 TOPICLEN=390 ETRACE CPRIVMSG CNOTICE DEAF=D MONITOR=100 FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: :are supported by this server
+2016-08-16 19:43:01	--	EXTBAN=$,ajrxz WHOX CLIENTVER=3.0 SAFELIST ELIST=CTU :are supported by this server
+2016-08-16 19:43:01	--	There are 156 users and 79553 invisible on 30 servers
+2016-08-16 19:43:01	--	26 :IRC Operators online
+2016-08-16 19:43:01	--	19 :unknown connection(s)
+2016-08-16 19:43:01	--	57360 :channels formed
+2016-08-16 19:43:01	--	I have 10172 clients and 1 servers
+2016-08-16 19:43:01	--	10172 12351 :Current local users 10172, max 12351
+2016-08-16 19:43:01	--	79709 90472 :Current global users 79709, max 90472
+2016-08-16 19:43:01	--	Highest connection count: 12352 (12351 clients) (1158423 connections received)
+2016-08-16 19:43:01	--	- morgan.freenode.net Message of the Day -
+2016-08-16 19:43:01	--	- Welcome to morgan.freenode.net in Chicago, IL, USA! Thank
+2016-08-16 19:43:01	--	- you to psyprus for sponsoring this server!
+2016-08-16 19:43:01	--	-
+2016-08-16 19:43:01	--	- MORGAN, RICHARD K. (1965-) is an English science fiction
+2016-08-16 19:43:01	--	- author. Morgan's books are generally set in a dystopian world.
+2016-08-16 19:43:01	--	- His breakout novel Altered Carbon won the Philip K. Dick Award,
+2016-08-16 19:43:01	--	- and he has written many successful and amazing works to follow.
+2016-08-16 19:43:01	--	- His more recent writings explore the theme of autonomy
+2016-08-16 19:43:01	--	- in science fiction and escapism in fantasy.
+2016-08-16 19:43:01	--	-
+2016-08-16 19:43:01	--	-
+2016-08-16 19:43:01	--	- Welcome to freenode - supporting the free and open source
+2016-08-16 19:43:01	--	- software communities since 1998.
+2016-08-16 19:43:01	--	-
+2016-08-16 19:43:01	--	- By connecting to freenode you indicate that you have read and
+2016-08-16 19:43:01	--	- accept our policies as set out on http://www.freenode.net
+2016-08-16 19:43:01	--	- freenode runs an open proxy scanner. Please join #freenode for
+2016-08-16 19:43:01	--	- any network-related questions or queries, where a number of
+2016-08-16 19:43:01	--	- volunteer staff and helpful users will be happy to assist you.
+2016-08-16 19:43:01	--	-
+2016-08-16 19:43:01	--	- You can meet us at FOSSCON (http://www.fosscon.org) where we get
+2016-08-16 19:43:01	--	- together with like-minded FOSS enthusiasts for talks and
+2016-08-16 19:43:01	--	- real-life collaboration.
+2016-08-16 19:43:01	--	-
+2016-08-16 19:43:01	--	- We would like to thank Private Internet Access
+2016-08-16 19:43:01	--	- (https://www.privateinternetaccess.com/) and the other
+2016-08-16 19:43:01	--	- organisations that help keep freenode and our other projects
+2016-08-16 19:43:01	--	- running for their sustained support.
+2016-08-16 19:43:01	--	-
+2016-08-16 19:43:01	--	- In particular we would like to thank the sponsor
+2016-08-16 19:43:01	--	- of this server, details of which can be found above.
+2016-08-16 19:43:01	--	-
+2016-08-16 19:43:01	--	End of /MOTD command.
+2016-08-16 19:43:01	--	User mode [+i] by TheFactIs
+2016-08-16 19:43:01	--	NickServ (NickServ@services.): This nickname is registered. Please choose a different nickname, or identify via /msg NickServ identify <password>.
+2016-08-16 19:46:39	--	MSG(NickServ): identify *******
+2016-08-16 19:46:40	--	NickServ (NickServ@services.): You are now identified for TheFactIs.
+2016-08-16 22:08:33	=!=	irc: reading data on socket: error 60 Operation timed out
+2016-08-16 22:08:33	--	irc: disconnecting from server...
+2016-08-16 22:08:33	--	irc: disconnected from server
+2016-08-16 22:08:33	--	irc: reconnecting to server in 10 seconds
+2016-08-16 22:08:43	--	irc: reconnecting to server...
+2016-08-16 22:08:43	--	irc: connecting to server chat.freenode.net/6667...
+2016-08-16 22:08:43	--	irc: connected to chat.freenode.net/6667 (2610:150:3b0f::2)
+2016-08-16 22:08:43	--	morgan.freenode.net: *** Looking up your hostname...
+2016-08-16 22:08:43	--	morgan.freenode.net: *** Checking Ident
+2016-08-16 22:08:43	--	morgan.freenode.net: *** Couldn't look up your hostname
+2016-08-16 22:08:50	--	morgan.freenode.net: *** No Ident response
+2016-08-16 22:08:50	--	Welcome to the freenode Internet Relay Chat Network TheFactIs
+2016-08-16 22:08:50	--	Your host is morgan.freenode.net[2610:150:3b0f::2/6667], running version ircd-seven-1.1.3
+2016-08-16 22:08:50	--	This server was created Fri May 20 2016 at 17:41:03 UTC
+2016-08-16 22:08:50	--	morgan.freenode.net ircd-seven-1.1.3 DOQRSZaghilopswz CFILMPQSbcefgijklmnopqrstvz bkloveqjfI
+2016-08-16 22:08:50	--	CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQScgimnprstz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode KNOCK STATUSMSG=@+ CALLERID=g :are supported by this server
+2016-08-16 22:08:50	--	CASEMAPPING=rfc1459 CHARSET=ascii NICKLEN=16 CHANNELLEN=50 TOPICLEN=390 ETRACE CPRIVMSG CNOTICE DEAF=D MONITOR=100 FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: :are supported by this server
+2016-08-16 22:08:50	--	EXTBAN=$,ajrxz WHOX CLIENTVER=3.0 SAFELIST ELIST=CTU :are supported by this server
+2016-08-16 22:08:50	--	There are 155 users and 78899 invisible on 30 servers
+2016-08-16 22:08:50	--	25 :IRC Operators online
+2016-08-16 22:08:50	--	45 :unknown connection(s)
+2016-08-16 22:08:50	--	57267 :channels formed
+2016-08-16 22:08:50	--	I have 10080 clients and 1 servers
+2016-08-16 22:08:50	--	10080 12351 :Current local users 10080, max 12351
+2016-08-16 22:08:50	--	79054 90472 :Current global users 79054, max 90472
+2016-08-16 22:08:50	--	Highest connection count: 12352 (12351 clients) (1159428 connections received)
+2016-08-16 22:08:50	--	- morgan.freenode.net Message of the Day -
+2016-08-16 22:08:50	--	- Welcome to morgan.freenode.net in Chicago, IL, USA! Thank
+2016-08-16 22:08:50	--	- you to psyprus for sponsoring this server!
+2016-08-16 22:08:50	--	-
+2016-08-16 22:08:50	--	- MORGAN, RICHARD K. (1965-) is an English science fiction
+2016-08-16 22:08:50	--	- author. Morgan's books are generally set in a dystopian world.
+2016-08-16 22:08:50	--	- His breakout novel Altered Carbon won the Philip K. Dick Award,
+2016-08-16 22:08:50	--	- and he has written many successful and amazing works to follow.
+2016-08-16 22:08:50	--	- His more recent writings explore the theme of autonomy
+2016-08-16 22:08:50	--	- in science fiction and escapism in fantasy.
+2016-08-16 22:08:50	--	-
+2016-08-16 22:08:50	--	-
+2016-08-16 22:08:50	--	- Welcome to freenode - supporting the free and open source
+2016-08-16 22:08:50	--	- software communities since 1998.
+2016-08-16 22:08:50	--	-
+2016-08-16 22:08:50	--	- By connecting to freenode you indicate that you have read and
+2016-08-16 22:08:50	--	- accept our policies as set out on http://www.freenode.net
+2016-08-16 22:08:50	--	- freenode runs an open proxy scanner. Please join #freenode for
+2016-08-16 22:08:50	--	- any network-related questions or queries, where a number of
+2016-08-16 22:08:50	--	- volunteer staff and helpful users will be happy to assist you.
+2016-08-16 22:08:50	--	-
+2016-08-16 22:08:50	--	- You can meet us at FOSSCON (http://www.fosscon.org) where we get
+2016-08-16 22:08:50	--	- together with like-minded FOSS enthusiasts for talks and
+2016-08-16 22:08:50	--	- real-life collaboration.
+2016-08-16 22:08:50	--	-
+2016-08-16 22:08:50	--	- We would like to thank Private Internet Access
+2016-08-16 22:08:50	--	- (https://www.privateinternetaccess.com/) and the other
+2016-08-16 22:08:50	--	- organisations that help keep freenode and our other projects
+2016-08-16 22:08:50	--	- running for their sustained support.
+2016-08-16 22:08:50	--	-
+2016-08-16 22:08:50	--	- In particular we would like to thank the sponsor
+2016-08-16 22:08:50	--	- of this server, details of which can be found above.
+2016-08-16 22:08:50	--	-
+2016-08-16 22:08:50	--	End of /MOTD command.
+2016-08-16 22:08:50	--	User mode [+i] by TheFactIs
+2016-08-16 22:08:54	--	NickServ (NickServ@services.): This nickname is registered. Please choose a different nickname, or identify via /msg NickServ identify <password>.
+2016-08-17 00:36:13	=!=	irc: reading data on socket: error 60 Operation timed out
+2016-08-17 00:36:13	--	irc: disconnecting from server...
+2016-08-17 00:36:14	--	irc: disconnected from server
+2016-08-17 00:36:14	--	irc: reconnecting to server in 10 seconds
+2016-08-17 00:36:24	--	irc: reconnecting to server...
+2016-08-17 00:36:24	--	irc: connecting to server chat.freenode.net/6667...
+2016-08-17 00:36:24	--	irc: connected to chat.freenode.net/6667 (2610:150:3b0f::2)
+2016-08-17 00:36:24	--	morgan.freenode.net: *** Looking up your hostname...
+2016-08-17 00:36:24	--	morgan.freenode.net: *** Checking Ident
+2016-08-17 00:36:24	--	morgan.freenode.net: *** Couldn't look up your hostname
+2016-08-17 00:36:30	--	morgan.freenode.net: *** No Ident response
+2016-08-17 00:36:30	--	Welcome to the freenode Internet Relay Chat Network TheFactIs
+2016-08-17 00:36:30	--	Your host is morgan.freenode.net[2610:150:3b0f::2/6667], running version ircd-seven-1.1.3
+2016-08-17 00:36:30	--	This server was created Fri May 20 2016 at 17:41:03 UTC
+2016-08-17 00:36:30	--	morgan.freenode.net ircd-seven-1.1.3 DOQRSZaghilopswz CFILMPQSbcefgijklmnopqrstvz bkloveqjfI
+2016-08-17 00:36:30	--	CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQScgimnprstz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode KNOCK STATUSMSG=@+ CALLERID=g :are supported by this server
+2016-08-17 00:36:30	--	CASEMAPPING=rfc1459 CHARSET=ascii NICKLEN=16 CHANNELLEN=50 TOPICLEN=390 ETRACE CPRIVMSG CNOTICE DEAF=D MONITOR=100 FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: :are supported by this server
+2016-08-17 00:36:30	--	EXTBAN=$,ajrxz WHOX CLIENTVER=3.0 SAFELIST ELIST=CTU :are supported by this server
+2016-08-17 00:36:30	--	There are 155 users and 81614 invisible on 30 servers
+2016-08-17 00:36:30	--	25 :IRC Operators online
+2016-08-17 00:36:30	--	58 :unknown connection(s)
+2016-08-17 00:36:30	--	57583 :channels formed
+2016-08-17 00:36:30	--	I have 10164 clients and 1 servers
+2016-08-17 00:36:30	--	10164 12351 :Current local users 10164, max 12351
+2016-08-17 00:36:30	--	81769 90472 :Current global users 81769, max 90472
+2016-08-17 00:36:30	--	Highest connection count: 12352 (12351 clients) (1160608 connections received)
+2016-08-17 00:36:30	--	- morgan.freenode.net Message of the Day -
+2016-08-17 00:36:30	--	- Welcome to morgan.freenode.net in Chicago, IL, USA! Thank
+2016-08-17 00:36:30	--	- you to psyprus for sponsoring this server!
+2016-08-17 00:36:30	--	-
+2016-08-17 00:36:30	--	- MORGAN, RICHARD K. (1965-) is an English science fiction
+2016-08-17 00:36:30	--	- author. Morgan's books are generally set in a dystopian world.
+2016-08-17 00:36:30	--	- His breakout novel Altered Carbon won the Philip K. Dick Award,
+2016-08-17 00:36:30	--	- and he has written many successful and amazing works to follow.
+2016-08-17 00:36:30	--	- His more recent writings explore the theme of autonomy
+2016-08-17 00:36:30	--	- in science fiction and escapism in fantasy.
+2016-08-17 00:36:30	--	-
+2016-08-17 00:36:30	--	-
+2016-08-17 00:36:30	--	- Welcome to freenode - supporting the free and open source
+2016-08-17 00:36:30	--	- software communities since 1998.
+2016-08-17 00:36:30	--	-
+2016-08-17 00:36:30	--	- By connecting to freenode you indicate that you have read and
+2016-08-17 00:36:30	--	- accept our policies as set out on http://www.freenode.net
+2016-08-17 00:36:30	--	- freenode runs an open proxy scanner. Please join #freenode for
+2016-08-17 00:36:30	--	- any network-related questions or queries, where a number of
+2016-08-17 00:36:30	--	- volunteer staff and helpful users will be happy to assist you.
+2016-08-17 00:36:30	--	-
+2016-08-17 00:36:30	--	- You can meet us at FOSSCON (http://www.fosscon.org) where we get
+2016-08-17 00:36:30	--	- together with like-minded FOSS enthusiasts for talks and
+2016-08-17 00:36:30	--	- real-life collaboration.
+2016-08-17 00:36:30	--	-
+2016-08-17 00:36:30	--	- We would like to thank Private Internet Access
+2016-08-17 00:36:30	--	- (https://www.privateinternetaccess.com/) and the other
+2016-08-17 00:36:30	--	- organisations that help keep freenode and our other projects
+2016-08-17 00:36:30	--	- running for their sustained support.
+2016-08-17 00:36:30	--	-
+2016-08-17 00:36:30	--	- In particular we would like to thank the sponsor
+2016-08-17 00:36:30	--	- of this server, details of which can be found above.
+2016-08-17 00:36:30	--	-
+2016-08-17 00:36:30	--	End of /MOTD command.
+2016-08-17 00:36:30	--	User mode [+i] by TheFactIs
+2016-08-17 00:36:31	--	NickServ (NickServ@services.): This nickname is registered. Please choose a different nickname, or identify via /msg NickServ identify <password>.
+2016-08-17 04:37:39	=!=	irc: reading data on socket: error 60 Operation timed out
+2016-08-17 04:37:39	--	irc: disconnecting from server...
+2016-08-17 04:37:39	--	irc: disconnected from server
+2016-08-17 04:37:39	--	irc: reconnecting to server in 10 seconds
+2016-08-17 04:37:49	--	irc: reconnecting to server...
+2016-08-17 04:37:49	--	irc: connecting to server chat.freenode.net/6667...
+2016-08-17 04:37:49	--	irc: connected to chat.freenode.net/6667 (2610:150:3b0f::2)
+2016-08-17 04:37:49	--	morgan.freenode.net: *** Looking up your hostname...
+2016-08-17 04:37:49	--	morgan.freenode.net: *** Checking Ident
+2016-08-17 04:37:49	--	morgan.freenode.net: *** Couldn't look up your hostname
+2016-08-17 04:37:59	--	morgan.freenode.net: *** No Ident response
+2016-08-17 04:37:59	--	Welcome to the freenode Internet Relay Chat Network TheFactIs
+2016-08-17 04:37:59	--	Your host is morgan.freenode.net[2610:150:3b0f::2/6667], running version ircd-seven-1.1.3
+2016-08-17 04:37:59	--	This server was created Fri May 20 2016 at 17:41:03 UTC
+2016-08-17 04:37:59	--	morgan.freenode.net ircd-seven-1.1.3 DOQRSZaghilopswz CFILMPQSbcefgijklmnopqrstvz bkloveqjfI
+2016-08-17 04:37:59	--	CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQScgimnprstz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode KNOCK STATUSMSG=@+ CALLERID=g :are supported by this server
+2016-08-17 04:37:59	--	CASEMAPPING=rfc1459 CHARSET=ascii NICKLEN=16 CHANNELLEN=50 TOPICLEN=390 ETRACE CPRIVMSG CNOTICE DEAF=D MONITOR=100 FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: :are supported by this server
+2016-08-17 04:37:59	--	EXTBAN=$,ajrxz WHOX CLIENTVER=3.0 SAFELIST ELIST=CTU :are supported by this server
+2016-08-17 04:37:59	--	There are 157 users and 84674 invisible on 30 servers
+2016-08-17 04:37:59	--	26 :IRC Operators online
+2016-08-17 04:37:59	--	44 :unknown connection(s)
+2016-08-17 04:37:59	--	57820 :channels formed
+2016-08-17 04:37:59	--	I have 10283 clients and 1 servers
+2016-08-17 04:37:59	--	10283 12351 :Current local users 10283, max 12351
+2016-08-17 04:37:59	--	84831 90472 :Current global users 84831, max 90472
+2016-08-17 04:37:59	--	Highest connection count: 12352 (12351 clients) (1162566 connections received)
+2016-08-17 04:37:59	--	- morgan.freenode.net Message of the Day -
+2016-08-17 04:37:59	--	- Welcome to morgan.freenode.net in Chicago, IL, USA! Thank
+2016-08-17 04:37:59	--	- you to psyprus for sponsoring this server!
+2016-08-17 04:37:59	--	-
+2016-08-17 04:37:59	--	- MORGAN, RICHARD K. (1965-) is an English science fiction
+2016-08-17 04:37:59	--	- author. Morgan's books are generally set in a dystopian world.
+2016-08-17 04:37:59	--	- His breakout novel Altered Carbon won the Philip K. Dick Award,
+2016-08-17 04:37:59	--	- and he has written many successful and amazing works to follow.
+2016-08-17 04:37:59	--	- His more recent writings explore the theme of autonomy
+2016-08-17 04:37:59	--	- in science fiction and escapism in fantasy.
+2016-08-17 04:37:59	--	-
+2016-08-17 04:37:59	--	-
+2016-08-17 04:37:59	--	- Welcome to freenode - supporting the free and open source
+2016-08-17 04:37:59	--	- software communities since 1998.
+2016-08-17 04:37:59	--	-
+2016-08-17 04:37:59	--	- By connecting to freenode you indicate that you have read and
+2016-08-17 04:37:59	--	- accept our policies as set out on http://www.freenode.net
+2016-08-17 04:37:59	--	- freenode runs an open proxy scanner. Please join #freenode for
+2016-08-17 04:37:59	--	- any network-related questions or queries, where a number of
+2016-08-17 04:37:59	--	- volunteer staff and helpful users will be happy to assist you.
+2016-08-17 04:37:59	--	-
+2016-08-17 04:37:59	--	- You can meet us at FOSSCON (http://www.fosscon.org) where we get
+2016-08-17 04:37:59	--	- together with like-minded FOSS enthusiasts for talks and
+2016-08-17 04:37:59	--	- real-life collaboration.
+2016-08-17 04:37:59	--	-
+2016-08-17 04:37:59	--	- We would like to thank Private Internet Access
+2016-08-17 04:37:59	--	- (https://www.privateinternetaccess.com/) and the other
+2016-08-17 04:37:59	--	- organisations that help keep freenode and our other projects
+2016-08-17 04:37:59	--	- running for their sustained support.
+2016-08-17 04:37:59	--	-
+2016-08-17 04:37:59	--	- In particular we would like to thank the sponsor
+2016-08-17 04:37:59	--	- of this server, details of which can be found above.
+2016-08-17 04:37:59	--	-
+2016-08-17 04:37:59	--	End of /MOTD command.
+2016-08-17 04:37:59	--	User mode [+i] by TheFactIs
+2016-08-17 04:37:59	--	NickServ (NickServ@services.): This nickname is registered. Please choose a different nickname, or identify via /msg NickServ identify <password>.
+2016-08-17 06:50:42	--	MSG(NickServ): identify *******
+2016-08-17 06:51:02	=!=	irc: reading data on socket: error 50 Network is down
+2016-08-17 06:51:02	--	irc: disconnecting from server...
+2016-08-17 06:51:02	--	irc: disconnected from server
+2016-08-17 06:51:02	--	irc: reconnecting to server in 10 seconds
+2016-08-17 06:51:21	--	irc: connecting to server chat.freenode.net/6667...
+2016-08-17 06:51:21	--	irc: connected to chat.freenode.net/6667 (2610:150:3b0f::2)
+2016-08-17 06:51:21	--	morgan.freenode.net: *** Looking up your hostname...
+2016-08-17 06:51:21	--	morgan.freenode.net: *** Checking Ident
+2016-08-17 06:51:21	--	morgan.freenode.net: *** Couldn't look up your hostname
+2016-08-17 06:51:30	--	morgan.freenode.net: *** No Ident response
+2016-08-17 06:51:30	--	Welcome to the freenode Internet Relay Chat Network TheFactIs
+2016-08-17 06:51:30	--	Your host is morgan.freenode.net[2610:150:3b0f::2/6667], running version ircd-seven-1.1.3
+2016-08-17 06:51:30	--	This server was created Fri May 20 2016 at 17:41:03 UTC
+2016-08-17 06:51:30	--	morgan.freenode.net ircd-seven-1.1.3 DOQRSZaghilopswz CFILMPQSbcefgijklmnopqrstvz bkloveqjfI
+2016-08-17 06:51:30	--	CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQScgimnprstz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode KNOCK STATUSMSG=@+ CALLERID=g :are supported by this server
+2016-08-17 06:51:30	--	CASEMAPPING=rfc1459 CHARSET=ascii NICKLEN=16 CHANNELLEN=50 TOPICLEN=390 ETRACE CPRIVMSG CNOTICE DEAF=D MONITOR=100 FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: :are supported by this server
+2016-08-17 06:51:30	--	EXTBAN=$,ajrxz WHOX CLIENTVER=3.0 SAFELIST ELIST=CTU :are supported by this server
+2016-08-17 06:51:30	--	There are 157 users and 87356 invisible on 30 servers
+2016-08-17 06:51:30	--	26 :IRC Operators online
+2016-08-17 06:51:30	--	34 :unknown connection(s)
+2016-08-17 06:51:30	--	58115 :channels formed
+2016-08-17 06:51:30	--	I have 10548 clients and 1 servers
+2016-08-17 06:51:30	--	10548 12351 :Current local users 10548, max 12351
+2016-08-17 06:51:30	--	87513 90472 :Current global users 87513, max 90472
+2016-08-17 06:51:30	--	Highest connection count: 12352 (12351 clients) (1164082 connections received)
+2016-08-17 06:51:30	--	- morgan.freenode.net Message of the Day -
+2016-08-17 06:51:30	--	- Welcome to morgan.freenode.net in Chicago, IL, USA! Thank
+2016-08-17 06:51:30	--	- you to psyprus for sponsoring this server!
+2016-08-17 06:51:30	--	-
+2016-08-17 06:51:30	--	- MORGAN, RICHARD K. (1965-) is an English science fiction
+2016-08-17 06:51:30	--	- author. Morgan's books are generally set in a dystopian world.
+2016-08-17 06:51:30	--	- His breakout novel Altered Carbon won the Philip K. Dick Award,
+2016-08-17 06:51:30	--	- and he has written many successful and amazing works to follow.
+2016-08-17 06:51:30	--	- His more recent writings explore the theme of autonomy
+2016-08-17 06:51:30	--	- in science fiction and escapism in fantasy.
+2016-08-17 06:51:30	--	-
+2016-08-17 06:51:30	--	-
+2016-08-17 06:51:30	--	- Welcome to freenode - supporting the free and open source
+2016-08-17 06:51:30	--	- software communities since 1998.
+2016-08-17 06:51:30	--	-
+2016-08-17 06:51:30	--	- By connecting to freenode you indicate that you have read and
+2016-08-17 06:51:30	--	- accept our policies as set out on http://www.freenode.net
+2016-08-17 06:51:30	--	- freenode runs an open proxy scanner. Please join #freenode for
+2016-08-17 06:51:30	--	- any network-related questions or queries, where a number of
+2016-08-17 06:51:30	--	- volunteer staff and helpful users will be happy to assist you.
+2016-08-17 06:51:30	--	-
+2016-08-17 06:51:30	--	- You can meet us at FOSSCON (http://www.fosscon.org) where we get
+2016-08-17 06:51:30	--	- together with like-minded FOSS enthusiasts for talks and
+2016-08-17 06:51:30	--	- real-life collaboration.
+2016-08-17 06:51:30	--	-
+2016-08-17 06:51:30	--	- We would like to thank Private Internet Access
+2016-08-17 06:51:30	--	- (https://www.privateinternetaccess.com/) and the other
+2016-08-17 06:51:30	--	- organisations that help keep freenode and our other projects
+2016-08-17 06:51:30	--	- running for their sustained support.
+2016-08-17 06:51:30	--	-
+2016-08-17 06:51:30	--	- In particular we would like to thank the sponsor
+2016-08-17 06:51:30	--	- of this server, details of which can be found above.
+2016-08-17 06:51:30	--	-
+2016-08-17 06:51:30	--	End of /MOTD command.
+2016-08-17 06:51:30	--	User mode [+i] by TheFactIs
+2016-08-17 06:51:30	--	NickServ (NickServ@services.): This nickname is registered. Please choose a different nickname, or identify via /msg NickServ identify <password>.
+2016-08-17 06:51:39	--	MSG(NickServ): identify *******
+2016-08-17 06:51:39	--	NickServ (NickServ@services.): You are now identified for TheFactIs.
+2016-08-17 06:57:16	--	irc: disconnected from server
+2016-08-17 06:57:47	--	irc: connecting to server chat.freenode.net/6667...
+2016-08-17 06:57:47	--	irc: connected to chat.freenode.net/6667 (2610:150:3b0f::2)
+2016-08-17 06:57:47	--	morgan.freenode.net: *** Looking up your hostname...
+2016-08-17 06:57:47	--	morgan.freenode.net: *** Checking Ident
+2016-08-17 06:57:47	--	morgan.freenode.net: *** Couldn't look up your hostname
+2016-08-17 06:57:57	--	morgan.freenode.net: *** No Ident response
+2016-08-17 06:57:57	--	Welcome to the freenode Internet Relay Chat Network TheFactIs
+2016-08-17 06:57:57	--	Your host is morgan.freenode.net[2610:150:3b0f::2/6667], running version ircd-seven-1.1.3
+2016-08-17 06:57:57	--	This server was created Fri May 20 2016 at 17:41:03 UTC
+2016-08-17 06:57:57	--	morgan.freenode.net ircd-seven-1.1.3 DOQRSZaghilopswz CFILMPQSbcefgijklmnopqrstvz bkloveqjfI
+2016-08-17 06:57:57	--	CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQScgimnprstz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode KNOCK STATUSMSG=@+ CALLERID=g :are supported by this server
+2016-08-17 06:57:57	--	CASEMAPPING=rfc1459 CHARSET=ascii NICKLEN=16 CHANNELLEN=50 TOPICLEN=390 ETRACE CPRIVMSG CNOTICE DEAF=D MONITOR=100 FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: :are supported by this server
+2016-08-17 06:57:57	--	EXTBAN=$,ajrxz WHOX CLIENTVER=3.0 SAFELIST ELIST=CTU :are supported by this server
+2016-08-17 06:57:57	--	There are 157 users and 87401 invisible on 30 servers
+2016-08-17 06:57:57	--	26 :IRC Operators online
+2016-08-17 06:57:57	--	44 :unknown connection(s)
+2016-08-17 06:57:57	--	58145 :channels formed
+2016-08-17 06:57:57	--	I have 10568 clients and 1 servers
+2016-08-17 06:57:57	--	10568 12351 :Current local users 10568, max 12351
+2016-08-17 06:57:57	--	87558 90472 :Current global users 87558, max 90472
+2016-08-17 06:57:57	--	Highest connection count: 12352 (12351 clients) (1164176 connections received)
+2016-08-17 06:57:57	--	- morgan.freenode.net Message of the Day -
+2016-08-17 06:57:57	--	- Welcome to morgan.freenode.net in Chicago, IL, USA! Thank
+2016-08-17 06:57:57	--	- you to psyprus for sponsoring this server!
+2016-08-17 06:57:57	--	-
+2016-08-17 06:57:57	--	- MORGAN, RICHARD K. (1965-) is an English science fiction
+2016-08-17 06:57:57	--	- author. Morgan's books are generally set in a dystopian world.
+2016-08-17 06:57:57	--	- His breakout novel Altered Carbon won the Philip K. Dick Award,
+2016-08-17 06:57:57	--	- and he has written many successful and amazing works to follow.
+2016-08-17 06:57:57	--	- His more recent writings explore the theme of autonomy
+2016-08-17 06:57:57	--	- in science fiction and escapism in fantasy.
+2016-08-17 06:57:57	--	-
+2016-08-17 06:57:57	--	-
+2016-08-17 06:57:57	--	- Welcome to freenode - supporting the free and open source
+2016-08-17 06:57:57	--	- software communities since 1998.
+2016-08-17 06:57:57	--	-
+2016-08-17 06:57:57	--	- By connecting to freenode you indicate that you have read and
+2016-08-17 06:57:57	--	- accept our policies as set out on http://www.freenode.net
+2016-08-17 06:57:57	--	- freenode runs an open proxy scanner. Please join #freenode for
+2016-08-17 06:57:57	--	- any network-related questions or queries, where a number of
+2016-08-17 06:57:57	--	- volunteer staff and helpful users will be happy to assist you.
+2016-08-17 06:57:57	--	-
+2016-08-17 06:57:57	--	- You can meet us at FOSSCON (http://www.fosscon.org) where we get
+2016-08-17 06:57:57	--	- together with like-minded FOSS enthusiasts for talks and
+2016-08-17 06:57:57	--	- real-life collaboration.
+2016-08-17 06:57:57	--	-
+2016-08-17 06:57:57	--	- We would like to thank Private Internet Access
+2016-08-17 06:57:57	--	- (https://www.privateinternetaccess.com/) and the other
+2016-08-17 06:57:57	--	- organisations that help keep freenode and our other projects
+2016-08-17 06:57:57	--	- running for their sustained support.
+2016-08-17 06:57:57	--	-
+2016-08-17 06:57:57	--	- In particular we would like to thank the sponsor
+2016-08-17 06:57:57	--	- of this server, details of which can be found above.
+2016-08-17 06:57:57	--	-
+2016-08-17 06:57:57	--	End of /MOTD command.
+2016-08-17 06:57:57	--	User mode [+i] by TheFactIs
+2016-08-17 06:57:57	--	NickServ (NickServ@services.): This nickname is registered. Please choose a different nickname, or identify via /msg NickServ identify <password>.
+2016-08-17 06:59:04	--	irc: disconnected from server
+2016-08-17 06:59:26	--	irc: connecting to server chat.freenode.net/6667...
+2016-08-17 06:59:26	--	irc: connected to chat.freenode.net/6667 (2610:150:3b0f::2)
+2016-08-17 06:59:26	--	morgan.freenode.net: *** Looking up your hostname...
+2016-08-17 06:59:26	--	morgan.freenode.net: *** Checking Ident
+2016-08-17 06:59:26	--	morgan.freenode.net: *** Couldn't look up your hostname
+2016-08-17 06:59:35	--	morgan.freenode.net: *** No Ident response
+2016-08-17 06:59:35	--	Welcome to the freenode Internet Relay Chat Network TheFactIs
+2016-08-17 06:59:35	--	MSG(nickserv): identify *********
+2016-08-17 06:59:35	--	Your host is morgan.freenode.net[2610:150:3b0f::2/6667], running version ircd-seven-1.1.3
+2016-08-17 06:59:35	--	This server was created Fri May 20 2016 at 17:41:03 UTC
+2016-08-17 06:59:35	--	morgan.freenode.net ircd-seven-1.1.3 DOQRSZaghilopswz CFILMPQSbcefgijklmnopqrstvz bkloveqjfI
+2016-08-17 06:59:35	--	CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQScgimnprstz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode KNOCK STATUSMSG=@+ CALLERID=g :are supported by this server
+2016-08-17 06:59:35	--	CASEMAPPING=rfc1459 CHARSET=ascii NICKLEN=16 CHANNELLEN=50 TOPICLEN=390 ETRACE CPRIVMSG CNOTICE DEAF=D MONITOR=100 FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: :are supported by this server
+2016-08-17 06:59:35	--	EXTBAN=$,ajrxz WHOX CLIENTVER=3.0 SAFELIST ELIST=CTU :are supported by this server
+2016-08-17 06:59:35	--	There are 158 users and 87402 invisible on 30 servers
+2016-08-17 06:59:35	--	26 :IRC Operators online
+2016-08-17 06:59:35	--	36 :unknown connection(s)
+2016-08-17 06:59:35	--	58125 :channels formed
+2016-08-17 06:59:35	--	I have 10561 clients and 1 servers
+2016-08-17 06:59:35	--	10561 12351 :Current local users 10561, max 12351
+2016-08-17 06:59:35	--	87560 90472 :Current global users 87560, max 90472
+2016-08-17 06:59:35	--	Highest connection count: 12352 (12351 clients) (1164200 connections received)
+2016-08-17 06:59:35	--	- morgan.freenode.net Message of the Day -
+2016-08-17 06:59:35	--	- Welcome to morgan.freenode.net in Chicago, IL, USA! Thank
+2016-08-17 06:59:35	--	- you to psyprus for sponsoring this server!
+2016-08-17 06:59:35	--	-
+2016-08-17 06:59:35	--	- MORGAN, RICHARD K. (1965-) is an English science fiction
+2016-08-17 06:59:35	--	- author. Morgan's books are generally set in a dystopian world.
+2016-08-17 06:59:35	--	- His breakout novel Altered Carbon won the Philip K. Dick Award,
+2016-08-17 06:59:35	--	- and he has written many successful and amazing works to follow.
+2016-08-17 06:59:35	--	- His more recent writings explore the theme of autonomy
+2016-08-17 06:59:35	--	- in science fiction and escapism in fantasy.
+2016-08-17 06:59:35	--	-
+2016-08-17 06:59:35	--	-
+2016-08-17 06:59:35	--	- Welcome to freenode - supporting the free and open source
+2016-08-17 06:59:35	--	- software communities since 1998.
+2016-08-17 06:59:35	--	-
+2016-08-17 06:59:35	--	- By connecting to freenode you indicate that you have read and
+2016-08-17 06:59:35	--	- accept our policies as set out on http://www.freenode.net
+2016-08-17 06:59:35	--	- freenode runs an open proxy scanner. Please join #freenode for
+2016-08-17 06:59:35	--	- any network-related questions or queries, where a number of
+2016-08-17 06:59:35	--	- volunteer staff and helpful users will be happy to assist you.
+2016-08-17 06:59:35	--	-
+2016-08-17 06:59:35	--	- You can meet us at FOSSCON (http://www.fosscon.org) where we get
+2016-08-17 06:59:35	--	- together with like-minded FOSS enthusiasts for talks and
+2016-08-17 06:59:35	--	- real-life collaboration.
+2016-08-17 06:59:35	--	-
+2016-08-17 06:59:35	--	- We would like to thank Private Internet Access
+2016-08-17 06:59:35	--	- (https://www.privateinternetaccess.com/) and the other
+2016-08-17 06:59:35	--	- organisations that help keep freenode and our other projects
+2016-08-17 06:59:35	--	- running for their sustained support.
+2016-08-17 06:59:35	--	-
+2016-08-17 06:59:35	--	- In particular we would like to thank the sponsor
+2016-08-17 06:59:35	--	- of this server, details of which can be found above.
+2016-08-17 06:59:35	--	-
+2016-08-17 06:59:35	--	End of /MOTD command.
+2016-08-17 06:59:35	--	User mode [+i] by TheFactIs
+2016-08-17 06:59:35	--	NickServ (NickServ@services.): This nickname is registered. Please choose a different nickname, or identify via /msg NickServ identify <password>.
+2016-08-17 06:59:41	--	NickServ (NickServ@services.): Invalid password for TheFactIs.
+2016-08-17 07:00:53	--	irc: disconnected from server
+2016-08-17 07:00:58	--	irc: connecting to server chat.freenode.net/6667...
+2016-08-17 07:00:58	--	irc: connected to chat.freenode.net/6667 (2610:150:3b0f::2)
+2016-08-17 07:00:58	--	morgan.freenode.net: *** Looking up your hostname...
+2016-08-17 07:00:59	--	morgan.freenode.net: *** Checking Ident
+2016-08-17 07:00:59	--	morgan.freenode.net: *** Couldn't look up your hostname
+2016-08-17 07:01:08	--	morgan.freenode.net: *** No Ident response
+2016-08-17 07:01:08	--	Welcome to the freenode Internet Relay Chat Network TheFactIs
+2016-08-17 07:01:08	--	MSG(nickserv): identify **
+2016-08-17 07:01:08	--	Your host is morgan.freenode.net[2610:150:3b0f::2/6667], running version ircd-seven-1.1.3
+2016-08-17 07:01:08	--	This server was created Fri May 20 2016 at 17:41:03 UTC
+2016-08-17 07:01:08	--	morgan.freenode.net ircd-seven-1.1.3 DOQRSZaghilopswz CFILMPQSbcefgijklmnopqrstvz bkloveqjfI
+2016-08-17 07:01:08	--	CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQScgimnprstz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode KNOCK STATUSMSG=@+ CALLERID=g :are supported by this server
+2016-08-17 07:01:08	--	CASEMAPPING=rfc1459 CHARSET=ascii NICKLEN=16 CHANNELLEN=50 TOPICLEN=390 ETRACE CPRIVMSG CNOTICE DEAF=D MONITOR=100 FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: :are supported by this server
+2016-08-17 07:01:08	--	EXTBAN=$,ajrxz WHOX CLIENTVER=3.0 SAFELIST ELIST=CTU :are supported by this server
+2016-08-17 07:01:08	--	There are 157 users and 87380 invisible on 30 servers
+2016-08-17 07:01:08	--	26 :IRC Operators online
+2016-08-17 07:01:08	--	20 :unknown connection(s)
+2016-08-17 07:01:08	--	58139 :channels formed
+2016-08-17 07:01:08	--	I have 10564 clients and 1 servers
+2016-08-17 07:01:08	--	10564 12351 :Current local users 10564, max 12351
+2016-08-17 07:01:08	--	87537 90472 :Current global users 87537, max 90472
+2016-08-17 07:01:08	--	Highest connection count: 12352 (12351 clients) (1164231 connections received)
+2016-08-17 07:01:08	--	- morgan.freenode.net Message of the Day -
+2016-08-17 07:01:08	--	- Welcome to morgan.freenode.net in Chicago, IL, USA! Thank
+2016-08-17 07:01:08	--	- you to psyprus for sponsoring this server!
+2016-08-17 07:01:08	--	-
+2016-08-17 07:01:08	--	- MORGAN, RICHARD K. (1965-) is an English science fiction
+2016-08-17 07:01:08	--	- author. Morgan's books are generally set in a dystopian world.
+2016-08-17 07:01:08	--	- His breakout novel Altered Carbon won the Philip K. Dick Award,
+2016-08-17 07:01:08	--	- and he has written many successful and amazing works to follow.
+2016-08-17 07:01:08	--	- His more recent writings explore the theme of autonomy
+2016-08-17 07:01:08	--	- in science fiction and escapism in fantasy.
+2016-08-17 07:01:08	--	-
+2016-08-17 07:01:08	--	-
+2016-08-17 07:01:08	--	- Welcome to freenode - supporting the free and open source
+2016-08-17 07:01:08	--	- software communities since 1998.
+2016-08-17 07:01:08	--	-
+2016-08-17 07:01:08	--	- By connecting to freenode you indicate that you have read and
+2016-08-17 07:01:08	--	- accept our policies as set out on http://www.freenode.net
+2016-08-17 07:01:08	--	- freenode runs an open proxy scanner. Please join #freenode for
+2016-08-17 07:01:08	--	- any network-related questions or queries, where a number of
+2016-08-17 07:01:08	--	- volunteer staff and helpful users will be happy to assist you.
+2016-08-17 07:01:08	--	-
+2016-08-17 07:01:08	--	- You can meet us at FOSSCON (http://www.fosscon.org) where we get
+2016-08-17 07:01:08	--	- together with like-minded FOSS enthusiasts for talks and
+2016-08-17 07:01:08	--	- real-life collaboration.
+2016-08-17 07:01:08	--	-
+2016-08-17 07:01:08	--	- We would like to thank Private Internet Access
+2016-08-17 07:01:08	--	- (https://www.privateinternetaccess.com/) and the other
+2016-08-17 07:01:08	--	- organisations that help keep freenode and our other projects
+2016-08-17 07:01:08	--	- running for their sustained support.
+2016-08-17 07:01:08	--	-
+2016-08-17 07:01:08	--	- In particular we would like to thank the sponsor
+2016-08-17 07:01:08	--	- of this server, details of which can be found above.
+2016-08-17 07:01:08	--	-
+2016-08-17 07:01:08	--	End of /MOTD command.
+2016-08-17 07:01:08	--	User mode [+i] by TheFactIs
+2016-08-17 07:01:08	--	NickServ (NickServ@services.): This nickname is registered. Please choose a different nickname, or identify via /msg NickServ identify <password>.
+2016-08-17 07:01:14	--	NickServ (NickServ@services.): Invalid password for TheFactIs.
+2016-08-17 07:01:45	--	MSG(NickServ): identify ******************************
+2016-08-17 07:01:49	--	NickServ (NickServ@services.): Invalid password for TheFactIs.
+2016-08-17 07:02:05	--	MSG(NickServ): identify *******************************
+2016-08-17 07:02:06	--	NickServ (NickServ@services.): Invalid password for TheFactIs.
+2016-08-17 07:02:39	--	MSG(NickServ): identify *****************************
+2016-08-17 07:02:39	--	NickServ (NickServ@services.): Invalid password for TheFactIs.
+2016-08-17 07:02:59	--	MSG(NickServ): identify *****************************
+2016-08-17 07:03:00	--	NickServ (NickServ@services.): Invalid password for TheFactIs.
+2016-08-17 07:04:49	--	MSG(NickServ): identify *****************************
+2016-08-17 07:04:50	--	NickServ (NickServ@services.): Invalid password for TheFactIs.
+2016-08-17 07:04:58	--	MSG(NickServ): identify *******************************
+2016-08-17 07:04:59	--	NickServ (NickServ@services.): Invalid password for TheFactIs.
+2016-08-17 07:07:27	--	irc: disconnected from server
+2016-08-17 07:07:33	--	irc: connecting to server chat.freenode.net/6667...
+2016-08-17 07:07:34	--	irc: connected to chat.freenode.net/6667 (2610:150:3b0f::2)
+2016-08-17 07:07:34	--	morgan.freenode.net: *** Looking up your hostname...
+2016-08-17 07:07:34	--	morgan.freenode.net: *** Checking Ident
+2016-08-17 07:07:34	--	morgan.freenode.net: *** Couldn't look up your hostname
+2016-08-17 07:07:44	--	morgan.freenode.net: *** No Ident response
+2016-08-17 07:07:44	--	Welcome to the freenode Internet Relay Chat Network TheFactIs
+2016-08-17 07:07:44	--	MSG(nickserv): identify **
+2016-08-17 07:07:44	--	Your host is morgan.freenode.net[2610:150:3b0f::2/6667], running version ircd-seven-1.1.3
+2016-08-17 07:07:44	--	This server was created Fri May 20 2016 at 17:41:03 UTC
+2016-08-17 07:07:44	--	morgan.freenode.net ircd-seven-1.1.3 DOQRSZaghilopswz CFILMPQSbcefgijklmnopqrstvz bkloveqjfI
+2016-08-17 07:07:44	--	CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQScgimnprstz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode KNOCK STATUSMSG=@+ CALLERID=g :are supported by this server
+2016-08-17 07:07:44	--	CASEMAPPING=rfc1459 CHARSET=ascii NICKLEN=16 CHANNELLEN=50 TOPICLEN=390 ETRACE CPRIVMSG CNOTICE DEAF=D MONITOR=100 FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: :are supported by this server
+2016-08-17 07:07:44	--	EXTBAN=$,ajrxz WHOX CLIENTVER=3.0 SAFELIST ELIST=CTU :are supported by this server
+2016-08-17 07:07:44	--	There are 157 users and 87326 invisible on 30 servers
+2016-08-17 07:07:44	--	26 :IRC Operators online
+2016-08-17 07:07:44	--	31 :unknown connection(s)
+2016-08-17 07:07:44	--	58150 :channels formed
+2016-08-17 07:07:44	--	I have 10558 clients and 1 servers
+2016-08-17 07:07:44	--	10558 12351 :Current local users 10558, max 12351
+2016-08-17 07:07:44	--	87483 90472 :Current global users 87483, max 90472
+2016-08-17 07:07:44	--	Highest connection count: 12352 (12351 clients) (1164304 connections received)
+2016-08-17 07:07:44	--	- morgan.freenode.net Message of the Day -
+2016-08-17 07:07:44	--	- Welcome to morgan.freenode.net in Chicago, IL, USA! Thank
+2016-08-17 07:07:44	--	- you to psyprus for sponsoring this server!
+2016-08-17 07:07:44	--	-
+2016-08-17 07:07:44	--	- MORGAN, RICHARD K. (1965-) is an English science fiction
+2016-08-17 07:07:44	--	- author. Morgan's books are generally set in a dystopian world.
+2016-08-17 07:07:44	--	- His breakout novel Altered Carbon won the Philip K. Dick Award,
+2016-08-17 07:07:44	--	- and he has written many successful and amazing works to follow.
+2016-08-17 07:07:44	--	- His more recent writings explore the theme of autonomy
+2016-08-17 07:07:44	--	- in science fiction and escapism in fantasy.
+2016-08-17 07:07:44	--	-
+2016-08-17 07:07:44	--	-
+2016-08-17 07:07:44	--	- Welcome to freenode - supporting the free and open source
+2016-08-17 07:07:44	--	- software communities since 1998.
+2016-08-17 07:07:44	--	-
+2016-08-17 07:07:44	--	- By connecting to freenode you indicate that you have read and
+2016-08-17 07:07:44	--	- accept our policies as set out on http://www.freenode.net
+2016-08-17 07:07:44	--	- freenode runs an open proxy scanner. Please join #freenode for
+2016-08-17 07:07:44	--	- any network-related questions or queries, where a number of
+2016-08-17 07:07:44	--	- volunteer staff and helpful users will be happy to assist you.
+2016-08-17 07:07:44	--	-
+2016-08-17 07:07:44	--	- You can meet us at FOSSCON (http://www.fosscon.org) where we get
+2016-08-17 07:07:44	--	- together with like-minded FOSS enthusiasts for talks and
+2016-08-17 07:07:44	--	- real-life collaboration.
+2016-08-17 07:07:44	--	-
+2016-08-17 07:07:44	--	- We would like to thank Private Internet Access
+2016-08-17 07:07:44	--	- (https://www.privateinternetaccess.com/) and the other
+2016-08-17 07:07:44	--	- organisations that help keep freenode and our other projects
+2016-08-17 07:07:44	--	- running for their sustained support.
+2016-08-17 07:07:44	--	-
+2016-08-17 07:07:44	--	- In particular we would like to thank the sponsor
+2016-08-17 07:07:44	--	- of this server, details of which can be found above.
+2016-08-17 07:07:44	--	-
+2016-08-17 07:07:44	--	End of /MOTD command.
+2016-08-17 07:07:44	--	User mode [+i] by TheFactIs
+2016-08-17 07:07:44	--	NickServ (NickServ@services.): This nickname is registered. Please choose a different nickname, or identify via /msg NickServ identify <password>.
+2016-08-17 07:07:44	--	NickServ (NickServ@services.): You are now identified for TheFactIs.
+2016-08-17 07:07:44	--	NickServ (NickServ@services.): 8 failed logins since last login.
+2016-08-17 07:07:44	--	NickServ (NickServ@services.): Last failed attempt from: TheFactIs!~Andy@2601:646:8301:b810:8cf9:20fb:5d94:4ff0 on Aug 17 14:04:59 2016.
+2016-08-17 07:07:51	--	NickServ (NickServ@services.): You are already logged in as TheFactIs.
+2016-08-17 07:13:01	--	irc: connecting to server chat.freenode.net/6667...
+2016-08-17 07:13:01	--	irc: connected to chat.freenode.net/6667 (2610:150:3b0f::2)
+2016-08-17 07:13:01	--	morgan.freenode.net: *** Looking up your hostname...
+2016-08-17 07:13:02	--	morgan.freenode.net: *** Checking Ident
+2016-08-17 07:13:02	--	morgan.freenode.net: *** Couldn't look up your hostname
+2016-08-17 07:13:10	--	morgan.freenode.net: *** No Ident response
+2016-08-17 07:13:10	--	Welcome to the freenode Internet Relay Chat Network TheFactIs
+2016-08-17 07:13:10	--	MSG(nickserv): identify **
+2016-08-17 07:13:10	--	Your host is morgan.freenode.net[2610:150:3b0f::2/6667], running version ircd-seven-1.1.3
+2016-08-17 07:13:10	--	This server was created Fri May 20 2016 at 17:41:03 UTC
+2016-08-17 07:13:10	--	morgan.freenode.net ircd-seven-1.1.3 DOQRSZaghilopswz CFILMPQSbcefgijklmnopqrstvz bkloveqjfI
+2016-08-17 07:13:10	--	CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQScgimnprstz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode KNOCK STATUSMSG=@+ CALLERID=g :are supported by this server
+2016-08-17 07:13:10	--	CASEMAPPING=rfc1459 CHARSET=ascii NICKLEN=16 CHANNELLEN=50 TOPICLEN=390 ETRACE CPRIVMSG CNOTICE DEAF=D MONITOR=100 FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: :are supported by this server
+2016-08-17 07:13:10	--	EXTBAN=$,ajrxz WHOX CLIENTVER=3.0 SAFELIST ELIST=CTU :are supported by this server
+2016-08-17 07:13:10	--	There are 157 users and 87446 invisible on 30 servers
+2016-08-17 07:13:10	--	26 :IRC Operators online
+2016-08-17 07:13:10	--	43 :unknown connection(s)
+2016-08-17 07:13:10	--	58148 :channels formed
+2016-08-17 07:13:10	--	I have 10559 clients and 1 servers
+2016-08-17 07:13:10	--	10559 12351 :Current local users 10559, max 12351
+2016-08-17 07:13:10	--	87603 90472 :Current global users 87603, max 90472
+2016-08-17 07:13:10	--	Highest connection count: 12352 (12351 clients) (1164379 connections received)
+2016-08-17 07:13:10	--	- morgan.freenode.net Message of the Day -
+2016-08-17 07:13:10	--	- Welcome to morgan.freenode.net in Chicago, IL, USA! Thank
+2016-08-17 07:13:10	--	- you to psyprus for sponsoring this server!
+2016-08-17 07:13:10	--	-
+2016-08-17 07:13:10	--	- MORGAN, RICHARD K. (1965-) is an English science fiction
+2016-08-17 07:13:10	--	- author. Morgan's books are generally set in a dystopian world.
+2016-08-17 07:13:10	--	- His breakout novel Altered Carbon won the Philip K. Dick Award,
+2016-08-17 07:13:10	--	- and he has written many successful and amazing works to follow.
+2016-08-17 07:13:10	--	- His more recent writings explore the theme of autonomy
+2016-08-17 07:13:10	--	- in science fiction and escapism in fantasy.
+2016-08-17 07:13:10	--	-
+2016-08-17 07:13:10	--	-
+2016-08-17 07:13:10	--	- Welcome to freenode - supporting the free and open source
+2016-08-17 07:13:10	--	- software communities since 1998.
+2016-08-17 07:13:10	--	-
+2016-08-17 07:13:10	--	- By connecting to freenode you indicate that you have read and
+2016-08-17 07:13:10	--	- accept our policies as set out on http://www.freenode.net
+2016-08-17 07:13:10	--	- freenode runs an open proxy scanner. Please join #freenode for
+2016-08-17 07:13:10	--	- any network-related questions or queries, where a number of
+2016-08-17 07:13:10	--	- volunteer staff and helpful users will be happy to assist you.
+2016-08-17 07:13:10	--	-
+2016-08-17 07:13:10	--	- You can meet us at FOSSCON (http://www.fosscon.org) where we get
+2016-08-17 07:13:10	--	- together with like-minded FOSS enthusiasts for talks and
+2016-08-17 07:13:10	--	- real-life collaboration.
+2016-08-17 07:13:10	--	-
+2016-08-17 07:13:10	--	- We would like to thank Private Internet Access
+2016-08-17 07:13:10	--	- (https://www.privateinternetaccess.com/) and the other
+2016-08-17 07:13:10	--	- organisations that help keep freenode and our other projects
+2016-08-17 07:13:10	--	- running for their sustained support.
+2016-08-17 07:13:10	--	-
+2016-08-17 07:13:10	--	- In particular we would like to thank the sponsor
+2016-08-17 07:13:10	--	- of this server, details of which can be found above.
+2016-08-17 07:13:10	--	-
+2016-08-17 07:13:10	--	End of /MOTD command.
+2016-08-17 07:13:10	--	User mode [+i] by TheFactIs
+2016-08-17 07:13:10	--	NickServ (NickServ@services.): This nickname is registered. Please choose a different nickname, or identify via /msg NickServ identify <password>.
+2016-08-17 07:13:10	--	NickServ (NickServ@services.): You are now identified for TheFactIs.
+2016-08-17 07:13:16	--	NickServ (NickServ@services.): You are already logged in as TheFactIs.

@@ -6,3 +6,341 @@
 2016-08-16 19:31:41	-->	j04quim (~jo@201.183.18.15) has joined #archlinux-offtopic
 2016-08-16 19:34:23	<--	j04quim (~jo@201.183.18.15) has left #archlinux-offtopic
 2016-08-16 19:38:05	<--	export (~export@unaffiliated/exported) has quit (Quit: leaving)
+2016-08-16 20:01:39	-->	TheFactIs (~Andy@2601:646:8301:b810:8cf9:20fb:5d94:4ff0) has joined #archlinux-offtopic
+2016-08-16 20:01:39	--	Topic for #archlinux-offtopic is "Channel stats may be found at http://hax0r.se/aotstats.html Contact dunz0r to opt out <+> Please be nice. And if you can't be nice, choose a good insult. Insult generator http://www.museangel.net/insult.html <+> Quote of the day: DEMONstrator | The server is a blob. <+> 😹  INTERNATIONAL CAT DAY 😹  \o/ https://goo.gl/zMNHeE http://goo.gl/4anJzK"
+2016-08-16 20:01:39	--	Topic set by jelle (~jelle@archlinux/trusteduser/jelly1) on Mon, 08 Aug 2016 11:05:06
+2016-08-16 20:01:39	--	Channel #archlinux-offtopic: 271 nicks (2 ops, 0 voices, 269 normals)
+2016-08-16 20:01:41	--	Channel created on Wed, 28 Mar 2007 21:10:02
+2016-08-16 20:02:11	<--	AvatarA (~avatara@unaffiliated/avatara) has quit (Quit: Leaving)
+2016-08-16 20:02:56	roukoswarf	!howmany years till dickbutt stops being funny
+2016-08-16 20:02:57	phrik	Nearly twenty
+2016-08-16 20:02:59	roukoswarf	good.
+2016-08-16 20:04:23	-->	tigrmesh (~tigrmesh@archlinux/op/tigrmesh) has joined #archlinux-offtopic
+2016-08-16 20:04:36	fer750	!howmany dudes needed to put to work a bot in this chat channel
+2016-08-16 20:04:38	phrik	Nearly one
+2016-08-16 20:05:02	fer750	amazing!
+2016-08-16 20:07:09	minimalism	tfw libreoffice not working
+2016-08-16 20:07:42	-->	j04quim (~j04quim@201.183.18.15) has joined #archlinux-offtopic
+2016-08-16 20:09:00	<--	rossome (~indieross@ip70-162-243-182.ph.ph.cox.net) has quit (Ping timeout: 244 seconds)
+2016-08-16 20:09:25	<--	dustmote (~dustmote@cpe-104-162-98-67.nyc.res.rr.com) has quit (Ping timeout: 260 seconds)
+2016-08-16 20:10:21	fer750	i even test libreoffice
+2016-08-16 20:12:20	<--	j04quim (~j04quim@201.183.18.15) has quit (Ping timeout: 265 seconds)
+2016-08-16 20:12:28	entropydriven	I spend so much time trying to make my Arch install more efficient that I don't ever actually get any work done.
+2016-08-16 20:13:06	fer750	yeah works. almost the writer 
+2016-08-16 20:13:37	fer750	libreoffice viewer too have a pdf viewer
+2016-08-16 20:14:31	chee	DEMONstrator: i get some colour emoji in chrome
+2016-08-16 20:14:58	DEMONstrator	Chrome, you have to cheat and use EmojiOne.
+2016-08-16 20:15:09	fer750	i dindnt notice that
+2016-08-16 20:15:16	mankypirate	https://twitter.com/ThirtySecFights/status/748586903218192384 this one is straight fucked up
+2016-08-16 20:15:18	phrik	Title: Thirty Sec Fights auf Twitter: "Ya'll still playing that knockout game or nah? That shit weak bruh https://t.co/HbZ3xBeTQo" (at twitter.com)
+2016-08-16 20:15:26	chee	DEMONstrator: it isn't emojione
+2016-08-16 20:15:36	-->	j04quim (~j04quim@201.183.18.15) has joined #archlinux-offtopic
+2016-08-16 20:15:45	chee	DEMONstrator: https://snaek.org/s/xexil/yacuj.png
+2016-08-16 20:16:13	chee	pretty sure it's noto-fonts-emoji
+2016-08-16 20:18:42	chee	don't know if that's also considered cheating
+2016-08-16 20:20:12	<--	j04quim (~j04quim@201.183.18.15) has quit (Ping timeout: 258 seconds)
+2016-08-16 20:20:28	-->	mzo_ (~mark@d207-6-73-158.bchsia.telus.net) has joined #archlinux-offtopic
+2016-08-16 20:21:27	-->	rossome (~indieross@ip70-162-243-182.ph.ph.cox.net) has joined #archlinux-offtopic
+2016-08-16 20:23:30	mzo_	International cat MONTH
+2016-08-16 20:23:42	MessyIcefish	!cats
+2016-08-16 20:23:43	phrik	🐈 😺 😸 😹 😻 😼 😽 🙀 😿 😾 🐱 🐈
+2016-08-16 20:24:19	DEMONstrator	chee:  I have it, but Harfbuzz still uses the black and white ones.
+2016-08-16 20:24:27	voidead	!cats |rainbow
+2016-08-16 20:24:28	phrik	🐈 😺 😸 😹 😻 😼 😽 🙀 😿 😾 🐱 🐈
+2016-08-16 20:26:27	DEMONstrator	So, for me:  Cairo:  yes.  Harfbuzz: no.  FreeType:  no.
+2016-08-16 20:30:01	-->	France (~Maple@unaffiliated/maple/x-0066656) has joined #archlinux-offtopic
+2016-08-16 20:30:36	<--	France (~Maple@unaffiliated/maple/x-0066656) has left #archlinux-offtopic
+2016-08-16 20:31:21	-->	j04quim (~j04quim@201.183.18.15) has joined #archlinux-offtopic
+2016-08-16 20:33:48	tigrmesh	i'm sorry peeps for being inconsistent.  i have been too tired to deal with this cr*p
+2016-08-16 20:34:08	<--	j04quim (~j04quim@201.183.18.15) has quit (Quit: leaving)
+2016-08-16 20:34:33	polyzen	lmao mankypirate
+2016-08-16 20:34:45	-->	j04quim (~j04quim@201.183.18.15) has joined #archlinux-offtopic
+2016-08-16 20:34:54	javaisnom	cr
+2016-08-16 20:34:57	javaisnom	*p
+2016-08-16 20:36:07	<--	alyptik (~alyptik@2605:e000:1117:c19a:32c1:ed55:123d:a996) has quit (Quit: WeeChat 1.5)
+2016-08-16 20:36:51	polyzen	mankypirate, that dense mother fucker..
+2016-08-16 20:37:12	polyzen	tigrmesh, what do you mean?
+2016-08-16 20:37:23	-->	alyptik (~alyptik@2605:e000:1117:c19a:32c1:ed55:123d:a996) has joined #archlinux-offtopic
+2016-08-16 20:39:03	<--	j04quim (~j04quim@201.183.18.15) has quit (Ping timeout: 240 seconds)
+2016-08-16 20:40:05	fer750	!asl
+2016-08-16 20:40:05	phrik	9009/idk/antarctica
+2016-08-16 20:40:18	polyzen	tigrmesh, busy bee?
+2016-08-16 20:41:56	--	Mode #archlinux-offtopic [+o tigrmesh] by ChanServ
+2016-08-16 20:42:02	--	Mode #archlinux-offtopic [+b skope!*@*] by tigrmesh
+2016-08-16 20:42:10	minimalism	wat
+2016-08-16 20:42:38	polyzen	potty mouths
+2016-08-16 20:43:02	polyzen	!youdonefuckedupnow
+2016-08-16 20:43:03	phrik	http://i.imgur.com/xGCZcLa.gif
+2016-08-16 20:43:28	--	Mode #archlinux-offtopic [+b du5tball!*@*] by tigrmesh
+2016-08-16 20:43:36	<--	tigrmesh has kicked du5tball (dude.  there are other insults you know.  Insult generator http://www.museangel.net/insult.html)
+2016-08-16 20:43:51	polyzen	tigrmesh, perhaps +q $a:<account>?
+2016-08-16 20:43:56	polyzen	¯\_(ツ)_/¯
+2016-08-16 20:44:09	-->	j04quim (~j04quim@201.183.18.15) has joined #archlinux-offtopic
+2016-08-16 20:44:27	fer750	my net so fucked today 
+2016-08-16 20:44:41	polyzen	ouch
+2016-08-16 20:44:54	@tigrmesh	i still have not kicked skope ?
+2016-08-16 20:45:04	polyzen	correct
+2016-08-16 20:45:11	fer750	where all goes today? only 270 ppl here?
+2016-08-16 20:45:18	javaisnom	kick java for being a nigerian scammer
+2016-08-16 20:45:20	polyzen	banned
+2016-08-16 20:45:22	<--	tigrmesh has kicked skope (find another insult  skope | cunts   Insult generator http://www.museangel.net/insult.html)
+2016-08-16 20:45:22	polyzen	;p
+2016-08-16 20:45:29	@tigrmesh	jeez.  enough with the nazis
+2016-08-16 20:45:55	@tigrmesh	ok arrow up is not the best thing'
+2016-08-16 20:47:23	fer750	that link dont works, dont generate any insult. rofl
+2016-08-16 20:47:50	MessyIcefish	Thou art a droning, idle-headed bladder!
+2016-08-16 20:48:00	@tigrmesh	apparently du5ball's date did not go well
+2016-08-16 20:48:01	polyzen	fer750, mangled dread-bolted horn-beast
+2016-08-16 20:48:03	@tigrmesh	 du5tball | geez. had a date. fat bitch >_> 
+2016-08-16 20:48:37	minimalism	It also includes a lot more hurtful language than the banned language. Only difference is it's not officially approved by the league of political correctness.
+2016-08-16 20:48:38	polyzen	MessyIcefish, woops, missed that bit
+2016-08-16 20:49:42	polyzen	minimalism, thou art an unmuzzled, sheep-biting giglet
+2016-08-16 20:49:54	<--	j04quim (~j04quim@201.183.18.15) has quit (Quit: leaving)
+2016-08-16 20:49:58	minimalism	See, that's practically a racial epithet since my family is from the isles
+2016-08-16 20:50:03	polyzen	lol
+2016-08-16 20:50:14	polyzen	!define giglet
+2016-08-16 20:50:16	phrik	polyzen: gcide: Giglot \Gig"lot\, Giglet \Gig"let\, n. [Cf. Icel. gikkr a pert, rude person, Dan. giek a fool, silly man, AS. gagol, g[ae]gl, lascivious, wanton, MHG. gogel wanton, giege fool, and E. gig a wanton person.] A wanton; a lascivious or light, giddy girl. [Obs.] [1913 Webster] The giglet is willful, and is running upon her fate. --Sir W. Scott. [1913 Webster]
+2016-08-16 20:51:26	--	Mode #archlinux-offtopic [-o tigrmesh] by tigrmesh
+2016-08-16 20:51:50	tigrmesh	yeah.  been busy
+2016-08-16 20:53:02	polyzen	always a good thing :)
+2016-08-16 20:54:21	-->	bruda (~bruda@24.180.140.38) has joined #archlinux-offtopic
+2016-08-16 20:54:34	-->	j04quim (~j04quim@201.183.18.15) has joined #archlinux-offtopic
+2016-08-16 20:55:15	tigrmesh	truth
+2016-08-16 20:55:50	fer750	https://www.youtube.com/watch?v=WoFtLFbpwYA
+2016-08-16 20:55:52	phrik	Title: DJ Drike - Sesión Verano 2016 - YouTube (at www.youtube.com)
+2016-08-16 20:56:26	fer750	damn start to listen that, amazin and in the end finish and without audio
+2016-08-16 20:56:54	fer750	like an censured song
+2016-08-16 20:56:58	Sapphirus	benchmarking kvm's virtgl to see how great the performance is compared to native opengl
+2016-08-16 20:57:01	Sapphirus	hmm
+2016-08-16 20:57:31	polyzen	http://i.imgur.com/i4jQj9c.jpg
+2016-08-16 20:58:27	minimalism	polyzen: I wonder if a litigious parent took advantage of that situation.
+2016-08-16 20:58:31	fer750	rofl
+2016-08-16 20:58:53	fer750	easy money.
+2016-08-16 20:58:54	polyzen	minimalism, and did what?
+2016-08-16 20:58:59	--	Mode #archlinux-offtopic [+o eir] by ChanServ
+2016-08-16 20:58:59	--	Mode #archlinux-offtopic [-bbo du5tball!*@* skope!*@* eir] by eir
+2016-08-16 20:59:00	polyzen	oh
+2016-08-16 20:59:06	minimalism	polyzen: Sue the district for some sort of public indecency.. who knows
+2016-08-16 20:59:07	<--	j04quim (~j04quim@201.183.18.15) has quit (Ping timeout: 244 seconds)
+2016-08-16 20:59:33	polyzen	yes
+2016-08-16 21:00:12	fer750	children dont understant nothing at lower  ages
+2016-08-16 21:00:19	<--	neuroserpens (~neuroserp@2804:7f3:8986:eb62:f71b:8d6e:58fb:ca3e) has quit (Quit: WeeChat 1.5)
+2016-08-16 21:00:23	roukoswarf	so they understand everything?/
+2016-08-16 21:00:34	roukoswarf	or are you a child and dont understand english?
+2016-08-16 21:00:34	polyzen	no, they know something
+2016-08-16 21:00:36	fer750	but fathers does
+2016-08-16 21:01:09	fer750	maybe feels like a drop of pee
+2016-08-16 21:01:30	chee	somebody gaslight me
+2016-08-16 21:01:36	fer750	that downs from mouth to the bone. rofl
+2016-08-16 21:03:50	polyzen	!define gaslight
+2016-08-16 21:03:52	phrik	polyzen: wn: gaslight n 1: light yielded by the combustion of illuminating gas; gcide: Gaslight \Gas"light`\, n. 1. The light yielded by the combustion of illuminating gas. [1913 Webster] 2. A gas jet or burner. [1913 Webster]
+2016-08-16 21:04:35	fer750	!define censured
+2016-08-16 21:04:38	phrik	fer750: gcide: Censure \Cen"sure\, v. i. [imp. & p. p. {Censured}; p. pr. & vb. n. {Censuring}.] [Cf. F. ensurer.] 1. To form or express a judgment in regard to; to estimate; to judge. [Obs.] "Should I say more, you might well censure me a flatterer." --Beau. & Fl. [1913 Webster] 2. To find fault with and condemn as wrong; to blame; to express disapprobation of. [1913 Webster] I may be (1 more message)
+2016-08-16 21:06:15	fer750	!define cross
+2016-08-16 21:06:17	phrik	fer750: gcide: Cross \Cross\, prep. Athwart; across. [Archaic or Colloq.] [1913 Webster] A fox was taking a walk one night cross a village. --L'Estrange. [1913 Webster] {To go cross lots}, to go across the fields; to take a short cut. [Colloq.] [1913 Webster]; bouvier: CROSS. contracts. A mark made by persons who are unable to write, instead of their names. 2. When properly attested, (50 more messages)
+2016-08-16 21:06:50	fer750	that term is better
+2016-08-16 21:07:25	-->	j04quim (~j04quim@201.183.18.15) has joined #archlinux-offtopic
+2016-08-16 21:09:20	<--	occultus (~occultus@207.196.181.215) has quit (Remote host closed the connection)
+2016-08-16 21:09:38	-->	occultus (~occultus@207.196.181.215) has joined #archlinux-offtopic
+2016-08-16 21:10:52	mankypirate	polyzen: american schools lol
+2016-08-16 21:10:59	polyzen	sup
+2016-08-16 21:11:08	<--	alyptik (~alyptik@2605:e000:1117:c19a:32c1:ed55:123d:a996) has quit (Quit: WeeChat 1.5)
+2016-08-16 21:12:00	<--	j04quim (~j04quim@201.183.18.15) has quit (Ping timeout: 258 seconds)
+2016-08-16 21:12:15	-->	alyptik (~alyptik@2605:e000:1117:c19a:32c1:ed55:123d:a996) has joined #archlinux-offtopic
+2016-08-16 21:14:19	<--	mzo_ (~mark@d207-6-73-158.bchsia.telus.net) has quit (Quit: WeeChat 1.5)
+2016-08-16 21:14:20	mankypirate	I have to say tho, in all of these female fights, not one has gotten knocked out
+2016-08-16 21:14:36	mankypirate	some dudes were hitting each other with shovels
+2016-08-16 21:14:38	polyzen	saw one
+2016-08-16 21:14:40	polyzen	today
+2016-08-16 21:14:44	polyzen	on that feed
+2016-08-16 21:14:45	mankypirate	o yea actually
+2016-08-16 21:14:48	mankypirate	there's that one
+2016-08-16 21:14:54	mankypirate	but that's the only one
+2016-08-16 21:14:58	polyzen	might've seen the shovel one
+2016-08-16 21:17:29	tigrmesh	"Gaslighting or gas-lighting is a form of psychological abuse in which a victim is manipulated into doubting their own memory, perception, and sanity"
+2016-08-16 21:17:34	tigrmesh	great movie. one of the best monologues ever https://en.wikipedia.org/wiki/Gaslight_(1944_film)
+2016-08-16 21:17:34	phillid	tigrmesh, do you have your client set to highlight on certain words or something?
+2016-08-16 21:17:41	phillid	Or do you just read logs religiously
+2016-08-16 21:17:52	tigrmesh	possibly
+2016-08-16 21:18:01	tigrmesh	possibly both
+2016-08-16 21:18:04	phillid	😛
+2016-08-16 21:18:13	chee	i'm surprised the people who linked to porn didn't get a ban
+2016-08-16 21:18:18	polyzen	:o
+2016-08-16 21:18:19	tigrmesh	depressing
+2016-08-16 21:18:25	phillid	Hm
+2016-08-16 21:18:41	tigrmesh	didn't see it
+2016-08-16 21:19:21	chee	oh
+2016-08-16 21:19:29	chee	well now i feel like a snitch
+2016-08-16 21:19:29	phillid	chee is a nark 😉
+2016-08-16 21:19:33	 *	chee gets stitches
+2016-08-16 21:19:34	DEMONstrator	Doesn't Limnoria have an AutoModerator plug-in?
+2016-08-16 21:19:46	polyzen	prob
+2016-08-16 21:19:59	-->	robattila256 (~robattila@S0106f0f24908d2a3.vf.shawcable.net) has joined #archlinux-offtopic
+2016-08-16 21:20:10	-->	_Don (~don@x590d060b.dyn.telefonica.de) has joined #archlinux-offtopic
+2016-08-16 21:20:12	phillid	grep pr0n mylogz/#aot.log
+2016-08-16 21:20:41	phillid	1337 534ch
+2016-08-16 21:20:41	-->	mzo_ (~mark@d207-6-73-158.bchsia.telus.net) has joined #archlinux-offtopic
+2016-08-16 21:21:14	polyzen	seach?
+2016-08-16 21:21:29	<--	bruda (~bruda@24.180.140.38) has quit (Quit: Leaving)
+2016-08-16 21:21:31	phillid	Ye
+2016-08-16 21:21:35	tigrmesh	DEMONstrator: what does that do?
+2016-08-16 21:21:42	<--	_Don (~don@x590d060b.dyn.telefonica.de) has quit (Client Quit)
+2016-08-16 21:21:53	polyzen	sounds like a badwords plugin
+2016-08-16 21:21:57	chee	autoban on certain words i guess
+2016-08-16 21:22:09	tigrmesh	cool
+2016-08-16 21:23:11	mankypirate	let's start banning people for "lol" like #python
+2016-08-16 21:23:16	phillid	Does it handle ＦＵＬＬ ＷＩＤＴＨ ＩＮＳＵＬＴＳ？
+2016-08-16 21:23:19	polyzen	or manually apply bans when they're deep in the middle of a conversation
+2016-08-16 21:23:55	polyzen	s/the middle of a /
+2016-08-16 21:24:25	occultus	unterminated `s' command
+2016-08-16 21:24:52	polyzen	I'll terminate your 's' command
+2016-08-16 21:24:58	chee	:o
+2016-08-16 21:25:07	polyzen	`s'*
+2016-08-16 21:25:20	chee	`:o'
+2016-08-16 21:25:27	polyzen	lol
+2016-08-16 21:25:34	phillid	ＮＵＴ ＨＯＯＫ
+2016-08-16 21:26:18	chee	`：ｏ＇
+2016-08-16 21:27:12	<--	ugglan (~filip@unaffiliated/ugglan) has quit (Ping timeout: 240 seconds)
+2016-08-16 21:27:26	polyzen	phillid, just reminded of the Cock Knocker guy from Jay and Silent Bob Strike Back
+2016-08-16 21:27:49	 *	phillid doesn't even know that
+2016-08-16 21:27:55	phillid	I was just using the insult generator
+2016-08-16 21:29:18	mankypirate	polyzen: https://twitter.com/ThirtySecFights/status/735150672341958657
+2016-08-16 21:29:19	phrik	Title: Thirty Sec Fights auf Twitter: "Damn he took it too far 😡 https://t.co/SyBL1tIt0o" (at twitter.com)
+2016-08-16 21:29:29	chee	let's upgrade some packages
+2016-08-16 21:29:30	mankypirate	seen a few things in these I've never seen before
+2016-08-16 21:29:34	mankypirate	that dude is done
+2016-08-16 21:29:36	mankypirate	look at his arms
+2016-08-16 21:29:39	phillid	chee, For the greater good of our people!
+2016-08-16 21:29:39	mankypirate	and his face
+2016-08-16 21:29:45	phillid	*boxambulancegiftgift
+2016-08-16 21:30:10	chee	lol it highlighted me ++
+2016-08-16 21:30:31	polyzen	mankypirate, depopulation++
+2016-08-16 21:31:35	phillid	tigrmesh, forgive me, but I don't see what is too wrong with retarded
+2016-08-16 21:31:38	javaisnom	cock knocker vs clit commander
+2016-08-16 21:32:36	phillid	If he was saying something like "it has down's syndrome", then I'd be concerned
+2016-08-16 21:32:46	polyzen	phillid, I figure it's similar to the when "gay" is used in a negative way
+2016-08-16 21:32:57	polyzen	phillid, retarded does mean that..
+2016-08-16 21:33:01	phillid	But retarded is more geneeral
+2016-08-16 21:33:06	phillid	Fire retardant
+2016-08-16 21:33:22	phillid	it doesn't mean "mentally retarded" automatically
+2016-08-16 21:33:31	polyzen	seems like he was using it that way :p
+2016-08-16 21:33:40	polyzen	!listvalues retard
+2016-08-16 21:33:40	phrik	polyzen: Value search for "retard" (6 found): "adjectives", "milf", "mtr", "special", "tardo", and "you're awesome"
+2016-08-16 21:33:47	polyzen	!disgonbgud
+2016-08-16 21:33:48	phrik	https://ptpb.pw/uP4a
+2016-08-16 21:33:55	mankypirate	!milf
+2016-08-16 21:33:55	phrik	Stop making retarded factoids or I will ban you all!
+2016-08-16 21:34:01	mankypirate	!factinfo milf
+2016-08-16 21:34:02	phrik	mankypirate: milf: Created by MrElendig on 04:25 PM, July 24, 2013. Last requested by mankypirate!~toor@62-78-180-114.bb.dnainternet.fi on 04:33 AM, August 17, 2016, requested 26 times. Locked by MrElendig on 04:26 PM, July 24, 2013.
+2016-08-16 21:34:05	phillid	I took it to mean that the language itself is hampered
+2016-08-16 21:34:06	polyzen	ban!
+2016-08-16 21:34:18	phillid	!define retarded
+2016-08-16 21:34:19	polyzen	!mtr
+2016-08-16 21:34:19	phrik	phillid: gcide: Retarded \Re*tard"ed\, n. having a limited or below normal mental ability; same as {mentally retarded}; -- used especially in relation to performance in academic tasks. [PJC]; wn: retarded adj 1: relatively slow in mental or emotional or physical development; "providing a secure and sometimes happy life for the retarded" [ant: {precocious}] n 1: people collectively who (5 more messages)
+2016-08-16 21:34:20	phrik	Melted Toasted Retards
+2016-08-16 21:34:28	polyzen	!factinfo mtr
+2016-08-16 21:34:28	phrik	polyzen: mtr: Created by Julius2 on 03:41 PM, July 20, 2013. Last requested by polyzen!~poly@unaffiliated/polyzen on 04:34 AM, August 17, 2016, requested 4 times.
+2016-08-16 21:34:33	polyzen	k..
+2016-08-16 21:34:41	polyzen	!literal tardo
+2016-08-16 21:34:41	phrik	polyzen: retardo
+2016-08-16 21:34:45	chee	julius2 was the worst
+2016-08-16 21:35:00	phillid	thanks phrik
+2016-08-16 21:35:37	-->	dandels (~Dandels@unaffiliated/dandels) has joined #archlinux-offtopic
+2016-08-16 21:35:49	polyzen	!uninspiredgrabs
+2016-08-16 21:36:03	polyzen	factoids*
+2016-08-16 21:36:10	phillid	Retard: "a slowing down, diminution, or hindrance, as in a machine"
+2016-08-16 21:36:14	chee	!rq julius2
+2016-08-16 21:36:14	phrik	<Julius2> they're to distract wimminz from the rest of his face
+2016-08-16 21:36:27	chee	what a nob
+2016-08-16 21:36:35	polyzen	can't remember em
+2016-08-16 21:36:37	mankypirate	phillid: a project got smoked out of github for that
+2016-08-16 21:36:37	alyptik	!define ritard
+2016-08-16 21:36:38	phrik	alyptik: No definition for "ritard" could be found in english
+2016-08-16 21:36:41	alyptik	rly
+2016-08-16 21:36:43	phillid	Although "created by brain-damaged capuchin monkeys" is more fun
+2016-08-16 21:36:45	phillid	mankypirate, really?
+2016-08-16 21:36:48	mankypirate	phillid: for properly using it in that manner
+2016-08-16 21:36:49	mankypirate	yes
+2016-08-16 21:36:54	MessyIcefish	!define capuchin
+2016-08-16 21:36:54	phillid	what the fucking fuck
+2016-08-16 21:36:56	phrik	MessyIcefish: wn: capuchin n 1: a hooded cloak for women 2: monkey of Central America and South America having thick hair on the head that resembles a monk's cowl [syn: {capuchin}, {ringtail}, {Cebus capucinus}]; gcide: Capuchin \Cap`u*chin"\, n. [F. capucin a monk who wears a cowl, fr. It. cappuccio hood. See {Capoch}.] [1913 Webster] 1. (Eccl.) A Franciscan monk of the austere branch (3 more messages)
+2016-08-16 21:37:10	phillid	mankypirate, by humans or by a script
+2016-08-16 21:37:17	mankypirate	by humans
+2016-08-16 21:37:33	mankypirate	they hired some lady to complain to grep repos and complain to everyone
+2016-08-16 21:37:33	phillid	wtf
+2016-08-16 21:37:36	phillid	That's shitty
+2016-08-16 21:37:45	tigrmesh	tired.  so the best i can do atm is, lots of people on irc have aspergers or autism and have been victimized and told they were slow.
+2016-08-16 21:38:05	phillid	Okay
+2016-08-16 21:38:18	<--	zrj (~raw_rw@84.240.17.161) has quit (Quit: leaving)
+2016-08-16 21:38:26	<--	GI_Jack (~GI_Jack@pdpc/supporter/active/gi-jack) has quit (Quit: Leaving)
+2016-08-16 22:08:33	--	irc: disconnected from server
+2016-08-16 22:08:56	--	#archlinux-offtopic: Cannot join channel (+r) - you need to be identified with services
+2016-08-17 00:36:14	--	irc: disconnected from server
+2016-08-17 00:36:36	--	#archlinux-offtopic: Cannot join channel (+r) - you need to be identified with services
+2016-08-17 04:37:39	--	irc: disconnected from server
+2016-08-17 04:38:04	--	#archlinux-offtopic: Cannot join channel (+r) - you need to be identified with services
+2016-08-17 06:51:02	--	irc: disconnected from server
+2016-08-17 06:51:46	-->	TheFactIs (~Andy@2601:646:8301:b810:8cf9:20fb:5d94:4ff0) has joined #archlinux-offtopic
+2016-08-17 06:51:46	--	Topic for #archlinux-offtopic is "Channel stats may be found at http://hax0r.se/aotstats.html Contact dunz0r to opt out <+> Please be nice. And if you can't be nice, choose a good insult. Insult generator http://www.museangel.net/insult.html <+> Quote of the day: DEMONstrator | The server is a blob. <+> 😹  INTERNATIONAL CAT DAY 😹  \o/ https://goo.gl/zMNHeE http://goo.gl/4anJzK"
+2016-08-17 06:51:47	--	Topic set by jelle (~jelle@archlinux/trusteduser/jelly1) on Mon, 08 Aug 2016 11:05:06
+2016-08-17 06:51:47	--	Channel #archlinux-offtopic: 279 nicks (2 ops, 0 voices, 277 normals)
+2016-08-17 06:51:48	--	Channel created on Wed, 28 Mar 2007 21:10:02
+2016-08-17 06:52:03	demize	dunz0r: try https://github.com/ralesi/office.vim !
+2016-08-17 06:52:04	phrik	Title: GitHub - ralesi/office.vim: read (write) access to common MS office files (at github.com)
+2016-08-17 06:52:07	demize	I have no clue whether it works.
+2016-08-17 06:52:09	dunz0r	:O
+2016-08-17 06:52:12	jelle	:o
+2016-08-17 06:52:15	mattgirv	dunz0r: https://github.com/vim-scripts/excel.vim
+2016-08-17 06:52:15	 *	dunz0r tries
+2016-08-17 06:52:16	phrik	Title: GitHub - vim-scripts/excel.vim: A simple vim plugin for displaying texts of an excel file. (at github.com)
+2016-08-17 06:52:16	demize	or https://github.com/vim-scripts/excel.vim
+2016-08-17 06:52:34	demize	And if they don't work, mattgirv broke them.
+2016-08-17 06:52:47	dunz0r	It's pretty sweet to be using vundle sometimes
+2016-08-17 06:52:49	mattgirv	meh, blame it on excel
+2016-08-17 06:53:01	polyzen	vim-plug*
+2016-08-17 06:53:04	dunz0r	Since I can try out plugins really easily
+2016-08-17 06:54:14	dunz0r	Well... that didn't work lol
+2016-08-17 06:54:34	dunz0r	"Python module xlrd is required on your system." :(
+2016-08-17 06:54:53	jelle	well no shit :D
+2016-08-17 06:54:54	mattgirv	dunz0r: pip?
+2016-08-17 06:55:25	dunz0r	Nah, I'm lazy
+2016-08-17 06:55:40	mattgirv	http://www.python-excel.org/ You can avoid excel forever
+2016-08-17 06:55:42	phrik	Title: Python Excel (at www.python-excel.org)
+2016-08-17 06:55:44	mattgirv	script your way to success
+2016-08-17 06:55:45	sangy	dunz0r: pacman -Syu python-xlrd ?
+2016-08-17 06:56:04	dunz0r	sangy: Debian on my worklaptop
+2016-08-17 06:56:06	jelle	or python2 :p
+2016-08-17 06:56:11	jelle	debian has moarrr packages
+2016-08-17 06:56:17	dunz0r	jelle: Not this one
+2016-08-17 06:56:18	sangy	!moar packages
+2016-08-17 06:56:18	phrik	moaarrr packages!!! MMMOOOOOAAAAAARRRRRRR!!!
+2016-08-17 06:56:52	dunz0r	Or maybe I shouldn't misspell xlrd as xrld
+2016-08-17 06:57:16	--	irc: disconnected from server
+2016-08-17 07:13:16	-->	TheFactIs (~Andy@2601:646:8301:b810:8cf9:20fb:5d94:4ff0) has joined #archlinux-offtopic
+2016-08-17 07:13:16	--	Topic for #archlinux-offtopic is "Channel stats may be found at http://hax0r.se/aotstats.html Contact dunz0r to opt out <+> Please be nice. And if you can't be nice, choose a good insult. Insult generator http://www.museangel.net/insult.html <+> Quote of the day: DEMONstrator | The server is a blob. <+> 😹  INTERNATIONAL CAT DAY 😹  \o/ https://goo.gl/zMNHeE http://goo.gl/4anJzK"
+2016-08-17 07:13:16	--	Topic set by jelle (~jelle@archlinux/trusteduser/jelly1) on Mon, 08 Aug 2016 11:05:06
+2016-08-17 07:13:16	--	Channel #archlinux-offtopic: 277 nicks (2 ops, 0 voices, 275 normals)
+2016-08-17 07:13:16	--	Channel created on Wed, 28 Mar 2007 21:10:02
+2016-08-17 07:13:26	-->	niki (~niki@0x3e2c8690.mobile.telia.dk) has joined #archlinux-offtopic
+2016-08-17 07:15:40	onetwo_	https://twitter.com/ThirtySecFights/status/761820309154467840
+2016-08-17 07:15:41	phrik	Title: Thirty Sec Fights auf Twitter: "From what you know in this video, were the police right or wrong? https://t.co/K88F9al2ED" (at twitter.com)
+2016-08-17 07:15:50	-->	lithiumpt (~lithium@pt1.nordvpn.com) has joined #archlinux-offtopic
+2016-08-17 07:16:15	mankypirate	dude was wearing those disgusting pants, 100% justified
+2016-08-17 07:17:22	mankypirate	I watched them until april and then chrome shit itself because of twitter's shitty UI
+2016-08-17 07:21:38	 *	dunz0r should program some microcontrollers to do silly things when he gets home
+2016-08-17 07:21:50	dunz0r	Haven't done anything 'fun' with all my Attiny85s yet.
+2016-08-17 07:22:01	MK_FG	But of course you won't
+2016-08-17 07:22:01	dunz0r	jelle: What cool thing should I do with an Attiny85?
+2016-08-17 07:22:06	jelle	pong!
+2016-08-17 07:22:14	 *	jelle has 6  8x8 led matrices from china /o/
+2016-08-17 07:22:18	jelle	sadly the lib sucks
+2016-08-17 07:22:20	jelle	I can chain them!
+2016-08-17 07:22:28	-->	dandels_ (~Dandels@unaffiliated/dandels) has joined #archlinux-offtopic
+2016-08-17 07:24:26	voidead	jelle› man this song is so fucking awesome: https://youtu.be/My8T8vTYaZ8?t=24m19s
+2016-08-17 07:24:28	phrik	Title: Sleep - Sleep's Holy Mountain - Full Album - YouTube (at youtu.be)
+2016-08-17 07:25:06	sangy	voidead: let's see
+2016-08-17 07:25:41	dunz0r	jelle: Pong with just an Attiny85... hmm. Could work :)
+2016-08-17 07:26:16	jelle	I made my esp overflow by doing xml requests :d
+2016-08-17 07:26:21	mattgirv	jelle: Ah man I have a shit load of them too, nearly half the cheap bits i've bought have crappy libs/no docs at all
+2016-08-17 07:26:29	jelle	wut
+2016-08-17 07:26:34	jelle	mine are all good

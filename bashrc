@@ -9,7 +9,8 @@ alias gb='git branch'
 alias rc='rails console'
 alias ks='tmux kill-session'
 alias df='cd ~/Documents/dotfiles'
-alias todo='emacs ~/Dropbox\ (Personal)\notes\todo.txt'
+alias todo='emc ~/Dropbox\ (Personal)\notes\todo.txt'
+alias clock='tty-clock -c'
 
 source ~/.git-completion.bash
 source ~/.bash_git
