@@ -1,0 +1,218 @@
+2016-08-16 18:34:19	-->	TheFactIs (~Andy@2601:646:8301:b810:8cf9:20fb:5d94:4ff0) has joined #archlinux
+2016-08-16 18:34:19	--	Topic for #archlinux is "Welcome to Arch Linux World Domination, Inc. <+> Channel stats at <https://theos.kyriasis.com/~kyrias/stats/archlinux.html> Contact demize to opt out <+> Wanted to become an official Arch Tester? See https://lists.archlinux.org/pipermail/arch-dev-public/2016-July/028191.html <+> Upgrade kernel to 4.7 or higher https://lists.archlinux.org/pipermail/arch-security/2016-August/000686.html"
+2016-08-16 18:34:19	--	Topic set by tigrmesh (~tigrmesh@archlinux/op/tigrmesh) on Sun, 14 Aug 2016 15:07:34
+2016-08-16 18:34:19	--	Channel #archlinux: 1696 nicks (1 op, 0 voices, 1695 normals)
+2016-08-16 18:34:21	--	Channel created on Sat, 14 Feb 2004 21:08:31
+2016-08-16 18:36:05	-->	the-forest (~the-fores@96-39-187-156.dhcp.mdfd.or.charter.com) has joined #archlinux
+2016-08-16 18:36:13	thepiercingarrow	no fdisk users herE?
+2016-08-16 18:36:16	thepiercingarrow	or gidks?
+2016-08-16 18:36:21	-->	DigitalIceCream (~marcos@147.75.206.133) has joined #archlinux
+2016-08-16 18:36:39	thrice	no
+2016-08-16 18:36:51	MessyIcefish	I prefer cfdisk
+2016-08-16 18:37:22	quirk	I try to avoid partitioning whenever possible
+2016-08-16 18:37:29	MessyIcefish	yeah, that as well
+2016-08-16 18:37:45	-->	aicasn (preston@freebsd/contributor/aicasn) has joined #archlinux
+2016-08-16 18:38:05	quirk	so I don't think I would call myself a 'user' of any partitioning software, given that I do it maybe once a year
+2016-08-16 18:38:24	aicasn	hey folks - this is how out-of-date i am... are there any solutions for linux similar to freebsd jails?
+2016-08-16 18:38:37	<--	kavanagh_ (~kavanagh@2001:4d48:ad56:2100:82e:6e46:fb0d:4c0a) has quit (Ping timeout: 258 seconds)
+2016-08-16 18:39:03	<--	mrtekn0 (~mrtekn0@206-248-219-254.wybo.fttp.ntelos.net) has quit (Quit: WeeChat 1.5)
+2016-08-16 18:39:07	<--	BohemianHacks (~boho@unaffiliated/bohemianhacks) has quit (Ping timeout: 276 seconds)
+2016-08-16 18:39:12	aicasn	other than vanilla chroot environments
+2016-08-16 18:39:23	<--	anzuof (~anzuof@unaffiliated/anzuof) has quit (Quit: Leaving)
+2016-08-16 18:39:55	-->	mukti (~mukti@unaffiliated/mukti) has joined #archlinux
+2016-08-16 18:40:17	MessyIcefish	there's a thing called firejail, aicasn
+2016-08-16 18:40:41	MessyIcefish	I'm not familiar with it, but I'm sure you can find a wiki entry or some man pages
+2016-08-16 18:41:23	aicasn	i'll google. thanks :)
+2016-08-16 18:42:18	-->	mrtekn0 (~mrtekn0@206-248-219-254.wybo.fttp.ntelos.net) has joined #archlinux
+2016-08-16 18:42:24	<--	weemsledeux (~textual@unaffiliated/weems) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-08-16 18:42:52	-->	spaceman (~spaceman@unaffiliated/spaceman) has joined #archlinux
+2016-08-16 18:43:11	curioso	i did it all again guys, no luck ...
+2016-08-16 18:43:22	curioso	pretty sure the drive just died on me
+2016-08-16 18:43:26	spaceman	hi guys i'm struggling to get xorg to work.  do i explicitly require a display manager?>
+2016-08-16 18:43:48	aicasn	yes you need a display manager but you do not need a login manager
+2016-08-16 18:44:26	spaceman	aicasn: so is that a potential reason startx doesn't work?
+2016-08-16 18:44:40	curioso	xorg doesnt 'work' by itself, is but a means to an end so to speak
+2016-08-16 18:44:42	spaceman	i keep reading i need a 'working xorg server'
+2016-08-16 18:44:46	aicasn	lots of reasons for that. maybe pastebin your xorg logs and we'll take a look
+2016-08-16 18:44:59	curioso	you test it with twm as in the wiki
+2016-08-16 18:45:01	spaceman	i'm on a different partition now i can't pastebin
+2016-08-16 18:45:19	MessyIcefish	xorg-server and xorg-xinit is the bare minimum you need for starting X without a display manager afaik
+2016-08-16 18:45:30	spaceman	i have both
+2016-08-16 18:45:38	-->	CaptainKnots (~captainkn@fedora/CaptainKnots) has joined #archlinux
+2016-08-16 18:45:39	chrisf	curioso: you're in the 'startx /is/ a display manager' camp?
+2016-08-16 18:45:41	-->	kavanagh (~kavanagh@2001:4d48:ad56:2100:c1b7:3fe5:435b:690b) has joined #archlinux
+2016-08-16 18:45:47	-->	homerj (~homerj@april-fools/2013/second/homerj) has joined #archlinux
+2016-08-16 18:45:48	MessyIcefish	!startx
+2016-08-16 18:45:48	phrik	startx is the best display manager.
+2016-08-16 18:45:49	spaceman	chrisf: i am
+2016-08-16 18:45:51	MessyIcefish	:]
+2016-08-16 18:45:59	Scimmia	You do NOT need a Display Manager
+2016-08-16 18:46:02	javaisnom	startx isn't a DM?
+2016-08-16 18:46:03	--	kavanagh is now known as kavanagh_
+2016-08-16 18:46:03	spaceman	:)
+2016-08-16 18:46:05	<--	kavanagh_ (~kavanagh@2001:4d48:ad56:2100:c1b7:3fe5:435b:690b) has quit (Remote host closed the connection)
+2016-08-16 18:46:13	spaceman	Scimmia: i didn't think so
+2016-08-16 18:46:13	<--	drathir (~kamiljk8@unaffiliated/drathir) has quit (Ping timeout: 252 seconds)
+2016-08-16 18:46:21	spaceman	i just want to use startx to load KDE
+2016-08-16 18:46:33	Scimmia	spaceman, what happens when you run startx?
+2016-08-16 18:46:33	<--	titanmech (~titanmech@unaffiliated/titanmech) has quit (Ping timeout: 240 seconds)
+2016-08-16 18:46:55	<--	Starky (~Starky@unaffiliated/starky) has quit (Quit: WeeChat 1.5)
+2016-08-16 18:46:56	-->	titanmech (~titanmech@unaffiliated/titanmech) has joined #archlinux
+2016-08-16 18:47:04	spaceman	Scimmia: it loads some text, freezes, sometimes the GPU fan stops a second, then returns an error
+2016-08-16 18:47:22	curioso	i'm just noob sorry but thats how i understood it
+2016-08-16 18:47:24	Scimmia	what error?
+2016-08-16 18:47:32	spaceman	i also need help with how to manipulate drivers that are installed
+2016-08-16 18:47:36	-->	TenshiKasai_ (~TenshiKas@c-50-169-18-168.hsd1.ma.comcast.net) has joined #archlinux
+2016-08-16 18:47:40	spaceman	Scimmia:  1 sec
+2016-08-16 18:47:52	occultus	spaceman: you made a .xinitrc from /etc/xinitrc, and put the kde startup command in your .xinitrc?
+2016-08-16 18:48:18	spaceman	i made the .xinitrc from sserversc or something
+2016-08-16 18:48:30	spaceman	i think i fucked it right up
+2016-08-16 18:48:49	occultus	oh yeah don't do that
+2016-08-16 18:48:56	-->	blueness (~blueness@gentoo/developer/blueness) has joined #archlinux
+2016-08-16 18:49:04	occultus	.xinitrc from /etc/X11/xinit/xinitrc
+2016-08-16 18:49:33	spaceman	occultus: if you install a diffent driver does it edit itself?
+2016-08-16 18:49:36	<--	TenshiKasai_ (~TenshiKas@c-50-169-18-168.hsd1.ma.comcast.net) has quit (Client Quit)
+2016-08-16 18:50:22	occultus	sorry, I don't follow
+2016-08-16 18:50:31	Scimmia	xinitrc has nothing to do with drivers
+2016-08-16 18:50:32	spaceman	i don't think it's my driver i must have misconfigured something
+2016-08-16 18:50:35	TheFactIs	size
+2016-08-16 18:50:56	spaceman	xinitrc is what loads the X windows environment/server yes?
+2016-08-16 18:51:02	occultus	spaceman: you can't make .xinitrc from xserverrc
+2016-08-16 18:51:09	-->	`miles (~miles@c-71-58-10-87.hsd1.pa.comcast.net) has joined #archlinux
+2016-08-16 18:51:30	spaceman	k there's one bug i might have to fix, occultus thnx
+2016-08-16 18:51:46	curioso	xinitrc is what is executed when you type startx
+2016-08-16 18:51:49	MessyIcefish	you can write a .xinitrc from a blank file. It doesn't need to be very long or complicated
+2016-08-16 18:51:59	spaceman	what does your .xinitrc look like?
+2016-08-16 18:52:04	<--	tecuani (~tecuani@dslb-092-076-180-091.092.076.pools.vodafone-ip.de) has quit (Quit: leaving)
+2016-08-16 18:52:11	<--	DigitalIceCream (~marcos@147.75.206.133) has quit (Quit: Leaving)
+2016-08-16 18:52:27	spaceman	can you guys tell me a little about what should be in that file?
+2016-08-16 18:52:27	Scimmia	this is getting old, no real information posted yet
+2016-08-16 18:52:47	chrisf	https://wiki.archlinux.org/index.php/Xinit
+2016-08-16 18:52:48	spaceman	Scimmia: i'll be back with better material
+2016-08-16 18:52:48	phrik	Title: xinit - ArchWiki (at wiki.archlinux.org)
+2016-08-16 18:52:57	spaceman	sorry to bother.
+2016-08-16 18:53:04	tomtix	mine look like this http://sprunge.us/XPQR 
+2016-08-16 18:53:11	curioso	mine has exec gnome-session on the bottom
+2016-08-16 18:53:50	spaceman	xrandr --setprovideroutputsource modesetting NVIDIA-0
+2016-08-16 18:53:51	spaceman	xrandr --auto 
+2016-08-16 18:54:00	spaceman	is xrandr necessary?
+2016-08-16 18:54:10	tomtix	I dont even remember why this is here
+2016-08-16 18:54:12	spaceman	i should man modesetting like i should have
+2016-08-16 18:54:31	chrisf	tomtix: looks like prime setup
+2016-08-16 18:54:37	-->	llinguini (~llinguini@pool-100-7-48-165.rcmdva.fios.verizon.net) has joined #archlinux
+2016-08-16 18:54:54	chrisf	spaceman: at a minimum: exec your window manager.
+2016-08-16 18:54:58	-->	xall (~xall@ip68-230-65-100.ph.ph.cox.net) has joined #archlinux
+2016-08-16 18:55:11	<--	mpan (~mpan@85-222-0-229.dynamic.chello.pl) has quit (Quit: leaving)
+2016-08-16 18:55:21	spaceman	chrisf: ok.  i don't have one.  
+2016-08-16 18:55:27	spaceman	i'll get one
+2016-08-16 18:55:33	spaceman	what about i3wm ?
+2016-08-16 18:55:33	occultus	spaceman: i thought you were using KDE
+2016-08-16 18:55:40	chrisf	didnt you say you wanted to start kde?
+2016-08-16 18:56:00	spaceman	i downloaded KDE and put exec startkde at the bottom of .xinitrcv
+2016-08-16 18:56:05	spaceman	-v ***
+2016-08-16 18:56:09	curioso	do you have error?
+2016-08-16 18:56:12	spaceman	yes
+2016-08-16 18:56:37	curioso	you prob have to comment out some lines for shit you dont have like xclock xterm twm or something
+2016-08-16 18:56:44	curioso	or install them
+2016-08-16 18:56:45	<--	samcv (~samcv@unaffiliated/samcv) has quit (Remote host closed the connection)
+2016-08-16 18:56:48	spaceman	i did comment them all out
+2016-08-16 18:57:00	-->	VagabondAzulien (~VagabondA@pool-72-88-40-25.bflony.east.verizon.net) has joined #archlinux
+2016-08-16 18:57:00	-->	samcv (~samcv@unaffiliated/samcv) has joined #archlinux
+2016-08-16 18:57:05	<--	`miles (~miles@c-71-58-10-87.hsd1.pa.comcast.net) has quit (Quit: leaving)
+2016-08-16 18:57:12	curioso	then what error do you have?
+2016-08-16 18:57:29	spaceman	previously, when i did get it to work, i had twm, xclock, and xterm and i've loaded a simple x session but this time i missed something
+2016-08-16 18:57:46	spaceman	curioso: i will reboot into arch and try to capture it, can you wait 10 minutes?
+2016-08-16 18:58:20	curioso	y, i dont have much experience but i did manage to get it to work on my own on several machines
+2016-08-16 18:58:30	-->	teaspoon (~teaspoon@ppp59-167-135-77.static.internode.on.net) has joined #archlinux
+2016-08-16 18:58:33	tomtix	you dont have the xorg log?
+2016-08-16 18:58:42	quirk	how do you guys feel about i3 vs xmonad vs awesome?
+2016-08-16 18:58:46	-->	WadeWatts_ (~Wade@unaffiliated/wadewatts) has joined #archlinux
+2016-08-16 18:58:54	curioso	that sure helped me at some point
+2016-08-16 18:59:01	-->	icedhobbler (~icedhobbl@c110-20-123-122.rivrw9.nsw.optusnet.com.au) has joined #archlinux
+2016-08-16 18:59:20	curioso	so, no one had a faulty m.2 huh?
+2016-08-16 18:59:32	<--	comma8 (~comma8@2601:1c2:d02:f080:b9:4d7:e88d:d029) has quit (Ping timeout: 250 seconds)
+2016-08-16 18:59:35	<--	cyphase (~cyphase@unaffiliated/cyphase) has quit (Ping timeout: 244 seconds)
+2016-08-16 18:59:44	occultus	quirk: I liked i3 enough that I never tried the others
+2016-08-16 19:00:09	occultus	!give quirk best
+2016-08-16 19:00:11	phrik	quirk: Use whatever suits _you_ best.
+2016-08-16 19:00:11	<--	spaceman (~spaceman@unaffiliated/spaceman) has quit (Quit: i'm bouncin)
+2016-08-16 19:00:15	quirk	occultus: I was the same way with xmonad. Maybe I should try i3
+2016-08-16 19:00:26	-->	cmattrex (d5897ab8@gateway/web/freenode/ip.213.137.122.184) has joined #archlinux
+2016-08-16 19:00:30	cmattrex	sooo does anyone use surf (the webbrowser). how would i go about adding the patches listed on their website or do i have to clone then rebuild it?
+2016-08-16 19:00:31	<--	peaveyman (~gary@unaffiliated/peaveyman) has quit (Ping timeout: 252 seconds)
+2016-08-16 19:00:33	-->	BohemianHacks (~boho@unaffiliated/bohemianhacks) has joined #archlinux
+2016-08-16 19:01:12	<--	xall (~xall@ip68-230-65-100.ph.ph.cox.net) has quit (Ping timeout: 276 seconds)
+2016-08-16 19:01:15	teaspoon	I do love the tilers, but never figured out how to make PyCharm or IntelliJ appear sensibly in them.
+2016-08-16 19:01:22	teaspoon	Or is that problem unique to me? It could be. :P
+2016-08-16 19:01:34	<--	WadeWatts (~Wade@unaffiliated/wadewatts) has quit (Ping timeout: 240 seconds)
+2016-08-16 19:01:36	--	WadeWatts_ is now known as WadeWatts
+2016-08-16 19:01:43	quirk	I have similar problems with matlab
+2016-08-16 19:01:45	MessyIcefish	they tend to have the ability to do floating windows as well, teaspoon
+2016-08-16 19:01:57	-->	Shakeel__ (~Shakeel_@cpe-65-190-131-178.nc.res.rr.com) has joined #archlinux
+2016-08-16 19:02:08	quirk	crashes whenever I put too many figures on the screen
+2016-08-16 19:02:09	phillid	teaspoon, that's pycharm and intellij's faults
+2016-08-16 19:02:12	-->	GI_Jack (~GI_Jack@pdpc/supporter/active/gi-jack) has joined #archlinux
+2016-08-16 19:02:14	-->	curioso_ (~curioso@2001:8a0:fed6:b501:87d4:e531:72a5:5a5f) has joined #archlinux
+2016-08-16 19:02:18	teaspoon	It's probably Java's fault, TBH
+2016-08-16 19:02:27	occultus	NetBeans works "fine" in i3
+2016-08-16 19:02:29	phillid	dwm has a wmname fix
+2016-08-16 19:02:32	<--	curioso_ (~curioso@2001:8a0:fed6:b501:87d4:e531:72a5:5a5f) has quit (Client Quit)
+2016-08-16 19:02:49	phillid	not sure if i3 and others benefit from the same fix
+2016-08-16 19:02:51	phillid	I ssume so
+2016-08-16 19:03:03	quirk	dwm is like the granddaddy tiler, right?
+2016-08-16 19:03:05	<--	pothepanda (~thgs@2a02:587:3c10:f100:6c4b:65e0:751a:9dc1) has quit (Quit: Baii)
+2016-08-16 19:03:10	-->	dos1 (~dos1@unaffiliated/dos1) has joined #archlinux
+2016-08-16 19:03:13	<--	bmhm (~bmhm@unaffiliated/bmhm) has quit (Ping timeout: 265 seconds)
+2016-08-16 19:03:16	teaspoon	Even in floaty mode they weren't showing up. Not sure if it's still a problem because it's been a few months since I gave up and switched to KDE. :(
+2016-08-16 19:03:17	phillid	dwm is best wm
+2016-08-16 19:03:32	phillid	What a radical move
+2016-08-16 19:03:51	curioso	quirk, do you happen to use matlab on a laptop?
+2016-08-16 19:03:53	-->	linoge (~user@190-76-53-54.dyn.movilnet.com.ve) has joined #archlinux
+2016-08-16 19:04:13	quirk	nah curioso, I only have a desktop
+2016-08-16 19:04:24	-->	cyphase (~cyphase@unaffiliated/cyphase) has joined #archlinux
+2016-08-16 19:04:39	curioso	i have this stupid scroll error on the matlab console
+2016-08-16 19:04:53	curioso	when i scroll on editor with toouchpad
+2016-08-16 19:04:53	-->	bmhm (~bmhm@unaffiliated/bmhm) has joined #archlinux
+2016-08-16 19:05:13	quirk	but I've realized there isn't much in matlab that doesn't easily translate to R
+2016-08-16 19:05:16	<--	tasse (~tasse@x4db35cae.dyn.telefonica.de) has quit (Ping timeout: 264 seconds)
+2016-08-16 19:05:31	teaspoon	I did try Sway fairly recently, and a) PyCharm wouldn't appear and b) it couldn't handle monitor rotation.
+2016-08-16 19:05:35	thepiercingarrow	Is it possible to put percents in an sgdisk dump
+2016-08-16 19:05:38	<--	dos1 (~dos1@unaffiliated/dos1) has quit (Read error: Connection reset by peer)
+2016-08-16 19:05:42	thepiercingarrow	For example, 100% for the end of the disk
+2016-08-16 19:05:43	-->	dos11 (~dos1@unaffiliated/dos1) has joined #archlinux
+2016-08-16 19:05:45	curioso	what's R?
+2016-08-16 19:05:55	thepiercingarrow	becasuse I want an sgdump where the last partition is as big as the dsk goes
+2016-08-16 19:06:10	quirk	R is a programming language made for data analysis
+2016-08-16 19:06:11	-->	radoye (~radoye@c-73-223-104-108.hsd1.ca.comcast.net) has joined #archlinux
+2016-08-16 19:06:30	--	dos11 is now known as dos1
+2016-08-16 19:06:39	-->	tasse (~tasse@x4db4b18c.dyn.telefonica.de) has joined #archlinux
+2016-08-16 19:07:07	-->	ArchNewb (59ed4ee4@gateway/web/freenode/ip.89.237.78.228) has joined #archlinux
+2016-08-16 19:07:21	teaspoon	Every time you ask if Wayland's ready to go you get told "Yes, of course" but then when you actually try to use it it turns out that "ready to go" doesn't include basic assumed functionality like multi-monitor or clipboard or something.
+2016-08-16 19:07:30	<--	dullin (~dullin@cable-173.246.6-220.ebox.ca) has quit (Ping timeout: 265 seconds)
+2016-08-16 19:07:43	<--	toochainz (~toochainz@unaffiliated/toochainz) has quit (Read error: Connection reset by peer)
+2016-08-16 19:08:01	ArchNewb	hi guys, I'm trying to set up arch on an old PC (pentium 4) but it won't boot from that CD. It will boot from other CDs and my machine can boot from the arch CD no problem. Got any suggestions?
+2016-08-16 19:08:10	-->	weemsledeux (~textual@unaffiliated/weems) has joined #archlinux
+2016-08-16 19:08:18	curioso	no usb boot?
+2016-08-16 19:08:23	ArchNewb	curioso: nope
+2016-08-16 19:08:23	teaspoon	ArchNewb: PXEboot?
+2016-08-16 19:09:17	ArchNewb	teaspoon: setting up PXE sounds more complex than doing it via a CD, that's why I thought I should give troubleshooting it first will be better.
+2016-08-16 19:09:30	ArchNewb	Is it possible arch is "too new" for that PC?
+2016-08-16 19:22:30	-->	TheFactIs (~Andy@2601:646:8301:b810:8cf9:20fb:5d94:4ff0) has joined #archlinux
+2016-08-16 19:22:30	--	Topic for #archlinux is "Welcome to Arch Linux World Domination, Inc. <+> Channel stats at <https://theos.kyriasis.com/~kyrias/stats/archlinux.html> Contact demize to opt out <+> Wanted to become an official Arch Tester? See https://lists.archlinux.org/pipermail/arch-dev-public/2016-July/028191.html <+> Upgrade kernel to 4.7 or higher https://lists.archlinux.org/pipermail/arch-security/2016-August/000686.html"
+2016-08-16 19:22:30	--	Topic set by tigrmesh (~tigrmesh@archlinux/op/tigrmesh) on Sun, 14 Aug 2016 15:07:33
+2016-08-16 19:22:30	--	Channel #archlinux: 1699 nicks (1 op, 0 voices, 1698 normals)
+2016-08-16 19:22:33	--	Channel created on Sat, 14 Feb 2004 21:08:31
+2016-08-16 19:23:10	-->	Case_Of (~Case_Of@unaffiliated/itruc) has joined #archlinux
+2016-08-16 19:23:12	Sonderblade	occultus: i'd be okay with that, as long as no conflicts are introduced
+2016-08-16 19:23:16	-->	jack_rabbit (~jack_rabb@2601:240:8280:c40:6a17:29ff:fef6:76d8) has joined #archlinux
+2016-08-16 19:23:38	cmattrex	a simple GUI (webkit) browser with only the webkit frame visible, but supports searching the page, manually entering the address, basic navigation, and a way to search without opening the search engine page. any suggestions?
+2016-08-16 19:23:46	<--	heinz (~quassel@209.95.50.45) has quit (Remote host closed the connection)
+2016-08-16 19:24:03	-->	radoye (~radoye@c-73-223-104-108.hsd1.ca.comcast.net) has joined #archlinux
+2016-08-16 19:24:07	spaceman	hey can i get some help?
+2016-08-16 19:24:19	teaspoon	spaceman: You can if you believe you can.
+2016-08-16 19:24:29	tomtix	spaceman:wat do you mean by use curl everytime? you can add   alias sprunge='curl -F '\''sprunge=<-'\'' http://sprunge.us' to your .bashrc , this may simplify it
+2016-08-16 19:24:42	-->	strayArch (~strayArch@li87-103.members.linode.com) has joined #archlinux
+2016-08-16 19:24:52	spaceman	tomtix: that's a great idea thnx
+2016-08-16 19:25:10	<--	occultus (~occultus@207.196.181.215) has quit (Remote host closed the connection)
+2016-08-16 19:25:11	tomtix	dont take this line
+2016-08-16 19:25:18	tomtix	strange escapes
