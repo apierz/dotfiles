@@ -102,3 +102,963 @@
 2016-08-17 07:13:18	--	Channel created on Wed, 20 Feb 2013 20:50:48
 2016-08-17 07:17:26	-->	slwb|work (~slwb_work@50.59.212.66) has joined #Mechboards
 2016-08-17 07:17:40	slwb|work	woo, zz96 one step closer to my hands
+2016-08-17 07:36:18	ihre	linkin park theme build?
+2016-08-17 07:36:42	zod000	Saimeidae: I ended up ordering a model f.  Now I can stop whining about it
+2016-08-17 07:40:09	zod000	jk, the whining shall not stop
+2016-08-17 07:45:30	slwb|work	ihre, Blink 182
+2016-08-17 07:46:10	Saimeidae	zod000: now you have to order one for me
+2016-08-17 07:46:26	Saimeidae	then you'll just be reduced to sobbing
+2016-08-17 07:46:31	zod000	:D
+2016-08-17 07:47:16	Saimeidae	enthdegree: pls people still organize gbs
+2016-08-17 07:47:30	Saimeidae	snelly: WASD "custom" caps aren't high quality
+2016-08-17 07:47:41	Saimeidae	they're real shit
+2016-08-17 07:51:51	snelly	oh, that's a bummer
+2016-08-17 07:52:05	snelly	does anybody sell nice ones that allow for self-design?
+2016-08-17 07:52:13	Saimeidae	no
+2016-08-17 07:52:20	Saimeidae	well, yes kinda
+2016-08-17 07:52:27	Saimeidae	if you're interested in spending like $5000
+2016-08-17 07:53:14	snelly	I think I should try the WASD and see if I like it
+2016-08-17 07:53:23	snelly	I may not be as picky as you
+2016-08-17 07:53:26	Saimeidae	from what I understand it's a waste of $50
+2016-08-17 07:53:29	Saimeidae	they wear badly
+2016-08-17 07:53:44	Saimeidae	they in no way end out making you feel like you own a high end keyboard
+2016-08-17 07:54:16	snelly	I'm super picky about keycap font, though
+2016-08-17 07:54:26	snelly	I want to go for the IBM Selectric look
+2016-08-17 07:56:17	Saimeidae	snelly: bahaha
+2016-08-17 07:56:40	Saimeidae	like this, snelly? https://shop.clueboard.co/images/products/559.jpg
+2016-08-17 07:58:14	snelly	yep, more or less
+2016-08-17 07:58:18	snelly	who's is that?
+2016-08-17 07:58:39	Saimeidae	that was run by our dear skullY
+2016-08-17 07:59:07	Saimeidae	I have some configuration of this http://i.imgur.com/Kq0pNhl.jpg?fb possibly for sale-ish
+2016-08-17 07:59:46	snelly	so that was some custom one-off run?
+2016-08-17 07:59:53	Saimeidae	group buy
+2016-08-17 07:59:55	Saimeidae	so more or less
+2016-08-17 08:00:00	snelly	who makes the actual kb?
+2016-08-17 08:00:02	Saimeidae	you can always try to buy a set used
+2016-08-17 08:00:08	Saimeidae	that TKL?
+2016-08-17 08:00:15	snelly	 used kb, no thanks :)
+2016-08-17 08:00:22	Saimeidae	looks like a phantom in a TKL case
+2016-08-17 08:00:22	snelly	the first link
+2016-08-17 08:00:29	Saimeidae	*TEX case
+2016-08-17 08:00:41	Saimeidae	snelly: really, keyboards are one of the most acceptable things to buy used when it comes to computers
+2016-08-17 08:00:44	Saimeidae	because denture tabs
+2016-08-17 08:00:55	Saimeidae	makes keycaps look and feel like new (for the most part, kinda)
+2016-08-17 08:02:44	Saimeidae	yeah that's definitely a Phantom + TEX TKL alu case
+2016-08-17 08:03:01	snelly	ok...so I can solder.  Presumably I could buy one of these Tex aluminum cases, and then find a PCB somewhere
+2016-08-17 08:03:08	snelly	and then solder my own switches on?
+2016-08-17 08:03:27	Saimeidae	https://mechanicalkeyboards.com/shop/index.php?l=product_detail&p=536
+2016-08-17 08:03:29	Saimeidae	yep
+2016-08-17 08:03:36	Saimeidae	it's pretty hard to suck at soldering switches
+2016-08-17 08:03:42	Saimeidae	unless you REALLY do it wrong
+2016-08-17 08:04:28	Saimeidae	https://mechanicalkeyboards.com/shop/index.php?l=product_detail&p=280 too, snelly
+2016-08-17 08:04:31	<--	JanieDoe (~tinnie@1-64-123-071.static.netvigator.com) has quit (Remote host closed the connection)
+2016-08-17 08:04:37	snelly	I've been soldering for a while
+2016-08-17 08:04:43	Saimeidae	and bam, you have an identical (cosmetically, before caps) board
+2016-08-17 08:04:46	Saimeidae	for all intents and purposes
+2016-08-17 08:04:47	snelly	built my opwn PCBs
+2016-08-17 08:04:56	Saimeidae	snelly: do you have any clue what type of switches you want?
+2016-08-17 08:05:04	snelly	I think Cherry MX blues
+2016-08-17 08:05:11	snelly	I like the takatakataka
+2016-08-17 08:05:12	Saimeidae	from a model m, I think they'd be too lights
+2016-08-17 08:05:14	Saimeidae	*light
+2016-08-17 08:05:18	Saimeidae	and cherry is super overrated
+2016-08-17 08:05:25	Saimeidae	I'd go gateron greens
+2016-08-17 08:05:31	Saimeidae	for your case
+2016-08-17 08:07:24	snelly	well, it's been a decade since I used my Model M.
+2016-08-17 08:07:40	snelly	so, what would I do for keycaps?
+2016-08-17 08:07:53	snelly	I find it hard to believe that WASD is the only company doing customs
+2016-08-17 08:07:55	Saimeidae	if you REALLY like the selectric look, go make a post on /r/mm
+2016-08-17 08:08:00	Saimeidae	well they are, snelly
+2016-08-17 08:08:08	snelly	ou
+2016-08-17 08:08:10	snelly	err
+2016-08-17 08:08:16	snelly	I mean, not doubting you
+2016-08-17 08:08:18	Saimeidae	because they're the only company that can shill a substantial enough quantity of shit products to keep it running
+2016-08-17 08:08:24	snelly	just amazing...given the popularity of these
+2016-08-17 08:09:38	snelly	any idea of the name of the font used on selectric keycaps?
+2016-08-17 08:10:01	Saimeidae	maybe try to go find the original GB page?
+2016-08-17 08:10:03	Saimeidae	flex that google fu
+2016-08-17 08:10:04	<--	fekz (~makoto@unaffiliated/fekz) has quit (Quit: On my way home...)
+2016-08-17 08:10:08	Saimeidae	look on Geekhack
+2016-08-17 08:13:15	-->	Pie-jacker875 (~Pie-jacke@2601:190:0:338a::62fb) has joined #Mechboards
+2016-08-17 08:15:39	-->	NeverSummer (~quassel@unaffiliated/neversummer) has joined #Mechboards
+2016-08-17 08:15:57	<--	gorroth (~haiguyz@unaffiliated/gorroth) has quit (Ping timeout: 244 seconds)
+2016-08-17 08:28:07	<--	NeverSummer (~quassel@unaffiliated/neversummer) has quit (Ping timeout: 250 seconds)
+2016-08-17 08:28:19	-->	NeverSummer (~quassel@unaffiliated/neversummer) has joined #Mechboards
+2016-08-17 08:34:53	<--	moch (~moch@ool-4a58d668.dyn.optonline.net) has quit (Ping timeout: 244 seconds)
+2016-08-17 08:41:59	-->	iWaldo (iWaldo___@unaffiliated/iwaldo) has joined #Mechboards
+2016-08-17 08:42:12	snelly	so Saimeidae
+2016-08-17 08:42:24	snelly	who is manufacturing these Massdrop keysets?
+2016-08-17 08:42:52	snelly	I like this one, but not the color:  https://www.massdrop.com/buy/the-amazing-chocolatier-custom-sa-keycap-set
+2016-08-17 08:48:08	Saimeidae	Signature Plastics, snelly
+2016-08-17 08:49:01	<--	Chank (~Chankster@unaffiliated/chankster) has quit (Remote host closed the connection)
+2016-08-17 08:49:12	-->	damex (~damex@funtoo/dev/damex) has joined #Mechboards
+2016-08-17 08:51:05	snelly	oh...so these are the guys that will do a custom run for $5K or so
+2016-09-04 17:56:13	-->	TheFactIs (~Andy@2601:646:8301:b810:594b:d9ba:9387:deba) has joined #Mechboards
+2016-09-04 17:56:13	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2016-09-04 17:56:13	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 01:38:51
+2016-09-04 17:56:13	--	Channel #Mechboards: 249 nicks (0 ops, 0 voices, 249 normals)
+2016-09-04 17:56:17	--	Channel created on Wed, 20 Feb 2013 20:50:48
+2016-09-04 18:02:29	roofmaster	skullY: I seen your product.  Too many choices man ... = purchasing paralysis
+2016-09-04 18:02:43	roofmaster	or I should say - too many options
+2016-09-04 18:02:50	skullY	roofmaster: I can help you pick :)
+2016-09-04 18:03:00	skullY	but yeah, I recognize that issue
+2016-09-04 18:03:21	skullY	one of the things I want to offer is a kit you just buy on amazon
+2016-09-04 18:03:23	roofmaster	I'm saying a prebuilt clueboard is probably a good way to go
+2016-09-04 18:03:29	skullY	no decisions, just good choices :)
+2016-09-04 18:03:51	skullY	working on that too, but if I offer a prebuilt clueboard I gotta get it certified
+2016-09-04 18:06:13	slaytaner	by the fcc?
+2016-09-04 18:06:25	skullY	not directly, but yeah
+2016-09-04 18:06:35	skullY	usually you pay a complaince company
+2016-09-04 18:08:41	TheFactIs	/
+2016-09-04 18:11:16	slaytaner	yes?
+2016-09-04 18:13:12	<--	skullY (zwhite@darkstar.frop.org) has quit (Ping timeout: 250 seconds)
+2016-09-04 18:19:15	<--	PigmonkeY (PigmonkeY@the.flying.dutchman.panicbnc.net) has quit (Quit: Seeya.)
+2016-09-04 18:22:44	-->	ismed (~ismed@41.109.187.48) has joined #Mechboards
+2016-09-04 18:23:57	slaytaner	\
+2016-09-04 18:29:50	slaytaner	 /\/\ooOOoo/\/\
+2016-09-04 18:33:12	slaytaner	Saimeidae: 110 yet?
+2016-09-04 18:37:59	-->	PigmonkeY (PigmonkeY@the.flying.dutchman.panicbnc.net) has joined #Mechboards
+2016-09-04 18:44:17	<--	ismed (~ismed@41.109.187.48) has quit (Disconnected by services)
+2016-09-04 18:44:19	-->	ismed_ (~ismed@41.109.151.36) has joined #Mechboards
+2016-09-04 18:51:26	-->	ismed (~ismed@41.109.174.140) has joined #Mechboards
+2016-09-04 18:53:08	<--	ismed_ (~ismed@41.109.151.36) has quit (Ping timeout: 244 seconds)
+2016-09-04 18:55:14	<--	PigmonkeY (PigmonkeY@the.flying.dutchman.panicbnc.net) has quit (Ping timeout: 250 seconds)
+2016-09-04 18:56:58	<--	zcd (~zcd@2601:646:8480:dc90:be5f:f4ff:fe55:7451) has quit (Ping timeout: 250 seconds)
+2016-09-04 18:57:36	<--	ismed (~ismed@41.109.174.140) has quit (Disconnected by services)
+2016-09-04 18:57:36	-->	ismed_ (~ismed@41.109.143.57) has joined #Mechboards
+2016-09-04 19:03:02	-->	seoushi (~seoushi__@c-73-158-213-31.hsd1.ca.comcast.net) has joined #Mechboards
+2016-09-04 19:03:55	-->	ismed (~ismed@41.109.178.150) has joined #Mechboards
+2016-09-04 19:05:34	<--	ismed_ (~ismed@41.109.143.57) has quit (Ping timeout: 240 seconds)
+2016-09-04 19:08:57	-->	jedmund (~jedmund@c-67-169-40-23.hsd1.ca.comcast.net) has joined #Mechboards
+2016-09-04 19:11:18	-->	ismed_ (~ismed@41.109.156.26) has joined #Mechboards
+2016-09-04 19:11:18	<--	ismed (~ismed@41.109.178.150) has quit (Disconnected by services)
+2016-09-04 19:14:33	<--	BabyVolibear (~Snagg57@2601:c7:8301:2b4f:841c:2b73:3ca1:1077) has quit (Quit: Leaving)
+2016-09-04 19:18:30	<--	Pie-jacker875 (~Pie-jacke@c-24-62-41-71.hsd1.ma.comcast.net) has quit (Remote host closed the connection)
+2016-09-04 19:19:34	-->	Pie-jacker875 (~Pie-jacke@c-24-62-41-71.hsd1.ma.comcast.net) has joined #Mechboards
+2016-09-04 19:21:22	<--	ismed_ (~ismed@41.109.156.26) has quit (Ping timeout: 244 seconds)
+2016-09-04 19:25:51	-->	PigmonkeY (PigmonkeY@the.flying.dutchman.panicbnc.net) has joined #Mechboards
+2016-09-04 19:27:13	slaytaner	rip
+2016-09-04 19:29:52	switchy	rip slaytaner
+2016-09-04 19:33:39	slaytaner	rip me indeed
+2016-09-04 19:35:22	slaytaner	switchy I made a script that reports the company name of whatever is arp-ing on your interface
+2016-09-04 19:37:48	switchy	hah, neat
+2016-09-04 19:37:56	slaytaner	assuming they're not MAC spoofing
+2016-09-04 19:42:39	slaytaner	is it wong to do a pcap on a semi-public network
+2016-09-04 19:42:45	slaytaner	wrong*
+2016-09-04 19:43:28	switchy	I don't see why not?
+2016-09-04 19:44:04	slaytaner	I mean it's illegal to look at some instances of publically accessable data
+2016-09-04 19:44:08	slaytaner	in the us
+2016-09-04 19:46:28	switchy	ianal, good luck
+2016-09-04 19:47:37	slaytaner	the best thing to come out of the courts recently is password sharing is a felony
+2016-09-04 19:48:24	slaytaner	due to the ambiguous nature of the CFAA
+2016-09-04 19:49:32	slaytaner	also rapist gets 3 months, hacker gets 5 years
+2016-09-04 19:50:59	switchy	justice!
+2016-09-04 19:52:29	-->	moch (~moch@ool-4a58d668.dyn.optonline.net) has joined #Mechboards
+2016-09-04 19:53:12	slaytaner	also some nerd with a computer clearly needs a whole swat team to take down
+2016-09-04 19:56:20	<--	Pie-jacker875 (~Pie-jacke@c-24-62-41-71.hsd1.ma.comcast.net) has quit (Remote host closed the connection)
+2016-09-04 19:56:53	NeverSummer	slaytaner, bruh I'll get my katanas down off the wall don't even.
+2016-09-04 19:58:34	slaytaner	that's a good way to get 100 rounds shot at you
+2016-09-04 19:59:03	NeverSummer	>implying I can't hit bullets out of the air
+2016-09-04 19:59:10	NeverSummer	Someone doesn't watch enough anime.
+2016-09-04 19:59:29	slaytaner	yup
+2016-09-04 19:59:42	slaytaner	hope you don't have a dog
+2016-09-04 19:59:50	NeverSummer	I have two cats.
+2016-09-04 19:59:56	NeverSummer	Well gf has two cats.
+2016-09-04 19:59:58	NeverSummer	I tolerate them.
+2016-09-04 20:00:12	slaytaner	idk if cops shoot cats
+2016-09-04 20:00:21	slaytaner	they shoot the fuck out of dogs though
+2016-09-04 20:00:26	NeverSummer	True.
+2016-09-04 20:00:32	NeverSummer	My cats are huge vaginas.
+2016-09-04 20:00:40	NeverSummer	So they'd probably just hide.
+2016-09-04 20:01:04	NeverSummer	Not that a god actually has to seem aggressive to get shot apparently.
+2016-09-04 20:02:01	slaytaner	they'll go back to their car to get a rifle to shoot a dog
+2016-09-04 20:06:20	slaytaner	#doglivesmatter
+2016-09-04 20:08:07	xveamvx	#amIbeingdetained
+2016-09-04 20:08:25	<--	duoi (~duoi@unaffiliated/duoi) has quit (Max SendQ exceeded)
+2016-09-04 20:08:37	-->	duoi (~duoi@unaffiliated/duoi) has joined #Mechboards
+2016-09-04 20:09:25	-->	skullY (zwhite@darkstar.frop.org) has joined #Mechboards
+2016-09-04 20:14:17	<--	Janiedoe (~tinnie@1-64-123-212.static.netvigator.com) has quit (Remote host closed the connection)
+2016-09-04 20:14:50	-->	Janiedoe (~tinnie@1-64-123-212.static.netvigator.com) has joined #Mechboards
+2016-09-04 20:18:21	SlabDabs	#yourenotmysupervisor
+2016-09-04 20:19:18	<--	Janiedoe (~tinnie@1-64-123-212.static.netvigator.com) has quit (Ping timeout: 250 seconds)
+2016-09-04 20:23:09	xveamvx	#DoingFolding@HomeIsBeneficialToCancerResearch
+2016-09-04 20:23:25	<--	xveamvx (uid157194@gateway/web/irccloud.com/x-zqdsplmszrldkcmd) has quit
+2016-09-04 20:23:59	<--	damex (~damex@funtoo/dev/damex) has quit (Read error: Connection reset by peer)
+2016-09-04 20:24:03	-->	xveamvx (uid157194@gateway/web/irccloud.com/x-wmlqvzusapanqwab) has joined #Mechboards
+2016-09-04 20:25:12	profet	#DoingSeti@HomeIsBeneficialToAlianResearch
+2016-09-04 20:27:47	xveamvx	I just found out that you can do folding at home strictly through your browser :P
+2016-09-04 20:28:01	pikajude	alian
+2016-09-04 20:33:02	slaytaner	wu-tang clan ain't nothin to fuck wit
+2016-09-04 20:33:37	munchT	yes they are
+2016-09-04 20:41:20	-->	Pie-jacker875 (~Pie-jacke@c-24-62-41-71.hsd1.ma.comcast.net) has joined #Mechboards
+2016-09-04 20:44:31	slaytaner	kek
+2016-09-04 20:45:57	munchT	Possibly the stupidest thing I've ever seen.. besides my group project partners throughout university
+2016-09-04 20:46:19	slaytaner	que?
+2016-09-04 20:46:23	munchT	just copypasted
+2016-09-04 20:48:52	-->	cbot (~FS@ool-2f12e4fc.dyn.optonline.net) has joined #Mechboards
+2016-09-04 20:49:22	Saimeidae	goddamnit
+2016-09-04 20:49:30	slaytaner	wat
+2016-09-04 20:50:06	Saimeidae	fucking channel was rebelling
+2016-09-04 20:50:14	Saimeidae	slaytaner: i was afk
+2016-09-04 20:50:17	Saimeidae	i'm 108 i think
+2016-09-04 20:50:32	Saimeidae	should hit 110 tomorrow
+2016-09-04 20:52:04	slaytaner	so slow
+2016-09-04 20:52:10	Saimeidae	uh
+2016-09-04 20:52:13	Saimeidae	i happen to kinda have a life
+2016-09-04 20:52:36	slaytaner	suuure
+2016-09-04 20:54:57	Saimeidae	slaytaner: i just recieved an unusable item named "Player Experience"
+2016-09-04 20:55:27	slaytaner	lol
+2016-09-04 20:59:05	<--	Pie-jacker875 (~Pie-jacke@c-24-62-41-71.hsd1.ma.comcast.net) has quit (Remote host closed the connection)
+2016-09-04 21:02:49	<--	sdothum (~sdothum@108.63.184.51) has quit (Ping timeout: 244 seconds)
+2016-09-04 21:03:37	-->	daey_ (~Flutterba@unaffiliated/day) has joined #Mechboards
+2016-09-04 21:07:14	<--	daey (~Flutterba@unaffiliated/day) has quit (Ping timeout: 260 seconds)
+2016-09-04 21:07:17	--	daey_ is now known as daey
+2016-09-04 21:08:51	Saimeidae	slaytaner: i think it just turned into an item that can give artifact power
+2016-09-04 21:08:53	Saimeidae	uhhhh
+2016-09-04 21:08:55	Saimeidae	oookaaay then
+2016-09-04 21:11:20	slaytaner	kek
+2016-09-04 21:11:38	Saimeidae	i've also found 2 typos in highmountain
+2016-09-04 21:11:39	Saimeidae	sooo
+2016-09-04 21:11:46	Saimeidae	i think this zone is just fukt
+2016-09-04 21:11:56	slaytaner	salanar is the worst
+2016-09-04 21:12:09	Saimeidae	suramar?
+2016-09-04 21:12:14	slaytaner	yes
+2016-09-04 21:12:20	slaytaner	fucking patrols
+2016-09-04 21:12:28	Saimeidae	oh god no
+2016-09-04 21:12:40	Saimeidae	haven't gotten there yet
+2016-09-04 21:12:56	slaytaner	hope you like dodging patrols
+2016-09-04 21:13:10	Saimeidae	11 chapters there
+2016-09-04 21:13:12	Saimeidae	longest zone
+2016-09-04 21:13:27	Saimeidae	i've been keeping on completing all chapters of zones before i move on
+2016-09-04 21:13:37	Saimeidae	over half way through highmountain, the rest are done besides suramar
+2016-09-04 21:21:03	-->	damex (~damex@funtoo/dev/damex) has joined #Mechboards
+2016-09-04 21:21:22	Saimeidae	this xpac also has all sorts of bad puns
+2016-09-04 21:21:27	Saimeidae	rare mob named "Amateur Hunters"
+2016-09-04 21:21:38	Saimeidae	Oaksomething in one of the dungeons has a REALLY awful line
+2016-09-04 21:21:39	Saimeidae	"
+2016-09-04 21:21:44	Saimeidae	"My bark is worse than my bite."
+2016-09-04 21:21:48	Saimeidae	Some corrupted tree elemental
+2016-09-04 21:22:36	slaytaner	"black rook hold"
+2016-09-04 21:23:13	-->	ismed (~ismed@41.109.228.64) has joined #Mechboards
+2016-09-04 21:23:43	slaytaner	sobad
+2016-09-04 21:23:50	Saimeidae	aaand my threat percent went to 10 digits
+2016-09-04 21:24:16	Saimeidae	hnng
+2016-09-04 21:24:18	Saimeidae	steamy romance novel
+2016-09-04 21:25:54	slaytaner	is it about sylvanas
+2016-09-04 21:26:39	NeverSummer	neeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerds
+2016-09-04 21:27:06	Saimeidae	oh god it has marcus in it
+2016-09-04 21:27:14	Saimeidae	i found marcus in bed with a tauren couple not that long ago\
+2016-09-04 21:27:16	Saimeidae	legitly
+2016-09-04 21:27:34	slaytaner	lolz
+2016-09-04 21:28:00	Saimeidae	LOL it's the love affair between Marcus and Tanda, where Bax, her husband walks in
+2016-09-04 21:28:03	Saimeidae	then Marcus goes full pally
+2016-09-04 21:28:15	Saimeidae	sylvanas is now warchief anyway
+2016-09-04 21:28:19	Saimeidae	she can't be in a romance novel
+2016-09-04 21:28:41	Saimeidae	"ridiculously good-looking Marcus"
+2016-09-04 21:28:47	Saimeidae	they have sex, they fight, they have more sex
+2016-09-04 21:28:49	Saimeidae	yeah
+2016-09-04 21:28:51	Saimeidae	greaaaat
+2016-09-04 21:30:02	-->	sdothum (~sdothum@108.63.184.51) has joined #Mechboards
+2016-09-04 21:31:34	slaytaner	NeverSummer you are in a keyboard irc
+2016-09-04 21:31:40	NeverSummer	pls
+2016-09-04 21:31:47	NeverSummer	I'm a mod of the computer one.
+2016-09-04 21:31:51	NeverSummer	I accept that I'm a nerd.
+2016-09-04 21:31:53	Saimeidae	fucking hell
+2016-09-04 21:32:00	NeverSummer	But still.
+2016-09-04 21:32:00	Saimeidae	no mods in irc channels
+2016-09-04 21:32:02	Saimeidae	only chanops
+2016-09-04 21:32:02	NeverSummer	>WoW
+2016-09-04 21:32:06	NeverSummer	Saimeidae, moooods
+2016-09-04 21:32:18	Saimeidae	yes people have moods
+2016-09-04 21:32:22	NeverSummer	lol
+2016-09-04 21:32:30	<--	sdothum (~sdothum@108.63.184.51) has quit (Remote host closed the connection)
+2016-09-04 21:32:37	NeverSummer	I'm never going to be able to stop calling ops mods.
+2016-09-04 21:32:50	NeverSummer	Especially on BaPC where they're much more interchangeable.
+2016-09-04 21:34:06	-->	sdothum (~sdothum@108.63.184.51) has joined #Mechboards
+2016-09-04 21:34:27	Saimeidae	i'm crying
+2016-09-04 21:34:30	Saimeidae	kobolds are the worst
+2016-09-04 21:34:59	Saimeidae	i'm really liking this
+2016-09-04 21:35:07	Saimeidae	they make you run around to all tehse different places with sidequests on the way
+2016-09-04 21:35:13	Saimeidae	making it so you stop pretty much everywhere
+2016-09-04 21:35:25	Saimeidae	and do sidequests without them being too much of a chore
+2016-09-04 21:35:27	Saimeidae	but god
+2016-09-04 21:35:30	Saimeidae	the dungeons are awful
+2016-09-04 21:35:45	slaytaner	just wait until suranar
+2016-09-04 21:36:20	slaytaner	I'm having to live vicariously through streams lol
+2016-09-04 21:37:52	<--	sdothum (~sdothum@108.63.184.51) has quit (Client Quit)
+2016-09-04 21:41:41	-->	ismed_ (~ismed@41.109.184.179) has joined #Mechboards
+2016-09-04 21:41:41	<--	ismed (~ismed@41.109.228.64) has quit (Disconnected by services)
+2016-09-04 21:43:30	Saimeidae	slaytaner: if you don't want entertaining commentary, i can strim for ya bby
+2016-09-04 21:45:14	slaytaner	lolz
+2016-09-04 22:01:47	PhantomTaco	what are ttc brown switches
+2016-09-04 22:05:21	slaytaner	http://www.ttc0.com/
+2016-09-04 22:05:49	slaytaner	another cherry clone PhantomTaco, apparently ttc makes mouse switches
+2016-09-04 22:06:35	slaytaner	but they're getting into the keyboard game
+2016-09-04 22:06:54	Saimeidae	ding 109
+2016-09-04 22:07:06	Saimeidae	omron is also getting into keyboard switches
+2016-09-04 22:07:10	slaytaner	grind that last bit
+2016-09-04 22:07:19	Saimeidae	lol
+2016-09-04 22:07:22	Saimeidae	that'd take a million hours
+2016-09-04 22:07:31	Saimeidae	you get like 500-1000 xp from mobs this xpac
+2016-09-04 22:07:35	Saimeidae	99% of xp is from quests
+2016-09-04 22:07:47	Saimeidae	700k xp at 500-1000 a pop
+2016-09-04 22:07:49	slaytaner	you can grind quests
+2016-09-04 22:08:12	Saimeidae	5/7 highmountain anyway
+2016-09-04 22:08:13	Saimeidae	and suramar
+2016-09-04 22:08:15	Saimeidae	so i'm close
+2016-09-04 22:08:44	Saimeidae	with plenty of quests
+2016-09-04 22:10:52	<--	AtlasRisen (~AtlasRise@98.233.233.173) has quit (Ping timeout: 240 seconds)
+2016-09-04 22:12:33	-->	jad340 (~jad340@ip72-209-16-4.ri.ri.cox.net) has joined #Mechboards
+2016-09-04 22:13:34	PhantomTaco	what game Saimeidae
+2016-09-04 22:13:40	-->	AtlasRisen (~AtlasRise@98.233.233.173) has joined #Mechboards
+2016-09-04 22:13:43	Saimeidae	wow
+2016-09-04 22:13:45	slaytaner	world of warcrafts
+2016-09-04 22:13:49	PhantomTaco	hurk
+2016-09-04 22:13:52	PhantomTaco	have fun
+2016-09-04 22:14:05	Saimeidae	oh i'm internally screaming
+2016-09-04 22:14:18	PhantomTaco	been watching my brother play bdo
+2016-09-04 22:14:27	slaytaner	gotta get geared for raids in two weeks
+2016-09-04 22:14:30	PhantomTaco	played it myself for a while, but the grind was pretty powerful
+2016-09-04 22:15:00	Saimeidae	blizz obviously doesn't understand how rappelling works
+2016-09-04 22:15:21	Saimeidae	they made you bounce on this big-ass rope
+2016-09-04 22:15:23	Saimeidae	vertically
+2016-09-04 22:15:24	Saimeidae	while "rapelling"
+2016-09-04 22:15:26	Saimeidae	like wat
+2016-09-04 22:15:31	slaytaner	it's basically a hookshot
+2016-09-04 22:15:33	Saimeidae	PhantomTaco: there's hardly any grind now imo
+2016-09-04 22:15:37	Saimeidae	oh not that, slaytaner
+2016-09-04 22:15:56	PhantomTaco	Saimeidae, oh i'm not talking about wow
+2016-09-04 22:16:00	PhantomTaco	i mean bdo is grind heavy
+2016-09-04 22:16:03	<--	roofmaster (639245b9@gateway/web/freenode/ip.99.146.69.185) has quit (Quit: Page closed)
+2016-09-04 22:16:12	slaytaner	well a hookshot you have to click on specific things to use
+2016-09-04 22:16:21	Saimeidae	o
+2016-09-04 23:47:42	--	irc: disconnected from server
+2016-09-04 23:48:07	-->	TheFactIs (~Andy@2601:646:8301:b810:594b:d9ba:9387:deba) has joined #Mechboards
+2016-09-04 23:48:07	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2016-09-04 23:48:07	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 01:38:51
+2016-09-04 23:48:07	--	Channel #Mechboards: 251 nicks (0 ops, 0 voices, 251 normals)
+2016-09-04 23:48:15	--	Channel created on Wed, 20 Feb 2013 20:50:48
+2016-09-04 23:48:22	 *	switchy oppresses NeverSummer
+2016-09-04 23:48:36	switchy	come see the oppression inherent in the system!
+2016-09-04 23:48:49	slaytaner	violence*
+2016-09-04 23:48:58	switchy	slaytaner, I'm paraphrasing
+2016-09-04 23:49:00	switchy	>_<
+2016-09-04 23:49:16	switchy	Saimeidae, I *think* in the early days of templeos terry wasn't crazy
+2016-09-04 23:49:17	slaytaner	HELP HELP I'M BEING REPRESSED
+2016-09-04 23:49:24	switchy	also it was called losethos then
+2016-09-04 23:49:54	Saimeidae	"Hoppy", "J Operating System", "LoseThos", "SparrowOS"
+2016-09-04 23:50:19	Saimeidae	and he posts his unnofficial ASU transcripts
+2016-09-04 23:50:22	Saimeidae	on his website
+2016-09-04 23:52:01	Saimeidae	"the jews have the right to their homeland"
+2016-09-04 23:53:09	switchy	religion is a terrible idea
+2016-09-05 00:01:14	--	irc: disconnected from server
+2016-09-05 00:01:38	-->	TheFactIs (~Andy@2601:646:8301:b810:c14d:8de3:6b78:db2f) has joined #Mechboards
+2016-09-05 00:01:38	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2016-09-05 00:01:38	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 01:38:51
+2016-09-05 00:01:38	--	Channel #Mechboards: 251 nicks (0 ops, 0 voices, 251 normals)
+2016-09-05 04:02:47	--	irc: disconnected from server
+2016-09-05 04:03:10	-->	TheFactIs (~Andy@2601:646:8301:b810:c14d:8de3:6b78:db2f) has joined #Mechboards
+2016-09-05 04:03:10	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2016-09-05 04:03:10	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 01:38:51
+2016-09-05 04:03:10	--	Channel #Mechboards: 246 nicks (0 ops, 0 voices, 246 normals)
+2016-09-05 04:03:18	--	Channel created on Wed, 20 Feb 2013 20:50:48
+2016-09-05 08:04:48	--	irc: disconnected from server
+2016-09-05 08:05:11	-->	TheFactIs (~Andy@2601:646:8301:b810:c14d:8de3:6b78:db2f) has joined #Mechboards
+2016-09-05 08:05:11	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2016-09-05 08:05:11	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 01:38:51
+2016-09-05 08:05:11	--	Channel #Mechboards: 247 nicks (0 ops, 0 voices, 247 normals)
+2016-09-05 08:05:19	--	Channel created on Wed, 20 Feb 2013 20:50:48
+2016-09-05 08:42:58	--	irc: disconnected from server
+2016-09-05 08:43:24	-->	TheFactIs (~Andy@2601:646:8301:b810:c14d:8de3:6b78:db2f) has joined #Mechboards
+2016-09-05 08:43:24	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2016-09-05 08:43:24	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 01:38:51
+2016-09-05 08:43:24	--	Channel #Mechboards: 245 nicks (0 ops, 0 voices, 245 normals)
+2016-09-05 08:43:32	--	Channel created on Wed, 20 Feb 2013 20:50:48
+2016-09-05 08:43:40	-->	keyduck (4bb54256@gateway/web/freenode/ip.75.181.66.86) has joined #Mechboards
+2016-09-05 08:44:51	keyduck	I'm thinking of selling my infinity kit once I get it from MD to purchase the Ergodox-EZ bundle (practically the same price with tenting and wrist rests). AFAIK there's nothing that really separates the infinity from the ez?
+2016-09-05 08:45:10	j`ey	in terms of actual layout, no
+2016-09-05 08:45:36	keyduck	Other than that?
+2016-09-05 08:45:54	-->	thor77_ (~thor77@no.crapwa.re) has joined #Mechboards
+2016-09-05 08:46:03	j`ey	well it uses usb interconnect rather than trss
+2016-09-05 08:46:07	-->	Joric (~joric@5.141.222.112) has joined #Mechboards
+2016-09-05 08:46:07	<--	Joric (~joric@5.141.222.112) has quit (Changing host)
+2016-09-05 08:46:07	-->	Joric (~joric@unaffiliated/joric) has joined #Mechboards
+2016-09-05 08:46:34	-->	Gnarfoz_ (smallbrain@WoWUIDev/WowAce/Gnarfoz) has joined #Mechboards
+2016-09-05 08:46:40	-->	xveamvx_ (uid157194@gateway/web/irccloud.com/x-tnpioaivzfgazypi) has joined #Mechboards
+2016-09-05 08:46:41	-->	adereth_ (sid95111@gateway/web/irccloud.com/x-aiufqtogwvuavspv) has joined #Mechboards
+2016-09-05 08:46:44	-->	inara` (~inara@68.ip-149-56-14.net) has joined #Mechboards
+2016-09-05 08:47:22	-->	yours_truly_ (uid125611@gateway/web/irccloud.com/x-zmqnoixzoahbqnwy) has joined #Mechboards
+2016-09-05 08:47:24	-->	sephiap_ (sid14177@gateway/web/irccloud.com/x-jhavzhravhpvnjvg) has joined #Mechboards
+2016-09-05 08:47:50	profet	keyduck, would you rather a custom build?  http://profet23.imgur.com
+2016-09-05 08:47:58	j`ey	lol ^
+2016-09-05 08:48:04	profet	hey... he asked
+2016-09-05 08:48:05	keyduck	heh, no thanks.
+2016-09-05 08:48:22	-->	euclydian_ (~server@euclydian.com) has joined #Mechboards
+2016-09-05 08:48:23	keyduck	The whole point is the the EZ comes with tenting and the rests for the same price that I did on MD.
+2016-09-05 08:48:39	-->	xkaype_ (~xkaype@45.55.128.229) has joined #Mechboards
+2016-09-05 08:48:40	keyduck	And I'd probably STILL get it sooner than the infinity.
+2016-09-05 08:48:42	j`ey	tuzonghua: want an infinity ^
+2016-09-05 08:48:53	profet	i offer a 3D printed tent and grifiti wrist rests
+2016-09-05 08:48:55	<--	yours_truly (uid125611@gateway/web/irccloud.com/x-hlhvqqwnscevuuvd) has quit (Ping timeout: 260 seconds)
+2016-09-05 08:48:56	<--	sephiap (sid14177@gateway/web/irccloud.com/x-aifbukglhfenwbtg) has quit (Ping timeout: 260 seconds)
+2016-09-05 08:48:57	<--	xveamvx (uid157194@gateway/web/irccloud.com/x-iewibazjesfwxyyz) has quit (Ping timeout: 260 seconds)
+2016-09-05 08:48:57	<--	inara (~inara@68.ip-149-56-14.net) has quit (Ping timeout: 260 seconds)
+2016-09-05 08:48:58	<--	thehunt33r (~th3@unaffiliated/thehunt33r) has quit (Ping timeout: 260 seconds)
+2016-09-05 08:48:58	<--	euclydian (~server@euclydian.com) has quit (Ping timeout: 260 seconds)
+2016-09-05 08:48:59	<--	adereth (sid95111@gateway/web/irccloud.com/x-piseaozmrvcnzfmp) has quit (Ping timeout: 260 seconds)
+2016-09-05 08:48:59	<--	alfie (~alfie@cirrus.alfiepates.me) has quit (Ping timeout: 260 seconds)
+2016-09-05 08:48:59	<--	ZeDestructor (~ZD@unaffiliated/zedestructor) has quit (Ping timeout: 260 seconds)
+2016-09-05 08:49:00	<--	switz (sid128911@gateway/web/irccloud.com/x-qxmklfpqozjzbvle) has quit (Ping timeout: 260 seconds)
+2016-09-05 08:49:01	<--	thor77 (~thor77@no.crapwa.re) has quit (Ping timeout: 260 seconds)
+2016-09-05 08:49:02	<--	Voltasalt (~Voltasalt@5.101.100.240) has quit (Ping timeout: 260 seconds)
+2016-09-05 08:49:02	<--	manirelli (znc@unaffiliated/manirelli) has quit (Ping timeout: 260 seconds)
+2016-09-05 08:49:02	<--	Gnarfoz (~smallbrai@WoWUIDev/WowAce/Gnarfoz) has quit (Ping timeout: 260 seconds)
+2016-09-05 08:49:02	<--	Ditti (~Ditti@2a03:4000:2:109:dead:beef:cafe:babe) has quit (Ping timeout: 260 seconds)
+2016-09-05 08:49:03	<--	Siema (~Siema@siema.com.pl) has quit (Ping timeout: 260 seconds)
+2016-09-05 08:49:03	<--	xkaype (~xkaype@45.55.128.229) has quit (Ping timeout: 260 seconds)
+2016-09-05 08:49:04	--	xveamvx_ is now known as xveamvx
+2016-09-05 08:49:04	profet	delivery in 2 weeks
+2016-09-05 08:49:04	--	thor77_ is now known as thor77
+2016-09-05 08:49:05	-->	Voltasalt_ (~Voltasalt@5.101.100.240) has joined #Mechboards
+2016-09-05 08:49:08	--	yours_truly_ is now known as yours_truly
+2016-09-05 08:49:14	Joric	theres no match for my om/x-iewibazjesfwxyyz) (Ping timeout: 260 seconds)
+2016-09-05 08:49:14	Joric	[20:48] * Quits: inara (~inara@68.ip-149-56-14.net) (Ping ti
+2016-09-05 08:49:21	Joric	oops
+2016-09-05 08:49:32	keyduck	profet: You truly are an entrepreneur.
+2016-09-05 08:49:42	Joric	for my FATREUS http://i.imgur.com/t4e1FRH.jpg
+2016-09-05 08:50:18	--	adereth_ is now known as adereth
+2016-09-05 08:50:34	profet	keyduck, i sell a bunch of them.
+2016-09-05 08:51:26	keyduck	I shall give it some thought.
+2016-09-05 08:51:31	keyduck	Hopefully  can sell the infinity.
+2016-09-05 08:51:40	j`ey	keyduck: tuzonghua wanted one
+2016-09-05 08:51:45	profet	keyduck, my email is here:  profet.keyboards@gmaiil.com
+2016-09-05 08:51:47	<--	jad340 (~jad340@ip72-209-16-4.ri.ri.cox.net) has quit (Remote host closed the connection)
+2016-09-05 08:51:52	-->	ZeDestructor (~ZD@unaffiliated/zedestructor) has joined #Mechboards
+2016-09-05 08:51:54	profet	keyduck, my email is here:  profet.keyboards@gmail.com even
+2016-09-05 08:51:59	keyduck	profet: Noted, thanks!
+2016-09-05 08:52:04	<--	stealthii (sid17385@gateway/web/irccloud.com/x-zuraltfsiytjyebq) has quit (Ping timeout: 264 seconds)
+2016-09-05 08:52:29	keyduck	j`ey: Cool, I'll ping them. I'm sure someone will snag it up.
+2016-09-05 08:52:48	-->	manirelli (znc@unaffiliated/manirelli) has joined #Mechboards
+2016-09-05 08:52:54	-->	kimi (~xoxo@dslb-094-218-089-229.094.218.pools.vodafone-ip.de) has joined #Mechboards
+2016-09-05 08:53:35	-->	rominronin (~rominroni@212.186.112.18) has joined #Mechboards
+2016-09-05 08:53:44	-->	Ditti (~Ditti@2a03:4000:2:109:dead:beef:cafe:babe) has joined #Mechboards
+2016-09-05 08:54:46	<--	slipfish (~slipfish@unaffiliated/slipfish) has quit (Ping timeout: 255 seconds)
+2016-09-05 08:55:29	--	sephiap_ is now known as sephiap
+2016-09-05 08:56:18	-->	snivitz (6a33e1a7@gateway/web/freenode/ip.106.51.225.167) has joined #Mechboards
+2016-09-05 08:56:49	<--	snivitz (6a33e1a7@gateway/web/freenode/ip.106.51.225.167) has quit (Client Quit)
+2016-09-05 08:57:26	<--	keyduck (4bb54256@gateway/web/freenode/ip.75.181.66.86) has quit (Ping timeout: 264 seconds)
+2016-09-05 08:58:07	-->	stealthii (sid17385@gateway/web/irccloud.com/x-xkwbmbpxmptwbjuy) has joined #Mechboards
+2016-09-05 08:58:53	<--	rominronin (~rominroni@212.186.112.18) has quit (Ping timeout: 244 seconds)
+2016-09-05 08:58:55	-->	maybeKimi (~xoxo@dslb-094-218-089-229.094.218.pools.vodafone-ip.de) has joined #Mechboards
+2016-09-05 08:59:06	-->	switz (sid128911@gateway/web/irccloud.com/x-krgvtghglxytqjah) has joined #Mechboards
+2016-09-05 08:59:41	-->	thehunt33r (~th3@unaffiliated/thehunt33r) has joined #Mechboards
+2016-09-05 09:01:27	<--	kimi (~xoxo@dslb-094-218-089-229.094.218.pools.vodafone-ip.de) has quit (Ping timeout: 276 seconds)
+2016-09-05 09:09:38	-->	seoushi (~seoushi__@c-73-158-213-31.hsd1.ca.comcast.net) has joined #Mechboards
+2016-09-05 09:12:32	-->	jad340 (~jad340@ip72-209-16-4.ri.ri.cox.net) has joined #Mechboards
+2016-09-05 09:15:22	-->	Siema (~Siema@siema.com.pl) has joined #Mechboards
+2016-09-05 09:15:49	<--	duoi (~duoi@unaffiliated/duoi) has quit (Ping timeout: 250 seconds)
+2016-09-05 09:16:01	<--	SineTwo (~SineTwo@unaffiliated/sinetwo) has quit (Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/)
+2016-09-05 09:18:05	-->	duoi (~duoi@unaffiliated/duoi) has joined #Mechboards
+2016-09-05 09:18:27	-->	CAPITALLETTERMAN (~CAPITALLE@CPEbc4dfbd0fd63-CMbc4dfbd0fd60.cpe.net.cable.rogers.com) has joined #Mechboards
+2016-09-05 09:18:40	CAPITALLETTERMAN	What's up mechboards?
+2016-09-05 09:19:00	Joric	...and topres
+2016-09-05 09:19:40	CAPITALLETTERMAN	And Topres.
+2016-09-05 09:22:23	CAPITALLETTERMAN	If I wanted to try Topres, would a Novatouch be a good compromise?
+2016-09-05 09:22:42	j`ey	some say it;s not as good
+2016-09-05 09:22:48	Joric	i'd like to figure that out too. i have two hhkbs
+2016-09-05 09:22:53	NeverSummer	I mean it's literally 45 g Topre.
+2016-09-05 09:23:00	NeverSummer	I can't imagine how it would be worse.
+2016-09-05 09:23:04	CAPITALLETTERMAN	Just different stems.
+2016-09-05 09:23:13	NeverSummer	Novatouch is the only freaking affordable Topre.
+2016-09-05 09:23:21	NeverSummer	Price on Topre is absurd.
+2016-09-05 09:23:22	CAPITALLETTERMAN	^
+2016-09-05 09:23:29	Hakala	could get a nice rubberdome for free from some bin
+2016-09-05 09:23:40	NeverSummer	lol
+2016-09-05 09:23:43	CAPITALLETTERMAN	Haha.
+2016-09-05 09:23:51	CAPITALLETTERMAN	I just want to know what the hype is about.
+2016-09-05 09:24:00	NeverSummer	I mean nice feeling domes aren't exactly a new concepy
+2016-09-05 09:24:03	NeverSummer	cept.
+2016-09-05 09:24:17	NeverSummer	Topre's gimmick is just the capacitive sensor.
+2016-09-05 09:24:22	NeverSummer	Personally I don't really get it.
+2016-09-05 09:24:26	CAPITALLETTERMAN	I get the feeling I'll get it, use it and just go "Feels like a rubberdome. I don't get it"
+2016-09-05 09:24:38	NeverSummer	Same.
+2016-09-05 09:24:50	Hakala	https://i.imgur.com/oAmpZaW.jpg
+2016-09-05 09:24:52		[ https://is.gd/V9dKyJ ]
+2016-09-05 09:24:57	Hakala	rip rubberdomes
+2016-09-05 09:25:46	NeverSummer	lol
+2016-09-05 09:26:09	seoushi	man those rubberdomes must get hot.. massive heatsinks
+2016-09-05 09:26:11	Hakala	watched a guy destroy couple of cherry g80 with black switches on 'em
+2016-09-05 09:26:19	Hakala	work in a recyclin centah
+2016-09-05 09:26:34	CAPITALLETTERMAN	:(
+2016-09-05 09:26:48	CAPITALLETTERMAN	Not allowed to take anything home?
+2016-09-05 09:27:20	Hakala	never asked, I've taken a ssd and a i7-920
+2016-09-05 09:27:22	Hakala	930
+2016-09-05 09:28:58	Hakala	And carefully removed these gray spacebar switches from the g80 keyboards https://i.imgur.com/jVZ7U53.jpg
+2016-09-05 09:28:59		[ https://is.gd/3JWLHO ]
+2016-09-05 09:29:44	CAPITALLETTERMAN	Nice.
+2016-09-05 09:29:58	CAPITALLETTERMAN	Is the pay good working at one of those places?
+2016-09-05 09:36:21	Saimeidae	eyy nerds
+2016-09-05 09:39:56	--	Gnarfoz_ is now known as Gnarfoz
+2016-09-05 09:43:25	Janiedoe	eye seoushi
+2016-09-05 09:43:27	Janiedoe	Saimeidae:
+2016-09-05 09:43:34	Saimeidae	Janiedoe
+2016-09-05 09:43:42	Janiedoe	 sup with you
+2016-09-05 09:43:49	Saimeidae	soup
+2016-09-05 09:44:08	CAPITALLETTERMAN	Saimeidae, do you drink or eat soup?
+2016-09-05 09:44:18	Saimeidae	depends on the soup
+2016-09-05 09:44:26	CAPITALLETTERMAN	Exactly.
+2016-09-05 09:45:43	CAPITALLETTERMAN	I'm waiting for my LEDs to arrive so I can put backlighting into my Planck.
+2016-09-05 09:47:24	CAPITALLETTERMAN	Should I clip the leads to be about the same length as the switch leads?
+2016-09-05 09:47:35	Saimeidae	uh you're not using sips?
+2016-09-05 09:47:57	Saimeidae	if no sips, clip after you solder
+2016-09-05 09:48:07	CAPITALLETTERMAN	I don't want to desolder all the switches on the board just to put in SIPs
+2016-09-05 09:49:17	CAPITALLETTERMAN	But ok. I'll clip after soldering.
+2016-09-05 09:49:19	Joric	i did. twice
+2016-09-05 09:49:39	CAPITALLETTERMAN	Damn Joric. Do you have specialized desoldering gear like a Hakko or something?
+2016-09-05 09:50:05	Joric	kinda. wouldn't make it with a hand pump
+2016-09-05 09:50:28	Joric	electric (heated) solder sucker is much better
+2016-09-05 09:50:43	Saimeidae	but that's just a pump
+2016-09-05 09:50:50	Saimeidae	er, desoldering gun
+2016-09-05 09:51:19	Joric	yep, still much better than an unheated one
+2016-09-05 09:51:28	Saimeidae	still a completely different tool
+2016-09-05 09:51:33	Saimeidae	so it'd be confusing to call it that
+2016-09-05 09:51:38	Saimeidae	because it's a desoldering gun
+2016-09-05 09:52:50	Joric	most joints were done in one take
+2016-09-05 09:52:53	CAPITALLETTERMAN	What's the difference?
+2016-09-05 09:53:10	Saimeidae	one is a big-ass desoldering station, CAPITALLETTERMAN
+2016-09-05 09:53:16	Joric	nah
+2016-09-05 09:53:18	Saimeidae	one is a dinky piece of plastic with a big-ass spring in it
+2016-09-05 09:53:41	Joric	i mean solder sucker vs heated solder sucker, pretty similar things
+2016-09-05 09:53:49	CAPITALLETTERMAN	There's the electric vacuum ones too right?
+2016-09-05 09:54:08	Joric	smth like this http://thumbs1.ebaystatic.com/d/l225/m/m0oeOtW5NhPei3wDMcVNM-g.jpg
+2016-09-05 09:54:09		[ https://is.gd/y3MO1E ]
+2016-09-05 09:54:25	Saimeidae	that's as bad as using one of those big-ass pens tho, Joric
+2016-09-05 09:54:50	Joric	well it makes desoldering much easier i tried both
+2016-09-05 09:55:02	CAPITALLETTERMAN	How much was the one you use?
+2016-09-05 09:55:09	-->	rominronin (~rominroni@212.186.112.18) has joined #Mechboards
+2016-09-05 09:55:28	Joric	CAPITALLETTERMAN, about $4
+2016-09-05 09:55:41	CAPITALLETTERMAN	Lol. That's right up my alley.
+2016-09-05 09:56:08	CAPITALLETTERMAN	My Planck was done with a $15 iron from Canadian Tire.
+2016-09-05 09:56:23	Saimeidae	still inadvisable tho
+2016-09-05 09:56:33	Saimeidae	because you will be far more likely to destroy the board
+2016-09-05 09:56:38	Saimeidae	than by buying something decent
+2016-09-05 09:56:43	Saimeidae	especially when you get to desoldering
+2016-09-05 09:57:28	CAPITALLETTERMAN	True. That may be where things get dicey using crappy equipment.
+2016-09-05 09:57:46	CAPITALLETTERMAN	I'll let you know after the warranty on my Cooler Master QFTK runs out.
+2016-09-05 09:58:01	Saimeidae	imo no point waiting for a warranty :P
+2016-09-05 09:58:21	CAPITALLETTERMAN	Well, I'm waiting to see if the LEDs will burn out in that amount of time.
+2016-09-05 09:58:52	CAPITALLETTERMAN	And I like the MX Blues on it enough that I'll wait before I stick the MX Greens on.
+2016-09-05 09:59:01	--	Milotop` is now known as Milotop
+2016-09-05 09:59:03	CAPITALLETTERMAN	Also, I'm getting a Gateron Green board soon.
+2016-09-05 09:59:51	<--	rominronin (~rominroni@212.186.112.18) has quit (Ping timeout: 250 seconds)
+2016-09-05 10:00:38	<--	pandaant (~batman@149.201.240.93) has quit (Remote host closed the connection)
+2016-09-05 10:02:53	--	BirthdayHandler is now known as nhandler
+2016-09-05 10:03:45	CAPITALLETTERMAN	Damn you Saimeidae. I'm talking to someone on MechMarket about buying a V60 Matias Quiet Click.
+2016-09-05 10:05:24	SlabDabs	do it
+2016-09-05 10:05:32	SlabDabs	I'm a big fan of MQCs
+2016-09-05 10:05:54	--	maybeKimi is now known as kimi
+2016-09-05 10:06:59	Saimeidae	mQC is pure sex
+2016-09-05 10:07:23	CAPITALLETTERMAN	Anyone have experience with the V60? Good build quality?
+2016-09-05 10:07:28	CAPITALLETTERMAN	I'm going to be using it at work.
+2016-09-05 10:07:53	Saimeidae	pretty OK board
+2016-09-05 10:09:41	-->	invaderr (~chance@2602:304:b270:1870:e440:e017:c38c:2bec) has joined #Mechboards
+2016-09-05 10:11:08	<--	juliank (~juliank@ubuntu/member/juliank) has quit (Remote host closed the connection)
+2016-09-05 10:11:23	<--	nhandler (~nhandler@freenode/staff/happybirthday) has quit (Changing host)
+2016-09-05 10:11:23	-->	nhandler (~nhandler@freenode/staff/ubuntu.member.nhandler) has joined #Mechboards
+2016-09-05 10:14:02	CAPITALLETTERMAN	Are there any TKL mQC boards?
+2016-09-05 10:14:19	CAPITALLETTERMAN	I have to extensively use F keys at work.
+2016-09-05 10:14:26	Saimeidae	uh from matias maybe
+2016-09-05 10:14:32	Saimeidae	but matias makes pretty subpar boards
+2016-09-05 10:16:03	CAPITALLETTERMAN	Disappointed in my Canadian brothers.
+2016-09-05 10:17:53	ZOMGITSABEAR	canadia just isn't like it used to be
+2016-09-05 10:18:03	ZOMGITSABEAR	i remember when canadia was happier
+2016-09-05 10:18:20	ZOMGITSABEAR	now it's hard to go and find poutine places where people smile
+2016-09-05 10:18:29	CAPITALLETTERMAN	And Gord Downie is dying.
+2016-09-05 10:18:52	ZOMGITSABEAR	who dat
+2016-09-05 10:19:03	ZOMGITSABEAR	<is americanian
+2016-09-05 10:19:19	CAPITALLETTERMAN	The frontman for The Tragically Hip.
+2016-09-05 10:19:40	CAPITALLETTERMAN	Along with Rush, considered one of the great Canadian bands.
+2016-09-05 10:20:09	ZOMGITSABEAR	damn.
+2016-09-05 10:20:13	ZOMGITSABEAR	rush is the shit
+2016-09-05 10:20:14	ZOMGITSABEAR	i love rush
+2016-09-05 10:23:02	-->	tr4656_ (uid20008@gateway/web/irccloud.com/x-ogkmfpnmocfvgbpa) has joined #Mechboards
+2016-09-05 10:25:00	-->	kroms (~kroms@cpe-104-34-126-78.socal.res.rr.com) has joined #Mechboards
+2016-09-05 10:26:15	CAPITALLETTERMAN	You should give The Hip a listen.
+2016-09-05 10:26:31	CAPITALLETTERMAN	Get their album "Yer Favourites" for their greatest hits.
+2016-09-05 10:26:36	CAPITALLETTERMAN	And you're pretty much set.
+2016-09-05 10:26:51	ZOMGITSABEAR	guys check out my shit
+2016-09-05 10:26:51	ZOMGITSABEAR	https://soundcloud.com/zomgitsabear
+2016-09-05 10:26:53		[ https://is.gd/AejK2t ]
+2016-09-05 10:26:53	CAPITALLETTERMAN	Beware though. They're Canadian as fuck.
+2016-09-05 10:26:55	ZOMGITSABEAR	if you please
+2016-09-05 10:27:37	SlabDabs	CAPITALLETTERMAN: if it's anything like my Poker II i just press FN and the number row for F keys
+2016-09-05 10:27:59	SlabDabs	https://usercontent.irccloud-cdn.com/file/4VnWQlna/irccloudcapture225726491.jpg
+2016-09-05 10:28:01		[ https://is.gd/BeKa9O ]
+2016-09-05 10:28:03	ZOMGITSABEAR	yeah, same with my pok3r
+2016-09-05 10:28:14	CAPITALLETTERMAN	SlabDabs: Yeah. Looks like there's 2 FN keys actually. So that makes life easier.
+2016-09-05 10:28:18	ZOMGITSABEAR	but making the caps lock a function key is bae
+2016-09-05 10:28:27	SlabDabs	that's what mine is too ZOMGITSABEAR
+2016-09-05 10:28:38	ZOMGITSABEAR	then you can use ijkl as arrow keys without being awkward about it
+2016-09-05 10:28:56	CAPITALLETTERMAN	Or WASD works too.
+2016-09-05 10:28:59	SlabDabs	wasd on the p2, so pinky on caps, and wasd
+2016-09-05 10:29:17	ZOMGITSABEAR	how do you set wasd to become the arrow keys?
+2016-09-05 10:29:23	ZOMGITSABEAR	i know you have to go into another layer
+2016-09-05 10:29:25	ZOMGITSABEAR	that's a given
+2016-09-05 10:29:34	SlabDabs	ZOMGITSABEAR: i think between the 2/3 it's programmed differently
+2016-09-05 10:29:49	SlabDabs	you can see in that pic on my caps the arrows are actually on wasd
+2016-09-05 10:29:56	ZOMGITSABEAR	ah ok
+2016-09-05 10:32:14	<--	jad340 (~jad340@ip72-209-16-4.ri.ri.cox.net) has quit (Remote host closed the connection)
+2016-09-05 10:34:04	<--	kroms (~kroms@cpe-104-34-126-78.socal.res.rr.com) has quit (Ping timeout: 264 seconds)
+2016-09-05 10:35:19	-->	kroms (~kroms@cpe-104-34-126-78.socal.res.rr.com) has joined #Mechboards
+2016-09-05 10:43:20	CAPITALLETTERMAN	Well. I pulled the trigger on the V60 mQC.
+2016-09-05 10:44:44	xveamvx	too many capital letters
+2016-09-05 10:44:55	CAPITALLETTERMAN	NEVER ENOUGH
+2016-09-05 10:45:03	xveamvx	well that's where you are wrong
+2016-09-05 10:45:30	CAPITALLETTERMAN	I believe this is where I go, "u w0t m8?"
+2016-09-05 10:46:30	-->	alfie (~alfie@cirrus.alfiepates.me) has joined #Mechboards
+2016-09-05 10:46:45	xveamvx	probs
+2016-09-05 10:46:57	xveamvx	SlabDabs
+2016-09-05 10:48:53	-->	darkclone (~darkclone@79-66-248-53.dynamic.dsl.as9105.com) has joined #Mechboards
+2016-09-05 10:50:47	CAPITALLETTERMAN	Man. I was hoping for some confetti when I bought that board.
+2016-09-05 10:51:12	CAPITALLETTERMAN	I'm having mild regret, because I was supposed to be saving for a GTX 1060.
+2016-09-05 10:51:48	xveamvx	CAPITALLETTERMAN buy my 960
+2016-09-05 10:51:51	<--	Joric (~joric@unaffiliated/joric) has quit (Ping timeout: 250 seconds)
+2016-09-05 10:52:13	CAPITALLETTERMAN	Can't believe you bought one of those.
+2016-09-05 10:52:31	xveamvx	I bought it two years ago
+2016-09-05 10:52:55	CAPITALLETTERMAN	Ah.
+2016-09-05 10:52:58	xveamvx	it's the best GPU I could afford
+2016-09-05 10:53:06	xveamvx	and it was convinient
+2016-09-05 10:53:13	xveamvx	because Micro Center had one
+2016-09-05 10:53:22	-->	cbot_ (~FS@ool-2f12e4fc.dyn.optonline.net) has joined #Mechboards
+2016-09-05 10:53:24	SlabDabs	xveamvx: sup biatch
+2016-09-05 10:53:25	<--	kroms (~kroms@cpe-104-34-126-78.socal.res.rr.com) has quit (Ping timeout: 252 seconds)
+2016-09-05 10:53:28	CAPITALLETTERMAN	At least you're a PC gamer, so I can't hate too hard. It was more like commiserating with you.
+2016-09-05 10:53:29	xveamvx	<3
+2016-09-05 10:53:34	<--	cbot (~FS@ool-2f12e4fc.dyn.optonline.net) has quit (Ping timeout: 240 seconds)
+2016-09-05 10:53:41	xveamvx	I also have an Xbox One
+2016-09-05 10:53:46	xveamvx	but just for Forza and Halo
+2016-09-05 10:53:51	SlabDabs	i'm still running a gtx580....
+2016-09-05 10:53:58	CAPITALLETTERMAN	My HD7870 is still running strong even on some games with 1440p.
+2016-09-05 10:54:10	xveamvx	at low settings though
+2016-09-05 10:54:11	-->	rominronin (~rominroni@212.186.112.18) has joined #Mechboards
+2016-09-05 10:54:22	CAPITALLETTERMAN	Med-High actually.
+2016-09-05 10:54:27	xveamvx	I want to get an RX 480
+2016-09-05 10:54:27	CAPITALLETTERMAN	But 30fps though.
+2016-09-05 10:54:42	CAPITALLETTERMAN	Well, if you're stateside, the RX480 is actually a good value.
+2016-09-05 10:54:54	xveamvx	yep
+2016-09-05 10:55:02	CAPITALLETTERMAN	But it's better to just shell out an extra $30 and get a GTX1060 here in Canada.
+2016-09-05 10:55:16	CAPITALLETTERMAN	Or in some cases, $10-20.
+2016-09-05 10:55:45	CAPITALLETTERMAN	Sucks because ATI used to be Canadian.
+2016-09-05 10:55:47	xveamvx	Might just go for a 470
+2016-09-05 10:56:10	xveamvx	the are cheaper and ~twice the performance of my 960
+2016-09-05 10:56:33	CAPITALLETTERMAN	What's the price difference between the two?
+2016-09-05 10:56:45	xveamvx	between the 470 and 480?
+2016-09-05 10:56:45	SlabDabs	lol the customer images https://www.amazon.com/Sapphire-Radeon-NITRO-GDDR5-11260-02-20G/dp/B01J1M4IHS/
+2016-09-05 10:56:47		[ https://is.gd/cIqZ9U ]
+2016-09-05 10:56:59	<--	profet (~profet@ool-182cfacb.dyn.optonline.net) has quit (Read error: Connection reset by peer)
+2016-09-05 10:57:10	SlabDabs	that 480 is only $230
+2016-09-05 10:57:24	CAPITALLETTERMAN	xveamvx: Yes.
+2016-09-05 10:57:35	xveamvx	you can get a 470 for around $200
+2016-09-05 10:57:37	xveamvx	sometimes less
+2016-09-05 10:58:19	xveamvx	I'd get this one http://www.newegg.com/Product/Product.aspx?Item=N82E16814125896&cm_re=rx_470-_-14-125-896-_-Product
+2016-09-05 10:58:20		[ https://is.gd/cFdQbv ]
+2016-09-05 10:59:06	<--	rominronin (~rominroni@212.186.112.18) has quit (Ping timeout: 276 seconds)
+2016-09-05 10:59:37	xveamvx	I can get an RX 480 Nitro for $30 more
+2016-09-05 11:00:16	xveamvx	I can get a 1060 3gb for $206
+2016-09-05 11:01:26	xveamvx	and a 6gb 1060 for $260
+2016-09-05 11:01:38	CAPITALLETTERMAN	SlabDabs: http://www.newegg.ca/Product/Product.aspx?Item=N82E16814202225&cm_re=sapphire_radeon_nitro-_-14-202-225-_-Product
+2016-09-05 11:01:40		[ https://is.gd/U5LKsD ]
+2016-09-05 11:01:46	CAPITALLETTERMAN	#CanadaWorldProblems
+2016-09-05 11:02:26	xveamvx	RIP Canadian dollar
+2016-09-05 11:03:19	xveamvx	I need a new mobo and CPU before a GPU
+2016-09-05 11:03:22	CAPITALLETTERMAN	Nah. CAD and USD have always hovered around this range.
+2016-09-05 11:03:25	xveamvx	mine crashes daily
+2016-09-05 11:03:44	CAPITALLETTERMAN	But that extra $30 of LOL UR NOT MURICAN surcharge is rough.
+2016-09-05 11:04:14	CAPITALLETTERMAN	xveamvx: Have you tried troubleshooting it?
+2016-09-05 11:04:21	xveamvx	Sure
+2016-09-05 11:04:23	CAPITALLETTERMAN	You sure it's the mobo and CPU that's causing it?
+2016-09-05 11:04:28	xveamvx	not worth the time
+2016-09-05 11:04:34	xveamvx	I got it for free
+2016-09-05 11:04:47	-->	iWaldo (iWaldo___@unaffiliated/iwaldo) has joined #Mechboards
+2016-09-05 11:04:58	CAPITALLETTERMAN	Lol. I need a second rig for my GF to play games at 1080p
+2016-09-05 11:05:00	xveamvx	It's extremely old junk
+2016-09-05 11:05:12	CAPITALLETTERMAN	So I would totally troubleshoot an old rig.
+2016-09-05 11:05:41	CAPITALLETTERMAN	She really loves her 3DS, but I want her to ascend.
+2016-09-05 11:06:30	-->	juliank (~juliank@ubuntu/member/juliank) has joined #Mechboards
+2016-09-05 11:06:51	-->	kroms (~kroms@cpe-104-34-126-78.socal.res.rr.com) has joined #Mechboards
+2016-09-05 11:07:00	-->	Joric (~joric@5.141.222.112) has joined #Mechboards
+2016-09-05 11:07:00	<--	Joric (~joric@5.141.222.112) has quit (Remote host closed the connection)
+2016-09-05 11:07:53	xveamvx	It's an i5 2400 and an Intel branded mob
+2016-09-05 11:07:55	xveamvx	mobo*
+2016-09-05 11:08:56	CAPITALLETTERMAN	I'm running an i5-3570k
+2016-09-05 11:09:06	CAPITALLETTERMAN	And an ASUS P8V77
+2016-09-05 11:09:20	CAPITALLETTERMAN	Guess what year I bought this rig lol
+2016-09-05 11:09:31	NeverSummer	P8Z77 you mean?
+2016-09-05 11:09:34	NeverSummer	And 2012.
+2016-09-05 11:09:43	xveamvx	I probably just need another mobo
+2016-09-05 11:09:51	CAPITALLETTERMAN	NeverSummer: Thanks, yes, that's what I meant. And yes, 2012.
+2016-09-05 11:09:56	NeverSummer	rekt
+2016-09-05 11:10:00	NeverSummer	:   )
+2016-09-05 11:10:02	CAPITALLETTERMAN	Leave it to the BAPC guy to know-it-all.
+2016-09-05 11:10:21	xveamvx	this is the 1060 I want http://www.newegg.com/Product/Product.aspx?Item=9SIA2F84H62269&cm_re=GTX_1060-_-14-500-405-_-Product
+2016-09-05 11:10:23		[ https://is.gd/cXUJBs ]
+2016-09-05 11:10:23	Saimeidae	i got my p8z77 pro + 3770k in like 2013
+2016-09-05 11:10:24	Saimeidae	damn
+2016-09-05 11:10:27	Saimeidae	my rig is aging rapidly :P
+2016-09-05 11:10:34	Saimeidae	but it still works justfine for what I want it to
+2016-09-05 11:10:38	NeverSummer	Just like you.
+2016-09-05 11:10:40	NeverSummer	Old man.
+2016-09-05 11:10:42	Saimeidae	uh, without spending like $3000 on a new rig
+2016-09-05 11:11:17	CAPITALLETTERMAN	xveamvx: My friend just bought that card. He's liking it.
+2016-09-05 11:11:29	xveamvx	I want to go back to mITX
+2016-09-05 11:11:31	CAPITALLETTERMAN	Then again, he was using a... GTX... 750? I think.
+2016-09-05 11:11:52	firebort	my friend with a 750ti is getting better frames than i am with a 7970
+2016-09-05 11:11:53	firebort	i don't get it
+2016-09-05 11:12:10	Saimeidae	because a 7970 is 6xx era
+2016-09-05 11:12:14	Saimeidae	and a 750ti isnot
+2016-09-05 11:12:30	xveamvx	750ti came out with the 900 series
+2016-09-05 11:12:32	xveamvx	:P
+2016-09-05 11:12:41	firebort	isn't the 7970 still better than the 750ti
+2016-09-05 11:12:55	 *	CAPITALLETTERMAN sits here with his 7870
+2016-09-05 11:13:02	Saimeidae	770 here
+2016-09-05 11:13:05	Saimeidae	it's OK
+2016-09-05 11:13:06	NeverSummer	firebort, yes.
+2016-09-05 11:13:10	NeverSummer	Saimeidae, is crazy.
+2016-09-05 11:14:42	NeverSummer	mfw I thought this was BaPC because of CAPITALLETTERMAN.
+2016-09-05 11:14:50	NeverSummer	I feel lied to.
+2016-09-05 11:15:06	CAPITALLETTERMAN	NeverSummer: You're welcome.
+2016-09-05 11:15:06	xveamvx	I traded a roommate my 960 for his 960
+2016-09-05 11:15:22	CAPITALLETTERMAN	xveamvx: ...but why?
+2016-09-05 11:15:37	xveamvx	mine matched his PC's aesthetics
+2016-09-05 11:15:49	xveamvx	and i dont have a windowed side panel
+2016-09-05 11:16:27	NeverSummer	Well aren't you nice.
+2016-09-05 11:17:11	xveamvx	ya\
+2016-09-05 11:17:17	xveamvx	his can't overclock for shit
+2016-09-05 11:17:54	xveamvx	I had mine OC'd to over 1650MHz
+2016-09-05 11:18:27	xveamvx	this one struggles to hit 1400
+2016-09-05 11:18:31	slaytaner	Good afternoon
+2016-09-05 11:18:35	xveamvx	I just dont OC it at all
+2016-09-05 11:19:01	CAPITALLETTERMAN	slaytaner: Hi
+2016-09-05 11:19:29	<--	kimi (~xoxo@dslb-094-218-089-229.094.218.pools.vodafone-ip.de) has quit (Quit: xoxo)
+2016-09-05 11:19:44	slaytaner	what's up
+2016-09-05 11:20:08	-->	kimi (~xoxo@dslb-094-218-089-229.094.218.pools.vodafone-ip.de) has joined #Mechboards
+2016-09-05 11:20:54	xveamvx	we are all dying slaytaner
+2016-09-05 11:21:18	slaytaner	this is my current theme song https://youtu.be/yca2BCwAnBQ
+2016-09-05 11:22:47	-->	Pegazz (~Pegazz@2a02:a03f:3449:8a00:8893:1204:5c67:460c) has joined #Mechboards
+2016-09-05 11:23:09	<--	kroms (~kroms@cpe-104-34-126-78.socal.res.rr.com) has quit (Ping timeout: 276 seconds)
+2016-09-05 11:23:46	xveamvx	this is mine slaytaner
+2016-09-05 11:23:47	 *	xveamvx https://www.youtube.com/watch?v=lJVCjnAolp8
+2016-09-05 11:23:48		[ https://is.gd/eRKEuv ]
+2016-09-05 11:25:14	slaytaner	don't you mean this one https://youtu.be/jsWg0bt9kp4
+2016-09-05 11:25:42	xveamvx	lol
+2016-09-05 11:26:16	xveamvx	nope I meant this one https://www.youtube.com/watch?v=eR4KcO_MovE
+2016-09-05 11:26:19		[ https://is.gd/cK9PVo ]
+2016-09-05 11:27:58	blueslush	does anyone in here know if you could have the atmega32u4 do HID and serial at the same time?
+2016-09-05 11:28:04	NeverSummer	lolwut
+2016-09-05 11:28:18	j`ey	blueslush: yeah
+2016-09-05 11:28:50	blueslush	It can?
+2016-09-05 11:30:00	 *	SlabDabs is still waiting for his 32u4 chips
+2016-09-05 11:30:11	xveamvx	rip
+2016-09-05 11:30:27	blueslush	You only ordered them like a week ago?
+2016-09-05 11:31:11	Janiedoe	slaytaner: is it holiday today in the US?
+2016-09-05 11:31:21	slaytaner	yes
+2016-09-05 11:31:24	blueslush	Janiedoe: Yep labor day
+2016-09-05 11:31:25	j`ey	blueslush: I assume so
+2016-09-05 11:31:39	Janiedoe	blueslush: sush that's why my supplier doesn't reply my fucking email
+2016-09-05 11:31:42	Janiedoe	fuck labor day
+2016-09-05 11:32:15	slaytaner	I mean, nobody cares about what it stands for anymore
+2016-09-05 11:32:30	slaytaner	just an excuse for a holiday
+2016-09-05 11:32:43	Janiedoe	slaytaner: we should go on to protest something right?
+2016-09-05 11:33:15	SlabDabs	blueslush: 12 days now :p
+2016-09-05 11:33:25	slaytaner	people are too complacent to care about labor conditions anymore
+2016-09-05 11:33:33	SlabDabs	i just want to see it update to show in the us
+2016-09-05 11:33:37	Janiedoe	vote j`ey for PM
+2016-09-05 11:34:27	j`ey	!
+2016-09-05 11:34:43	slaytaner	also pedos have ruined cheeze pizza for me
+2016-09-05 11:36:06	Janiedoe	slaytaner: I thought it's pesos
+2016-09-05 11:37:57	-->	kroms (~kroms@cpe-104-34-126-78.socal.res.rr.com) has joined #Mechboards
+2016-09-05 11:44:06	-->	eszett (~Eszett@dslb-084-059-074-203.084.059.pools.vodafone-ip.de) has joined #Mechboards
+2016-09-05 11:45:37	<--	kroms (~kroms@cpe-104-34-126-78.socal.res.rr.com) has quit (Ping timeout: 265 seconds)
+2016-09-05 11:47:07	xveamvx	lol http://puu.sh/r107p/195afecbdd.png
+2016-09-05 11:47:08		[ https://is.gd/W0rD3l ]
+2016-09-05 11:48:13	Janiedoe	j`ey:
+2016-09-05 11:48:13	Janiedoe	https://www.reddit.com/r/mechmarket/comments/51aw26/hk_hdolch_pac_isouk_wpaypal_iban/
+2016-09-05 11:48:15		[ https://is.gd/2Thsc0 ]
+2016-09-05 11:48:37	Janiedoe	I'm still thinking if I overpriced this thingy
+2016-09-05 11:50:51	NeverSummer	Janiedoe, price isn't the issue.
+2016-09-05 11:50:58	NeverSummer	It's not splitting it.
+2016-09-05 11:51:00	Janiedoe	NeverSummer: what's the issue? =)
+2016-09-05 11:51:11	NeverSummer	Same problem with selling whole builds.
+2016-09-05 11:51:14	Janiedoe	yeah..
+2016-09-05 11:51:18	NeverSummer	No one wants to buy all your crap.
+2016-09-05 11:51:23	NeverSummer	They want to buy some of it.
+2016-09-05 11:53:36	<--	cbot_ (~FS@ool-2f12e4fc.dyn.optonline.net) has quit (Quit: Leaving)
+2016-09-05 11:53:46	<--	turnip (uid161110@gateway/web/irccloud.com/x-azpgzlikxrjpnyio) has quit (Quit: Connection closed for inactivity)
+2016-09-05 11:55:05	-->	rominronin (~rominroni@212.186.112.18) has joined #Mechboards
+2016-09-05 11:55:07	-->	kroms (~kroms@cpe-104-34-126-78.socal.res.rr.com) has joined #Mechboards
+2016-09-05 12:00:47	<--	rominronin (~rominroni@212.186.112.18) has quit (Ping timeout: 244 seconds)
+2016-09-05 12:01:35	slaytaner	lol
+2016-09-05 12:02:38	Janiedoe	slaytaner: why
+2016-09-05 12:02:52	slaytaner	idk I'm bored
+2016-09-05 12:04:04	<--	kroms (~kroms@cpe-104-34-126-78.socal.res.rr.com) has quit (Ping timeout: 265 seconds)
+2016-09-05 12:04:54	j`ey	Janiedoe: that black cherry 1800 is nice
+2016-09-05 12:05:01	Janiedoe	the case yeah?
+2016-09-05 12:05:02	Janiedoe	lol
+2016-09-05 12:05:05	Janiedoe	slaytaner: wanna bang?
+2016-09-05 12:05:44	j`ey	Janiedoe: ya
+2016-09-05 12:05:55	Janiedoe	next time you should say the cable is nice
+2016-09-05 12:06:01	Janiedoe	of even the cushion :P
+2016-09-05 12:06:05	slaytaner	yeah, but not you
+2016-09-05 12:06:11	Janiedoe	slaytaner: I'm a Janie
+2016-09-05 12:06:50	Janiedoe	NeverSummer: seems like I'm going to make a deal soon.
+2016-09-05 12:06:51	Janiedoe	lol
+2016-09-05 12:07:03	NeverSummer	¯\_(ツ)_/¯
+2016-09-05 12:07:11	NeverSummer	Well I don't want all of your crap.
+2016-09-05 12:10:10	eszett	@legends. The lasercutting service where i order my acrylic layers, can engrave anything for cheap money. I wonder why the same method isn't yet used for engraving blank keycaps. The only problem there would be how to fix the keycaps, so that they can't move anymore, when the laser is doing its job with engraving legends.
+2016-09-05 12:10:34	eszett	hmm
+2016-09-05 12:10:57	Janiedoe	yo es
+2016-09-05 12:11:01	eszett	hi
+2016-09-05 12:11:10	eszett	Maybe I should contact the service any ask about it
+2016-09-05 12:11:14	Saimeidae	lasering then digs out part of the cap, eszett
+2016-09-05 12:11:26	Saimeidae	then you want to infil
+2016-09-05 12:11:28	Saimeidae	and infill is meh
+2016-09-05 12:11:38	eszett	Saimeidae: ye that is the plan. But is an infill really necessary?
+2016-09-05 12:11:43	Janiedoe	I'm wondering how many crap I still have
+2016-09-05 12:12:15	eszett	Saimeidae: you mean dirt is collecting in the engravings and makes them look ugly and less hygienic?
+2016-09-05 12:12:36	eszett	hmm maybe
+2016-09-05 12:12:56	Saimeidae	it just doesn't feel nice
+2016-09-05 12:13:18	eszett	and with infill it will feel smooth and nice again
+2016-09-05 12:13:47	Saimeidae	but then infill can fall outk, etc
+2016-09-05 12:14:04	eszett	hmm
+2016-09-05 12:14:04	Saimeidae	or you pain the caps
+2016-09-05 12:14:12	Saimeidae	and still deal with the problem of it feeling weird
+2016-09-05 12:14:56	 *	eszett looks at his engravings on acrylic.. the engravings doesnt seem to be deep enough to keep hold of dirt or anything. its very thin..
+2016-09-05 12:15:20	Saimeidae	you will still feel it
+2016-09-05 12:15:40	slaytaner	dirt will get in anywhere it can
+2016-09-05 12:15:40	eszett	I would accept that.
+2016-09-05 12:15:56	slaytaner	also finger oil and skin particles
+2016-09-05 12:16:33	eszett	ye, in the best case it doesnt collect mor dirt than is on normal keycaps anyway
+2016-09-05 12:17:10	slaytaner	well it'll get in the engraving
+2016-09-05 12:17:22	-->	jedmund (~jedmund@c-67-169-40-23.hsd1.ca.comcast.net) has joined #Mechboards
+2016-09-05 12:17:38	eszett	http://i.imgur.com/7mkOW.jpg
+2016-09-05 12:18:03	eszett	engraved caps are already on market for much $$
+2016-09-05 12:18:30	eszett	engraving them to my custom wishes would be nice
+2016-09-05 12:18:33	Janiedoe	well.. I still want a set of engraved caps with fillings
+2016-09-05 12:18:40	Janiedoe	nutella would be nice
+2016-09-05 12:18:43	eszett	lol
+2016-09-05 12:18:48	Janiedoe	:3
+2016-09-05 12:19:00	Janiedoe	tut mir leid
+2016-09-05 12:19:09	slaytaner	a dickbutt engraved keycap
+2016-09-05 12:19:39	Saimeidae	or just use dyesub
+2016-09-05 12:20:00	Janiedoe	slaytaner: http://i.imgur.com/ZYOoqO4.jpg
+2016-09-05 12:20:01	Janiedoe	this?
+2016-09-05 12:20:24	-->	darkcloneclone (~darkclone@79-66-248-53.dynamic.dsl.as9105.com) has joined #Mechboards
+2016-09-05 12:21:15	slaytaner	http://img.pandawhale.com/104933-dickbutt-meme-Imgur-dick-butt-yfgk.png
+2016-09-05 12:21:16		[ https://is.gd/KIOYef ]
+2016-09-05 12:22:55	<--	darkclone (~darkclone@79-66-248-53.dynamic.dsl.as9105.com) has quit (Ping timeout: 265 seconds)
+2016-09-05 12:23:44	-->	jad340 (~jad340@ip72-209-16-4.ri.ri.cox.net) has joined #Mechboards
+2016-09-05 12:24:56	-->	ClubMate (~user@212.114.161.230) has joined #Mechboards
+2016-09-05 12:27:22	pikajude	dickbutt-meme-Imgur-dick-butt-yfgk.png
+2016-09-05 12:36:43	<--	juliank (~juliank@ubuntu/member/juliank) has quit (Remote host closed the connection)
+2016-09-05 12:40:18	-->	damex (~damex@funtoo/dev/damex) has joined #Mechboards
+2016-09-05 12:42:18	-->	juliank (~juliank@ubuntu/member/juliank) has joined #Mechboards
+2016-09-05 14:10:53	--	irc: disconnected from server
+2016-09-05 14:11:18	-->	TheFactIs (~Andy@2601:646:8301:b810:c14d:8de3:6b78:db2f) has joined #Mechboards
+2016-09-05 14:11:18	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2016-09-05 14:11:18	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 01:38:51
+2016-09-05 14:11:18	--	Channel #Mechboards: 251 nicks (0 ops, 0 voices, 251 normals)
+2016-09-05 14:11:26	--	Channel created on Wed, 20 Feb 2013 20:50:48
+2016-09-05 16:15:40	--	irc: disconnected from server
+2016-09-05 16:16:06	-->	TheFactIs (~Andy@2601:646:8301:b810:c14d:8de3:6b78:db2f) has joined #Mechboards
+2016-09-05 16:16:06	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2016-09-05 16:16:06	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 01:38:51
+2016-09-05 16:16:06	--	Channel #Mechboards: 249 nicks (0 ops, 0 voices, 249 normals)
+2016-09-05 16:16:14	--	Channel created on Wed, 20 Feb 2013 20:50:48
+2016-09-05 16:16:27	catfriend	i accidentally accepted an invite to a LoL match
+2016-09-05 16:16:29	catfriend	with a coworker
+2016-09-05 16:16:32	catfriend	i havent played in months
+2016-09-05 16:16:35	catfriend	im gonna do terrible
+2016-09-05 16:16:54	slaytaner	well lol is a terrible game
+2016-09-05 16:18:11	slaytaner	well there is a guy in there with the nick cunt
+2016-09-05 16:19:03	eszett	capitalletterman if you have midlife crises with 27 you are hypochondric :-)
+2016-09-05 16:20:08	CAPITALLETTERMAN	eszett: Who said I was having a midlife crisis?
+2016-09-05 16:20:16	slaytaner	I need to go to conferences to get docker swag
+2016-09-05 16:20:22	eszett	sounds like it
+2016-09-05 16:20:22	slaytaner	that whale is the best
+2016-09-05 16:20:50	-->	ItsPrimetime (~ItsPrimet@unaffiliated/itsprimetime) has joined #Mechboards
+2016-09-05 16:21:12	slaytaner	also the SUSE stuff chameleon
+2016-09-05 16:21:50	-->	mrcnja (~mrcnja@unaffiliated/mrcnja) has joined #Mechboards
+2016-09-05 16:22:00	-->	DrHeroic (6a453c55@gateway/web/freenode/ip.106.69.60.85) has joined #Mechboards
+2016-09-05 16:22:33	slaytaner	profet lol "what's irc"
+2016-09-05 16:22:56	-->	manofinterests (6821075a@gateway/web/freenode/ip.104.33.7.90) has joined #Mechboards
+2016-09-05 16:33:05	--	irc: disconnected from server
+2016-09-05 16:33:45	-->	TheFactIs (~Andy@2601:646:8301:b810:c14d:8de3:6b78:db2f) has joined #Mechboards
+2016-09-05 16:33:45	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2016-09-05 16:33:45	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 01:38:51
+2016-09-05 16:33:45	--	Channel #Mechboards: 253 nicks (0 ops, 0 voices, 253 normals)
+2016-09-05 16:33:45	profet	i think because its so easy to join discord... it drops the barrier to entry... and the lowest common denominator is people with names like "cunt"
+2016-09-05 16:33:50	DrHeroic	profet i'm doing research into ergo assembly
+2016-09-05 16:33:50	eszett	but i want my communication tech to be relieable, future proof, not in the hand of a company, etc.
+2016-09-05 16:33:50	--	Channel created on Wed, 20 Feb 2013 20:50:48
+2016-09-05 19:39:03	--	irc: disconnected from server
+2016-09-05 19:39:28	-->	TheFactIs (~Andy@2601:646:8301:b810:c14d:8de3:6b78:db2f) has joined #Mechboards
+2016-09-05 19:39:28	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2016-09-05 19:39:28	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 01:38:51
+2016-09-05 19:39:28	--	Channel #Mechboards: 249 nicks (0 ops, 0 voices, 249 normals)
+2016-09-05 19:39:36	--	Channel created on Wed, 20 Feb 2013 20:50:48
+2016-09-05 22:13:56	--	irc: disconnected from server
+2016-09-05 22:14:18	-->	TheFactIs (~Andy@2601:646:8301:b810:c14d:8de3:6b78:db2f) has joined #Mechboards
+2016-09-05 22:14:18	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2016-09-05 22:14:18	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 01:38:51
+2016-09-05 22:14:18	--	Channel #Mechboards: 249 nicks (0 ops, 0 voices, 249 normals)
+2016-09-05 22:14:21	slaytaner	welp I'm out, night
+2016-09-05 22:14:26	--	Channel created on Wed, 20 Feb 2013 20:50:48
+2016-09-06 02:15:43	--	irc: disconnected from server
+2016-09-06 02:16:07	-->	TheFactIs (~Andy@2601:646:8301:b810:c14d:8de3:6b78:db2f) has joined #Mechboards
+2016-09-06 02:16:07	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2016-09-06 02:16:07	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 01:38:51
+2016-09-06 02:16:07	--	Channel #Mechboards: 248 nicks (0 ops, 0 voices, 248 normals)
+2016-09-06 02:16:15	--	Channel created on Wed, 20 Feb 2013 20:50:48
+2016-09-06 06:18:34	--	irc: disconnected from server
+2016-09-06 07:39:01	-->	TheFactIs (~Andy@2601:646:8301:b810:c14d:8de3:6b78:db2f) has joined #Mechboards
+2016-09-06 07:39:01	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2016-09-06 07:39:01	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 01:38:51
+2016-09-06 07:39:01	--	Channel #Mechboards: 255 nicks (0 ops, 0 voices, 255 normals)
+2016-09-06 07:39:09	--	Channel created on Wed, 20 Feb 2013 20:50:48
+2016-09-06 07:41:41	-->	ITG (~T@pool-173-67-9-70.bltmmd.fios.verizon.net) has joined #Mechboards
+2016-09-06 07:47:11	-->	jbondeson (~jbondeson@c-71-229-221-9.hsd1.co.comcast.net) has joined #Mechboards
+2016-09-06 07:47:56	-->	slwb_work (~slwb_work@50.59.212.66) has joined #Mechboards
+2016-09-06 07:49:07	-->	Joric (~joric@unaffiliated/joric) has joined #Mechboards
+2016-09-06 07:50:33	Toka	Yello, any thoughts on the Wooting one keyboard? Saw it recently and I am right now looking for an upgrade.
+2016-09-06 07:51:33	<--	slwb|work (~slwb_work@50.59.212.66) has quit (Ping timeout: 265 seconds)
+2016-09-06 07:51:47	<--	Joric (~joric@unaffiliated/joric) has quit (Client Quit)
+2016-09-06 07:52:07	ITG	Any have experience with GH60 Satan
+2016-09-06 07:52:14	j`ey	ihre:
+2016-09-06 07:52:28	ITG	Specifically, getting the button on the back to work for flashing?
+2016-09-06 07:52:59	ITG	I've seen the threads about using Zadig, Flip, etc.  Tried flashing on linux and Win10
+2016-09-06 07:53:46	Janiedoe	rominronin:
+2016-09-06 07:53:47	Janiedoe	yo
+2016-09-06 07:53:47	ITG	PCB is working but want to change layout
+2016-09-06 07:54:04	rominronin	hey Janiedoe
+2016-09-06 07:54:07	Janiedoe	just made a shirt for my gf rominronin
+2016-09-06 07:54:24	Janiedoe	rominronin: http://i.imgur.com/OxK2G2w.jpg
+2016-09-06 07:54:38	tuzonghua	Janiedoe: nice kit
+2016-09-06 07:54:49	Janiedoe	tuzonghua: arsenal fan?
+2016-09-06 07:54:59	-->	slipfish (~slipfish@unaffiliated/slipfish) has joined #Mechboards
+2016-09-06 07:55:20	tuzonghua	quite the opposite ;)
+2016-09-06 07:55:32	Janiedoe	let me guess
+2016-09-06 07:55:34	Janiedoe	hmmm
+2016-09-06 07:55:39	Janiedoe	QUEENS PARK RANGERS
+2016-09-06 07:55:52	slwb_work	Toka, the wooting one isn't out yet, no one has any thought on it really
+2016-09-06 07:56:01	tuzonghua	Janiedoe: lel
+2016-09-06 07:56:14	slwb_work	speculation, sure plenty of that
+2016-09-06 07:56:18	Janiedoe	:P
+2016-09-06 07:56:56	Janiedoe	tuzonghua: tell me chelsea or tottenham
+2016-09-06 07:57:05	tuzonghua	sure
+2016-09-06 07:59:22	Toka	slwb_work any opinions on what they've showed so far though? just my luck I decide to replace my old board and "new&exciting" tech pops up
+2016-09-06 07:59:59	slwb_work	Toka, reeks of marketing gimmick with no practical benefit
+2016-09-06 08:00:10	slwb_work	pure novelty, all flash, no substance
+2016-09-06 08:00:51	slwb_work	but who knows, i could be wrong and it could be amazeballs
+2016-09-06 08:01:31	<--	slipfish (~slipfish@unaffiliated/slipfish) has quit (Ping timeout: 244 seconds)
+2016-09-06 08:01:53	Toka	ye, could be either way. no point in early adopting stuff that bigger brands will gobble up if it's any good
+2016-09-06 08:02:50	<--	PraiseCisneros (b93d4872@gateway/web/freenode/ip.185.61.72.114) has quit (Ping timeout: 264 seconds)

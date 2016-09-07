@@ -780,6 +780,8 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 
 (setq message-send-mail-function 'smtpmail-send-it
   smtpmail-stream-type 'ssl
+  smtpmail-auth-credentials
+    (expand-file-name "~/.authinfo.gpg")
   smtpmail-default-smtp-server "mail.hover.com"
   smtpmail-smtp-server "mail.hover.com"
   smtpmail-smtp-service 465)
@@ -866,7 +868,5 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 (use-package magit)
 (use-package evil-magit)
 
-(use-package epa-file
-  :config
-  (unless (memq epa-file-handler file-name-handler-alist)
-  (epa-file-enable)))
+(require 'epa-file)
+(epa-file-enable)

@@ -39,3 +39,4 @@ auto_view text/html
 alternative_order text/plain text/enriched text/html     # save html for last
 
 
+alias account-security-noreply Microsoft account teami <account-security-noreply@account.microsoft.comi>

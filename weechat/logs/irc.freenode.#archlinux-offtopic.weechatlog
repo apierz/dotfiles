@@ -344,3 +344,264 @@
 2016-08-17 07:26:21	mattgirv	jelle: Ah man I have a shit load of them too, nearly half the cheap bits i've bought have crappy libs/no docs at all
 2016-08-17 07:26:29	jelle	wut
 2016-08-17 07:26:34	jelle	mine are all good
+2016-08-17 07:27:03	 *	dunz0r could build an electronic dice!
+2016-08-17 07:27:16	jelle	oh that shit is small
+2016-08-17 07:27:36	dunz0r	With a dip-switch for selecting the type of dice.
+2016-08-17 07:31:47	du5tball	tigrmesh: you there?
+2016-08-17 07:32:35	mattgirv	dunz0r: I saw someone on hackaday who'd made a binary keyboard lol, pretty sure they used an attiny too
+2016-08-17 07:32:36	-->	SysGh0st (~sysghost@217.21.233.251) has joined #archlinux-offtopic
+2016-08-17 07:32:53	Namarrgon	a binary keyboard? two keys?
+2016-08-17 07:32:55	<--	SysGhost (~sysghost@217.21.233.251) has quit (Ping timeout: 252 seconds)
+2016-08-17 07:33:10	mattgirv	nah it had a spacebar.
+2016-08-17 07:33:40	Namarrgon	oh, wow they really exist
+2016-08-17 07:33:45	mattgirv	https://hackaday.com/2016/07/20/binary-keyboard-is-the-purest-form-of-input-device/ haha
+2016-08-17 07:33:47	phrik	Title: Binary Keyboard Is The Purest Form Of Input Device | Hackaday (at hackaday.com)
+2016-08-17 07:33:50	voidead	lol
+2016-08-17 07:34:11	voidead	reminds me of those guys who make computers in Minecraft lol
+2016-08-17 07:34:14	jelle	lol
+2016-08-17 07:34:25	voidead	2kvlt4me
+2016-08-17 07:35:36	voidead	https://www.youtube.com/watch?v=aQqWorbrAaY
+2016-08-17 07:35:37	phrik	Title: Minecraft: Redstone Computer (Interactive PC, Calculator, Day/Night Controller) - YouTube (at www.youtube.com)
+2016-08-17 07:37:58	mattgirv	voidead: I want to sneak under that with shit loads of TNT so badly.
+2016-08-17 07:42:31	<--	strugart (strugart@181.167.150.78) has quit
+2016-08-17 07:46:54	-->	andrewSC (~andrewSC@unaffiliated/andrewsc) has joined #archlinux-offtopic
+2016-08-17 07:50:45	-->	astrofog (~astrofog@unaffiliated/astrofog) has joined #archlinux-offtopic
+2016-08-17 07:50:52	-->	Xero0042 (~Kurt_P@2607:ea00:300:b60:f8b7:43f1:6dfb:7092) has joined #archlinux-offtopic
+2016-08-17 07:51:46	DarkPsydeLord	ok so heres a question for python programmers... what do you think is the path from beginner to master in python? no asking faster way to learn im asking about the right way to do it and have strong basics
+2016-08-17 07:54:02	mattgirv	DarkPsydeLord: If you have no experience and want to dive straight in, Automate the Boring Stuff with Python is a pretty good grounding.
+2016-08-17 07:54:16	sangy	DarkPsydeLord: python is mostly about not reinventing the wheel. I'd just advice to read a little on what's on the standard library + setuptools
+2016-08-17 07:54:40	sangy	DarkPsydeLord: you'll get a hold of the interesting language constructs as you start needing them
+2016-08-17 07:55:21	-->	Tazmain (~Tazmain@197.87.159.214) has joined #archlinux-offtopic
+2016-08-17 07:55:27	mattgirv	ignore all the bullshit out there that advises against Python3 (ie Mr Shaw) :p
+2016-08-17 07:55:33	DarkPsydeLord	mattgirv: i like reading stuff then a good book is a good advice for me thank you
+2016-08-17 07:56:24	DarkPsydeLord	sangy: how are you amigo, im just thinking into going back to the very basics of the language
+2016-08-17 07:56:48	DarkPsydeLord	mattgirv: lol i've used both still like 2.x more
+2016-08-17 07:56:48	sangy	I'm doing well, thanks! :)
+2016-08-17 07:57:15	sangy	DarkPsydeLord: it's a good idea, I sometimes find that I forgot something pretty basic. Mostly because I didn't use it in a while
+2016-08-17 07:57:25	sangy	(e.g., "del")
+2016-08-17 07:57:40	<--	Jeffrey81 (~jeffrey@185.48.101.178) has quit (Quit: WeeChat 1.5)
+2016-08-17 07:58:39	DarkPsydeLord	well i just found an example for a basic course online and i guessed the output but i realized i cant explain why
+2016-08-17 07:59:01	DarkPsydeLord	and thats pretty much because i learned by myself
+2016-08-17 07:59:36	DarkPsydeLord	without taking much care of the concepts and behind scenes "magic" of the languaje
+2016-08-17 07:59:44	DarkPsydeLord	language**
+2016-08-17 08:02:08	tigrmesh	du5tball: i'm here
+2016-08-17 08:02:28	du5tball	tigrmesh: ah, nice :) why'd you ban me in the middle of the night when i haven't said anything for hours?
+2016-08-17 08:02:36	<--	Chais (~Chais@unaffiliated/chais) has quit (Quit: ZNC - http://znc.in)
+2016-08-17 08:02:50	tigrmesh	there was no kick message?
+2016-08-17 08:03:11	mankypirate	du5tball: all because of gertrude
+2016-08-17 08:03:21	du5tball	something about insults, but i can't remember insulting someone
+2016-08-17 08:03:23	tigrmesh	gertrude?
+2016-08-17 08:03:51	mankypirate	I named his date
+2016-08-17 08:04:08	tigrmesh	right "fat bitch"
+2016-08-17 08:04:10	du5tball	ah
+2016-08-17 08:04:26	du5tball	okay, i'm satisfied with that answer
+2016-08-17 08:04:33	dunz0r	I had a slim bitch once. 
+2016-08-17 08:04:37	tigrmesh	fat meh.  bitch... yeah
+2016-08-17 08:04:38	<--	Dr-Horrible (d4b2c885@fsf/member/vin) has quit (Ping timeout: 264 seconds)
+2016-08-17 08:04:43	du5tball	will try to find other insults the next time
+2016-08-17 08:04:47	dunz0r	Her name was Lana. She was a Springer Spaniel
+2016-08-17 08:04:48	voidead	outsults
+2016-08-17 08:04:58	du5tball	aroundsults?
+2016-08-17 08:05:11	sangy	undersults
+2016-08-17 08:05:11	tigrmesh	dating dogs...
+2016-08-17 08:05:13	dunz0r	Undersults sounds like a word
+2016-08-17 08:05:23	tigrmesh	if you didn't like her, why not just say that?
+2016-08-17 08:05:41	voidead	dunz0r› we should start chanting someone's name when they get banned like on Fight Club.. "his name was du5tball, his name was du5tball, his name was du5tball"
+2016-08-17 08:05:54	dunz0r	:D
+2016-08-17 08:06:12	tigrmesh	funny
+2016-08-17 08:06:21	du5tball	i'm only saying bad stuff after the date is over. dunno, i somehow can't say bad things to a persons face
+2016-08-17 08:06:31	voidead	also.. dunz0r du5tball you are pissing my weechat tab completion off
+2016-08-17 08:06:34	voidead	severely
+2016-08-17 08:06:44	--	du5tball is now known as phruit
+2016-08-17 08:06:46	phruit	voidead: better?
+2016-08-17 08:06:49	voidead	thanks
+2016-08-17 08:06:50	-->	dandels (~Dandels@unaffiliated/dandels) has joined #archlinux-offtopic
+2016-08-17 08:07:08	voidead	phruit› wait.. what happened to the nick that was like.. ITYPEFAST
+2016-08-17 08:07:11	voidead	or some shit like that
+2016-08-17 08:07:19	chee	!echo but what about phrik
+2016-08-17 08:07:19	phrik	but what about phrik
+2016-08-17 08:07:22	--	phruit is now known as GNUNICORN
+2016-08-17 08:07:25	GNUNICORN	that one?
+2016-08-17 08:07:26	voidead	LOL yeah
+2016-08-17 08:07:27	voidead	that one
+2016-08-17 08:07:44	-->	Chais (~Chais@unaffiliated/chais) has joined #archlinux-offtopic
+2016-08-17 08:07:51	dunz0r	I've had this nick for like 15 years
+2016-08-17 08:07:54	voidead	GNUNICORN› thats like redneck mullet trans am brown/orange in my client
+2016-08-17 08:08:02	GNUNICORN	wtf
+2016-08-17 08:08:11	--	GNUNICORN is now known as du5tball
+2016-08-17 08:08:12	dunz0r	That's a very specific colour, lol voidead 
+2016-08-17 08:08:16	du5tball	i still like this one the best
+2016-08-17 08:08:17	voidead	lol yes
+2016-08-17 08:08:32	 *	dunz0r sees no colour
+2016-08-17 08:08:32	voidead	dunz0r› I'll find an image of it
+2016-08-17 08:08:35	voidead	OH wait
+2016-08-17 08:08:37	voidead	I can screenshot it
+2016-08-17 08:08:40	du5tball	also: why'd you pick that redneck trans am color in the first place?
+2016-08-17 08:08:40	dunz0r	You're all white to me \o/
+2016-08-17 08:08:49	du5tball	dunz0r: but i'm latino!
+2016-08-17 08:08:57	dunz0r	du5tball: It picks it based on a hash of the nick I think.
+2016-08-17 08:08:59	du5tball	dunz0r: that's reverse-racist!
+2016-08-17 08:09:07	dunz0r	du5tball: So not racist?
+2016-08-17 08:09:09	du5tball	dunz0r: weechat? yes. i know
+2016-08-17 08:09:17	voidead	https://ptpb.pw/9h2g.png
+2016-08-17 08:09:24	dandels	GNUNICORN is an amazing name
+2016-08-17 08:09:36	du5tball	ew
+2016-08-17 08:09:38	dunz0r	Yep. That is redneck trans am brown/orange.
+2016-08-17 08:09:43	voidead	du5tball› now you see what I mean
+2016-08-17 08:09:55	chee	Registered : Aug 30 08:14:29 2009 (6y 50w 4d ago)
+2016-08-17 08:09:57	mattgirv	voidead: I'd go blind looking at that all day
+2016-08-17 08:10:02	chee	my nickserviversary is coming up
+2016-08-17 08:10:13	voidead	why? mattgirv 
+2016-08-17 08:10:15	dunz0r	chee: Oh cool. How'd you get that info?
+2016-08-17 08:10:24	chee	/msg nickserv info chee
+2016-08-17 08:10:28	dunz0r	I should figure out when my nick burfday is
+2016-08-17 08:10:34	voidead	you'd have to already be blind then mattgirv 
+2016-08-17 08:10:52	du5tball	Registered : Apr 20 14:29:00 2013 (3y 17w 1d ago)
+2016-08-17 08:11:05	dunz0r	Registered : Jul 14 16:20:12 2004 (12y 5w 1d ago)
+2016-08-17 08:11:10	mattgirv	voidead: really dull colours on black background, I think it's this monitor tbh. 15" 4K
+2016-08-17 08:11:10	dunz0r	Shiiiet
+2016-08-17 08:11:11	du5tball	jesus Oo
+2016-08-17 08:11:18	chee	du5tball: you missed it ;-;
+2016-08-17 08:11:21	chee	*dun
+2016-08-17 08:11:21	du5tball	dunz0r: weren't you like... 12 back then?
+2016-08-17 08:11:27	chee	*dunz0r
+2016-08-17 08:11:32	voidead	mattgirv› ah yeah.. it looks great here honestly *shrugs*
+2016-08-17 08:11:39	dunz0r	du5tball: No. 18.
+2016-08-17 08:11:44	du5tball	damn you're old
+2016-08-17 08:11:49	dunz0r	No I'm not :(
+2016-08-17 08:11:51	dandels	30 is old?
+2016-08-17 08:12:03	chee	dunz0r: you will have to get nickserv an apology gift for missing your anniversary
+2016-08-17 08:12:16	dunz0r	chee: I'll send him a cat-smiley.
+2016-08-17 08:12:22	du5tball	wait... that means you're only...
+2016-08-17 08:12:23	--	voidead is now known as pseudogod
+2016-08-17 08:12:24	 *	du5tball calculates
+2016-08-17 08:12:24	chee	is nickserv male?
+2016-08-17 08:12:35	du5tball	oh, yeah that could be
+2016-08-17 08:12:38	dunz0r	I'm not sure. Is bot a sex?
+2016-08-17 08:12:45	dandels	dunz0r, yes if you ask me
+2016-08-17 08:12:49	dunz0r	du5tball: I'm 30.
+2016-08-17 08:12:51	chee	i think they get to choose their own
+2016-08-17 08:12:51	du5tball	do bots have sex?
+2016-08-17 08:12:53	pseudogod	asexual pronouns only.. ok.. 
+2016-08-17 08:13:29	dandels	du5tball, yes: https://en.wikipedia.org/wiki/Sexbot
+2016-08-17 08:13:30	phrik	Title: Sex doll - Wikipedia, the free encyclopedia (at en.wikipedia.org)
+2016-08-17 08:13:34	du5tball	ah
+2016-08-17 08:13:36	du5tball	uhm...
+2016-08-17 08:14:11	<--	andrewSC (~andrewSC@unaffiliated/andrewsc) has quit (Ping timeout: 252 seconds)
+2016-08-17 08:15:02	pseudogod	god damn that image though
+2016-08-17 08:15:18	pseudogod	painting*
+2016-08-17 08:15:41	-->	rossome (~indieross@ip70-162-243-182.ph.ph.cox.net) has joined #archlinux-offtopic
+2016-08-17 08:15:48	chee	i would like to have sex with a robot
+2016-08-17 08:15:58	sangy	!grab chee 
+2016-08-17 08:15:59	phrik	sangy: Tada!
+2016-08-17 08:16:04	dunz0r	Depends if it's good at it or not.
+2016-08-17 08:16:09	sangy	!rq chee 
+2016-08-17 08:16:10	phrik	<chee> i am a bank account
+2016-08-17 08:16:19	dunz0r	I wouldn't want to have sex with any of the robots that I've built.
+2016-08-17 08:16:28	chee	for me it depends on love
+2016-08-17 08:16:45	dandels	!echo I love you, chee
+2016-08-17 08:16:45	phrik	I love you, chee
+2016-08-17 08:16:46	dunz0r	I certainly don't love any of my robots, they're all stupid as fuck
+2016-08-17 08:16:58	chee	thanks, phronk
+2016-08-17 08:16:59	dunz0r	And doesn't even look like people.
+2016-08-17 08:17:07	dunz0r	phronk <3
+2016-08-17 08:17:16	dunz0r	phrik: phrik is phronk
+2016-08-17 08:17:17	pseudogod	dunz0r› reminds me of that show Ex Machina
+2016-08-17 08:17:21	dunz0r	!phrik
+2016-08-17 08:17:22	phrik	Forever broken, but I'm still not your butler.
+2016-08-17 08:17:26	dunz0r	Aw :(
+2016-08-17 08:17:42	dunz0r	phrik: phronk is<reply>phrik is phronk
+2016-08-17 08:17:43	phrik	dunz0r: Tada!
+2016-08-17 08:17:47	dunz0r	!phronk
+2016-08-17 08:17:56	dunz0r	:(
+2016-08-17 08:18:08	dunz0r	phrik: phronk
+2016-08-17 08:18:20	dunz0r	Damn it. Why are you tricking me phrik?
+2016-08-17 08:18:35	chee	!listkeys phronk
+2016-08-17 08:18:36	phrik	phronk is<reply>phrik is phronk
+2016-08-17 08:18:40	du5tball	!phronk is<reply>phrik is phronk
+2016-08-17 08:18:42	dunz0r	Uhm
+2016-08-17 08:18:46	du5tball	!phronk
+2016-08-17 08:18:51	chee	lol
+2016-08-17 08:18:52	MessyIcefish	!phronk is
+2016-08-17 08:18:55	MessyIcefish	:>
+2016-08-17 08:19:01	dunz0r	phrik: slow phrik
+2016-08-17 08:19:03	phrik	slow phrik is slow
+2016-08-17 08:19:04	du5tball	wtf is this
+2016-08-17 08:19:11	chee	!phronk is phrik is fronk
+2016-08-17 08:19:11	dunz0r	¯\(º_o)/¯ Magic
+2016-08-17 08:19:11	phrik	chee: Tada!
+2016-08-17 08:19:14	chee	!phronk
+2016-08-17 08:19:16	phrik	phronk is phrik is fronk
+2016-08-17 08:19:19	chee	lol
+2016-08-17 08:19:20	dunz0r	:D
+2016-08-17 08:19:22	dunz0r	chee: <3
+2016-08-17 08:19:25	dandels	https://www.theguardian.com/technology/2016/aug/15/roomba-robot-vacuum-poopocalypse-facebook-post
+2016-08-17 08:19:25	phrik	Title: Roomba creator responds to reports of ‘poopocalypse’: ‘We see this a lot’ | Technology | The Guardian (at www.theguardian.com)
+2016-08-17 08:19:26	chee	!no, phronk is phrik is phronk
+2016-08-17 08:19:27	phrik	chee: Tada!
+2016-08-17 08:19:29	chee	lol
+2016-08-17 08:19:40	chee	coo
+2016-08-17 08:19:56	<--	yaryar (~sukeruke@unaffiliated/sukeruke) has left #archlinux-offtopic ("Leaving")
+2016-08-17 08:20:03	dunz0r	dandels: I think that map-image is a lie.
+2016-08-17 08:20:11	-->	Kirito (~Kirito@pdpc/supporter/student/kirito) has joined #archlinux-offtopic
+2016-08-17 08:20:14	dunz0r	dandels: It had to be a HUGE poop for it to "last" that long
+2016-08-17 08:20:26	<--	Xero0042 (~Kurt_P@2607:ea00:300:b60:f8b7:43f1:6dfb:7092) has quit (Remote host closed the connection)
+2016-08-17 08:20:37	chee	haha, dunz0r. it takes the last 'is'
+2016-08-17 08:20:41	chee	!phronk is<reply>phrik
+2016-08-17 08:20:42	phrik	phronk is<reply>phrik is phronk
+2016-08-17 08:20:42	dandels	i expected a panorama photograph of a shit-covered floor. was left disappoint.
+2016-08-17 08:20:49	dunz0r	!phronk
+2016-08-17 08:20:50	phrik	phronk is phrik is phronk
+2016-08-17 08:21:05	mankypirate	lol
+2016-08-17 08:21:11	 *	dunz0r has a robot vacum cleaner
+2016-08-17 08:21:24	dunz0r	It works quite well, but the poor little guy gets lost often
+2016-08-17 08:21:38	dunz0r	Sometimes I'll find him cowering under the bed.
+2016-08-17 08:21:57	dunz0r	Poor little guy. The cats probably scared him.
+2016-08-17 08:22:09	sangy	!give chee phronk
+2016-08-17 08:22:10	phrik	chee: phronk is phrik is phronk
+2016-08-17 08:22:25	dunz0r	I'm literally laughing out loud.
+2016-08-17 08:22:31	dunz0r	Phronk <3
+2016-08-17 08:22:35	mankypirate	if you start dating sufficiently crazy you can get the poop smearing without a roomba
+2016-08-17 08:22:40	sangy	ah, thought that <reply> would replace with chee :[
+2016-08-17 08:23:04	dandels	... D:
+2016-08-17 08:23:05	dunz0r	sangy: The <reply> only means that he'll say <what comes after reply>
+2016-08-17 08:23:21	dunz0r	I think you want something like $1 for phrik to say the name
+2016-08-17 08:23:24	dunz0r	!alias give
+2016-08-17 08:23:24	phrik	dunz0r: alias give <an alias, at least 2 arguments>
+2016-08-17 08:23:28	chee	!phronk2
+2016-08-17 08:23:29	 *	phrik is phronk
+2016-08-17 08:23:34	dunz0r	:D:D:D
+2016-08-17 08:23:49	dunz0r	phrik: Are you phronk?
+2016-08-17 08:23:49	phrik	Thankfully true.
+2016-08-17 08:23:53	chee	lolo
+2016-08-17 08:23:56	dunz0r	^_^
+2016-08-17 08:24:03	chee	thankfully
+2016-08-17 08:24:09	dunz0r	BUT WHO HAS PHRONK!?
+2016-08-17 08:24:16	 *	MessyIcefish doesn't get it
+2016-08-17 08:24:26	mankypirate	WHO WAS PHONE?
+2016-08-17 08:24:29	dandels	phronk is stronk
+2016-08-17 08:24:55	dunz0r	Phronk, like russian phrik.
+2016-08-17 08:25:06	dandels	the creature of phronkenstein
+2016-08-17 08:25:20	dunz0r	In soviet russia, phrik is phronk
+2016-08-17 08:26:34	 *	DarkPsydeLord Watch yourself out on the track, rookie. Every year we lose a couple of you first timers.
+2016-08-17 08:28:17	DarkPsydeLord	thats what phrik said to me last time :(
+2016-08-17 08:31:38	dunz0r	:O
+2016-08-17 08:32:58	<--	rossome (~indieross@ip70-162-243-182.ph.ph.cox.net) has quit (Ping timeout: 244 seconds)
+2016-08-17 08:33:13	chee	!rq
+2016-08-17 08:33:13	phrik	<hejki> my father has giga-enormous cock
+2016-08-17 08:33:27	-->	Shinryuu (~shn@85-76-78-52-nat.elisa-mobile.fi) has joined #archlinux-offtopic
+2016-08-17 08:33:35	chee	that boy sure liked perl
+2016-08-17 08:34:57	mankypirate	oh yea perl boy
+2016-08-17 08:35:54	-->	andrewSC (~andrewSC@unaffiliated/andrewsc) has joined #archlinux-offtopic
+2016-08-17 08:36:51	mankypirate	https://medium.com/@hoffa/reddit-uptime-2008-2016-bigquery-b3d7b11046e0
+2016-08-17 08:36:53	phrik	Title: Reddit’s uptime (2008–2016) — Medium (at medium.com)
+2016-08-17 08:37:06	mankypirate	interesting data :o
+2016-08-17 08:38:16	mankypirate	over 2000 comments per minute, that's pretty sick
+2016-08-17 08:39:49	<--	ae__ (~ae__@180.191.94.188) has quit (Read error: Connection reset by peer)
+2016-08-17 08:41:37	<--	andrewSC (~andrewSC@unaffiliated/andrewsc) has quit (Ping timeout: 258 seconds)
+2016-08-17 08:43:24	-->	rossome (~indieross@ip70-162-243-182.ph.ph.cox.net) has joined #archlinux-offtopic
+2016-08-17 08:43:52	-->	byteflame (~byteflame@70-89-65-45-little-rock-ar.hfc.comcastbusiness.net) has joined #archlinux-offtopic
+2016-08-17 08:45:09	-->	occultus (~occultus@150.131.100.75) has joined #archlinux-offtopic
+2016-08-17 08:49:51	-->	occultus_ (~occultus@150.131.100.75) has joined #archlinux-offtopic
+2016-08-17 08:50:39	-->	bug2000 (~bug2000@unaffiliated/bug2000) has joined #archlinux-offtopic
+2016-08-17 08:50:47	<--	occultus (~occultus@150.131.100.75) has quit (Read error: Connection reset by peer)

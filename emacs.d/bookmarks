@@ -8,7 +8,7 @@
  (rear-context-string . "42 Aug  1 07:22 ")
  (position . 258))
 ("keymap.c"
- (filename . "~/Documents/dotfiles/andykeymap/keymap.c")
+ (filename . "~/Documents/qmk_firmware/keyboards/planck/keymaps/andykeymap/keymap.c")
  (front-context-string . "#include \"planck")
  (rear-context-string)
  (position . 1))
