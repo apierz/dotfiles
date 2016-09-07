@@ -40,7 +40,7 @@ Next I want to set my load paths, it's mostly the standard folders, plus one for
   (add-to-list 'load-path "~/.emacs.d/plugins/evil-org-mode")
   (add-to-list 'load-path "/usr/local/Cellar/mu/HEAD/bin/mu")
   (add-to-list 'exec-path "/usr/local/bin")
-  (add-to-list 'load-path "/Users/Andy/Documents/Programming_Projects/doom-one") 
+  (add-to-list 'load-path "/Users/Andy/Documents/Programming_Projects/doom-theme") 
   (add-to-list 'load-path "/Users/Andy/Documents/Programming_Projects/dracula-theme/emacs")
 #+END_SRC
 
@@ -249,18 +249,18 @@ Small utility functions, mostly collected from others.
 
 * Visual Stuff
 
-I use my own version of [[https://github.com/dracula/dracula-theme][Dracua Theme]], which includes some extra coloring for Helm, mu4e, some changes to the syntax highlighting and correcting the background color when using Emacs in the terminal. My version is availble at my [[https://github.com/apierz][Github page]]. I also use [[http://sourcefoundry.org/hack/][Hack]] as my font. Right now I'm trying out transparency to see how I like it.
+I use my own version of [[https://github.com/dracula/dracula-theme][Dracua Theme]], which includes some extra coloring for Helm, mu4e, some changes to the syntax highlighting and correcting the background color when using Emacs in the terminal. My version is availble at my [[https://github.com/apierz][Github page]]. I also use [[http://sourcefoundry.org/hack/][Hack]] as my font. Transparency is commented out.
 
 #+BEGIN_SRC emacs-lisp
 
+  (use-package doom-theme)
   (use-package dracula-theme)
-  (load-theme 'dracula t)
 
   (set-face-attribute 'default nil
                        :family "Hack" :height 140)
 
-  ;; (set-frame-parameter (selected-frame) 'alpha '(90 90))
-  ;; (add-to-list 'default-frame-alist '(alpha 90 90))
+   ;; (set-frame-parameter (selected-frame) 'alpha '(90 90))
+   ;; (add-to-list 'default-frame-alist '(alpha 90 90))
 
 #+END_SRC
 
