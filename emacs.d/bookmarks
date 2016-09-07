@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("powerline"
+(("doom-one"
+ (filename . "~/Documents/Programming_Projects/doom-one/")
+ (front-context-string . "doom-one-theme.e")
+ (rear-context-string . "36 Sep  7 07:51 ")
+ (position . 256))
+("powerline"
  (filename . "~/Documents/Programming_Projects/powerline/")
  (front-context-string . ".git\n  -rw-r--r-")
  (rear-context-string . "42 Aug  1 07:22 ")

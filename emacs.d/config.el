@@ -16,6 +16,7 @@
 (add-to-list 'load-path "~/.emacs.d/plugins/evil-org-mode")
 (add-to-list 'load-path "/usr/local/Cellar/mu/HEAD/bin/mu")
 (add-to-list 'exec-path "/usr/local/bin")
+(add-to-list 'load-path "/Users/Andy/Documents/Programming_Projects/doom-one") 
 (add-to-list 'load-path "/Users/Andy/Documents/Programming_Projects/dracula-theme/emacs")
 
 (require 'use-package)
@@ -179,8 +180,8 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 (set-face-attribute 'default nil
                      :family "Hack" :height 140)
 
-(set-frame-parameter (selected-frame) 'alpha '(90 90))
-(add-to-list 'default-frame-alist '(alpha 90 90))
+;; (set-frame-parameter (selected-frame) 'alpha '(90 90))
+;; (add-to-list 'default-frame-alist '(alpha 90 90))
 
 (prefer-coding-system       'utf-8)
 (set-default-coding-systems 'utf-8)
