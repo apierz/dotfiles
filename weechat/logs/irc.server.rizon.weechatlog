@@ -767,3 +767,64 @@
 2016-09-06 07:46:51	--	Global (service@rizon.net): [Random News - May 07 2013] Looking for a quotes, trivia, or other extra bots? /msg funserv help
 2016-09-06 07:46:51	--	CTCP requested by py-ctcp: VERSION
 2016-09-06 07:46:51	--	CTCP reply to py-ctcp: VERSION WeeChat 1.5 (Aug 16 2016)
+2016-09-07 16:36:26	--	irc: connecting to server irc.rizon.net/6667...
+2016-09-07 16:36:26	--	irc: connected to irc.rizon.net/6667 (2607:f128:22:3133:312:18:313:11b2)
+2016-09-07 16:36:26	--	* :Please wait while we process your connection.
+2016-09-07 16:36:26	--	irc.sxci.net: *** Looking up your hostname...
+2016-09-07 16:36:26	--	irc.sxci.net: *** Checking Ident
+2016-09-07 16:36:26	--	irc.sxci.net: *** Couldn't look up your hostname
+2016-09-07 16:36:28	--	irc.sxci.net: *** No Ident response
+2016-09-07 16:36:28	--	irc.sxci.net: *** Your host is masked (32FD0BA9:9E0B5F73:22F5D16B:IP)
+2016-09-07 16:36:28	--	Welcome to the Rizon Internet Relay Chat Network TheFactIs
+2016-09-07 16:36:28	--	Your host is irc.sxci.net, running version hybrid-7.2.3+plexus-3.1.0(20151005_0-546)
+2016-09-07 16:36:28	--	This server was created Oct 20 2015 at 17:55:25
+2016-09-07 16:36:28	--	irc.sxci.net hybrid-7.2.3+plexus-3.1.0(20151005_0-546) CDFGNRSUWXabcdfgijklnopqrsuwxyz BIMNORSabcehiklmnopqstvz Iabehkloqv
+2016-09-07 16:36:28	--	CALLERID CASEMAPPING=rfc1459 DEAF=D KICKLEN=160 MODES=4 NICKLEN=30 TOPICLEN=390 PREFIX=(qaohv)~&@%+ STATUSMSG=~&@%+ NETWORK=Rizon MAXLIST=beI:250 TARGMAX=ACCEPT:,KICK:1,LIST:1,NAMES:1,NOTICE:4,PRIVMSG:4,WHOIS:1 CHANTYPES=# :are supported by this server
+2016-09-07 16:36:28	--	CHANLIMIT=#:75 CHANNELLEN=50 CHANMODES=beI,k,l,BCMNORScimnpstz FNC ELIST=CMNTU SAFELIST NAMESX UHNAMES AWAYLEN=160 KNOCK EXCEPTS=e INVEX=I :are supported by this server
+2016-09-07 16:36:28	--	08CAA6VP0 :your unique ID
+2016-09-07 16:36:28	--	There are 45 users and 19411 invisible on 15 servers
+2016-09-07 16:36:28	--	65 :IRC Operators online
+2016-09-07 16:36:28	--	1 :unknown connection(s)
+2016-09-07 16:36:28	--	19691 :channels formed
+2016-09-07 16:36:28	--	I have 19456 clients and 15 servers
+2016-09-07 16:36:28	--	19456 25058 :Current local users 19456, max 25058
+2016-09-07 16:36:28	--	19456 25058 :Current global users 19456, max 25058
+2016-09-07 16:36:28	--	- irc.sxci.net Message of the Day -
+2016-09-07 16:36:28	--	-          oo                            
+2016-09-07 16:36:28	--	-
+2016-09-07 16:36:28	--	- 88d888b. dP d888888b .d8888b. 88d888b. 
+2016-09-07 16:36:28	--	- 88'  `88 88    .d8P' 88'  `88 88'  `88 
+2016-09-07 16:36:28	--	- 88       88  .Y8P    88.  .88 88    88 
+2016-09-07 16:36:28	--	- dP       dP d888888P `88888P' dP    dP
+2016-09-07 16:36:28	--	-
+2016-09-07 16:36:28	--	- Rizon Chat Network -- http://rizon.net
+2016-09-07 16:36:28	--	-
+2016-09-07 16:36:28	--	- Listening on ports: 6660 - 6669, 7000. SSL: 6697, 9999
+2016-09-07 16:36:28	--	-
+2016-09-07 16:36:28	--	- Rules:
+2016-09-07 16:36:28	--	- o No spamming or flooding
+2016-09-07 16:36:28	--	- o No clones or malicious bots
+2016-09-07 16:36:28	--	- o No takeovers
+2016-09-07 16:36:28	--	- o No distribution of child pornography
+2016-09-07 16:36:28	--	- o Clients must respond to VERSION requests
+2016-09-07 16:36:28	--	- o Rizon staff may disconnect clients for any or no reason
+2016-09-07 16:36:28	--	-
+2016-09-07 16:36:28	--	- First steps:
+2016-09-07 16:36:28	--	- o To register your nick: /msg NickServ HELP
+2016-09-07 16:36:28	--	- o To register your channel: /msg ChanServ HELP
+2016-09-07 16:36:28	--	- o To get a vHost: /msg HostServ HELP REQUEST
+2016-09-07 16:36:28	--	- o For other help with Rizon: /join #help
+2016-09-07 16:36:28	--	-
+2016-09-07 16:36:28	--	- Usage of this network is a privilege, not a right. Rizon is a
+2016-09-07 16:36:28	--	- transit provider, therefore no person or entity involved with
+2016-09-07 16:36:28	--	- *.rizon.net or irc.sxci.net takes any responsibility for
+2016-09-07 16:36:28	--	- users' actions. Absolutely no warranty is expressed or implied.
+2016-09-07 16:36:28	--	End of /MOTD command.
+2016-09-07 16:36:28	--	User mode [+ix] by TheFactIs
+2016-09-07 16:36:28	--	Global (service@rizon.net): [Logon News - May 21 2011] First time on Rizon? Be sure to read the FAQ! http://s.rizon.net/FAQ
+2016-09-07 16:36:28	--	Global (service@rizon.net): [Logon News - Dec 16 2013] Own a large/active channel or plan to get one going? Please read http://s.rizon.net/authline
+2016-09-07 16:36:28	--	Global (service@rizon.net): [Random News - May 07 2013] Looking for a quotes, trivia, or other extra bots? /msg funserv help
+2016-09-07 16:36:28	--	CTCP requested by py-ctcp: VERSION
+2016-09-07 16:36:28	--	CTCP reply to py-ctcp: VERSION WeeChat 1.5 (Aug 16 2016)
+2016-09-07 16:36:35	=!=	irc: this buffer is not a channel!
+2016-09-07 16:36:48	--	/g/technology :Illegal channel name

@@ -17,6 +17,7 @@
 (add-to-list 'load-path "/usr/local/Cellar/mu/HEAD/bin/mu")
 (add-to-list 'exec-path "/usr/local/bin")
 (add-to-list 'load-path "/Users/Andy/Documents/Programming_Projects/dracula-theme/emacs")
+(add-to-list 'load-path "/Users/Andy/Documents/Programming_Projects/doom-theme")
 
 (require 'use-package)
 
@@ -43,6 +44,7 @@
 (setq-default fill-column 80)
 (setq-default tab-width 2)
 (put 'dired-find-alternate-file 'disabled nil)
+(hl-line-mode)
 
 (setq frame-title-format
   '("" invocation-name ": "(:eval (if (buffer-file-name)
@@ -173,14 +175,23 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
     (funcall (and initial-major-mode))
     (setq buffer-offer-save t)))
 
-(use-package dracula-theme)
-(load-theme 'dracula t)
+;;(use-package dracula-theme)
+;;(load-theme 'dracula t)
+
+(use-package doom-theme
+  :config
+  (setq doom-enable-bold t)
+  (setq doom-enable-bright-buffers t)
+  (setq doom-enable-bright-minibuffer t)
+  (setq doom-enable-italic t))
+
+(load-theme 'doom-one t)
 
 (set-face-attribute 'default nil
                      :family "Hack" :height 140)
 
-(set-frame-parameter (selected-frame) 'alpha '(90 90))
-(add-to-list 'default-frame-alist '(alpha 90 90))
+;; (set-frame-parameter (selected-frame) 'alpha '(90 90))
+;; (add-to-list 'default-frame-alist '(alpha 90 90))
 
 (prefer-coding-system       'utf-8)
 (set-default-coding-systems 'utf-8)
@@ -405,7 +416,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 
  ;; For Dracula Theme
  (setq org-todo-keyword-faces
-   '(("ONDECK" . (:foreground "#f1fa8c" :weight bold))   
+   '(("ONDECK" . (:foreground "#ecbe7b" :weight bold))   
      ("WAITING" . (:foreground "#bd93f9" :weight bold)) 
      ("CANCELED" . (:foreground "#ff5555" :weight bold))
      ("CURRENT" . (:foreground "#50fa7b" :weight bold))
@@ -563,65 +574,47 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 
   (defgroup segments-group nil "My powerline line segments" :group 'segments)
 
-(if (display-graphic-p)
   (defface my-pl-segment1-active
-    '((t (:foreground "#f1fa8c" :background "#3a2e58")))
+    '((t (:foreground "#ecbe7b" :background "#3d3d48")))
     "Powerline first segment active face.")
-  (defface my-pl-segment1-active
-    '((t (:foreground "#f1fa8c" :background "#5f00af")))
-    "Powerline first segment active face."))
-
   (defface my-pl-segment1-inactive
-   '((t (:foreground "#f8f8f2" :background "#545565")))
+   '((t (:foreground "#b5babf" :background "#545565")))
     "Powerline first segment inactive face.")
+
   (defface my-pl-segment2-active
-    '((t (:foreground "#f8f8f2" :background "#bd93f9")))
+    '((t (:foreground "#eeeeee" :background "#00b3ef")))
     "Powerline second segment active face.")
   (defface my-pl-segment2-inactive
-    '((t (:foreground "#f8f8f2" :background "#545565")))
+    '((t (:foreground "#b5babf" :background "#545565")))
     "Powerline second segment inactive face.")
 
-(if (display-graphic-p)
   (defface my-pl-segment3-active
-    '((t (:foreground "#bd93f9" :background "#3a2e58")))
+    '((t (:foreground "#00b3ef" :background "#3d3d48")))
     "Powerline third segment active face.")
-  (defface my-pl-segment3-active
-    '((t (:foreground "#bd93f9" :background "#5f00af")))
-    "Powerline third segment active face."))
-
   (defface my-pl-segment3-inactive
-    '((t (:foreground "#f8f8f2" :background "#545565")))
+    '((t (:foreground "#b5babf" :background "#545565")))
     "Powerline third segment inactive face.")
+
   (defface my-pl-segment4-active
-    '((t (:foreground "#ffffff" :background "#ff79c6")))
+    '((t (:foreground "#ffffff" :background "#dc79dc")))
     "Powerline hud segment active face.")
   (defface my-pl-segment4-inactive
-    '((t (:foreground "#ffffff" :background "#f8f8f2")))
+    '((t (:foreground "#ffffff" :background "#b5babf")))
     "Powerline hud segment inactive face.")
 
 
-(if (display-graphic-p)
   (defface my-pl-segment5-active
-    '((t (:foreground "#ff79c6" :background "#3a2e58")))
+    '((t (:foreground "#dc79dc" :background "#3d3d48")))
     "Powerline buffersize segment active face.")
-  (defface my-pl-segment5-active
-    '((t (:foreground "#ff79c6" :background "#5f00af")))
-    "Powerline buffersize segment active face."))
-
   (defface my-pl-segment5-inactive
-    '((t (:foreground "#f8f8f2" :background "#545565")))
+    '((t (:foreground "#b5babf" :background "#545565")))
     "Powerline buffersize segment inactive face.")
 
-(if (display-graphic-p)
   (defface my-pl-segment6-active
-   '((t (:foreground "#f1fa8c" :background "#3a2e58" :weight bold)))
+   '((t (:foreground "#ecbe7b" :background "#3d3d48" :weight bold)))
     "Powerline buffer-id  segment active face.")
-  (defface my-pl-segment6-active
-   '((t (:foreground "#f1fa8c" :background "#5f00af" :weight bold)))
-    "Powerline buffer-id  segment active face."))
-  
   (defface my-pl-segment6-inactive
-   '((t (:foreground "#f8f8f2" :background "#545565" :weight bold)))
+   '((t (:foreground "#b5babf" :background "#545565" :weight bold)))
     "Powerline buffer-id  segment inactive face.")
 
 (defun andy--powerline-default-theme ()

@@ -2844,3 +2844,12 @@
 2016-09-05 09:13:16		Option changed: irc.server.freenode.autojoin = "##kwm, #tilingwm, #Mechboards, #raspberrypi"  (default if null: "")
 2016-09-06 08:05:02		python: scripts unloaded
 2016-09-06 08:05:02		perl: scripts unloaded
+2016-09-07 16:34:29		fifo: removing old fifo pipe "/Users/Andy/Documents/dotfiles/weechat/weechat_fifo_18582"
+2016-09-07 16:34:29		perl scripts loaded: buffers, iset
+2016-09-07 16:34:29		python scripts loaded: shell, shortenurl
+2016-09-07 16:34:29		script: downloading list of scripts...
+2016-09-07 16:34:29		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2016-09-07 16:34:31		script: 310 scripts for WeeChat 1.5
+2016-09-07 16:36:15		Option changed: irc.server.freenode.autojoin = "##kwm, #Mechboards, #raspberrypi"  (default if null: "")
+2016-09-07 16:42:39		python: scripts unloaded
+2016-09-07 16:42:39		perl: scripts unloaded
