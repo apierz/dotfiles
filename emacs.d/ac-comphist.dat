@@ -183,7 +183,7 @@
   ("seg2" .
    [6 0 0 0])
   ("powerline-raw" .
-   [5 0 0 0 0 0 0 0 0 0 0 1 1])
+   [5 0 0 0 0 0 0 0 0 0 0 1 2])
   ("mode-line" .
    [3 0 0 0 0 0 0 0 0])
   ("powerline-buffer-size" .
@@ -365,7 +365,7 @@
   ("separator-left" .
    [6 0 0 0 0 0 0 0 0 0 0 0 0 0])
   ("powerline" .
-   [3 0 0 2 0 0 0 1 1])
+   [4 0 0 2 0 0 0 1 1])
   ("mode-line-mule-info" .
    [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
   ("rename-minor-mode" .
@@ -589,4 +589,8 @@
   ("doom-enable-italic" .
    [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
   ("orange" .
-   [1 0 0 0 0 0])))
+   [1 0 0 0 0 0])
+  ("defpowerline" .
+   [0 0 0 0 0 0 0 0 1 0 0 0])
+  ("powerline-buffer-path" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])))
