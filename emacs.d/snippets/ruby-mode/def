@@ -1,7 +1,7 @@
-#name : def ... end
-#group : definitions
+# -*- mode: snippet -*-
+# name: def ... end
 # key: def
 # --
-def ${1:method_name}
-  $0
+def ${1:method}${2:(${3:args})}
+    $0
 end

@@ -1,6 +1,6 @@
-#name : when ...
-#group : Conditions
-# key: when
+#name : when ... end
+#group : control structure
 # --
-when ${1:condition}
+when ${condition}
   $0
+end

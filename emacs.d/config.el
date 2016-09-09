@@ -44,7 +44,6 @@
 (setq-default fill-column 80)
 (setq-default tab-width 2)
 (put 'dired-find-alternate-file 'disabled nil)
-(setq hl-line-mode t)
 
 (setq frame-title-format
   '("" invocation-name ": "(:eval (if (buffer-file-name)
@@ -180,6 +179,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 
 (use-package doom-theme
   :config
+  (global-hl-line-mode)
   (setq doom-enable-bold t)
   (setq doom-enable-bright-buffers t)
   (setq doom-enable-bright-minibuffer t)
@@ -456,6 +456,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 (org-babel-do-load-languages
  'org-babel-load-languages
  '((emacs-lisp . t)
+   (python . t)
    (ruby . t)
    (dot . t)
    (gnuplot . t)))
@@ -521,6 +522,11 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
             (rainbow-delimiters-mode)))
 
 (setq python-indent-offset 2)
+
+(add-hook 'python-mode-hook
+ (lambda ()
+   (flycheck-mode)
+   (yas-minor-mode)))
 
 (add-hook 'sh-mode-hook
           (lambda ()
@@ -910,6 +916,7 @@ e.g. (doom-fix-unicode \"DejaVu Sans\" ?⚠ ?★ ?λ)"
 (defvar mode-line-eldoc-bar    (eval-when-compile (pl/percent-xpm mode-line-height 100 0 100 0 3 "#B3EF00" nil)))
 (defvar mode-line-inactive-bar (eval-when-compile (pl/percent-xpm mode-line-height 100 0 100 0 3 nil nil)))
 
+
   ;; Custom faces
   (defface mode-line-is-modified nil
     "Face for mode-line modified symbol")
@@ -1210,10 +1217,11 @@ e.g. (doom-fix-unicode \"DejaVu Sans\" ?⚠ ?★ ?λ)"
                         " "
                         (*buffer-state)
                         ,(if (eq id 'scratch) '(*buffer-pwd))))
+
              (rhs (list 
                        ;; (*buffer-encoding-abbrev)
                         (*vc)
-                        "  " (*major-mode) "  "
+                        (*major-mode) "  "
                         (propertize
                          (concat "(%l,%c) " (*buffer-position))
                          'face (if active 'mode-line-2))))
