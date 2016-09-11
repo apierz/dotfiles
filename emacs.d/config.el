@@ -175,10 +175,6 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
     (funcall (and initial-major-mode))
     (setq buffer-offer-save t)))
 
-<<<<<<< HEAD
-(use-package doom-theme)
-(use-package dracula-theme)
-=======
 ;;(use-package dracula-theme)
 ;;(load-theme 'dracula t)
 
@@ -192,18 +188,12 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
   (setq doom-enable-italic t))
 
 (load-theme 'doom-one t)
->>>>>>> Doom_One_Theme_Exper
 
 (set-face-attribute 'default nil
                      :family "Hack" :height 140)
 
-<<<<<<< HEAD
  ;; (set-frame-parameter (selected-frame) 'alpha '(90 90))
  ;; (add-to-list 'default-frame-alist '(alpha 90 90))
-=======
-;; (set-frame-parameter (selected-frame) 'alpha '(90 90))
-;; (add-to-list 'default-frame-alist '(alpha 90 90))
->>>>>>> Doom_One_Theme_Exper
 
 (prefer-coding-system       'utf-8)
 (set-default-coding-systems 'utf-8)

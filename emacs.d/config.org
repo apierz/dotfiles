@@ -32,7 +32,7 @@ The first thing that gets loaded is =package=, Emacs' package manager. I then ad
   (package-initialize)
 #+END_SRC
 
-Next I want to set my load paths, it's mostly the standard folders, plus one for my working Dracula Theme Directory.
+Next I want to set my load paths, it's mostly the standard folders, plus two for my working Dracula and Doom Theme Directories.
 
 #+BEGIN_SRC emacs-lisp
   (add-to-list 'load-path (expand-file-name "snippets" user-emacs-directory))
@@ -42,7 +42,6 @@ Next I want to set my load paths, it's mostly the standard folders, plus one for
   (add-to-list 'exec-path "/usr/local/bin")
   (add-to-list 'load-path "/Users/Andy/Documents/Programming_Projects/doom-theme") 
   (add-to-list 'load-path "/Users/Andy/Documents/Programming_Projects/dracula-theme/emacs")
-  (add-to-list 'load-path "/Users/Andy/Documents/Programming_Projects/doom-theme")
 #+END_SRC
 
 =use-package= is a =require= replacement that helps Emacs load faster. Might be a placebo.
@@ -251,7 +250,7 @@ Small utility functions, mostly collected from others.
 
 * Visual Stuff
 
-I use my own version of [[https://github.com/dracula/dracula-theme][Dracua Theme]], which includes some extra coloring for Helm, mu4e, some changes to the syntax highlighting and correcting the background color when using Emacs in the terminal. My version is availble at my [[https://github.com/apierz][Github page]]. I also use [[http://sourcefoundry.org/hack/][Hack]] as my font. Transparency is commented out.
+I used to use my own version of [[https://github.com/dracula/dracula-theme][Dracua Theme]], which includes some extra coloring for Helm, mu4e, some changes to the syntax highlighting and correcting the background color when using Emacs in the terminal. My version is availble at my [[https://github.com/apierz][Github page]]. However, I have been really impressed with hlissner's [[http://github.com/hlissner/emacs-doom-theme] and have now switched to that as my primary theme. I also use [[http://sourcefoundry.org/hack/][Hack]] as my font. Transparency is commented out.
 
 #+BEGIN_SRC emacs-lisp
   ;;(use-package dracula-theme)
