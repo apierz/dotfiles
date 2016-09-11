@@ -46,15 +46,15 @@ mpd_crossfade_time = 0
 ## or 44100:16:2 for stereo visualization. Example
 ## configuration (it has to be put into mpd.conf):
 ##
-## audio_output {
-##        type            "fifo"
-##        name            "Visualizer feed"
-##        path            "/tmp/mpd.fifo"
-##        format          "44100:16:2"
-## }
-##
-#
-#visualizer_fifo_path = /tmp/mpd.fifo
+ audio_output {
+        type            "fifo"
+        name            "Visualizer feed"
+        path            "/tmp/mpd.fifo"
+        format          "44100:16:2"
+ }
+
+
+visualizer_fifo_path = /tmp/mpd.fifo
 #
 ##
 ## Note: Below parameter is needed for ncmpcpp
@@ -64,18 +64,18 @@ mpd_crossfade_time = 0
 ## are some problems with it.
 ##
 #
-#visualizer_output_name = Visualizer feed
+visualizer_output_name = Visualizer feed
 #
 ##
 ## If you set format to 44100:16:2, make it 'yes'.
 ##
-#visualizer_in_stereo = yes
+visualizer_in_stereo = yes
 #
 ##
 ## Multiply received samples by given value. Very
 ## useful for proper visualization of quiet music.
 ##
-#visualizer_sample_multipler = 1
+## visualizer_sample_multipler = 1
 #
 ##
 ## Note: Below parameter defines how often ncmpcpp
@@ -85,7 +85,7 @@ mpd_crossfade_time = 0
 ## Keep in mind that sane values start with >=10.
 ##
 #
-#visualizer_sync_interval = 30
+visualizer_sync_interval = 30
 #
 ##
 ## Note: To enable spectrum frequency visualization
@@ -94,9 +94,9 @@ mpd_crossfade_time = 0
 #
 ## Available values: spectrum, wave.
 ##
-#visualizer_type = wave
+visualizer_type = spectrum
 #
-#visualizer_look = ??
+visualizer_look = "∙▋"
 #
 ##### system encoding #####
 ##
@@ -220,10 +220,10 @@ song_library_format = {%n - }{%t}|{%f}
 ##
 #
 #alternative_header_first_line_format = $b$1$aqqu$/a$9 {%t}|{%f} $1$atqq$/a$9$/b
-alternative_header_first_line_format = $b$5$aqqu$/a$9 {$3%t$9}|{%f} $5$atqq$/a$9$/b
+alternative_header_first_line_format = $b$7$aqqu$/a$9 {$5%t$9}|{%f} $7$atqq$/a$9$/b
 #
 #alternative_header_second_line_format = {{$4$b%a$/b$9}{ - $7%b$9}{ ($4%y$9)}}|{%D}
-alternative_header_second_line_format = {{$5$b%a$/b$9}{ - $4%b$9}{ ($6%y$9)}}|{%D}
+alternative_header_second_line_format = {{$7$b%a$/b$9}{ - $4%b$9}{ ($7%y$9)}}|{%D}
 #
 ##
 ## Note: below variables also support text attributes listed above.
@@ -284,7 +284,7 @@ now_playing_suffix = $9$/b
 ##
 #
 #song_columns_list_format = (20)[]{a} (6f)[green]{NE} (50)[white]{t|f:Title} (20)[cyan]{b} (7f)[magenta]{l}
-song_columns_list_format = (20)[blue]{a} (50)[yellow]{t|f:Title} (20)[green]{b} (7f)[magenta]{l}
+song_columns_list_format = (20)[blue]{a} (50)[yellow]{t|f:Title} (20)[yellow]{b} (7f)[blue]{l}
 #
 ##### various settings #####
 #
@@ -333,7 +333,7 @@ centered_cursor = yes
 ## Note: You can specify third character which will
 ## be used to build 'empty' part of progressbar.
 ##
-#progressbar_look = =>
+progressbar_look = "-░-"
 #
 #progressbar_boldness = yes
 #
@@ -500,13 +500,13 @@ empty_tag_color = cyan
 header_window_color = blue
  
 #volume_color = default
-volume_color = magenta
+volume_color = yellow
 #
 #state_line_color = default
 state_line_color = blue
 #
 #state_flags_color = default
-state_flags_color = magenta
+state_flags_color = yellow
 #
 #main_window_color = yellow
 main_window_color = blue
@@ -518,29 +518,29 @@ color1 = blue
 color2 = yellow
 #
 #main_window_highlight_color = yellow
-main_window_highlight_color = magenta
+main_window_highlight_color = cyan
  
 #progressbar_color = black
 progressbar_color = blue
 #
 #progressbar_elapsed_color = green
-progressbar_elapsed_color = green
+progressbar_elapsed_color = yellow
 #
 #statusbar_color = cyan
 statusbar_color = blue
 #
 #alternative_ui_separator_color = black
-alternative_ui_separator_color = magenta
+alternative_ui_separator_color = yellow
 #
 #active_column_color = red
-active_column_color = green
+active_column_color = yellow
 #
 #visualizer_color = yellow
-visualizer_color = green
+visualizer_color = yellow
 #
 #window_border_color = green
 window_border_color = blue
 #
 #active_window_border = red
-active_window_border = magenta
+active_window_border = blue
 #

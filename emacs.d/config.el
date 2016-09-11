@@ -18,7 +18,6 @@
 (add-to-list 'exec-path "/usr/local/bin")
 (add-to-list 'load-path "/Users/Andy/Documents/Programming_Projects/doom-theme") 
 (add-to-list 'load-path "/Users/Andy/Documents/Programming_Projects/dracula-theme/emacs")
-(add-to-list 'load-path "/Users/Andy/Documents/Programming_Projects/doom-theme")
 
 (require 'use-package)
 
