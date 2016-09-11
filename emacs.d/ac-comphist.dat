@@ -12,6 +12,18 @@
    [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
   ("doom-enable-bright-buffers" .
    [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("yellow" .
+   [2 0 0 0 0 0])
+  ("violet" .
+   [1 0 0 1 0 0])
+  ("red" .
+   [2 0 0])
+  ("magenta" .
+   [2 0 0 0 0 0 0])
+  ("cyan" .
+   [3 0 0 0])
+  ("green" .
+   [3 0 0 0 0])
   ("KC_I" .
    [4 0 0 0])
   ("TD_I_CAPI" .
@@ -185,7 +197,11 @@
   ("seg2" .
    [6 0 0 0])
   ("powerline-raw" .
+<<<<<<< HEAD
    [5 0 0 0 0 0 0 0 0 0 0 1 1])
+=======
+   [5 0 0 0 0 0 0 0 0 0 0 1 2])
+>>>>>>> Doom_One_Theme_Exper
   ("mode-line" .
    [3 0 0 0 0 0 0 0 0])
   ("powerline-buffer-size" .
@@ -333,7 +349,7 @@
   ("normal" .
    [2 0 0 0 0 0])
   ("require" .
-   [10 0 0 0 0 0 0])
+   [8 0 0 0 0 0 0])
   ("unicode-fonts" .
    [0 0 0 1 1 0 0 2 0 0 0 0 0])
   ("unicode-fonts-setup" .
@@ -355,7 +371,7 @@
   ("color-theme-sanityinc-tomorrow" .
    [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
   ("load-theme" .
-   [1 0 0 0 0 0 0 0 1 1])
+   [1 0 0 0 0 0 0 0 0 0])
   ("sanityinc-tomorrow-eighties" .
    [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
   ("mod" .
@@ -367,7 +383,7 @@
   ("separator-left" .
    [6 0 0 0 0 0 0 0 0 0 0 0 0 0])
   ("powerline" .
-   [3 0 0 2 0 0 0 1 1])
+   [4 0 0 2 0 0 0 1 1])
   ("mode-line-mule-info" .
    [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
   ("rename-minor-mode" .
@@ -379,7 +395,7 @@
   ("comment" .
    [1 0 0 0 0 0 0])
   ("dracula-theme" .
-   [0 0 0 0 0 0 1 0 0 0 0 1 0])
+   [0 0 0 0 0 0 0 0 0 0 0 1 0])
   ("powerline-evil-normal-face" .
    [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
   ("powerline-evil-insert-face" .
@@ -459,7 +475,7 @@
   ("name" .
    [3 0 0 0])
   ("downcase" .
-   [2 0 0 3 2 0 0 0])
+   [2 0 0 2 2 0 0 0])
   ("include" .
    [0 0 0 1 1 0 0])
   ("keyword" .
@@ -551,9 +567,9 @@
   ("r" .
    [1])
   ("l" .
-   [2])
+   [1])
   (":load-path" .
-   [1 0 0 0 0 0 0 1 0 0])
+   [0 0 0 0 0 0 0 1 0 0])
   ("set-face-attribute" .
    [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
   ("fringe" .
@@ -582,3 +598,25 @@
    [1 0 0 0 0 0 0])
   ("doom" .
    [0 0 0 1])))
+  ("doom-enable-bold" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("doom-enable-bright-buffers" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("doom-enable-bright-minibuffer" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("doom" .
+   [1 0 0 0])
+  ("doom-enable-italic" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("orange" .
+   [1 0 0 0 0 0])
+  ("defpowerline" .
+   [0 0 0 0 0 0 0 0 1 0 0 0])
+  ("powerline-buffer-path" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("global-hl-line-mode" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("neotree-enter-horizontal-split" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("neotree-enter-vertical-split" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])))

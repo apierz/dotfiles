@@ -1,6 +1,5 @@
 #name : if ... else ... end
-#group : Conditions
-# key: ife
+#group : control structure
 # --
 if ${1:condition}
   $2

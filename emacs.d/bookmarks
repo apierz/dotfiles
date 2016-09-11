@@ -7,11 +7,21 @@
  (front-context-string . "doom-one-theme.e")
  (rear-context-string . "36 Sep  7 07:51 ")
  (position . 256))
+("Python"
+ (filename . "~/Documents/Python/")
+ (front-context-string . "python_notes.org")
+ (rear-context-string . "62 Sep 10 16:51 ")
+ (position . 283))
+("MUTDUT"
+ (filename . "~/Dropbox (MUTDUT)/MUTDUT Team Folder/Andy (Public)/")
+ (front-context-string . "Kickstarter\n  dr")
+ (rear-context-string . "04 Aug 31 10:59 ")
+ (position . 661))
 ("powerline"
  (filename . "~/Documents/Programming_Projects/powerline/")
  (front-context-string . ".git\n  -rw-r--r-")
  (rear-context-string . "42 Aug  1 07:22 ")
- (position . 258))
+ (position . 1))
 ("keymap.c"
  (filename . "~/Documents/qmk_firmware/keyboards/planck/keymaps/andykeymap/keymap.c")
  (front-context-string . "#include \"planck")

@@ -1,5 +1,4 @@
-# This was cloned from a TextMate bundle for yasnippet.
-#group : Enumerables
-# key: map
+#name : map { |...| ... }
+#group : collections
 # --
-map { |${1:e}| $0 }
+map { |${e}| $0 }

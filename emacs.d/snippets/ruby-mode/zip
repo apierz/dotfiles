@@ -1,5 +1,4 @@
 #name : zip(...) { |...| ... }
-#group : Enumerables
-# key: zip
+#group : collections
 # --
 zip(${enums}) { |${row}| $0 }

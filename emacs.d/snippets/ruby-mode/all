@@ -1,5 +1,4 @@
 #name : all? { |...| ... }
-#group : Enumerables
-# key: all
+#group : collections
 # --
 all? { |${e}| $0 }

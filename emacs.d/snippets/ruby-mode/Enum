@@ -1,9 +1,10 @@
-# This was cloned from a TextMate bundle for yasnippet.
-#group : Enumerables
+# -*- mode: snippet -*-
+# name: include Enumerable
 # key: Enum
+# group: collections
 # --
 include Enumerable
 
-def each(&block)
+def each${1:(&block)}
   $0
 end
