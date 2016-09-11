@@ -2,7 +2,17 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("doom-one-theme.el"
+(("Python"
+ (filename . "~/Documents/Python/")
+ (front-context-string . "python_notes.org")
+ (rear-context-string . "62 Sep 10 16:51 ")
+ (position . 283))
+("MUTDUT"
+ (filename . "~/Dropbox (MUTDUT)/MUTDUT Team Folder/Andy (Public)/")
+ (front-context-string . "Kickstarter\n  dr")
+ (rear-context-string . "04 Aug 31 10:59 ")
+ (position . 661))
+("doom-one-theme.el"
  (filename . "~/Documents/Programming_Projects/doom-theme/doom-one-theme.el")
  (front-context-string . ";; DOOM One Dark")
  (rear-context-string)

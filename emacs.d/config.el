@@ -180,6 +180,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 (use-package doom-theme
   :config
   (global-hl-line-mode)
+  (doom-init-neotree)
   (setq doom-enable-bold t)
   (setq doom-enable-bright-buffers t)
   (setq doom-enable-bright-minibuffer t)
@@ -247,6 +248,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 (key-chord-define evil-replace-state-map "hh" 'evil-normal-state)
 (key-chord-define evil-visual-state-map "hh" 'evil-normal-state)
 (key-chord-define evil-motion-state-map "hh" 'evil-normal-state)
+(evil-define-key 'normal dired-mode-map "h" 'dired-up-directory)
 (evil-define-key 'normal dired-mode-map "l" 'dired-find-alternate-file)
 (evil-define-key 'normal dired-mode-map "v" 'dired-toggle-marks)
 (evil-define-key 'normal dired-mode-map "m" 'dired-mark)
@@ -342,6 +344,9 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 (global-set-key [f5] 'search-my-notes)
 (global-set-key [f6] 'linum-relative-mode)
 
+(use-package neotree)
+(global-set-key [f8] 'neotree-toggle)
+
 (global-set-key (kbd "M-j") 'robe-jump)
 
 (global-set-key (kbd "C-x g") 'magit-status)
@@ -359,6 +364,15 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 
 (setq evil-normal-state-modes (append evil-motion-state-modes
   evil-normal-state-modes))
+
+(add-hook 'neotree-mode-hook
+           (lambda ()
+             (define-key evil-normal-state-local-map (kbd "h") 'neotree-enter-horizontal-split)
+             (define-key evil-normal-state-local-map (kbd "v") 'neotree-enter-vertical-split)
+             (define-key evil-normal-state-local-map (kbd "TAB") 'neotree-enter)
+             (define-key evil-normal-state-local-map (kbd "SPC") 'neotree-enter)
+             (define-key evil-normal-state-local-map (kbd "q") 'neotree-hide)
+             (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)))
 
 (use-package helm)
 (use-package helm-config)
@@ -416,12 +430,12 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 
  ;; For Dracula Theme
  (setq org-todo-keyword-faces
-   '(("ONDECK" . (:foreground "#e69055" :weight bold))   
+   '(("ONDECK" . (:foreground "#ecbe7b" :weight bold))   
      ("WAITING" . (:foreground "#9c91e4" :weight bold)) 
-     ("CANCELED" . (:foreground "#ff665c" :weight bold))
+     ("CANCELED" . (:foreground "#dc79dc" :weight bold))
      ("CURRENT" . (:foreground "#7bc275" :weight bold))
      ("DONE" . (:foreground "#ff665c" :weight bold))
-     ("SOMEDAY" . (:foreground "#6272a4" :weight bold))))
+     ("SOMEDAY" . (:foreground "#525E6C" :weight bold))))
 
 (setq org-hide-leading-stars t)
 (use-package org-bullets
@@ -429,7 +443,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
   :config
   (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
 
-(setq org-ellipsis " …")
+(setq org-ellipsis "…")
 
 (setq org-cycle-separator-lines 0)
 
@@ -1220,7 +1234,7 @@ e.g. (doom-fix-unicode \"DejaVu Sans\" ?⚠ ?★ ?λ)"
 
              (rhs (list 
                        ;; (*buffer-encoding-abbrev)
-                        (*vc)
+                        (*vc) " "
                         (*major-mode) "  "
                         (propertize
                          (concat "(%l,%c) " (*buffer-position))

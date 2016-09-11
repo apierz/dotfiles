@@ -259,6 +259,7 @@ I use my own version of [[https://github.com/dracula/dracula-theme][Dracua Theme
   (use-package doom-theme
     :config
     (global-hl-line-mode)
+    (doom-init-neotree)
     (setq doom-enable-bold t)
     (setq doom-enable-bright-buffers t)
     (setq doom-enable-bright-minibuffer t)
@@ -342,7 +343,7 @@ I prefer the Vim keybindings and use them wherever possible in Emacs. I recently
 
 #+END_SRC
 
-** COMMENT Controls
+** Controls
 
    I make a few changes to the =dired= control map to make it more natural when using Vim style navigation. Also I use 'hh' as a quick shortcut to return to =evil-normal-state=.
 
@@ -531,6 +532,19 @@ I prefer the Vim keybindings and use them wherever possible in Emacs. I recently
     evil-normal-state-modes))
 #+END_SRC
 
+Neotree needs a little tweaking to work well with =evil=.
+
+#+BEGIN_SRC emacs-lisp
+  (add-hook 'neotree-mode-hook
+             (lambda ()
+               (define-key evil-normal-state-local-map (kbd "h") 'neotree-enter-horizontal-split)
+               (define-key evil-normal-state-local-map (kbd "v") 'neotree-enter-vertical-split)
+               (define-key evil-normal-state-local-map (kbd "TAB") 'neotree-enter)
+               (define-key evil-normal-state-local-map (kbd "SPC") 'neotree-enter)
+               (define-key evil-normal-state-local-map (kbd "q") 'neotree-hide)
+               (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)))
+#+END_SRC
+
 * Helm
 Helm is useful for searching through Emacs. I prefer Helm for searching through my buffers, kill ring and other things.
 
@@ -622,12 +636,12 @@ My todo system is fairly simple. =TODO= = unsorted, =ONDECK= = could be done at 
 
    ;; For Dracula Theme
    (setq org-todo-keyword-faces
-     '(("ONDECK" . (:foreground "#e69055" :weight bold))   
+     '(("ONDECK" . (:foreground "#ecbe7b" :weight bold))   
        ("WAITING" . (:foreground "#9c91e4" :weight bold)) 
-       ("CANCELED" . (:foreground "#ff665c" :weight bold))
+       ("CANCELED" . (:foreground "#dc79dc" :weight bold))
        ("CURRENT" . (:foreground "#7bc275" :weight bold))
        ("DONE" . (:foreground "#ff665c" :weight bold))
-       ("SOMEDAY" . (:foreground "#6272a4" :weight bold))))
+       ("SOMEDAY" . (:foreground "#525E6C" :weight bold))))
 
 #+END_SRC
 
@@ -646,7 +660,7 @@ My todo system is fairly simple. =TODO= = unsorted, =ONDECK= = could be done at 
    Dracula Theme has recently revamped their =Org-mode= colors so I have switched to their defaults. I use a single character ellipsis, though sometimes switch to an arrow or other /fancy/ symbol.
 
 #+BEGIN_SRC emacs-lisp
-  (setq org-ellipsis " …")
+  (setq org-ellipsis "…")
 #+END_SRC
 
    I like some whitespace between my headings.
@@ -1586,7 +1600,7 @@ I think my Powerline has gotten too busy and over complicated. I've been inspire
 
                (rhs (list 
                          ;; (*buffer-encoding-abbrev)
-                          (*vc)
+                          (*vc) " "
                           (*major-mode) "  "
                           (propertize
                            (concat "(%l,%c) " (*buffer-position))

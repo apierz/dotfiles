@@ -1,598 +1,602 @@
-((("global-hl-line-mode" .
-   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
-  ("powerline-buffer-path" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("defpowerline" .
-   [0 0 0 0 0 0 0 0 1 0 0 0])
-  ("orange" .
-   [1 0 0 0 0 0])
-  ("doom-enable-italic" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
-  ("doom" .
-   [1 0 0 0])
-  ("doom-enable-bright-minibuffer" .
-   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
-  ("doom-enable-bright-buffers" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
-  ("doom-enable-bold" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("KC_COPY" .
-   [1 0 0 0 0 0 0])
-  ("i_rightr_i" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("KC_RBRC" .
-   [3 0 0 0 0 0 0])
-  ("unregister_code" .
-   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
-  ("KC_LSFT" .
-   [1 0 0 0 0 0 0])
-  ("user_data" .
-   [1 0 0 0 0 0 0 0 0])
-  ("state" .
-   [1 0 0 0 0])
-  ("qk_tap_dance_state_t" .
-   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("TD_G_TILD" .
-   [0 0 0 1 1 0 0 0 0])
-  ("KC_GRV" .
-   [1 0 0 0 0 1])
-  ("ACTION_TAP_DANCE_DOUBLE" .
-   [0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("fringe" .
-   [0 0 0 0 1 0])
-  ("set-face-attribute" .
-   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
-  (":load-path" .
-   [0 0 0 0 0 0 0 1 0 0])
-  ("l" .
-   [1])
-  ("r" .
-   [1])
-  ("display-time-load-average" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
-  ("-" .
-   [1])
-  ("display-time-mail-directory" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
-  ("add_index" .
-   [0 0 0 0 1 0 0 0 0])
-  (":sections" .
-   [0 0 0 0 1 0 0 0 0])
-  (":pages" .
-   [0 0 1 0 0 0])
-  (":subjects" .
-   [0 0 0 0 1 0 0 0 0])
-  ("drop_table" .
-   [0 0 0 0 2 1 0 0 0 0])
-  ("integer" .
-   [1 0 0 0 0 0 0])
-  ("Integer" .
-   [0 0 0 1 0 0 0])
-  (":default" .
-   [0 0 0 1 0 0 0 0])
-  ("epa-file-enable" .
-   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
-  ("epa-file" .
-   [0 0 0 0 0 1 0 1])
-  ("mu4e-headers" .
-   [0 0 0 0 0 0 0 0 0 1 0 0])
-  ("evil-motion-state" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
-  ("mu4e-main-mode" .
-   [0 0 0 0 0 0 0 0 0 1 0 0 0 0])
-  ("mu4e" .
-   [1 0 0 0])
-  ("add-hook" .
-   [1 0 0 0 0 0 0 0])
-  ("i" .
-   [1])
-  ("substring" .
-   [1 0 0 0 0 0 0 0 0])
-  ("Background" .
-   [0 0 0 0 0 0 0 0 1 0])
-  ("default" .
-   [0 0 0 0 0 1 0])
-  ("dracula" .
-   [0 0 0 0 0 0 1])
-  ("custom-set-faces" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("backgroundcolor" .
-   [1 0 0 0 0 0 0 0 0 0 1 0 1 0 0])
-  ("background" .
-   [0 0 0 0 0 0 2 0 0 0])
-  ("defvar" .
-   [1 0 0 0 0 0])
-  ("d" .
-   [1])
-  ("web-mode" .
-   [1 0 0 0 0 0 0 0])
-  ("auto-mode-alist" .
-   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
-  ("org-metaright" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("org-metadown" .
-   [1 0 0 0 0 0 0 0 0 0 0 0])
-  ("org-metaup" .
-   [0 0 0 0 0 0 0 0 1 0])
-  ("evil-org-mode" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("sort_order" .
-   [0 0 2 0 4 0 0 0 0 0])
-  ("shift" .
-   [1 0 1 0 0])
-  ("args" .
-   [3 0 1 0])
-  ("output_restaurant_table" .
-   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
-  ("output_action_header" .
-   [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("to_i" .
-   [3 0 0 0])
-  ("price" .
-   [4 0 0 0 0])
-  ("cuisine" .
-   [2 0 0 0 1 0 0])
-  ("keyword" .
-   [1 0 0 0 0 0 1])
-  ("include" .
-   [0 0 0 1 1 0 0])
-  ("downcase" .
-   [2 0 0 2 2 0 0 0])
-  ("name" .
-   [3 0 0 0])
-  ("rest" .
-   [2 0 0 1])
-  ("found" .
-   [2 0 0 0 0])
-  ("saved_restaurants" .
-   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
-  ("restaurants" .
-   [2 0 0 0 0 1 0 0 0 0 0])
-  ("seg3" .
-   [4 0 0 0])
-  ("projectile-root-local" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
-  ("projectile" .
-   [0 0 0 0 0 0 1 0 0 0])
-  ("buffer" .
-   [0 0 0 0 0 1])
-  ("powerline-height" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
-  ("join" .
-   [1 0 0 0])
-  ("Guide::Config" .
-   [0 0 0 0 0 1 0 0 0 0 0 0 0])
-  ("a" .
-   [3])
-  ("actions" .
-   [3 0 1 0 0 0 0])
-  ("quit" .
-   [1 0 0 0])
-  ("get_action" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("action" .
-   [5 0 0 0 0 1])
-  ("user_response" .
-   [0 0 0 0 0 0 0 2 0 0 0 0 0])
-  ("print" .
-   [1 0 0 0 0])
-  (":quit" .
-   [1 0 0 0 0])
-  ("result" .
+((("yellow" .
    [2 0 0 0 0 0])
-  ("each_line" .
-   [1 0 0 0 0 0 0 0 0])
-  ("File" .
-   [2 0 0 0])
-  ("line" .
-   [3 0 0 0])
-  ("file" .
-   [6 0 0 0])
-  ("alias" .
-   [0 0 1 0 1])
-  ("class" .
-   [1 0 0 1 1])
-  ("powerline-evil-tag" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
-  (":inherit" .
-   [3 0 0 0 0 0 1 0])
-  ("powerline-evil" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("rainbow-5" .
-   [3 0 0 0 0 0 0 0 0])
-  ("rainbow-7" .
-   [2 0 0 0 0 0 0 0 0])
-  ("powerline-evil-emacs-face" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0])
-  ("powerline-evil-motion-face" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 2 0 0 0 0 0 0 0])
-  ("powerline-evil-replace-face" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0])
-  ("powerline-evil-operator-face" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 2 0 0 0 0 0 0 0 0])
-  ("powerline-evil-visual-face" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3 0 0 0 0 0 0])
-  ("powerline-evil-insert-face" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0])
-  ("powerline-evil-normal-face" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
-  ("dracula-theme" .
-   [0 0 0 0 0 0 0 0 0 0 0 1 0])
-  ("comment" .
-   [1 0 0 0 0 0 0])
-  ("bold" .
-   [4 0 0 0])
-  (":weight" .
-   [3 0 0 0 0 0 0])
-  ("rename-minor-mode" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
-  ("mode-line-mule-info" .
-   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("powerline" .
-   [4 0 0 2 0 0 0 1 1])
-  ("separator-left" .
-   [6 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("!/usr/bin/env" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("mode-line-buffer-id" .
-   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
-  ("mod" .
-   [1 0 0])
-  ("sanityinc-tomorrow-eighties" .
-   [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("load-theme" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("color-theme-sanityinc-tomorrow" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("color" .
-   [1 0 0 0 0])
-  ("cow" .
-   [1 0 0])
-  ("species" .
-   [1 0 0 0 0 1 0])
-  ("new" .
-   [3 0 0])
-  ("make_noise" .
-   [0 0 0 0 2 0 0 0 0 0])
-  ("animal1" .
-   [0 0 0 0 1 0 0])
-  ("Animal" .
-   [1 0 0 0 4 0])
-  ("unicode-fonts-setup" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0])
-  ("unicode-fonts" .
-   [0 0 0 1 1 0 0 2 0 0 0 0 0])
-  ("require" .
-   [8 0 0 0 0 0 0])
-  ("normal" .
-   [2 0 0 0 0 0])
-  ("binary-overwrite-mode" .
-   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("collect" .
-   [1 0 0 0 0 0 0])
-  ("array" .
-   [1 0 0 0 0])
-  ("detect" .
-   [0 0 0 0 1 0])
-  ("find" .
-   [1 0 0 0])
-  ("times" .
-   [1 0 0 0 0])
-  ("each" .
-   [1 0 0 0])
-  ("fruit" .
-   [3 0 0 0 0])
-  ("fruits" .
-   [1 0 0 0 2 0])
-  ("the_number_of_the_iterator" .
-   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("~/Dropbox/emacs_backups/emacs.d.backup" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
-  ("rainbow-delimiters-depth-1-face" .
-   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("autoload" .
-   [0 0 0 0 1 0 0 0])
-  ("format" .
-   [1 0 0 0 1 0])
-  ("aah" .
-   [0 0 3])
-  ("rand" .
-   [0 0 0 1])
-  ("define-key" .
-   [1 0 0 0 0 0 2 0 0 0])
-  ("ruby-mode-map" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("kbd" .
-   [1 0 0])
-  ("inf-ruby" .
-   [1 0 0 0 0 0 0 0])
-  ("ruby-send-region" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
-  ("ruby-switch-to-inf" .
-   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
-  ("ruby-load-file" .
-   [0 0 0 0 0 0 0 0 1 0 0 0 0 0])
-  ("ruby-send-block-and-go" .
-   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("ruby-send-block" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("diminish-minor-mode" .
-   [1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1])
-  ("overwrite-mode" .
-   [0 0 0 0 0 0 0 0 0 0 1 0 0 1])
-  (":" .
-   [5])
-  ("mu4e-view-mode-map" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
-  ("motion" .
-   [1 0 0 0 0 0])
-  ("evil-motions" .
-   [0 0 0 0 0 0 0 0 0 0 0 1])
-  ("evil-motion-state-local-map" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
-  ("evil-motion-state-map" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("evil-backward-char" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("evil-next-line" .
-   [0 0 0 0 0 0 0 0 0 1 0 0 0 0])
-  ("evil-forward-char" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0])
-  ("evil-insert-state" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
-  ("overwrite-mode-binary" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("magit-status" .
-   [0 0 0 0 0 0 0 0 1 0 0 0])
-  ("auto-revert" .
-   [0 0 0 0 0 0 1 0 0 0 0])
-  ("auto-revert-mode" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("setq" .
-   [15 0 0 0])
-  ("mu4e-headers-mode-map" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
-  ("mu4e-headers-mark-for-flag" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0])
-  ("longest_word" .
-   [0 0 0 0 0 0 0 1 0 0 0 0])
-  ("words" .
-   [0 0 0 1 0])
-  ("memo" .
-   [1 0 0 1])
-  ("word" .
-   [1 0 0 0])
-  ("length" .
-   [1 0 0 0 0 0])
-  ("use-package" .
-   [1 0 0 11 5 0 4 0 1 0 0])
-  (":config" .
-   [4 0 0 0 1 0 0])
-  ("diminish" .
-   [0 0 0 0 0 0 0 1])
-  ("auto-complete" .
-   [0 0 0 0 0 0 0 1 1 0 0 0 0])
-  ("auto-complete-mode" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0])
-  ("nil" .
-   [6 0 0])
-  ("robe-mode" .
-   [1 0 0 0 0 0 0 0 0])
-  ("benchmark" .
-   [0 0 0 0 1 0 0 0 0])
-  ("linum-mode" .
-   [1 0 0 0 0 0 0 0 0 0])
-  (":height" .
-   [1 0 0 0 0 0 0])
-  ("c" .
-   [2])
-  ("Custom" .
-   [1 0 0 0 0 0])
-  ("customize-face" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 2])
-  ("linum" .
-   [1 0 0 0 1])
-  (":slant" .
-   [1 0 0 0 0 0])
-  ("add-to-list" .
-   [0 0 0 0 0 0 1 1 0 0 0])
-  ("org-mode" .
-   [1 0 0 0 0 0 0 0])
-  ("Require" .
-   [0 0 0 0 0 0 1])
-  ("k" .
-   [1])
-  (":foreground" .
-   [1 0 0 0 0 2 1 1 0 0 0])
-  ("separator-right" .
-   [5 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("powerline-buffer-size" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0])
-  ("mode-line" .
-   [3 0 0 0 0 0 0 0 0])
-  ("powerline-raw" .
-   [5 0 0 0 0 0 0 0 0 0 0 1 2])
-  ("seg2" .
-   [6 0 0 0])
-  ("mode-line-format" .
-   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
-  ("color-theme-sanityinc-tomorrow-night" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("~/.git-completion.bash" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("powerline-evil-base-face" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4 1 0 0 0])
-  ("rainbow-6" .
-   [1 0 0 0 0 0 0 0 0])
-  (":background" .
-   [0 0 0 0 0 2 0 0 0 0 0])
-  ("bg1" .
-   [1 0 0])
-  ("initializeANSI" .
-   [0 0 0 1 0 0 0 0 0 0 0 0 0 0])
-  ("attr_accessor" .
-   [0 0 0 0 0 0 0 0 1 0 0 0 0])
-  (":books" .
-   [0 0 1 0 0 0])
-  ("APP_ROOT" .
-   [0 0 1 0 0 0 0 0])
-  ("introduction" .
-   [0 0 0 0 0 0 0 1 0 0 0 0])
-  ("to" .
-   [1 0])
-  ("conclusion" .
-   [0 0 0 1 0 0 0 0 0 0])
-  ("guide" .
-   [3 0 0 0 0])
-  ("launch" .
-   [1 0 0 0 0 0])
-  ("Restaurant" .
-   [0 0 0 4 2 0 0 0 0 0])
-  ("file_exists" .
-   [0 0 0 0 0 0 1 0 0 0 0])
-  ("create_file" .
-   [0 0 0 1 0 0 0 0 0 0 0])
-  ("if" .
-   [1 0])
-  ("powerline-text-scale-factor" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("powerline-narrow" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
-  ("rhs" .
-   [1 0 0])
-  ("list" .
-   [1 0 0 0])
-  ("global-mode-string" .
-   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
-  ("seg4" .
-   [1 0 0 0])
-  ("powerline-buffer-id" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
-  ("seg5" .
-   [1 0 0 0])
-  ("%s" .
-   [1 0])
-  ("buffer-file-coding-system" .
-   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("defun" .
-   [1 0 0 0 0])
-  ("buf-coding" .
-   [0 0 0 3 0 0 1 0 0 0])
-  ("Hello" .
-   [2 0 0 0 1])
-  ("echo" .
-   [0 0 0 1])
-  ("evil-define-key" .
-   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
-  ("evil-org-mode-map" .
-   [1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
-  ("org-shiftmetaright" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("org-shiftmetaup" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("org-shiftmetaleft" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("org-shiftmetadown" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("br" .
-   [2 0])
-  ("page" .
-   [1 0 0 0])
-  ("hello" .
-   [2 0 0 0 0])
-  ("index" .
-   [1 0 0 0 0])
-  ("Index" .
-   [2 0 0 0 0])
-  ("up" .
-   [4 0])
-  ("down" .
-   [4 0 0 0])
-  (":users" .
-   [0 0 0 0 0 1])
-  (":limit" .
-   [3 1 0 0 0 0])
-  ("string" .
-   [4 0 0 0 0 0])
-  ("FALSE" .
-   [0 0 0 1 0])
-  ("org" .
+  ("violet" .
+   [1 0 0 1 0 0])
+  ("red" .
    [2 0 0])
-  ("org-export" .
-   [1 0 0 0 0 0 1 0 0 0])
-  ("org-grep" .
-   [0 0 0 0 0 1 0 0])
-  ("org-capture" .
-   [0 0 0 0 0 0 1 0 0 0 0])
-  ("evil-mode" .
-   [0 0 0 0 0 0 1 0 0])
-  ("mu4e-main-mode-hook" .
-   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
-  ("unless" .
-   [1 0 0 0 0 0])
-  ("display-graphic-p" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
-  ("powerline-encoding" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
-  ("linum-on" .
-   [0 0 0 0 0 0 1 0])
-  ("border-collapse" .
-   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
-  ("collapse" .
-   [0 0 0 0 1 0 0 0])
-  ("vertical-align" .
-   [0 0 0 0 0 1 0 0 0 0 0 0 0 0])
-  ("visited" .
-   [0 0 0 1 0 0 0])
-  ("text-align" .
-   [0 0 0 0 0 0 0 1 0 0])
-  ("header" .
-   [0 0 0 0 1 0])
-  ("KC_DLR" .
-   [1 0 0 0 0 0])
-  ("KC_PERC" .
-   [1 0 0 0 0 0 0])
-  ("KC_CIRC" .
-   [1 0 0 0 0 0 0])
-  ("KC_AMPR" .
-   [0 0 0 0 0 0 1])
-  ("KC_PAST" .
-   [1 0 0 0 0 0 0])
-  ("KC_TILD" .
-   [1 0 0 0 0 1 0])
-  ("KC_F9" .
-   [2 0 0 0 0])
-  ("KC_F2" .
-   [2 0 0 0 0])
-  ("KC_F3" .
-   [2 0 0 0 0])
-  ("KC_F4" .
-   [2 0 0 0 0])
-  ("KC_F6" .
+  ("magenta" .
+   [2 0 0 0 0 0 0])
+  ("cyan" .
+   [3 0 0 0])
+  ("green" .
+   [3 0 0 0 0])
+  ("KC_I" .
+   [4 0 0 0])
+  ("TD_I_CAPI" .
+   [0 0 0 0 1 0 0 0 0])
+  ("KC_F12" .
+   [3 0 0 0 0 0])
+  ("KC_F11" .
+   [3 0 0 0 0 0])
+  ("KC_F10" .
+   [2 0 0 0 0 0])
+  ("KC_F8" .
    [2 0 0 0 0])
   ("KC_F7" .
    [2 0 0 0 0])
-  ("KC_F8" .
+  ("KC_F6" .
    [2 0 0 0 0])
-  ("KC_F10" .
-   [2 0 0 0 0 0])
-  ("KC_F11" .
-   [3 0 0 0 0 0])
-  ("KC_F12" .
-   [3 0 0 0 0 0])
-  ("TD_I_CAPI" .
-   [0 0 0 0 1 0 0 0 0])
-  ("KC_I" .
-   [4 0 0 0])
-  ("green" .
-   [3 0 0 0 0])
-  ("cyan" .
-   [3 0 0 0])
-  ("magenta" .
-   [2 0 0 0 0 0 0])
-  ("red" .
+  ("KC_F4" .
+   [2 0 0 0 0])
+  ("KC_F3" .
+   [2 0 0 0 0])
+  ("KC_F2" .
+   [2 0 0 0 0])
+  ("KC_F9" .
+   [2 0 0 0 0])
+  ("KC_TILD" .
+   [1 0 0 0 0 1 0])
+  ("KC_PAST" .
+   [1 0 0 0 0 0 0])
+  ("KC_AMPR" .
+   [0 0 0 0 0 0 1])
+  ("KC_CIRC" .
+   [1 0 0 0 0 0 0])
+  ("KC_PERC" .
+   [1 0 0 0 0 0 0])
+  ("KC_DLR" .
+   [1 0 0 0 0 0])
+  ("header" .
+   [0 0 0 0 1 0])
+  ("text-align" .
+   [0 0 0 0 0 0 0 1 0 0])
+  ("visited" .
+   [0 0 0 1 0 0 0])
+  ("vertical-align" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("collapse" .
+   [0 0 0 0 1 0 0 0])
+  ("border-collapse" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("linum-on" .
+   [0 0 0 0 0 0 1 0])
+  ("powerline-encoding" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("display-graphic-p" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("unless" .
+   [1 0 0 0 0 0])
+  ("mu4e-main-mode-hook" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("evil-mode" .
+   [0 0 0 0 0 0 1 0 0])
+  ("org-capture" .
+   [0 0 0 0 0 0 1 0 0 0 0])
+  ("org-grep" .
+   [0 0 0 0 0 1 0 0])
+  ("org-export" .
+   [1 0 0 0 0 0 1 0 0 0])
+  ("org" .
    [2 0 0])
-  ("violet" .
-   [1 0 0 1 0 0])
-  ("yellow" .
-   [2 0 0 0 0 0])))
+  ("FALSE" .
+   [0 0 0 1 0])
+  ("string" .
+   [4 0 0 0 0 0])
+  (":limit" .
+   [3 1 0 0 0 0])
+  (":users" .
+   [0 0 0 0 0 1])
+  ("down" .
+   [4 0 0 0])
+  ("up" .
+   [4 0])
+  ("Index" .
+   [2 0 0 0 0])
+  ("index" .
+   [1 0 0 0 0])
+  ("hello" .
+   [2 0 0 0 0])
+  ("page" .
+   [1 0 0 0])
+  ("br" .
+   [2 0])
+  ("org-shiftmetadown" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("org-shiftmetaleft" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("org-shiftmetaup" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("org-shiftmetaright" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("evil-org-mode-map" .
+   [1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("evil-define-key" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("echo" .
+   [0 0 0 1])
+  ("Hello" .
+   [2 0 0 0 1])
+  ("buf-coding" .
+   [0 0 0 3 0 0 1 0 0 0])
+  ("defun" .
+   [1 0 0 0 0])
+  ("buffer-file-coding-system" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("%s" .
+   [1 0])
+  ("seg5" .
+   [1 0 0 0])
+  ("powerline-buffer-id" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("seg4" .
+   [1 0 0 0])
+  ("global-mode-string" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("list" .
+   [1 0 0 0])
+  ("rhs" .
+   [1 0 0])
+  ("powerline-narrow" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("powerline-text-scale-factor" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("if" .
+   [1 0])
+  ("create_file" .
+   [0 0 0 1 0 0 0 0 0 0 0])
+  ("file_exists" .
+   [0 0 0 0 0 0 1 0 0 0 0])
+  ("Restaurant" .
+   [0 0 0 4 2 0 0 0 0 0])
+  ("launch" .
+   [1 0 0 0 0 0])
+  ("guide" .
+   [3 0 0 0 0])
+  ("conclusion" .
+   [0 0 0 1 0 0 0 0 0 0])
+  ("to" .
+   [1 0])
+  ("introduction" .
+   [0 0 0 0 0 0 0 1 0 0 0 0])
+  ("APP_ROOT" .
+   [0 0 1 0 0 0 0 0])
+  (":books" .
+   [0 0 1 0 0 0])
+  ("attr_accessor" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("initializeANSI" .
+   [0 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("bg1" .
+   [1 0 0])
+  (":background" .
+   [0 0 0 0 0 2 0 0 0 0 0])
+  ("rainbow-6" .
+   [1 0 0 0 0 0 0 0 0])
+  ("powerline-evil-base-face" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4 1 0 0 0])
+  ("~/.git-completion.bash" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("color-theme-sanityinc-tomorrow-night" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("mode-line-format" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("seg2" .
+   [6 0 0 0])
+  ("powerline-raw" .
+   [5 0 0 0 0 0 0 0 0 0 0 1 2])
+  ("mode-line" .
+   [3 0 0 0 0 0 0 0 0])
+  ("powerline-buffer-size" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0])
+  ("separator-right" .
+   [5 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  (":foreground" .
+   [1 0 0 0 0 2 1 1 0 0 0])
+  ("k" .
+   [1])
+  ("Require" .
+   [0 0 0 0 0 0 1])
+  ("org-mode" .
+   [1 0 0 0 0 0 0 0])
+  ("add-to-list" .
+   [0 0 0 0 0 0 1 1 0 0 0])
+  (":slant" .
+   [1 0 0 0 0 0])
+  ("linum" .
+   [1 0 0 0 1])
+  ("customize-face" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 2])
+  ("Custom" .
+   [1 0 0 0 0 0])
+  ("c" .
+   [2])
+  (":height" .
+   [1 0 0 0 0 0 0])
+  ("linum-mode" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("benchmark" .
+   [0 0 0 0 1 0 0 0 0])
+  ("robe-mode" .
+   [1 0 0 0 0 0 0 0 0])
+  ("nil" .
+   [6 0 0])
+  ("auto-complete-mode" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0])
+  ("auto-complete" .
+   [0 0 0 0 0 0 0 1 1 0 0 0 0])
+  ("diminish" .
+   [0 0 0 0 0 0 0 1])
+  (":config" .
+   [4 0 0 0 1 0 0])
+  ("use-package" .
+   [1 0 0 11 5 0 4 0 1 0 0])
+  ("length" .
+   [1 0 0 0 0 0])
+  ("word" .
+   [1 0 0 0])
+  ("memo" .
+   [1 0 0 1])
+  ("words" .
+   [0 0 0 1 0])
+  ("longest_word" .
+   [0 0 0 0 0 0 0 1 0 0 0 0])
+  ("mu4e-headers-mark-for-flag" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0])
+  ("mu4e-headers-mode-map" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("setq" .
+   [15 0 0 0])
+  ("auto-revert-mode" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("auto-revert" .
+   [0 0 0 0 0 0 1 0 0 0 0])
+  ("magit-status" .
+   [0 0 0 0 0 0 0 0 1 0 0 0])
+  ("overwrite-mode-binary" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("evil-insert-state" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("evil-forward-char" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0])
+  ("evil-next-line" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("evil-backward-char" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("evil-motion-state-map" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("evil-motion-state-local-map" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("evil-motions" .
+   [0 0 0 0 0 0 0 0 0 0 0 1])
+  ("motion" .
+   [1 0 0 0 0 0])
+  ("mu4e-view-mode-map" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
+  (":" .
+   [5])
+  ("overwrite-mode" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 1])
+  ("diminish-minor-mode" .
+   [1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1])
+  ("ruby-send-block" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("ruby-send-block-and-go" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("ruby-load-file" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("ruby-switch-to-inf" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("ruby-send-region" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("inf-ruby" .
+   [1 0 0 0 0 0 0 0])
+  ("kbd" .
+   [1 0 0])
+  ("ruby-mode-map" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("define-key" .
+   [1 0 0 0 0 0 2 0 0 0])
+  ("rand" .
+   [0 0 0 1])
+  ("aah" .
+   [0 0 3])
+  ("format" .
+   [1 0 0 0 1 0])
+  ("autoload" .
+   [0 0 0 0 1 0 0 0])
+  ("rainbow-delimiters-depth-1-face" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("~/Dropbox/emacs_backups/emacs.d.backup" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("the_number_of_the_iterator" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("fruits" .
+   [1 0 0 0 2 0])
+  ("fruit" .
+   [3 0 0 0 0])
+  ("each" .
+   [1 0 0 0])
+  ("times" .
+   [1 0 0 0 0])
+  ("find" .
+   [1 0 0 0])
+  ("detect" .
+   [0 0 0 0 1 0])
+  ("array" .
+   [1 0 0 0 0])
+  ("collect" .
+   [1 0 0 0 0 0 0])
+  ("binary-overwrite-mode" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("normal" .
+   [2 0 0 0 0 0])
+  ("require" .
+   [8 0 0 0 0 0 0])
+  ("unicode-fonts" .
+   [0 0 0 1 1 0 0 2 0 0 0 0 0])
+  ("unicode-fonts-setup" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0])
+  ("Animal" .
+   [1 0 0 0 4 0])
+  ("animal1" .
+   [0 0 0 0 1 0 0])
+  ("make_noise" .
+   [0 0 0 0 2 0 0 0 0 0])
+  ("new" .
+   [3 0 0])
+  ("species" .
+   [1 0 0 0 0 1 0])
+  ("cow" .
+   [1 0 0])
+  ("color" .
+   [1 0 0 0 0])
+  ("color-theme-sanityinc-tomorrow" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("load-theme" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("sanityinc-tomorrow-eighties" .
+   [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("mod" .
+   [1 0 0])
+  ("mode-line-buffer-id" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("!/usr/bin/env" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("separator-left" .
+   [6 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("powerline" .
+   [4 0 0 2 0 0 0 1 1])
+  ("mode-line-mule-info" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("rename-minor-mode" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  (":weight" .
+   [3 0 0 0 0 0 0])
+  ("bold" .
+   [4 0 0 0])
+  ("comment" .
+   [1 0 0 0 0 0 0])
+  ("dracula-theme" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0])
+  ("powerline-evil-normal-face" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("powerline-evil-insert-face" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0])
+  ("powerline-evil-visual-face" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3 0 0 0 0 0 0])
+  ("powerline-evil-operator-face" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 2 0 0 0 0 0 0 0 0])
+  ("powerline-evil-replace-face" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0])
+  ("powerline-evil-motion-face" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 2 0 0 0 0 0 0 0])
+  ("powerline-evil-emacs-face" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0])
+  ("rainbow-7" .
+   [2 0 0 0 0 0 0 0 0])
+  ("rainbow-5" .
+   [3 0 0 0 0 0 0 0 0])
+  ("powerline-evil" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  (":inherit" .
+   [3 0 0 0 0 0 1 0])
+  ("powerline-evil-tag" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("class" .
+   [1 0 0 1 1])
+  ("alias" .
+   [0 0 1 0 1])
+  ("file" .
+   [6 0 0 0])
+  ("line" .
+   [3 0 0 0])
+  ("File" .
+   [2 0 0 0])
+  ("each_line" .
+   [1 0 0 0 0 0 0 0 0])
+  ("result" .
+   [2 0 0 0 0 0])
+  (":quit" .
+   [1 0 0 0 0])
+  ("print" .
+   [1 0 0 0 0])
+  ("user_response" .
+   [0 0 0 0 0 0 0 2 0 0 0 0 0])
+  ("action" .
+   [5 0 0 0 0 1])
+  ("get_action" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("quit" .
+   [1 0 0 0])
+  ("actions" .
+   [3 0 1 0 0 0 0])
+  ("a" .
+   [3])
+  ("Guide::Config" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("join" .
+   [1 0 0 0])
+  ("powerline-height" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("buffer" .
+   [0 0 0 0 0 1])
+  ("projectile" .
+   [0 0 0 0 0 0 1 0 0 0])
+  ("projectile-root-local" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("seg3" .
+   [4 0 0 0])
+  ("restaurants" .
+   [2 0 0 0 0 1 0 0 0 0 0])
+  ("saved_restaurants" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("found" .
+   [2 0 0 0 0])
+  ("rest" .
+   [2 0 0 1])
+  ("name" .
+   [3 0 0 0])
+  ("downcase" .
+   [2 0 0 2 2 0 0 0])
+  ("include" .
+   [0 0 0 1 1 0 0])
+  ("keyword" .
+   [1 0 0 0 0 0 1])
+  ("cuisine" .
+   [2 0 0 0 1 0 0])
+  ("price" .
+   [4 0 0 0 0])
+  ("to_i" .
+   [3 0 0 0])
+  ("output_action_header" .
+   [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("output_restaurant_table" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("args" .
+   [3 0 1 0])
+  ("shift" .
+   [1 0 1 0 0])
+  ("sort_order" .
+   [0 0 2 0 4 0 0 0 0 0])
+  ("evil-org-mode" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("org-metaup" .
+   [0 0 0 0 0 0 0 0 1 0])
+  ("org-metadown" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("org-metaright" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("auto-mode-alist" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("web-mode" .
+   [1 0 0 0 0 0 0 0])
+  ("d" .
+   [1])
+  ("defvar" .
+   [1 0 0 0 0 0])
+  ("background" .
+   [0 0 0 0 0 0 2 0 0 0])
+  ("backgroundcolor" .
+   [1 0 0 0 0 0 0 0 0 0 1 0 1 0 0])
+  ("custom-set-faces" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("dracula" .
+   [0 0 0 0 0 0 1])
+  ("default" .
+   [0 0 0 0 0 1 0])
+  ("Background" .
+   [0 0 0 0 0 0 0 0 1 0])
+  ("substring" .
+   [1 0 0 0 0 0 0 0 0])
+  ("i" .
+   [1])
+  ("add-hook" .
+   [1 0 0 0 0 0 0 0])
+  ("mu4e" .
+   [1 0 0 0])
+  ("mu4e-main-mode" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("evil-motion-state" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("mu4e-headers" .
+   [0 0 0 0 0 0 0 0 0 1 0 0])
+  ("epa-file" .
+   [0 0 0 0 0 1 0 1])
+  ("epa-file-enable" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  (":default" .
+   [0 0 0 1 0 0 0 0])
+  ("Integer" .
+   [0 0 0 1 0 0 0])
+  ("integer" .
+   [1 0 0 0 0 0 0])
+  ("drop_table" .
+   [0 0 0 0 2 1 0 0 0 0])
+  (":subjects" .
+   [0 0 0 0 1 0 0 0 0])
+  (":pages" .
+   [0 0 1 0 0 0])
+  (":sections" .
+   [0 0 0 0 1 0 0 0 0])
+  ("add_index" .
+   [0 0 0 0 1 0 0 0 0])
+  ("display-time-mail-directory" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("-" .
+   [1])
+  ("display-time-load-average" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("r" .
+   [1])
+  ("l" .
+   [1])
+  (":load-path" .
+   [0 0 0 0 0 0 0 1 0 0])
+  ("set-face-attribute" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("fringe" .
+   [0 0 0 0 1 0])
+  ("ACTION_TAP_DANCE_DOUBLE" .
+   [0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("KC_GRV" .
+   [1 0 0 0 0 1])
+  ("TD_G_TILD" .
+   [0 0 0 1 1 0 0 0 0])
+  ("qk_tap_dance_state_t" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("state" .
+   [1 0 0 0 0])
+  ("user_data" .
+   [1 0 0 0 0 0 0 0 0])
+  ("KC_LSFT" .
+   [1 0 0 0 0 0 0])
+  ("unregister_code" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("KC_RBRC" .
+   [3 0 0 0 0 0 0])
+  ("i_rightr_i" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("KC_COPY" .
+   [1 0 0 0 0 0 0])
+  ("doom-enable-bold" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("doom-enable-bright-buffers" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("doom-enable-bright-minibuffer" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("doom" .
+   [1 0 0 0])
+  ("doom-enable-italic" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("orange" .
+   [1 0 0 0 0 0])
+  ("defpowerline" .
+   [0 0 0 0 0 0 0 0 1 0 0 0])
+  ("powerline-buffer-path" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("global-hl-line-mode" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("neotree-enter-horizontal-split" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("neotree-enter-vertical-split" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])))
