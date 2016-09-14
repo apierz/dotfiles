@@ -23,7 +23,7 @@ macro index,pager S "<tag-prefix><save-message>=archive<enter>\
   :set delete=yes<enter><sync-mailbox>:set delete=no<enter>"
 
  color status    black blue
- color indicator black green
+ color indicator black yellow
  color search    black blue 
  color markers   black blue
 

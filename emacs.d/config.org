@@ -1609,7 +1609,7 @@ I think my Powerline has gotten too busy and over complicated. I've been inspire
                           ,(if (eq id 'scratch) '(*buffer-pwd))))
 
                (rhs (list 
-                         ;; (*buffer-encoding-abbrev)
+                          (*buffer-encoding-abbrev)
                           (*vc) " "
                           (*major-mode) "  "
                           (propertize

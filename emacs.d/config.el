@@ -1178,6 +1178,7 @@ e.g. (doom-fix-unicode \"DejaVu Sans\" ?⚠ ?★ ?λ)"
   (defun *evil-substitute ()
     "Show number of :s matches in real time."
     (when (and (evil-ex-p) (evil-ex-hl-active-p 'evil-ex-substitute))
+
       (propertize
        (let ((range (if evil-ex-range
                         (cons (car evil-ex-range) (cadr evil-ex-range))
@@ -1241,7 +1242,7 @@ e.g. (doom-fix-unicode \"DejaVu Sans\" ?⚠ ?★ ?λ)"
                         ,(if (eq id 'scratch) '(*buffer-pwd))))
 
              (rhs (list 
-                       ;; (*buffer-encoding-abbrev)
+                        (*buffer-encoding-abbrev)
                         (*vc) " "
                         (*major-mode) "  "
                         (propertize
