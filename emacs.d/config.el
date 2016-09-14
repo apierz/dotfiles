@@ -189,7 +189,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 (load-theme 'doom-one t)
 
 (set-face-attribute 'default nil
-                     :family "Hack" :height 140)
+                     :family "Hack" :height 120)
 
  ;; (set-frame-parameter (selected-frame) 'alpha '(90 90))
  ;; (add-to-list 'default-frame-alist '(alpha 90 90))
@@ -513,12 +513,12 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 
 (linum-mode)
 (global-linum-mode)
-(setq linum-format "%4d \u2502 ")
-(set-face-attribute 'linum nil :slant 'normal)
+(setq linum-format "%3d ")
 (with-eval-after-load 'linum
 (linum-relative-toggle))
-(setq linum-relative-current-symbol "->")
 (setq linum-relative-plusp-offset 0)
+(setq linum-relative-current-symbol "->")
+(set-face-attribute 'linum-relative-current-face nil :foreground "#00b3ef" :background "#1f252b")
 
 (use-package smooth-scrolling
   :config
@@ -736,7 +736,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 
 (helm-projectile-on)
 
-(set-face-attribute 'helm-source-header nil :foreground "#ffb86c" :height 1.66)
+;; (set-face-attribute 'helm-source-header nil :foreground "#ffb86c" :height 1.66)
 
 (use-package mu4e)
 (require 'mu4e-multi)
