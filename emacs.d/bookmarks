@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("dotfiles"
+(("Notes"
+ (filename . "~/Dropbox/Notes/")
+ (front-context-string . "* Packing list.t")
+ (rear-context-string . "22 Aug 17 16:48 ")
+ (position . 196))
+("dotfiles"
  (filename . "~/Documents/dotfiles/")
  (front-context-string . "emacs.d\n  -rw-r-")
  (rear-context-string . "82 Sep 11 13:16 ")

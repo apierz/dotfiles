@@ -1,6 +1,6 @@
-((("setq" .
-   [4 0 0 0])
+((("linum-relative-" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
   ("linum-relative-current-symbol" .
    [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("linum-relative-" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])))
+  ("setq" .
+   [4 0 0 0])))
