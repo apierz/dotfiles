@@ -3,4 +3,12 @@
   ("linum-relative-current-symbol" .
    [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
   ("setq" .
-   [4 0 0 0])))
+   [5 0 0 0])
+  ("python-shell-interpreter" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("nil" .
+   [1 0 0])
+  ("python" .
+   [1 0 0 0 0 0])
+  ("add-to-list" .
+   [1 0 0 0 0 0 0 0 0 0 0])))

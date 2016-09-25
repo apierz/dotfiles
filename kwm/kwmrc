@@ -95,9 +95,9 @@ kwmc rule owner="Finder" role="AXDialog" properties={float="true"}
 # kwmc rule owner="Transmission" properties={role="AXDialog"}
 # kwmc rule owner="Transmission" role="AXDialog" properties={float="true"}
 
-kwmc rule properties={float="true"} owner="Deluge"
-kwmc rule properties={float="true"} owner="Deluge" name="Add Torrents"
-kwmc rule properties={float="true"} owner="Deluge" name="From URL"
+kwmc rule owner="Deluge" properties={float="true"}
+kwmc rule owner="Deluge" name="Add Torrents" properties={float="true"}
+kwmc rule owner="Deluge" name="From URL" properties={float="true"}
 
 /* The following commands create rules that
    blacklists an application from Kwms tiling

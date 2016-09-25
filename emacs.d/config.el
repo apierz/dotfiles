@@ -452,6 +452,9 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
   (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
 
 (setq org-ellipsis "…")
+(setq org-fontify-whole-heading-line t
+      org-fontify-done-headline t
+      org-fontify-quote-and-verse-blocks t)
 
 (setq org-cycle-separator-lines 0)
 
@@ -544,10 +547,14 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
             (rainbow-delimiters-mode)))
 
 (setq python-indent-offset 2)
+(setq flycheck-python-pycompile-executable "python3")
+(setq python-shell-interpreter "python3")
+(setq python-shell-native-complete nil)
 
 (add-hook 'python-mode-hook
  (lambda ()
    (flycheck-mode)
+   (rainbow-delimiters-mode)
    (yas-minor-mode)))
 
 (add-hook 'sh-mode-hook

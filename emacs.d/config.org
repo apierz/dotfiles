@@ -665,10 +665,12 @@ My todo system is fairly simple. =TODO= = unsorted, =ONDECK= = could be done at 
     (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
 #+END_SRC
 
-   Dracula Theme has recently revamped their =Org-mode= colors so I have switched to their defaults. I use a single character ellipsis, though sometimes switch to an arrow or other /fancy/ symbol.
-
+  Doom theme has nice looking org defaults so I don't mess with them too much. There are a few things that help though)
 #+BEGIN_SRC emacs-lisp
   (setq org-ellipsis "…")
+  (setq org-fontify-whole-heading-line t
+        org-fontify-done-headline t
+        org-fontify-quote-and-verse-blocks t)
 #+END_SRC
 
    I like some whitespace between my headings.
@@ -757,7 +759,7 @@ Something to work on, need to find a way to hide my password.
 
 This section is for stuff that helps with programming and coding. (note to self, look into diff-hl)
 
-** COMMENT General Stuff
+** General Stuff
 
 I like yasnippet for snippets, but I generally rely on auto-complete to speed up my coding.
 
@@ -824,10 +826,14 @@ A few other useful packages for coding.
 
 #+BEGIN_SRC emacs-lisp
   (setq python-indent-offset 2)
+  (setq flycheck-python-pycompile-executable "python3")
+  (setq python-shell-interpreter "python3")
+  (setq python-shell-native-complete nil)
 
   (add-hook 'python-mode-hook
    (lambda ()
      (flycheck-mode)
+     (rainbow-delimiters-mode)
      (yas-minor-mode)))
 
 #+END_SRC

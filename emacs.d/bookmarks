@@ -2,7 +2,17 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("Notes"
+(("homepage.html"
+ (filename . "~/Sites/homepage/homepage.html")
+ (front-context-string . "\n	\n	.block {\n		d")
+ (rear-context-string . "margin: auto;\n	}")
+ (position . 461))
+("nerdbar.widget"
+ (filename . "~/Library/Application Support/Übersicht/widgets/nerdbar.widget/")
+ (front-context-string . ".git\n  -rw-r--r-")
+ (rear-context-string . "76 Sep 21 08:21 ")
+ (position . 340))
+("Notes"
  (filename . "~/Dropbox/Notes/")
  (front-context-string . "* Packing list.t")
  (rear-context-string . "22 Aug 17 16:48 ")
