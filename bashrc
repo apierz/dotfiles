@@ -10,6 +10,7 @@ alias gp='git push origin master'
 alias rc='rails console'
 alias ks='tmux kill-session'
 alias df='cd ~/Documents/dotfiles'
+alias nb='cd ~/Library/Application\ Support/Übersicht/widgets/nerdbar.widget' 
 alias todo='emc ~/Dropbox\ (Personal)\notes\todo.txt'
 alias clock='tty-clock -c'
 
