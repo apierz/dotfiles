@@ -4,7 +4,6 @@
 
 (require 'package)
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
-(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 (add-to-list 'package-archives '("melpa-stable" .
 "http://stable.melpa.org/packages/"))
 
@@ -976,6 +975,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
           ;; Dependencies
           ;;
           (require 'powerline)
+          (require 'anaphora)
           (require 'all-the-icons)
           (use-package eldoc-eval
           :config
@@ -1127,7 +1127,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
                 (propertize (or (*buffer-path) "") 'face `(:inherit (,face doom-modeline-alternate)))
                 (propertize (or (*buffer-name) "") 'face face)
                 (propertize " " 'face face)
-                (if (*buffer-state) (concat it (propertize " " 'face face)))
+                (aif (*buffer-state) (concat it (propertize " " 'face face)))
                 )))
 
         (defun *major-mode ()
@@ -1324,7 +1324,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
                     (face-background 'doom-modeline-eldoc-bar)
                     nil))
 
-  (defun doom-eldoc-mode-line ()
+  (defun doom-eldoc-mode-line () 
     `(:eval
       (let ((active (eq (selected-window) doom-ml-selected-window)))
         (list (list (propertize " " 'display doom-eldoc-modeline-bar)

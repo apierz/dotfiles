@@ -1341,6 +1341,7 @@ I think my Powerline has gotten too busy and over complicated. I've been inspire
           ;; Dependencies
           ;;
           (require 'powerline)
+          (require 'anaphora)
           (require 'all-the-icons)
           (use-package eldoc-eval
           :config
@@ -1492,7 +1493,7 @@ I think my Powerline has gotten too busy and over complicated. I've been inspire
                 (propertize (or (*buffer-path) "") 'face `(:inherit (,face doom-modeline-alternate)))
                 (propertize (or (*buffer-name) "") 'face face)
                 (propertize " " 'face face)
-                (if (*buffer-state) (concat it (propertize " " 'face face)))
+                (aif (*buffer-state) (concat it (propertize " " 'face face)))
                 )))
 
         (defun *major-mode ()
@@ -1689,7 +1690,7 @@ I think my Powerline has gotten too busy and over complicated. I've been inspire
                     (face-background 'doom-modeline-eldoc-bar)
                     nil))
 
-  (defun doom-eldoc-mode-line ()
+  (defun doom-eldoc-mode-line () 
     `(:eval
       (let ((active (eq (selected-window) doom-ml-selected-window)))
         (list (list (propertize " " 'display doom-eldoc-modeline-bar)
