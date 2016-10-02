@@ -17,9 +17,12 @@ def main():
     loc_data = json.loads(loc_result.decode())
     latitude = str(loc_data['lat'])
     longitude = str(loc_data['lon'])
+    city = loc_data['city']
+    region = loc_data['region']
+    # print(city + region)
 
     baseurl = "https://query.yahooapis.com/v1/public/yql?"
-    yql_query = 'SELECT item.condition FROM weather.forecast where woeid in (SELECT woeid FROM geo.places WHERE text="(' + latitude + ',' + longitude + ')")'
+    yql_query = 'SELECT item.condition FROM weather.forecast where woeid in (SELECT woeid FROM geo.places(1) WHERE text="'+ city + ', ' + region + '")'
     yql_url = baseurl + urllib.parse.urlencode({'q':yql_query}) + "&format=json"
     result = urllib.request.urlopen(yql_url).read()
     data = json.loads(result.decode())

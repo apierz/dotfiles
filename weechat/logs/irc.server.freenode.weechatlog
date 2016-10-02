@@ -2045,3 +2045,6 @@
 2016-10-02 11:03:02	--	NickServ (NickServ@services.): This nickname is registered. Please choose a different nickname, or identify via /msg NickServ identify <password>.
 2016-10-02 11:03:02	--	NickServ (NickServ@services.): You are now identified for TheFactIs.
 2016-10-02 11:03:08	--	NickServ (NickServ@services.): You are already logged in as TheFactIs.
+2016-10-02 14:47:33	=!=	Closing Link: 2603:3024:152c:500:e8dd:6a45:bff4:15ae (Ping timeout: 272 seconds)
+2016-10-02 14:47:33	--	irc: disconnected from server
+2016-10-02 14:47:33	--	irc: reconnecting to server in 10 seconds

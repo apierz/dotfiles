@@ -2861,3 +2861,5 @@
 2016-10-02 11:02:36		script: 310 scripts for WeeChat 1.5
 2016-10-02 11:06:04	=!=	irc: unable to add temporary server "#/g/technology" because the addition of temporary servers with command /connect is currently disabled
 2016-10-02 11:06:04	=!=	irc: if you want to add a standard server, use the command "/server add" (see /help server); if you really want to add a temporary server (NOT SAVED), turn on the option irc.look.temporary_servers
+2016-10-02 14:47:42		python: scripts unloaded
+2016-10-02 14:47:42		perl: scripts unloaded
