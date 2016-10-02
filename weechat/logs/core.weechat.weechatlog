@@ -2853,3 +2853,11 @@
 2016-09-07 16:36:15		Option changed: irc.server.freenode.autojoin = "##kwm, #Mechboards, #raspberrypi"  (default if null: "")
 2016-09-07 16:42:39		python: scripts unloaded
 2016-09-07 16:42:39		perl: scripts unloaded
+2016-10-02 11:02:34		fifo: removing old fifo pipe "/Users/Andy/Documents/dotfiles/weechat/weechat_fifo_50878"
+2016-10-02 11:02:35		perl scripts loaded: buffers, iset
+2016-10-02 11:02:35		python scripts loaded: shell, shortenurl
+2016-10-02 11:02:35		script: downloading list of scripts...
+2016-10-02 11:02:35		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2016-10-02 11:02:36		script: 310 scripts for WeeChat 1.5
+2016-10-02 11:06:04	=!=	irc: unable to add temporary server "#/g/technology" because the addition of temporary servers with command /connect is currently disabled
+2016-10-02 11:06:04	=!=	irc: if you want to add a standard server, use the command "/server add" (see /help server); if you really want to add a temporary server (NOT SAVED), turn on the option irc.look.temporary_servers

@@ -828,3 +828,99 @@
 2016-09-07 16:36:28	--	CTCP reply to py-ctcp: VERSION WeeChat 1.5 (Aug 16 2016)
 2016-09-07 16:36:35	=!=	irc: this buffer is not a channel!
 2016-09-07 16:36:48	--	/g/technology :Illegal channel name
+2016-10-02 11:05:32	--	irc: connecting to server irc.rizon.net/6667...
+2016-10-02 11:05:33	--	irc: connected to irc.rizon.net/6667 (2607:5300:61:54c:f48c:2c9b:f00d:face)
+2016-10-02 11:05:33	--	* :Please wait while we process your connection.
+2016-10-02 11:05:33	--	irc.namreeb.org: *** Looking up your hostname...
+2016-10-02 11:05:33	--	irc.namreeb.org: *** Checking Ident
+2016-10-02 11:05:33	--	irc.namreeb.org: *** Couldn't look up your hostname
+2016-10-02 11:05:35	--	irc.namreeb.org: *** No Ident response
+2016-10-02 11:05:35	--	irc.namreeb.org: *** Your host is masked (CF2E9013:BC70E8E:A9ED14A0:IP)
+2016-10-02 11:05:35	--	Welcome to the Rizon Internet Relay Chat Network TheFactIs
+2016-10-02 11:05:35	--	Your host is irc.namreeb.org, running version hybrid-7.2.3+plexus-3.1.0(20151028_0-547)
+2016-10-02 11:05:35	--	This server was created May 30 2016 at 17:41:15
+2016-10-02 11:05:35	--	irc.namreeb.org hybrid-7.2.3+plexus-3.1.0(20151028_0-547) CDFGNRSUWXabcdfgijklnopqrsuwxyz BIMNORSabcehiklmnopqstvz Iabehkloqv
+2016-10-02 11:05:35	--	CALLERID CASEMAPPING=rfc1459 DEAF=D KICKLEN=160 MODES=4 NICKLEN=30 TOPICLEN=390 PREFIX=(qaohv)~&@%+ STATUSMSG=~&@%+ NETWORK=Rizon MAXLIST=beI:250 TARGMAX=ACCEPT:,KICK:1,LIST:1,NAMES:1,NOTICE:4,PRIVMSG:4,WHOIS:1 CHANTYPES=# :are supported by this server
+2016-10-02 11:05:35	--	CHANLIMIT=#:75 CHANNELLEN=50 EXCEPTS=e INVEX=I CHANMODES=beI,k,l,BCMNORScimnpstz AWAYLEN=160 ELIST=CMNTU SAFELIST NAMESX UHNAMES FNC KNOCK :are supported by this server
+2016-10-02 11:05:35	--	94CAAAX3N :your unique ID
+2016-10-02 11:05:35	--	There are 42 users and 19999 invisible on 15 servers
+2016-10-02 11:05:35	--	55 :IRC Operators online
+2016-10-02 11:05:35	--	1 :unknown connection(s)
+2016-10-02 11:05:35	--	19459 :channels formed
+2016-10-02 11:05:35	--	I have 20041 clients and 15 servers
+2016-10-02 11:05:35	--	20041 21459 :Current local users 20041, max 21459
+2016-10-02 11:05:35	--	20041 21459 :Current global users 20041, max 21459
+2016-10-02 11:05:35	--	- irc.namreeb.org Message of the Day -
+2016-10-02 11:05:35	--	-          oo                            
+2016-10-02 11:05:35	--	-
+2016-10-02 11:05:35	--	- 88d888b. dP d888888b .d8888b. 88d888b. 
+2016-10-02 11:05:35	--	- 88'  `88 88    .d8P' 88'  `88 88'  `88 
+2016-10-02 11:05:35	--	- 88       88  .Y8P    88.  .88 88    88 
+2016-10-02 11:05:35	--	- dP       dP d888888P `88888P' dP    dP
+2016-10-02 11:05:35	--	-
+2016-10-02 11:05:35	--	- Rizon Chat Network -- http://rizon.net
+2016-10-02 11:05:35	--	-
+2016-10-02 11:05:35	--	- Listening on ports: 6660 - 6669, 7000. SSL: 6697, 9999
+2016-10-02 11:05:35	--	-
+2016-10-02 11:05:35	--	- Rules:
+2016-10-02 11:05:35	--	- o No spamming or flooding
+2016-10-02 11:05:35	--	- o No clones or malicious bots
+2016-10-02 11:05:35	--	- o No takeovers
+2016-10-02 11:05:35	--	- o No distribution of child pornography
+2016-10-02 11:05:35	--	- o Clients must respond to VERSION requests
+2016-10-02 11:05:35	--	- o Rizon staff may disconnect clients for any or no reason
+2016-10-02 11:05:35	--	-
+2016-10-02 11:05:35	--	- First steps:
+2016-10-02 11:05:35	--	- o To register your nick: /msg NickServ HELP
+2016-10-02 11:05:35	--	- o To register your channel: /msg ChanServ HELP
+2016-10-02 11:05:35	--	- o To get a vHost: /msg HostServ HELP REQUEST
+2016-10-02 11:05:35	--	- o For other help with Rizon: /join #help
+2016-10-02 11:05:35	--	-
+2016-10-02 11:05:35	--	- Usage of this network is a privilege, not a right. Rizon is a
+2016-10-02 11:05:35	--	- transit provider, therefore no person or entity involved with
+2016-10-02 11:05:35	--	- *.rizon.net or irc.namreeb.org takes any responsibility for
+2016-10-02 11:05:35	--	- users' actions. Absolutely no warranty is expressed or implied.
+2016-10-02 11:05:35	--	End of /MOTD command.
+2016-10-02 11:05:35	--	User mode [+ix] by TheFactIs
+2016-10-02 11:05:35	--	CTCP requested by py-ctcp: VERSION
+2016-10-02 11:05:35	--	CTCP reply to py-ctcp: VERSION WeeChat 1.5 (Aug 16 2016)
+2016-10-02 11:05:35	--	Global (service@rizon.net): [Logon News - May 21 2011] First time on Rizon? Be sure to read the FAQ! http://s.rizon.net/FAQ
+2016-10-02 11:05:35	--	Global (service@rizon.net): [Logon News - Dec 16 2013] Own a large/active channel or plan to get one going? Please read http://s.rizon.net/authline
+2016-10-02 11:05:35	--	Global (service@rizon.net): [Random News - Nov 29 2013] Want to make your vhost shiny by adding colors to it? Try your luck in #VIzon
+2016-10-02 11:09:04	--	#rice: You need to identify to a registered nick to join that channel. Check /msg nickserv help register
+2016-10-02 11:09:55	--	MSG(nickserv): help register
+2016-10-02 11:09:55	--	NickServ (service@rizon.net): Syntax: REGISTER password [email]
+2016-10-02 11:09:55	--	NickServ (service@rizon.net):  
+2016-10-02 11:09:55	--	NickServ (service@rizon.net): Registers your nickname in the NickServ database.  Once
+2016-10-02 11:09:55	--	NickServ (service@rizon.net): your nick is registered, you can use the SET and ACCESS
+2016-10-02 11:09:55	--	NickServ (service@rizon.net): commands to configure your nick's settings as you like
+2016-10-02 11:09:55	--	NickServ (service@rizon.net): them.  Make sure you remember the password you use when
+2016-10-02 11:09:55	--	NickServ (service@rizon.net): registering - you'll need it to make changes to your nick
+2016-10-02 11:09:55	--	NickServ (service@rizon.net): later.  (Note that case matters!  ANOPE, Anope, and
+2016-10-02 11:09:55	--	NickServ (service@rizon.net): anope are all different passwords!)
+2016-10-02 11:09:55	--	NickServ (service@rizon.net):  
+2016-10-02 11:09:55	--	NickServ (service@rizon.net): Guidelines on choosing passwords:
+2016-10-02 11:09:55	--	NickServ (service@rizon.net):  
+2016-10-02 11:09:55	--	NickServ (service@rizon.net): Passwords should not be easily guessable.  For example,
+2016-10-02 11:09:55	--	NickServ (service@rizon.net): using your real name as a password is a bad idea.  Using
+2016-10-02 11:09:55	--	NickServ (service@rizon.net): your nickname as a password is a much worse idea ;) and,
+2016-10-02 11:09:55	--	NickServ (service@rizon.net): in fact, NickServ will not allow it.  Also, short
+2016-10-02 11:09:55	--	NickServ (service@rizon.net): passwords are vulnerable to trial-and-error searches, so
+2016-10-02 11:09:55	--	NickServ (service@rizon.net): you should choose a password at least 5 characters long.
+2016-10-02 11:09:55	--	NickServ (service@rizon.net): Finally, the space character cannot be used in passwords.
+2016-10-02 11:09:55	--	NickServ (service@rizon.net):  
+2016-10-02 11:09:55	--	NickServ (service@rizon.net): The parameter email is not optional on this
+2016-10-02 11:09:55	--	NickServ (service@rizon.net): network and is used to verify that you are who you
+2016-10-02 11:09:55	--	NickServ (service@rizon.net): say you are through a simple confirmation e-mail.
+2016-10-02 11:09:55	--	NickServ (service@rizon.net):  
+2016-10-02 11:09:55	--	NickServ (service@rizon.net): Your privacy is respected; this e-mail won't be given to
+2016-10-02 11:09:55	--	NickServ (service@rizon.net): any third-party person.
+2016-10-02 11:09:55	--	NickServ (service@rizon.net):  
+2016-10-02 11:09:55	--	NickServ (service@rizon.net): This command also creates a new group for your nickname,
+2016-10-02 11:09:55	--	NickServ (service@rizon.net): that will allow you to register other nicks later sharing
+2016-10-02 11:09:55	--	NickServ (service@rizon.net): the same configuration, the same set of memos and the
+2016-10-02 11:09:55	--	NickServ (service@rizon.net): same channel privileges. For more information on this
+2016-10-02 11:09:55	--	NickServ (service@rizon.net): feature, type /msg NickServ HELP GROUP.
+2016-10-02 11:09:55	--	NickServ (service@rizon.net):  
+2016-10-02 11:09:55	--	NickServ (service@rizon.net): Nicknames that are not identified to for 90 days automatically
+2016-10-02 11:09:55	--	NickServ (service@rizon.net): expire and are dropped from services.

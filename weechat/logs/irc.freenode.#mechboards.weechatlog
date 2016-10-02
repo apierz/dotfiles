@@ -1062,3 +1062,117 @@
 2016-09-06 08:01:31	<--	slipfish (~slipfish@unaffiliated/slipfish) has quit (Ping timeout: 244 seconds)
 2016-09-06 08:01:53	Toka	ye, could be either way. no point in early adopting stuff that bigger brands will gobble up if it's any good
 2016-09-06 08:02:50	<--	PraiseCisneros (b93d4872@gateway/web/freenode/ip.185.61.72.114) has quit (Ping timeout: 264 seconds)
+2016-10-02 11:04:01	-->	TheFactIs (~Andy@2603:3024:152c:500:e8dd:6a45:bff4:15ae) has joined #Mechboards
+2016-10-02 11:04:01	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2016-10-02 11:04:01	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 01:38:51
+2016-10-02 11:04:01	--	Channel #Mechboards: 255 nicks (0 ops, 0 voices, 255 normals)
+2016-10-02 11:04:02	--	Channel created on Wed, 20 Feb 2013 20:50:48
+2016-10-02 11:18:12	-->	fp7 (~fp7@unaffiliated/fp7) has joined #Mechboards
+2016-10-02 11:26:45	-->	jasq (5714f213@gateway/web/freenode/ip.87.20.242.19) has joined #Mechboards
+2016-10-02 11:26:53	jasq	hello
+2016-10-02 11:29:05	<--	damex (~damex@funtoo/dev/damex) has quit (Ping timeout: 265 seconds)
+2016-10-02 11:31:57	jasq	i'm messing around with keyboard-layout-editor trying to recreate the realforce anniversary edition colorset in DSA profile with icon modifiers, to maybe in the future (i'm a noob and i don't really know how these things work) have it made somehow. here's what i have so far-- http://imgur.com/a/l1934 any thoughts on the colors/icons? i still have to find suitable icons for the print/scroll lock/pause keys...
+2016-10-02 11:33:11	<--	Kixxy (~Kixxy@unaffiliated/kixxy) has quit (Ping timeout: 272 seconds)
+2016-10-02 11:34:56	-->	cbot (~FS@ool-2f12e4fc.dyn.optonline.net) has joined #Mechboards
+2016-10-02 11:50:55	<--	Wild_Cat (~Wild_Cat@69-165-135-43.dsl.teksavvy.com) has quit (Ping timeout: 272 seconds)
+2016-10-02 11:53:30	-->	MAD_JIHAD (~MAD_JIHAD@S01060023bee97887.gv.shawcable.net) has joined #Mechboards
+2016-10-02 11:54:05	jasq	:(
+2016-10-02 11:54:47	profet	slaytaner, http://pastebin.com/XX94KAGx
+2016-10-02 11:54:55	profet	quick C#  example
+2016-10-02 11:54:56	profet	:-P
+2016-10-02 11:58:53	skullY	p.StartInfo.FileName = "ps";
+2016-10-02 11:59:00	skullY	MicroSoft has really bad taste, to the core
+2016-10-02 11:59:09	<--	debris` (debris@gateway/shell/fnordserver.eu/x-daeknzxjfcregyrw) has quit (Ping timeout: 272 seconds)
+2016-10-02 11:59:32	skullY	I mean, that's not wrong, but it's a poor choice of name
+2016-10-02 12:01:02	profet	what would you prefer
+2016-10-02 12:01:11	profet	i mean... technically you are executing a file
+2016-10-02 12:02:25	skullY	program, binary, executable
+2016-10-02 12:02:53	skullY	but filename just rubs me the wrong way
+2016-10-02 12:03:05	profet	program (file)... binary... is wrong as it could be a script... executable (file)
+2016-10-02 12:03:06	profet	:-P
+2016-10-02 12:03:24	skullY	yeah, binary isn't a great choice either
+2016-10-02 12:03:55	profet	even in linux... its called a file...with the executable flag on
+2016-10-02 12:03:56	skullY	could just sidestep the whole issue and have only arguments
+2016-10-02 12:04:14	skullY	and the program to be executed is the first item in that array
+2016-10-02 12:04:25	skullY	that's how most languages handle it IME
+2016-10-02 12:04:32	profet	i was more trying to show lines 23-27 in that example
+2016-10-02 12:04:41	skullY	yeah, I know
+2016-10-02 12:04:45	profet	executing files is a weird use of C#
+2016-10-02 12:04:48	skullY	I was just making an offhand comment
+2016-10-02 12:04:55	slaytaner	aw man pid 1 ignores SIGKILL
+2016-10-02 12:05:10	SlabDabs	cheap blutooth keyboard got here, box says scissor switch
+2016-10-02 12:05:42	<--	jasq (5714f213@gateway/web/freenode/ip.87.20.242.19) has quit (Ping timeout: 240 seconds)
+2016-10-02 12:06:24	profet	skullY, i specifically like C# lambda syntax (line 24)
+2016-10-02 12:06:35	profet	super quick and easy
+2016-10-02 12:06:48	-->	theXavier (cf0b01a2@gateway/web/freenode/ip.207.11.1.162) has joined #Mechboards
+2016-10-02 12:07:29	-->	_rubik (~rubik@137.146.144.249) has joined #Mechboards
+2016-10-02 12:07:46	slaytaner	here's my python script https://gist.github.com/monty20python/bcb8e4f70be000e87a06ea20d45c8839
+2016-10-02 12:07:48		[ https://is.gd/D3HoQp ]
+2016-10-02 12:08:12	theXavier	Sup. This is dasUltimate89. Just checking this out, since I can't use discord at work for some reason or another. So, might as well talk to my people on this.
+2016-10-02 12:08:14	profet	ugh... your variable names
+2016-10-02 12:08:16	profet	stop that
+2016-10-02 12:08:19	skullY	profet: that does seem pretty handy
+2016-10-02 12:08:37	profet	slaytaner, thats a bad habit to get into
+2016-10-02 12:08:45	slaytaner	profet I know
+2016-10-02 12:09:12	theXavier	Hey, is that THE Skully?!
+2016-10-02 12:09:15	Saimeidae	yes
+2016-10-02 12:09:18	PhantomTaco	wait, there's a discord?
+2016-10-02 12:09:18	slaytaner	it seems like every python script has dumb variable names
+2016-10-02 12:09:21	theXavier	Sweet!
+2016-10-02 12:09:21	PhantomTaco	i may have to join this
+2016-10-02 12:09:22	Saimeidae	as in skullydazed
+2016-10-02 12:09:26	slaytaner	PhantomTaco: it's horrible
+2016-10-02 12:09:26	Saimeidae	PhantomTaco: there's a /r/mk discord
+2016-10-02 12:09:33	<--	Pegazz (~Pegazz@2a02:a03f:34e5:b000:e0e6:69bd:d439:5054) has quit (Read error: Connection reset by peer)
+2016-10-02 12:09:34	PhantomTaco	horrible huh?
+2016-10-02 12:09:34	skullY	theXavier: hi :)
+2016-10-02 12:09:48	_rubik	slaytaner: Redo that roulette in python, and have a 1 in 6 chance to rm -rf *
+2016-10-02 12:09:55	theXavier	I'm typing on my Clueboard as we speak.
+2016-10-02 12:09:59	skullY	slaytaner: why are you wrapping the map() in a list()? it should be returinng a sequence you can use
+2016-10-02 12:10:13	theXavier	Elizabeth is a joy to type on. (Yes, I name all of my keebs)
+2016-10-02 12:10:13	skullY	also, random.choice()
+2016-10-02 12:10:24	-->	debris` (debris@gateway/shell/fnordserver.eu/x-orxbfnklenoptvxd) has joined #Mechboards
+2016-10-02 12:10:27	skullY	theXavier: good to hear
+2016-10-02 12:10:42	skullY	which layout did you end up going with?
+2016-10-02 12:12:17	slaytaner	skullY: I need to strip a bunch of spaces from the output, how else would I do that
+2016-10-02 12:12:29	slaytaner	or input I guess
+2016-10-02 12:12:36	profet	slaytaner, thats what my lambda does
+2016-10-02 12:12:38	profet	:-P
+2016-10-02 12:13:04	PhantomTaco	man you know the worst thing about being into keyboards?
+2016-10-02 12:13:07	PhantomTaco	the wait.
+2016-10-02 12:13:39	skullY	slaytaner: see my comment
+2016-10-02 12:13:45	-->	LotharKAtt (~lelouch@194.61.48.251) has joined #Mechboards
+2016-10-02 12:15:02	-->	Pegazz (~Pegazz@109.129.224.70) has joined #Mechboards
+2016-10-02 12:15:16	<--	cbot (~FS@ool-2f12e4fc.dyn.optonline.net) has quit (Quit: Leaving)
+2016-10-02 12:15:35	theXavier	Hey, livingspeedbump is here too! Why have I not used this in the past?!
+2016-10-02 12:15:47	skullY	basically, you don't have to strip the entire output, just the output you're using
+2016-10-02 12:22:19	slaytaner	skullY: is this better https://gist.github.com/monty20python/bcb8e4f70be000e87a06ea20d45c8839
+2016-10-02 12:22:20		[ https://is.gd/D3HoQp ]
+2016-10-02 12:22:47	Saimeidae	theXavier: he's IN here but hasn't been around lately
+2016-10-02 12:23:10	skullY	slaytaner: yeah, that's looking better
+2016-10-02 12:23:38	skullY	some people would say you should put the int() on its own line, or as part of the original pid = line
+2016-10-02 12:23:45	skullY	but that's really a personal taste question
+2016-10-02 12:23:56	skullY	some people would say I should put the .strip() on its own line
+2016-10-02 12:24:33	slaytaner	I guess you could get a really long line of function calls
+2016-10-02 12:26:13	skullY	you could
+2016-10-02 12:26:22	skullY	line length is the only part of pep8 I don't follow
+2016-10-02 12:26:38	theXavier	Aww. His site and his boards helped me learn a lot. I always hoped he finished his site.
+2016-10-02 12:27:04	<--	crazyglitch (~crazyglit@72.173.191.61) has quit (Read error: Connection reset by peer)
+2016-10-02 12:27:33	-->	crazyglitch (~crazyglit@72.173.191.61) has joined #Mechboards
+2016-10-02 12:30:57	<--	LotharKAtt (~lelouch@194.61.48.251) has quit (Ping timeout: 244 seconds)
+2016-10-02 12:33:25	-->	KittenIgnition__ (~KittenIgn@2607:fea8:a75f:faa6:79b7:2d37:6764:448e) has joined #Mechboards
+2016-10-02 12:33:32	<--	KittenIgnition_ (~KittenIgn@CPEbc4dfbf17ed3-CMbc4dfbf17ed0.cpe.net.cable.rogers.com) has quit (Ping timeout: 244 seconds)
+2016-10-02 12:36:40	slaytaner	I think it's finished and ready for someone to run https://gist.github.com/monty20python/bcb8e4f70be000e87a06ea20d45c8839
+2016-10-02 12:36:41		[ https://is.gd/D3HoQp ]
+2016-10-02 12:40:54	slaytaner	it needs to be done as root though
+2016-10-02 12:43:52	-->	LotharKAtt (~lelouch@185.22.97.1) has joined #Mechboards
+2016-10-02 12:44:59	slaytaner	haha https://pbs.twimg.com/media/CtsVuKGWYAASlWH.jpg
+2016-10-02 12:45:00		[ https://is.gd/FaDQzk ]
+2016-10-02 12:46:51	<--	petsu (~ru@2400:6180:0:d0::383:e001) has quit (Ping timeout: 265 seconds)
+2016-10-02 13:03:18	-->	Wild_Cat (~Wild_Cat@69-165-135-43.dsl.teksavvy.com) has joined #Mechboards
+2016-10-02 13:03:26	-->	KittenIgnition_ (~KittenIgn@2607:fea8:a75f:faa6:79b7:2d37:6764:448e) has joined #Mechboards
+2016-10-02 13:04:23	<--	KittenIgnition__ (~KittenIgn@2607:fea8:a75f:faa6:79b7:2d37:6764:448e) has quit (Ping timeout: 272 seconds)
+2016-10-02 13:04:41	-->	Eszett (~PRIVATE@ipservice-092-217-188-164.092.217.pools.vodafone-ip.de) has joined #Mechboards
+2016-10-02 13:04:43	Eszett	hi
+2016-10-02 13:04:57	Eszett	test 123 (testing X-Chat, my new IRC client)
+2016-10-02 13:05:51	<--	MAD_JIHAD (~MAD_JIHAD@S01060023bee97887.gv.shawcable.net) has quit (Read error: Connection reset by peer)
