@@ -2863,3 +2863,11 @@
 2016-10-02 11:06:04	=!=	irc: if you want to add a standard server, use the command "/server add" (see /help server); if you really want to add a temporary server (NOT SAVED), turn on the option irc.look.temporary_servers
 2016-10-02 14:47:42		python: scripts unloaded
 2016-10-02 14:47:42		perl: scripts unloaded
+2016-10-03 15:16:57		fifo: removing old fifo pipe "/Users/Andy/Documents/dotfiles/weechat/weechat_fifo_4977"
+2016-10-03 15:16:58		perl scripts loaded: buffers, iset
+2016-10-03 15:16:58		python scripts loaded: shell, shortenurl
+2016-10-03 15:16:58		script: downloading list of scripts...
+2016-10-03 15:16:58		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2016-10-03 15:16:59		script: 310 scripts for WeeChat 1.5
+2016-10-03 15:17:35		python: scripts unloaded
+2016-10-03 15:17:35		perl: scripts unloaded
