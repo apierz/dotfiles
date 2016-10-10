@@ -2,16 +2,23 @@
 
 import json
 import urllib.request
+import socket
 
-def check_connectivity(reference):
+def check_connectivity(host="8.8.8.8", port=53, timeout=3):
+    """
+    Host: 8.8.8.8 (google-public-dns-a.google.com)
+    OpenPort: 53/tcp
+    Service: domain (DNS/TCP)
+    """
     try:
-        urllib.request.urlopen(reference, timeout=1)
-        return True
-    except urllib.request.URLError:
-        return False
+      socket.setdefaulttimeout(timeout)
+      socket.socket(socket.AF_INET, socket.SOCK_STREAM).connect((host, port))
+      return True
+    except Exception as ex:
+      return False
 
 def main():
-  if check_connectivity("http://www.google.com") == True:
+  if check_connectivity() == True:
     loc_json = "http://ip-api.com/json"
     loc_result = urllib.request.urlopen(loc_json).read()
     loc_data = json.loads(loc_result.decode())
