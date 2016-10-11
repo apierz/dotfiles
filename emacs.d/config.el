@@ -185,7 +185,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
    ;; brighter minibuffer when active
    (add-hook 'minibuffer-setup-hook 'doom-buffer-mode)
    (global-hl-line-mode)
-   (setq doom-enable-brighter-comments t)
+   ;; (setq doom-enable-brighter-comments t)
    (setq doom-enable-bold t)
    (setq doom-enable-italic t))
 
@@ -1440,44 +1440,44 @@ lines are selected, or the NxM dimensions of a block selection."
 
 (setq-default mode-line-format (doom-modeline))
 
-            ;;
-            ;; Eldoc-in-mode-line support (for `eval-expression')
-            ;;
+;;
+;; Eldoc-in-mode-line support (for `eval-expression')
+;;
 
-            (defvar doom-eldoc-modeline-bar
-              (pl/percent-xpm doom-modeline-height 100 0 100 0 3
-                              (face-background 'doom-modeline-eldoc-bar)
-                              nil))
+(defvar doom-eldoc-modeline-bar
+    (pl/percent-xpm doom-modeline-height 100 0 100 0 3
+                    (face-background 'doom-modeline-eldoc-bar)
+                    nil))
 
-            (defun doom-eldoc-mode-line () 
-              `(:eval
-                (let ((active (eq (selected-window) doom-ml-selected-window)))
-                  (list (list (propertize " " 'display doom-eldoc-modeline-bar)
-                              (and (bound-and-true-p str) str))
-                        (propertize " " 'display `((space :align-to (1- (+ right right-fringe right-margin)))))))))
+(defun doom-eldoc-mode-line () 
+    `(:eval
+    (let ((active (eq (selected-window) doom-ml-selected-window)))
+        (list (list (propertize " " 'display doom-eldoc-modeline-bar)
+                    (and (bound-and-true-p str) str))
+            (propertize " " 'display `((space :align-to (1- (+ right right-fringe right-margin)))))))))
 
-            (defun doom-eldoc-show-in-mode-line (input)
-              "Display string STR in the mode-line next to minibuffer."
-              (with-current-buffer (eldoc-current-buffer)
-                (let* ((max              (window-width (selected-window)))
-                       (str              (and (stringp input) (concat " " input)))
-                       (len              (length str))
-                       (tmp-str          str)
-                       (mode-line-format (or (and str (doom-eldoc-mode-line))
-                                             mode-line-format))
-                       roll mode-line-in-non-selected-windows)
-                  (catch 'break
-                    (if (and (> len max) eldoc-mode-line-rolling-flag)
-                        (progn
-                          (while (setq roll (sit-for 0.3))
-                            (setq tmp-str (substring tmp-str 2)
-                                  mode-line-format (concat tmp-str " [<]" str))
-                            (force-mode-line-update)
-                            (when (< (length tmp-str) 2) (setq tmp-str str)))
-                          (unless roll
-                            (when eldoc-mode-line-stop-rolling-on-input
-                              (setq eldoc-mode-line-rolling-flag nil))
-                            (throw 'break nil)))
-                      (force-mode-line-update)
-                      (sit-for eldoc-show-in-mode-line-delay))))
-                (force-mode-line-update)))
+(defun doom-eldoc-show-in-mode-line (input)
+    "Display string STR in the mode-line next to minibuffer."
+    (with-current-buffer (eldoc-current-buffer)
+    (let* ((max              (window-width (selected-window)))
+            (str              (and (stringp input) (concat " " input)))
+            (len              (length str))
+            (tmp-str          str)
+            (mode-line-format (or (and str (doom-eldoc-mode-line))
+                                    mode-line-format))
+            roll mode-line-in-non-selected-windows)
+        (catch 'break
+        (if (and (> len max) eldoc-mode-line-rolling-flag)
+            (progn
+                (while (setq roll (sit-for 0.3))
+                (setq tmp-str (substring tmp-str 2)
+                        mode-line-format (concat tmp-str " [<]" str))
+                (force-mode-line-update)
+                (when (< (length tmp-str) 2) (setq tmp-str str)))
+                (unless roll
+                (when eldoc-mode-line-stop-rolling-on-input
+                    (setq eldoc-mode-line-rolling-flag nil))
+                (throw 'break nil)))
+            (force-mode-line-update)
+            (sit-for eldoc-show-in-mode-line-delay))))
+    (force-mode-line-update)))

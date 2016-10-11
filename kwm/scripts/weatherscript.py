@@ -29,14 +29,34 @@ def main():
     # print(city + region)
 
     baseurl = "https://query.yahooapis.com/v1/public/yql?"
-    yql_query = 'SELECT item.condition FROM weather.forecast where woeid in (SELECT woeid FROM geo.places(1) WHERE text="'+ city + ', ' + region + '")'
+    yql_query = 'SELECT * FROM weather.forecast where woeid in (SELECT woeid FROM geo.places(1) WHERE text="'+ city + ', ' + region + '")'
     yql_url = baseurl + urllib.parse.urlencode({'q':yql_query}) + "&format=json"
     result = urllib.request.urlopen(yql_url).read()
     data = json.loads(result.decode())
-    print(data['query']['results']['channel']['item']['condition']['temp'] + '@' + data['query']['results']['channel']['item']['condition']['code'])
+    print(data['query']['results']['channel']['item']['condition']['temp'] + '@' +
+          data['query']['results']['channel']['item']['condition']['code'] +'@' +
+          data['query']['results']['channel']['item']['forecast'][0]['low'] + '@' +
+          data['query']['results']['channel']['item']['forecast'][0]['high'] + '@' +
+          data['query']['results']['channel']['item']['forecast'][0]['code'] + '@' +
+          data['query']['results']['channel']['item']['forecast'][0]['date'] + '@' +
+          data['query']['results']['channel']['item']['forecast'][1]['low'] + '@' +
+          data['query']['results']['channel']['item']['forecast'][1]['high'] + '@' +
+          data['query']['results']['channel']['item']['forecast'][1]['code'] + '@' +
+          data['query']['results']['channel']['item']['forecast'][1]['date'] + '@' +
+          data['query']['results']['channel']['item']['forecast'][2]['low'] + '@' +
+          data['query']['results']['channel']['item']['forecast'][2]['high'] + '@' +
+          data['query']['results']['channel']['item']['forecast'][2]['code'] + '@' +
+          data['query']['results']['channel']['item']['forecast'][2]['date'] + '@' +
+          data['query']['results']['channel']['item']['forecast'][3]['low'] + '@' +
+          data['query']['results']['channel']['item']['forecast'][3]['high'] + '@' +
+          data['query']['results']['channel']['item']['forecast'][3]['code'] + '@' +
+          data['query']['results']['channel']['item']['forecast'][3]['date'] + '@' +
+          data['query']['results']['channel']['item']['forecast'][4]['low'] + '@' +
+          data['query']['results']['channel']['item']['forecast'][4]['high'] + '@' +
+          data['query']['results']['channel']['item']['forecast'][4]['code'] + '@' +
+          data['query']['results']['channel']['item']['forecast'][4]['date'])
   else:
     print("--@99")
 
-    
 main()
 
