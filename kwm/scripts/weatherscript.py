@@ -26,7 +26,7 @@ def main():
     longitude = str(loc_data['lon'])
     city = loc_data['city']
     region = loc_data['region']
-    # print(city + region)
+    # print(city + ", " + region)
 
     baseurl = "https://query.yahooapis.com/v1/public/yql?"
     yql_query = 'SELECT * FROM weather.forecast where woeid in (SELECT woeid FROM geo.places(1) WHERE text="'+ city + ', ' + region + '")'
