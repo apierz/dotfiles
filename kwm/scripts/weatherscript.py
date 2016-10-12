@@ -38,23 +38,23 @@ def main():
           data['query']['results']['channel']['item']['forecast'][0]['low'] + '@' +
           data['query']['results']['channel']['item']['forecast'][0]['high'] + '@' +
           data['query']['results']['channel']['item']['forecast'][0]['code'] + '@' +
-          data['query']['results']['channel']['item']['forecast'][0]['date'] + '@' +
+          data['query']['results']['channel']['item']['forecast'][0]['day'] + '@' +
           data['query']['results']['channel']['item']['forecast'][1]['low'] + '@' +
           data['query']['results']['channel']['item']['forecast'][1]['high'] + '@' +
           data['query']['results']['channel']['item']['forecast'][1]['code'] + '@' +
-          data['query']['results']['channel']['item']['forecast'][1]['date'] + '@' +
+          data['query']['results']['channel']['item']['forecast'][1]['day'] + '@' +
           data['query']['results']['channel']['item']['forecast'][2]['low'] + '@' +
           data['query']['results']['channel']['item']['forecast'][2]['high'] + '@' +
           data['query']['results']['channel']['item']['forecast'][2]['code'] + '@' +
-          data['query']['results']['channel']['item']['forecast'][2]['date'] + '@' +
+          data['query']['results']['channel']['item']['forecast'][2]['day'] + '@' +
           data['query']['results']['channel']['item']['forecast'][3]['low'] + '@' +
           data['query']['results']['channel']['item']['forecast'][3]['high'] + '@' +
           data['query']['results']['channel']['item']['forecast'][3]['code'] + '@' +
-          data['query']['results']['channel']['item']['forecast'][3]['date'] + '@' +
+          data['query']['results']['channel']['item']['forecast'][3]['day'] + '@' +
           data['query']['results']['channel']['item']['forecast'][4]['low'] + '@' +
           data['query']['results']['channel']['item']['forecast'][4]['high'] + '@' +
           data['query']['results']['channel']['item']['forecast'][4]['code'] + '@' +
-          data['query']['results']['channel']['item']['forecast'][4]['date'])
+          data['query']['results']['channel']['item']['forecast'][4]['day'])
   else:
     print("--@99")
 
