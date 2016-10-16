@@ -15,11 +15,9 @@ def check_connectivity(host="8.8.8.8", port=53, timeout=3):
       socket.setdefaulttimeout(timeout)
       socket.socket(socket.AF_INET, socket.SOCK_STREAM).connect((host, port))
       return True
-    except (HTTPError, URLError) as error:
-      return False
     except socket.timeout:
         return False
-    else:
+    except socket.error:
         return False
 
 def main():

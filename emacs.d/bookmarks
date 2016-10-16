@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("homepage.html"
+(("scripts"
+ (filename . "~/.kwm/scripts/")
+ (front-context-string . "compstatus\n  -rw")
+ (rear-context-string . "34 Oct 12 08:28 ")
+ (position . 225))
+("homepage.html"
  (filename . "~/Sites/homepage/homepage.html")
  (front-context-string . "\n	\n	.block {\n		d")
  (rear-context-string . "margin: auto;\n	}")
