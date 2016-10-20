@@ -2,7 +2,22 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("scripts"
+(("toj"
+ (filename . "~/Dropbox (MUTDUT)/MUTDUT Team Folder/Andy (Public)/Legal/Patents/MDT Stamp Version/MDT_SV_claims_draft.org")
+ (front-context-string)
+ (rear-context-string . " tie comprising\n")
+ (position . 951))
+("org-capture-last-stored"
+ (filename . "~/Dropbox/Notes/todo.txt")
+ (front-context-string . "** TODO install ")
+ (rear-context-string . "for offlineimap\n")
+ (position . 1876))
+("3D Files"
+ (filename . "~/Dropbox (MUTDUT)/MUTDUT Team Folder/Andy (Private)/3D Files/")
+ (front-context-string . ".DS_Store\n  drwx")
+ (rear-context-string . "96 Aug  3 14:50 ")
+ (position . 275))
+("scripts"
  (filename . "~/.kwm/scripts/")
  (front-context-string . "compstatus\n  -rw")
  (rear-context-string . "34 Oct 12 08:28 ")

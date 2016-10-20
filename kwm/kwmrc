@@ -101,6 +101,8 @@ kwmc rule owner="Deluge" properties={float="true"}
 kwmc rule owner="Deluge" name="Add Torrents" properties={float="true"}
 kwmc rule owner="Deluge" name="From URL" properties={float="true"}
 
+kwmc rule owner="Steam" properties={float="true"}
+
 /* The following commands create rules that
    blacklists an application from Kwms tiling
 
