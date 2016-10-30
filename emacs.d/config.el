@@ -174,8 +174,8 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
     (funcall (and initial-major-mode))
     (setq buffer-offer-save t)))
 
-;;(use-package dracula-theme)
-;;(load-theme 'dracula t)
+;; (use-package dracula-theme)
+;; (load-theme 'dracula t)
 
 (use-package doom-themes
   :config
@@ -189,7 +189,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
    (setq doom-enable-bold t)
    (setq doom-enable-italic t))
 
-(load-theme 'doom-one t)
+ (load-theme 'doom-one t)
 
 (set-face-attribute 'default nil
                      :family "Hack" :height 120)
@@ -946,7 +946,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 ;; Custom faces
 ;;
 
-(defface doom-modeline-buffer-path '((t (:inherit mode-line :forefround "#51afef" :bold t)))
+(defface doom-modeline-buffer-path '((t (:inherit mode-line :foreground white :bold t)))
 "Face used for the dirname part of the buffer path.")
 
 (defface doom-modeline-buffer-project
@@ -1246,8 +1246,9 @@ character encoding (if it isn't UTF-8)."
                       :v-adjust -0.05)))
               " "
               (propertize (substring vc-mode (+ (if (eq backend 'Hg) 2 3) 2))
-                          'face (if active face))
-              "  "))))
+                          'face (if active face))             
+              "  "
+              (propertize " " 'face 'variable-pitch)))))
 
 (defvar-local doom--flycheck-err-cache nil "")
 (defvar-local doom--flycheck-cache nil "")

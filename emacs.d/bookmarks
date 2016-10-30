@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("toj"
+(("des"
+ (filename . "~/Documents/dotfiles/emacs.d/config.org")
+ (front-context-string . "ne-buffer-projec")
+ (rear-context-string . "face doom-modeli")
+ (position . 46805))
+("toj"
  (filename . "~/Dropbox (MUTDUT)/MUTDUT Team Folder/Andy (Public)/Legal/Patents/MDT Stamp Version/MDT_SV_claims_draft.org")
  (front-context-string)
  (rear-context-string . " tie comprising\n")

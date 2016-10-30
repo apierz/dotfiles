@@ -12,6 +12,7 @@ alias ks='tmux kill-session'
 alias df='cd ~/Documents/dotfiles'
 alias nb='cd ~/Library/Application\ Support/Übersicht/widgets/nerdbar.widget' 
 alias todo='emc ~/Dropbox/notes/todo.txt'
+alias notes='cd ~/Dropbox/notes'
 alias clock='tty-clock -c'
 
 source ~/.git-completion.bash
