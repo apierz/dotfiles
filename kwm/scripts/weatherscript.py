@@ -3,9 +3,10 @@
 import json
 import urllib.request
 import socket
-from socket import AF_INET, SOCK_STREAM
+from socket import AF_INET, SOCK_STREAM, timeout
+from urllib.error import URLError, HTTPError
 
-def check_connectivity(host="8.8.8.8", port=53, timeout=3):
+def check_connectivity(host="8.8.8.8", port=53, timeout=6):
     """
     Host: 8.8.8.8 (google-public-dns-a.google.com)
     OpenPort: 53/tcp
@@ -18,6 +19,8 @@ def check_connectivity(host="8.8.8.8", port=53, timeout=3):
     except socket.timeout:
         return False
     except socket.error:
+        return False
+    else:
         return False
 
 def main():
@@ -59,8 +62,14 @@ def main():
           data['query']['results']['channel']['item']['forecast'][4]['high'] + '@' +
           data['query']['results']['channel']['item']['forecast'][4]['code'] + '@' +
           data['query']['results']['channel']['item']['forecast'][4]['day'])
-    except urlib.error:
-        print("--@99")
+    except HTTPError:
+        print("")
+    except URLError:
+        print("")
+    except timeout:
+        print("")
+    else:
+        print("")
   else:
     print("--@99")
 
