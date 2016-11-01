@@ -42,4 +42,6 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(doom-modeline-buffer-project ((t (:foreground "white" :weight normal))))
- '(markdown-url-face ((t (:foreground "#ECBE7B" :weight normal)))))
+ '(evil-ex-info ((t (:foreground "#ff6c6b" :slant italic))))
+ '(markdown-url-face ((t (:foreground "#ECBE7B" :weight normal))))
+ '(neo-vc-user-face ((t (:foreground "chartreuse" :slant italic)))))

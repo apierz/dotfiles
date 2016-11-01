@@ -63,13 +63,17 @@ def main():
           data['query']['results']['channel']['item']['forecast'][4]['code'] + '@' +
           data['query']['results']['channel']['item']['forecast'][4]['day'])
     except HTTPError:
-        print("")
+        print("--@99")
+        return
     except URLError:
-        print("")
+        print("--@99")
+        return
     except timeout:
-        print("")
+        print("--@99")
+        return
     else:
-        print("")
+        print("--@99")
+        return
   else:
     print("--@99")
 

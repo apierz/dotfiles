@@ -252,12 +252,12 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
   :config
   (key-chord-mode 1))
 
-(key-chord-define evil-insert-state-map "hh" 'evil-normal-state)
+(key-chord-define evil-insert-state-map "jk" 'evil-normal-state)
 (key-chord-define evil-insert-state-map ",," "<")
 (key-chord-define evil-insert-state-map ".." ">")
-(key-chord-define evil-replace-state-map "hh" 'evil-normal-state)
-(key-chord-define evil-visual-state-map "hh" 'evil-normal-state)
-(key-chord-define evil-motion-state-map "hh" 'evil-normal-state)
+(key-chord-define evil-replace-state-map "jk" 'evil-normal-state)
+(key-chord-define evil-visual-state-map "jk" 'evil-normal-state)
+(key-chord-define evil-motion-state-map "jk" 'evil-normal-state)
 (evil-define-key 'normal dired-mode-map "h" 'dired-up-directory)
 (evil-define-key 'normal dired-mode-map "l" 'dired-find-alternate-file)
 (evil-define-key 'normal dired-mode-map "v" 'dired-toggle-marks)
@@ -388,7 +388,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 (use-package helm-config)
 (global-set-key (kbd "C-x b") 'helm-buffers-list)
 (global-set-key (kbd "C-x r b") 'helm-bookmarks)
-(global-set-key (kbd "C-X m") 'helm-M-x)
+(global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "M-y") 'helm-show-kill-ring)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 
