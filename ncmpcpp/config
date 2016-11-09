@@ -220,20 +220,20 @@ song_library_format = {%n - }{%t}|{%f}
 ##
 #
 #alternative_header_first_line_format = $b$1$aqqu$/a$9 {%t}|{%f} $1$atqq$/a$9$/b
-alternative_header_first_line_format = $7$aqqu$/a$9 {$5%t$9}|{%f} $7$atqq$/a$9
+alternative_header_first_line_format = $3$aqqu$/a$9 {$8%t$9}|{%f} $3$atqq$/a$9
 #
 #alternative_header_second_line_format = {{$4$b%a$/b$9}{ - $7%b$9}{ ($4%y$9)}}|{%D}
-alternative_header_second_line_format = {{$7%a$9}{ - $4%b$9}{ ($7%y$9)}}|{%D}
+alternative_header_second_line_format = {{$3%a$9}{ - $6%b$9}{ ($3%y$9)}}|{%D}
 #
 ##
 ## Note: below variables also support text attributes listed above.
 ##
 #
 #now_playing_prefix = $b
-now_playing_prefix = $b$3-> 
+now_playing_prefix = $b$3** 
 #
 #now_playing_suffix = $/b
-now_playing_suffix = <-$9$/b
+now_playing_suffix = **$9$/b
 #
 #browser_playlist_prefix = "$2playlist$9 "
 #
@@ -284,7 +284,7 @@ now_playing_suffix = <-$9$/b
 ##
 #
 #song_columns_list_format = (20)[]{a} (6f)[green]{NE} (50)[white]{t|f:Title} (20)[cyan]{b} (7f)[magenta]{l}
-song_columns_list_format =  (20)[blue]{ar} (50)[yellow]{t|f:Title} (20)[yellow]{b} (7f)[blue]{l}
+song_columns_list_format =  (15)[magenta]{ar} (30)[yellow]{t|f:Title} (20)[green]{br} (7f)[yellow]{l}
 #
 ##### various settings #####
 #
@@ -497,19 +497,19 @@ colors_enabled = yes
 empty_tag_color = cyan
 #
 #header_window_color = default
-header_window_color = blue
+header_window_color = magenta
  
 #volume_color = default
 volume_color = yellow
 #
 #state_line_color = default
-state_line_color = cyan
+state_line_color = green
 #
 #state_flags_color = default
 state_flags_color = yellow
 #
 #main_window_color = yellow
-main_window_color = blue
+main_window_color = magenta
 #
 #color1 = white
 color1 = red
@@ -521,13 +521,13 @@ color2 = yellow
 main_window_highlight_color = cyan
  
 #progressbar_color = black
-progressbar_color = blue
+progressbar_color = yellow
 #
 #progressbar_elapsed_color = green
-progressbar_elapsed_color = yellow
+progressbar_elapsed_color = magenta
 #
 #statusbar_color = cyan
-statusbar_color = blue
+statusbar_color = magenta
 #
 #alternative_ui_separator_color = black
 alternative_ui_separator_color = yellow
@@ -539,8 +539,8 @@ active_column_color = yellow
 visualizer_color = yellow
 #
 #window_border_color = green
-window_border_color = blue
+window_border_color = magenta
 #
 #active_window_border = red
-active_window_border = blue
+active_window_border = magenta
 #

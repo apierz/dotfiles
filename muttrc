@@ -22,10 +22,10 @@ macro index A ":set confirmappend=no delete=yes\n<save-message>=archive\n<sync-m
 macro index,pager S "<tag-prefix><save-message>=archive<enter>\
   :set delete=yes<enter><sync-mailbox>:set delete=no<enter>"
 
- color status    black blue
+ color status    black green
  color indicator black yellow
- color search    black blue 
- color markers   black blue
+ color search    black magenta 
+ color markers   black yellow
 
 #SMTP
 

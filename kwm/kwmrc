@@ -75,11 +75,18 @@ kwmc config cycle-focus on
    kwmc config display 1 padding 100 100 100 100
    kwmc config display 1 gap 40 40 */
 
+kwmc config space 0 1 name iTerm
+kwmc config space 0 2 name Emacs
+kwmc config space 0 3 name www
+
+
+
 // Set default container split-ratio
 kwmc config split-ratio 0.5
 
 // New splits become the left leaf-node
 kwmc config spawn right
+
 
 /* Add custom tiling rules for applications that
    does not get tiled by Kwm by default.
@@ -118,20 +125,20 @@ kwmc rule owner="Steam" properties={float="true"}
 // Enable border for focused window
 kwmc config border focused on
 kwmc config border focused size 2
-kwmc config border focused color 0xFF00b3ef
+kwmc config border focused color 0xFFf92672
 kwmc config border focused radius 6
 
 // Enable border for marked window
 kwmc config border marked on
 kwmc config border marked size 2
-kwmc config border marked color 0xFFecbe7b
+kwmc config border marked color 0xFFfd971f
 kwmc config border marked radius 6
 
 // Enable the prefix mode
 kwmc mode prefix prefix on
 kwmc mode prefix timeout 1
 kwmc mode prefix restore default
-kwmc mode prefix color 0xFF7bc275
+kwmc mode prefix color 0xFFb6e63e
 
 /*  Default Keybinds */
 // Activate prefix mode

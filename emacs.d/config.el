@@ -189,7 +189,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
    (setq doom-enable-bold t)
    (setq doom-enable-italic t))
 
- (load-theme 'doom-one t)
+ (load-theme 'doom-molokai t)
 
 (set-face-attribute 'default nil
                      :family "Hack" :height 120)
@@ -946,7 +946,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 ;; Custom faces
 ;;
 
-(defface doom-modeline-buffer-path '((t (:inherit mode-line :foreground white :bold t)))
+(defface doom-modeline-buffer-path '((t (:inherit mode-line :bold t)))
 "Face used for the dirname part of the buffer path.")
 
 (defface doom-modeline-buffer-project
@@ -1252,6 +1252,7 @@ character encoding (if it isn't UTF-8)."
 
 (defvar-local doom--flycheck-err-cache nil "")
 (defvar-local doom--flycheck-cache nil "")
+
 (defun *flycheck ()
   "Persistent and cached flycheck indicators in the mode-line."
   (when (and (featurep 'flycheck) flycheck-mode)
@@ -1272,18 +1273,21 @@ character encoding (if it isn't UTF-8)."
                  (setq doom--flycheck-cache
                        (let ((fw (doom-ml-flycheck-count 'warning))
                              (fe (doom-ml-flycheck-count 'error)))
-                         (concat (if fe (concat
-                                         " "
+                         (concat (if (or fe fw) " ")
+                                 (if fe (concat
                                          (all-the-icons-octicon "circle-slash" :face 'doom-modeline-urgent :height 1.0 :v-adjust 0)
                                          (propertize " " 'face 'variable-pitch)
-                                         (propertize (format "%d" fe) 'face 'doom-modeline-urgent)))
-                                 (if fw (concat
+                                         (propertize (format "%d" fe) 'face 'doom-modeline-urgent)
                                          " "
+                                         ))
+                                 (if fw (concat
                                          (all-the-icons-octicon "alert" :face 'doom-modeline-warning :height 0.9 :v-adjust 0)
                                          (propertize " " 'face 'variable-pitch)
                                          (propertize (format "%d" fw) 'face 'doom-modeline-warning)
+                                         " "
                                          ))
-                                 (unless (or fe fw)
+                                 (if (or fe fw)
+                                     " "
                                    (when (active)
                                      (all-the-icons-octicon "check" :height 1.2 :v-adjust -0.06))))))))
       (concat
@@ -1292,7 +1296,7 @@ character encoding (if it isn't UTF-8)."
                               :face (if (active) 'doom-modeline-info)
                               :height 1.2
                               :v-adjust -0.06)
-       " "))))
+       " ")))) 
 
 (defun *selection-info ()
   "Information about the current selection, such as how many characters and

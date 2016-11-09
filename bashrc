@@ -20,7 +20,8 @@ source ~/.bash_git
 
 GIT_PS1_SHOWDIRTYSTATE=1
 
-PS1='\[\033[30;44m\]\[\033[44;90m\]\W\[\033[34;43m\]\[\033[43;90m\]$(__git_ps1 "  %s ")\[\033[33;46m\]  \[\033[0m\]\[\033[36m\]\[\033[0m\] '
+PS1='\[\033[30;42m\]\[\033[32;90m\]\W\[\033[32;103m\]\[\033[30;103m\]$(__git_ps1 "  %s ")\[\033[93;45m\]  \[\033[0m\]\[\033[35m\]\[\033[0m\] '
+
 
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$PATH"
 eval "$(rbenv init -)"
