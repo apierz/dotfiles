@@ -78,6 +78,7 @@ kwmc config cycle-focus on
 kwmc config space 0 1 name iTerm
 kwmc config space 0 2 name Emacs
 kwmc config space 0 3 name www
+kwmc config space 0 4 name video
 
 
 

@@ -2871,3 +2871,33 @@
 2016-10-03 15:16:59		script: 310 scripts for WeeChat 1.5
 2016-10-03 15:17:35		python: scripts unloaded
 2016-10-03 15:17:35		perl: scripts unloaded
+2016-11-09 20:58:44		fifo: removing old fifo pipe "/Users/Andy/Documents/dotfiles/weechat/weechat_fifo_12868"
+2016-11-09 20:58:44		perl scripts loaded: buffers, iset
+2016-11-09 20:58:45		python scripts loaded: shell, shortenurl
+2016-11-09 20:58:45		script: downloading list of scripts...
+2016-11-09 20:58:45		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2016-11-09 20:58:47		script: 328 scripts for WeeChat 1.5
+2016-11-09 20:59:26		Option changed: buffers.color.current_bg = magenta  (default: red)
+2016-11-09 20:59:48		Option changed: buffers.color.hotlist_message_fg = magenta  (default: yellow)
+2016-11-09 21:00:05		Option changed: irc.color.input_nick = magenta  (default: lightcyan)
+2016-11-09 21:00:38		Option changed: relay.color.client = magenta  (default: cyan)
+2016-11-09 21:00:48		Option changed: script.color.status_held = magenta  (default: white)
+2016-11-09 21:01:18		Option changed: weechat.color.chat_host = magenta  (default: cyan)
+2016-11-09 21:01:37		Option changed: weechat.color.chat_value = magenta  (default: cyan)
+2016-11-09 21:02:42		Option changed: weechat.color.separator = magenta  (default: blue)
+2016-11-09 21:02:51	=!=	You can not write text in this buffer
+2016-11-09 21:02:56		python: scripts unloaded
+2016-11-09 21:02:57		perl: scripts unloaded
+2016-11-09 21:03:00		fifo: removing old fifo pipe "/Users/Andy/Documents/dotfiles/weechat/weechat_fifo_81357"
+2016-11-09 21:03:01		perl scripts loaded: buffers, iset
+2016-11-09 21:03:01		python scripts loaded: shell, shortenurl
+2016-11-09 21:03:01		script: 328 scripts for WeeChat 1.5
+2016-11-09 21:03:01		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2016-11-09 21:03:38		Option changed: weechat.bar.input.color_delim = magenta  (default: blue)
+2016-11-09 21:03:51		Option changed: weechat.bar.isetbar.color_delim = magenta  (default: blue)
+2016-11-09 21:04:02		Option changed: weechat.bar.nicklist.color_delim = magenta  (default: blue)
+2016-11-09 21:04:09		Option changed: weechat.bar.status.color_bg = magenta  (default: blue)
+2016-11-09 21:04:20		Option changed: weechat.bar.title.color_bg = magenta  (default: blue)
+2016-11-09 21:04:25	=!=	You can not write text in this buffer
+2016-11-09 21:04:32		python: scripts unloaded
+2016-11-09 21:04:32		perl: scripts unloaded
