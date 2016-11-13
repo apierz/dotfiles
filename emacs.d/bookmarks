@@ -2,21 +2,6 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("des"
- (filename . "~/Documents/dotfiles/emacs.d/config.org")
- (front-context-string . "ne-buffer-projec")
- (rear-context-string . "face doom-modeli")
- (position . 46805))
-("toj"
- (filename . "~/Dropbox (MUTDUT)/MUTDUT Team Folder/Andy (Public)/Legal/Patents/MDT Stamp Version/MDT_SV_claims_draft.org")
- (front-context-string)
- (rear-context-string . " tie comprising\n")
- (position . 951))
-("org-capture-last-stored"
- (filename . "~/Dropbox/Notes/todo.txt")
- (front-context-string . "** TODO install ")
- (rear-context-string . "for offlineimap\n")
- (position . 1876))
 ("3D Files"
  (filename . "~/Dropbox (MUTDUT)/MUTDUT Team Folder/Andy (Private)/3D Files/")
  (front-context-string . ".DS_Store\n  drwx")
@@ -47,11 +32,6 @@
  (front-context-string . "emacs.d\n  -rw-r-")
  (rear-context-string . "82 Sep 11 13:16 ")
  (position . 756))
-("doom-one"
- (filename . "~/Documents/Programming_Projects/doom-theme")
- (front-context-string . "doom-one-theme.e")
- (rear-context-string . "36 Sep  7 07:51 ")
- (position . 256))
 ("Python"
  (filename . "~/Documents/Python/")
  (front-context-string . "python_notes.org")
