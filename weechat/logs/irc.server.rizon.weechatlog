@@ -985,3 +985,62 @@
 2016-10-03 15:17:13	--	Global (service@rizon.net): [Logon News - May 21 2011] First time on Rizon? Be sure to read the FAQ! http://s.rizon.net/FAQ
 2016-10-03 15:17:13	--	Global (service@rizon.net): [Logon News - Dec 16 2013] Own a large/active channel or plan to get one going? Please read http://s.rizon.net/authline
 2016-10-03 15:17:13	--	Global (service@rizon.net): [Random News - Mar 20 2009] Idle on Rizon a lot? Why not play our idlerpg game, you can check it out at #RizonIRPG for more information visit the website http://idlerpg.rizon.net -Rizon Staff
+2016-11-14 13:13:01	--	irc: connecting to server irc.rizon.net/6667...
+2016-11-14 13:13:01	--	irc: connected to irc.rizon.net/6667 (2607:5300:61:54c:f48c:2c9b:f00d:face)
+2016-11-14 13:13:01	--	* :Please wait while we process your connection.
+2016-11-14 13:13:01	--	irc.namreeb.org: *** Looking up your hostname...
+2016-11-14 13:13:01	--	irc.namreeb.org: *** Checking Ident
+2016-11-14 13:13:01	--	irc.namreeb.org: *** Couldn't look up your hostname
+2016-11-14 13:13:03	--	irc.namreeb.org: *** No Ident response
+2016-11-14 13:13:03	--	irc.namreeb.org: *** Your host is masked (2103DBCF:B2ACDAAF:A9ED14A0:IP)
+2016-11-14 13:13:03	--	Welcome to the Rizon Internet Relay Chat Network TheFactIs
+2016-11-14 13:13:03	--	Your host is irc.namreeb.org, running version hybrid-7.2.3+plexus-3.1.0(20151028_0-547)
+2016-11-14 13:13:03	--	This server was created May 30 2016 at 17:41:15
+2016-11-14 13:13:03	--	irc.namreeb.org hybrid-7.2.3+plexus-3.1.0(20151028_0-547) CDFGNRSUWXabcdfgijklnopqrsuwxyz BIMNORSabcehiklmnopqstvz Iabehkloqv
+2016-11-14 13:13:03	--	CALLERID CASEMAPPING=rfc1459 DEAF=D KICKLEN=160 MODES=4 NICKLEN=30 TOPICLEN=390 PREFIX=(qaohv)~&@%+ STATUSMSG=~&@%+ NETWORK=Rizon MAXLIST=beI:250 TARGMAX=ACCEPT:,KICK:1,LIST:1,NAMES:1,NOTICE:4,PRIVMSG:4,WHOIS:1 CHANTYPES=# :are supported by this server
+2016-11-14 13:13:03	--	CHANLIMIT=#:75 CHANNELLEN=50 EXCEPTS=e INVEX=I CHANMODES=beI,k,l,BCMNORScimnpstz AWAYLEN=160 ELIST=CMNTU SAFELIST NAMESX UHNAMES FNC KNOCK :are supported by this server
+2016-11-14 13:13:03	--	94CAAETBC :your unique ID
+2016-11-14 13:13:03	--	There are 36 users and 18925 invisible on 17 servers
+2016-11-14 13:13:03	--	58 :IRC Operators online
+2016-11-14 13:13:03	--	2 :unknown connection(s)
+2016-11-14 13:13:03	--	19040 :channels formed
+2016-11-14 13:13:03	--	I have 18961 clients and 17 servers
+2016-11-14 13:13:03	--	18961 23250 :Current local users 18961, max 23250
+2016-11-14 13:13:03	--	18961 23250 :Current global users 18961, max 23250
+2016-11-14 13:13:03	--	- irc.namreeb.org Message of the Day -
+2016-11-14 13:13:03	--	-          oo                            
+2016-11-14 13:13:03	--	-
+2016-11-14 13:13:03	--	- 88d888b. dP d888888b .d8888b. 88d888b. 
+2016-11-14 13:13:03	--	- 88'  `88 88    .d8P' 88'  `88 88'  `88 
+2016-11-14 13:13:03	--	- 88       88  .Y8P    88.  .88 88    88 
+2016-11-14 13:13:03	--	- dP       dP d888888P `88888P' dP    dP
+2016-11-14 13:13:03	--	-
+2016-11-14 13:13:03	--	- Rizon Chat Network -- http://rizon.net
+2016-11-14 13:13:03	--	-
+2016-11-14 13:13:03	--	- Listening on ports: 6660 - 6669, 7000. SSL: 6697, 9999
+2016-11-14 13:13:03	--	-
+2016-11-14 13:13:03	--	- Rules:
+2016-11-14 13:13:03	--	- o No spamming or flooding
+2016-11-14 13:13:03	--	- o No clones or malicious bots
+2016-11-14 13:13:03	--	- o No takeovers
+2016-11-14 13:13:03	--	- o No distribution of child pornography
+2016-11-14 13:13:03	--	- o Clients must respond to VERSION requests
+2016-11-14 13:13:03	--	- o Rizon staff may disconnect clients for any or no reason
+2016-11-14 13:13:03	--	-
+2016-11-14 13:13:03	--	- First steps:
+2016-11-14 13:13:03	--	- o To register your nick: /msg NickServ HELP
+2016-11-14 13:13:03	--	- o To register your channel: /msg ChanServ HELP
+2016-11-14 13:13:03	--	- o To get a vHost: /msg HostServ HELP REQUEST
+2016-11-14 13:13:03	--	- o For other help with Rizon: /join #help
+2016-11-14 13:13:03	--	-
+2016-11-14 13:13:03	--	- Usage of this network is a privilege, not a right. Rizon is a
+2016-11-14 13:13:03	--	- transit provider, therefore no person or entity involved with
+2016-11-14 13:13:03	--	- *.rizon.net or irc.namreeb.org takes any responsibility for
+2016-11-14 13:13:03	--	- users' actions. Absolutely no warranty is expressed or implied.
+2016-11-14 13:13:03	--	End of /MOTD command.
+2016-11-14 13:13:03	--	User mode [+ix] by TheFactIs
+2016-11-14 13:13:03	--	Global (service@rizon.net): [Logon News - May 21 2011] First time on Rizon? Be sure to read the FAQ! http://s.rizon.net/FAQ
+2016-11-14 13:13:03	--	Global (service@rizon.net): [Logon News - Dec 16 2013] Own a large/active channel or plan to get one going? Please read http://s.rizon.net/authline
+2016-11-14 13:13:03	--	Global (service@rizon.net): [Random News - Nov 29 2013] Want to make your vhost shiny by adding colors to it? Try your luck in #VIzon
+2016-11-14 13:13:03	--	CTCP requested by py-ctcp: VERSION
+2016-11-14 13:13:03	--	CTCP reply to py-ctcp: VERSION WeeChat 1.5 (Aug 16 2016)

@@ -2901,3 +2901,20 @@
 2016-11-09 21:04:25	=!=	You can not write text in this buffer
 2016-11-09 21:04:32		python: scripts unloaded
 2016-11-09 21:04:32		perl: scripts unloaded
+2016-11-14 13:09:23		fifo: removing old fifo pipe "/Users/Andy/Documents/dotfiles/weechat/weechat_fifo_84382"
+2016-11-14 13:09:23		perl scripts loaded: buffers, iset
+2016-11-14 13:09:24		python scripts loaded: shell, shortenurl
+2016-11-14 13:09:24		script: downloading list of scripts...
+2016-11-14 13:09:24		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2016-11-14 13:09:25		script: 328 scripts for WeeChat 1.5
+2016-11-14 13:10:11		Option changed: weechat.bar.input.color_delim = magenta  (default: blue)
+2016-11-14 13:10:20		Option changed: weechat.bar.isetbar.color_delim = magenta  (default: blue)
+2016-11-14 13:10:27		Option changed: weechat.bar.nicklist.color_delim = magenta  (default: blue)
+2016-11-14 13:10:41		Option changed: weechat.bar.status.color_bg = magenta  (default: blue)
+2016-11-14 13:10:51		Option changed: weechat.bar.status.color_bg = green  (default: blue)
+2016-11-14 13:11:18		Option changed: weechat.bar.status.color_bg = lightmagenta  (default: blue)
+2016-11-14 13:11:30		Option changed: weechat.bar.title.color_bg = lightmagenta  (default: blue)
+2016-11-14 13:11:39	=!=	You can not write text in this buffer
+2016-11-14 13:12:43		Option changed: irc.server.freenode.autojoin = "##kwm,#Mechboards,#raspberrypi"  (default if null: "")
+2016-11-14 13:13:31		python: scripts unloaded
+2016-11-14 13:13:31		perl: scripts unloaded

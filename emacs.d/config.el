@@ -759,7 +759,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 (require 'mu4e-multi)
 (use-package evil-mu4e)
 
-(setq mu4e-mu-binary "/usr/local/Cellar/mu/HEAD/bin/mu")
+(setq mu4e-mu-binary "/usr/local/Cellar/mu/HEAD-b2cfc02_1/bin/mu")
 (setq mu4e-maildir "/Users/Andy/.Maildir")
 
 (setq mu4e-multi-account-alist
@@ -953,7 +953,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
  '((t (:inherit doom-modeline-buffer-path :bold nil)))
  "Face used for the filename part of the mode-line buffer path.")
 
- (defface doom-modeline-buffer-modified '((t (:inherit highlight :background nil)))
+ (defface doom-modeline-buffer-modified '((t (:foreground "#268bd2" :background "#39393d")))
  "Face used for the 'unsaved' symbol in the mode-line.")
 
  (defface doom-modeline-major-mode '((t (:inherit mode-line :bold t)))
@@ -976,7 +976,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
  "Face for errors in the modeline. Used by `*flycheck'")
 
  ;; Bar
- (defface doom-modeline-bar '((t (:inherit highlight :foreground nil)))
+ (defface doom-modeline-bar '((t (:foreground "#9c91e4" :background "#9c91e4")))
  "The face used for the left-most bar on the mode-line of an active window.")
 
  (defface doom-modeline-eldoc-bar '((t (:inherit shadow :foreground nil)))

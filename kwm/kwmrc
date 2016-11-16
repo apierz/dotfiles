@@ -126,7 +126,7 @@ kwmc rule owner="Steam" properties={float="true"}
 // Enable border for focused window
 kwmc config border focused on
 kwmc config border focused size 2
-kwmc config border focused color 0xFFf92672
+kwmc config border focused color 0xFF9c91e4
 kwmc config border focused radius 6
 
 // Enable border for marked window
