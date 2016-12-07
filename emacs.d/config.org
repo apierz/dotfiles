@@ -40,7 +40,7 @@ Next I want to set my load paths, it's mostly the standard folders, plus two for
   (add-to-list 'load-path "~/.emacs.d/plugins/evil-org-mode")
   (add-to-list 'load-path "/usr/local/Cellar/mu/HEAD/bin/mu")
   (add-to-list 'exec-path "/usr/local/bin")
-  (add-to-list 'load-path "/Users/Andy/Documents/Programming_Projects/dracula-theme/emacs")
+  ;; (add-to-list 'load-path "/Users/Andy/Documents/Programming_Projects/dracula-theme/emacs")
 #+END_SRC
 
 =use-package= is a =require= replacement that helps Emacs load faster. Might be a placebo.
@@ -253,8 +253,6 @@ Small utility functions, mostly collected from others.
 I used to use my own version of [[https://github.com/dracula/dracula-theme][Dracua Theme]], which includes some extra coloring for Helm, mu4e, some changes to the syntax highlighting and correcting the background color when using Emacs in the terminal. My version is availble at my [[https://github.com/apierz][Github page]]. However, I have been really impressed with hlissner's [[http://github.com/hlissner/emacs-doom-theme] and have now switched to that as my primary theme. I also use [[http://sourcefoundry.org/hack/][Hack]] as my font. Transparency is commented out.
 
 #+BEGIN_SRC emacs-lisp
-  ;; (use-package dracula-theme)
-  ;; (load-theme 'dracula t)
 
   (use-package doom-themes
     :config
@@ -268,7 +266,7 @@ I used to use my own version of [[https://github.com/dracula/dracula-theme][Drac
      (setq doom-enable-bold t)
      (setq doom-enable-italic t))
 
-   (load-theme 'doom-molokai t)
+  ;; (load-theme 'doom-one t)
 
   (set-face-attribute 'default nil
                        :family "Hack" :height 120)
@@ -282,6 +280,8 @@ I used to use my own version of [[https://github.com/dracula/dracula-theme][Drac
 
    ;; (set-frame-parameter (selected-frame) 'alpha '(90 90))
    ;; (add-to-list 'default-frame-alist '(alpha 90 90))
+  (use-package monokai-theme)
+  (load-theme 'monokai t)
 
 #+END_SRC
 
@@ -1322,7 +1322,7 @@ I think my Powerline has gotten too busy and over complicated. I've been inspire
   '((t (:inherit doom-modeline-buffer-path :bold nil)))
   "Face used for the filename part of the mode-line buffer path.")
 
-  (defface doom-modeline-buffer-modified '((t (:foreground "#268bd2" :background "#39393d")))
+  (defface doom-modeline-buffer-modified '((t (:inherit highlight :foreground "#66d9ef"  )))
   "Face used for the 'unsaved' symbol in the mode-line.")
 
   (defface doom-modeline-major-mode '((t (:inherit mode-line :bold t)))
@@ -1345,7 +1345,7 @@ I think my Powerline has gotten too busy and over complicated. I've been inspire
   "Face for errors in the modeline. Used by `*flycheck'")
 
   ;; Bar
-  (defface doom-modeline-bar '((t (:foreground "#9c91e4" :background "#9c91e4")))
+  (defface doom-modeline-bar '((t (:foreground "#66d9ef" :background "#66d9ef")))
   "The face used for the left-most bar on the mode-line of an active window.")
 
   (defface doom-modeline-eldoc-bar '((t (:inherit shadow :foreground nil)))

@@ -16,7 +16,7 @@
 (add-to-list 'load-path "~/.emacs.d/plugins/evil-org-mode")
 (add-to-list 'load-path "/usr/local/Cellar/mu/HEAD/bin/mu")
 (add-to-list 'exec-path "/usr/local/bin")
-(add-to-list 'load-path "/Users/Andy/Documents/Programming_Projects/dracula-theme/emacs")
+;; (add-to-list 'load-path "/Users/Andy/Documents/Programming_Projects/dracula-theme/emacs")
 
 (require 'use-package)
 
@@ -174,9 +174,6 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
     (funcall (and initial-major-mode))
     (setq buffer-offer-save t)))
 
-;; (use-package dracula-theme)
-;; (load-theme 'dracula t)
-
 (use-package doom-themes
   :config
    ;;; OPTIONAL
@@ -189,7 +186,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
    (setq doom-enable-bold t)
    (setq doom-enable-italic t))
 
- (load-theme 'doom-molokai t)
+;; (load-theme 'doom-one t)
 
 (set-face-attribute 'default nil
                      :family "Hack" :height 120)
@@ -203,6 +200,8 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 
  ;; (set-frame-parameter (selected-frame) 'alpha '(90 90))
  ;; (add-to-list 'default-frame-alist '(alpha 90 90))
+(use-package monokai-theme)
+(load-theme 'monokai t)
 
 (prefer-coding-system       'utf-8)
 (set-default-coding-systems 'utf-8)
@@ -953,7 +952,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
  '((t (:inherit doom-modeline-buffer-path :bold nil)))
  "Face used for the filename part of the mode-line buffer path.")
 
- (defface doom-modeline-buffer-modified '((t (:foreground "#268bd2" :background "#39393d")))
+ (defface doom-modeline-buffer-modified '((t (:inherit highlight :foreground "#66d9ef"  )))
  "Face used for the 'unsaved' symbol in the mode-line.")
 
  (defface doom-modeline-major-mode '((t (:inherit mode-line :bold t)))
@@ -976,7 +975,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
  "Face for errors in the modeline. Used by `*flycheck'")
 
  ;; Bar
- (defface doom-modeline-bar '((t (:foreground "#9c91e4" :background "#9c91e4")))
+ (defface doom-modeline-bar '((t (:foreground "#66d9ef" :background "#66d9ef")))
  "The face used for the left-most bar on the mode-line of an active window.")
 
  (defface doom-modeline-eldoc-bar '((t (:inherit shadow :foreground nil)))

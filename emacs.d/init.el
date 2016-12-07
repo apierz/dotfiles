@@ -34,7 +34,7 @@
      ("" "" nil))))
  '(package-selected-packages
    (quote
-    (fm anaphora python-mode eldoc-eval doom-themes hl-line+ pydoc all-the-icons neotree evil-multiedit evil-anzu iedit anzu fountain-mode rainbow-mode coffee-mode yasnippet yaml-mode web-mode use-package unicode-fonts unbound smooth-scrolling robe rainbow-delimiters powerline-evil org-grep org-bullets markdown-mode linum-relative linum-off key-chord helm-projectile flymake-ruby flycheck fill-column-indicator evil-visual-mark-mode evil-surround evil-snipe evil-mu4e evil-magit evil-leader evil-commentary engine-mode dumb-jump color-theme-sanityinc-tomorrow auto-complete)))
+    (monokai-theme dracula-theme fm anaphora python-mode eldoc-eval doom-themes hl-line+ pydoc all-the-icons neotree evil-multiedit evil-anzu iedit anzu fountain-mode rainbow-mode coffee-mode yasnippet yaml-mode web-mode use-package unicode-fonts unbound smooth-scrolling robe rainbow-delimiters powerline-evil org-grep org-bullets markdown-mode linum-relative linum-off key-chord helm-projectile flymake-ruby flycheck fill-column-indicator evil-visual-mark-mode evil-surround evil-snipe evil-mu4e evil-magit evil-leader evil-commentary engine-mode dumb-jump color-theme-sanityinc-tomorrow auto-complete)))
  '(python-shell-completion-native-disabled-interpreters (quote ("pypy" "python3"))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -42,6 +42,5 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(doom-modeline-buffer-project ((t (:foreground "white" :weight normal))))
- '(evil-ex-info ((t (:foreground "#ff6c6b" :slant italic))))
- '(markdown-url-face ((t (:foreground "#ECBE7B" :weight normal))))
- '(neo-vc-user-face ((t (:foreground "chartreuse" :slant italic)))))
+ '(org-block-background ((t (:background "#272822"))))
+ )
