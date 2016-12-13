@@ -638,7 +638,7 @@ I prefer to turn line numbers off while in =Org-mode=.
 
 ** Keywords
 
-My todo system is fairly simple. =TODO= = unsorted, =ONDECK= = could be done at anytime, =WAITING= = waiting on something out of my control, =SOMEDAY= = not urgent, =CURRENT= = the thing I am currently working on. I've given these keywords colors from Doom theme.
+My todo system is fairly simple. =TODO= = unsorted, =ONDECK= = could be done at anytime, =WAITING= = waiting on something out of my control, =SOMEDAY= = not urgent, =CURRENT= = the thing I am currently working on. I've given these keywords colors from Monokai theme.
 
 #+BEGIN_SRC emacs-lisp
   (setq org-todo-keywords
@@ -646,14 +646,16 @@ My todo system is fairly simple. =TODO= = unsorted, =ONDECK= = could be done at 
 
    ;; For Dracula Theme
    (setq org-todo-keyword-faces
-     '(("ONDECK" . (:foreground "#ecbe7b" :weight bold))   
-       ("WAITING" . (:foreground "#9c91e4" :weight bold)) 
-       ("CANCELED" . (:foreground "#dc79dc" :weight bold))
-       ("CURRENT" . (:foreground "#7bc275" :weight bold))
-       ("DONE" . (:foreground "#ff665c" :weight bold))
-       ("SOMEDAY" . (:foreground "#525E6C" :weight bold))))
+     '(("ONDECK" . (:foreground "#e6db74" :weight bold))   
+       ("TODO"   . (:foreground "#fd5ff0" :weight bold))
+       ("WAITING" . (:foreground "#ae81ff" :weight bold)) 
+       ("CURRENT" . (:foreground "#a1efe4" :weight bold))
+       ("DONE" . (:foreground "#f92672" :weight bold))
+       ("SOMEDAY" . (:foreground "#64645e" :weight bold))))
 
 #+END_SRC
+
+#+RESULTS:
 
 ** Visual Styling
 

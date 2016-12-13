@@ -2,7 +2,17 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("monokai-theme-20161204.454"
+(("df"
+ (filename . "~/Library/Application Support/Übersicht/widgets/nerdbar.widget/README.md")
+ (front-context-string . "\n\n*Screen Shot:*")
+ (rear-context-string . "nerdbar.widget).")
+ (position . 491))
+("nb"
+ (filename . "~/Dropbox (MUTDUT)/MUTDUT Team Folder/Andy (Public)/Marketing/Kickstarter/new-script.fountain")
+ (front-context-string . "ACT I - Product ")
+ (rear-context-string)
+ (position . 1))
+("monokai-theme-20161204.454"
  (filename . "~/Documents/dotfiles/emacs.d/elpa/monokai-theme-20161204.454/")
  (front-context-string . "monokai-theme-pk")
  (rear-context-string . "72 Dec  6 14:35 ")

@@ -439,12 +439,12 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 
  ;; For Dracula Theme
  (setq org-todo-keyword-faces
-   '(("ONDECK" . (:foreground "#ecbe7b" :weight bold))   
-     ("WAITING" . (:foreground "#9c91e4" :weight bold)) 
-     ("CANCELED" . (:foreground "#dc79dc" :weight bold))
-     ("CURRENT" . (:foreground "#7bc275" :weight bold))
-     ("DONE" . (:foreground "#ff665c" :weight bold))
-     ("SOMEDAY" . (:foreground "#525E6C" :weight bold))))
+   '(("ONDECK" . (:foreground "#e6db74" :weight bold))   
+     ("TODO"   . (:foreground "#fd5ff0" :weight bold))
+     ("WAITING" . (:foreground "#ae81ff" :weight bold)) 
+     ("CURRENT" . (:foreground "#a1efe4" :weight bold))
+     ("DONE" . (:foreground "#f92672" :weight bold))
+     ("SOMEDAY" . (:foreground "#64645e" :weight bold))))
 
 (setq org-hide-leading-stars t)
 (use-package org-bullets
