@@ -31,7 +31,7 @@ kwmc bindsym hyper-h window -f west
 */
 
 // Set default values for screen padding
-kwmc config padding 30 10 10 10
+kwmc config padding 35 10 10 10
 
 // Set default values for container gaps
 kwmc config gap 10 12

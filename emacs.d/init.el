@@ -43,4 +43,4 @@
  ;; If there is more than one, they won't work right.
  '(doom-modeline-buffer-project ((t (:foreground "white" :weight normal))))
  '(org-block-background ((t (:background "#272822"))))
- )
+ '(org-checkbox ((t (:background "#272822" :foreground "#61AFEF" :box (:line-width 1 :style released-button))))))
