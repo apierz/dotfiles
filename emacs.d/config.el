@@ -189,7 +189,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 ;; (load-theme 'doom-one t)
 
 (set-face-attribute 'default nil
-                     :family "Hack" :height 120)
+                     :family "Hack" :height 120 :weight 'light)
 
 (use-package doom-neotree
   :config
@@ -1181,9 +1181,12 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
              (cond ((eq eol-type 0) "LF  ")
                    ((eq eol-type 1) "CRLF  ")
                    ((eq eol-type 2) "CR  ")))
-           (upcase (symbol-name
-                    (plist-get (coding-system-plist buffer-file-coding-system)
-                               :name)))
+        (let* ((sys (coding-system-plist buffer-file-coding-system))
+                (sys-name (plist-get sys :name))
+                (sys-cat (plist-get sys :category)))
+           (cond ((memq sys-cat '(coding-category-undecided coding-category-utf-8))
+                  "UTF-8")
+                 (t (upcase (symbol-name sys-name)))))
            "  "))
 
  (defun *buffer-encoding-abbrev ()

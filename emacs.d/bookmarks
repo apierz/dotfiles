@@ -3,7 +3,7 @@
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
 (("monokai-theme-20161204.454"
- (filename . "~/Documents/dotfiles/emacs.d/elpa/monokai-theme-20161204.454/")
+ (filename . "~/Documents/dotfiles/emacs.d/elpa/")
  (front-context-string . "monokai-theme-pk")
  (rear-context-string . "72 Dec  6 14:35 ")
  (position . 362))
