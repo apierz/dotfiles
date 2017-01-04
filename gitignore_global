@@ -67,3 +67,6 @@ flycheck_*.el
 
 # weechat logs
 weechat_crash
+
+# Storage Files
+*.out
