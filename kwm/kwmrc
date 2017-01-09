@@ -75,10 +75,10 @@ kwmc config cycle-focus on
    kwmc config display 1 padding 100 100 100 100
    kwmc config display 1 gap 40 40 */
 
-kwmc config space 0 1 name iTerm
-kwmc config space 0 2 name Emacs
-kwmc config space 0 3 name www
-kwmc config space 0 4 name video
+kwmc config space 0 1 name one
+kwmc config space 0 2 name two
+kwmc config space 0 3 name three
+kwmc config space 0 4 name four
 
 
 

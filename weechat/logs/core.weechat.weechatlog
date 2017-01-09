@@ -2918,3 +2918,13 @@
 2016-11-14 13:12:43		Option changed: irc.server.freenode.autojoin = "##kwm,#Mechboards,#raspberrypi"  (default if null: "")
 2016-11-14 13:13:31		python: scripts unloaded
 2016-11-14 13:13:31		perl: scripts unloaded
+2017-01-09 10:36:59		fifo: removing old fifo pipe "/Users/Andy/Documents/dotfiles/weechat/weechat_fifo_29976"
+2017-01-09 10:36:59		perl scripts loaded: buffers, iset
+2017-01-09 10:36:59		python scripts loaded: shell, shortenurl
+2017-01-09 10:36:59		script: downloading list of scripts...
+2017-01-09 10:36:59		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, script, tcl, trigger, xfer
+2017-01-09 10:37:02		script: 329 scripts for WeeChat 1.5
+2017-01-09 10:37:14	=!=	You can not write text in this buffer
+2017-01-09 10:37:23	=!=	You can not write text in this buffer
+2017-01-09 10:37:25		python: scripts unloaded
+2017-01-09 10:37:25		perl: scripts unloaded

@@ -198,10 +198,13 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
   (setq doom-neotree-enable-dir-chevrons t)
   (setq doom-neotree-line-spacing 2))
 
- ;; (set-frame-parameter (selected-frame) 'alpha '(90 90))
- ;; (add-to-list 'default-frame-alist '(alpha 90 90))
-(use-package monokai-theme)
-(load-theme 'monokai t)
+;; (set-frame-parameter (selected-frame) 'alpha '(90 90))
+;; (add-to-list 'default-frame-alist '(alpha 90 90))
+;; (use-package monokai-theme)
+;; (load-theme 'monokai t)
+
+(use-package gruvbox-theme)
+(load-theme 'gruvbox t)
 
 (prefer-coding-system       'utf-8)
 (set-default-coding-systems 'utf-8)
@@ -952,7 +955,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
  '((t (:inherit doom-modeline-buffer-path :bold nil)))
  "Face used for the filename part of the mode-line buffer path.")
 
- (defface doom-modeline-buffer-modified '((t (:inherit highlight :foreground "#66d9ef"  )))
+ (defface doom-modeline-buffer-modified '((t (:inherit highlight :foreground "#83a598"  )))
  "Face used for the 'unsaved' symbol in the mode-line.")
 
  (defface doom-modeline-major-mode '((t (:inherit mode-line :bold t)))
@@ -975,7 +978,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
  "Face for errors in the modeline. Used by `*flycheck'")
 
  ;; Bar
- (defface doom-modeline-bar '((t (:foreground "#66d9ef" :background "#66d9ef")))
+ (defface doom-modeline-bar '((t (:foreground "#83a598" :background "#83a598")))
  "The face used for the left-most bar on the mode-line of an active window.")
 
  (defface doom-modeline-eldoc-bar '((t (:inherit shadow :foreground nil)))
