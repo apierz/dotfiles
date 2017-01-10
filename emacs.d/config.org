@@ -500,7 +500,7 @@ I prefer the Vim keybindings and use them wherever possible in Emacs. I recently
    Set some shortcuts to the function buttons.
 
 #+BEGIN_SRC emacs-lisp
-  (global-set-key [f1]  'mu4e)
+  (global-set-key [f1] 'mu4e)
   (global-set-key [f2] 'andy-new-empty-buffer)
 
   (global-set-key [f4] 'fci-mode)
@@ -557,6 +557,15 @@ Neotree needs a little tweaking to work well with =evil=.
                (define-key evil-normal-state-local-map (kbd "SPC") 'neotree-enter)
                (define-key evil-normal-state-local-map (kbd "q") 'neotree-hide)
                (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)))
+#+END_SRC
+
+Change the color of the cursor to indicate what evil state I am in.
+#+BEGIN_SRC emacs-lisp
+  (setq evil-default-cursor (face-attribute 'cursor :background nil t)
+        evil-normal-state-cursor 'box
+        evil-emacs-state-cursor  `(,(face-attribute 'warning :foreground nil nil) box)
+        evil-insert-state-cursor 'bar
+        evil-visual-state-cursor 'hollow)
 #+END_SRC
 
 * Helm

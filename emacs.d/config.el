@@ -349,7 +349,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 
 (setq evil-move-cursor-back nil)
 
-(global-set-key [f1]  'mu4e)
+(global-set-key [f1] 'mu4e)
 (global-set-key [f2] 'andy-new-empty-buffer)
 
 (global-set-key [f4] 'fci-mode)
@@ -385,6 +385,12 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
              (define-key evil-normal-state-local-map (kbd "SPC") 'neotree-enter)
              (define-key evil-normal-state-local-map (kbd "q") 'neotree-hide)
              (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)))
+
+(setq evil-default-cursor (face-attribute 'cursor :background nil t)
+      evil-normal-state-cursor 'box
+      evil-emacs-state-cursor  `(,(face-attribute 'warning :foreground nil nil) box)
+      evil-insert-state-cursor 'bar
+      evil-visual-state-cursor 'hollow)
 
 (use-package helm)
 (use-package helm-config)

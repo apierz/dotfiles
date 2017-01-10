@@ -41,8 +41,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(doom-modeline-buffer-project ((t (:foreground "white" :weight normal))))
- '(highlight ((t nil)))
+ '(doom-modeline-buffer-modified ((t (:foreground "#83a598"))))
+ '(doom-modeline-info ((t (:foreground "#b8bb26"))))
  '(org-block-background ((t (:background "#272822"))))
- '(org-checkbox ((t (:background "#272822" :foreground "#61AFEF" :box (:line-width 1 :style released-button)))))
- '(region ((t (:inherit highlight :background "#7b7962")))))
+ '(org-level-1 ((t (:foreground "#83a598" :height 1.2)))))
+
