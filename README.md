@@ -1,4 +1,4 @@
-# Emacs Screen Shot
+#Screen Shot
 
-![Screenshot](https://github.com/apierz/dotfiles/blob/master/screenshot.png?raw=true)
+![Screenshot](https://github.com/apierz/nerdbar.widget/raw/master/screens/screenshotone.png?raw=true)
 
