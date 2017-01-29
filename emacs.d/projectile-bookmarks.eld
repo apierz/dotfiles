@@ -1,1 +1,1 @@
-("~/Documents/dotfiles/" "~/Library/Application Support/Übersicht/widgets/nerdbar.widget/" "~/Dropbox (Personal)/Notes/" "~/Sites/homepage/" "~/Documents/Programming_Projects/food_finder/" "~/Sites/simple_cms/" "~/" "/usr/local/")
+("~/Documents/Python/" "~/Documents/dotfiles/" "~/Library/Application Support/Übersicht/widgets/nerdbar.widget/" "~/Dropbox (Personal)/Notes/" "~/Sites/homepage/" "~/Documents/Programming_Projects/food_finder/" "~/Sites/simple_cms/" "~/" "/usr/local/")

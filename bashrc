@@ -17,10 +17,11 @@ alias clock='tty-clock -c'
 
 source ~/.git-completion.bash
 source ~/.bash_git
+source ~/.bash-powerline.sh
 
 GIT_PS1_SHOWDIRTYSTATE=1
 
-PS1='\[\033[30;44m\]\[\033[34;90m\] \W\[\033[34;103m\]\[\033[30;103m\]$(__git_ps1 "  %s ")\[\033[93;42m\]  \[\033[0m\]\[\033[32m\]\[\033[0m\] '
+# PS1='\[\033[30;44m\]\[\033[34;90m\] \W\[\033[34;103m\]\[\033[30;103m\]$(__git_ps1 "  %s ")\[\033[93;42m\]  \[\033[0m\]\[\033[32m\]\[\033[0m\] '
 
 
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$PATH"

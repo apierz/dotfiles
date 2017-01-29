@@ -23,9 +23,9 @@ macro index,pager S "<tag-prefix><save-message>=archive<enter>\
   :set delete=yes<enter><sync-mailbox>:set delete=no<enter>"
 
  color status     black blue
- color indicator  black yellow
+ color indicator  black magenta
  color search     black blue 
- color markers    black yellow
+ color markers    black magenta
  color hdrdefault black cyan
  color normal     white black
 #SMTP

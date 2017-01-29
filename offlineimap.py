@@ -18,7 +18,7 @@ def get_keychain_pass_work(account=None, server=None):
 def get_keychain_pass_personal(account=None, server=None):
     params = {
         'security': '/usr/bin/security',
-        'command': 'find-internet-password',
+        'command': 'find-generic-password',
         'account': account,
         'server': server,
         'keychain': '/Users/${USER}/Library/Keychains/login.keychain',

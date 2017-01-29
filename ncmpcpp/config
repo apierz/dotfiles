@@ -161,15 +161,15 @@ visualizer_look = "∙▋"
 ## you'll get nothing.
 ##
 ## text can also have different color than the main window has,
-## eg. if you want length to be green, write "$3%l$9".
+## eg. if you want length to be white, write "$3%l$9".
 ##
 ## Available values:
 ##
 ## - 0 - default window color (discards all other colors)
 ## - 1 - black
 ## - 2 - red
-## - 3 - green
-## - 4 - yellow
+## - 3 - yellow
+## - 4 - green
 ## - 5 - blue
 ## - 6 - magenta
 ## - 7 - cyan
@@ -220,20 +220,20 @@ song_library_format = {%n - }{%t}|{%f}
 ##
 #
 #alternative_header_first_line_format = $b$1$aqqu$/a$9 {%t}|{%f} $1$atqq$/a$9$/b
-alternative_header_first_line_format = $4$aqqu$/a$9 {$8%t$9}|{%f} $4$atqq$/a$9
+alternative_header_first_line_format = $6$aqqu$/a$9 {$8%t$9}|{%f} $6$atqq$/a$9
 #
 #alternative_header_second_line_format = {{$4$b%a$/b$9}{ - $7%b$9}{ ($4%y$9)}}|{%D}
-alternative_header_second_line_format = {{$5%a$9}{ - $3%b$9}{ ($5%y$9)}}|{%D}
+alternative_header_second_line_format = {{$5%a$9}{ - $6%b$9}{ ($5%y$9)}}|{%D}
 #
 ##
 ## Note: below variables also support text attributes listed above.
 ##
 #
 #now_playing_prefix = $b
-now_playing_prefix = $b$3** 
+now_playing_prefix = $b$4♫
 #
 #now_playing_suffix = $/b
-now_playing_suffix = **$9$/b
+now_playing_suffix = ♫$9$/b
 #
 #browser_playlist_prefix = "$2playlist$9 "
 #
@@ -283,8 +283,8 @@ now_playing_suffix = **$9$/b
 ##   not available.
 ##
 #
-#song_columns_list_format = (20)[]{a} (6f)[green]{NE} (50)[white]{t|f:Title} (20)[cyan]{b} (7f)[blue]{l}
-song_columns_list_format =  (15)[blue]{ar} (30)[yellow]{t|f:Title} (20)[green]{br} (7f)[yellow]{l}
+#song_columns_list_format = (20)[]{a} (6f)[white]{NE} (50)[white]{t|f:Title} (20)[cyan]{b} (7f)[blue]{l}
+song_columns_list_format =  (30)[blue]{ar} (30)[magenta]{t|f:Title} (20)[cyan]{br} (7f)[magenta]{l}
 #
 ##### various settings #####
 #
@@ -333,7 +333,7 @@ centered_cursor = yes
 ## Note: You can specify third character which will
 ## be used to build 'empty' part of progressbar.
 ##
-progressbar_look = "●●●"
+progressbar_look = "♦♦♦"
 #
 #progressbar_boldness = yes
 #
@@ -497,48 +497,48 @@ colors_enabled = yes
 empty_tag_color = cyan
 #
 #header_window_color = default
-header_window_color = blue
+header_window_color = cyan
  
 #volume_color = default
-volume_color = yellow
+volume_color = magenta
 #
 #state_line_color = default
-state_line_color = green
+state_line_color = white
 #
 #state_flags_color = default
-state_flags_color = yellow
+state_flags_color = magenta
 #
-#main_window_color = yellow
+#main_window_color = magenta
 main_window_color = blue
 #
 #color1 = white
 color1 = red
 #
-#color2 = green
-color2 = yellow
+#color2 = white
+color2 = magenta
 #
-#main_window_highlight_color = yellow
+#main_window_highlight_color = magenta
 main_window_highlight_color = cyan
  
 #progressbar_color = black
-progressbar_color = yellow
+progressbar_color = white
 #
-#progressbar_elapsed_color = green
+#progressbar_elapsed_color = white
 progressbar_elapsed_color = blue
 #
 #statusbar_color = cyan
 statusbar_color = blue
 #
 #alternative_ui_separator_color = black
-alternative_ui_separator_color = yellow
+alternative_ui_separator_color = magenta
 #
 #active_column_color = red
-active_column_color = yellow
+active_column_color = magenta
 #
-#visualizer_color = yellow
-visualizer_color = yellow
+#visualizer_color = magenta
+visualizer_color = magenta
 #
-#window_border_color = green
+#window_border_color = white
 window_border_color = blue
 #
 #active_window_border = red

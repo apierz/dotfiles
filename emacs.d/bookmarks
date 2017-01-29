@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("now"
+(("dort"
+ (filename . "~/Library/Application Support/Übersicht/widgets/nerdbar.widget/nowplaying.coffee")
+ (front-context-string . "6)\n     song = s")
+ (rear-context-string . "ng.substring(0,1")
+ (position . 1020))
+("now"
  (filename . "~/.kwm/scripts/now_playing_script.sh")
  (front-context-string)
  (rear-context-string . "VOLUME@$ISMUTED;")
@@ -13,7 +18,7 @@
  (rear-context-string . "72 Dec  6 14:35 ")
  (position . 362))
 ("doom-themes-20161103.1722"
- (filename . "~/Documents/dotfiles/emacs.d/elpa/doom-themes-20161118.1805/")
+ (filename . "~/Documents/dotfiles/emacs.d/elpa/doom-themes-20170111.2138/")
  (front-context-string . "doom-molokai-the")
  (rear-context-string . "78 Nov  9 15:52 ")
  (position . 280))
