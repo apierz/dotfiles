@@ -186,10 +186,10 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
      (setq doom-enable-bold t)
      (setq doom-enable-italic t))
 
-  (load-theme 'doom-one t)
+  ;; (load-theme 'doom-one t)
 
   (set-face-attribute 'default nil
-                       :family "Terminus (TTF)" :height 140 :weight 'light)
+                       :family "Fira Mono for Powerline" :height 120 :weight 'light)
 
   (use-package doom-neotree
     :config
@@ -203,8 +203,8 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
   ;; (use-package monokai-theme)
   ;; (load-theme 'monokai t)
 
-  ;; (use-package gruvbox-theme)
-  ;; (load-theme 'gruvbox t)
+  (use-package gruvbox-theme)
+  (load-theme 'gruvbox t)
    
 ;;   (use-package moe-theme
 ;;      :config
@@ -1460,19 +1460,10 @@ lines are selected, or the NxM dimensions of a block selection."
            (mid (propertize
                  " " 'display `((space :align-to (- (+ right right-fringe right-margin)
                                                     ,(+ 1 (string-width (format-mode-line rhs)))))))))
-      (list lhs mid rhs))))
+      (list lhs mid rhs)))) 
 
-(if (display-graphic-p) (setq-default mode-line-format (doom-modeline))) 
+(if (display-graphic-p) (setq-default mode-line-format (doom-modeline)))
  
-;; (use-package powerline
-;;      :ensure t
-;;      :config
-;;      (setq powerline-height 26)
-;;      (setq powerline-default-separator (if (display-graphic-p) 'arrow-fade
-;;                                          nil))
-;;      (andy--powerline-default-theme))
-
-
 ;;
 ;; Eldoc-in-mode-line support (for `eval-expression')
 ;;
