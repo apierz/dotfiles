@@ -104,7 +104,7 @@ I prefer for Emacs to store automatic backups in a central location, rather than
         backup-by-copying      t  ; Don't de-link hard links
         version-control        t  ; Use version numbers on backups
         delete-old-versions    t  ; Automatically delete excess backups:
-        kept-new-versions      5 ; how many of the newest versions to keep
+        kept-new-versions      5  ; how many of the newest versions to keep
         kept-old-versions      5) ; and how many of the old
 
 #+END_SRC
@@ -254,43 +254,36 @@ I used to use Monokai for my color theme and [[http://sourcefoundry.org/hack/][H
 
 #+BEGIN_SRC emacs-lisp
 
-    (use-package doom-themes
+  (use-package doom-themes
       :config
-       ;;; OPTIONAL
-       ;; brighter source buffers
-       (add-hook 'find-file-hook 'doom-buffer-mode)
-       ;; brighter minibuffer when active
-       (add-hook 'minibuffer-setup-hook 'doom-buffer-mode)
-       (global-hl-line-mode)
-       ;; (setq doom-enable-brighter-comments t)
-       (setq doom-enable-bold t)
-       (setq doom-enable-italic t))
+      ;;; OPTIONAL
+      ;; brighter source buffers
+      (add-hook 'find-file-hook 'doom-buffer-mode)
+      ;; brighter minibuffer when active
+      (add-hook 'minibuffer-setup-hook 'doom-buffer-mode)
+      (global-hl-line-mode)
+      ;; (setq doom-enable-brighter-comments t)
+      (setq doom-enable-bold t)
+      (setq doom-enable-italic t))
 
-    ;; (load-theme 'doom-one t)
+  (set-face-attribute 'default nil
+                  :family "Fira Mono for Powerline" :height 120 :weight 'light)
 
-    (set-face-attribute 'default nil
-                         :family "Fira Mono for Powerline" :height 120 :weight 'light)
+  (use-package doom-neotree
+    :config
+    (setq doom-neotree-enable-file-icons 'simple)
+    (setq doom-neotree-enable-dir-icons t)
+    (setq doom-neotree-enable-dir-chevrons t)
+    (setq doom-neotree-line-spacing 2))
 
-    (use-package doom-neotree
-      :config
-      (setq doom-neotree-enable-file-icons 'simple)
-      (setq doom-neotree-enable-dir-icons t)
-      (setq doom-neotree-enable-dir-chevrons t)
-      (setq doom-neotree-line-spacing 2))
+  ;; (set-frame-parameter (selected-frame) 'alpha '(90 90))
+  ;; (add-to-list 'default-frame-alist '(alpha 90 90))
 
-    ;; (set-frame-parameter (selected-frame) 'alpha '(90 90))
-    ;; (add-to-list 'default-frame-alist '(alpha 90 90))
-    ;; (use-package monokai-theme)
-    ;; (load-theme 'monokai t)
+  ;; (use-package gruvbox-theme)
+  ;; (load-theme 'gruvbox t)
 
-    (use-package gruvbox-theme)
-    (load-theme 'gruvbox t)
-     
-  ;;   (use-package moe-theme
-  ;;      :config
-  ;;      (setq moe-theme-highlight-buffer-id t)
-  ;;      (setq moe-theme-resize-org-title '(1.5 1.4 1.3 1.2 1.1 1.0 1.0 1.0 1.0)))
-  ;; (moe-dark)
+  (use-package tao-theme)
+  (load-theme 'tao-yang)
 
 #+END_SRC
 
@@ -749,34 +742,16 @@ My todo system is fairly simple. =TODO= = unsorted, =ONDECK= = could be done at 
 #+END_SRC
 
 
-** Org-Toodledo
-
-Something to work on, need to find a way to hide my password.
-
+** MobileOrg
 #+BEGIN_SRC emacs-lisp
-  ;; (push "<path-to-this-file>" load-path)
-  ;; (require 'org-toodledo)
-  ;; (setq org-toodledo-userid "<toodledo-userid>")      << *NOT* your email!
-  ;; (setq org-toodledo-password "<toodled-password>")
-
-  ;; ;; Useful key bindings for org-mode
-  ;; (add-hook 'org-mode-hook
-  ;;        (lambda ()
-  ;;          (local-unset-key "\C-o")
-  ;;          (local-set-key "\C-od" 'org-toodledo-mark-task-deleted)
-  ;;          (local-set-key "\C-os" 'org-toodledo-sync)
-  ;;          )
-  ;;        )
-  ;; (add-hook 'org-agenda-mode-hook
-  ;;        (lambda ()
-  ;;          (local-unset-key "\C-o")
-  ;;          (local-set-key "\C-od" 'org-toodledo-agenda-mark-task-deleted)
-  ;;          )
-         ;; )
-
+;; Set to the location of your Org files on your local system
+(setq org-directory "~/Dropbox/Notes")
+;; Set to the name of the file where new notes will be stored
+(setq org-mobile-inbox-for-pull "~/Dropbox/Notes/flagged.org")
+;; Set to <your Dropbox root directory>/MobileOrg.
+(setq org-mobile-directory "~/Dropbox/Apps/MobileOrg")
 
 #+END_SRC
-
 * Programming Stuff
 
 This section is for stuff that helps with programming and coding. (note to self, look into diff-hl)
@@ -1365,7 +1340,7 @@ I think my Powerline has gotten too busy and over complicated. I've been inspire
    "Face for errors in the modeline. Used by `*flycheck'")
 
    ;; Bar
-   (defface doom-modeline-bar '((t (:foreground "#83a598" :background "#83a598")))
+   (defface doom-modeline-bar '((t (:foreground "#f0f0f0" :background "#f0f0f0")))
    "The face used for the left-most bar on the mode-line of an active window.")
 
    (defface doom-modeline-eldoc-bar '((t (:inherit shadow :foreground nil)))
@@ -1881,30 +1856,4 @@ I think my Powerline has gotten too busy and over complicated. I've been inspire
                (sit-for eldoc-show-in-mode-line-delay))))
        (force-mode-line-update)))
 
-#+END_SRC
-* Version Control
-
-#+BEGIN_SRC emacs-lisp
-  (use-package git-gutter-fringe+
-      :ensure t
-      :init (global-git-gutter+-mode)
-      :config (progn
-                (define-key git-gutter+-mode-map (kbd "C-x n") 'git-gutter+-next-hunk)
-                (define-key git-gutter+-mode-map (kbd "C-x p") 'git-gutter+-previous-hunk)
-                (define-key git-gutter+-mode-map (kbd "C-x v =") 'git-gutter+-show-hunk)
-                ;; (define-key git-gutter+-mode-map (kbd "C-x r") 'git-gutter+-revert-hunks)
-                (define-key git-gutter+-mode-map (kbd "C-x t") 'git-gutter+-stage-hunks)
-                (define-key git-gutter+-mode-map (kbd "C-x c") 'git-gutter+-commit)
-                (define-key git-gutter+-mode-map (kbd "C-x C") 'git-gutter+-stage-and-commit)
-                (define-key git-gutter+-mode-map (kbd "C-x C-y") 'git-gutter+-stage-and-commit-whole-buffer)
-                (define-key git-gutter+-mode-map (kbd "C-x U") 'git-gutter+-unstage-whole-buffer))
-      :diminish (git-gutter+-mode . "gg"))
-
-  (set-face-foreground 'git-gutter-fr+-modified "#ecbe7b")
-  (set-face-foreground 'git-gutter-fr+-added    "#98be65")
-  (set-face-foreground 'git-gutter-fr+-deleted  "#ff6c6b")
-
-  (setq git-gutter+-modified-sign "**")
-  (setq git-gutter+-added-sign "**")
-  (setq git-gutter+-deleted-sign "**")
 #+END_SRC

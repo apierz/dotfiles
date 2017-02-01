@@ -219,11 +219,11 @@ song_library_format = {%n - }{%t}|{%f}
 ## with reversed colors.
 ##
 #
-#alternative_header_first_line_format = $b$1$aqqu$/a$9 {%t}|{%f} $1$atqq$/a$9$/b
+#alternative_header_first_line_format = $b$8$aqqu$/a$9 {%t}|{%f} $8$atqq$/a$9$/b
 alternative_header_first_line_format = $3$aqqu$/a$9 {$8%t$9}|{%f} $3$atqq$/a$9
 #
 #alternative_header_second_line_format = {{$4$b%a$/b$9}{ - $7%b$9}{ ($4%y$9)}}|{%D}
-alternative_header_second_line_format = {{$5%a$9}{ $8-$9 $3%b$9}{ $8-$9 ($5%y$9)}}
+alternative_header_second_line_format = {{$4%a$9}{ $8-$9 $3%b$9}{ $8-$9 ($4%y$9)}}
 #
 ##
 ## Note: below variables also support text attributes listed above.
@@ -284,7 +284,7 @@ now_playing_suffix = ♫$9$/b
 ##
 #
 #song_columns_list_format = (20)[]{a} (6f)[white]{NE} (50)[white]{t|f:Title} (20)[cyan]{b} (7f)[blue]{l}
-song_columns_list_format =  (30)[blue]{ar} (30)[white]{t|f:Title} (20)[green]{br} (7f)[white]{l}
+song_columns_list_format =  (30)[yellow]{ar} (30)[white]{t|f:Title} (20)[green]{br} (7f)[white]{l}
 #
 ##### various settings #####
 #
@@ -497,7 +497,7 @@ colors_enabled = yes
 empty_tag_color = cyan
 #
 #header_window_color = default
-header_window_color = blue
+header_window_color = green
  
 #volume_color = default
 volume_color = yellow
@@ -509,7 +509,7 @@ state_line_color = white
 state_flags_color = yellow
 #
 #main_window_color = yellow
-main_window_color = blue
+main_window_color = green
 #
 #color1 = white
 color1 = red
@@ -521,13 +521,13 @@ color2 = yellow
 main_window_highlight_color = cyan
  
 #progressbar_color = black
-progressbar_color = white
+progressbar_color = yellow
 #
 #progressbar_elapsed_color = white
-progressbar_elapsed_color = blue
+progressbar_elapsed_color = white
 #
 #statusbar_color = cyan
-statusbar_color = blue
+statusbar_color = green
 #
 #alternative_ui_separator_color = black
 alternative_ui_separator_color = yellow
@@ -539,8 +539,8 @@ active_column_color = yellow
 visualizer_color = yellow
 #
 #window_border_color = white
-window_border_color = blue
+window_border_color = green
 #
 #active_window_border = red
-active_window_border = blue
+active_window_border = green
 #
