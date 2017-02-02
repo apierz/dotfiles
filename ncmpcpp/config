@@ -494,7 +494,7 @@ ask_before_clearing_playlists = no
 colors_enabled = yes
 #
 #empty_tag_color = cyan
-empty_tag_color = cyan
+empty_tag_color = green
 #
 #header_window_color = default
 header_window_color = green
@@ -518,7 +518,7 @@ color1 = red
 color2 = yellow
 #
 #main_window_highlight_color = yellow
-main_window_highlight_color = cyan
+main_window_highlight_color = yellow
  
 #progressbar_color = black
 progressbar_color = yellow
@@ -533,7 +533,7 @@ statusbar_color = green
 alternative_ui_separator_color = yellow
 #
 #active_column_color = red
-active_column_color = yellow
+active_column_color = red
 #
 #visualizer_color = yellow
 visualizer_color = yellow

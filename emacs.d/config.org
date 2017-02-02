@@ -40,7 +40,7 @@ Next I want to set my load paths, it's mostly the standard folders, plus two for
   (add-to-list 'load-path "~/.emacs.d/plugins/evil-org-mode")
   (add-to-list 'load-path "/usr/local/Cellar/mu/HEAD/bin/mu")
   (add-to-list 'exec-path "/usr/local/bin")
-  ;; (add-to-list 'load-path "/Users/Andy/Documents/Programming_Projects/dracula-theme/emacs")
+  (add-to-list 'load-path "/Users/Andy/Documents/Programming_Projects/AP_CompSci/")
 #+END_SRC
 
 =use-package= is a =require= replacement that helps Emacs load faster. Might be a placebo.
@@ -282,9 +282,13 @@ I used to use Monokai for my color theme and [[http://sourcefoundry.org/hack/][H
   ;; (use-package gruvbox-theme)
   ;; (load-theme 'gruvbox t)
 
-  (use-package tao-theme)
-  (load-theme 'tao-yang)
+  ;; (use-package tao-theme)
+  ;; (load-theme 'tao-yang)
 
+  ;; (use-package ap-compsci-theme)
+  ;; (load-theme 'ap-compsci t)
+
+  (load-theme 'leuven t)
 #+END_SRC
 
 Just to be double-dog sure it ends up as utf-8...
@@ -367,6 +371,7 @@ I prefer the Vim keybindings and use them wherever possible in Emacs. I recently
   (key-chord-define evil-insert-state-map "jk" 'evil-normal-state)
   (key-chord-define evil-insert-state-map ",," "<")
   (key-chord-define evil-insert-state-map ".." ">")
+  (key-chord-define evil-insert-state-map "[[" "[ ]")
   (key-chord-define evil-replace-state-map "jk" 'evil-normal-state)
   (key-chord-define evil-visual-state-map "jk" 'evil-normal-state)
   (key-chord-define evil-motion-state-map "jk" 'evil-normal-state)
@@ -657,12 +662,12 @@ My todo system is fairly simple. =TODO= = unsorted, =ONDECK= = could be done at 
 
    ;; For Dracula Theme
    (setq org-todo-keyword-faces
-     '(("ONDECK" . (:foreground "#e6db74" :weight bold))   
-       ("TODO"   . (:foreground "#fd5ff0" :weight bold))
-       ("WAITING" . (:foreground "#ae81ff" :weight bold)) 
-       ("CURRENT" . (:foreground "#a1efe4" :weight bold))
-       ("DONE" . (:foreground "#f92672" :weight bold))
-       ("SOMEDAY" . (:foreground "#64645e" :weight bold))))
+     '(("ONDECK" . (:foreground "#ffffaf" :weight bold))   
+       ("TODO"   . (:foreground "#ddddff" :weight bold))
+       ("WAITING" . (:foreground "#c0c0c0" :weight bold)) 
+       ("CURRENT" . (:foreground "#aaffaa" :weight bold))
+       ("DONE" . (:foreground "#ffb6ba" :weight bold))
+       ("SOMEDAY" . (:foreground "#006DAF" :weight bold))))
 
 #+END_SRC
 
@@ -788,7 +793,7 @@ I use relative line numbers, which helps with the Vim bindings. I use a 0 offset
   (linum-relative-toggle))
   (setq linum-relative-plusp-offset 0)
   (setq linum-relative-current-symbol "->")
-  (set-face-attribute 'linum-relative-current-face nil :foreground "#00b3ef" :background "#1f252b")
+  (set-face-attribute 'linum-relative-current-face nil :foreground "#f0f0f0" :background "#161616")
 
 #+END_SRC
 

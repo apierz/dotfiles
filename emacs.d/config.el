@@ -16,7 +16,7 @@
 (add-to-list 'load-path "~/.emacs.d/plugins/evil-org-mode")
 (add-to-list 'load-path "/usr/local/Cellar/mu/HEAD/bin/mu")
 (add-to-list 'exec-path "/usr/local/bin")
-;; (add-to-list 'load-path "/Users/Andy/Documents/Programming_Projects/dracula-theme/emacs")
+(add-to-list 'load-path "/Users/Andy/Documents/Programming_Projects/AP_CompSci/")
 
 (require 'use-package)
 
@@ -202,8 +202,11 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 ;; (use-package gruvbox-theme)
 ;; (load-theme 'gruvbox t)
 
-(use-package tao-theme)
-(load-theme 'tao-yang)
+;; (use-package tao-theme)
+;; (load-theme 'tao-yang)
+
+(use-package ap-compsci-theme)
+(load-theme 'ap-compsci t)
 
 (prefer-coding-system       'utf-8)
 (set-default-coding-systems 'utf-8)
@@ -256,6 +259,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 (key-chord-define evil-insert-state-map "jk" 'evil-normal-state)
 (key-chord-define evil-insert-state-map ",," "<")
 (key-chord-define evil-insert-state-map ".." ">")
+(key-chord-define evil-insert-state-map "[[" "[ ]")
 (key-chord-define evil-replace-state-map "jk" 'evil-normal-state)
 (key-chord-define evil-visual-state-map "jk" 'evil-normal-state)
 (key-chord-define evil-motion-state-map "jk" 'evil-normal-state)
@@ -447,12 +451,12 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 
  ;; For Dracula Theme
  (setq org-todo-keyword-faces
-   '(("ONDECK" . (:foreground "#e6db74" :weight bold))   
-     ("TODO"   . (:foreground "#fd5ff0" :weight bold))
-     ("WAITING" . (:foreground "#ae81ff" :weight bold)) 
-     ("CURRENT" . (:foreground "#a1efe4" :weight bold))
-     ("DONE" . (:foreground "#f92672" :weight bold))
-     ("SOMEDAY" . (:foreground "#64645e" :weight bold))))
+   '(("ONDECK" . (:foreground "#dde1c8" :weight bold))   
+     ("TODO"   . (:foreground "#419394" :weight bold))
+     ("WAITING" . (:foreground "#050946" :weight bold)) 
+     ("CURRENT" . (:foreground "#91bcab" :weight bold))
+     ("DONE" . (:foreground "#f6646c" :weight bold))
+     ("SOMEDAY" . (:foreground "#616161" :weight bold))))
 
 (setq org-hide-leading-stars t)
 (use-package org-bullets
@@ -525,7 +529,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 (linum-relative-toggle))
 (setq linum-relative-plusp-offset 0)
 (setq linum-relative-current-symbol "->")
-(set-face-attribute 'linum-relative-current-face nil :foreground "#00b3ef" :background "#1f252b")
+(set-face-attribute 'linum-relative-current-face nil :foreground "#f0f0f0" :background "#161616")
 
 (use-package smooth-scrolling
   :config
@@ -970,7 +974,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 "Face for errors in the modeline. Used by `*flycheck'")
 
 ;; Bar
-(defface doom-modeline-bar '((t (:foreground "#080808" :background "#080808")))
+(defface doom-modeline-bar '((t (:foreground "#f0f0f0" :background "#f0f0f0")))
 "The face used for the left-most bar on the mode-line of an active window.")
 
 (defface doom-modeline-eldoc-bar '((t (:inherit shadow :foreground nil)))
