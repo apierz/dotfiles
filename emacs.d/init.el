@@ -50,8 +50,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(doom-modeline-info ((t (:foreground "#ffffff" :weight extra-bold))))
- '(doom-modeline-panel ((t (:background "#ffffff" :foreground "#333333"))))
- '(evil-ex-info ((t (:foreground "#F6646C" :slant italic))))
- '(org-level-1 ((t (:weight bold :height 1.4)))))
+ '(default ((t (:inherit nil :stipple nil :background "#Ffffff" :foreground "#333333" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 120 :width normal :foundry "nil" :family "Fira Mono for Powerline"))))
+ '(doom-modeline-buffer-modified ((t (:inherit highlight :background "#335EA8"))))
+ '(doom-modeline-info ((t (:inherit warning)))))
 

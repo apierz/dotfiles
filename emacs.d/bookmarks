@@ -2,7 +2,17 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("now"
+(("ap-compsci-theme.el"
+ (filename . "~/Documents/Programming_Projects/AP_CompSci/ap-compsci-theme.el")
+ (front-context-string . ";;; ap-compsci-t")
+ (rear-context-string)
+ (position . 1))
+("leuven-theme.el"
+ (filename . "~/Documents/dotfiles/emacs.d/elpa/leuven-theme-20170129.1131/leuven-theme.el")
+ (front-context-string . ";;; leuven-theme")
+ (rear-context-string)
+ (position . 1))
+("now"
  (filename . "~/.kwm/scripts/now_playing_script.sh")
  (front-context-string)
  (rear-context-string . "VOLUME@$ISMUTED;")

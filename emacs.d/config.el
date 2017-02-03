@@ -205,8 +205,10 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 ;; (use-package tao-theme)
 ;; (load-theme 'tao-yang)
 
-(use-package ap-compsci-theme)
-(load-theme 'ap-compsci t)
+;; (use-package ap-compsci-theme)
+;; (load-theme 'ap-compsci t)
+
+(load-theme 'leuven t)
 
 (prefer-coding-system       'utf-8)
 (set-default-coding-systems 'utf-8)
@@ -451,12 +453,12 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 
  ;; For Dracula Theme
  (setq org-todo-keyword-faces
-   '(("ONDECK" . (:foreground "#dde1c8" :weight bold))   
-     ("TODO"   . (:foreground "#419394" :weight bold))
-     ("WAITING" . (:foreground "#050946" :weight bold)) 
-     ("CURRENT" . (:foreground "#91bcab" :weight bold))
-     ("DONE" . (:foreground "#f6646c" :weight bold))
-     ("SOMEDAY" . (:foreground "#616161" :weight bold))))
+   '(("ONDECK" . (:foreground "#ffffaf" :weight bold))   
+     ("TODO"   . (:foreground "#ddddff" :weight bold))
+     ("WAITING" . (:foreground "#c0c0c0" :weight bold)) 
+     ("CURRENT" . (:foreground "#aaffaa" :weight bold))
+     ("DONE" . (:foreground "#ffb6ba" :weight bold))
+     ("SOMEDAY" . (:foreground "#006DAF" :weight bold))))
 
 (setq org-hide-leading-stars t)
 (use-package org-bullets
@@ -951,7 +953,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 '((t (:inherit doom-modeline-buffer-path :bold nil)))
 "Face used for the filename part of the mode-line buffer path.")
 
-(defface doom-modeline-buffer-modified '((t (:inherit highlight :foreground "#83a598"  )))
+(defface doom-modeline-buffer-modified '((t (:inherit highlight)))
 "Face used for the 'unsaved' symbol in the mode-line.")
 
 (defface doom-modeline-major-mode '((t (:inherit mode-line :bold t)))
@@ -964,7 +966,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 "Face for 'X out of Y' segments, such as `*anzu', `*evil-substitute' and
 `iedit'")
 
-(defface doom-modeline-info `((t (:inherit success)))
+(defface doom-modeline-info '((t (:inherit success)))
 "Face for info-level messages in the modeline. Used by `*vc'.")
 
 (defface doom-modeline-warning `((t (:inherit warning)))
@@ -972,9 +974,8 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 
 (defface doom-modeline-urgent `((t (:inherit error)))
 "Face for errors in the modeline. Used by `*flycheck'")
-
 ;; Bar
-(defface doom-modeline-bar '((t (:foreground "#f0f0f0" :background "#f0f0f0")))
+(defface doom-modeline-bar '((t (:foreground "#4f4a3d" :background "#ffffcc")))
 "The face used for the left-most bar on the mode-line of an active window.")
 
 (defface doom-modeline-eldoc-bar '((t (:inherit shadow :foreground nil)))
@@ -997,12 +998,6 @@ active.")
 "")
 (defface mode-line-vcs-warning '((t (:inherit warning)))
 "")
-
-;; Flycheck segment faces
-(defface doom-flycheck-error '((t (:inherit error)))
-"Face for flycheck error feedback in the modeline.")
-(defface doom-flycheck-warning '((t (:inherit warning)))
-"Face for flycheck warning feedback in the modeline.")
 
 ;;
 ;; Functions
@@ -1162,7 +1157,7 @@ directory, the file name, and its state (modified, read-only or non-existent)."
             (when modified-p
             (concat
                 (all-the-icons-faicon "floppy-o"
-                                    :face 'doom-modeline-buffer-modified
+                                    :face 'doom-modeline-warning
                                     :v-adjust -0.1)
                 " ")))
         (when (and buffer-file-name (not (file-exists-p buffer-file-name)))

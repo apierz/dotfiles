@@ -220,10 +220,10 @@ song_library_format = {%n - }{%t}|{%f}
 ##
 #
 #alternative_header_first_line_format = $b$8$aqqu$/a$9 {%t}|{%f} $8$atqq$/a$9$/b
-alternative_header_first_line_format = $3$aqqu$/a$9 {$8%t$9}|{%f} $3$atqq$/a$9
+alternative_header_first_line_format = $3$aqqu$/a$9 {$1%t$9}|{%f} $3$atqq$/a$9
 #
 #alternative_header_second_line_format = {{$4$b%a$/b$9}{ - $7%b$9}{ ($4%y$9)}}|{%D}
-alternative_header_second_line_format = {{$4%a$9}{ $8-$9 $3%b$9}{ $8-$9 ($4%y$9)}}
+alternative_header_second_line_format = {{$4%a$9}{ $1-$9 $3%b$9}{ $1-$9 ($4%y$9)}}
 #
 ##
 ## Note: below variables also support text attributes listed above.
@@ -284,7 +284,7 @@ now_playing_suffix = ♫$9$/b
 ##
 #
 #song_columns_list_format = (20)[]{a} (6f)[white]{NE} (50)[white]{t|f:Title} (20)[cyan]{b} (7f)[blue]{l}
-song_columns_list_format =  (30)[yellow]{ar} (30)[white]{t|f:Title} (20)[green]{br} (7f)[white]{l}
+song_columns_list_format =  (30)[yellow]{ar} (30)[black]{t|f:Title} (20)[green]{br} (7f)[white]{l}
 #
 ##### various settings #####
 #
@@ -521,11 +521,11 @@ color2 = yellow
 main_window_highlight_color = yellow
  
 #progressbar_color = black
-progressbar_color = yellow
+progressbar_color = cyan
 #
 #progressbar_elapsed_color = white
-progressbar_elapsed_color = white
-#
+progressbar_elapsed_color = black
+
 #statusbar_color = cyan
 statusbar_color = green
 #

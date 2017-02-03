@@ -1,1 +1,1 @@
-("~/Documents/Python/" "~/Documents/dotfiles/" "~/Library/Application Support/Übersicht/widgets/nerdbar.widget/" "~/Dropbox (Personal)/Notes/" "~/Sites/homepage/" "~/Documents/Programming_Projects/food_finder/" "~/Sites/simple_cms/" "~/" "/usr/local/")
+("~/Documents/qmk_firmware/keyboards/planck/keymaps/andykeymap/" "~/Documents/dotfiles/" "~/Dropbox (Personal)/Notes/" "~/Library/Application Support/Übersicht/widgets/nerdbar.widget/" "~/Documents/Python/" "~/Sites/homepage/" "~/Documents/Programming_Projects/food_finder/" "~/Sites/simple_cms/" "~/" "/usr/local/")
