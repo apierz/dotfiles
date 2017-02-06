@@ -1428,3 +1428,36 @@ lines are selected, or the NxM dimensions of a block selection."
             (force-mode-line-update)
             (sit-for eldoc-show-in-mode-line-delay))))
     (force-mode-line-update)))
+
+(use-package git-gutter)
+
+;; If you enable global minor mode
+(global-git-gutter-mode t)
+
+;; If you would like to use git-gutter.el and linum-mode
+(git-gutter:linum-setup)
+
+(global-set-key (kbd "C-x C-g") 'git-gutter)
+(global-set-key (kbd "C-x v =") 'git-gutter:popup-hunk)
+
+;; Jump to next/previous hunk
+(global-set-key (kbd "C-x p") 'git-gutter:previous-hunk)
+(global-set-key (kbd "C-x n") 'git-gutter:next-hunk)
+
+;; Stage current hunk
+(global-set-key (kbd "C-x v s") 'git-gutter:stage-hunk)
+;; Revert current hunk
+
+(global-set-key (kbd "C-x v r") 'git-gutter:revert-hunk)
+
+;; Mark current hunk
+(global-set-key (kbd "C-x v SPC") #'git-gutter:mark-hunk)
+
+(custom-set-variables
+ '(git-gutter:modified-sign "▐") ;; two space
+ '(git-gutter:added-sign "▐")    ;; multiple character is OK
+ '(git-gutter:deleted-sign "▐"))
+
+(set-face-foreground 'git-gutter:modified "#DDDDFF") 
+(set-face-foreground 'git-gutter:added "#97F295")
+(set-face-foreground 'git-gutter:deleted "#FFB6BA")
