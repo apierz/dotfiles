@@ -112,12 +112,12 @@ khd kwm on
 
 
 # set border color for different modes
-khd mode default color  0xdd419394
-khd mode switcher color 0xddF6646C
-khd mode mpd color      0xddFF4500
-khd mode swap color     0xddDDE1C8
-khd mode tree color     0xdd91BCAB
-khd mode space color    0xdd050946
+khd mode default color  0xff335EA8
+khd mode switcher color 0xddFF9632
+khd mode mpd color      0xddE5786D
+khd mode swap color     0xddbf8dff
+khd mode tree color     0xdd008000
+khd mode space color    0xdd7fffd4
 
 
 # toggle between modes
@@ -133,14 +133,13 @@ switcher - w            :   khd -e "mode activate mpd"
 switcher - a            :   khd -e "mode activate swap"
 switcher - s            :   khd -e "mode activate space"
 switcher - d            :   khd -e "mode activate tree"
-switcher - q            :   khd -e "mode activate info"
 
 
 
 # switcher mode
 switcher - r            :   khd -e "reload" # reload config
 
-switcher - return       :   open -na /Applications/safari.app;\
+switcher - return       :   open -na /Applications/iTerm.app;\
                             khd -e "mode activate default"
 
 switcher - h            :   kwmc window -f west

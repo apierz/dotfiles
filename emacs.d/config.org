@@ -915,155 +915,98 @@ A few other useful packages for coding.
 You customize the look of your powerline by defining faces for when the powerline is on the active buffer, or it's inactive. I've taken my colors from Dracula Theme, so it matches the rest of my config. Emacs in the terminal is limited to 256 colors, almost all of them bright, so darker colors don't look good when using the terminal. =(display-graphic-p)= lets me check if I'm on a terminal or not and set colors that look better if so. However, I feel that it's getting a little too complex and busy, so I'm going to try a more streamlined =mode line= for a little while.
 
 #+BEGIN_SRC emacs-lisp
-
-  (setq display-time-format "%I:%M")
-  (setq display-time-mail-directory "~/.Maildir/Personal/INBOX/new")
-  (setq display-time-default-load-average nil)
-  (display-time-mode 1)
-
-    (defgroup segments-group nil "My powerline line segments" :group 'segments)
-
-  (if window-system  (defface my-pl-segment1-active
-      '((t (:foreground "#3d3d48" :background "#ecbe7b")))
-      "Powerline first segment active face.")
-    (defface my-pl-segment1-active
-      '((t (:foreground "#525252" :background "#ecbe7b")))
-      "Powerline first segment active face."))
-    (defface my-pl-segment1-inactive
-     '((t (:foreground "#b5babf" :background "#545565")))
-      "Powerline first segment inactive face.")
-
-    (defface my-pl-segment2-active
-      '((t (:foreground "#eeeeee" :background "#00b3ef")))
-      "Powerline second segment active face.")
-    (defface my-pl-segment2-inactive
-      '((t (:foreground "#b5babf" :background "#545565")))
-      "Powerline second segment inactive face.")
-
-    (if window-system (defface my-pl-segment3-active
-      '((t (:foreground "#00b3ef" :background "#3d3d48")))
-      "Powerline third segment active face.")
-     (defface my-pl-segment3-active
-      '((t (:foreground "#00b3ef" :background "#525252")))
-      "Powerline third segment active face."))
-    (defface my-pl-segment3-inactive
-      '((t (:foreground "#b5babf" :background "#545565")))
-      "Powerline third segment inactive face.")
-
-    (defface my-pl-segment4-active
-      '((t (:foreground "#ffffff" :background "#dc79dc")))
-      "Powerline hud segment active face.")
-    (defface my-pl-segment4-inactive
-      '((t (:foreground "#ffffff" :background "#b5babf")))
-      "Powerline hud segment inactive face.")
-
-
-   (if window-system (defface my-pl-segment5-active
-      '((t (:foreground "#dc79dc" :background "#3d3d48")))
-      "Powerline buffersize segment active face.")
-     (defface my-pl-segment5-active
-      '((t (:foreground "#dc79dc" :background "#525252")))
-      "Powerline buffersize segment active face."))
-
-    (defface my-pl-segment5-inactive
-      '((t (:foreground "#b5babf" :background "#545565")))
-      "Powerline buffersize segment inactive face.")
-
-    (if window-system (defface my-pl-segment6-active
-     '((t (:foreground "#3d3d48" :background "#ecbe7b" :weight bold)))
-      "Powerline buffer-id  segment active face.")
-     (defface my-pl-segment6-active
-     '((t (:foreground "#525252" :background "#ecbe7b" :weight bold)))
-      "Powerline buffer-id  segment active face."))
-    (defface my-pl-segment6-inactive
-     '((t (:foreground "#b5babf" :background "#545565" :weight bold)))
-      "Powerline buffer-id  segment inactive face.")
+  (defface my-pl-segment1-active
+    '((t (:foreground "#000000" :background "#E1B61A")))
+    "Powerline first segment active face.")
+  (defface my-pl-segment1-inactive
+    '((t (:foreground "#CEBFF3" :background "#3A2E58")))
+    "Powerline first segment inactive face.")
+  (defface my-pl-segment2-active
+    '((t (:foreground "#F5E39F" :background "#8A7119")))
+    "Powerline second segment active face.")
+  (defface my-pl-segment2-inactive
+    '((t (:foreground "#CEBFF3" :background "#3A2E58")))
+    "Powerline second segment inactive face.")
+  (defface my-pl-segment3-active
+    '((t (:foreground "#CEBFF3" :background "#3A2E58")))
+    "Powerline third segment active face.")
+  (defface my-pl-segment3-inactive
+    '((t (:foreground "#CEBFF3" :background "#3A2E58")))
+    "Powerline third segment inactive face.")
 #+END_SRC
 
 
 Then I use them to define a theme in a function. It looks a little confusing at first but it becomes easy with a little experimentation. The powerline is broken into two halves, the left (lhs) and right (rhs) with a section in the middle that fills any empty space.
 
 #+BEGIN_SRC emacs-lisp
-
-
-  (defun andy--powerline-default-theme ()
-        "Set up my custom Powerline with Evil indicators."
-        (interactive)
-        (setq-default mode-line-format
-          '("%e"
-            (:eval
-             (let* ((active (powerline-selected-window-active))
-               (seg1 (if active 'my-pl-segment1-active 'my-pl-segment1-inactive))
-               (seg2 (if active 'my-pl-segment2-active 'my-pl-segment2-inactive))
-               (seg3 (if active 'my-pl-segment3-active 'my-pl-segment3-inactive))
-               (seg4 (if active 'my-pl-segment4-active 'my-pl-segment4-inactive))
-               (seg5 (if active 'my-pl-segment5-active 'my-pl-segment5-inactive))
-               (seg6 (if active 'my-pl-segment6-active 'my-pl-segment6-inactive))
-               (separator-left (intern (format "powerline-%s-%s"
-                                     (powerline-current-separator)
-                                     (car powerline-default-separator-dir))))
-               (separator-right (intern (format "powerline-%s-%s"
-                                      (powerline-current-separator)
-                                      (cdr powerline-default-separator-dir))))
-                    (lhs (list (let ((evil-face (powerline-evil-face)))
-                                 (if evil-mode
-                                     (powerline-raw (powerline-evil-tag) evil-face)
-                                   ))
-                               (if evil-mode
-                                   (funcall separator-left (powerline-evil-face) seg1))
-                               (powerline-raw "[%*]" seg1 'l)
-                               (powerline-buffer-path seg1 'l)
-                               ;; (when powerline-display-buffer-size
-                                 ;; (powerline-buffer-size seg5 'l))
-                               (powerline-vc seg5 'l)
-                               (powerline-buffer-id seg6 'l)
-                               (when (and (boundp 'which-func-mode) which-func-mode)
-                                 (powerline-raw which-func-format seg1 'l))
-                               (powerline-raw " " seg1)
-                               (funcall separator-left seg1 seg2)
-                               (when (boundp 'erc-modified-channels-object)
-                                 (powerline-raw erc-modified-channels-object seg2 'l))
-                               (powerline-major-mode seg2 'l)
-                               (powerline-process seg2)
-                               (powerline-narrow seg2 'l)
-                               (powerline-raw " " seg2)
-                               (funcall separator-left seg2 seg3)
-                               (powerline-minor-modes seg3 'l)
-                               ))
-                               (rhs (list 
-                               (funcall separator-right seg3 seg2)
-                               (powerline-raw (char-to-string #xe0a1) seg2 'l)
-                               (powerline-raw "%l" seg2 'l)
-                               (powerline-raw ":" seg2 'r)
-                               (powerline-raw "%c" seg2 'r)
-                               (funcall separator-right seg2 seg1)
-                               (powerline-raw " " seg1)
-                               (powerline-raw "%6p" seg3 'r)
-                               (when powerline-display-hud
-                                 (powerline-hud seg4 seg1))
-                               (powerline-raw " " seg1 'r)
-                               (funcall separator-right seg1 seg2)
-                               (powerline-raw global-mode-string seg2 'r)
-  )))
-               (concat (powerline-render lhs)
-                       (powerline-fill seg3 (powerline-width rhs))
-                       (powerline-render rhs)))))))
-
-     ;; (use-package powerline
-     ;;    :ensure t
-     ;;    :config
-     ;;    (setq powerline-height 26)
-     ;;    (setq powerline-default-separator (if (display-graphic-p) 'arrow-fade
-     ;;                                        nil))
-     ;;    (andy--powerline-default-theme))
+  (defun air--powerline-default-theme ()
+    "Set up my custom Powerline with Evil indicators."
+    (setq-default mode-line-format
+                  '("%e"
+                    (:eval
+                     (let* ((active (powerline-selected-window-active))
+                            (seg1 (if active 'my-pl-segment1-active 'my-pl-segment1-inactive))
+                            (seg2 (if active 'my-pl-segment2-active 'my-pl-segment2-inactive))
+                            (seg3 (if active 'my-pl-segment3-active 'my-pl-segment3-inactive))
+                            (separator-left (intern (format "powerline-%s-%s"
+                                                            (powerline-current-separator)
+                                                            (car powerline-default-separator-dir))))
+                            (separator-right (intern (format "powerline-%s-%s"
+                                                             (powerline-current-separator)
+                                                             (cdr powerline-default-separator-dir))))
+                            (lhs (list (let ((evil-face (powerline-evil-face)))
+                                         (if evil-mode
+                                             (powerline-raw (powerline-evil-tag) evil-face)
+                                           ))
+                                       (if evil-mode
+                                           (funcall separator-left (powerline-evil-face) seg1))
+                                       (powerline-buffer-id seg1 'l)
+                                       (powerline-raw "[%*]" seg1 'l)
+                                       (when (and (boundp 'which-func-mode) which-func-mode)
+                                         (powerline-raw which-func-format seg1 'l))
+                                       (powerline-raw " " seg1)
+                                       (funcall separator-left seg1 seg2)
+                                       (when (boundp 'erc-modified-channels-object)
+                                         (powerline-raw erc-modified-channels-object seg2 'l))
+                                       (powerline-major-mode seg2 'l)
+                                       (powerline-process seg2)
+                                       (powerline-minor-modes seg2 'l)
+                                       (powerline-narrow seg2 'l)
+                                       (powerline-raw " " seg2)
+                                       (funcall separator-left seg2 seg3)
+                                       (powerline-vc seg3 'r)
+                                       (when (bound-and-true-p nyan-mode)
+                                         (powerline-raw (list (nyan-create)) seg3 'l))))
+                            (rhs (list (powerline-raw global-mode-string seg3 'r)
+                                       (funcall separator-right seg3 seg2)
+                                       (unless window-system
+                                         (powerline-raw (char-to-string #xe0a1) seg2 'l))
+                                       (powerline-raw "%4l" seg2 'l)
+                                       (powerline-raw ":" seg2 'l)
+                                       (powerline-raw "%3c" seg2 'r)
+                                       (funcall separator-right seg2 seg1)
+                                       (powerline-raw " " seg1)
+                                       (powerline-raw "%6p" seg1 'r)
+                                       (when powerline-display-hud
+                                         (powerline-hud seg1 seg3)))))
+                       (concat (powerline-render lhs)
+                               (powerline-fill seg3 (powerline-width rhs))
+                               (powerline-render rhs)))))))
+    
+  (use-package powerline
+    :ensure t
+    :config
+    (setq powerline-default-separator (if (display-graphic-p) 'arrow
+                                        nil))
+    (air--powerline-default-theme))
 
 #+END_SRC
 
 I use =powerline-evil= to put a color changing evil state face on my powerline. If you are using Dracula theme, they will be Dracula colors. That change was my first accepted pull request to an open source project!
 
 #+BEGIN_SRC emacs-lisp
-  ;; (use-package powerline-evil
-  ;;   :ensure t)
+  (use-package powerline-evil
+    :ensure t)
 #+END_SRC
 
 * Projectile

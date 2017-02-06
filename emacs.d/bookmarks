@@ -12,16 +12,6 @@
  (front-context-string . ";;; leuven-theme")
  (rear-context-string)
  (position . 1))
-("now"
- (filename . "~/.kwm/scripts/now_playing_script.sh")
- (front-context-string)
- (rear-context-string . "VOLUME@$ISMUTED;")
- (position . 574))
-("doom-themes-20161103.1722"
- (filename . "~/Documents/dotfiles/emacs.d/elpa/doom-themes-20170111.2138/")
- (front-context-string . "doom-molokai-the")
- (rear-context-string . "78 Nov  9 15:52 ")
- (position . 280))
 ("scripts"
  (filename . "~/.kwm/scripts/")
  (front-context-string . "compstatus\n  -rw")
@@ -67,11 +57,6 @@
  (front-context-string . "#include \"planck")
  (rear-context-string)
  (position . 1))
-("pokemon_I_want.txt"
- (filename . "~/Dropbox/Notes/pokemon_I_want.txt")
- (front-context-string . "\n* Dugtrio\n* Sta")
- (rear-context-string . "okemon Fire Red\n")
- (position . 63))
 ("config"
  (filename . "~/Documents/dotfiles/emacs.d/config.org")
  (front-context-string . "#+Title: config.")
