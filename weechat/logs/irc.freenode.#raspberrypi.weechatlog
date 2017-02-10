@@ -400,3 +400,168 @@
 2016-09-06 08:04:18	-->	guideX (Acidmax@unaffiliated/guidex) has joined #raspberrypi
 2016-09-06 08:04:46	guideX	how do you properly setup vncserver on raspbian.. when I try, I screw up raspbian and it won't boot, or I end up at a login screen on boot
 2016-09-06 08:04:56	guideX	what's a good tutorial for setting up tightvncserver on raspbian
+2017-02-09 14:30:52	-->	TheFactIs (~Andy@2603:3024:152c:500:5c12:7bb7:31ea:f661) has joined #raspberrypi
+2017-02-09 14:30:52	--	Topic for #raspberrypi is "Unofficial RaspberryPi IRC channel but "Blessed" by the Foundation as the ONE channel. | Logs: http://srv.datagutt1.com | Rules: https://goo.gl/h5qPhz"
+2017-02-09 14:30:52	--	Topic set by gordonDrogon (~gordon@2001:4d48:ad51:8901::2) on Sat, 24 Dec 2016 07:04:53
+2017-02-09 14:30:52	--	Channel #raspberrypi: 630 nicks (4 ops, 0 voices, 626 normals)
+2017-02-09 14:30:56	--	Channel created on Sat, 13 Aug 2011 09:04:23
+2017-02-09 14:32:41	-->	dastaan_ (~dastaan@129.255.227.168) has joined #raspberrypi
+2017-02-09 14:34:51	-->	Mikelevel (~MoVeWoRk@unaffiliated/mikelevel) has joined #raspberrypi
+2017-02-09 14:35:04	<--	dastaan (~dastaan@2620:0:e50:1401:f1a0:3623:1561:110d) has quit (Ping timeout: 256 seconds)
+2017-02-09 14:36:42	<--	EnrgySmth (d8eba101@gateway/web/freenode/ip.216.235.161.1) has quit
+2017-02-09 14:42:41	<--	doomlord (~textual@host86-148-102-241.range86-148.btcentralplus.com) has quit (Quit: My MacBook Pro has gone to sleep. ZZZzzz…)
+2017-02-09 14:44:12	-->	abu0 has joined #raspberrypi
+2017-02-09 14:45:41	-->	knob has joined #raspberrypi
+2017-02-09 14:45:52	<--	dastaan_ has quit (Remote host closed the connection)
+2017-02-09 14:46:16	-->	Throdne has joined #raspberrypi
+2017-02-09 14:46:39	-->	dastaan has joined #raspberrypi
+2017-02-09 14:46:43	<--	codebam has quit (Ping timeout: 255 seconds)
+2017-02-09 14:47:18	<--	InverseRhombus has quit (Quit: Leaving)
+2017-02-09 14:50:31	-->	codebam has joined #raspberrypi
+2017-02-09 14:51:13	<--	dastaan has quit (Ping timeout: 255 seconds)
+2017-02-09 14:52:37	-->	atouk has joined #raspberrypi
+2017-02-09 14:52:40	-->	dastaan has joined #raspberrypi
+2017-02-09 14:54:49	<--	dconroy has quit (Quit: dconroy)
+2017-02-09 14:57:17	<--	vcolombo has quit (Ping timeout: 260 seconds)
+2017-02-09 15:00:41	Enverex	Anyone else familiar with why pi3-disable-bt would break Wifi?
+2017-02-09 15:02:21	ali1234	Enverex: can you reproduce it on an unmodified raspbian install?
+2017-02-09 15:02:26	ali1234	if so, i would report a bug
+2017-02-09 15:02:27	<--	Gathis has quit (Remote host closed the connection)
+2017-02-09 15:02:43	-->	Grapes has joined #raspberrypi
+2017-02-09 15:03:02	Enverex	ali1234: I don't have a spare micro-SD card to install with (as I'm using Arch rather than Raspbian)
+2017-02-09 15:03:03	ali1234	the only thing it does is remap the uart pins
+2017-02-09 15:03:10	ali1234	so it should not affect wifi at all
+2017-02-09 15:05:24	--	HeathHayleiOS6 is now known as BrexitmeansBrexi
+2017-02-09 15:06:48	<--	neildugan has quit (Ping timeout: 256 seconds)
+2017-02-09 15:11:48	<--	SirPuffy has quit (Ping timeout: 240 seconds)
+2017-02-09 15:11:59	<--	dumle29 has quit (Ping timeout: 245 seconds)
+2017-02-09 15:12:28	<--	HalfEatenPie has quit (Ping timeout: 240 seconds)
+2017-02-09 15:15:12	<--	GreeningGalaxy has quit (Read error: Connection reset by peer)
+2017-02-09 15:15:31	-->	neildugan has joined #raspberrypi
+2017-02-09 15:15:47	Grapes	arch runs on an rpi?
+2017-02-09 15:16:10	<--	swift110 has quit (Ping timeout: 240 seconds)
+2017-02-09 15:16:47	Enverex	Yup, Arch ARM
+2017-02-09 15:16:58	Enverex	Supports quite a few boards
+2017-02-09 15:19:08	<--	Blendify has quit (Quit: What does /quit do?)
+2017-02-09 15:21:02	-->	SirPuffy has joined #raspberrypi
+2017-02-09 15:22:04	<--	Envil has quit (Remote host closed the connection)
+2017-02-09 15:24:05	-->	HalfEatenPie has joined #raspberrypi
+2017-02-09 15:24:35	-->	hydrogen has joined #raspberrypi
+2017-02-09 15:29:41	-->	codestorm has joined #raspberrypi
+2017-02-09 15:30:50	<--	mgottschlag has quit (Ping timeout: 276 seconds)
+2017-02-09 15:31:01	<--	Chocolophophora has quit (Quit: oops)
+2017-02-09 15:31:15	-->	whatever_hi has joined #raspberrypi
+2017-02-09 15:31:25	<--	ragedragon has quit (Ping timeout: 255 seconds)
+2017-02-09 15:31:41	<--	spybert has quit (Quit: Leaving)
+2017-02-09 15:31:55	<--	alexandre9099 has quit (Ping timeout: 240 seconds)
+2017-02-09 15:33:35	<--	Olufunmilayo has quit (Ping timeout: 240 seconds)
+2017-02-09 15:33:48	<--	SirPuffy has quit (Ping timeout: 240 seconds)
+2017-02-09 15:34:24	-->	alexandre9099 has joined #raspberrypi
+2017-02-09 15:34:25	<--	codestorm has quit (Ping timeout: 255 seconds)
+2017-02-09 15:34:29	-->	Olufunmilayo has joined #raspberrypi
+2017-02-09 15:37:01	-->	spybert has joined #raspberrypi
+2017-02-09 15:37:27	-->	Chocolungma has joined #raspberrypi
+2017-02-09 15:37:49	-->	jje has joined #raspberrypi
+2017-02-09 15:38:16	<--	zaherdirkey has quit (Quit: Leaving)
+2017-02-09 15:39:50	-->	GreeningGalaxy has joined #raspberrypi
+2017-02-09 15:40:24	-->	SirPuffy has joined #raspberrypi
+2017-02-09 15:40:53	--	BrexitmeansBrexi is now known as gotoios6noip7JB
+2017-02-09 15:41:53	-->	fredp has joined #raspberrypi
+2017-02-09 15:45:45	--	gotoios6noip7JB is now known as BrexitmeansBrexi
+2017-02-09 15:49:14	<--	Mikelevel has quit (Quit: Mikelevel)
+2017-02-09 15:49:41	<--	GreeningGalaxy has quit (Ping timeout: 276 seconds)
+2017-02-09 15:53:16	<--	hydrogen has quit (Remote host closed the connection)
+2017-02-09 15:55:40	--	BrexitmeansBrexi is now known as BrexitiOS6
+2017-02-09 15:56:38	 *	BurtyB has just tested "dtoverlay=pi3-disable-bt" on the latest Raspbian with PIXEL and it doesn't disable wifi
+2017-02-09 15:56:49	Grapes	lol thanks
+2017-02-09 15:57:04	Grapes	disable-bt for bluetooth?
+2017-02-09 15:57:12	Grapes	why would wifi be affected?
+2017-02-09 15:57:20	-->	Datalink has joined #raspberrypi
+2017-02-09 15:57:29	<--	IT_Sean has quit (Remote host closed the connection)
+2017-02-09 15:57:51	<--	neildugan has quit (Ping timeout: 258 seconds)
+2017-02-09 15:59:12	BurtyB	Grapes, I didn't expect it to but Enverex said it did on Arch and since I'm messing with images atm I thought I'd check
+2017-02-09 15:59:26	Grapes	ok, thanks man
+2017-02-09 15:59:30	<--	atouk has quit (Ping timeout: 256 seconds)
+2017-02-09 16:00:32	<--	Feedz has quit (Ping timeout: 252 seconds)
+2017-02-09 16:02:12	--	BrexitiOS6 is now known as HeathHayleiOS6
+2017-02-09 16:04:16	<--	vstehle has quit (Ping timeout: 255 seconds)
+2017-02-09 16:08:07	<--	bedah has quit (Quit: Ex-Chat)
+2017-02-09 16:09:09	-->	augiedoggie has joined #raspberrypi
+2017-02-09 16:10:13	-->	atouk has joined #raspberrypi
+2017-02-09 16:12:26	-->	neildugan has joined #raspberrypi
+2017-02-09 16:12:38	<--	teepee has quit (Ping timeout: 252 seconds)
+2017-02-09 16:13:16	-->	hydrogen has joined #raspberrypi
+2017-02-09 16:15:38	<--	saint_ has quit (Quit: UNIVERSE CORRUPTED. REBOOT (Y/N) ?)
+2017-02-09 16:15:47	-->	Feedz has joined #raspberrypi
+2017-02-09 16:15:50	<--	codingpanic has quit (Quit: Reconnecting)
+2017-02-09 16:19:34	<--	KaiserAres has quit (Ping timeout: 255 seconds)
+2017-02-09 16:19:50	-->	codingpanic has joined #raspberrypi
+2017-02-09 16:20:34	<--	dastaan has quit (Remote host closed the connection)
+2017-02-09 16:21:09	-->	dastaan has joined #raspberrypi
+2017-02-09 16:22:35	-->	swift110 has joined #raspberrypi
+2017-02-09 16:22:50	-->	dastaan_ has joined #raspberrypi
+2017-02-09 16:24:05	<--	dastaan_ has quit (Remote host closed the connection)
+2017-02-09 16:24:25	-->	dastaan_ has joined #raspberrypi
+2017-02-09 16:24:29	-->	codestorm has joined #raspberrypi
+2017-02-09 16:25:04	<--	GenteelBen has quit
+2017-02-09 16:25:32	<--	hydrogen has quit (Remote host closed the connection)
+2017-02-09 16:25:43	<--	dastaan has quit (Ping timeout: 255 seconds)
+2017-02-09 16:28:04	<--	codingpanic has quit (Changing host)
+2017-02-09 16:28:04	-->	codingpanic has joined #raspberrypi
+2017-02-09 16:28:52	<--	codestorm has quit (Ping timeout: 255 seconds)
+2017-02-09 16:29:19	<--	augiedoggie has quit (Ping timeout: 255 seconds)
+2017-02-09 16:35:59	<--	_BigWings_ has quit (Read error: Connection reset by peer)
+2017-02-09 16:37:29	-->	_BigWings_ has joined #raspberrypi
+2017-02-09 16:38:18	<--	SailorMoon has quit (Quit: Leaving)
+2017-02-09 16:39:42	<--	jje has quit (Remote host closed the connection)
+2017-02-09 16:40:18	-->	seranhom has joined #raspberrypi
+2017-02-09 16:42:10	-->	SailorMoon has joined #raspberrypi
+2017-02-09 16:43:25	<--	plugwash has quit (Ping timeout: 255 seconds)
+2017-02-09 16:44:21	<--	HerculeP has quit (Remote host closed the connection)
+2017-02-09 16:44:31	<--	svm_invictvs has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2017-02-09 16:45:56	-->	GreeningGalaxy has joined #raspberrypi
+2017-02-09 16:48:07	-->	CoOolBreeze has joined #raspberrypi
+2017-02-09 16:48:37	<--	double-you has quit (Quit: double-you)
+2017-02-09 16:48:51	<--	Datalink has quit (Quit: Datalink offline)
+2017-02-09 16:51:14	<--	dastaan_ has quit
+2017-02-09 16:51:22	-->	Thasan has joined #raspberrypi
+2017-02-09 16:51:34	-->	dastaan has joined #raspberrypi
+2017-02-09 16:52:28	<--	dualcells has quit (Changing host)
+2017-02-09 16:52:28	-->	dualcells has joined #raspberrypi
+2017-02-09 16:53:17	<--	SpeccyMan has quit (Quit: 'Goodbye')
+2017-02-09 16:56:38	<--	Syliss has quit (Ping timeout: 276 seconds)
+2017-02-09 16:56:48	<--	neildugan has quit (Ping timeout: 240 seconds)
+2017-02-09 16:56:57	-->	dastaan_ has joined #raspberrypi
+2017-02-09 16:57:37	--	HeathHayleiOS6 is now known as iOS6
+2017-02-09 16:57:43	<--	zaffy has quit (Quit: Leaving)
+2017-02-09 16:58:05	<--	AndrewAlexMac has quit (Ping timeout: 240 seconds)
+2017-02-09 16:58:07	<--	dastaan has quit (Ping timeout: 255 seconds)
+2017-02-09 16:59:28	<--	knob has quit (Quit: Leaving)
+2017-02-09 17:01:25	<--	de-facto has quit (Quit: See you around.)
+2017-02-09 17:01:47	-->	augiedoggie has joined #raspberrypi
+2017-02-09 17:02:05	-->	de-facto has joined #raspberrypi
+2017-02-09 17:02:43	-->	AndrewAlexMac has joined #raspberrypi
+2017-02-09 17:03:35	<--	howdoi has quit (Quit: Connection closed for inactivity)
+2017-02-09 17:50:31	--	irc: disconnected from server
+2017-02-09 17:50:56	-->	TheFactIs has joined #raspberrypi
+2017-02-09 17:50:56	--	Topic for #raspberrypi is "Unofficial RaspberryPi IRC channel but "Blessed" by the Foundation as the ONE channel. | Logs: http://srv.datagutt1.com | Rules: https://goo.gl/h5qPhz"
+2017-02-09 17:50:56	--	Topic set by gordonDrogon (~gordon@2001:4d48:ad51:8901::2) on Sat, 24 Dec 2016 07:04:53
+2017-02-09 17:50:56	--	Channel #raspberrypi: 612 nicks (3 ops, 0 voices, 609 normals)
+2017-02-09 17:51:02	--	Channel created on Sat, 13 Aug 2011 09:04:23
+2017-02-09 18:11:35	--	irc: disconnected from server
+2017-02-09 18:26:44	-->	TheFactIs has joined #raspberrypi
+2017-02-09 18:26:44	--	Topic for #raspberrypi is "Unofficial RaspberryPi IRC channel but "Blessed" by the Foundation as the ONE channel. | Logs: http://srv.datagutt1.com | Rules: https://goo.gl/h5qPhz"
+2017-02-09 18:26:44	--	Topic set by gordonDrogon (~gordon@2001:4d48:ad51:8901::2) on Sat, 24 Dec 2016 07:04:53
+2017-02-09 18:26:44	--	Channel #raspberrypi: 608 nicks (3 ops, 0 voices, 605 normals)
+2017-02-09 18:26:52	--	Channel created on Sat, 13 Aug 2011 09:04:23
+2017-02-10 00:06:47	--	irc: disconnected from server
+2017-02-10 04:08:09	--	irc: disconnected from server
+2017-02-10 04:08:32	-->	TheFactIs has joined #raspberrypi
+2017-02-10 04:08:32	--	Topic for #raspberrypi is "Unofficial RaspberryPi IRC channel but "Blessed" by the Foundation as the ONE channel. | Logs: http://srv.datagutt1.com | Rules: https://goo.gl/h5qPhz"
+2017-02-10 04:08:32	--	Topic set by gordonDrogon (~gordon@2001:4d48:ad51:8901::2) on Sat, 24 Dec 2016 07:04:53
+2017-02-10 04:08:32	--	Channel #raspberrypi: 615 nicks (3 ops, 0 voices, 612 normals)
+2017-02-10 10:14:02	--	irc: disconnected from server
+2017-02-10 10:14:24	-->	TheFactIs has joined #raspberrypi
+2017-02-10 10:14:24	--	Topic for #raspberrypi is "Unofficial RaspberryPi IRC channel but "Blessed" by the Foundation as the ONE channel. | Logs: http://srv.datagutt1.com | Rules: https://goo.gl/h5qPhz"
+2017-02-10 10:14:24	--	Topic set by gordonDrogon (~gordon@2001:4d48:ad51:8901::2) on Sat, 24 Dec 2016 07:04:53
+2017-02-10 10:14:24	--	Channel #raspberrypi: 630 nicks (3 ops, 0 voices, 627 normals)

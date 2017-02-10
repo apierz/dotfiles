@@ -5,4 +5,3 @@
 * Left: GUI Emacs
 * Top Right: Vim
 * Bottom Right: Terminal Emacs
-

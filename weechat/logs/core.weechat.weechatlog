@@ -2928,3 +2928,41 @@
 2017-01-09 10:37:23	=!=	You can not write text in this buffer
 2017-01-09 10:37:25		python: scripts unloaded
 2017-01-09 10:37:25		perl: scripts unloaded
+2017-02-09 14:30:26	=!=	Warning: /Users/Andy/.weechat/irc.conf, line 118: unknown option for section "server_default": default_msg_kick = ""
+2017-02-09 14:30:26	=!=	Warning: /Users/Andy/.weechat/irc.conf, line 119: unknown option for section "server_default": default_msg_part = "WeeChat %v"
+2017-02-09 14:30:26	=!=	Warning: /Users/Andy/.weechat/irc.conf, line 120: unknown option for section "server_default": default_msg_quit = "WeeChat %v"
+2017-02-09 14:30:26	=!=	irc: error creating server option "freenode.default_msg_kick"
+2017-02-09 14:30:26	=!=	Warning: /Users/Andy/.weechat/irc.conf, line 179: invalid value for option: freenode.default_msg_kick
+2017-02-09 14:30:26	=!=	irc: error creating server option "freenode.default_msg_part"
+2017-02-09 14:30:26	=!=	Warning: /Users/Andy/.weechat/irc.conf, line 180: invalid value for option: freenode.default_msg_part
+2017-02-09 14:30:26	=!=	irc: error creating server option "freenode.default_msg_quit"
+2017-02-09 14:30:26	=!=	Warning: /Users/Andy/.weechat/irc.conf, line 181: invalid value for option: freenode.default_msg_quit
+2017-02-09 14:30:26	=!=	irc: error creating server option "rizon.default_msg_kick"
+2017-02-09 14:30:26	=!=	Warning: /Users/Andy/.weechat/irc.conf, line 218: invalid value for option: rizon.default_msg_kick
+2017-02-09 14:30:26	=!=	irc: error creating server option "rizon.default_msg_part"
+2017-02-09 14:30:26	=!=	Warning: /Users/Andy/.weechat/irc.conf, line 219: invalid value for option: rizon.default_msg_part
+2017-02-09 14:30:26	=!=	irc: error creating server option "rizon.default_msg_quit"
+2017-02-09 14:30:26	=!=	Warning: /Users/Andy/.weechat/irc.conf, line 220: invalid value for option: rizon.default_msg_quit
+2017-02-09 14:30:26		perl scripts loaded: buffers, iset
+2017-02-09 14:30:26		python scripts loaded: shell, shortenurl
+2017-02-09 14:30:26		script: downloading list of scripts...
+2017-02-09 14:30:26		Plugins loaded: alias, aspell, charset, exec, fifo, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2017-02-09 14:30:28		script: 331 scripts for WeeChat 1.7
+2017-02-09 14:35:31		Option changed: irc.server.rizon.autojoin = "#/g/technology"  (default if null: "")
+2017-02-09 14:37:48		[look] (weechat.conf)
+2017-02-09 14:37:48		  weechat.look.buffer_time_format = "%H:%M:%S"
+2017-02-09 14:37:48		1 option (matching with "weechat.look.buffer_time_format")
+2017-02-09 14:38:19		Option changed: weechat.look.buffer_time_format = ""  (default: "%H:%M:%S")
+2017-02-09 14:39:55		Option changed: buffers.color.hotlist_message_fg = yellow
+2017-02-09 14:40:08		Option changed: buffers.color.current_bg = yellow  (default: red)
+2017-02-09 14:41:33		Option changed: irc.color.input_nick = cyan  (default: lightcyan)
+2017-02-09 14:42:33		Option changed: irc.look.display_host_join = off  (default: on)
+2017-02-09 14:42:38		Option changed: irc.look.display_host_join_local = off  (default: on)
+2017-02-09 14:44:33		Option changed: weechat.bar.buffers.position = left  (default: top)
+2017-02-09 14:46:45		Option changed: iset.color.bg_selected = blue  (default: red)
+2017-02-09 14:50:05		Option changed: weechat.look.separator_vertical = "|"  (default: "")
+2017-02-09 15:03:28	=!=	Error: it is not safe to bind key "(press" because it does not start with a ctrl or meta code (tip: use alt-k to find key codes); if you want to bind this key anyway, turn off option weechat.look.key_bind_safe
+2017-02-09 15:10:42		Option changed: weechat.color.chat_nick_colors = "yellow,magenta,green,cyan,blue,default"  (default: "cyan,magenta,green,brown,lightblue,default,lightcyan,lightmagenta,lightgreen,blue")
+2017-02-09 15:35:30		Option changed: irc.server.rizon.autojoin = "#/g/technology,#rice"  (default if null: "")
+2017-02-10 10:14:25		python: scripts unloaded
+2017-02-10 10:14:25		perl: scripts unloaded

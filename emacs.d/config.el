@@ -7,6 +7,7 @@
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 (add-to-list 'package-archives '("melpa-stable" .
 "http://stable.melpa.org/packages/"))
+(add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
 
 (setq package-enable-at-startup nil)
 (package-initialize)
@@ -14,9 +15,9 @@
 (add-to-list 'load-path (expand-file-name "snippets" user-emacs-directory))
 (add-to-list 'load-path "~/.emacs.d/plugins")
 (add-to-list 'load-path "~/.emacs.d/plugins/evil-org-mode")
-(add-to-list 'load-path "/usr/local/Cellar/mu/HEAD/bin/mu")
+(add-to-list 'load-path "/usr/local/Cellar/mu/HEAD-1f232b6/bin/mu")
 (add-to-list 'exec-path "/usr/local/bin")
-(add-to-list 'load-path "/Users/Andy/Documents/Programming_Projects/AP_CompSci/")
+(add-to-list 'load-path "/Users/Andy/Documents/Programming_Projects/nord-theme/")
 
 (require 'use-package)
 
@@ -58,85 +59,106 @@
       kept-old-versions      5) ; and how many of the old
 
 (defun cycle-powerline-separators (&optional reverse)
-  "Set Powerline separators in turn.  If REVERSE is not nil, go backwards."
- (interactive)
- (let* ((fn (if reverse 'reverse 'identity))
-   (separators (funcall fn '("arrow" "arrow-fade" "slant"
-                             "chamfer" "wave" "brace" "roundstub" "zigzag"
-                             "butt" "rounded" "contour" "curve")))
-   (found nil))
-  (while (not found)
-    (progn (setq separators (append (cdr separators) (list (car separators))))
-    (when (string= (car separators) powerline-default-separator)
-      (progn (setq powerline-default-separator (cadr separators))
-         (setq found t)
-          (redraw-display)))))))
+    "Set Powerline separators in turn.  If REVERSE is not nil, go backwards."
+   (interactive)
+   (let* ((fn (if reverse 'reverse 'identity))
+     (separators (funcall fn '("arrow" "arrow-fade" "slant"
+                               "chamfer" "wave" "brace" "roundstub" "zigzag"
+                               "butt" "rounded" "contour" "curve")))
+     (found nil))
+    (while (not found)
+      (progn (setq separators (append (cdr separators) (list (car separators))))
+      (when (string= (car separators) powerline-default-separator)
+        (progn (setq powerline-default-separator (cadr separators))
+           (setq found t)
+            (redraw-display)))))))
 
 
-(defun rename-this-file-and-buffer (new-name)
-  "Renames both current buffer and file it's visiting to NEW-NAME."
-  (interactive "sNew name: ")
-  (let ((name (buffer-name))
-        (filename (buffer-file-name)))
-    (unless filename
-      (error "Buffer '%s' is not visiting a file!" name))
-    (if (get-buffer new-name)
-        (message "A buffer named '%s' already exists!" new-name)
-      (progn
-        (when (file-exists-p filename)
-         (rename-file filename new-name 1))
-        (rename-buffer new-name)
-(set-visited-file-name new-name)))))
+  (defun rename-this-file-and-buffer (new-name)
+    "Renames both current buffer and file it's visiting to NEW-NAME."
+    (interactive "sNew name: ")
+    (let ((name (buffer-name))
+          (filename (buffer-file-name)))
+      (unless filename
+        (error "Buffer '%s' is not visiting a file!" name))
+      (if (get-buffer new-name)
+          (message "A buffer named '%s' already exists!" new-name)
+        (progn
+          (when (file-exists-p filename)
+           (rename-file filename new-name 1))
+          (rename-buffer new-name)
+  (set-visited-file-name new-name)))))
 
-(defun delete-this-file ()
-  "Delete the current file, and kill the buffer."
-  (interactive)
-  (or (buffer-file-name) (error "No file is currently being edited"))
-  (when (yes-or-no-p (format "Really delete '%s'?"
-                             (file-name-nondirectory buffer-file-name)))
-    (delete-file (buffer-file-name))
-(kill-this-buffer)))
-
-
-(require 'htmlfontify)
-(defun fontify-and-browse ()
-  "Fontify the current buffer into HTML, write it to a temp file, and open it in a browser."
-  (interactive)
-  (let* ((fontified-buffer (hfy-fontify-buffer))
-         (temp-file-name (make-temp-file "ff" nil ".html")))
-    (with-current-buffer fontified-buffer
-      (write-region (point-min) (point-max) temp-file-name))
-    (browse-url (concat "file://" temp-file-name))))
+  (defun delete-this-file ()
+    "Delete the current file, and kill the buffer."
+    (interactive)
+    (or (buffer-file-name) (error "No file is currently being edited"))
+    (when (yes-or-no-p (format "Really delete '%s'?"
+                               (file-name-nondirectory buffer-file-name)))
+      (delete-file (buffer-file-name))
+  (kill-this-buffer)))
 
 
-(defun show-first-occurrence ()
-  "Display the location of the word at point's first occurrence in the buffer."
-  (interactive)
-  (save-excursion
-    (let ((search-word (thing-at-point 'symbol t)))
-      (goto-char 1)
-      (re-search-forward search-word)
-      (message (concat
-                "L" (number-to-string (line-number-at-pos)) ": "
-                (replace-regexp-in-string
-                 "[ \t\n]*\\'"
-                 ""
-                 (thing-at-point 'line t)
-                 ))))))
+  (require 'htmlfontify)
+  (defun fontify-and-browse ()
+    "Fontify the current buffer into HTML, write it to a temp file, and open it in a browser."
+    (interactive)
+    (let* ((fontified-buffer (hfy-fontify-buffer))
+           (temp-file-name (make-temp-file "ff" nil ".html")))
+      (with-current-buffer fontified-buffer
+        (write-region (point-min) (point-max) temp-file-name))
+      (browse-url (concat "file://" temp-file-name))))
 
-(defun switch-to-previous-buffer ()
-  "Switch to previously open buffer.
-Repeated invocations toggle between the two most recently open buffers."
-  (interactive)
-  (switch-to-buffer (other-buffer (current-buffer) 1)))
 
-(defun narrow-and-set-normal ()
-  "Narrow to the region and, if in a visual mode, set normal mode."
-  (interactive)
-  (narrow-to-region (region-beginning) (region-end))
-  (if (string= evil-state "visual")
-      (progn (evil-normal-state nil)
-(evil-goto-first-line))))
+  (defun show-first-occurrence ()
+    "Display the location of the word at point's first occurrence in the buffer."
+    (interactive)
+    (save-excursion
+      (let ((search-word (thing-at-point 'symbol t)))
+        (goto-char 1)
+        (re-search-forward search-word)
+        (message (concat
+                  "L" (number-to-string (line-number-at-pos)) ": "
+                  (replace-regexp-in-string
+                   "[ \t\n]*\\'"
+                   ""
+                   (thing-at-point 'line t)
+                   ))))))
+
+  (defun switch-to-previous-buffer ()
+    "Switch to previously open buffer.
+  Repeated invocations toggle between the two most recently open buffers."
+    (interactive)
+    (switch-to-buffer (other-buffer (current-buffer) 1)))
+
+  (defun narrow-and-set-normal ()
+    "Narrow to the region and, if in a visual mode, set normal mode."
+    (interactive)
+    (narrow-to-region (region-beginning) (region-end))
+    (if (string= evil-state "visual")
+        (progn (evil-normal-state nil)
+  (evil-goto-first-line))))
+
+(require 'gtags)
+
+  (defun gtags-reindex ()
+    "Kick off gtags reindexing."
+    (interactive)
+    (let* ((root-path (expand-file-name (vc-git-root (buffer-file-name))))
+           (gtags-filename (expand-file-name "GTAGS" root-path)))
+      (if (file-exists-p gtags-filename)
+          (gtags-index-update root-path)
+        (gtags-index-initial root-path))))
+
+  (defun gtags-index-initial (path)
+    "Generate initial GTAGS files for PATH."
+    (let ((bpr-process-directory path))
+      (bpr-spawn "gtags")))
+
+  (defun gtags-index-update (path)
+    "Update GTAGS in PATH."
+    (let ((bpr-process-directory path))
+      (bpr-spawn "global -uv")))
 
 (defmacro diminish-minor-mode (filename mode &optional abbrev)
   "Supply a FILENAME, to hide a minor MODE or replace with an ABBREV."
@@ -183,11 +205,13 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
     (add-hook 'minibuffer-setup-hook 'doom-buffer-mode)
     (global-hl-line-mode)
     ;; (setq doom-enable-brighter-comments t)
-    (setq doom-enable-bold t)
-    (setq doom-enable-italic t))
+    ;; (setq doom-enable-bold t)
+    ;; (setq doom-enable-italic t)
+    )
 
+;; (load-theme 'leuven t)
 (set-face-attribute 'default nil
-                :family "Fira Mono for Powerline" :height 120 :weight 'light)
+                :family "Hack" :height 120 :weight 'light)
 
 (use-package doom-neotree
   :config
@@ -196,19 +220,11 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
   (setq doom-neotree-enable-dir-chevrons t)
   (setq doom-neotree-line-spacing 2))
 
-;; (set-frame-parameter (selected-frame) 'alpha '(90 90))
-;; (add-to-list 'default-frame-alist '(alpha 90 90))
-
 ;; (use-package gruvbox-theme)
 ;; (load-theme 'gruvbox t)
 
-;; (use-package tao-theme)
-;; (load-theme 'tao-yang)
-
-;; (use-package ap-compsci-theme)
-;; (load-theme 'ap-compsci t)
-
-(load-theme 'leuven t)
+(use-package nord-theme)
+(load-theme 'nord t)
 
 (prefer-coding-system       'utf-8)
 (set-default-coding-systems 'utf-8)
@@ -230,6 +246,9 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 (diminish-minor-mode 'flyspell 'flyspell-mode)
 (diminish-minor-mode 'undo-tree 'undo-tree-mode)
 (diminish-minor-mode 'evil-org 'evil-org-mode)
+(diminish-minor-mode 'git-gutter 'git-gutter-mode)
+(diminish-minor-mode 'company 'company-mode)
+(diminish-minor-mode 'doom-buffer 'doom-buffer-mode)
 
 (diminish-major-mode 'emacs-lisp-mode-hook ".el")
 (diminish-major-mode 'haskell-mode-hook "?=")
@@ -309,6 +328,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
     "nn" 'narrow-and-set-normal ;; Narrow to region and enter normal mode
     "nw" 'widen
     "o"  'delete-other-windows  ;; C-w o
+    "r"  'rainbow-mode ;; show hexcodes in their actual color
     "S"  'delete-trailing-whitespace
     "t"  'gtags-reindex
     "T"  'gtags-find-tag
@@ -428,7 +448,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 (setq org-agenda-text-search-extra-files (list nil ))
 
 
-(add-hook 'find-file-hooks 
+(add-hook 'find-file-hooks
   (lambda ()
     (let ((file (buffer-file-name)))
     (when (and file (equal (file-name-directory file) "~/Dropbox/Notes"))
@@ -452,9 +472,9 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 
  ;; For Dracula Theme
  (setq org-todo-keyword-faces
-   '(("ONDECK"  . (:foreground "#ffffaf" :weight bold))   
+   '(("ONDECK"  . (:foreground "#ffffaf" :weight bold))
      ("TODO"    . (:foreground "#ddddff" :weight bold))
-     ("WAITING" . (:foreground "#c0c0c0" :weight bold)) 
+     ("WAITING" . (:foreground "#c0c0c0" :weight bold))
      ("CURRENT" . (:foreground "#aaffaa" :weight bold))
      ("DONE"    . (:foreground "#ffb6ba" :weight bold))
      ("SOMEDAY" . (:foreground "#006DAF" :weight bold))))
@@ -519,7 +539,26 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
                                yas-ido-prompt
                                yas-dropdown-prompt))
 (define-key yas-minor-mode-map (kbd "<escape>") 'yas-exit-snippet))
-(ac-config-default)
+
+(setq path-to-ctags "/usr/bin/ctags")
+(defun create-tags (dir-name)
+    "Create tags file."
+    (interactive "DDirectory: ")
+    (shell-command
+        (format "%s -f TAGS -e -R %s" path-to-ctags (directory-file-name dir-name)))
+)
+
+(use-package gtags
+  :ensure t
+  :defer t)
+
+(require 'company)
+(add-hook 'after-init-hook 'global-company-mode)
+(require 'company-web-html)
+(add-to-list 'company-backends 'company-elisp)
+(add-to-list 'company-backends 'company-yasnippet)
+(add-to-list 'company-backends 'company-dabbrev)
+(add-to-list 'company-backends 'company-dabbrev-code)
 
 (require 'linum-relative)
 
@@ -529,7 +568,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 (with-eval-after-load 'linum
 (linum-relative-toggle))
 (setq linum-relative-plusp-offset 0)
-(setq linum-relative-current-symbol "->")
+(setq linum-relative-current-symbol "")
 
 (use-package smooth-scrolling
   :config
@@ -621,66 +660,78 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
   '((t (:foreground "#CEBFF3" :background "#3A2E58")))
   "Powerline third segment inactive face.")
 
-(defun air--powerline-default-theme ()
-  "Set up my custom Powerline with Evil indicators."
-  (setq-default mode-line-format
-                '("%e"
-                  (:eval
-                   (let* ((active (powerline-selected-window-active))
-                          (seg1 (if active 'my-pl-segment1-active 'my-pl-segment1-inactive))
-                          (seg2 (if active 'my-pl-segment2-active 'my-pl-segment2-inactive))
-                          (seg3 (if active 'my-pl-segment3-active 'my-pl-segment3-inactive))
-                          (separator-left (intern (format "powerline-%s-%s"
-                                                          (powerline-current-separator)
-                                                          (car powerline-default-separator-dir))))
-                          (separator-right (intern (format "powerline-%s-%s"
-                                                           (powerline-current-separator)
-                                                           (cdr powerline-default-separator-dir))))
-                          (lhs (list (let ((evil-face (powerline-evil-face)))
-                                       (if evil-mode
-                                           (powerline-raw (powerline-evil-tag) evil-face)
-                                         ))
-                                     (if evil-mode
-                                         (funcall separator-left (powerline-evil-face) seg1))
-                                     (powerline-buffer-id seg1 'l)
-                                     (powerline-raw "[%*]" seg1 'l)
-                                     (when (and (boundp 'which-func-mode) which-func-mode)
-                                       (powerline-raw which-func-format seg1 'l))
-                                     (powerline-raw " " seg1)
-                                     (funcall separator-left seg1 seg2)
-                                     (when (boundp 'erc-modified-channels-object)
-                                       (powerline-raw erc-modified-channels-object seg2 'l))
-                                     (powerline-major-mode seg2 'l)
-                                     (powerline-process seg2)
-                                     (powerline-minor-modes seg2 'l)
-                                     (powerline-narrow seg2 'l)
-                                     (powerline-raw " " seg2)
-                                     (funcall separator-left seg2 seg3)
-                                     (powerline-vc seg3 'r)
-                                     (when (bound-and-true-p nyan-mode)
-                                       (powerline-raw (list (nyan-create)) seg3 'l))))
-                          (rhs (list (powerline-raw global-mode-string seg3 'r)
-                                     (funcall separator-right seg3 seg2)
-                                     (unless window-system
-                                       (powerline-raw (char-to-string #xe0a1) seg2 'l))
-                                     (powerline-raw "%4l" seg2 'l)
-                                     (powerline-raw ":" seg2 'l)
-                                     (powerline-raw "%3c" seg2 'r)
-                                     (funcall separator-right seg2 seg1)
-                                     (powerline-raw " " seg1)
-                                     (powerline-raw "%6p" seg1 'r)
-                                     (when powerline-display-hud
-                                       (powerline-hud seg1 seg3)))))
-                     (concat (powerline-render lhs)
-                             (powerline-fill seg3 (powerline-width rhs))
-                             (powerline-render rhs)))))))
-  
-(use-package powerline
+;; (defun air--powerline-default-theme ()
+  ;;   "Set up my custom Powerline with Evil indicators."
+  ;;   (setq-default mode-line-format
+  ;;                 '("%e"
+  ;;                   (:eval
+  ;;                    (let* ((active (powerline-selected-window-active))
+  ;;                           (seg1 (if active 'my-pl-segment1-active 'my-pl-segment1-inactive))
+  ;;                           (seg2 (if active 'my-pl-segment2-active 'my-pl-segment2-inactive))
+  ;;                           (seg3 (if active 'my-pl-segment3-active 'my-pl-segment3-inactive))
+  ;;                           (separator-left (intern (format "powerline-%s-%s"
+  ;;                                                           (powerline-current-separator)
+  ;;                                                           (car powerline-default-separator-dir))))
+  ;;                           (separator-right (intern (format "powerline-%s-%s"
+  ;;                                                            (powerline-current-separator)
+  ;;                                                            (cdr powerline-default-separator-dir))))
+  ;;                           (lhs (list (let ((evil-face (powerline-evil-face)))
+  ;;                                        (if evil-mode
+  ;;                                            (powerline-raw (powerline-evil-tag) evil-face)
+  ;;                                          ))
+  ;;                                      (if evil-mode
+  ;;                                          (funcall separator-left (powerline-evil-face) seg1))
+  ;;                                      (powerline-buffer-id seg1 'l)
+  ;;                                      (powerline-raw "[%*]" seg1 'l)
+  ;;                                      (when (and (boundp 'which-func-mode) which-func-mode)
+  ;;                                        (powerline-raw which-func-format seg1 'l))
+  ;;                                      (powerline-raw " " seg1)
+  ;;                                      (funcall separator-left seg1 seg2)
+  ;;                                      (when (boundp 'erc-modified-channels-object)
+  ;;                                        (powerline-raw erc-modified-channels-object seg2 'l))
+  ;;                                      (powerline-major-mode seg2 'l)
+  ;;                                      (powerline-process seg2)
+  ;;                                      (powerline-minor-modes seg2 'l)
+  ;;                                      (powerline-narrow seg2 'l)
+  ;;                                      (powerline-raw " " seg2)
+  ;;                                      (funcall separator-left seg2 seg3)
+  ;;                                      (powerline-vc seg3 'r)
+  ;;                                      (when (bound-and-true-p nyan-mode)
+  ;;                                        (powerline-raw (list (nyan-create)) seg3 'l))))
+  ;;                           (rhs (list (powerline-raw global-mode-string seg3 'r)
+  ;;                                      (funcall separator-right seg3 seg2)
+  ;;                                      (unless window-system
+  ;;                                        (powerline-raw (char-to-string #xe0a1) seg2 'l))
+  ;;                                      (powerline-raw "%4l" seg2 'l)
+  ;;                                      (powerline-raw ":" seg2 'l)
+  ;;                                      (powerline-raw "%3c" seg2 'r)
+  ;;                                      (funcall separator-right seg2 seg1)
+  ;;                                      (powerline-raw " " seg1)
+  ;;                                      (powerline-raw "%6p" seg1 'r)
+  ;;                                      (when powerline-display-hud
+  ;;                                        (powerline-hud seg1 seg3)))))
+  ;;                      (concat (powerline-render lhs)
+  ;;                              (powerline-fill seg3 (powerline-width rhs))
+  ;;                              (powerline-render rhs)))))))
+
+  ;; (use-package powerline
+  ;;   :ensure t
+  ;;   :config
+  ;;   (setq powerline-default-separator (if (display-graphic-p) 'arrow
+  ;;                                       nil))
+  ;;   (air--powerline-default-theme))
+
+(if (display-graphic-p) nil (use-package smart-mode-line-powerline-theme
+  :ensure t))
+
+(if (display-graphic-p) nil (use-package smart-mode-line
   :ensure t
   :config
-  (setq powerline-default-separator (if (display-graphic-p) 'arrow
-                                      nil))
-  (air--powerline-default-theme))
+  (require 'powerline)
+  (setq powerline-default-separator 'arrow-fade)
+  (setq sml/theme 'powerline)
+
+  (sml/setup)))
 
 (use-package powerline-evil
   :ensure t)
@@ -703,7 +754,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 (require 'mu4e-multi)
 (use-package evil-mu4e)
 
-(setq mu4e-mu-binary "/usr/local/Cellar/mu/HEAD-b2cfc02_1/bin/mu")
+(setq mu4e-mu-binary "/usr/local/bin/mu")
 (setq mu4e-maildir "/Users/Andy/.Maildir")
 
 (setq mu4e-multi-account-alist
@@ -741,7 +792,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
      ("/personal/Archive"    . ?a)
      ("/personal/Starred"    . ?p)
      ("/personal/Drafts"    . ?d)
-       
+
      ("/work/INBOX"      . ?w)
      ("/work/Drafts"      . ?z)
      ("/work/Sent Items"       . ?f)
@@ -897,7 +948,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 '((t (:inherit doom-modeline-buffer-path :bold nil)))
 "Face used for the filename part of the mode-line buffer path.")
 
-(defface doom-modeline-buffer-modified '((t (:inherit highlight)))
+(defface doom-modeline-buffer-modified '((t (:bold nil)))
 "Face used for the 'unsaved' symbol in the mode-line.")
 
 (defface doom-modeline-major-mode '((t (:inherit mode-line :bold t)))
@@ -906,11 +957,11 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 (defface doom-modeline-highlight '((t (:inherit mode-line)))
 "Face for bright segments of the mode-line.")
 
-(defface doom-modeline-panel '((t (:inherit mode-line :foreground "#4f4a3d" :background "#ffffcc")))
+(defface doom-modeline-panel '((t (:inherit mode-line :foreground "#3b4252" :background "#d8dee9")))
 "Face for 'X out of Y' segments, such as `*anzu', `*evil-substitute' and
 `iedit'")
 
-(defface doom-modeline-info '((t (:inherit success)))
+(defface doom-modeline-info '((t (:inherit string)))
 "Face for info-level messages in the modeline. Used by `*vc'.")
 
 (defface doom-modeline-warning `((t (:inherit warning)))
@@ -919,7 +970,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 (defface doom-modeline-urgent `((t (:inherit error)))
 "Face for errors in the modeline. Used by `*flycheck'")
 ;; Bar
-(defface doom-modeline-bar '((t (:foreground "#4f4a3d" :background "#ffffcc")))
+(defface doom-modeline-bar '((t (:inherit doom-modeline-panel)))
 "The face used for the left-most bar on the mode-line of an active window.")
 
 (defface doom-modeline-eldoc-bar '((t (:inherit shadow :foreground nil)))
@@ -958,7 +1009,7 @@ active.")
 (add-hook 'ediff-startup-hook (setq doom-ediff-enabled t))
 (add-hook 'ediff-quit-hook    (setq doom-ediff-enabled nil))
 
-           
+
 ;;;###autoload
 (defun doom/project-root (&optional strict-p)
     "Get the path to the root of your project."
@@ -1068,7 +1119,7 @@ project root). Excludes the file basename. See `doom-buffer-name' for that."
 (add-hook 'focus-in-hook #'doom|set-selected-window)
 (advice-add 'select-window :after 'doom|set-selected-window)
 (advice-add 'select-frame  :after 'doom|set-selected-window)
-                        
+
 ;;
 ;; Mode-line segments
 ;;
@@ -1186,7 +1237,7 @@ character encoding (if it isn't UTF-8)."
                       :v-adjust -0.05)))
               " "
               (propertize (substring vc-mode (+ (if (eq backend 'Hg) 2 3) 2))
-                          'face (if active face))             
+                          'face (if active face))
               "  "
               (propertize " " 'face 'variable-pitch)))))
 
@@ -1236,7 +1287,7 @@ character encoding (if it isn't UTF-8)."
                               :face (if (active) 'doom-modeline-info)
                               :height 1.2
                               :v-adjust -0.06)
-       " ")))) 
+       " "))))
 
 (defun *selection-info ()
   "Information about the current selection, such as how many characters and
@@ -1383,10 +1434,10 @@ lines are selected, or the NxM dimensions of a block selection."
            (mid (propertize
                  " " 'display `((space :align-to (- (+ right right-fringe right-margin)
                                                     ,(+ 1 (string-width (format-mode-line rhs)))))))))
-      (list lhs mid rhs)))) 
+      (list lhs mid rhs))))
 
 (if (display-graphic-p) (setq-default mode-line-format (doom-modeline)))
- 
+
 ;;
 ;; Eldoc-in-mode-line support (for `eval-expression')
 ;;
@@ -1396,7 +1447,7 @@ lines are selected, or the NxM dimensions of a block selection."
                     (face-background 'doom-modeline-eldoc-bar)
                     nil))
 
-(defun doom-eldoc-mode-line () 
+(defun doom-eldoc-mode-line ()
     `(:eval
     (let ((active (eq (selected-window) doom-ml-selected-window)))
         (list (list (propertize " " 'display doom-eldoc-modeline-bar)
@@ -1457,7 +1508,3 @@ lines are selected, or the NxM dimensions of a block selection."
  '(git-gutter:modified-sign "▐") ;; two space
  '(git-gutter:added-sign "▐")    ;; multiple character is OK
  '(git-gutter:deleted-sign "▐"))
-
-(set-face-foreground 'git-gutter:modified "#DDDDFF") 
-(set-face-foreground 'git-gutter:added "#97F295")
-(set-face-foreground 'git-gutter:deleted "#FFB6BA")

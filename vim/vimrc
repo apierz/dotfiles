@@ -64,7 +64,7 @@ set wrap
 set textwidth=79
 set formatoptions=qrn1
 "set colorcolumn=79
-"set relativenumber
+set relativenumber
 "set norelativenumber
 
 " mail line wrapping
@@ -177,7 +177,7 @@ endif
 set t_Co=256
 " let g:hybrid_use_Xresources = 1
 " let g:rehash256 = 1
-colorscheme lucius
+colorscheme nord
 set guifont=FiraMonoForPowerline-Regular:h15
 set guioptions-=L
 
@@ -238,6 +238,8 @@ nnoremap <leader>a :cclose<CR>
 
 " Remove search highlight
 nnoremap <leader><space> :nohlsearch<CR>
+
+" Tab Navigation
 nnoremap th  :tabfirst<CR>
 nnoremap tj  :tabnext<CR>
 nnoremap tk  :tabprev<CR>
@@ -554,7 +556,7 @@ autocmd BufWritePre *.cpp,*.hpp pyf /usr/share/vim/addons/syntax/clang-format-3.
 
 " =================== vim-airline ========================
 
-let g:airline_theme='papercolor'
+let g:airline_theme='tomorrow'
 let g:airline_powerline_fonts = 1
 
 if !exists('g:airline_symbols')

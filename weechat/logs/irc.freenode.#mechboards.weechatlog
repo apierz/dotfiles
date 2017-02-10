@@ -1179,3 +1179,309 @@
 2016-10-02 13:07:43	slaytaner	hi
 2016-10-02 14:47:33	<--	TheFactIs (~Andy@2603:3024:152c:500:e8dd:6a45:bff4:15ae) has quit (Ping timeout: 272 seconds)
 2016-10-02 14:47:33	--	irc: disconnected from server
+2017-02-09 14:30:52	-->	TheFactIs (~Andy@2603:3024:152c:500:5c12:7bb7:31ea:f661) has joined #Mechboards
+2017-02-09 14:30:52	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2017-02-09 14:30:52	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 01:38:51
+2017-02-09 14:30:52	--	Channel #Mechboards: 261 nicks (0 ops, 0 voices, 261 normals)
+2017-02-09 14:30:54	--	Channel created on Wed, 20 Feb 2013 20:50:48
+2017-02-09 14:35:11	saltaner	I'm working on it
+2017-02-09 14:35:48	<--	Eszett_ (~Eszett@unaffiliated/eszett) has quit (Read error: Connection reset by peer)
+2017-02-09 14:38:02	saltaner	exm the weather ibm has posted a ton of positions lol
+2017-02-09 14:38:10	exm	lol
+2017-02-09 14:38:18	exm	You should apply
+2017-02-09 14:39:29	saltaner	I like how the weather channel needs a "Linux Customer Support Administrator"
+2017-02-09 14:39:43	exm	Maybe you shouldn't apply
+2017-02-09 14:42:35	saltaner	they also need a "Systems/Cloud Storage Architect" to "sell to the public vertical"
+2017-02-09 14:42:52	arij	https://www.massdrop.com/buy/massdrop-x-jessica-gmk-plum-custom-keycap-set
+2017-02-09 14:42:53		[ https://is.gd/0tVP5X ]
+2017-02-09 14:47:10	<--	Clank- has quit (Ping timeout: 255 seconds)
+2017-02-09 14:47:22	saltaner	I didn't know the weather channel was into selling cloud storage
+2017-02-09 14:49:02	-->	xveamvx has joined #Mechboards
+2017-02-09 14:49:19	cdsboy	saltaner: everyone thought it was weird when amazon started doing it and look where they are now~
+2017-02-09 14:50:10	<--	darkclone has quit (Read error: Connection reset by peer)
+2017-02-09 14:50:49	Slasher	l;sdjf;as;dlkjsld;fkja;skdfj;laksjd;lfkasj;dlkj;aslkdjf;lakwej;kd;jflkasjdf;lkasjd;lrkuqw;kldjfowerf;lkopqwieur;flkajs;ldkfj askd ;lkawdjf weri oiwe ikwoeirj lasd jlawkdej laskdfjlkqw2elo kjlskdfjlqwie skadflqwu2ei las,djflweclskdwdskfjawle sdfj kwer kwjdflkwed kjwqelf jlkwdjf lkjlwek jlaklqkjwlek
+2017-02-09 14:51:02	Slasher	oops
+2017-02-09 14:51:04	kroms	think your keyboard is broken
+2017-02-09 14:51:10	TheFactIs	stop using dvorak
+2017-02-09 14:51:16	Slasher	kek
+2017-02-09 14:51:42	saltaner	rip Slasher
+2017-02-09 14:52:16	cdsboy	I like to imagine we're watching Slasher's slow descent into madness
+2017-02-09 14:52:40	-->	Clank- has joined #Mechboards
+2017-02-09 14:53:02	saltaner	he's been corrupted
+2017-02-09 14:53:28	Slasher	its your fault
+2017-02-09 14:54:42	saltaner	I have that effect
+2017-02-09 14:57:32	SlabDabs	Slasher: looks like your fingers weren't on home row
+2017-02-09 14:57:40	SlabDabs	hehe
+2017-02-09 15:03:45	pikajude	ok i'm buying a soldering iron rn
+2017-02-09 15:03:48	pikajude	it's happening
+2017-02-09 15:04:00	cdsboy	do yourself a favor and don't go super duper cheap
+2017-02-09 15:04:09	TheFactIs	or battery powered
+2017-02-09 15:04:12	pikajude	i went to home depot
+2017-02-09 15:04:20	pikajude	this one isn't battery powered
+2017-02-09 15:04:26	pikajude	40 w
+2017-02-09 15:05:09	pikajude	do they have different gauges of solder
+2017-02-09 15:05:37	josephle	yes
+2017-02-09 15:05:55	pikajude	what should i get
+2017-02-09 15:06:52	TheFactIs	Thinner is probably better if you are soldering switches to a pcb
+2017-02-09 15:06:55	saltaner	hakko fx-888d
+2017-02-09 15:07:10	saltaner	oh
+2017-02-09 15:07:13	josephle	22 gauge/0.8mm is popular
+2017-02-09 15:07:30	pikajude	thinnest i can find is 1.6mm
+2017-02-09 15:07:32	pikajude	damn it
+2017-02-09 15:07:55	saltaner	I have kester "44" 63/37 .031" diameter
+2017-02-09 15:08:04	pikajude	oh they have 1mm
+2017-02-09 15:08:29	josephle	saltaner: yeah that's 22 gauge
+2017-02-09 15:08:50	pikajude	i'll just use 1mm for now
+2017-02-09 15:08:55	josephle	I am glad that there are no less than 3 ways to measure the thickness of solder
+2017-02-09 15:08:59	josephle	inches, mm, and gauge
+2017-02-09 15:09:05	pikajude	more ways pls
+2017-02-09 15:09:10	arij	hi pikajude
+2017-02-09 15:09:12	pikajude	hi
+2017-02-09 15:10:21	-->	cebreidian has joined #Mechboards
+2017-02-09 15:12:45	saltaner	hi
+2017-02-09 15:13:09	saltaner	12 gauge is one true gauge
+2017-02-09 15:13:14	<--	kjes has quit (Ping timeout: 245 seconds)
+2017-02-09 15:13:52	saltaner	9mm one true mm
+2017-02-09 15:14:18	saltaner	10mm second true mm
+2017-02-09 15:14:38	Slasher	pikajude: what iron?
+2017-02-09 15:16:04	-->	kingmanor has joined #Mechboards
+2017-02-09 15:16:52	skullY	.45 one true inch
+2017-02-09 15:16:54	skullY	?
+2017-02-09 15:17:13	SlabDabs	profet: any idea a ballpark on how long it might take to solder up a dox? i would imagine it's not too bad, i have through hole diodes too
+2017-02-09 15:17:21	josephle	.385 is also acceptable right?
+2017-02-09 15:18:37	cdsboy	SlabDabs: that's pretty dependent on soldering skill :P
+2017-02-09 15:19:24	cdsboy	not profet but I'd guess 2-3 hours w/ through hole assuming you're being careful
+2017-02-09 15:19:59	<--	dersand has quit (Read error: Connection reset by peer)
+2017-02-09 15:21:47	saltaner	skullY idk, those are more difficult
+2017-02-09 15:23:28	arij	SlabDabs: half an hour
+2017-02-09 15:23:32	arij	45min
+2017-02-09 15:23:56	Slasher	cdsboy: Sup
+2017-02-09 15:24:07	cdsboy	hmmm, maybe I'm over estimating because I've only ever done it by hand soldering SMD Diodes lol
+2017-02-09 15:24:21	cdsboy	Slasher: still at work paying for showing up at 12:15 instead of 9:30
+2017-02-09 15:24:23	arij	 smd is faster imo
+2017-02-09 15:24:51	cdsboy	if you're using an iron I don't see how that's possible lol
+2017-02-09 15:24:53	-->	kjes has joined #Mechboards
+2017-02-09 15:25:02	cdsboy	heat gun/reflow sure~
+2017-02-09 15:25:11	cdsboy	but maybe I'm just secretly bad at soldering and don't realize it
+2017-02-09 15:25:28	Slasher	cdsboy: kek
+2017-02-09 15:25:44	cdsboy	It's definitely a possibility...
+2017-02-09 15:26:14	arij	no
+2017-02-09 15:26:18	arij	i was using a heatgun
+2017-02-09 15:26:21	cdsboy	oh
+2017-02-09 15:26:25	arij	and paste
+2017-02-09 15:26:29	cdsboy	yeah, heatgun + paste for sure
+2017-02-09 15:26:39	pikajude	Slasher: home depot brand
+2017-02-09 15:26:42	Slasher	gross
+2017-02-09 15:26:45	cdsboy	I didn't have that available and wanted to do it right when I got it
+2017-02-09 15:26:48	Slasher	how much did you pay
+2017-02-09 15:26:53	pikajude	$25
+2017-02-09 15:27:07	Slasher	another 15 and you could have gotten a weller
+2017-02-09 15:27:12	pikajude	oh
+2017-02-09 15:27:12	Slasher	that would last
+2017-02-09 15:27:15	pikajude	i thought weller was home depot brand
+2017-02-09 15:27:17	pikajude	i have a weller
+2017-02-09 15:27:20	josephle	haha
+2017-02-09 15:27:22	arij	the home depot ones are so bad
+2017-02-09 15:27:25	Slasher	?_?
+2017-02-09 15:27:28	Slasher	lol
+2017-02-09 15:27:29	josephle	weller and hakko are the big brands
+2017-02-09 15:27:31	pikajude	nice
+2017-02-09 15:27:31	arij	almost as bad as the radio shack ones
+2017-02-09 15:27:35	pikajude	ok i have a weller
+2017-02-09 15:27:37	pikajude	neat
+2017-02-09 15:27:44	pikajude	so about ventilation
+2017-02-09 15:27:46	pikajude	should i have bought a fan
+2017-02-09 15:27:49	arij	pikajude: i know the weller you got from home depot i have the same one... it has LEDs on it yea?
+2017-02-09 15:27:54	pikajude	ya
+2017-02-09 15:27:57	pikajude	like a keyboard
+2017-02-09 15:28:01	arij	just use the exhale while soldering method
+2017-02-09 15:28:03	arij	thats what i do
+2017-02-09 15:28:04	josephle	pikajude: I learned to exhale when soldering
+2017-02-09 15:28:10	pikajude	damn dude
+2017-02-09 15:28:14	pikajude	i learned to exhale when i was like 2 days old
+2017-02-09 15:28:22	arij	an open window doesnt hurt either
+2017-02-09 15:28:50	arij	but pikajude my one suggestion is to return that before using it and ordering a chinese hakko clone for $25 more
+2017-02-09 15:28:56	pikajude	why
+2017-02-09 15:29:00	arij	it is terrible
+2017-02-09 15:29:06	pikajude	ok
+2017-02-09 15:29:06	arij	chinese clone better
+2017-02-09 15:29:18	SlabDabs	cdsboy: i used to be an EE major so i've soldered a few times ;)
+2017-02-09 15:29:21	arij	the tip that comes with that weller is huge
+2017-02-09 15:29:24	SlabDabs	used to build handheld laser systems
+2017-02-09 15:29:27	arij	maybe get a new tip?
+2017-02-09 15:29:28	SlabDabs	class IIIb goodness
+2017-02-09 15:29:49	pikajude	it comes with 3 tips arij
+2017-02-09 15:30:04	arij	any small pointy ones
+2017-02-09 15:30:06	pikajude	yes
+2017-02-09 15:30:09	pikajude	one small pointy one
+2017-02-09 15:30:14	arij	thats a little better
+2017-02-09 15:30:26	josephle	SlabDabs: you can probably finish the soldering in 2 hours
+2017-02-09 15:30:39	arij	i say under an hour
+2017-02-09 15:30:44	arij	if you dont take any breaks
+2017-02-09 15:30:52	josephle	your back might not appreciate it
+2017-02-09 15:30:54	josephle	but yeah
+2017-02-09 15:30:56	arij	lol
+2017-02-09 15:30:59	arij	 you are right
+2017-02-09 15:31:23	SlabDabs	yeah i think i'd fly through it assuming i don't hit any weird glitches
+2017-02-09 15:31:35	<--	tanuki has quit (Quit: No Ping reply in 180 seconds.)
+2017-02-09 15:31:50	josephle	yeah it's just tedious
+2017-02-09 15:32:04	arij	i prefer to just hammer through it and be done with it
+2017-02-09 15:32:05	<--	PhantomTaco has quit (Ping timeout: 240 seconds)
+2017-02-09 15:32:10	<--	petrus_lt has quit (Ping timeout: 255 seconds)
+2017-02-09 15:32:35	<--	yokel has quit (Ping timeout: 240 seconds)
+2017-02-09 15:32:49	-->	tanuki has joined #Mechboards
+2017-02-09 15:33:01	arij	anyone here use irccloud
+2017-02-09 15:33:13	-->	yokel has joined #Mechboards
+2017-02-09 15:33:31	-->	PhantomTaco has joined #Mechboards
+2017-02-09 15:33:31	<--	PhantomTaco has quit (Changing host)
+2017-02-09 15:33:31	-->	PhantomTaco has joined #Mechboards
+2017-02-09 15:33:38	-->	petrus_lt has joined #Mechboards
+2017-02-09 15:36:27	pikajude	hmmmmmmmmmmmm
+2017-02-09 15:36:35	pikajude	i think the bent steel case has the hole for the usb on the wrong side
+2017-02-09 15:36:56	-->	ika has joined #Mechboards
+2017-02-09 15:37:13	pikajude	o nvm
+2017-02-09 15:37:42	saltaner	lol
+2017-02-09 15:37:51	pikajude	ok so do i put these on the plate first, then put the pcb on and solder the switches or
+2017-02-09 15:37:53	pikajude	is that how this works
+2017-02-09 15:39:45	saltaner	put the corners in first
+2017-02-09 15:40:02	saltaner	then solder those to the pcb
+2017-02-09 15:40:42	pikajude	oh ok
+2017-02-09 15:40:44	pikajude	makes sense
+2017-02-09 15:43:17	pikajude	this instructional video has the guy putting all the switches onto the plate before proceeding with soldering
+2017-02-09 15:44:57	saltaner	you have a pretty high chance of not getting the switch leads in the holes
+2017-02-09 15:45:29	pikajude	ok
+2017-02-09 15:45:48	pikajude	well i went crazy and put four switches on in the middle
+2017-02-09 15:45:52	pikajude	but then you saved me the extra trouble
+2017-02-09 15:45:55	TheFactIs	also dont forget to put on the stabilizers before you solder
+2017-02-09 15:46:06	pikajude	ok
+2017-02-09 15:46:35	<--	eligos has quit (Ping timeout: 240 seconds)
+2017-02-09 15:46:42	arij	yea the stabilizers
+2017-02-09 15:46:51	arij	youll have to desolder if you dont put them in first
+2017-02-09 15:46:53	arij	thats not fun
+2017-02-09 15:47:15	TheFactIs	no it is not
+2017-02-09 15:52:26	<--	HBK008 has quit (Quit: Leaving)
+2017-02-09 15:53:19	<--	ThePendulum has quit (Quit: leaving)
+2017-02-09 15:59:46	<--	NoGodDamnIdea has quit (Read error: Connection reset by peer)
+2017-02-09 15:59:58	-->	NoGodDamnIdea has joined #Mechboards
+2017-02-09 15:59:58	<--	NoGodDamnIdea has quit (Changing host)
+2017-02-09 15:59:58	-->	NoGodDamnIdea has joined #Mechboards
+2017-02-09 16:00:14	<--	NoGodDamnIdea has quit (Remote host closed the connection)
+2017-02-09 16:02:33	pikajude	ok the stabs themselves are not quite flush with the housing
+2017-02-09 16:02:37	pikajude	is that a worry or is it fine
+2017-02-09 16:05:36	saltaner	they should snap in or something
+2017-02-09 16:06:47	j`ey	pic?
+2017-02-09 16:07:16	pikajude	hmm :|
+2017-02-09 16:07:25	pikajude	if only my iphone could focus close!
+2017-02-09 16:07:59	-->	newbie00 has joined #Mechboards
+2017-02-09 16:08:06	munchT	most cameras have that issue
+2017-02-09 16:08:19	pikajude	yeah but mine's actually broken
+2017-02-09 16:08:42	pikajude	it looks like this https://cdn.shopify.com/s/files/1/0267/1905/products/cherrystabilizers_grande.jpg?v=1478754408
+2017-02-09 16:08:43		[ https://is.gd/5zgwnT ]
+2017-02-09 16:08:53	pikajude	the tops are wobbly (obviously) but they don't sit flush with the housing
+2017-02-09 16:08:55	pikajude	they're just a bit above it
+2017-02-09 16:09:03	pikajude	i can push them down but they pop back up
+2017-02-09 16:09:29	j`ey	oh yeah should be fine
+2017-02-09 16:09:52	pikajude	neat
+2017-02-09 16:10:59	<--	sir_jack has quit (Ping timeout: 252 seconds)
+2017-02-09 16:15:17	saltaner	taen
+2017-02-09 16:15:22	<--	Chank has quit (Ping timeout: 264 seconds)
+2017-02-09 16:16:36	SlabDabs	switches!  https://usercontent.irccloud-cdn.com/file/9ioNsTjl/irccloudcapture284323800.jpg
+2017-02-09 16:16:38		[ https://is.gd/OrMejH ]
+2017-02-09 16:16:52	arij	nice what are those
+2017-02-09 16:16:54	SlabDabs	Gaterons are Fuckin smooth for the ones I at least tried in hand
+2017-02-09 16:17:16	SlabDabs	Enough gas black and clears to do a dox in either, then 4 each of yellow and green to just feel
+2017-02-09 16:18:25	pikajude	hm
+2017-02-09 16:18:31	pikajude	arij how do you know when this thing is hot enough
+2017-02-09 16:18:35	pikajude	do you just plug it in and wait
+2017-02-09 16:18:44	arij	touch the tip to some solder
+2017-02-09 16:18:46	arij	see if it melts
+2017-02-09 16:18:51	arij	also dont touch the barrel
+2017-02-09 16:18:54	arij	its hot af
+2017-02-09 16:19:25	pikajude	damn soldering is smelly
+2017-02-09 16:19:29	josephle	yes
+2017-02-09 16:19:53	<--	remlap has quit (Remote host closed the connection)
+2017-02-09 16:19:54	josephle	note that you want the solder to melt quickly if you're touching it to the tip
+2017-02-09 16:20:08	saltaner	just the tip
+2017-02-09 16:20:30	-->	HBK008 has joined #Mechboards
+2017-02-09 16:20:52	pikajude	holy fuck i did it
+2017-02-09 16:21:26	saltaner	grats
+2017-02-09 16:27:38	-->	Chank has joined #Mechboards
+2017-02-09 16:27:40	-->	Wild_Cat has joined #Mechboards
+2017-02-09 16:29:12	pikajude	fuck i put lctrl in the wrong place
+2017-02-09 16:29:14	pikajude	ok, how do i desolder
+2017-02-09 16:29:44	SlabDabs	Now that's the fun part if you didn't get a solder sucker
+2017-02-09 16:29:54	pikajude	i AM a solder sucker
+2017-02-09 16:30:03	pikajude	ok how do
+2017-02-09 16:32:06	SlabDabs	Lol, but really, do you have a solder sucker or desoldering braid?
+2017-02-09 16:32:42	arij	how did you put lctrl in the wrong place? isnt it a keycap
+2017-02-09 16:32:59	pikajude	the switch arij
+2017-02-09 16:33:02	pikajude	i put it in the wkl position
+2017-02-09 16:33:05	arij	oh
+2017-02-09 16:33:19	arij	rip
+2017-02-09 16:33:31	pikajude	i don't know what a desoldering braid is
+2017-02-09 16:33:33	pikajude	or a solder sucker
+2017-02-09 16:33:41	arij	sounds like you dont have one
+2017-02-09 16:33:50	arij	just heat up the solder as you pull on the switch
+2017-02-09 16:33:58	arij	alternate between pins
+2017-02-09 16:34:08	SlabDabs	Hmm, I'm not sure what home options you have. Yeah you can do that but it can be hard with two pins
+2017-02-09 16:34:11	arij	pulling it out little by little
+2017-02-09 16:34:28	TheFactIs	pulling it out little by little will be a pain but probably fine for one switch
+2017-02-09 16:34:45	SlabDabs	If you have any strandy wire you can heat it up against the post so it absorbs some of the solder
+2017-02-09 16:35:07	TheFactIs	if you end up having to do a bunch get a solder sucker with a sqeeuze bulb on it
+2017-02-09 16:37:47	pikajude	sorry for being nonresponsive, i was trying the little by little approach
+2017-02-09 16:37:49	pikajude	it worked
+2017-02-09 16:37:54	arij	yzy
+2017-02-09 16:37:56	arij	yay
+2017-02-09 16:38:11	saltaner	arij do you have your z fixed
+2017-02-09 16:38:25	arij	thats my work ergodox, and no its not fixed yet
+2017-02-09 16:38:29	arij	i need to bring it home to fix it
+2017-02-09 16:41:03	Slasher	lol
+2017-02-09 16:41:28	<--	boingolov has quit (Ping timeout: 240 seconds)
+2017-02-09 16:42:54	saltaner	lol
+2017-02-09 16:44:05	<--	cottoneyejim has quit (Read error: Connection reset by peer)
+2017-02-09 16:48:47	-->	boingolov has joined #Mechboards
+2017-02-09 16:48:57	arij	what are you soldering pikajude
+2017-02-09 16:49:05	arij	pics?
+2017-02-09 16:49:59	<--	troker has quit (Quit: Leaving)
+2017-02-09 16:50:32	pikajude	nah, a keyboard
+2017-02-09 16:56:16	<--	kingmanor has quit (Quit: Textual IRC Client: www.textualapp.com)
+2017-02-09 16:57:35	arij	a keyboard? really? i wouldnt have guessed that in a million years
+2017-02-09 16:57:37	-->	sir_jack has joined #Mechboards
+2017-02-09 16:57:40	arij	which keyboard you dunce
+2017-02-09 16:59:12	<--	Liocer has quit (Ping timeout: 260 seconds)
+2017-02-09 16:59:35	<--	newbie00 has quit (Ping timeout: 240 seconds)
+2017-02-09 16:59:54	switchy	keyboards? in my #Mechboards? I simply won't allow it!
+2017-02-09 17:00:12	Slasher	:D
+2017-02-09 17:00:21	-->	cottoneyejim has joined #Mechboards
+2017-02-09 17:00:32	Slasher	#NotMyMechBoards
+2017-02-09 17:00:40	<--	prooftechnique has quit (Quit: ZNC http://znc.in)
+2017-02-09 17:00:40	-->	riotpixie has joined #Mechboards
+2017-02-09 17:00:44	riotpixie	hey y'all
+2017-02-09 17:00:56	Slasher	suo
+2017-02-09 17:00:59	Slasher	sup
+2017-02-09 17:02:14	saltaner	sup
+2017-02-09 17:02:18	-->	Liocer has joined #Mechboards
+2017-02-09 17:02:26	saltaner	lol switchy
+2017-02-09 17:50:31	--	irc: disconnected from server
+2017-02-09 17:50:54	-->	TheFactIs has joined #Mechboards
+2017-02-09 17:50:54	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2017-02-09 17:50:54	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 01:38:51
+2017-02-09 17:50:54	--	Channel #Mechboards: 257 nicks (0 ops, 0 voices, 257 normals)
+2017-02-09 17:51:00	--	Channel created on Wed, 20 Feb 2013 20:50:48
+2017-02-09 18:11:35	--	irc: disconnected from server
+2017-02-09 18:26:44	-->	TheFactIs has joined #Mechboards
+2017-02-09 18:26:44	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2017-02-09 18:26:44	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 01:38:51
+2017-02-09 18:26:44	--	Channel #Mechboards: 256 nicks (0 ops, 0 voices, 256 normals)
+2017-02-09 18:26:52	--	Channel created on Wed, 20 Feb 2013 20:50:48
+2017-02-10 00:06:47	--	irc: disconnected from server
+2017-02-10 04:08:09	--	irc: disconnected from server
+2017-02-10 04:08:32	-->	TheFactIs has joined #Mechboards
+2017-02-10 04:08:32	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2017-02-10 04:08:32	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 01:38:51
+2017-02-10 04:08:32	--	Channel #Mechboards: 255 nicks (0 ops, 0 voices, 255 normals)
+2017-02-10 10:14:02	--	irc: disconnected from server
+2017-02-10 10:14:24	-->	TheFactIs has joined #Mechboards
+2017-02-10 10:14:24	--	Topic for #Mechboards is "Use your keyboard to talk to other people about keyboards. http://www.reddit.com/r/MechanicalKeyboards | Don't ask to ask, and wait for an answer. We'll get around to you. Also check the wiki: https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+2017-02-10 10:14:24	--	Topic set by ihre (~ihre@unaffiliated/ihre) on Thu, 28 Jan 2016 01:38:51
+2017-02-10 10:14:24	--	Channel #Mechboards: 256 nicks (0 ops, 0 voices, 256 normals)
