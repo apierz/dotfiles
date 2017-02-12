@@ -66,6 +66,8 @@ flycheck_*.el
 .projectile
 
 # weechat logs
+/weechat/
+weechat.conf
 weechat_crash
 
 # Storage Files
