@@ -1,0 +1,650 @@
+2016-09-05 09:12:30	-->	TheFactIs (~Andy@2601:646:8301:b810:c14d:8de3:6b78:db2f) has joined #raspberrypi
+2016-09-05 09:12:30	--	Topic for #raspberrypi is "Unofficial RaspberryPi IRC channel but "Blessed" by the Foundation as the ONE channel. | Logs: http://srv.datagutt1.com | Rules: https://goo.gl/h5qPhz"
+2016-09-05 09:12:30	--	Topic set by gordonDrogon (~gordon@2001:4d48:ad51:8901::2) on Mon, 07 Mar 2016 09:07:35
+2016-09-05 09:12:30	--	Channel #raspberrypi: 603 nicks (3 ops, 0 voices, 600 normals)
+2016-09-05 09:12:32	--	Channel created on Sat, 13 Aug 2011 09:04:23
+2016-09-05 09:14:28	-->	AbouEmre (~Thunderbi@196.216.8.142) has joined #raspberrypi
+2016-09-05 09:14:51	-->	sphenxes (~sphenxes@192-164-153-226.hdsl.highway.telekom.at) has joined #raspberrypi
+2016-09-05 09:15:00	<--	Tritonio (~tr@unaffiliated/tritonio) has quit (Remote host closed the connection)
+2016-09-05 09:15:11	<--	AbouEmre (~Thunderbi@196.216.8.142) has quit (Client Quit)
+2016-09-05 09:15:46	-->	esas (~esas@unaffiliated/esas) has joined #raspberrypi
+2016-09-05 09:18:05	-->	Tritonio (~tr@unaffiliated/tritonio) has joined #raspberrypi
+2016-09-05 09:19:51	-->	AbouEmre (~Thunderbi@196.216.8.139) has joined #raspberrypi
+2016-09-05 09:20:37	<--	AbouEmre (~Thunderbi@196.216.8.139) has quit (Client Quit)
+2016-09-05 09:21:03	-->	LarrySteeze (LarrySteez@unaffiliated/larrysteeze) has joined #raspberrypi
+2016-09-05 09:22:33	-->	halfhalo (halfhalo@nasadmin/webteam/halfhalo) has joined #raspberrypi
+2016-09-05 09:23:08	-->	lightheaded (~lighthead@faa7-8f0d-5db8-34c3-9780-87d9-07d0-2001.dyn.estpak.ee) has joined #raspberrypi
+2016-09-05 09:23:44	-->	smdeep (~smdeep@dynamic-20.125.142.202.sitibroadband.in) has joined #raspberrypi
+2016-09-05 09:26:08	-->	AbouEmre (~Thunderbi@196.216.8.133) has joined #raspberrypi
+2016-09-05 09:26:52	<--	AbouEmre (~Thunderbi@196.216.8.133) has quit (Client Quit)
+2016-09-05 09:27:40	-->	InfoTest (~Thunderbi@tgn.126.67.114.dts.mg) has joined #raspberrypi
+2016-09-05 09:29:51	-->	samuel (~Samuel@187-163-175-199.static.axtel.net) has joined #raspberrypi
+2016-09-05 09:30:48	--	bpye_ is now known as bpye
+2016-09-05 09:31:28	<--	spybert (~spybert@c-50-173-239-209.hsd1.ca.comcast.net) has left #raspberrypi ("Leaving")
+2016-09-05 09:31:38	-->	AbouEmre (~Thunderbi@196.216.8.133) has joined #raspberrypi
+2016-09-05 09:32:19	<--	Tritonio (~tr@unaffiliated/tritonio) has left #raspberrypi
+2016-09-05 09:32:48	-->	zumba_addict (~zumba_add@c-50-141-194-228.hsd1.il.comcast.net) has joined #raspberrypi
+2016-09-05 09:33:10	<--	AbouEmre (~Thunderbi@196.216.8.133) has quit (Client Quit)
+2016-09-05 09:34:26	-->	spybert (~spybert@c-50-173-239-209.hsd1.ca.comcast.net) has joined #raspberrypi
+2016-09-05 09:34:39	-->	cagmz (~cagmz@cpe-107-185-130-191.socal.res.rr.com) has joined #raspberrypi
+2016-09-05 09:36:04	-->	AbouEmre (~Thunderbi@196.216.8.136) has joined #raspberrypi
+2016-09-05 09:36:11	<--	redlob (~redlob@unaffiliated/redlob) has quit (Ping timeout: 250 seconds)
+2016-09-05 09:36:46	<--	AbouEmre (~Thunderbi@196.216.8.136) has quit (Client Quit)
+2016-09-05 09:36:49	<--	giddles (~giddles@unaffiliated/giddles) has quit (Quit: lat0r)
+2016-09-05 09:37:49	-->	AbouEmre (~Thunderbi@196.216.8.134) has joined #raspberrypi
+2016-09-05 09:38:33	<--	AbouEmre (~Thunderbi@196.216.8.134) has quit (Client Quit)
+2016-09-05 09:41:26	-->	redlob (~redlob@unaffiliated/redlob) has joined #raspberrypi
+2016-09-05 09:41:27	-->	AbouEmre (~Thunderbi@196.216.8.138) has joined #raspberrypi
+2016-09-05 09:42:09	<--	AbouEmre (~Thunderbi@196.216.8.138) has quit (Client Quit)
+2016-09-05 09:43:18	-->	darksim (~quassel@78-70-247-31-no186.tbcn.telia.com) has joined #raspberrypi
+2016-09-05 09:44:00	-->	b4x (~b4x@2a01:6f0:ffff:9e::645d) has joined #raspberrypi
+2016-09-05 09:44:02	-->	sKyZ (~sKyZ@unaffiliated/skyz) has joined #raspberrypi
+2016-09-05 09:44:10	-->	robin_debspace (~robin_deb@server.debspace.org) has joined #raspberrypi
+2016-09-05 09:44:50	<--	CipherZero (~banana@unaffiliated/cipherzero) has left #raspberrypi
+2016-09-05 09:45:00	-->	AlexanderS (AlexanderS@bnc.animux.de) has joined #raspberrypi
+2016-09-05 09:45:34	-->	rmarko (sorki@fedora/sorki) has joined #raspberrypi
+2016-09-05 09:46:19	<--	samuel (~Samuel@187-163-175-199.static.axtel.net) has quit (Ping timeout: 252 seconds)
+2016-09-05 09:46:29	-->	samuel (~Samuel@187-163-175-199.static.axtel.net) has joined #raspberrypi
+2016-09-05 09:47:01	-->	AbouEmre (~Thunderbi@196.216.8.140) has joined #raspberrypi
+2016-09-05 09:47:05	<--	samuel (~Samuel@187-163-175-199.static.axtel.net) has quit (Client Quit)
+2016-09-05 09:47:37	<--	AbouEmre (~Thunderbi@196.216.8.140) has quit (Client Quit)
+2016-09-05 09:47:46	-->	FeersumEndjinn (~textual@82.71.236.253) has joined #raspberrypi
+2016-09-05 09:48:19	Kerr-A	Can I power the pi zero via the gpio pins, IE pins 4 and 6?
+2016-09-05 09:48:41	DWKnight	in theory
+2016-09-05 09:48:47	DWKnight	be careful about voltages though
+2016-09-05 09:48:52	Kerr-A	?
+2016-09-05 09:49:06	DWKnight	there's no overload protection on the gpio
+2016-09-05 09:49:31	-->	AbouEmre (~Thunderbi@196.216.8.142) has joined #raspberrypi
+2016-09-05 09:50:03	Kerr-A	I have a 5.1V 3A ubec
+2016-09-05 09:50:15	<--	AbouEmre (~Thunderbi@196.216.8.142) has quit (Client Quit)
+2016-09-05 09:50:37	Kerr-A	It's got a three pin plug (two populated) that can plug right into the male header I soldered on the pi :p
+2016-09-05 09:50:46	-->	finlstrm (~finlstrm@ip70-181-32-127.ri.ri.cox.net) has joined #raspberrypi
+2016-09-05 09:53:07	-->	glsmaxx (~glsmaxx@66-38-102-195.pool.dsl.nctc.com) has joined #raspberrypi
+2016-09-05 09:54:09	-->	romerocesar (~cesar@2601:602:9300:6000:80ca:7d23:f6ca:a437) has joined #raspberrypi
+2016-09-05 09:54:56	-->	AbouEmre (~Thunderbi@196.216.8.142) has joined #raspberrypi
+2016-09-05 09:54:58	DWKnight	it may work fine, but if the power supply is shoddy, it could fry the board
+2016-09-05 09:54:59	Kerr-A	what sort of overload protection should i have?
+2016-09-05 09:55:05	DWKnight	that's all I'm really saying
+2016-09-05 09:55:37	<--	AbouEmre (~Thunderbi@196.216.8.142) has quit (Client Quit)
+2016-09-05 09:55:42	-->	ShorTie (~Idiot@unaffiliated/shortie) has joined #raspberrypi
+2016-09-05 09:56:42	<--	irco (~irco@HSI-KBW-134-3-111-4.hsi14.kabel-badenwuerttemberg.de) has quit (Ping timeout: 276 seconds)
+2016-09-05 09:56:52	<--	sandeepkr (~sandeepkr@103.49.155.114) has quit (Ping timeout: 255 seconds)
+2016-09-05 09:57:05	Zeno`	Why would you power it that way?
+2016-09-05 09:57:47	-->	AbouEmre (~Thunderbi@ewimax1.ewimax.mw) has joined #raspberrypi
+2016-09-05 09:57:52	-->	pintman (~Marco@p4FE2EACA.dip0.t-ipconnect.de) has joined #raspberrypi
+2016-09-05 09:57:56	<--	blackbeard420 (~blackbear@dynamic-acs-24-154-82-158.zoominternet.net) has quit (Quit: Lost terminal)
+2016-09-05 09:58:00	Zeno`	I mean... what's the use case?
+2016-09-05 09:58:20	<--	AbouEmre (~Thunderbi@ewimax1.ewimax.mw) has quit (Client Quit)
+2016-09-05 09:58:43	<--	romerocesar (~cesar@2601:602:9300:6000:80ca:7d23:f6ca:a437) has quit (Ping timeout: 250 seconds)
+2016-09-05 09:59:08	DWKnight	there are some gpio stack boards designed specifically for higher-voltage power supplies
+2016-09-05 09:59:15	DWKnight	also the pi-ups board
+2016-09-05 09:59:29	Zeno`	dwiesner, I doubt it'd fry the board. It'd fry the microprocessor
+2016-09-05 09:59:38	Zeno`	oops DWKnight*
+2016-09-05 09:59:53	DWKnight	if it fries the chip, the board is basically done anyway
+2016-09-05 10:00:08	Zeno`	DWKnight, power via the GPIO?
+2016-09-05 10:00:27	DWKnight	yeah
+2016-09-05 10:00:50	Zeno`	I'm confused. What does powering via the GPIO have to do with higher-voltage power supplies?
+2016-09-05 10:01:32	-->	dreamon (~dreamon@unaffiliated/dreamon) has joined #raspberrypi
+2016-09-05 10:01:46	DWKnight	https://pi.gate.ac.uk/pages/mopi.html something like this
+2016-09-05 10:01:47		[ https://is.gd/MudMYx ]
+2016-09-05 10:02:10	<--	mike_t (~mike@88.200.207.174) has quit (Remote host closed the connection)
+2016-09-05 10:02:30	DWKnight	wire up a 9v battery and suddenly your pi can go on a baloon ride without a lot of extra space taken up in payload
+2016-09-05 10:02:59	-->	AbouEmre (~Thunderbi@196.216.8.143) has joined #raspberrypi
+2016-09-05 10:03:18	Zeno`	that seems to be controlled by the GPIO not powered via the GPIO
+2016-09-05 10:03:43	<--	AbouEmre (~Thunderbi@196.216.8.143) has quit (Client Quit)
+2016-09-05 10:05:12	DWKnight	the pi with one of those boards will be powered by GPIO
+2016-09-05 10:06:19	codebam	so I connected my rpi with a brand new installation of archlinux arm on the sdcard. I connected networkmanager with ethernet sharing and nmapped my lan but nothing shows up but my laptop itself on *.0.1
+2016-09-05 10:06:21	codebam	archlinux arm comes with sshd running by default, and I did this the other day
+2016-09-05 10:06:23	codebam	would it be that its not getting enough power?
+2016-09-05 10:06:25	codebam	I have it plugged into the wall, but its a 15ft long usb cable
+2016-09-05 10:06:27	codebam	is my laptop usb 2.0 port enough to power it?
+2016-09-05 10:06:29	-->	Phryq (~Phryq_@88.224.194.229) has joined #raspberrypi
+2016-09-05 10:06:39	Kerr-A	I can directly connect my UBEC to the gpio, with the connects it has
+2016-09-05 10:06:45	Kerr-A	*connectors
+2016-09-05 10:07:32	DWKnight	codebam: laptop usb ports rarely put enough power out
+2016-09-05 10:07:33	-->	_ami_ (~ami@103.219.228.221) has joined #raspberrypi
+2016-09-05 10:07:55	codebam	well do you thing the long usb cable is supplying enough power?
+2016-09-05 10:08:09	codebam	I can't really tell whats happening because I don't have a display on hand
+2016-09-05 10:08:11	Kerr-A	VS I'll have to solder up a micro usb plug onto the ubec to plug it int othe powr port
+2016-09-05 10:08:15	codebam	well not thats hdmi
+2016-09-05 10:08:24	-->	AbouEmre (~Thunderbi@196.216.8.142) has joined #raspberrypi
+2016-09-05 10:09:06	<--	AbouEmre (~Thunderbi@196.216.8.142) has quit (Client Quit)
+2016-09-05 10:09:32	-->	ctarx (~ctarx@unaffiliated/ctarx) has joined #raspberrypi
+2016-09-05 10:11:17	<--	Haago (~haago@mail.phgnet.de) has quit (Ping timeout: 250 seconds)
+2016-09-05 10:13:46	-->	AbouEmre (~Thunderbi@196.216.8.143) has joined #raspberrypi
+2016-09-05 10:14:05	-->	phoriwan (phoriwan@gateway/shell/panicbnc/x-qfppicirdlnotnwy) has joined #raspberrypi
+2016-09-05 10:14:29	<--	AbouEmre (~Thunderbi@196.216.8.143) has quit (Client Quit)
+2016-09-05 10:14:52	<--	FeersumEndjinn (~textual@82.71.236.253) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-09-05 10:19:02	<--	VikingHoarder (~VikingHoa@203.233.108.93.rev.vodafone.pt) has quit (Remote host closed the connection)
+2016-09-05 10:20:04	-->	AbouEmre (~Thunderbi@196.216.8.139) has joined #raspberrypi
+2016-09-05 10:23:19	DWKnight	codebam: you don't have a usb serial cable?
+2016-09-05 10:24:10	<--	AbouEmre (~Thunderbi@196.216.8.139) has quit (Ping timeout: 244 seconds)
+2016-09-05 10:24:42	-->	cyborg-one (~cyborg-on@31.31.117.63) has joined #raspberrypi
+2016-09-05 10:26:01	-->	AbouEmre (~Thunderbi@196.216.8.139) has joined #raspberrypi
+2016-09-05 10:26:42	<--	AbouEmre (~Thunderbi@196.216.8.139) has quit (Client Quit)
+2016-09-05 10:27:18	-->	Ivoah (uid49352@gateway/web/irccloud.com/x-pijgcwkgmmmwczwv) has joined #raspberrypi
+2016-09-05 10:27:52	-->	Rickta59 (~Rickta59@107.12.198.216) has joined #raspberrypi
+2016-09-05 10:32:01	-->	bizarro_1 (~bizarro_1@130.red-83-47-151.dynamicip.rima-tde.net) has joined #raspberrypi
+2016-09-05 10:32:39	-->	AbouEmre (~Thunderbi@196.216.8.134) has joined #raspberrypi
+2016-09-05 10:34:12	-->	brainzap (~brainzap@46-126-143-230.dynamic.hispeed.ch) has joined #raspberrypi
+2016-09-05 10:34:51	-->	Keanu73 (~Keanu73@unaffiliated/keanu73) has joined #raspberrypi
+2016-09-05 10:34:59	<--	Sonar_Guy (~Who@fedora/sonarguy) has quit (Ping timeout: 244 seconds)
+2016-09-05 10:38:16	brainzap	guy i need your expert help in electronics, I wired up IR like this GPIO - 10kΩ - 2N2222 - IR LED - 220Ω - 3.3V, but it doesnt work :(
+2016-09-05 10:38:28	<--	da3mon (~demian@unaffiliated/da3mon) has quit (Quit: Zzzz...)
+2016-09-05 10:40:45	-->	Sonar_Guy (~Who@fedora/sonarguy) has joined #raspberrypi
+2016-09-05 10:42:12	-->	codestorm (~codestorm@cpe-76-94-72-91.socal.res.rr.com) has joined #raspberrypi
+2016-09-05 10:42:41	-->	Hobbyboy (Hobbyboy@gateway/shell/panicbnc/x-rxicrxxydwdsjiew) has joined #raspberrypi
+2016-09-05 10:42:47	SpeedEvil	you've probaby missconnected stuff.
+2016-09-05 10:42:52	Viper168	brainzap, have you said the incantation and done the pruification rites?
+2016-09-05 10:43:00	Viper168	*purification
+2016-09-05 10:43:00	SpeedEvil	Starting out - the 220 ohm seems a bit light, that is ~60mA.
+2016-09-05 10:43:08	SpeedEvil	err
+2016-09-05 10:43:18	SpeedEvil	I mean 10mA
+2016-09-05 10:43:44	SpeedEvil	The collector of the 2n2222 is connected to the LED, and the emitter to ground?
+2016-09-05 10:44:11	SpeedEvil	Also, does shorting the 220 ohm to 0V give 1.3V across the LED. If it's 3.3V, the LED is backwards.
+2016-09-05 10:46:43	<--	codestorm (~codestorm@cpe-76-94-72-91.socal.res.rr.com) has quit (Ping timeout: 244 seconds)
+2016-09-05 10:47:27	brainzap	you saying I cant distinguish between a long and a short leg?
+2016-09-05 10:47:58	<--	ctarx (~ctarx@unaffiliated/ctarx) has quit (Quit: Textual IRC Client: www.textualapp.com)
+2016-09-05 10:48:03	<--	Phryq (~Phryq_@88.224.194.229) has quit (Ping timeout: 240 seconds)
+2016-09-05 10:50:06	-->	GerhardSchr (~GerhardSc@unaffiliated/gerhardschr) has joined #raspberrypi
+2016-09-05 10:50:08	-->	Phryq (~Phryq_@88.224.194.229) has joined #raspberrypi
+2016-09-05 10:50:58	-->	chod (~chod@toy-town.demon.co.uk) has joined #raspberrypi
+2016-09-05 10:53:26	SpeedEvil	brainzap: I am saying that relying on and not actually testing things that should be true are true leads to failure
+2016-09-05 10:53:43	SpeedEvil	For anohter cause, it could be an open-circuit faulty LED
+2016-09-05 10:53:43	-->	Wasserstoff (~hydrogen@amarok/developer/hydrogen) has joined #raspberrypi
+2016-09-05 10:54:07	SpeedEvil	General faultfinding is checking things you think should be true are true, until you find one that isn't.
+2016-09-05 10:54:23	SpeedEvil	Then you work out if it isn't because your supposition was broken, or if something is actually dead
+2016-09-05 10:55:21	<--	AbouEmre (~Thunderbi@196.216.8.134) has quit (Ping timeout: 265 seconds)
+2016-09-05 10:57:04	brainzap	actually you were right
+2016-09-05 10:57:21	<--	bizarro_1 (~bizarro_1@130.red-83-47-151.dynamicip.rima-tde.net) has quit (Quit: Leaving)
+2016-09-05 10:57:49	SpeedEvil	yay
+2016-09-05 10:58:45	-->	toomin (~HomoSapie@unaffiliated/toomin) has joined #raspberrypi
+2016-09-05 10:59:15	brainzap	it was a 2n2222a and i just placed it like a 2n2222
+2016-09-05 11:02:15	brainzap	SpeedEvil: should i use 330 instead of 220?
+2016-09-05 11:04:10	-->	AbouEmre (~Thunderbi@196.216.8.138) has joined #raspberrypi
+2016-09-05 11:05:01	<--	CygniX (~CygniX@unaffiliated/twois10) has quit (Ping timeout: 250 seconds)
+2016-09-05 11:08:30	ThePendulum	this is strange
+2016-09-05 11:08:52	<--	nerdboy (~sarnold@gentoo/developer/nerdboy) has quit (Ping timeout: 276 seconds)
+2016-09-05 11:08:53	ThePendulum	my WS2812B matrix acts weird until I grab it
+2016-09-05 11:09:35	brainzap	heisenbug
+2016-09-05 11:09:36	ThePendulum	as long as I hold it up in the air it works perfectly even if I bend it a little
+2016-09-05 11:09:50	ThePendulum	so it doesn't even make sense to be a loose contact
+2016-09-05 11:11:47	<--	eshva (~eshva@2a03:b0c0:1:d0::305:a001) has quit (Ping timeout: 250 seconds)
+2016-09-05 11:12:04	<--	Reedy (~quassel@wikimedia/pdpc.active.reedy) has quit (Remote host closed the connection)
+2016-09-05 11:12:05	-->	eshva (~eshva@178.62.62.100) has joined #raspberrypi
+2016-09-05 11:12:13	<--	darquill (~darquill@unaffiliated/nolonx) has quit (Ping timeout: 250 seconds)
+2016-09-05 11:12:13	<--	nsh (~lol@wikipedia/nsh) has quit (Ping timeout: 250 seconds)
+2016-09-05 11:13:13	-->	Reedy (~quassel@wikimedia/pdpc.active.reedy) has joined #raspberrypi
+2016-09-05 11:13:14	-->	darquill (~darquill@unaffiliated/nolonx) has joined #raspberrypi
+2016-09-05 11:13:57	<--	smdeep (~smdeep@dynamic-20.125.142.202.sitibroadband.in) has quit (Ping timeout: 250 seconds)
+2016-09-05 11:14:17	-->	nsh (~lol@wikipedia/nsh) has joined #raspberrypi
+2016-09-05 11:15:27	-->	smdeep (~smdeep@dynamic-20.125.142.202.sitibroadband.in) has joined #raspberrypi
+2016-09-05 11:15:43	<--	smdeep (~smdeep@dynamic-20.125.142.202.sitibroadband.in) has quit (Client Quit)
+2016-09-05 11:15:59	-->	eeeprom (~lem0n@unaffiliated/tyler2435) has joined #raspberrypi
+2016-09-05 11:16:07	-->	bizarro_1 (~bizarro_1@130.red-83-47-151.dynamicip.rima-tde.net) has joined #raspberrypi
+2016-09-05 11:17:11	<--	pintman (~Marco@p4FE2EACA.dip0.t-ipconnect.de) has quit (Ping timeout: 265 seconds)
+2016-09-05 11:18:24	ThePendulum	seems like some strange grounding issue
+2016-09-05 11:18:36	Kerr-A	hmm whats the maximum voltage for the rpi?
+2016-09-05 11:19:06	Ben64	5v?
+2016-09-05 11:19:09	oq	240
+2016-09-05 11:19:27	-->	NecessaryEvil (~Necessary@188.189.82.241) has joined #raspberrypi
+2016-09-05 11:20:31	-->	orangepink (~orangepin@64.228.159.120) has joined #raspberrypi
+2016-09-05 11:23:11	-->	da3mon (~demian@unaffiliated/da3mon) has joined #raspberrypi
+2016-09-05 11:24:39	-->	nikivi (~nikivi@dhcp-077-250-172-150.chello.nl) has joined #raspberrypi
+2016-09-05 11:27:24	<--	orangepink (~orangepin@64.228.159.120) has quit (Quit: My Mac has aids. ZZZzzz…)
+2016-09-05 11:31:13	-->	vcolombo (~vcolombo@c-73-74-204-246.hsd1.il.comcast.net) has joined #raspberrypi
+2016-09-05 11:32:11	<--	toomin (~HomoSapie@unaffiliated/toomin) has quit (Ping timeout: 244 seconds)
+2016-09-05 11:32:30	-->	deathonater (~deathonat@unaffiliated/smeef) has joined #raspberrypi
+2016-09-05 11:32:34	--	deathonater is now known as Smeef
+2016-09-05 11:35:31	brainzap	how do i convert 5v signal to 3.3v
+2016-09-05 11:35:52	<--	vcolombo (~vcolombo@c-73-74-204-246.hsd1.il.comcast.net) has quit (Ping timeout: 255 seconds)
+2016-09-05 11:36:06	brainzap	i made a leve shifter thingy with 10k resistors but it sucked
+2016-09-05 11:36:17	-->	brocolli (ylorb@gateway/shell/xzibition.com/x-lxpasfhoexxclmkf) has joined #raspberrypi
+2016-09-05 11:36:23	--	brocolli is now known as Broly
+2016-09-05 11:36:24	-->	codestorm (~codestorm@cpe-76-94-72-91.socal.res.rr.com) has joined #raspberrypi
+2016-09-05 11:36:40	<--	GerhardSchr (~GerhardSc@unaffiliated/gerhardschr) has quit (Remote host closed the connection)
+2016-09-05 11:37:14	-->	Gathis (~TheBlack@unaffiliated/gathis) has joined #raspberrypi
+2016-09-05 11:38:29	-->	CygniX (~CygniX@unaffiliated/twois10) has joined #raspberrypi
+2016-09-05 11:39:07	<--	cyborg-one (~cyborg-on@31.31.117.63) has quit (Quit: cyborg-one)
+2016-09-05 11:40:03	<--	NecessaryEvil (~Necessary@188.189.82.241) has quit (Quit: Colloquy for iPhone - http://colloquy.mobi)
+2016-09-05 11:41:16	<--	codestorm (~codestorm@cpe-76-94-72-91.socal.res.rr.com) has quit (Ping timeout: 265 seconds)
+2016-09-05 11:41:43	-->	Cryterion (~cryterion@unaffiliated/cryterion) has joined #raspberrypi
+2016-09-05 11:43:00	--	sKyZ is now known as HashtagNOEXCUSES
+2016-09-05 11:45:36	<--	elnormous (~elnormous@87.110.85.60) has quit (Ping timeout: 258 seconds)
+2016-09-05 11:48:21	-->	Dochi_ (~Dochi@dhcp-077-248-153-221.chello.nl) has joined #raspberrypi
+2016-09-05 11:49:04	<--	Yuki_ (~Dochi@2a02:a212:a180:c300:7d9f:b448:51b4:e371) has quit (Ping timeout: 264 seconds)
+2016-09-05 11:49:11	<--	Zeno` (~Zeno````@unaffiliated/z3n0) has quit (Remote host closed the connection)
+2016-09-05 11:49:32	<--	Dochi_ (~Dochi@dhcp-077-248-153-221.chello.nl) has quit (Client Quit)
+2016-09-05 11:50:00	-->	Yuki_ (~Dochi@dhcp-077-248-153-221.chello.nl) has joined #raspberrypi
+2016-09-05 11:50:21	--	Kitlith is now known as nyanta-san
+2016-09-05 11:50:47	<--	NullMoogleCable (~NullMoogl@cpe-66-66-117-79.rochester.res.rr.com) has quit (Ping timeout: 244 seconds)
+2016-09-05 11:52:00	<--	da3mon (~demian@unaffiliated/da3mon) has quit (Ping timeout: 244 seconds)
+2016-09-05 11:52:31	--	nyanta-san is now known as Kitlith
+2016-09-05 11:54:01	-->	PasNox (~pasnox@2a01:e34:ee42:d070:20c5:9145:a7ee:c930) has joined #raspberrypi
+2016-09-05 11:55:07	-->	orangepink (~orangepin@64.228.159.120) has joined #raspberrypi
+2016-09-05 11:58:16	<--	PasNox (~pasnox@2a01:e34:ee42:d070:20c5:9145:a7ee:c930) has quit (Client Quit)
+2016-09-05 11:59:12	<--	orangepink (~orangepin@64.228.159.120) has quit (Ping timeout: 240 seconds)
+2016-09-05 11:59:18	-->	QuarkMan (~ade@2a02:c7f:3e10:d200:d56:9c91:9dd:1c0b) has joined #raspberrypi
+2016-09-05 12:01:44	-->	PasNox (~pasnox@2a01:e34:ee42:d070:48cb:a95c:4f35:292c) has joined #raspberrypi
+2016-09-05 12:02:56	Kerr-A	brainzap: what is the purpose?
+2016-09-05 12:03:15	Kerr-A	do you have a good 5v power supply, and want 3.3v out of it?
+2016-09-05 12:03:18	<--	phr34k5h0w (~phr34k5h0@24-180-105-54.dhcp.aldl.mi.charter.com) has quit (Read error: Connection reset by peer)
+2016-09-05 12:03:24	brainzap	to convert 5v to 3.3v
+2016-09-05 12:04:39	Kerr-A	If you have the resistors, you can build a voltage divider
+2016-09-05 12:04:55	Kerr-A	although it's usually best to use a step down converter
+2016-09-05 12:05:08	brainzap	yes i saw a solution with 330 and 470 im gonna try next, that should get to 2.9v
+2016-09-05 12:07:51	<--	FrankBlues (~alex@2601:681:4100:5d8b:5d69:76c0:3f29:14b) has quit (Ping timeout: 250 seconds)
+2016-09-05 12:07:59	<--	_ami_ (~ami@103.219.228.221) has quit (Remote host closed the connection)
+2016-09-05 12:08:08	Kerr-A	as a note, with a voltage divider, you are going to consumea bit of power
+2016-09-05 12:08:15	Kerr-A	http://www.ebay.com/itm/50Pcs-AMS1117-3-3-LM1117-3-3V-1A-SOT-223-Voltage-Regulator-/130750979900?hash=item1e715d9f3c:g:vGgAAOSwtnpXkeje
+2016-09-05 12:08:17		[ https://is.gd/MpphLR ]
+2016-09-05 12:09:29	Kerr-A	one pin for ground, one pin 5V in, one pin 3.3V out
+2016-09-05 12:10:05	Kerr-A	and you get _50_ of them for $2
+2016-09-05 12:10:16	brainzap	http://www.ebay.com/itm/ABXY-Raspberry-Pi-Zero-Gameboy-Casemod-with-2-Removeable-Batteries-Retropie-/322252192294?hash=item4b07ba3a26:g:CaMAAOSwFe5XzMuR
+2016-09-05 12:10:18		[ https://is.gd/M1umMB ]
+2016-09-05 12:10:18	Kerr-A	(They also recommend using two capacitors in the datasheet)
+2016-09-05 12:10:32	brainzap	oh nice thx
+2016-09-05 12:10:47	-->	pintman (~Marco@p4FE2EACA.dip0.t-ipconnect.de) has joined #raspberrypi
+2016-09-05 12:10:52	Kerr-A	ships from china though, so patience :/
+2016-09-05 12:11:02	brainzap	im gonna order one
+2016-09-05 12:11:08	Kerr-A	http://www.ams-semitech.com/attachments/File/AMS1117_20120314.pdf
+2016-09-05 12:11:10		[ https://is.gd/uC2GJz ]
+2016-09-05 12:11:13	Kerr-A	there is the data sheet
+2016-09-05 12:11:26	Kerr-A	Will tell you everything about the chip
+2016-09-05 12:11:40	<--	Wasserstoff (~hydrogen@amarok/developer/hydrogen) has quit (Remote host closed the connection)
+2016-09-05 12:11:57	-->	TheHacker66 (~TheHacker@151.30.108.233) has joined #raspberrypi
+2016-09-05 12:12:01	-->	kus (~minot@pool-100-8-212-113.nwrknj.fios.verizon.net) has joined #raspberrypi
+2016-09-05 12:12:02	<--	kus (~minot@pool-100-8-212-113.nwrknj.fios.verizon.net) has quit (Max SendQ exceeded)
+2016-09-05 12:13:29	<--	zumba_addict (~zumba_add@c-50-141-194-228.hsd1.il.comcast.net) has quit (Remote host closed the connection)
+2016-09-05 12:14:44	<--	Mead (~Mead@adsl-76-203-213-207.dsl.rcsntx.sbcglobal.net) has quit (Disconnected by services)
+2016-09-05 12:14:46	-->	Mead2 (~Mead@adsl-76-203-213-207.dsl.rcsntx.sbcglobal.net) has joined #raspberrypi
+2016-09-05 12:15:01	<--	Phryq (~Phryq_@88.224.194.229) has quit (Ping timeout: 255 seconds)
+2016-09-05 12:17:39	Kerr-A	a few important things: Max 1A output, Should have a capacitor on vin, and vout, max 18 V input,
+2016-09-05 12:19:10	Kerr-A	Also, I recommend putting a heatsink on it if you are planning to draw more than a few hundred ma.
+2016-09-05 12:19:21	-->	Haago (~haago@mail.phgnet.de) has joined #raspberrypi
+2016-09-05 12:19:43	<--	pintman (~Marco@p4FE2EACA.dip0.t-ipconnect.de) has quit (Ping timeout: 244 seconds)
+2016-09-05 12:21:13	Kerr-A	http://www.ebay.com/itm/100pcs-Aluminum-8-8x8-8x5MM-Heat-Sink-for-StepStick-A4988-Chip-IC-LED-Power-/381374431780?hash=item58cbb00224:g:8WUAAOSwjVVVo5i-
+2016-09-05 12:21:15		[ https://is.gd/boXbBn ]
+2016-09-05 12:21:29	-->	illwill (~illwill@173-133-36-87.pools.spcsdns.net) has joined #raspberrypi
+2016-09-05 12:21:49	Kerr-A	just a simple heatsink with thermal adhesive pre-applied
+2016-09-05 12:24:11	<--	darksim (~quassel@78-70-247-31-no186.tbcn.telia.com) has quit (Remote host closed the connection)
+2016-09-05 12:25:55	<--	BOKALDO (~BOKALDO@87.110.100.32) has quit (Quit: Leaving)
+2016-09-05 12:27:31	-->	zumba_addict (~zumba_add@c-50-141-194-228.hsd1.il.comcast.net) has joined #raspberrypi
+2016-09-05 12:28:11	-->	HtheB (~HtheB@Maemo/community/ex-council/HtheB) has joined #raspberrypi
+2016-09-05 12:28:32	oq	Kerr-A: why though
+2016-09-05 12:28:47	oq	those teeny little aluminium ones with thermal adhesive are a bit crap
+2016-09-05 12:28:56	oq	and the chips are designed to be used without
+2016-09-05 12:30:42	<--	glsmaxx (~glsmaxx@66-38-102-195.pool.dsl.nctc.com) has quit (Quit: Leaving)
+2016-09-05 12:32:07	<--	Vile` (~Vile@unaffiliated/vile/x-1886500) has quit (Ping timeout: 244 seconds)
+2016-09-05 12:32:15	-->	foxx_ (~foxx@134.17.26.161) has joined #raspberrypi
+2016-09-05 12:32:45	<--	pklaus (~pklaus@p4FD6FC27.dip0.t-ipconnect.de) has quit (Quit: ZNC - http://znc.in)
+2016-09-05 12:33:21	ali1234	oq: linear regulators absolutely need a heatsink because they burn off the extra volts as heat, proportional to current drain
+2016-09-05 12:33:54	oq	oh right
+2016-09-05 12:34:18	-->	pklaus (~pklaus@p4FD6FC27.dip0.t-ipconnect.de) has joined #raspberrypi
+2016-09-05 12:34:22	<--	nid0 (~nidO@82-69-13-250.dsl.in-addr.zen.co.uk) has quit (Read error: Connection reset by peer)
+2016-09-05 12:36:28	-->	cdbob (~cdbob@S0106bc4dfb7ac303.ed.shawcable.net) has joined #raspberrypi
+2016-09-05 12:38:05	Kerr-A	If you have a better heatsink option, id be interested to hear it.
+2016-09-05 12:38:41	Kerr-A	Im just using those little aluminium ones as a swiss army knife
+2016-09-05 12:39:20	bpye	Anyone got any suggestions on where I should start looking to develop a linux kernel module (for the rpi). Should probably be instanstiated by a device tree overlay...
+2016-09-05 12:40:08	-->	Vile` (~Vile@unaffiliated/vile/x-1886500) has joined #raspberrypi
+2016-09-05 12:40:18	-->	damex (~damex@funtoo/dev/damex) has joined #raspberrypi
+2016-09-05 12:40:20	SpeedEvil	One way is to find some 'similar' hardware, and rip it
+2016-09-05 12:41:09	<--	HtheB (~HtheB@Maemo/community/ex-council/HtheB) has quit (Ping timeout: 276 seconds)
+2016-09-05 12:43:03	bpye	SpeedEvil: Yeah, I've been looking at that, in this case I have an LCD controller (I'm using DPI but it still needs configuration/power management), and an MCU implementing some psuedo controller peripheral over I2C
+2016-09-05 12:44:26	bpye	Looks a bit like the LCD controller should be similar to those in drivers/linux/backlight, however I don't think they are device tree compatible for the most part? they are registered with module_spi_driver, I'm haviing no luck finding docs
+2016-09-05 12:45:03	<--	HashtagNOEXCUSES (~sKyZ@unaffiliated/skyz) has quit (Quit: Bye.)
+2016-09-05 12:45:05	<--	foxx_ (~foxx@134.17.26.161) has quit (Ping timeout: 265 seconds)
+2016-09-05 14:10:53	--	irc: disconnected from server
+2016-09-05 14:11:20	-->	TheFactIs (~Andy@2601:646:8301:b810:c14d:8de3:6b78:db2f) has joined #raspberrypi
+2016-09-05 14:11:20	--	Topic for #raspberrypi is "Unofficial RaspberryPi IRC channel but "Blessed" by the Foundation as the ONE channel. | Logs: http://srv.datagutt1.com | Rules: https://goo.gl/h5qPhz"
+2016-09-05 14:11:20	--	Topic set by gordonDrogon (~gordon@2001:4d48:ad51:8901::2) on Mon, 07 Mar 2016 09:07:35
+2016-09-05 14:11:20	--	Channel #raspberrypi: 611 nicks (3 ops, 0 voices, 608 normals)
+2016-09-05 14:11:28	--	Channel created on Sat, 13 Aug 2011 09:04:23
+2016-09-05 14:11:40	<--	Haago (~haago@mail.phgnet.de) has quit (Quit: Leaving)
+2016-09-05 14:11:50	-->	KomputerKid (~KomputerK@komputerkid.net) has joined #raspberrypi
+2016-09-05 14:12:16	-->	AbouEmre (~Thunderbi@196.216.8.141) has joined #raspberrypi
+2016-09-05 16:15:40	--	irc: disconnected from server
+2016-09-05 16:16:08	-->	TheFactIs (~Andy@2601:646:8301:b810:c14d:8de3:6b78:db2f) has joined #raspberrypi
+2016-09-05 16:16:08	--	Topic for #raspberrypi is "Unofficial RaspberryPi IRC channel but "Blessed" by the Foundation as the ONE channel. | Logs: http://srv.datagutt1.com | Rules: https://goo.gl/h5qPhz"
+2016-09-05 16:16:08	--	Topic set by gordonDrogon (~gordon@2001:4d48:ad51:8901::2) on Mon, 07 Mar 2016 09:07:35
+2016-09-05 16:16:08	--	Channel #raspberrypi: 597 nicks (3 ops, 0 voices, 594 normals)
+2016-09-05 16:16:16	--	Channel created on Sat, 13 Aug 2011 09:04:23
+2016-09-05 16:16:41	-->	AbouEmre (~Thunderbi@196.216.8.138) has joined #raspberrypi
+2016-09-05 16:17:24	<--	AbouEmre (~Thunderbi@196.216.8.138) has quit (Client Quit)
+2016-09-05 16:18:33	-->	AbouEmre (~Thunderbi@196.216.8.136) has joined #raspberrypi
+2016-09-05 16:19:17	<--	AbouEmre (~Thunderbi@196.216.8.136) has quit (Client Quit)
+2016-09-05 16:21:28	<--	ThePendulum (~ThePendul@541990DC.cm-5-2c.dynamic.ziggo.nl) has quit (Quit: leaving)
+2016-09-05 16:22:22	<--	Vad3r (~Vad3r@unaffiliated/vad3rl) has quit (Quit: Leaving)
+2016-09-05 16:33:05	--	irc: disconnected from server
+2016-09-05 16:33:45	-->	TheFactIs (~Andy@2601:646:8301:b810:c14d:8de3:6b78:db2f) has joined #raspberrypi
+2016-09-05 16:33:45	--	Topic for #raspberrypi is "Unofficial RaspberryPi IRC channel but "Blessed" by the Foundation as the ONE channel. | Logs: http://srv.datagutt1.com | Rules: https://goo.gl/h5qPhz"
+2016-09-05 16:33:45	--	Topic set by gordonDrogon (~gordon@2001:4d48:ad51:8901::2) on Mon, 07 Mar 2016 09:07:35
+2016-09-05 16:33:45	--	Channel #raspberrypi: 599 nicks (3 ops, 0 voices, 596 normals)
+2016-09-05 16:33:51	--	Channel created on Sat, 13 Aug 2011 09:04:23
+2016-09-05 16:33:52	<--	AbouEmre (~Thunderbi@196.216.8.142) has quit (Client Quit)
+2016-09-05 19:39:03	--	irc: disconnected from server
+2016-09-05 19:39:30	-->	TheFactIs (~Andy@2601:646:8301:b810:c14d:8de3:6b78:db2f) has joined #raspberrypi
+2016-09-05 19:39:30	--	Topic for #raspberrypi is "Unofficial RaspberryPi IRC channel but "Blessed" by the Foundation as the ONE channel. | Logs: http://srv.datagutt1.com | Rules: https://goo.gl/h5qPhz"
+2016-09-05 19:39:30	--	Topic set by gordonDrogon (~gordon@2001:4d48:ad51:8901::2) on Mon, 07 Mar 2016 09:07:35
+2016-09-05 19:39:30	--	Channel #raspberrypi: 588 nicks (3 ops, 0 voices, 585 normals)
+2016-09-05 19:39:37	anisfarhana	You guys are too geek..too geek.
+2016-09-05 19:39:38	--	Channel created on Sat, 13 Aug 2011 09:04:23
+2016-09-05 19:39:39	anisfarhana	I cant handle it.
+2016-09-05 19:39:48	oq	mopidy looks good
+2016-09-05 22:13:56	--	irc: disconnected from server
+2016-09-05 22:14:20	-->	TheFactIs (~Andy@2601:646:8301:b810:c14d:8de3:6b78:db2f) has joined #raspberrypi
+2016-09-05 22:14:20	--	Topic for #raspberrypi is "Unofficial RaspberryPi IRC channel but "Blessed" by the Foundation as the ONE channel. | Logs: http://srv.datagutt1.com | Rules: https://goo.gl/h5qPhz"
+2016-09-05 22:14:20	--	Topic set by gordonDrogon (~gordon@2001:4d48:ad51:8901::2) on Mon, 07 Mar 2016 09:07:35
+2016-09-05 22:14:20	--	Channel #raspberrypi: 573 nicks (3 ops, 0 voices, 570 normals)
+2016-09-05 22:14:25	-->	AbouEmre (~Thunderbi@196.216.8.133) has joined #raspberrypi
+2016-09-05 22:14:28	--	Channel created on Sat, 13 Aug 2011 09:04:23
+2016-09-05 22:14:33	Kerr-A	Meanwhile, I'm excited my STM8 chips will be arriving soon so I can program them to talk to my pi, and do stuff
+2016-09-06 02:15:43	--	irc: disconnected from server
+2016-09-06 02:16:09	-->	TheFactIs (~Andy@2601:646:8301:b810:c14d:8de3:6b78:db2f) has joined #raspberrypi
+2016-09-06 02:16:09	--	Topic for #raspberrypi is "Unofficial RaspberryPi IRC channel but "Blessed" by the Foundation as the ONE channel. | Logs: http://srv.datagutt1.com | Rules: https://goo.gl/h5qPhz"
+2016-09-06 02:16:09	--	Topic set by gordonDrogon (~gordon@2001:4d48:ad51:8901::2) on Mon, 07 Mar 2016 09:07:35
+2016-09-06 02:16:09	--	Channel #raspberrypi: 588 nicks (3 ops, 0 voices, 585 normals)
+2016-09-06 02:16:17	--	Channel created on Sat, 13 Aug 2011 09:04:23
+2016-09-06 02:16:31	-->	tommy`` (tommy@host81-65-dynamic.55-82-r.retail.telecomitalia.it) has joined #raspberrypi
+2016-09-06 06:18:34	--	irc: disconnected from server
+2016-09-06 07:39:03	-->	TheFactIs (~Andy@2601:646:8301:b810:c14d:8de3:6b78:db2f) has joined #raspberrypi
+2016-09-06 07:39:03	--	Topic for #raspberrypi is "Unofficial RaspberryPi IRC channel but "Blessed" by the Foundation as the ONE channel. | Logs: http://srv.datagutt1.com | Rules: https://goo.gl/h5qPhz"
+2016-09-06 07:39:03	--	Topic set by gordonDrogon (~gordon@2001:4d48:ad51:8901::2) on Mon, 07 Mar 2016 09:07:35
+2016-09-06 07:39:03	--	Channel #raspberrypi: 625 nicks (3 ops, 0 voices, 622 normals)
+2016-09-06 07:39:03	<--	linmob (~quassel@p5B227688.dip0.t-ipconnect.de) has quit (Ping timeout: 240 seconds)
+2016-09-06 07:39:11	--	Channel created on Sat, 13 Aug 2011 09:04:23
+2016-09-06 07:39:24	<--	Haxxa (~Harrison@120.147.48.206) has quit (Ping timeout: 250 seconds)
+2016-09-06 07:39:32	<--	AbouEmre (~Thunderbi@196.216.8.134) has quit (Client Quit)
+2016-09-06 07:39:37	-->	codestorm (~codestorm@cpe-76-94-72-91.socal.res.rr.com) has joined #raspberrypi
+2016-09-06 07:41:11	<--	jaeckel (~jaeckel@unaffiliated/jaeckel) has quit (Ping timeout: 244 seconds)
+2016-09-06 07:43:05	<--	qt-x (~Thunderbi@217.10.196.2) has quit (Remote host closed the connection)
+2016-09-06 07:43:52	<--	codestorm (~codestorm@cpe-76-94-72-91.socal.res.rr.com) has quit (Ping timeout: 240 seconds)
+2016-09-06 07:44:18	-->	AbouEmre (~Thunderbi@196.216.8.138) has joined #raspberrypi
+2016-09-06 07:44:29	-->	Haxxa (~Harrison@120.147.48.206) has joined #raspberrypi
+2016-09-06 07:45:02	<--	AbouEmre (~Thunderbi@196.216.8.138) has quit (Client Quit)
+2016-09-06 07:45:09	<--	Viper168 (~Viper@unaffiliated/viper168) has quit (Ping timeout: 276 seconds)
+2016-09-06 07:45:12	<--	kenn123 (~kenn123@199.246.88.8) has quit (Ping timeout: 240 seconds)
+2016-09-06 07:46:52	-->	RedParrot (~RedParrot@69.38.133.18) has joined #raspberrypi
+2016-09-06 07:48:38	<--	valeech (~valeech@50.240.90.190) has quit (Ping timeout: 265 seconds)
+2016-09-06 07:49:12	-->	Tenkawa (~na@unaffiliated/tenkawa) has joined #raspberrypi
+2016-09-06 07:49:27	Tenkawa	hi all
+2016-09-06 07:49:47	-->	AbouEmre (~Thunderbi@ewimax1.ewimax.mw) has joined #raspberrypi
+2016-09-06 07:50:26	-->	Sharkun (~Infinital@unaffiliated/infinital) has joined #raspberrypi
+2016-09-06 07:50:30	<--	AbouEmre (~Thunderbi@ewimax1.ewimax.mw) has quit (Client Quit)
+2016-09-06 07:51:11	<--	Tenkawa (~na@unaffiliated/tenkawa) has quit (Client Quit)
+2016-09-06 07:51:11	-->	jaeckel (~jaeckel@unaffiliated/jaeckel) has joined #raspberrypi
+2016-09-06 07:52:25	-->	Viper168 (~Viper@unaffiliated/viper168) has joined #raspberrypi
+2016-09-06 07:52:37	<--	Sharkun (~Infinital@unaffiliated/infinital) has quit (Client Quit)
+2016-09-06 07:52:42	<--	Infinital (~Infinital@unaffiliated/infinital) has quit (Ping timeout: 244 seconds)
+2016-09-06 07:53:03	-->	Tenkawa (~Tenkawa@unaffiliated/tenkawa) has joined #raspberrypi
+2016-09-06 07:53:07	Tenkawa	better
+2016-09-06 07:54:06	<--	azizLIGHT (~azizLIGHT@unaffiliated/azizlight) has quit (Ping timeout: 244 seconds)
+2016-09-06 07:55:14	-->	AbouEmre (~Thunderbi@ewimax1.ewimax.mw) has joined #raspberrypi
+2016-09-06 07:55:58	<--	AbouEmre (~Thunderbi@ewimax1.ewimax.mw) has quit (Client Quit)
+2016-09-06 07:56:01	-->	GenteelBen (GenteelBen@cpc70133-lutn12-2-0-cust324.9-3.cable.virginm.net) has joined #raspberrypi
+2016-09-06 07:56:08	-->	AbouEmre (~Thunderbi@196.216.8.141) has joined #raspberrypi
+2016-09-06 07:56:53	<--	AbouEmre (~Thunderbi@196.216.8.141) has quit (Client Quit)
+2016-09-06 07:58:18	<--	mreznik (mreznik@nat/redhat/x-pbwfwohfarynhejc) has quit (Quit: Leaving)
+2016-09-06 07:59:16	-->	pintman (~Marco@p4FE2EE38.dip0.t-ipconnect.de) has joined #raspberrypi
+2016-09-06 07:59:45	-->	Lorduncan (~Thunderbi@137.101.173.51) has joined #raspberrypi
+2016-09-06 08:00:34	<--	dreamcat4 (~dreamcat4@62.49.10.154) has quit (Ping timeout: 240 seconds)
+2016-09-06 08:00:53	<--	knob (~knob@mobile-166-172-189-216.mycingular.net) has quit (Quit: Leaving)
+2016-09-06 08:01:13	-->	BOKALDO (~BOKALDO@81.198.22.74) has joined #raspberrypi
+2016-09-06 08:01:37	-->	AbouEmre (~Thunderbi@196.216.8.143) has joined #raspberrypi
+2016-09-06 08:02:21	<--	AbouEmre (~Thunderbi@196.216.8.143) has quit (Client Quit)
+2016-09-06 08:03:14	-->	stiv (~steve@blender/coder/stivs) has joined #raspberrypi
+2016-09-06 08:03:22	-->	Smeef (~deathonat@unaffiliated/smeef) has joined #raspberrypi
+2016-09-06 08:03:31	<--	taza (~taza@unaffiliated/taza) has quit
+2016-09-06 08:03:39	<--	Tenkawa (~Tenkawa@unaffiliated/tenkawa) has quit (Quit: leaving)
+2016-09-06 08:03:39	<--	GenBurnside (~GenBurnsi@209.208.228.244) has quit (Read error: Connection reset by peer)
+2016-09-06 08:04:18	-->	guideX (Acidmax@unaffiliated/guidex) has joined #raspberrypi
+2016-09-06 08:04:46	guideX	how do you properly setup vncserver on raspbian.. when I try, I screw up raspbian and it won't boot, or I end up at a login screen on boot
+2016-09-06 08:04:56	guideX	what's a good tutorial for setting up tightvncserver on raspbian
+2017-02-09 14:30:52	-->	TheFactIs (~Andy@2603:3024:152c:500:5c12:7bb7:31ea:f661) has joined #raspberrypi
+2017-02-09 14:30:52	--	Topic for #raspberrypi is "Unofficial RaspberryPi IRC channel but "Blessed" by the Foundation as the ONE channel. | Logs: http://srv.datagutt1.com | Rules: https://goo.gl/h5qPhz"
+2017-02-09 14:30:52	--	Topic set by gordonDrogon (~gordon@2001:4d48:ad51:8901::2) on Sat, 24 Dec 2016 07:04:53
+2017-02-09 14:30:52	--	Channel #raspberrypi: 630 nicks (4 ops, 0 voices, 626 normals)
+2017-02-09 14:30:56	--	Channel created on Sat, 13 Aug 2011 09:04:23
+2017-02-09 14:32:41	-->	dastaan_ (~dastaan@129.255.227.168) has joined #raspberrypi
+2017-02-09 14:34:51	-->	Mikelevel (~MoVeWoRk@unaffiliated/mikelevel) has joined #raspberrypi
+2017-02-09 14:35:04	<--	dastaan (~dastaan@2620:0:e50:1401:f1a0:3623:1561:110d) has quit (Ping timeout: 256 seconds)
+2017-02-09 14:36:42	<--	EnrgySmth (d8eba101@gateway/web/freenode/ip.216.235.161.1) has quit
+2017-02-09 14:42:41	<--	doomlord (~textual@host86-148-102-241.range86-148.btcentralplus.com) has quit (Quit: My MacBook Pro has gone to sleep. ZZZzzz…)
+2017-02-09 14:44:12	-->	abu0 has joined #raspberrypi
+2017-02-09 14:45:41	-->	knob has joined #raspberrypi
+2017-02-09 14:45:52	<--	dastaan_ has quit (Remote host closed the connection)
+2017-02-09 14:46:16	-->	Throdne has joined #raspberrypi
+2017-02-09 14:46:39	-->	dastaan has joined #raspberrypi
+2017-02-09 14:46:43	<--	codebam has quit (Ping timeout: 255 seconds)
+2017-02-09 14:47:18	<--	InverseRhombus has quit (Quit: Leaving)
+2017-02-09 14:50:31	-->	codebam has joined #raspberrypi
+2017-02-09 14:51:13	<--	dastaan has quit (Ping timeout: 255 seconds)
+2017-02-09 14:52:37	-->	atouk has joined #raspberrypi
+2017-02-09 14:52:40	-->	dastaan has joined #raspberrypi
+2017-02-09 14:54:49	<--	dconroy has quit (Quit: dconroy)
+2017-02-09 14:57:17	<--	vcolombo has quit (Ping timeout: 260 seconds)
+2017-02-09 15:00:41	Enverex	Anyone else familiar with why pi3-disable-bt would break Wifi?
+2017-02-09 15:02:21	ali1234	Enverex: can you reproduce it on an unmodified raspbian install?
+2017-02-09 15:02:26	ali1234	if so, i would report a bug
+2017-02-09 15:02:27	<--	Gathis has quit (Remote host closed the connection)
+2017-02-09 15:02:43	-->	Grapes has joined #raspberrypi
+2017-02-09 15:03:02	Enverex	ali1234: I don't have a spare micro-SD card to install with (as I'm using Arch rather than Raspbian)
+2017-02-09 15:03:03	ali1234	the only thing it does is remap the uart pins
+2017-02-09 15:03:10	ali1234	so it should not affect wifi at all
+2017-02-09 15:05:24	--	HeathHayleiOS6 is now known as BrexitmeansBrexi
+2017-02-09 15:06:48	<--	neildugan has quit (Ping timeout: 256 seconds)
+2017-02-09 15:11:48	<--	SirPuffy has quit (Ping timeout: 240 seconds)
+2017-02-09 15:11:59	<--	dumle29 has quit (Ping timeout: 245 seconds)
+2017-02-09 15:12:28	<--	HalfEatenPie has quit (Ping timeout: 240 seconds)
+2017-02-09 15:15:12	<--	GreeningGalaxy has quit (Read error: Connection reset by peer)
+2017-02-09 15:15:31	-->	neildugan has joined #raspberrypi
+2017-02-09 15:15:47	Grapes	arch runs on an rpi?
+2017-02-09 15:16:10	<--	swift110 has quit (Ping timeout: 240 seconds)
+2017-02-09 15:16:47	Enverex	Yup, Arch ARM
+2017-02-09 15:16:58	Enverex	Supports quite a few boards
+2017-02-09 15:19:08	<--	Blendify has quit (Quit: What does /quit do?)
+2017-02-09 15:21:02	-->	SirPuffy has joined #raspberrypi
+2017-02-09 15:22:04	<--	Envil has quit (Remote host closed the connection)
+2017-02-09 15:24:05	-->	HalfEatenPie has joined #raspberrypi
+2017-02-09 15:24:35	-->	hydrogen has joined #raspberrypi
+2017-02-09 15:29:41	-->	codestorm has joined #raspberrypi
+2017-02-09 15:30:50	<--	mgottschlag has quit (Ping timeout: 276 seconds)
+2017-02-09 15:31:01	<--	Chocolophophora has quit (Quit: oops)
+2017-02-09 15:31:15	-->	whatever_hi has joined #raspberrypi
+2017-02-09 15:31:25	<--	ragedragon has quit (Ping timeout: 255 seconds)
+2017-02-09 15:31:41	<--	spybert has quit (Quit: Leaving)
+2017-02-09 15:31:55	<--	alexandre9099 has quit (Ping timeout: 240 seconds)
+2017-02-09 15:33:35	<--	Olufunmilayo has quit (Ping timeout: 240 seconds)
+2017-02-09 15:33:48	<--	SirPuffy has quit (Ping timeout: 240 seconds)
+2017-02-09 15:34:24	-->	alexandre9099 has joined #raspberrypi
+2017-02-09 15:34:25	<--	codestorm has quit (Ping timeout: 255 seconds)
+2017-02-09 15:34:29	-->	Olufunmilayo has joined #raspberrypi
+2017-02-09 15:37:01	-->	spybert has joined #raspberrypi
+2017-02-09 15:37:27	-->	Chocolungma has joined #raspberrypi
+2017-02-09 15:37:49	-->	jje has joined #raspberrypi
+2017-02-09 15:38:16	<--	zaherdirkey has quit (Quit: Leaving)
+2017-02-09 15:39:50	-->	GreeningGalaxy has joined #raspberrypi
+2017-02-09 15:40:24	-->	SirPuffy has joined #raspberrypi
+2017-02-09 15:40:53	--	BrexitmeansBrexi is now known as gotoios6noip7JB
+2017-02-09 15:41:53	-->	fredp has joined #raspberrypi
+2017-02-09 15:45:45	--	gotoios6noip7JB is now known as BrexitmeansBrexi
+2017-02-09 15:49:14	<--	Mikelevel has quit (Quit: Mikelevel)
+2017-02-09 15:49:41	<--	GreeningGalaxy has quit (Ping timeout: 276 seconds)
+2017-02-09 15:53:16	<--	hydrogen has quit (Remote host closed the connection)
+2017-02-09 15:55:40	--	BrexitmeansBrexi is now known as BrexitiOS6
+2017-02-09 15:56:38	 *	BurtyB has just tested "dtoverlay=pi3-disable-bt" on the latest Raspbian with PIXEL and it doesn't disable wifi
+2017-02-09 15:56:49	Grapes	lol thanks
+2017-02-09 15:57:04	Grapes	disable-bt for bluetooth?
+2017-02-09 15:57:12	Grapes	why would wifi be affected?
+2017-02-09 15:57:20	-->	Datalink has joined #raspberrypi
+2017-02-09 15:57:29	<--	IT_Sean has quit (Remote host closed the connection)
+2017-02-09 15:57:51	<--	neildugan has quit (Ping timeout: 258 seconds)
+2017-02-09 15:59:12	BurtyB	Grapes, I didn't expect it to but Enverex said it did on Arch and since I'm messing with images atm I thought I'd check
+2017-02-09 15:59:26	Grapes	ok, thanks man
+2017-02-09 15:59:30	<--	atouk has quit (Ping timeout: 256 seconds)
+2017-02-09 16:00:32	<--	Feedz has quit (Ping timeout: 252 seconds)
+2017-02-09 16:02:12	--	BrexitiOS6 is now known as HeathHayleiOS6
+2017-02-09 16:04:16	<--	vstehle has quit (Ping timeout: 255 seconds)
+2017-02-09 16:08:07	<--	bedah has quit (Quit: Ex-Chat)
+2017-02-09 16:09:09	-->	augiedoggie has joined #raspberrypi
+2017-02-09 16:10:13	-->	atouk has joined #raspberrypi
+2017-02-09 16:12:26	-->	neildugan has joined #raspberrypi
+2017-02-09 16:12:38	<--	teepee has quit (Ping timeout: 252 seconds)
+2017-02-09 16:13:16	-->	hydrogen has joined #raspberrypi
+2017-02-09 16:15:38	<--	saint_ has quit (Quit: UNIVERSE CORRUPTED. REBOOT (Y/N) ?)
+2017-02-09 16:15:47	-->	Feedz has joined #raspberrypi
+2017-02-09 16:15:50	<--	codingpanic has quit (Quit: Reconnecting)
+2017-02-09 16:19:34	<--	KaiserAres has quit (Ping timeout: 255 seconds)
+2017-02-09 16:19:50	-->	codingpanic has joined #raspberrypi
+2017-02-09 16:20:34	<--	dastaan has quit (Remote host closed the connection)
+2017-02-09 16:21:09	-->	dastaan has joined #raspberrypi
+2017-02-09 16:22:35	-->	swift110 has joined #raspberrypi
+2017-02-09 16:22:50	-->	dastaan_ has joined #raspberrypi
+2017-02-09 16:24:05	<--	dastaan_ has quit (Remote host closed the connection)
+2017-02-09 16:24:25	-->	dastaan_ has joined #raspberrypi
+2017-02-09 16:24:29	-->	codestorm has joined #raspberrypi
+2017-02-09 16:25:04	<--	GenteelBen has quit
+2017-02-09 16:25:32	<--	hydrogen has quit (Remote host closed the connection)
+2017-02-09 16:25:43	<--	dastaan has quit (Ping timeout: 255 seconds)
+2017-02-09 16:28:04	<--	codingpanic has quit (Changing host)
+2017-02-09 16:28:04	-->	codingpanic has joined #raspberrypi
+2017-02-09 16:28:52	<--	codestorm has quit (Ping timeout: 255 seconds)
+2017-02-09 16:29:19	<--	augiedoggie has quit (Ping timeout: 255 seconds)
+2017-02-09 16:35:59	<--	_BigWings_ has quit (Read error: Connection reset by peer)
+2017-02-09 16:37:29	-->	_BigWings_ has joined #raspberrypi
+2017-02-09 16:38:18	<--	SailorMoon has quit (Quit: Leaving)
+2017-02-09 16:39:42	<--	jje has quit (Remote host closed the connection)
+2017-02-09 16:40:18	-->	seranhom has joined #raspberrypi
+2017-02-09 16:42:10	-->	SailorMoon has joined #raspberrypi
+2017-02-09 16:43:25	<--	plugwash has quit (Ping timeout: 255 seconds)
+2017-02-09 16:44:21	<--	HerculeP has quit (Remote host closed the connection)
+2017-02-09 16:44:31	<--	svm_invictvs has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2017-02-09 16:45:56	-->	GreeningGalaxy has joined #raspberrypi
+2017-02-09 16:48:07	-->	CoOolBreeze has joined #raspberrypi
+2017-02-09 16:48:37	<--	double-you has quit (Quit: double-you)
+2017-02-09 16:48:51	<--	Datalink has quit (Quit: Datalink offline)
+2017-02-09 16:51:14	<--	dastaan_ has quit
+2017-02-09 16:51:22	-->	Thasan has joined #raspberrypi
+2017-02-09 16:51:34	-->	dastaan has joined #raspberrypi
+2017-02-09 16:52:28	<--	dualcells has quit (Changing host)
+2017-02-09 16:52:28	-->	dualcells has joined #raspberrypi
+2017-02-09 16:53:17	<--	SpeccyMan has quit (Quit: 'Goodbye')
+2017-02-09 16:56:38	<--	Syliss has quit (Ping timeout: 276 seconds)
+2017-02-09 16:56:48	<--	neildugan has quit (Ping timeout: 240 seconds)
+2017-02-09 16:56:57	-->	dastaan_ has joined #raspberrypi
+2017-02-09 16:57:37	--	HeathHayleiOS6 is now known as iOS6
+2017-02-09 16:57:43	<--	zaffy has quit (Quit: Leaving)
+2017-02-09 16:58:05	<--	AndrewAlexMac has quit (Ping timeout: 240 seconds)
+2017-02-09 16:58:07	<--	dastaan has quit (Ping timeout: 255 seconds)
+2017-02-09 16:59:28	<--	knob has quit (Quit: Leaving)
+2017-02-09 17:01:25	<--	de-facto has quit (Quit: See you around.)
+2017-02-09 17:01:47	-->	augiedoggie has joined #raspberrypi
+2017-02-09 17:02:05	-->	de-facto has joined #raspberrypi
+2017-02-09 17:02:43	-->	AndrewAlexMac has joined #raspberrypi
+2017-02-09 17:03:35	<--	howdoi has quit (Quit: Connection closed for inactivity)
+2017-02-09 17:50:31	--	irc: disconnected from server
+2017-02-09 17:50:56	-->	TheFactIs has joined #raspberrypi
+2017-02-09 17:50:56	--	Topic for #raspberrypi is "Unofficial RaspberryPi IRC channel but "Blessed" by the Foundation as the ONE channel. | Logs: http://srv.datagutt1.com | Rules: https://goo.gl/h5qPhz"
+2017-02-09 17:50:56	--	Topic set by gordonDrogon (~gordon@2001:4d48:ad51:8901::2) on Sat, 24 Dec 2016 07:04:53
+2017-02-09 17:50:56	--	Channel #raspberrypi: 612 nicks (3 ops, 0 voices, 609 normals)
+2017-02-09 17:51:02	--	Channel created on Sat, 13 Aug 2011 09:04:23
+2017-02-09 18:11:35	--	irc: disconnected from server
+2017-02-09 18:26:44	-->	TheFactIs has joined #raspberrypi
+2017-02-09 18:26:44	--	Topic for #raspberrypi is "Unofficial RaspberryPi IRC channel but "Blessed" by the Foundation as the ONE channel. | Logs: http://srv.datagutt1.com | Rules: https://goo.gl/h5qPhz"
+2017-02-09 18:26:44	--	Topic set by gordonDrogon (~gordon@2001:4d48:ad51:8901::2) on Sat, 24 Dec 2016 07:04:53
+2017-02-09 18:26:44	--	Channel #raspberrypi: 608 nicks (3 ops, 0 voices, 605 normals)
+2017-02-09 18:26:52	--	Channel created on Sat, 13 Aug 2011 09:04:23
+2017-02-10 00:06:47	--	irc: disconnected from server
+2017-02-10 04:08:09	--	irc: disconnected from server
+2017-02-10 04:08:32	-->	TheFactIs has joined #raspberrypi
+2017-02-10 04:08:32	--	Topic for #raspberrypi is "Unofficial RaspberryPi IRC channel but "Blessed" by the Foundation as the ONE channel. | Logs: http://srv.datagutt1.com | Rules: https://goo.gl/h5qPhz"
+2017-02-10 04:08:32	--	Topic set by gordonDrogon (~gordon@2001:4d48:ad51:8901::2) on Sat, 24 Dec 2016 07:04:53
+2017-02-10 04:08:32	--	Channel #raspberrypi: 615 nicks (3 ops, 0 voices, 612 normals)
+2017-02-10 10:14:02	--	irc: disconnected from server
+2017-02-10 10:14:24	-->	TheFactIs has joined #raspberrypi
+2017-02-10 10:14:24	--	Topic for #raspberrypi is "Unofficial RaspberryPi IRC channel but "Blessed" by the Foundation as the ONE channel. | Logs: http://srv.datagutt1.com | Rules: https://goo.gl/h5qPhz"
+2017-02-10 10:14:24	--	Topic set by gordonDrogon (~gordon@2001:4d48:ad51:8901::2) on Sat, 24 Dec 2016 07:04:53
+2017-02-10 10:14:24	--	Channel #raspberrypi: 630 nicks (3 ops, 0 voices, 627 normals)
+2017-02-12 09:33:59	-->	TheFactIs has joined #raspberrypi
+2017-02-12 09:33:59	--	Topic for #raspberrypi is "Unofficial RaspberryPi IRC channel but "Blessed" by the Foundation as the ONE channel. | Logs: http://srv.datagutt1.com | Rules: https://goo.gl/h5qPhz"
+2017-02-12 09:33:59	--	Topic set by gordonDrogon (~gordon@2001:4d48:ad51:8901::2) on Sat, 24 Dec 2016 07:04:53
+2017-02-12 09:33:59	--	Channel #raspberrypi: 632 nicks (2 ops, 0 voices, 630 normals)
+2017-02-12 09:34:02	-->	darksim has joined #raspberrypi
+2017-02-12 09:34:03	--	Channel created on Sat, 13 Aug 2011 09:04:23
+2017-02-12 09:35:04	chisight	Chillum's answer of bad power is fairly likely too.
+2017-02-12 09:35:42	aries_liuxueyang	ok
+2017-02-12 09:36:08	chisight	grab another sdcard, put the latest image on it and test.  if that works reliably, you've narrowed it to the card or the code on the card.
+2017-02-12 09:36:20	aries_liuxueyang	I tried another power adapter 5V 2A and it doesn't work either.
+2017-02-12 09:36:23	-->	codestorm has joined #raspberrypi
+2017-02-12 09:36:27	<--	Mikelevel has quit (Ping timeout: 240 seconds)
+2017-02-12 09:36:32	chisight	which pi is this?
+2017-02-12 09:36:45	aries_liuxueyang	pi2 B
+2017-02-12 09:37:18	chisight	ok.  is there anything connected to the usb?
+2017-02-12 09:37:35	-->	purplex88 has joined #raspberrypi
+2017-02-12 09:37:43	aries_liuxueyang	nop, It is connect directly to the power.
+2017-02-12 09:38:01	chisight	what other than power is connected to the pi?
+2017-02-12 09:38:20	aries_liuxueyang	nothing
+2017-02-12 09:38:25	Habbie	no screen?
+2017-02-12 09:38:30	chisight	no network?
+2017-02-12 09:38:35	aries_liuxueyang	no
+2017-02-12 09:38:42	chisight	no keyboard or mouse?
+2017-02-12 09:38:45	aries_liuxueyang	I tried to remove all things.
+2017-02-12 09:38:54	aries_liuxueyang	yeah. no keyboard and mouse.
+2017-02-12 09:39:03	chisight	ok
+2017-02-12 09:39:31	chisight	get the latest image, put it on a different sd card and test.
+2017-02-12 09:39:44	aries_liuxueyang	I only have one more 2GB sdcard by hand. Is there a distro whose image size is below 2G?
+2017-02-12 09:39:52	chisight	narrow down your potential problems.
+2017-02-12 09:40:32	Habbie	aries_liuxueyang, raspbian lite is 1.3G
+2017-02-12 09:40:38	Habbie	aries_liuxueyang, well 1.4G
+2017-02-12 09:40:51	aries_liuxueyang	I will have a try.
+2017-02-12 09:41:10	<--	codestorm has quit (Ping timeout: 255 seconds)
+2017-02-12 09:41:16	aries_liuxueyang	Habbie: chisight Thank you so much! I will try it now.
+2017-02-12 09:44:05	Chillum	I would backup anything you want from the card that works in our desktop but not the pi
+2017-02-12 09:44:56	Chillum	in fact I go a step further and assume any OS on an SD card could have a disk failure at any moment and do regular backups to another system
+2017-02-12 09:45:12	Chillum	while tiny and convenient they are not the safest way to store data
+2017-02-12 09:45:21	<--	Gathis has quit (Read error: Connection reset by peer)
+2017-02-12 09:45:56	Chillum	they were designed for occasional read/writes from mobile devices, not the heavy writing of an operating system
+2017-02-12 09:46:18	-->	vcolombo has joined #raspberrypi
+2017-02-12 09:47:14	<--	Sadale has quit (Quit: Ĝis revido)
+2017-02-12 09:49:51	-->	wonderer has joined #raspberrypi
+2017-02-12 09:50:06	-->	Mikelevel has joined #raspberrypi
+2017-02-12 09:50:22	<--	Snircle has quit (Quit: Textual IRC Client: www.textualapp.com)
+2017-02-12 09:53:15	<--	atomi has quit (Remote host closed the connection)
+2017-02-12 09:53:19	<--	NicoHood has quit (Ping timeout: 255 seconds)
+2017-02-12 09:54:08	-->	atomi has joined #raspberrypi
+2017-02-12 09:55:21	<--	vcolombo has quit (Remote host closed the connection)
+2017-02-12 09:55:46	-->	vcolombo has joined #raspberrypi
+2017-02-12 09:57:59	-->	webturtle0 has joined #raspberrypi
+2017-02-12 10:00:46	-->	dreamon has joined #raspberrypi
+2017-02-12 10:02:25	<--	webturtle0 has quit (Ping timeout: 245 seconds)
+2017-02-12 10:03:24	<--	sandeepkr has quit (Ping timeout: 260 seconds)
+2017-02-12 10:03:27	-->	AttieGrande has joined #raspberrypi
+2017-02-12 10:05:30	-->	dastaan has joined #raspberrypi
+2017-02-12 10:07:16	<--	ziddey has quit (Ping timeout: 258 seconds)
+2017-02-12 10:09:00	<--	cnnx has quit (Ping timeout: 256 seconds)
+2017-02-12 10:09:41	<--	aries_liuxueyang has quit (Remote host closed the connection)
+2017-02-12 10:10:07	<--	InverseRhombus has quit (Ping timeout: 255 seconds)
+2017-02-12 10:10:26	<--	louisdk has quit (Ping timeout: 252 seconds)
+2017-02-12 10:11:21	-->	sandeepkr has joined #raspberrypi
+2017-02-12 10:12:52	-->	magicmilk has joined #raspberrypi
+2017-02-12 10:13:48	-->	vcolombo_ has joined #raspberrypi
+2017-02-12 10:14:55	<--	Chocolophophora has quit (Quit: oops)
+2017-02-12 10:16:35	<--	mobyduck has left #raspberrypi
+2017-02-12 10:17:11	<--	double-you has quit (Quit: double-you)
+2017-02-12 10:17:12	<--	RoBo_V has quit (Read error: Connection reset by peer)
+2017-02-12 10:17:14	<--	vcolombo has quit (Ping timeout: 258 seconds)
+2017-02-12 10:17:47	<--	wonderer has quit (Quit: Famous quotes #24: "Be nice to people on your way up because you meet them on your way down." - Jimmy Durante)
+2017-02-12 10:17:48	-->	RoBo_V has joined #raspberrypi
+2017-02-12 10:19:23	<--	jncunha has quit (Read error: Connection reset by peer)
+2017-02-12 10:20:09	<--	neiz has quit
+2017-02-12 10:21:33	-->	purplex88_ has joined #raspberrypi
+2017-02-12 10:21:48	-->	uks has joined #raspberrypi
+2017-02-12 10:23:23	<--	vcolombo_ has quit (Remote host closed the connection)
+2017-02-12 10:23:28	<--	teclo- has quit (Ping timeout: 240 seconds)
+2017-02-12 10:23:52	-->	teclo- has joined #raspberrypi
+2017-02-12 10:24:29	-->	kingarmadillo has joined #raspberrypi
+2017-02-12 10:24:35	<--	uksio has quit (Ping timeout: 276 seconds)
+2017-02-12 10:25:05	<--	purplex88 has quit (Ping timeout: 240 seconds)
+2017-02-12 10:25:09	--	purplex88_ is now known as purplex88
+2017-02-12 10:27:48	-->	louisdk has joined #raspberrypi
+2017-02-12 10:28:54	<--	kingarmadillo has quit (Ping timeout: 240 seconds)
