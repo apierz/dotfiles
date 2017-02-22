@@ -615,7 +615,7 @@ Helm is useful for searching through Emacs. I prefer Helm for searching through 
 
 * Org-mode
 
-=Org= is Emacs famous markup language with all kinds of useful features. You can even write your Emacs config in =Org=, which is what I have done here.
+=Org= is Emacs' famous markup language with all kinds of useful features. You can even write your Emacs config in =Org=, which is what I have done here.
 
 #+BEGIN_SRC emacs-lisp
   (use-package org)
@@ -688,12 +688,12 @@ I've given these keywords colors from my current theme.
 
    ;; For Dracula Theme
    (setq org-todo-keyword-faces
-     '(("ONDECK"  . (:foreground "#ffffaf" :weight bold))
-       ("TODO"    . (:foreground "#ddddff" :weight bold))
-       ("WAITING" . (:foreground "#c0c0c0" :weight bold))
-       ("CURRENT" . (:foreground "#aaffaa" :weight bold))
-       ("DONE"    . (:foreground "#ffb6ba" :weight bold))
-       ("SOMEDAY" . (:foreground "#006DAF" :weight bold))))
+     '(("ONDECK"  . (:foreground "#ebcb8b" :weight bold))
+       ("TODO"    . (:foreground "#b48ead" :weight bold))
+       ("WAITING" . (:foreground "#4c566a" :weight bold))
+       ("CURRENT" . (:foreground "#bf616a" :weight bold))
+       ("DONE"    . (:foreground "#a3be8c" :weight bold))
+       ("SOMEDAY" . (:foreground "#88c0d0" :weight bold))))
 
 #+END_SRC
 
@@ -947,6 +947,12 @@ A few other useful packages for coding.
     (setq web-mode-sql-indent-offset 2))
 #+END_SRC
 
+** Go
+
+#+BEGIN_SRC emacs-lisp
+  ;; (add-to-list 'load-path "~/gocode/src/github.com/dougm/goflymake")
+  ;; (require 'go-flymake)
+#+END_SRC
 * Powerline
 
 [[https://github.com/milkypostman/powerline][Powerline]] is a mode line replacement for Emacs, based on Vim powerline. I've spent far too much time tweaking my Powerline and it shows no sign of stopping.
@@ -1039,17 +1045,17 @@ Then I use them to define a theme in a function. It looks a little confusing at 
     ;;                                       nil))
     ;;   (air--powerline-default-theme))
 
-  (if (display-graphic-p) nil (use-package smart-mode-line-powerline-theme
-    :ensure t))
+  ;; (if (display-graphic-p) nil (use-package smart-mode-line-powerline-theme
+  ;;   :ensure t))
 
-  (if (display-graphic-p) nil (use-package smart-mode-line
-    :ensure t
-    :config
-    (require 'powerline)
-    (setq powerline-default-separator 'arrow-fade)
-    (setq sml/theme 'powerline)
+  ;; (if (display-graphic-p) nil (use-package smart-mode-line
+  ;;   :ensure t
+  ;;   :config
+  ;;   (require 'powerline)
+  ;;   (setq powerline-default-separator 'arrow-fade)
+  ;;   (setq sml/theme 'light)
 
-    (sml/setup)))
+    ;; (sml/setup)))
 
 
 #+END_SRC

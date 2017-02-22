@@ -178,7 +178,7 @@ set t_Co=256
 " let g:hybrid_use_Xresources = 1
 " let g:rehash256 = 1
 colorscheme nord
-set guifont=FiraMonoForPowerline-Regular:h15
+set guifont=Hack:h15
 set guioptions-=L
 
 " This comes first, because we have mappings that depend on leader
@@ -556,7 +556,7 @@ autocmd BufWritePre *.cpp,*.hpp pyf /usr/share/vim/addons/syntax/clang-format-3.
 
 " =================== vim-airline ========================
 
-let g:airline_theme='tomorrow'
+let g:airline_theme='nord'
 let g:airline_powerline_fonts = 1
 
 if !exists('g:airline_symbols')

@@ -333,7 +333,7 @@ centered_cursor = yes
 ## Note: You can specify third character which will
 ## be used to build 'empty' part of progressbar.
 ##
-progressbar_look = "●●●"
+progressbar_look = "●◐●"
 #
 #progressbar_boldness = yes
 #
@@ -498,7 +498,7 @@ empty_tag_color = green
 #
 #header_window_color = default
 header_window_color = cyan
- 
+
 #volume_color = default
 volume_color = yellow
 #
@@ -519,7 +519,7 @@ color2 = yellow
 #
 #main_window_highlight_color = yellow
 main_window_highlight_color = yellow
- 
+
 #progressbar_color = black
 progressbar_color = white
 #

@@ -472,12 +472,12 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 
  ;; For Dracula Theme
  (setq org-todo-keyword-faces
-   '(("ONDECK"  . (:foreground "#ffffaf" :weight bold))
-     ("TODO"    . (:foreground "#ddddff" :weight bold))
-     ("WAITING" . (:foreground "#c0c0c0" :weight bold))
-     ("CURRENT" . (:foreground "#aaffaa" :weight bold))
-     ("DONE"    . (:foreground "#ffb6ba" :weight bold))
-     ("SOMEDAY" . (:foreground "#006DAF" :weight bold))))
+   '(("ONDECK"  . (:foreground "#ebcb8b" :weight bold))
+     ("TODO"    . (:foreground "#b48ead" :weight bold))
+     ("WAITING" . (:foreground "#4c566a" :weight bold))
+     ("CURRENT" . (:foreground "#bf616a" :weight bold))
+     ("DONE"    . (:foreground "#a3be8c" :weight bold))
+     ("SOMEDAY" . (:foreground "#88c0d0" :weight bold))))
 
 (setq org-hide-leading-stars t)
 (use-package org-bullets
@@ -641,6 +641,9 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
   (setq web-mode-markup-indent-offset 2)
   (setq web-mode-sql-indent-offset 2))
 
+;; (add-to-list 'load-path "~/gocode/src/github.com/dougm/goflymake")
+;; (require 'go-flymake)
+
 (defface my-pl-segment1-active
   '((t (:foreground "#000000" :background "#E1B61A")))
   "Powerline first segment active face.")
@@ -721,17 +724,17 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
   ;;                                       nil))
   ;;   (air--powerline-default-theme))
 
-(if (display-graphic-p) nil (use-package smart-mode-line-powerline-theme
-  :ensure t))
+;; (if (display-graphic-p) nil (use-package smart-mode-line-powerline-theme
+;;   :ensure t))
 
-(if (display-graphic-p) nil (use-package smart-mode-line
-  :ensure t
-  :config
-  (require 'powerline)
-  (setq powerline-default-separator 'arrow-fade)
-  (setq sml/theme 'powerline)
+;; (if (display-graphic-p) nil (use-package smart-mode-line
+;;   :ensure t
+;;   :config
+;;   (require 'powerline)
+;;   (setq powerline-default-separator 'arrow-fade)
+;;   (setq sml/theme 'light)
 
-  (sml/setup)))
+  ;; (sml/setup)))
 
 (use-package powerline-evil
   :ensure t)

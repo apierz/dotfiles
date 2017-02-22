@@ -22,12 +22,12 @@ macro index A ":set confirmappend=no delete=yes\n<save-message>=archive\n<sync-m
 macro index,pager S "<tag-prefix><save-message>=archive<enter>\
   :set delete=yes<enter><sync-mailbox>:set delete=no<enter>"
 
- color status     white blue
- color indicator  white yellow
- color search     white blue 
- color markers    white yellow
- color hdrdefault white cyan
- color normal     black white
+ color status     black blue
+ color indicator  black yellow
+ color search     black blue 
+ color markers    black yellow
+ color hdrdefault black cyan
+ color normal     white black
 #SMTP
 
 set smtp_url="smtps://andy@andypierz.com@mail.hover.com:465/"
