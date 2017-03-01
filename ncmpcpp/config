@@ -284,7 +284,7 @@ now_playing_suffix = ♫$9$/b
 ##
 #
 #song_columns_list_format = (20)[]{a} (6f)[white]{NE} (50)[white]{t|f:Title} (20)[cyan]{b} (7f)[blue]{l}
-song_columns_list_format =  (30)[yellow]{ar} (30)[blue]{t|f:Title} (20)[cyan]{br} (7f)[white]{l}
+song_columns_list_format =  (30)[yellow]{ar} (30)[blue]{t|f:Title} (20)[cyan]{br} (7f)[green]{l}
 #
 ##### various settings #####
 #
@@ -333,7 +333,7 @@ centered_cursor = yes
 ## Note: You can specify third character which will
 ## be used to build 'empty' part of progressbar.
 ##
-progressbar_look = "●◐●"
+progressbar_look = "●●●"
 #
 #progressbar_boldness = yes
 #

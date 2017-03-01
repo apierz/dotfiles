@@ -17,6 +17,7 @@
 (add-to-list 'load-path "~/.emacs.d/plugins/evil-org-mode")
 (add-to-list 'load-path "/usr/local/Cellar/mu/HEAD-1f232b6/bin/mu")
 (add-to-list 'exec-path "/usr/local/bin")
+(add-to-list 'load-path "/Users/Andy/Documents/Programming_Projects/dracula-theme/emacs/")
 (add-to-list 'load-path "/Users/Andy/Documents/Programming_Projects/nord-theme/")
 
 (require 'use-package)
@@ -211,7 +212,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 
 ;; (load-theme 'leuven t)
 (set-face-attribute 'default nil
-                :family "Hack" :height 120 :weight 'light)
+                :family "SF Mono" :height 120 :weight 'regular)
 
 (use-package doom-neotree
   :config
@@ -223,8 +224,11 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 ;; (use-package gruvbox-theme)
 ;; (load-theme 'gruvbox t)
 
-(use-package nord-theme)
-(load-theme 'nord t)
+;; (use-package nord-theme)
+;; (load-theme 'nord t)
+
+(use-package spacemacs-themes)
+(load-theme 'spacemacs-light t)
 
 (prefer-coding-system       'utf-8)
 (set-default-coding-systems 'utf-8)
@@ -472,12 +476,12 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 
  ;; For Dracula Theme
  (setq org-todo-keyword-faces
-   '(("ONDECK"  . (:foreground "#ebcb8b" :weight bold))
-     ("TODO"    . (:foreground "#b48ead" :weight bold))
-     ("WAITING" . (:foreground "#4c566a" :weight bold))
-     ("CURRENT" . (:foreground "#bf616a" :weight bold))
-     ("DONE"    . (:foreground "#a3be8c" :weight bold))
-     ("SOMEDAY" . (:foreground "#88c0d0" :weight bold))))
+   '(("ONDECK"  . (:foreground "#b1951d" :weight bold))
+     ("TODO"    . (:foreground "#715ab1" :weight bold))
+     ("WAITING" . (:foreground "#d3d3e7" :weight bold))
+     ("CURRENT" . (:foreground "#da8b55" :weight bold))
+     ("DONE"    . (:foreground "#67b11d" :weight bold))
+     ("SOMEDAY" . (:foreground "#3a81c3" :weight bold))))
 
 (setq org-hide-leading-stars t)
 (use-package org-bullets
@@ -486,7 +490,8 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
   (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
 
 (setq org-ellipsis "…")
-(setq org-fontify-whole-heading-line t
+(setq 
+      ;; org-fontify-whole-heading-line t
       org-fontify-done-headline t
       org-fontify-quote-and-verse-blocks t)
 
@@ -960,11 +965,11 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 (defface doom-modeline-highlight '((t (:inherit mode-line)))
 "Face for bright segments of the mode-line.")
 
-(defface doom-modeline-panel '((t (:inherit mode-line :foreground "#3b4252" :background "#d8dee9")))
+(defface doom-modeline-panel '((t (:inherit mode-line :foreground "#fbf8ef" :background "#655370")))
 "Face for 'X out of Y' segments, such as `*anzu', `*evil-substitute' and
 `iedit'")
 
-(defface doom-modeline-info '((t (:inherit string)))
+(defface doom-modeline-info '((t (:foreground "#67b11d")))
 "Face for info-level messages in the modeline. Used by `*vc'.")
 
 (defface doom-modeline-warning `((t (:inherit warning)))
@@ -973,7 +978,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 (defface doom-modeline-urgent `((t (:inherit error)))
 "Face for errors in the modeline. Used by `*flycheck'")
 ;; Bar
-(defface doom-modeline-bar '((t (:inherit doom-modeline-panel)))
+(defface doom-modeline-bar '((t (:foreground "##655370" :background: "#655370" )))
 "The face used for the left-most bar on the mode-line of an active window.")
 
 (defface doom-modeline-eldoc-bar '((t (:inherit shadow :foreground nil)))
@@ -1511,3 +1516,8 @@ lines are selected, or the NxM dimensions of a block selection."
  '(git-gutter:modified-sign "▐") ;; two space
  '(git-gutter:added-sign "▐")    ;; multiple character is OK
  '(git-gutter:deleted-sign "▐"))
+
+(custom-set-faces
+ '(git-gutter:added    ((t (:foreground "#67b11d"))))
+ '(git-gutter:modified ((t (:foreground "#9380b2"))))
+ '(git-gutter:deleted  ((t (:foreground "#ba2f59")))))
