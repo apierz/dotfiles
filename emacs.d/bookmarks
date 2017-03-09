@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("nord-theme.el"
+(("feed-reader"
+ (filename . "~/Documents/Programming_Projects/feed-reader/")
+ (front-context-string)
+ (rear-context-string . "Mar  1 18:08 ..\n")
+ (position . 207))
+("nord-theme.el"
  (filename . "~/Documents/Programming_Projects/nord-theme/nord-theme.el")
  (front-context-string . "\n      (nord3  \"")
  (rear-context-string . "ord2  \"#434c5e\")")
