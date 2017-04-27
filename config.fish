@@ -1,12 +1,12 @@
-set normal (set_color normal)
-set magenta (set_color magenta)
-set yellow (set_color yellow)
-set green (set_color green)
-set red (set_color red)
-set gray (set_color -o black)
-
 set fish_pager_color_prefix	'green' '--bold' '--underline'
 set fish_pager_color_progress	'green' '--background=cyan'
+
+set fish_color_user 'white' '--background=blue'
+set fish_color_user_swap 'blue' '--background=black'
+set fish_color_host 'white' '--background=black'
+set fish_color_host_swap 'black' '--background=green'
+set fish_color_cwd  'white' '--background=green'
+set fish_color_cwd_swap  'green' '--background=white'
 
 # Fish git prompt
 set __fish_git_prompt_showdirtystate 'yes'
@@ -17,25 +17,9 @@ set __fish_git_prompt_color_branch yellow
 set __fish_git_prompt_color_upstream_ahead green
 set __fish_git_prompt_color_upstream_behind red
 
-# Status Chars
-set __fish_git_prompt_char_dirtystate '≈'
-set __fish_git_prompt_char_stagedstate '→'
-set __fish_git_prompt_char_untrackedfiles ''
-set __fish_git_prompt_char_stashstate '⏎'
-set __fish_git_prompt_char_upstream_ahead '+'
-set __fish_git_prompt_char_upstream_behind '-'
-
 set -g fish_color_git_clean green
 set -g fish_color_git_staged yellow
 set -g fish_color_git_dirty red
-
-set -g fish_color_git_added green
-set -g fish_color_git_modified blue
-set -g fish_color_git_renamed magenta
-set -g fish_color_git_copied magenta
-set -g fish_color_git_deleted red
-set -g fish_color_git_untracked yellow
-set -g fish_color_git_unmerged red
 
 set -g fish_prompt_git_status_added '✚'
 set -g fish_prompt_git_status_modified '*'
@@ -122,20 +106,28 @@ function fish_prompt --description 'Write out the prompt'
   # User
   set_color $fish_color_user
   echo -n (whoami)
+  echo -n ' '
+  set_color $fish_color_user_swap
+  echo -n ''
   set_color normal
 
-  echo -n '@'
-
-  # Host
   set_color $fish_color_host
+  echo -n ' @'
   echo -n (prompt_hostname)
+  echo -n ':'
+  echo -n ' '
+  set_color $fish_color_host_swap
+  echo -n ''
   set_color normal
 
-  echo -n ':'
 
   # PWD
   set_color $fish_color_cwd
+  echo -n ' '
   echo -n (prompt_pwd)
+  echo -n ' '
+  set_color $fish_color_cwd_swap
+  echo -n ''
   set_color normal
 
   __terlar_git_prompt
