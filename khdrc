@@ -110,12 +110,12 @@
 khd kwm on
 
 # set border color for different modes
-khd mode default color  0xffddd8eb
-khd mode switcher color 0xdddc752f
-khd mode mpd color      0xddb1951d
-khd mode swap color     0xdd3a81c3
-khd mode tree color     0xdd67b11d
-khd mode space color    0xdd715ab1
+khd mode default color  0xff268bd2
+khd mode switcher color 0xddcb4b16
+khd mode mpd color      0xdd2aa198
+khd mode swap color     0xdddeb542
+khd mode tree color     0xdd859900
+khd mode space color    0xdd6c71c4
 
 
 # toggle between modes

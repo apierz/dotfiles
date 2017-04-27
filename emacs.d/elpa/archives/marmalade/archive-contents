@@ -508,7 +508,7 @@
 	    [(2012 4 7)
 	     nil "replace a word with a synonym looked up in a web service." single])
  (theme-looper .
-	       [(20150723 1104)
+	       [(20170330 1829)
 		((cl-lib
 		  (0 5)))
 		"Loop thru the available color-themes" single])
@@ -1408,7 +1408,7 @@
 	   [(0 0 1)
 	    nil "get stuff from pinboard" single])
  (picpocket .
-	    [(29)
+	    [(30)
 	     ((emacs
 	       (24 4)))
 	     "Image viewer" single])
@@ -1878,7 +1878,7 @@
 	     [(0 8 8)
 	      nil "Managing multiple terminal buffers in Emacs." single])
  (multi-project .
-		[(0 0 21)
+		[(0 0 22)
 		 nil "Easily work with multiple projects." single])
  (multi-eshell .
 	       [(0 0 1)
@@ -2498,7 +2498,7 @@
 	      [(1 6 2)
 	       nil "Major mode for Inform 6 interactive fiction code" single])
  (inf-ruby .
-	   [(2 3 2)
+	   [(2 5 0)
 	    nil "Run a Ruby process in a buffer" single])
  (inf-groovy .
 	     [(2 0)
@@ -4025,7 +4025,7 @@
 		   (0 6 8)))
 		 "company-mode completion back-end for CMake" single])
  (common-header-mode-line .
-			  [(0 5)
+			  [(0 5 6)
 			   nil "Manage per-frame and per-window header- and mode- lines." tar])
  (command-t .
 	    [(0 0 1)

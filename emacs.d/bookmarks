@@ -18,7 +18,7 @@
  (rear-context-string)
  (position . 1))
 ("ap-compsci-theme.el"
- (filename . "~/Documents/Programming_Projects/AP_CompSci/ap-compsci-theme.el")
+ (filename . "~/Documents/Programming_Projects/ap-compsci-theme/ap-compsci-theme.el")
  (front-context-string . ";;; ap-compsci-t")
  (rear-context-string)
  (position . 1))
@@ -38,10 +38,10 @@
  (rear-context-string . "margin: auto;\n	}")
  (position . 461))
 ("nerdbar.widget"
- (filename . "~/Library/Application Support/Übersicht/widgets/nerdbar.widget/")
- (front-context-string . ".git\n  -rw-r--r-")
- (rear-context-string . "76 Sep 21 08:21 ")
- (position . 340))
+ (filename . "~/Documents/Programming_Projects/nerdbar.widget/")
+ (front-context-string . " scripts\n  -rw-r")
+ (rear-context-string . "714 Mar 20 15:25")
+ (position . 1075))
 ("Notes"
  (filename . "~/Dropbox/Notes/")
  (front-context-string . "* Packing list.t")

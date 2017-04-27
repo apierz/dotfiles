@@ -2,7 +2,7 @@
 
 alias emc='emacsclient -nw'
 alias ll='ls -lahG'
-alias mkdir='mkdir -p'
+alias mkdir='mkdir -pv'
 alias gitla='git log --graph --oneline --all --decorate'
 alias gs='git status'
 alias gb='git branch'
@@ -10,11 +10,15 @@ alias gp='git push origin master'
 alias rc='rails console'
 alias ks='tmux kill-session'
 alias dfs='cd ~/Documents/dotfiles'
-alias nb='cd ~/Library/Application\ Support/Übersicht/widgets/nerdbar.widget'
+alias nb='cd ~/Documents/Programming_Projects/nerdbar.widget/'
 alias pp='cd ~/Documents/Programming_Projects/'
+alias fipp='cd ~/Documents/Programming_Projects/feed-reader/'
+alias ..='cd ..'
 alias todo='emc ~/Dropbox/notes/todo.txt'
 alias notes='cd ~/Dropbox/notes'
 alias clock='tty-clock -c'
+alias psg="ps aux | grep -v grep | grep -i -e VSZ -e"
+alias fip='python3 -m core.fipp'
 
 source ~/.git-completion.bash
 source ~/.bash_git
