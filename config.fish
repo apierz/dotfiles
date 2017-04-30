@@ -8,6 +8,8 @@ set fish_color_host_swap 'black' '--background=green'
 set fish_color_cwd  'white' '--background=green'
 set fish_color_cwd_swap  'green' '--background=white'
 
+
+
 # Fish git prompt
 set __fish_git_prompt_showdirtystate 'yes'
 set __fish_git_prompt_showstashstate 'yes'
@@ -17,9 +19,9 @@ set __fish_git_prompt_color_branch yellow
 set __fish_git_prompt_color_upstream_ahead green
 set __fish_git_prompt_color_upstream_behind red
 
-set -g fish_color_git_clean green
-set -g fish_color_git_staged yellow
-set -g fish_color_git_dirty red
+set -g fish_color_git_clean 'white' '--background=green'
+set -g fish_color_git_staged 'white' '--background=yellow'
+set -g fish_color_git_dirty  'white' '--background=bryellow'
 
 set -g fish_prompt_git_status_added '✚'
 set -g fish_prompt_git_status_modified '*'
@@ -42,13 +44,13 @@ function __terlar_git_prompt --description 'Write out the git prompt'
         return
     end
 
-    echo -n '|'
+    echo -n ' '
 
     set -l index (git status --porcelain ^/dev/null|cut -c 1-2|sort -u)
 
     if test -z "$index"
         set_color $fish_color_git_clean
-        echo -n $branch'✓'
+        echo -n '▖ '$branch'✓ '
         set_color normal
         return
     end
@@ -85,7 +87,7 @@ function __terlar_git_prompt --description 'Write out the git prompt'
         set_color $fish_color_git_dirty
     end
 
-    echo -n $branch'≈'
+    echo -n '▖ '$branch'≈ '
 
     for i in $fish_prompt_git_status_order
         if contains $i in $gs
@@ -108,16 +110,15 @@ function fish_prompt --description 'Write out the prompt'
   echo -n (whoami)
   echo -n ' '
   set_color $fish_color_user_swap
-  echo -n ''
+  echo -n '▙'
   set_color normal
 
   set_color $fish_color_host
   echo -n ' @'
   echo -n (prompt_hostname)
-  echo -n ':'
   echo -n ' '
   set_color $fish_color_host_swap
-  echo -n ''
+  echo -n '▙'
   set_color normal
 
 
@@ -127,7 +128,7 @@ function fish_prompt --description 'Write out the prompt'
   echo -n (prompt_pwd)
   echo -n ' '
   set_color $fish_color_cwd_swap
-  echo -n ''
+  echo -n '▙'
   set_color normal
 
   __terlar_git_prompt

@@ -60,106 +60,85 @@
       kept-old-versions      5) ; and how many of the old
 
 (defun cycle-powerline-separators (&optional reverse)
-    "Set Powerline separators in turn.  If REVERSE is not nil, go backwards."
-   (interactive)
-   (let* ((fn (if reverse 'reverse 'identity))
-     (separators (funcall fn '("arrow" "arrow-fade" "slant"
-                               "chamfer" "wave" "brace" "roundstub" "zigzag"
-                               "butt" "rounded" "contour" "curve")))
-     (found nil))
-    (while (not found)
-      (progn (setq separators (append (cdr separators) (list (car separators))))
-      (when (string= (car separators) powerline-default-separator)
-        (progn (setq powerline-default-separator (cadr separators))
-           (setq found t)
-            (redraw-display)))))))
+  "Set Powerline separators in turn.  If REVERSE is not nil, go backwards."
+ (interactive)
+ (let* ((fn (if reverse 'reverse 'identity))
+   (separators (funcall fn '("arrow" "arrow-fade" "slant"
+                             "chamfer" "wave" "brace" "roundstub" "zigzag"
+                             "butt" "rounded" "contour" "curve")))
+   (found nil))
+  (while (not found)
+    (progn (setq separators (append (cdr separators) (list (car separators))))
+    (when (string= (car separators) powerline-default-separator)
+      (progn (setq powerline-default-separator (cadr separators))
+         (setq found t)
+          (redraw-display)))))))
 
 
-  (defun rename-this-file-and-buffer (new-name)
-    "Renames both current buffer and file it's visiting to NEW-NAME."
-    (interactive "sNew name: ")
-    (let ((name (buffer-name))
-          (filename (buffer-file-name)))
-      (unless filename
-        (error "Buffer '%s' is not visiting a file!" name))
-      (if (get-buffer new-name)
-          (message "A buffer named '%s' already exists!" new-name)
-        (progn
-          (when (file-exists-p filename)
-           (rename-file filename new-name 1))
-          (rename-buffer new-name)
-  (set-visited-file-name new-name)))))
+(defun rename-this-file-and-buffer (new-name)
+  "Renames both current buffer and file it's visiting to NEW-NAME."
+  (interactive "sNew name: ")
+  (let ((name (buffer-name))
+        (filename (buffer-file-name)))
+    (unless filename
+      (error "Buffer '%s' is not visiting a file!" name))
+    (if (get-buffer new-name)
+        (message "A buffer named '%s' already exists!" new-name)
+      (progn
+        (when (file-exists-p filename)
+         (rename-file filename new-name 1))
+        (rename-buffer new-name)
+(set-visited-file-name new-name)))))
 
-  (defun delete-this-file ()
-    "Delete the current file, and kill the buffer."
-    (interactive)
-    (or (buffer-file-name) (error "No file is currently being edited"))
-    (when (yes-or-no-p (format "Really delete '%s'?"
-                               (file-name-nondirectory buffer-file-name)))
-      (delete-file (buffer-file-name))
-  (kill-this-buffer)))
-
-
-  (require 'htmlfontify)
-  (defun fontify-and-browse ()
-    "Fontify the current buffer into HTML, write it to a temp file, and open it in a browser."
-    (interactive)
-    (let* ((fontified-buffer (hfy-fontify-buffer))
-           (temp-file-name (make-temp-file "ff" nil ".html")))
-      (with-current-buffer fontified-buffer
-        (write-region (point-min) (point-max) temp-file-name))
-      (browse-url (concat "file://" temp-file-name))))
+(defun delete-this-file ()
+  "Delete the current file, and kill the buffer."
+  (interactive)
+  (or (buffer-file-name) (error "No file is currently being edited"))
+  (when (yes-or-no-p (format "Really delete '%s'?"
+                             (file-name-nondirectory buffer-file-name)))
+    (delete-file (buffer-file-name))
+(kill-this-buffer)))
 
 
-  (defun show-first-occurrence ()
-    "Display the location of the word at point's first occurrence in the buffer."
-    (interactive)
-    (save-excursion
-      (let ((search-word (thing-at-point 'symbol t)))
-        (goto-char 1)
-        (re-search-forward search-word)
-        (message (concat
-                  "L" (number-to-string (line-number-at-pos)) ": "
-                  (replace-regexp-in-string
-                   "[ \t\n]*\\'"
-                   ""
-                   (thing-at-point 'line t)
-                   ))))))
+(require 'htmlfontify)
+(defun fontify-and-browse ()
+  "Fontify the current buffer into HTML, write it to a temp file, and open it in a browser."
+  (interactive)
+  (let* ((fontified-buffer (hfy-fontify-buffer))
+         (temp-file-name (make-temp-file "ff" nil ".html")))
+    (with-current-buffer fontified-buffer
+      (write-region (point-min) (point-max) temp-file-name))
+    (browse-url (concat "file://" temp-file-name))))
 
-  (defun switch-to-previous-buffer ()
-    "Switch to previously open buffer.
-  Repeated invocations toggle between the two most recently open buffers."
-    (interactive)
-    (switch-to-buffer (other-buffer (current-buffer) 1)))
 
-  (defun narrow-and-set-normal ()
-    "Narrow to the region and, if in a visual mode, set normal mode."
-    (interactive)
-    (narrow-to-region (region-beginning) (region-end))
-    (if (string= evil-state "visual")
-        (progn (evil-normal-state nil)
-  (evil-goto-first-line))))
+(defun show-first-occurrence ()
+  "Display the location of the word at point's first occurrence in the buffer."
+  (interactive)
+  (save-excursion
+    (let ((search-word (thing-at-point 'symbol t)))
+      (goto-char 1)
+      (re-search-forward search-word)
+      (message (concat
+                "L" (number-to-string (line-number-at-pos)) ": "
+                (replace-regexp-in-string
+                 "[ \t\n]*\\'"
+                 ""
+                 (thing-at-point 'line t)
+                 ))))))
 
-(require 'gtags)
+(defun switch-to-previous-buffer ()
+  "Switch to previously open buffer.
+Repeated invocations toggle between the two most recently open buffers."
+  (interactive)
+  (switch-to-buffer (other-buffer (current-buffer) 1)))
 
-  (defun gtags-reindex ()
-    "Kick off gtags reindexing."
-    (interactive)
-    (let* ((root-path (expand-file-name (vc-git-root (buffer-file-name))))
-           (gtags-filename (expand-file-name "GTAGS" root-path)))
-      (if (file-exists-p gtags-filename)
-          (gtags-index-update root-path)
-        (gtags-index-initial root-path))))
-
-  (defun gtags-index-initial (path)
-    "Generate initial GTAGS files for PATH."
-    (let ((bpr-process-directory path))
-      (bpr-spawn "gtags")))
-
-  (defun gtags-index-update (path)
-    "Update GTAGS in PATH."
-    (let ((bpr-process-directory path))
-      (bpr-spawn "global -uv")))
+(defun narrow-and-set-normal ()
+  "Narrow to the region and, if in a visual mode, set normal mode."
+  (interactive)
+  (narrow-to-region (region-beginning) (region-end))
+  (if (string= evil-state "visual")
+      (progn (evil-normal-state nil)
+(evil-goto-first-line))))
 
 (defmacro diminish-minor-mode (filename mode &optional abbrev)
   "Supply a FILENAME, to hide a minor MODE or replace with an ABBREV."
@@ -584,9 +563,6 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
         (format "%s -f TAGS -e -R %s" path-to-ctags (directory-file-name dir-name)))
 )
 
-(use-package gtags
-  :ensure t
-  :defer t)
 
 (require 'company)
 (add-hook 'after-init-hook 'global-company-mode)

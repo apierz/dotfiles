@@ -199,27 +199,6 @@ Small utility functions, mostly collected from others.
           (progn (evil-normal-state nil)
     (evil-goto-first-line))))
 
-  (require 'gtags)
-
-    (defun gtags-reindex ()
-      "Kick off gtags reindexing."
-      (interactive)
-      (let* ((root-path (expand-file-name (vc-git-root (buffer-file-name))))
-             (gtags-filename (expand-file-name "GTAGS" root-path)))
-        (if (file-exists-p gtags-filename)
-            (gtags-index-update root-path)
-          (gtags-index-initial root-path))))
-
-    (defun gtags-index-initial (path)
-      "Generate initial GTAGS files for PATH."
-      (let ((bpr-process-directory path))
-        (bpr-spawn "gtags")))
-
-    (defun gtags-index-update (path)
-      "Update GTAGS in PATH."
-      (let ((bpr-process-directory path))
-        (bpr-spawn "global -uv")))
-
 #+END_SRC
 
 ** From [[http://www.github.com/hrs][hrs]]
@@ -850,9 +829,6 @@ I like yasnippet for snippets, but I generally rely on auto-complete to speed up
           (format "%s -f TAGS -e -R %s" path-to-ctags (directory-file-name dir-name)))
   )
 
-  (use-package gtags
-    :ensure t
-    :defer t)
 
   (require 'company)
   (add-hook 'after-init-hook 'global-company-mode)
