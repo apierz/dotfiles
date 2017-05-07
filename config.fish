@@ -4,11 +4,9 @@ set fish_pager_color_progress	'green' '--background=cyan'
 set fish_color_user 'white' '--background=blue'
 set fish_color_user_swap 'blue' '--background=black'
 set fish_color_host 'white' '--background=black'
-set fish_color_host_swap 'black' '--background=green'
-set fish_color_cwd  'white' '--background=green'
-set fish_color_cwd_swap  'green' '--background=white'
-
-
+set fish_color_host_swap 'black' '--background=yellow'
+set fish_color_cwd  'white' '--background=yellow'
+set fish_color_cwd_swap  'yellow' '--background=white'
 
 # Fish git prompt
 set __fish_git_prompt_showdirtystate 'yes'
@@ -87,7 +85,7 @@ function __terlar_git_prompt --description 'Write out the git prompt'
         set_color $fish_color_git_dirty
     end
 
-    echo -n '▖ '$branch'≈ '
+    echo -n '▖ '$branch
 
     for i in $fish_prompt_git_status_order
         if contains $i in $gs

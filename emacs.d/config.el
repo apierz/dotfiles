@@ -602,6 +602,15 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 (setq python-shell-interpreter "python3")
 (setq python-shell-native-complete nil)
 
+(require 'package)
+(add-to-list 'package-archives
+             '("elpy" . "https://jorgenschaefer.github.io/packages/"))
+(package-refresh-contents)
+
+(package-initialize)
+;; will enable Elpy in all future Python buffers
+(elpy-enable)
+
 (add-hook 'python-mode-hook
  (lambda ()
    (flycheck-mode)
