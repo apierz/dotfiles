@@ -151,91 +151,137 @@ Repeated invocations toggle between the two most recently open buffers."
              (lambda () (setq mode-name ,abbrev))))
 
 (defun search-my-notes (searchforthis)
-  "Search for SEARCHFORTHIS."
-  (interactive "sSearch Query: ")
-  (rgrep searchforthis "*.txt"  "~/Dropbox/Notes"))
+      "Search for SEARCHFORTHIS."
+      (interactive "sSearch Query: ")
+      (rgrep searchforthis "*.txt"  "~/Dropbox/Notes"))
 
-(eval-after-load "grep"
-  '(grep-compute-defaults))
+    (eval-after-load "grep"
+      '(grep-compute-defaults))
 
-(defun minibuffer-keyboard-quit ()
-  "Abort recursive edit.
-In Delete Selection mode, if the mark is active, just deactivate it;
-then it takes a second \\[keyboard-quit] to abort the minibuffer."
+    (defun minibuffer-keyboard-quit ()
+      "Abort recursive edit.
+    In Delete Selection mode, if the mark is active, just deactivate it;
+    then it takes a second \\[keyboard-quit] to abort the minibuffer."
+      (interactive)
+      (if (and delete-selection-mode transient-mark-mode mark-active)
+          (setq deactivate-mark  t)
+        (when (get-buffer "*Completions*") (delete-windows-on "*Completions*"))
+        (abort-recursive-edit)))
+
+    (defun andy-new-empty-buffer ()
+      "Open a new empty buffer."
+      (interactive)
+      (let ((ξbuf (generate-new-buffer "untitled")))
+        (switch-to-buffer ξbuf)
+        (funcall (and initial-major-mode))
+        (setq buffer-offer-save t)))
+
+(defun region-to-hexcol ()
   (interactive)
-  (if (and delete-selection-mode transient-mark-mode mark-active)
-      (setq deactivate-mark  t)
-    (when (get-buffer "*Completions*") (delete-windows-on "*Completions*"))
-    (abort-recursive-edit)))
+  (let
+      ((start (region-beginning))
+       (end (region-end))
+       (text))
 
-(defun andy-new-empty-buffer ()
-  "Open a new empty buffer."
+    (setq text (buffer-substring-no-properties start end))
+
+    (when (string-match "^[[:digit:]]+$" text)
+      (setq text (format "%02x" (string-to-number text)))
+      (delete-region start end)
+      (insert text))))
+
+(defun rgb-to-hex ()
   (interactive)
-  (let ((ξbuf (generate-new-buffer "untitled")))
-    (switch-to-buffer ξbuf)
-    (funcall (and initial-major-mode))
-    (setq buffer-offer-save t)))
+
+  (let
+      ((start (region-beginning))
+       (end (region-end)))
+
+    (goto-char start)
+    (set-mark start)
+    (skip-chars-forward "0-9")
+    (region-to-hexcol)
+
+    (skip-chars-forward ", ")
+    (set-mark (point))
+    (skip-chars-forward "0-9")
+    (region-to-hexcol)
+
+    (skip-chars-forward ", ")
+    (set-mark (point))
+    (skip-chars-forward "0-9")
+    (region-to-hexcol)
+
+    (setq end (point))
+    (goto-char start)
+
+    (save-restriction
+      (narrow-to-region start end)
+      (while (re-search-forward "[, ]" nil t) (replace-match "" nil t)))))
 
 (use-package doom-themes
+      :config
+      ;;; OPTIONAL
+      ;; brighter source buffers
+      (add-hook 'find-file-hook 'doom-buffer-mode)
+      ;; brighter minibuffer when active
+      (add-hook 'minibuffer-setup-hook 'doom-buffer-mode)
+      (global-hl-line-mode)
+      ;; (setq doom-enable-brighter-comments t)
+      ;; (setq doom-enable-bold t)
+      ;; (setq doom-enable-italic t)
+      ;; (load-theme 'doom-one t)
+   )
+
+  (set-face-attribute 'default nil
+                  :family "SF Mono" :height 120 :weight 'regular)
+
+  (use-package doom-neotree
     :config
-    ;;; OPTIONAL
-    ;; brighter source buffers
-    (add-hook 'find-file-hook 'doom-buffer-mode)
-    ;; brighter minibuffer when active
-    (add-hook 'minibuffer-setup-hook 'doom-buffer-mode)
-    (global-hl-line-mode)
-    ;; (setq doom-enable-brighter-comments t)
-    ;; (setq doom-enable-bold t)
-    ;; (setq doom-enable-italic t)
-    ;; (load-theme 'doom-one t)
- )
+    (setq doom-neotree-enable-file-icons 'simple)
+    (setq doom-neotree-enable-dir-icons t)
+    (setq doom-neotree-enable-dir-chevrons t)
+    (setq doom-neotree-line-spacing 2))
 
-(set-face-attribute 'default nil
-                :family "SF Mono" :height 120 :weight 'regular)
+(use-package avk-emacs-themes)
+(load-theme 'avk-darkblue-yellow)
 
-(use-package doom-neotree
-  :config
-  (setq doom-neotree-enable-file-icons 'simple)
-  (setq doom-neotree-enable-dir-icons t)
-  (setq doom-neotree-enable-dir-chevrons t)
-  (setq doom-neotree-line-spacing 2))
+  ;; (use-package ap-compsci-themes
+    ;; :load-path "/Users/Andy/Documents/Programming_Projects/ap-compsci-theme/ap-compsci-theme.el")
 
-;; (use-package ap-compsci-themes
-  ;; :load-path "/Users/Andy/Documents/Programming_Projects/ap-compsci-theme/ap-compsci-theme.el")
+  ;; (use-package spacemacs-themes)
+  ;; (load-theme 'spacemacs-dark t)
 
-(use-package spacemacs-themes)
-(load-theme 'spacemacs-light t)
+  ;; (use-package solarized-theme
+  ;;     :config
+  ;;     ;; make the fringe stand out from the background
+  ;;     (setq solarized-distinct-fringe-background t)
 
-;; (use-package solarized-theme
-;;     :config
-;;     ;; make the fringe stand out from the background
-;;     (setq solarized-distinct-fringe-background t)
+  ;;     ;; Don't change the font for some headings and titles
+  ;;     (setq solarized-use-variable-pitch nil)
 
-;;     ;; Don't change the font for some headings and titles
-;;     (setq solarized-use-variable-pitch nil)
+  ;;     ;; Use less bolding
+  ;;     (setq solarized-use-less-bold t)
 
-;;     ;; Use less bolding
-;;     (setq solarized-use-less-bold t)
+  ;;     ;; Use more italics
+  ;;     (setq solarized-use-more-italic t)
 
-;;     ;; Use more italics
-;;     (setq solarized-use-more-italic t)
+  ;;     ;; Use less colors for indicators such as git:gutter, flycheck and similar
+  ;;     (setq solarized-emphasize-indicators nil)
 
-;;     ;; Use less colors for indicators such as git:gutter, flycheck and similar
-;;     (setq solarized-emphasize-indicators nil)
+  ;;     ;; make the modeline high contrast
+  ;;     (setq solarized-high-contrast-mode-line t)
 
-;;     ;; make the modeline high contrast
-;;     (setq solarized-high-contrast-mode-line t)
+  ;;     ;; Don't change size of org-mode headlines (but keep other size-changes)
+  ;;     (setq solarized-scale-org-headlines nil)
 
-;;     ;; Don't change size of org-mode headlines (but keep other size-changes)
-;;     (setq solarized-scale-org-headlines nil)
-
-;;     ;; Avoid all font-size changes
-;;     (setq solarized-height-minus-1 1.0)
-;;     (setq solarized-height-plus-1 1.0)
-;;     (setq solarized-height-plus-2 1.0)
-;;     (setq solarized-height-plus-3 1.0)
-;;     (setq solarized-height-plus-4 1.0))
-;; (load-theme 'solarized-light t)
+  ;;     ;; Avoid all font-size changes
+  ;;     (setq solarized-height-minus-1 1.0)
+  ;;     (setq solarized-height-plus-1 1.0)
+  ;;     (setq solarized-height-plus-2 1.0)
+  ;;     (setq solarized-height-plus-3 1.0)
+  ;;     (setq solarized-height-plus-4 1.0))
+  ;; (load-theme 'solarized-light t)
 
 (prefer-coding-system       'utf-8)
 (set-default-coding-systems 'utf-8)
@@ -486,12 +532,12 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 
  ;; For Dracula Theme
  (setq org-todo-keyword-faces
-   '(("ONDECK"  . (:foreground "#b58900" :weight bold))
-     ("TODO"    . (:foreground "#6c71c4" :weight bold))
-     ("WAITING" . (:foreground "#839496" :weight bold))
-     ("CURRENT" . (:foreground "#cb4b16" :weight bold))
-     ("DONE"    . (:foreground "#859900" :weight bold))
-     ("SOMEDAY" . (:foreground "#268bd2" :weight bold))))
+   '(("ONDECK"  . (:foreground "yellow2" :weight bold))
+     ("TODO"    . (:foreground "DarkSlateBlue" :weight bold))
+     ("WAITING" . (:foreground "Honeydew4" :weight bold))
+     ("CURRENT" . (:foreground "orange red" :weight bold))
+     ("DONE"    . (:foreground "forest green" :weight bold))
+     ("SOMEDAY" . (:foreground "#479dcc" :weight bold))))
 
 (setq org-hide-leading-stars t)
 (use-package org-bullets
@@ -981,11 +1027,11 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 (defface doom-modeline-highlight '((t (:inherit mode-line)))
 "Face for bright segments of the mode-line.")
 
-(defface doom-modeline-panel '((t (:inherit mode-line :foreground "#b2b2b2" :background "#292b2e")))
+(defface doom-modeline-panel '((t (:inherit mode-line :foreground "wheat3" :background "#191935")))
 "Face for 'X out of Y' segments, such as `*anzu', `*evil-substitute' and
 `iedit'")
 
-(defface doom-modeline-info '((t (:foreground "#67b11d")))
+(defface doom-modeline-info '((t (:foreground "green")))
 "Face for info-level messages in the modeline. Used by `*vc'.")
 
 (defface doom-modeline-warning `((t (:inherit warning)))
@@ -994,7 +1040,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 (defface doom-modeline-urgent `((t (:inherit error)))
 "Face for errors in the modeline. Used by `*flycheck'")
 ;; Bar
-(defface doom-modeline-bar '((t (:foreground "#b2b2b2" :background: "#292b2e" )))
+(defface doom-modeline-bar '((t (:inherit doom-modeline-panel )))
 "The face used for the left-most bar on the mode-line of an active window.")
 
 (defface doom-modeline-eldoc-bar '((t (:inherit shadow :foreground nil)))
