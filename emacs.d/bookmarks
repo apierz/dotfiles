@@ -2,8 +2,18 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("feed-reader"
- (filename . "~/Documents/Programming_Projects/feed-reader/")
+(("civic-theme.el"
+ (filename . "~/Documents/Programming_Projects/nord-theme/civic-theme.el")
+ (front-context-string . ";;; civic-theme.")
+ (rear-context-string)
+ (position . 1))
+("elpa"
+ (filename . "~/.emacs.d/elpa/")
+ (front-context-string . "anzu-20161017.90")
+ (rear-context-string . "04 Nov  1  2016 ")
+ (position . 589))
+("feed-reader"
+ (filename . "~/Documents/Programming_Projects/fipp/")
  (front-context-string)
  (rear-context-string . "Mar  1 18:08 ..\n")
  (position . 207))
@@ -23,7 +33,7 @@
  (rear-context-string)
  (position . 1))
 ("leuven-theme.el"
- (filename . "~/Documents/dotfiles/emacs.d/elpa/leuven-theme-20170129.1131/leuven-theme.el")
+ (filename . "~/Documents/dotfiles/emacs.d/elpa/leuven-theme-20170508.1319/")
  (front-context-string . ";;; leuven-theme")
  (rear-context-string)
  (position . 1))

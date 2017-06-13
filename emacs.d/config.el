@@ -220,68 +220,34 @@ Repeated invocations toggle between the two most recently open buffers."
       (while (re-search-forward "[, ]" nil t) (replace-match "" nil t)))))
 
 (use-package doom-themes
-      :config
-      ;;; OPTIONAL
-      ;; brighter source buffers
-      (add-hook 'find-file-hook 'doom-buffer-mode)
-      ;; brighter minibuffer when active
-      (add-hook 'minibuffer-setup-hook 'doom-buffer-mode)
-      (global-hl-line-mode)
-      ;; (setq doom-enable-brighter-comments t)
-      ;; (setq doom-enable-bold t)
-      ;; (setq doom-enable-italic t)
-      ;; (load-theme 'doom-one t)
-   )
-
-  (set-face-attribute 'default nil
-                  :family "SF Mono" :height 120 :weight 'regular)
-
-  (use-package doom-neotree
     :config
-    (setq doom-neotree-enable-file-icons 'simple)
-    (setq doom-neotree-enable-dir-icons t)
-    (setq doom-neotree-enable-dir-chevrons t)
-    (setq doom-neotree-line-spacing 2))
+    ;;; OPTIONAL
+    ;; brighter source buffers
+    (add-hook 'find-file-hook 'doom-buffer-mode)
+    ;; brighter minibuffer when active
+    (add-hook 'minibuffer-setup-hook 'doom-buffer-mode)
+    (global-hl-line-mode)
+    ;; (setq doom-enable-brighter-comments t)
+    ;; (setq doom-enable-bold t)
+    ;; (setq doom-enable-italic t)
+    ;; (load-theme 'doom-one t)
+ )
 
-(use-package avk-emacs-themes)
-(load-theme 'avk-darkblue-yellow)
+(set-face-attribute 'default nil
+                :family "SF Mono" :height 130 :weight 'regular)
 
-  ;; (use-package ap-compsci-themes
-    ;; :load-path "/Users/Andy/Documents/Programming_Projects/ap-compsci-theme/ap-compsci-theme.el")
+(use-package doom-neotree
+  :config
+  (setq doom-neotree-enable-file-icons 'simple)
+  (setq doom-neotree-enable-dir-icons t)
+  (setq doom-neotree-enable-dir-chevrons t)
+  (setq doom-neotree-line-spacing 2))
 
-  ;; (use-package spacemacs-themes)
-  ;; (load-theme 'spacemacs-dark t)
+;; (use-package spacemacs-theme)
+;; (load-theme 'spacemacs-light t)
 
-  ;; (use-package solarized-theme
-  ;;     :config
-  ;;     ;; make the fringe stand out from the background
-  ;;     (setq solarized-distinct-fringe-background t)
-
-  ;;     ;; Don't change the font for some headings and titles
-  ;;     (setq solarized-use-variable-pitch nil)
-
-  ;;     ;; Use less bolding
-  ;;     (setq solarized-use-less-bold t)
-
-  ;;     ;; Use more italics
-  ;;     (setq solarized-use-more-italic t)
-
-  ;;     ;; Use less colors for indicators such as git:gutter, flycheck and similar
-  ;;     (setq solarized-emphasize-indicators nil)
-
-  ;;     ;; make the modeline high contrast
-  ;;     (setq solarized-high-contrast-mode-line t)
-
-  ;;     ;; Don't change size of org-mode headlines (but keep other size-changes)
-  ;;     (setq solarized-scale-org-headlines nil)
-
-  ;;     ;; Avoid all font-size changes
-  ;;     (setq solarized-height-minus-1 1.0)
-  ;;     (setq solarized-height-plus-1 1.0)
-  ;;     (setq solarized-height-plus-2 1.0)
-  ;;     (setq solarized-height-plus-3 1.0)
-  ;;     (setq solarized-height-plus-4 1.0))
-  ;; (load-theme 'solarized-light t)
+(use-package civic-theme)
+(load-theme 'civic t)
 
 (prefer-coding-system       'utf-8)
 (set-default-coding-systems 'utf-8)
@@ -532,12 +498,12 @@ Repeated invocations toggle between the two most recently open buffers."
 
  ;; For Dracula Theme
  (setq org-todo-keyword-faces
-   '(("ONDECK"  . (:foreground "yellow2" :weight bold))
-     ("TODO"    . (:foreground "DarkSlateBlue" :weight bold))
-     ("WAITING" . (:foreground "Honeydew4" :weight bold))
-     ("CURRENT" . (:foreground "orange red" :weight bold))
-     ("DONE"    . (:foreground "forest green" :weight bold))
-     ("SOMEDAY" . (:foreground "#479dcc" :weight bold))))
+   '(("ONDECK"  . (:foreground "#c77a4b" :weight bold))
+     ("TODO"    . (:foreground "#746db0" :weight bold))
+     ("WAITING" . (:foreground "#7f7f7f" :weight bold))
+     ("CURRENT" . (:foreground "#d3232e" :weight bold))
+     ("DONE"    . (:foreground "#32cf72" :weight bold))
+     ("SOMEDAY" . (:foreground "#5124e3" :weight bold))))
 
 (setq org-hide-leading-stars t)
 (use-package org-bullets
@@ -1027,11 +993,11 @@ Repeated invocations toggle between the two most recently open buffers."
 (defface doom-modeline-highlight '((t (:inherit mode-line)))
 "Face for bright segments of the mode-line.")
 
-(defface doom-modeline-panel '((t (:inherit mode-line :foreground "wheat3" :background "#191935")))
+(defface doom-modeline-panel '((t (:inherit mode-line :foreground "#35404e" :background "#e1e2e7")))
 "Face for 'X out of Y' segments, such as `*anzu', `*evil-substitute' and
 `iedit'")
 
-(defface doom-modeline-info '((t (:foreground "green")))
+(defface doom-modeline-info '((t (:foreground "#32cf72")))
 "Face for info-level messages in the modeline. Used by `*vc'.")
 
 (defface doom-modeline-warning `((t (:inherit warning)))
@@ -1580,6 +1546,6 @@ lines are selected, or the NxM dimensions of a block selection."
  '(git-gutter:deleted-sign "▐"))
 
 (custom-set-faces
- '(git-gutter:added    ((t (:foreground "#67b11d"))))
- '(git-gutter:modified ((t (:foreground "#8700af"))))
- '(git-gutter:deleted  ((t (:foreground "#ba2f59")))))
+ '(git-gutter:added    ((t (:foreground "#45bb3e"))))
+ '(git-gutter:modified ((t (:foreground "#5124e3"))))
+ '(git-gutter:deleted  ((t (:foreground "#d3232e")))))

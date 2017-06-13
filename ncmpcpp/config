@@ -34,7 +34,7 @@ mpd_port = "6600"
 #
 ## Needed for tag editor and file operations to work.
 ##
-mpd_music_dir = "/Users/Andy/Music/my_music"
+mpd_music_dir = "/Users/Andy/Music/music"
 #
 mpd_crossfade_time = 0
 #
@@ -284,7 +284,7 @@ now_playing_suffix = ♫$9$/b
 ##
 #
 #song_columns_list_format = (20)[]{a} (6f)[white]{NE} (50)[white]{t|f:Title} (20)[cyan]{b} (7f)[blue]{l}
-song_columns_list_format =  (30)[green]{ar} (30)[blue]{t|f:Title} (20)[red]{br} (7f)[cyan]{l}
+song_columns_list_format =  (30)[green]{ar} (30)[blue]{t|f:Title} (20)[yellow]{br} (7f)[cyan]{l}
 #
 ##### various settings #####
 #

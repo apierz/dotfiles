@@ -12,21 +12,35 @@ mailboxes +personal/INBOX
 mailboxes +personal/archive
 mailboxes = "+personal/Sent Items"
 
+# set up the sidebar, default visible
+# set sidebar_width=28
+# set sidebar_visible=yes
+
+bind index,pager \CP sidebar-prev
+bind index,pager \CN sidebar-next
+bind index,pager \CO sidebar-open
+
 bind pager j next-line
 bind pager k previous-line
 
 
 macro index c "<change-folder>?<toggle-mailboxes>" "open a different folder"
-macro pager c "<change-folder>?<toggle-mailboxes>" "open a different folder"
-macro index A ":set confirmappend=no delete=yes\n<save-message>=archive\n<sync-mailbox>:set confirmappend=yes delete=ask-yes\n"
-macro index,pager S "<tag-prefix><save-message>=archive<enter>\
-  :set delete=yes<enter><sync-mailbox>:set delete=no<enter>"
 
- color status     black magenta
- color indicator  black cyan
- color search     black magenta
- color markers    black yellow
- color hdrdefault black cyan
+# Open Archive Folder
+macro index,pager A "<change-folder>=/personal/Archive<enter>" "Archive Message"
+
+# Open INBOX
+macro index,pager P "<change-folder>=/personal/INBOX<enter>" "Archive Message"
+
+# Archive Message
+macro index,pager a ":set confirmappend=no delete=yes\n<save-message>=/personal/archive\n<sync-mailbox>:set confirmappend=yes delete=ask-yes\n"
+
+
+ color status     white magenta
+ color indicator  white cyan
+ color search     white magenta
+ color markers    white yellow
+ color hdrdefault white cyan
  color normal     white black
 #SMTP
 
@@ -35,9 +49,8 @@ set from="andy@andypierz.com"
 set realname="Andy Pierz"
 set ssl_starttls = yes
 
+set sort = reverse-date-received
+
 # view html automatically
 auto_view text/html
 alternative_order text/plain text/enriched text/html     # save html for last
-
-
-alias account-security-noreply Microsoft account teami <account-security-noreply@account.microsoft.comi>
