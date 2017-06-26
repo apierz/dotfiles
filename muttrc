@@ -10,7 +10,7 @@ set editor="emacsclient"
 
 mailboxes +personal/INBOX
 mailboxes +personal/archive
-mailboxes = "+personal/Sent Items"
+mailboxes ="+personal/Sent Items"
 
 # set up the sidebar, default visible
 # set sidebar_width=28
