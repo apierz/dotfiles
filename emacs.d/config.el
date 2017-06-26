@@ -227,10 +227,10 @@ Repeated invocations toggle between the two most recently open buffers."
     ;; brighter minibuffer when active
     (add-hook 'minibuffer-setup-hook 'doom-buffer-mode)
     (global-hl-line-mode)
-    ;; (setq doom-enable-brighter-comments t)
-    ;; (setq doom-enable-bold t)
-    ;; (setq doom-enable-italic t)
-    ;; (load-theme 'doom-one t)
+    (setq doom-enable-brighter-comments t)
+    (setq doom-enable-bold t)
+    (setq doom-enable-italic t)
+    (load-theme 'doom-one t)
  )
 
 (set-face-attribute 'default nil
@@ -246,8 +246,8 @@ Repeated invocations toggle between the two most recently open buffers."
 ;; (use-package spacemacs-theme)
 ;; (load-theme 'spacemacs-light t)
 
-(use-package civic-theme)
-(load-theme 'civic t)
+;; (use-package civic-theme)
+;; (load-theme 'civic t)
 
 (prefer-coding-system       'utf-8)
 (set-default-coding-systems 'utf-8)

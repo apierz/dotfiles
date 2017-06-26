@@ -307,10 +307,10 @@ I used to use Leuven for my color theme and Hack as my font, but I change both a
       ;; brighter minibuffer when active
       (add-hook 'minibuffer-setup-hook 'doom-buffer-mode)
       (global-hl-line-mode)
-      ;; (setq doom-enable-brighter-comments t)
-      ;; (setq doom-enable-bold t)
-      ;; (setq doom-enable-italic t)
-      ;; (load-theme 'doom-one t)
+      (setq doom-enable-brighter-comments t)
+      (setq doom-enable-bold t)
+      (setq doom-enable-italic t)
+      (load-theme 'doom-one t)
    )
 
   (set-face-attribute 'default nil
@@ -326,8 +326,8 @@ I used to use Leuven for my color theme and Hack as my font, but I change both a
   ;; (use-package spacemacs-theme)
   ;; (load-theme 'spacemacs-light t)
 
-  (use-package civic-theme)
-  (load-theme 'civic t)
+  ;; (use-package civic-theme)
+  ;; (load-theme 'civic t)
 
 #+END_SRC
 
@@ -1371,11 +1371,11 @@ I think my Powerline has gotten too busy and over complicated. I've been inspire
   (defface doom-modeline-highlight '((t (:inherit mode-line)))
   "Face for bright segments of the mode-line.")
 
-  (defface doom-modeline-panel '((t (:inherit mode-line :foreground "#35404e" :background "#e1e2e7")))
+  (defface doom-modeline-panel '((t (:inherit mode-line :foreground "#51afef" :background "#bbc2cf")))
   "Face for 'X out of Y' segments, such as `*anzu', `*evil-substitute' and
   `iedit'")
 
-  (defface doom-modeline-info '((t (:foreground "#32cf72")))
+  (defface doom-modeline-info '((t (:foreground "#98be65")))
   "Face for info-level messages in the modeline. Used by `*vc'.")
 
   (defface doom-modeline-warning `((t (:inherit warning)))
@@ -1929,8 +1929,8 @@ I think my Powerline has gotten too busy and over complicated. I've been inspire
    '(git-gutter:deleted-sign "▐"))
 
   (custom-set-faces
-   '(git-gutter:added    ((t (:foreground "#45bb3e"))))
-   '(git-gutter:modified ((t (:foreground "#5124e3"))))
-   '(git-gutter:deleted  ((t (:foreground "#d3232e")))))
+   '(git-gutter:added    ((t (:foreground "#98be65"))))
+   '(git-gutter:modified ((t (:foreground "#a9a1e1"))))
+   '(git-gutter:deleted  ((t (:foreground "#ff6c6b")))))
 #+END_SRC
   

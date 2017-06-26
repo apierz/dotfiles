@@ -3563,6 +3563,13 @@
 		((sound-wav
 		  (20160725 724)))
 		"Sound effects for Emacs" single])
+ (emacs-home .
+	     [(20170624 1315)
+	      ((emacs
+		(24))
+	       (cl-lib
+		(0 5)))
+	      "A home-screen for Emacs" single])
  (emacs-droid .
 	      [(0 0 0)
 	       nil "Android application development tools for Emacs" single])
