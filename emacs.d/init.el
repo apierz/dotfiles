@@ -46,7 +46,7 @@
     ((sequence "TODO(t)" "ONDECK(o)" "WAITING(w)" "SOMEDAY(s)" "CURRENT(c)" "|" "DONE(d)"))))
  '(package-selected-packages
    (quote
-    (base16-theme avk-emacs-themes hexrgb ipython elpy solarized-theme rebecca-theme color-theme-solarized color-theme-sanityinc-solarized nord-theme package-build smart-mode-line-powerline-theme smart-mode-line sublime-themes ggtags helm-gtags company-dict company-emacs-eclim company company-go company-web helm-company go-mode git-gutter leuven-theme tao-theme flatland-theme spacegray-theme spacemacs-theme peacock-theme moe-theme material-theme gruvbox-theme monokai-theme fm anaphora python-mode eldoc-eval doom-themes hl-line+ pydoc all-the-icons neotree evil-multiedit evil-anzu iedit anzu fountain-mode rainbow-mode coffee-mode yasnippet yaml-mode web-mode use-package unicode-fonts unbound smooth-scrolling robe rainbow-delimiters powerline-evil org-grep org-bullets markdown-mode linum-relative linum-off key-chord helm-projectile flymake-ruby flycheck fill-column-indicator evil-visual-mark-mode evil-surround evil-snipe evil-mu4e evil-magit evil-leader evil-commentary engine-mode dumb-jump color-theme-sanityinc-tomorrow auto-complete)))
+    (zenburn-theme base16-theme avk-emacs-themes hexrgb ipython elpy solarized-theme rebecca-theme color-theme-solarized color-theme-sanityinc-solarized nord-theme package-build smart-mode-line-powerline-theme smart-mode-line sublime-themes ggtags helm-gtags company-dict company-emacs-eclim company company-go company-web helm-company go-mode git-gutter leuven-theme tao-theme flatland-theme spacegray-theme spacemacs-theme peacock-theme moe-theme material-theme gruvbox-theme monokai-theme fm anaphora python-mode eldoc-eval doom-themes hl-line+ pydoc all-the-icons neotree evil-multiedit evil-anzu iedit anzu fountain-mode rainbow-mode coffee-mode yasnippet yaml-mode web-mode use-package unicode-fonts unbound smooth-scrolling robe rainbow-delimiters powerline-evil org-grep org-bullets markdown-mode linum-relative linum-off key-chord helm-projectile flymake-ruby flycheck fill-column-indicator evil-visual-mark-mode evil-surround evil-snipe evil-mu4e evil-magit evil-leader evil-commentary engine-mode dumb-jump color-theme-sanityinc-tomorrow auto-complete)))
  '(python-shell-completion-native-disabled-interpreters (quote ("pypy" "python3")))
  '(safe-local-variable-values
    (quote
@@ -59,4 +59,6 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(git-gutter:added ((t (:foreground "#98be65"))))
+ '(git-gutter:deleted ((t (:foreground "#ff6c6b"))))
+ '(git-gutter:modified ((t (:foreground "#a9a1e1")))))

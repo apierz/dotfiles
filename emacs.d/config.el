@@ -220,21 +220,21 @@ Repeated invocations toggle between the two most recently open buffers."
       (while (re-search-forward "[, ]" nil t) (replace-match "" nil t)))))
 
 (use-package doom-themes
-    :config
-    ;;; OPTIONAL
-    ;; brighter source buffers
-    (add-hook 'find-file-hook 'doom-buffer-mode)
-    ;; brighter minibuffer when active
-    (add-hook 'minibuffer-setup-hook 'doom-buffer-mode)
-    (global-hl-line-mode)
-    (setq doom-enable-brighter-comments t)
-    (setq doom-enable-bold t)
-    (setq doom-enable-italic t)
-    (load-theme 'doom-one t)
- )
+     :config
+;;     ;;; OPTIONAL
+;;     ;; brighter source buffers
+;;     (add-hook 'find-file-hook 'doom-buffer-mode)
+;;     ;; brighter minibuffer when active
+;;     (add-hook 'minibuffer-setup-hook 'doom-buffer-mode)
+       (global-hl-line-mode)
+;;     (setq doom-enable-brighter-comments t)
+;;     (setq doom-enable-bold t)
+;;     (setq doom-enable-italic t)
+;;     (load-theme 'doom-one t)
+  )
 
 (set-face-attribute 'default nil
-                :family "SF Mono" :height 130 :weight 'regular)
+                :family "Operator Mono" :height 130 :weight 'light)
 
 (use-package doom-neotree
   :config
@@ -246,8 +246,8 @@ Repeated invocations toggle between the two most recently open buffers."
 ;; (use-package spacemacs-theme)
 ;; (load-theme 'spacemacs-light t)
 
-;; (use-package civic-theme)
-;; (load-theme 'civic t)
+(use-package civic-theme)
+(load-theme 'civic t)
 
 (prefer-coding-system       'utf-8)
 (set-default-coding-systems 'utf-8)
@@ -993,11 +993,11 @@ Repeated invocations toggle between the two most recently open buffers."
 (defface doom-modeline-highlight '((t (:inherit mode-line)))
 "Face for bright segments of the mode-line.")
 
-(defface doom-modeline-panel '((t (:inherit mode-line :foreground "#35404e" :background "#e1e2e7")))
+(defface doom-modeline-panel '((t (:inherit mode-line :foreground "#20213e" :background "#eedd82")))
 "Face for 'X out of Y' segments, such as `*anzu', `*evil-substitute' and
 `iedit'")
 
-(defface doom-modeline-info '((t (:foreground "#32cf72")))
+(defface doom-modeline-info '((t (:foreground "#48d245")))
 "Face for info-level messages in the modeline. Used by `*vc'.")
 
 (defface doom-modeline-warning `((t (:inherit warning)))
@@ -1546,6 +1546,6 @@ lines are selected, or the NxM dimensions of a block selection."
  '(git-gutter:deleted-sign "▐"))
 
 (custom-set-faces
- '(git-gutter:added    ((t (:foreground "#45bb3e"))))
- '(git-gutter:modified ((t (:foreground "#5124e3"))))
- '(git-gutter:deleted  ((t (:foreground "#d3232e")))))
+ '(git-gutter:added    ((t (:foreground "#48d245"))))
+ '(git-gutter:modified ((t (:foreground "#eedd82"))))
+ '(git-gutter:deleted  ((t (:foreground "#d27490")))))
