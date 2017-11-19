@@ -234,7 +234,9 @@ Repeated invocations toggle between the two most recently open buffers."
   )
 
 (set-face-attribute 'default nil
-                :family "Operator Mono" :height 130 :weight 'light)
+                :family "Fira Code" :height 120)
+
+(mac-auto-operator-composition-mode)
 
 (use-package doom-neotree
   :config

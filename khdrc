@@ -70,15 +70,16 @@
 
 
 # enable kwm compatibility mode
-khd kwm on
+# khd kwm on
+# khd void_unlisted_bind off
 
 # set border color for different modes
-khd mode default color  0xff51afef
-khd mode switcher color 0xdde69055
-khd mode mpd color      0xdda9a1e1
-khd mode swap color     0xdd46d9ff
-khd mode tree color     0xdd98be65
-khd mode space color    0xdda9a1e1
+khd mode default on_enter kwmc config border focused color  0xdd51afef
+khd mode switcher on_enter kwmc config border focused color 0xdde69055
+khd mode mpd on_enter kwmc config border focused color      0xdda9a1e1
+khd mode swap on_enter kwmc config border focused color     0xdd46d9ff
+khd mode tree on_enter kwmc config border focused color     0xdd98be65
+khd mode space on_enter kwmc config border focused color    0xdda9a1e1
 
 
 # toggle between modes
@@ -247,45 +248,3 @@ cmd - 0x2A              :   khd -w "aasvi93@hotmail.com"
 cmd - 7                 :   khd -w "\\"
 cmd - 8                 :   khd -w "{"
 cmd - 9                 :   khd -w "}"
-
-
-
-# mirror tree x-axis
-alt - x : chunkc desktop --mirror horizontal
-
-# toggle desktop offset
-alt - a : chunkc desktop --toggle offset
-
-# toggle window fullscreen
-alt - f : chunkc window --toggle fullscreen
-
-# toggle window native fullscreen
-shift + alt - f : chunkc window --toggle native-fullscreen
-
-# toggle window parent zoom
-alt - d : chunkc window --toggle parent
-
-# toggle window split type
-alt - e : chunkc window --toggle split
-
-# float / unfloat window
-alt - t : chunkc window --toggle float
-
-# float next window to be tiled
-shift + alt - t : chunkc config window_float_next 1
-
-# change layout of desktop
-ctrl + alt - a : chunkc desktop --layout bsp
-ctrl + alt - s : chunkc desktop --layout monocle
-ctrl + alt - d : chunkc desktop --layout float
-
-ctrl + alt - w : chunkc desktop --deserialize ~/.chunkwm_layouts/dev_1
-
-# remap caps-lock to escape for this config only !!!
-# macos sierra can also perform this remap for a given keyboard
-- capslock : khd -p "- escape"
-
-# key remap for norwegian layout \ { }
-cmd - 7 : khd -p "shift + alt - 7"
-cmd - 8 : khd -p "shift + alt - 8"
-cmd - 9 : khd -p "shift + alt - 9"

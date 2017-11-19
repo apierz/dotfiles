@@ -314,7 +314,9 @@ I used to use Leuven for my color theme and Hack as my font, but I change both a
     )
 
   (set-face-attribute 'default nil
-                  :family "Operator Mono" :height 130 :weight 'light)
+                  :family "Fira Code" :height 120)
+
+  (mac-auto-operator-composition-mode)
 
   (use-package doom-neotree
     :config
@@ -387,7 +389,7 @@ I prefer the Vim keybindings and use them wherever possible in Emacs. I recently
 
 ** Addons, based on Vim plugins
 
-=evil-surround= is based on tpope's plugin and makes it easy to change surrounding syntax like ", ', (, {, etc. =evil-commentary= is also based on a tpope plugin that makes it easy to comment a line or lines. [g-c-c] will comment a line [g-c-4-k] will comment the next 4 lines, etc. =evil-snipe= is an interesting package that lets you find by two characters instead of one to better target specific cursor jumps.
+   =evil-surround= is based on tpope's plugin and makes it easy to change surrounding syntax like ", ', (, {, etc. =evil-commentary= is also based on a tpope plugin that makes it easy to comment a line or lines. [g-c-c] will comment a line [g-c-4-j] will comment the next 4 lines, etc. =evil-snipe= is an interesting package that lets you find by two characters instead of one to better target specific cursor jumps.
 
 #+BEGIN_SRC emacs-lisp
   (use-package evil-leader)
@@ -403,7 +405,7 @@ I prefer the Vim keybindings and use them wherever possible in Emacs. I recently
     (evil-snipe-override-mode 1))
 
 #+END_SRC
-
+   
 ** Controls
 
    I make a few changes to the =dired= control map to make it more natural when using Vim style navigation. Also I use 'jk' as a quick shortcut to return to =evil-normal-state=.
@@ -852,7 +854,7 @@ I like yasnippet for snippets, but I generally rely on auto-complete to speed up
   (add-to-list 'company-backends 'company-dabbrev-code)
 #+END_SRC
 
-I use relative line numbers, which helps with the Vim bindings. I use a 0 offset, so if I want to delete to a line and it says its line 4 I can press =d-4-k=.
+I use relative line numbers, which helps with the Vim bindings. I use a 0 offset, so if I want to delete to a line and it says its line 4 I can press =d-4-j=.
 
 #+BEGIN_SRC emacs-lisp
   (require 'linum-relative)
