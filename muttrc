@@ -41,7 +41,7 @@ macro index,pager a ":set confirmappend=no delete=yes\n<save-message>=/personal/
  color search     black magenta
  color markers    black yellow
  color hdrdefault black cyan
- color normal     white black
+ color normal     black white
 #SMTP
 
 set smtp_url="smtps://andy@andypierz.com@mail.hover.com:465/"

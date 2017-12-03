@@ -518,13 +518,14 @@ color1 = red
 color2 = yellow
 #
 #main_window_highlight_color = yellow
-main_window_highlight_color = magenta
+current_item_prefix = "$(magenta)$r"
+current_item_suffix = "$/r$(end)"
 
 #progressbar_color = black
-progressbar_color = white
+progressbar_color = black
 #
 #progressbar_elapsed_color = white
-progressbar_elapsed_color = cyan
+progressbar_elapsed_color = blue
 
 #statusbar_color = cyan
 statusbar_color = cyan
@@ -533,7 +534,8 @@ statusbar_color = cyan
 alternative_ui_separator_color = magenta
 #
 #active_column_color = red
-active_column_color = red
+current_item_inactive_column_prefix = "$(red)$r"
+current_item_inactive_column_suffix = "$/r$(end)"
 #
 #visualizer_color = yellow
 visualizer_color = yellow

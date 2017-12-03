@@ -2,6 +2,7 @@ set fish_greeting ""
 
 set fish_color_autosuggestion 'green'
 set fish_color_error 'bryellow'
+set fish_color_command 'black'
 
 set fish_pager_color_prefix	'green' '--bold' '--underline'
 set fish_pager_color_progress	'black' '--bold' '--background=cyan'
@@ -11,7 +12,7 @@ set fish_color_user_swap 'green' '--background=yellow'
 set fish_color_host 'black' '--background=yellow'
 set fish_color_host_swap 'yellow' '--background=cyan'
 set fish_color_cwd  'black' '--background=cyan'
-set fish_color_cwd_swap  'cyan' '--background=black'
+set fish_color_cwd_swap  'cyan' '--background=white'
 
 # Fish git prompt
 set __fish_git_prompt_showdirtystate 'yes'
@@ -22,8 +23,11 @@ set __fish_git_prompt_color_branch yellow
 set __fish_git_prompt_color_upstream_ahead cyan
 set __fish_git_prompt_color_upstream_behind red
 
+set -g fish_color_git_cleanfirst 'white' '--background=cyan'
 set -g fish_color_git_clean 'black' '--background=cyan'
+set -g fish_color_git_stagedfirst 'white' '--background=yellow'
 set -g fish_color_git_staged 'black' '--background=yellow'
+set -g fish_color_git_dirtyfirst  'white' '--background=bryellow'
 set -g fish_color_git_dirty  'black' '--background=bryellow'
 
 set -g fish_prompt_git_status_added '✚'
@@ -52,8 +56,10 @@ function __terlar_git_prompt --description 'Write out the git prompt'
     set -l index (git status --porcelain ^/dev/null|cut -c 1-2|sort -u)
 
     if test -z "$index"
+        set_color $fish_color_git_cleanfirst
+        echo -n '▖ '
         set_color $fish_color_git_clean
-        echo -n '▖ '$branch'✓ '
+        echo -n $branch'✓ '
         set_color normal
         return
     end
@@ -85,12 +91,20 @@ function __terlar_git_prompt --description 'Write out the git prompt'
     end
 
     if set -q staged[1]
+        set_color $fish_color_git_stagedfirst
+    else
+        set_color $fish_color_git_dirtyfirst
+    end
+
+    echo -n '▖ '
+
+    if set -q staged[1]
         set_color $fish_color_git_staged
     else
         set_color $fish_color_git_dirty
     end
 
-    echo -n '▖ '$branch
+    echo -n $branch
 
     for i in $fish_prompt_git_status_order
         if contains $i in $gs

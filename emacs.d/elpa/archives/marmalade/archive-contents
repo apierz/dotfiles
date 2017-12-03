@@ -1890,8 +1890,8 @@
 	     [(0 8 8)
 	      nil "Managing multiple terminal buffers in Emacs." single])
  (multi-project .
-		[(0 0 24)
-		 nil "Easily work with multiple projects." single])
+		[(0 0 25)
+		 nil "Find files, compile, search, and switch between" single])
  (multi-eshell .
 	       [(0 0 1)
 		nil "makes it easier to use multiple shells within emacs" single])
@@ -2228,6 +2228,11 @@
 	  ((eieio
 	    (1 3)))
 	  "logging library for Emacs" single])
+ (log-mode .
+	   [(0 0 3)
+	    ((emacs
+	      (24 3)))
+	    "Navigate Log Error Messages" single])
  (load-theme-buffer-local .
 			  [(0 0 2)
 			   nil "Install emacs24 color themes by buffer." single])
@@ -3389,7 +3394,7 @@
        (2 2 0)))
      "Modern API for working with files and directories" single])
  (eyebrowse .
-	    [(0 7 4)
+	    [(0 7 7)
 	     ((dash
 	       (2 7 0))
 	      (emacs

@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("civic-theme.el"
+(("cic"
+ (filename . "~/Documents/dotfiles/emacs.d/config.org")
+ (front-context-string . "\n\n\n#+END_SRC\n\nJu")
+ (rear-context-string . "blue-yellow t)\n\n")
+ (position . 11344))
+("civic-theme.el"
  (filename . "~/Documents/Programming_Projects/nord-theme/civic-theme.el")
  (front-context-string . ";;; civic-theme.")
  (rear-context-string)
@@ -28,7 +33,7 @@
  (rear-context-string)
  (position . 1))
 ("ap-compsci-theme.el"
- (filename . "~/Documents/Programming_Projects/ap-compsci-theme/ap-compsci-theme.el")
+ (filename . "~/Documents/Programming_Projects/nord-theme/apcompsci-theme.el")
  (front-context-string . ";;; ap-compsci-t")
  (rear-context-string)
  (position . 1))
