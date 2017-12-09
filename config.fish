@@ -2,7 +2,7 @@ set fish_greeting ""
 
 set fish_color_autosuggestion 'green'
 set fish_color_error 'bryellow'
-set fish_color_command 'black'
+set fish_color_command 'white'
 
 set fish_pager_color_prefix	'green' '--bold' '--underline'
 set fish_pager_color_progress	'black' '--bold' '--background=cyan'
@@ -10,9 +10,9 @@ set fish_pager_color_progress	'black' '--bold' '--background=cyan'
 set fish_color_user 'black' '--background=green'
 set fish_color_user_swap 'green' '--background=yellow'
 set fish_color_host 'black' '--background=yellow'
-set fish_color_host_swap 'yellow' '--background=cyan'
-set fish_color_cwd  'black' '--background=cyan'
-set fish_color_cwd_swap  'cyan' '--background=white'
+set fish_color_host_swap 'yellow' '--background=blue'
+set fish_color_cwd  'black' '--background=blue'
+set fish_color_cwd_swap  'blue' '--background=black'
 
 # Fish git prompt
 set __fish_git_prompt_showdirtystate 'yes'
@@ -23,11 +23,11 @@ set __fish_git_prompt_color_branch yellow
 set __fish_git_prompt_color_upstream_ahead cyan
 set __fish_git_prompt_color_upstream_behind red
 
-set -g fish_color_git_cleanfirst 'white' '--background=cyan'
+set -g fish_color_git_cleanfirst 'black' '--background=cyan'
 set -g fish_color_git_clean 'black' '--background=cyan'
-set -g fish_color_git_stagedfirst 'white' '--background=yellow'
+set -g fish_color_git_stagedfirst 'black' '--background=yellow'
 set -g fish_color_git_staged 'black' '--background=yellow'
-set -g fish_color_git_dirtyfirst  'white' '--background=bryellow'
+set -g fish_color_git_dirtyfirst  'black' '--background=bryellow'
 set -g fish_color_git_dirty  'black' '--background=bryellow'
 
 set -g fish_prompt_git_status_added '✚'

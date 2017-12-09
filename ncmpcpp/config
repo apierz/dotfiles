@@ -284,7 +284,7 @@ now_playing_suffix = ♫$9$/b
 ##
 #
 #song_columns_list_format = (20)[]{a} (6f)[white]{NE} (50)[white]{t|f:Title} (20)[cyan]{b} (7f)[blue]{l}
-song_columns_list_format =  (30)[green]{ar} (30)[blue]{t|f:Title} (20)[yellow]{br} (7f)[cyan]{l}
+song_columns_list_format =  (30)[green]{ar} (30)[blue]{t|f:Title} (20)[white]{br} (7f)[cyan]{l}
 #
 ##### various settings #####
 #
@@ -528,13 +528,13 @@ progressbar_color = black
 progressbar_elapsed_color = blue
 
 #statusbar_color = cyan
-statusbar_color = cyan
+statusbar_color = yellow
 #
 #alternative_ui_separator_color = black
 alternative_ui_separator_color = magenta
 #
 #active_column_color = red
-current_item_inactive_column_prefix = "$(red)$r"
+current_item_inactive_column_prefix = "$(yellow)$r"
 current_item_inactive_column_suffix = "$/r$(end)"
 #
 #visualizer_color = yellow
