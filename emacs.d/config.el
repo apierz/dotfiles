@@ -220,45 +220,36 @@ Repeated invocations toggle between the two most recently open buffers."
       (while (re-search-forward "[, ]" nil t) (replace-match "" nil t)))))
 
 (use-package doom-themes
-           :config
-      ;;     ;;; OPTIONAL
-      ;;     ;; brighter source buffers
-      ;;     (add-hook 'find-file-hook 'doom-buffer-mode)
-      ;;     ;; brighter minibuffer when active
-      ;;     (add-hook 'minibuffer-setup-hook 'doom-buffer-mode)
-             (global-hl-line-mode)
-      ;;     (setq doom-enable-brighter-comments t)
-      ;;     (setq doom-enable-bold t)
-      ;;     (setq doom-enable-italic t)
-      ;;     (load-theme 'doom-one t)
-        )
+     :config
+;;     ;;; OPTIONAL
+;;     ;; brighter source buffers
+    ;; (add-hook 'find-file-hook 'doom-buffer-mode)
+    ;; brighter minibuffer when active
+    ;; (add-hook 'minibuffer-setup-hook 'doom-buffer-mode)
+    (global-hl-line-mode)
+    (setq doom-enable-brighter-comments t)
+    (setq doom-enable-bold t)
+    (setq doom-enable-italic t)
+    (load-theme 'doom-one t)
+  )
 
-      (set-face-attribute 'default nil
-                      :family "SF Mono" :height 120)
+(set-face-attribute 'default nil
+                :family "SF Mono" :height 120)
 
-      (mac-auto-operator-composition-mode)
+(mac-auto-operator-composition-mode)
 
-      (use-package doom-neotree
-        :config
-        (setq doom-neotree-enable-file-icons 'simple)
-        (setq doom-neotree-enable-dir-icons t)
-        (setq doom-neotree-enable-dir-chevrons t)
-        (setq doom-neotree-line-spacing 2))
+;; (use-package doom-neotree
+;;   :config
+;;   (setq doom-neotree-enable-file-icons 'simple)
+;;   (setq doom-neotree-enable-dir-icons t)
+;;   (setq doom-neotree-enable-dir-chevrons t)
+;;   (setq doom-neotree-line-spacing 2))
 
-      ;; (use-package spacemacs-theme)
-      ;; (load-theme 'spacemacs-light t)
+;; (use-package spacemacs-theme)
+;; (load-theme 'spacemacs-light t)
 
-      ;; (use-package civic-theme)
-      ;; (load-theme 'civic t)
-
-    ;; (use-package avk-emacs-theme)
-    ;; (load-theme 'avk-darkblue-yellow t)
-
-  ;; (use-package apcompsci-theme)
-  ;; (load-theme 'apcompsci t)
-
-(use-package drifter-theme)
-(load-theme 'drifter t)
+;; (use-package civic-theme)
+;; (load-theme 'civic t)
 
 (prefer-coding-system       'utf-8)
 (set-default-coding-systems 'utf-8)
@@ -612,9 +603,6 @@ Repeated invocations toggle between the two most recently open buffers."
 (use-package fill-column-indicator)
 (use-package unbound)
 (use-package nnir)
-(use-package dumb-jump
-  :config
-  (dumb-jump-mode))
 
 ;; (add-hook 'emacs-lisp-mode-hook
 ;;           (lambda ()

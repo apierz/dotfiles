@@ -171,6 +171,9 @@
  (winner-mode-enable .
 		     [(0 0 5)
 		      nil "Enables winner mode if its available" tar])
+ (window-shaper .
+		[(20171218 1222)
+		 nil "A utility to easily resize windows within Emacs" single])
  (window-number .
 		[(1 0 3)
 		 nil "Select windows by numbers." single])
@@ -937,7 +940,7 @@
 	   [(1 4)
 	    nil "pattern matching for elisp" single])
  (shackle .
-	  [(0 9 0)
+	  [(1 0 1)
 	   ((cl-lib
 	     (0 5)))
 	   "Enforce rules for popups" single])
@@ -2223,16 +2226,16 @@
  (lolcode-mode .
 	       [(0 2)
 		nil "Major mode for editing LOLCODE" single])
+ (lognav-mode .
+	      [(0 0 5)
+	       ((emacs
+		 (24 3)))
+	       "Navigate Log Error Messages" single])
  (logito .
 	 [(0 1)
 	  ((eieio
 	    (1 3)))
 	  "logging library for Emacs" single])
- (log-mode .
-	   [(0 0 3)
-	    ((emacs
-	      (24 3)))
-	    "Navigate Log Error Messages" single])
  (load-theme-buffer-local .
 			  [(0 0 2)
 			   nil "Install emacs24 color themes by buffer." single])
@@ -3353,7 +3356,7 @@
 	      (1 4)))
 	    "finalizers for Emacs Lisp" tar])
  (fill-column-indicator .
-			[(1 87)
+			[(1 90)
 			 nil "Graphically indicate the fill column" single])
  (file-format .
 	      [(0 0 4)
