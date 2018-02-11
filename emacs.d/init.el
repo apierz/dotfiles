@@ -44,8 +44,8 @@
 
        :completion
        company           ; the ultimate code completion backend
-       ivy               ; a search engine for love and life
-      ;helm              ; the *other* search engine for love and life
+      ;ivy               ; a search engine for love and life
+       helm              ; the *other* search engine for love and life
       ;ido               ; the other *other* search engine...
 
        :ui
@@ -68,7 +68,7 @@
        gist              ; interacting with github gists
        imenu             ; an imenu sidebar and searchable code index
        impatient-mode    ; show off code over HTTP
-      ;macos             ; MacOS-specific commands
+       macos             ; MacOS-specific commands
        make              ; run make tasks from Emacs
        neotree           ; a project drawer, like NERDTree for vim
        password-store    ; password manager for nerds
@@ -135,5 +135,6 @@
        ;; the defaults module. It contains a Spacemacs-inspired keybinding
        ;; scheme and additional ex commands for evil-mode. Use it as a reference
        ;; for your own.
-       :private default)
+       :private default
+       :private andy-doom-module)
 
