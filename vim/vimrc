@@ -556,7 +556,7 @@ autocmd BufWritePre *.cpp,*.hpp pyf /usr/share/vim/addons/syntax/clang-format-3.
 
 " =================== vim-airline ========================
 
-let g:airline_theme='nord'
+let g:airline_theme='solarized'
 let g:airline_powerline_fonts = 1
 
 if !exists('g:airline_symbols')
