@@ -223,7 +223,7 @@ song_library_format = {%n - }{%t}|{%f}
 alternative_header_first_line_format = $6$aqqu$/a$9 {$7%t$9}|{%f} $6$atqq$/a$9
 #
 #alternative_header_second_line_format = {{$4$b%a$/b$9}{ - $7%b$9}{ ($4%y$9)}}|{%D}
-alternative_header_second_line_format = {{$6%a$9}{ $7-$9 $6%b$9}{ $7-$9 ($6%y$9)}}
+alternative_header_second_line_format = {{$6%a$9}{ $7-$9 $6%b$9}{ $7-$9 $6%y$9}}
 #
 ##
 ## Note: below variables also support text attributes listed above.
@@ -284,7 +284,7 @@ now_playing_suffix = ♫$9$/b
 ##
 #
 #song_columns_list_format = (20)[]{a} (6f)[white]{NE} (50)[white]{t|f:Title} (20)[cyan]{b} (7f)[blue]{l}
-song_columns_list_format =  (30)[green]{ar} (30)[blue]{t|f:Title} (20)[yellow]{br} (7f)[cyan]{l}
+song_columns_list_format =  (30)[green]{ar} (30)[blue]{t|f:Title} (20)[magenta]{br} (7f)[cyan]{l}
 #
 ##### various settings #####
 #
@@ -500,16 +500,16 @@ empty_tag_color = green
 header_window_color = green
 
 #volume_color = default
-volume_color = magenta
+volume_color = white
 #
 #state_line_color = default
 state_line_color = white
 #
 #state_flags_color = default
-state_flags_color = magenta
+state_flags_color = white
 #
 #main_window_color = yellow
-main_window_color = green
+main_window_color = cyan
 
 #color1 = white
 color1 = red
@@ -522,7 +522,7 @@ current_item_prefix = "$(magenta)$r"
 current_item_suffix = "$/r$(end)"
 
 #progressbar_color = black
-progressbar_color = black
+progressbar_color = white
 #
 #progressbar_elapsed_color = white
 progressbar_elapsed_color = blue
