@@ -10,14 +10,14 @@ if exists("syntax_on")
     syntax reset
 endif
 
-let g:colors_name = "nofrils-dark"
+let g:colors_name = "nofrils-sol"
 
 if !exists("g:nofrils_strbackgrounds") " {{{
     let g:nofrils_strbackgrounds = 0
 endif " }}}
 
 " Baseline {{{
-hi Normal		term=NONE	cterm=NONE	ctermfg=11	ctermbg=7	gui=NONE	guifg=#FFFFFF	guibg=#262626
+hi Normal		term=NONE	cterm=NONE	ctermfg=11	ctermbg=NONE	gui=NONE	guifg=#FFFFFF	guibg=#262626
 " }}}
 
 " Faded {{{
