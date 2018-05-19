@@ -60,6 +60,7 @@ function __terlar_git_prompt --description 'Write out the git prompt'
         set_color $fish_color_git_cleanfirst
         # echo -n '▖ '
         set_color $fish_color_git_clean
+        echo -n ' '
         echo -n $branch'✓ '
         set_color normal
         return
@@ -98,7 +99,6 @@ function __terlar_git_prompt --description 'Write out the git prompt'
     # end
 
     # echo -n '▖ '
-    echo -n ' '
 
     if set -q staged[1]
         set_color $fish_color_git_staged
