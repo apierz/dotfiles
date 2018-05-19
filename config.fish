@@ -58,7 +58,7 @@ function __terlar_git_prompt --description 'Write out the git prompt'
 
     if test -z "$index"
         set_color $fish_color_git_cleanfirst
-        echo -n '▖ '
+        # echo -n '▖ '
         set_color $fish_color_git_clean
         echo -n $branch'✓ '
         set_color normal
@@ -91,13 +91,14 @@ function __terlar_git_prompt --description 'Write out the git prompt'
         end
     end
 
-    if set -q staged[1]
-        set_color $fish_color_git_stagedfirst
-    else
-        set_color $fish_color_git_dirtyfirst
-    end
+    # if set -q staged[1]
+    #     set_color $fish_color_git_stagedfirst
+    # else
+    #     set_color $fish_color_git_dirtyfirst
+    # end
 
-    echo -n '▖ '
+    # echo -n '▖ '
+    echo -n ' '
 
     if set -q staged[1]
         set_color $fish_color_git_staged
@@ -127,16 +128,16 @@ function fish_prompt --description 'Write out the prompt'
   set_color $fish_color_user
   echo -n (whoami)
   echo -n ' '
-  set_color $fish_color_user_swap
-  echo -n '▙'
+  # set_color $fish_color_user_swap
+  # echo -n '▙'
   set_color normal
 
   set_color $fish_color_host
   echo -n ' @'
   echo -n (prompt_hostname)
   echo -n ' '
-  set_color $fish_color_host_swap
-  echo -n '▙'
+  # set_color $fish_color_host_swap
+  # echo -n '▙'
   set_color normal
 
 
@@ -146,7 +147,7 @@ function fish_prompt --description 'Write out the prompt'
   echo -n (prompt_pwd)
   echo -n ' '
   set_color $fish_color_cwd_swap
-  echo -n '▙'
+  # echo -n '▙'
   set_color normal
 
   __terlar_git_prompt

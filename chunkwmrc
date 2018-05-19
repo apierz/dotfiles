@@ -20,7 +20,8 @@ chunkc core::log_level error
 #       loading a plugin. '~' expansion is supported.
 #
 
-chunkc core::plugin_dir /usr/local/opt/chunkwm/share/chunkwm/plugins
+# chunkc core::plugin_dir /usr/local/opt/chunkwm/share/chunkwm/plugins
+chunkc core::plugin_dir  ~/.chunkwm_plugins
 
 #
 # NOTE: if enabled, chunkwm will monitor the specified plugin_dir
@@ -103,6 +104,6 @@ chunkc core::load ffm.so
 #       to pass value containing a whitespace.
 #
 
-chunkc tiling::rule --owner Finder --name Copy --state float
-chunkc tiling::rule --owner \"App Store\" --state float
-chunkc tiling::rule --owner \"Graphic\" --state float
+chunkc tiling::rule --owner Finder --name Copy --state float &
+chunkc tiling::rule --owner \"App Store\" --state float &
+chunkc tiling::rule --owner \"Graphic\" --state float &

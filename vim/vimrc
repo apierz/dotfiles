@@ -186,6 +186,7 @@ set guioptions-=L
 " i.e: <leader>w saves the current file
 let mapleader = ","
 let g:mapleader = ","
+let maplocalleader = "\\"
 
 " This trigger takes advantage of the fact that the quickfix window can be
 " easily distinguished by its file-type, qf. The wincmd J command is
@@ -336,6 +337,7 @@ au BufNewFile,BufRead *.yml,*.yaml setlocal expandtab ts=2 sw=2
 au BufNewFile,BufRead *.cpp setlocal expandtab ts=2 sw=2
 au BufNewFile,BufRead *.hpp setlocal expandtab ts=2 sw=2
 au BufNewFile,BufRead *.json setlocal expandtab ts=2 sw=2
+au BufNewFile,BufRead *.coffee setlocal expandtab ts=2 sw=2
 
 augroup filetypedetect
   au BufNewFile,BufRead .tmux.conf*,tmux.conf* setf tmux
@@ -369,6 +371,13 @@ autocmd BufNewFile,BufRead *.py setlocal tabstop=4 softtabstop=4 shiftwidth=4 te
 
 " toml settings
 au BufRead,BufNewFile MAINTAINERS set ft=toml
+
+" org settings
+let g:org_todo_keywords = [['TODO', 'WAITING', '|', 'DONE']]
+let g:org_todo_keyword_faces = [['TODO', 'red'],['WAITING', [':foreground magenta', ':weight bold']], ['DONE', 'green']]
+let g:org_indent = 1
+autocmd BufNewFile,BufRead *.org setlocal indentexpr=
+
 
 " spell check for git commits
 autocmd FileType gitcommit setlocal spell
@@ -478,13 +487,6 @@ augroup go
   autocmd Filetype go command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit')
   autocmd Filetype go command! -bang AS call go#alternate#Switch(<bang>0, 'split')
 augroup END
-
-" ==================== delimitMate ====================
-let g:delimitMate_expand_cr = 1
-let g:delimitMate_expand_space = 1
-let g:delimitMate_smart_quotes = 1
-let g:delimitMate_expand_inside_quotes = 0
-let g:delimitMate_smart_matchpairs = '^\%(\w\|\$\)'
 
 "==================== NerdTree ====================
 " For toggling

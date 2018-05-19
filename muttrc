@@ -6,7 +6,7 @@ set folder      = ~/.Maildir
 set spoolfile   = "+/personal/INBOX"
 set postponed   = "+/Drafts"
 set record = "+/personal/Sent\ Items"
-set editor="emacsclient"
+set editor="vim"
 
 mailboxes +personal/INBOX
 mailboxes +personal/archive
@@ -36,11 +36,11 @@ macro index,pager P "<change-folder>=/personal/INBOX<enter>" "Archive Message"
 macro index,pager a ":set confirmappend=no delete=yes\n<save-message>=/personal/archive\n<sync-mailbox>:set confirmappend=yes delete=ask-yes\n"
 
 
- color status     white green
- color indicator  white yellow
+ color status     brightwhite black
+ color indicator  black brightcyan
  color search     white magenta
  color markers    white yellow
- color hdrdefault white cyan
+ color hdrdefault black brightcyan
  color normal     black white
 #SMTP
 
