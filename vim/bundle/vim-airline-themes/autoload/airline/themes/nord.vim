@@ -6,24 +6,24 @@ let g:airline#themes#nord#palette.accents = {
 
 
 " Normal mode
-let s:N1 = [ '#88c0d0' , '#d8dee9' , 7 , 4 ] " mode
-let s:N2 = [ '#4c566a' , '#d8dee9' , 0 , 15  ] " info
+let s:N1 = [ '#88c0d0' , '#d8dee9' , 0 , 4 ] " mode
+let s:N2 = [ '#4c566a' , '#d8dee9' , 7 , 8  ] " info
 let s:N3 = [ '#f8f8f0' , '#465457' , 15 , 0  ] " statusline
 
 let g:airline#themes#nord#palette.normal = airline#themes#generate_color_map(s:N1, s:N2, s:N3)
 let g:airline#themes#nord#palette.normal_modified = {
-      \ 'airline_c': [ '#080808' , '#e6db74' , 11, 0 , '' ] ,
+      \ 'airline_c': [ '#080808' , '#e6db74' , 1, 0 , '' ] ,
       \ }
 
 
 " Insert mode
-let s:I1 = [ '#080808' , '#66d9ef' , 7 , 2 ]
-let s:I2 = [ '#f8f8f0' , '#232526' , 0 , 15 ]
+let s:I1 = [ '#080808' , '#66d9ef' , 0 , 2 ]
+let s:I2 = [ '#f8f8f0' , '#232526' , 7 , 8 ]
 let s:I3 = [ '#f8f8f0' , '#465457' , 15 , 0 ]
 
 let g:airline#themes#nord#palette.insert = airline#themes#generate_color_map(s:I1, s:I2, s:I3)
 let g:airline#themes#nord#palette.insert_modified = {
-      \ 'airline_c': [ '#080808' , '#66d9ef' , 11 , 0 , '' ] ,
+      \ 'airline_c': [ '#080808' , '#66d9ef' , 1 , 0 , '' ] ,
       \ }
 
 
@@ -36,8 +36,8 @@ let g:airline#themes#nord#palette.replace_modified = {
 
 
 " Visual mode
-let s:V1 = [ '#080808' , '#fd971f' , 7 , 11 ]
-let s:V2 = [ '#f8f8f0' , '#232526' , 0 , 15  ]
+let s:V1 = [ '#080808' , '#fd971f' , 0 , 5 ]
+let s:V2 = [ '#f8f8f0' , '#232526' , 7 , 8  ]
 let s:V3 = [ '#f8f8f0' , '#465457' , 15 , 0  ]
 
 let g:airline#themes#nord#palette.visual = airline#themes#generate_color_map(s:V1, s:V2, s:V3)

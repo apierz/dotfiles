@@ -3,6 +3,7 @@ execute pathogen#infect()
 call pathogen#helptags()
 
 set nocompatible              " be iMproved, required
+set cpoptions=aABceFs
 filetype off                  " required
 
 filetype plugin indent on    " required
@@ -177,7 +178,7 @@ endif
 set t_Co=256
 " let g:hybrid_use_Xresources = 1
 " let g:rehash256 = 1
-colorscheme nofrils-sol
+colorscheme nofrils-dark
 set guifont=Hack:h15
 set guioptions-=L
 
@@ -373,8 +374,8 @@ autocmd BufNewFile,BufRead *.py setlocal tabstop=4 softtabstop=4 shiftwidth=4 te
 au BufRead,BufNewFile MAINTAINERS set ft=toml
 
 " org settings
-let g:org_todo_keywords = [['TODO', 'WAITING', '|', 'DONE']]
-let g:org_todo_keyword_faces = [['TODO', 'red'],['WAITING', [':foreground magenta', ':weight bold']], ['DONE', 'green']]
+let g:org_todo_keywords = [['TODO', 'WAITING', 'REASSIGNED', '|', 'DONE']]
+let g:org_todo_keyword_faces = [['TODO', 'red'],['WAITING', [':foreground magenta', ':weight bold']], ['REASSIGNED', [':foreground magenta', ':weight bold']], ['DONE', 'green']]
 let g:org_indent = 1
 autocmd BufNewFile,BufRead *.org setlocal indentexpr=
 
@@ -558,7 +559,7 @@ autocmd BufWritePre *.cpp,*.hpp pyf /usr/share/vim/addons/syntax/clang-format-3.
 
 " =================== vim-airline ========================
 
-let g:airline_theme='solarized'
+let g:airline_theme='nord'
 let g:airline_powerline_fonts = 1
 
 if !exists('g:airline_symbols')

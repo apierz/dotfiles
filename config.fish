@@ -25,11 +25,11 @@ set __fish_git_prompt_color_upstream_ahead cyan
 set __fish_git_prompt_color_upstream_behind red
 
 set -g fish_color_git_cleanfirst 'white' '--background=green'
-set -g fish_color_git_clean 'black' '--background=green'
+set -g fish_color_git_clean 'white' '--background=green'
 set -g fish_color_git_stagedfirst 'white' '--background=yellow'
-set -g fish_color_git_staged 'black' '--background=yellow'
+set -g fish_color_git_staged 'white' '--background=yellow'
 set -g fish_color_git_dirtyfirst  'white' '--background=red'
-set -g fish_color_git_dirty  'black' '--background=red'
+set -g fish_color_git_dirty  'white' '--background=red'
 
 set -g fish_prompt_git_status_added '✚'
 set -g fish_prompt_git_status_modified '*'
@@ -52,7 +52,7 @@ function __terlar_git_prompt --description 'Write out the git prompt'
         return
     end
 
-    echo -n ' '
+    # echo -n ' '
 
     set -l index (git status --porcelain ^/dev/null|cut -c 1-2|sort -u)
 
@@ -106,6 +106,7 @@ function __terlar_git_prompt --description 'Write out the git prompt'
         set_color $fish_color_git_dirty
     end
 
+    echo -n ' '
     echo -n $branch
 
     for i in $fish_prompt_git_status_order
@@ -115,6 +116,7 @@ function __terlar_git_prompt --description 'Write out the git prompt'
 
             set_color $$color_name
             echo -n $$status_name
+            echo -n ' '
         end
     end
 
