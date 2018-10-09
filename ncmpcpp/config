@@ -220,10 +220,10 @@ song_library_format = {%n - }{%t}|{%f}
 ##
 #
 #alternative_header_first_line_format = $b$8$aqqu$/a$9 {%t}|{%f} $8$atqq$/a$9$/b
-alternative_header_first_line_format = $8$aqqu$/a$9 {$5%t$9}|{%f} $8$atqq$/a$9
+alternative_header_first_line_format = $1$aqqu$/a$9 {$3%t$9}|{%f} $1$atqq$/a$9
 #
 #alternative_header_second_line_format = {{$4$b%a$/b$9}{ - $7%b$9}{ ($4%y$9)}}|{%D}
-alternative_header_second_line_format = {{$8%a$9}{ $7-$9 $8%b$9}{ $7-$9 $8%y$9}}
+alternative_header_second_line_format = {{$1%a$9}{ $3-$9 $1%b$9}{ $3-$9 $1%y$9}}
 #
 ##
 ## Note: below variables also support text attributes listed above.
@@ -284,7 +284,7 @@ now_playing_suffix = ♫$9$/b
 ##
 #
 #song_columns_list_format = (20)[]{a} (6f)[white]{NE} (50)[white]{t|f:Title} (20)[cyan]{b} (7f)[blue]{l}
-song_columns_list_format =  (30)[white]{ar} (30)[white]{t|f:Title} (20)[white]{br} (7f)[white]{l}
+song_columns_list_format =  (30)[black]{ar} (30)[black]{t|f:Title} (20)[black]{br} (7f)[black]{l}
 #
 ##### various settings #####
 #
@@ -497,44 +497,44 @@ colors_enabled = yes
 empty_tag_color = green
 #
 #header_window_color = default
-header_window_color = white
+header_window_color = black
 
 #volume_color = default
-volume_color = white
+volume_color = black
 #
 #state_line_color = default
-state_line_color = white
+state_line_color = black
 #
 #state_flags_color = default
-state_flags_color = white
+state_flags_color = black
 #
 #main_window_color = yellow
-main_window_color = white
+main_window_color = black
 
-#color1 = white
+#color1 = black
 color1 = green
 #
 #color2 = white
-color2 = white
+color2 = black
 #
 #main_window_highlight_color = yellow
 current_item_prefix = "$(green)$r"
 current_item_suffix = "$/r$(end)"
 
 #progressbar_color = black
-progressbar_color = white
+progressbar_color = black
 #
 #progressbar_elapsed_color = white
-progressbar_elapsed_color = white
+progressbar_elapsed_color = blue
 
 #statusbar_color = cyan
-statusbar_color = white
+statusbar_color = blue
 #
 #alternative_ui_separator_color = black
-alternative_ui_separator_color = white
+alternative_ui_separator_color = black
 #
 #active_column_color = red
-current_item_inactive_column_prefix = "$(white)$r"
+current_item_inactive_column_prefix = "$(black)$r"
 current_item_inactive_column_suffix = "$/r$(end)"
 #
 #visualizer_color = yellow
