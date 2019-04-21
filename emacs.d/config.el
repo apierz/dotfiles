@@ -32,8 +32,8 @@
 (setq visual-line-fringe-indicators '(left-curly-arrow right-curly-arrow))
 (setq-default left-fringe-width nil)
 (setq-default indent-tabs-mode nil)
-(eval-after-load "vc" '(setq vc-handled-backends nil))
-(setq vc-follow-symlinks t)
+;; (eval-after-load "vc" '(setq vc-handled-backends nil))
+;; (setq vc-follow-symlinks t)
 (setq large-file-warning-threshold nil)
 (setq split-width-threshold nil)
 (setq custom-safe-themes t)
@@ -601,7 +601,6 @@ Repeated invocations toggle between the two most recently open buffers."
              '("elpy" . "https://jorgenschaefer.github.io/packages/"))
 (package-refresh-contents)
 
-(package-initialize)
 ;; will enable Elpy in all future Python buffers
 (elpy-enable)
 
@@ -655,101 +654,6 @@ Repeated invocations toggle between the two most recently open buffers."
 ;; (add-to-list 'load-path "~/gocode/src/github.com/dougm/goflymake")
 ;; (require 'go-flymake)
 
-(defface my-pl-segment1-active
-  '((t (:foreground "#000000" :background "#E1B61A")))
-  "Powerline first segment active face.")
-(defface my-pl-segment1-inactive
-  '((t (:foreground "#CEBFF3" :background "#3A2E58")))
-  "Powerline first segment inactive face.")
-(defface my-pl-segment2-active
-  '((t (:foreground "#F5E39F" :background "#8A7119")))
-  "Powerline second segment active face.")
-(defface my-pl-segment2-inactive
-  '((t (:foreground "#CEBFF3" :background "#3A2E58")))
-  "Powerline second segment inactive face.")
-(defface my-pl-segment3-active
-  '((t (:foreground "#CEBFF3" :background "#3A2E58")))
-  "Powerline third segment active face.")
-(defface my-pl-segment3-inactive
-  '((t (:foreground "#CEBFF3" :background "#3A2E58")))
-  "Powerline third segment inactive face.")
-
-;;   (defun air--powerline-default-theme ()
-;;     "Set up my custom Powerline with Evil indicators."
-;;     (setq-default mode-line-format
-;;                   '("%e"
-;;                     (:eval
-;;                      (let* ((active (powerline-selected-window-active))
-;;                             (seg1 (if active 'my-pl-segment1-active 'my-pl-segment1-inactive))
-;;                             (seg2 (if active 'my-pl-segment2-active 'my-pl-segment2-inactive))
-;;                             (seg3 (if active 'my-pl-segment3-active 'my-pl-segment3-inactive))
-;;                             (separator-left (intern (format "powerline-%s-%s"
-;;                                                             (powerline-current-separator)
-;;                                                             (car powerline-default-separator-dir))))
-;;                             (separator-right (intern (format "powerline-%s-%s"
-;;                                                              (powerline-current-separator)
-;;                                                              (cdr powerline-default-separator-dir))))
-;;                             (lhs (list (let ((evil-face (powerline-evil-face)))
-;;                                          (if evil-mode
-;;                                              (powerline-raw (powerline-evil-tag) evil-face)
-;;                                            ))
-;;                                        (if evil-mode
-;;                                            (funcall separator-left (powerline-evil-face) seg1))
-;;                                        (powerline-buffer-id seg1 'l)
-;;                                        (powerline-raw "[%*]" seg1 'l)
-;;                                        (when (and (boundp 'which-func-mode) which-func-mode)
-;;                                          (powerline-raw which-func-format seg1 'l))
-;;                                        (powerline-raw " " seg1)
-;;                                        (funcall separator-left seg1 seg2)
-;;                                        (when (boundp 'erc-modified-channels-object)
-;;                                          (powerline-raw erc-modified-channels-object seg2 'l))
-;;                                        (powerline-major-mode seg2 'l)
-;;                                        (powerline-process seg2)
-;;                                        (powerline-minor-modes seg2 'l)
-;;                                        (powerline-narrow seg2 'l)
-;;                                        (powerline-raw " " seg2)
-;;                                        (funcall separator-left seg2 seg3)
-;;                                        (powerline-vc seg3 'r)
-;;                                        (when (bound-and-true-p nyan-mode)
-;;                                          (powerline-raw (list (nyan-create)) seg3 'l))))
-;;                             (rhs (list (powerline-raw global-mode-string seg3 'r)
-;;                                        (funcall separator-right seg3 seg2)
-;;                                        (unless window-system
-;;                                          (powerline-raw (char-to-string #xe0a1) seg2 'l))
-;;                                        (powerline-raw "%4l" seg2 'l)
-;;                                        (powerline-raw ":" seg2 'l)
-;;                                        (powerline-raw "%3c" seg2 'r)
-;;                                        (funcall separator-right seg2 seg1)
-;;                                        (powerline-raw " " seg1)
-;;                                        (powerline-raw "%6p" seg1 'r)
-;;                                        (when powerline-display-hud
-;;                                          (powerline-hud seg1 seg3)))))
-;;                        (concat (powerline-render lhs)
-;;                                (powerline-fill seg3 (powerline-width rhs))
-;;                                (powerline-render rhs)))))))
-
-;;   (use-package powerline
-;;     :ensure t
-;;     :config
-;;     (setq powerline-default-separator (if (display-graphic-p) 'arrow
-;;                                         nil))
-;;     (air--powerline-default-theme))
-
-;; (if (display-graphic-p) nil (use-package smart-mode-line-powerline-theme
-;;   :ensure t))
-
-;; (if (display-graphic-p) nil (use-package smart-mode-line
-;;   :ensure t
-;;   :config
-;;   (require 'powerline)
-;;   (setq powerline-default-separator 'arrow-fade)
-;;   (setq sml/theme 'light)
-
-;;   (sml/setup)))
-
-(use-package powerline-evil
-  :ensure t)
-
 (use-package projectile)
 (use-package helm-projectile)
 
@@ -763,156 +667,6 @@ Repeated invocations toggle between the two most recently open buffers."
 (helm-projectile-on)
 
 ;; (set-face-attribute 'helm-source-header nil :foreground "#ffb86c" :height 1.66)
-
-(use-package mu4e)
-(require 'mu4e-multi)
-(use-package evil-mu4e)
-
-(setq mu4e-mu-binary "/usr/local/bin/mu")
-(setq mu4e-maildir "/Users/Andy/.Maildir")
-
-(setq mu4e-multi-account-alist
-  '(("personal"
-     (user-mail-address .  "andy@andypierz.com")
-     (user-full-name  .   "Andy Pierz")
-     (mu4e-drafts-folder . "/personal/Drafts")
-     (mu4e-trash-folder .  "/personal/Trash")
-     (mu4e-refile-folder . "/personal/Archive"))
-    ("work"
-     (user-mail-address .  "andy@mutdut.com")
-     (user-fullname . "Andy Pierz")
-     (mu4e-drafts-folder . "/work/Drafts")
-     (mu4e-trash-folder .  "/work/Trash")
-     (mu4e-refile-folder . "/work/Archive"))))
-
-(mu4e-multi-enable)
-
-(setq mu4e-drafts-folder "/drafts")
-(setq mu4e-sent-folder "/personal/Sent Items")
-
-
-;;set attachment downloads directory
-(setq mu4e-attachment-dir  "~/Downloads")
-
-;; setup some handy shortcuts
-;; you can quickly switch to your Inbox -- press ``ji''
-;; then, when you want archive some messages, move them to
-;; the 'All Mail' folder by pressing ``ma''.
-
-(setq mu4e-maildir-shortcuts
-  '( ("/personal/INBOX"              . ?i)
-     ("/personal/Sent Items"   . ?s)
-     ("/personal/Trash"       . ?t)
-     ("/personal/Archive"    . ?a)
-     ("/personal/Starred"    . ?p)
-     ("/personal/Drafts"    . ?d)
-
-     ("/work/INBOX"      . ?w)
-     ("/work/Drafts"      . ?z)
-     ("/work/Sent Items"       . ?f)
-     ("/work/Archive"    . ?o)))
-
-
-;; allow for updating mail using 'U' in the main view:
-(setq mu4e-get-mail-command "offlineimap")
-(setq mu4e-update-interval 300)
-
-;; something about ourselves
-(setq
-  user-mail-address "andy@andypierz.com"
-  user-full-name  "Andy Pierz"
-  mu4e-compose-signature
-  (concat
-    ""
-    ""))
-
-
-(require 'smtpmail)
-
-(setq message-send-mail-function 'smtpmail-send-it
-  smtpmail-stream-type 'ssl
-  smtpmail-auth-credentials
-    (expand-file-name "~/.authinfo.gpg")
-  smtpmail-default-smtp-server "mail.hover.com"
-  smtpmail-smtp-server "mail.hover.com"
-  smtpmail-smtp-service 465)
-
-;; don't keep message buffers around
-(setq message-kill-buffer-on-exit t)
-
-(defvar my-mu4e-account-alist
-  '(("personal"
-  ;; about me
-  (user-mail-address      "andy@andypierz.com")
-  (user-full-name         "Andy Pierz")
-  ;; smtp
-  (smtpmail-stream-type ssl)
-  (smtpmail-starttls-credentials '(("mail.hover.com" 587 nil nil)))
-  (smtpmail-default-smtp-server "mail.hover.com")
-  (smtpmail-smtp-server "mail.hover.com")
-  (smtpmail-smtp-service 465))
-  ("work"
-  ;; about me
-  (user-mail-address      "andy@mutdut.com")
-  (user-full-name         "Andy Pierz")
-  ;;(mu4e-compose-signature "0xAX")
-
-  ;; smtp
-  (smtpmail-stream-type ssl)
-  (smtpmail-auth-credentials '(("mail.hover.com" 25 "andy@mutdut.com" nil)))
-  (smtpmail-default-smtp-server "mail.hover.com")
-  (smtpmail-smtp-service 465))))
-
-(defun my-mu4e-set-account ()
-  "Set the account for composing a message."
-  (let* ((account
-    (if mu4e-compose-parent-message
-      (let ((maildir (mu4e-message-field mu4e-compose-parent-message :maildir)))
-      (string-match "/\\(.*?\\)/" maildir)
-      (match-string 1 maildir))
-      (completing-read (format "Compose with account: (%s) "
-        (mapconcat #'(lambda (var) (car var)) my-mu4e-account-alist "/"))
-        (mapcar #'(lambda (var) (car var)) my-mu4e-account-alist)
-          nil t nil nil (car my-mu4e-account-alist))))
-        (account-vars (cdr (assoc account my-mu4e-account-alist))))
-    (if account-vars
-      (mapc #'(lambda (var)
-       (set (car var) (cadr var)))
-          account-vars)
-    (error "No email account found"))))
-
-(add-hook 'mu4e-compose-pre-hook 'my-mu4e-set-account)
-
-
-(use-package evil-mu4e)
-
-(define-key mu4e-headers-mode-map "p" 'mu4e-headers-mark-for-flag)
-
-(add-hook 'mu4e-main-mode-hook 'evil-motion-state)
-(add-hook 'mu4e-headers-mode-hook 'evil-motion-state)
-
-(require 'gnus-dired)
-;; make the `gnus-dired-mail-buffers' function also work on
-;; message-mode derived modes, such as mu4e-compose-mode
-(defun gnus-dired-mail-buffers ()
-  "Return a list of active message buffers."
-  (let (buffers)
-    (save-current-buffer
-      (dolist (buffer (buffer-list t))
-  (set-buffer buffer)
-  (when (and (derived-mode-p 'message-mode)
-    (null message-sent-message-via))
-    (push (buffer-name buffer) buffers))))
-    (nreverse buffers)))
-
-(setq gnus-dired-mail-mode 'mu4e-user-agent)
-(add-hook 'dired-mode-hook 'turn-on-gnus-dired-mode)
-
-(setq mu4e-view-show-images t)
-(setq mu4e-view-show-image-max-width 800)
-(when (fboundp 'imagemagick-register-types)
-  (imagemagick-register-types))
-(setq mu4e-view-prefer-html nil)
 
 (use-package magit)
 (use-package evil-magit)
@@ -973,6 +727,9 @@ Repeated invocations toggle between the two most recently open buffers."
 
 ;; If non-nil, only display one number for checker information if applicable.
 (setq doom-modeline-checker-simple-format t)
+
+
+(setq doom-modeline-vcs t)
 
 ;; The maximum displayed length of the branch name of version control.
 (setq doom-modeline-vcs-max-length 12)
@@ -1045,8 +802,8 @@ Repeated invocations toggle between the two most recently open buffers."
 (global-set-key (kbd "C-x v SPC") #'git-gutter:mark-hunk)
 
 (custom-set-variables
- '(git-gutter:modified-sign "▐") ;; two space
- '(git-gutter:added-sign "▐")    ;; multiple character is OK
+ '(git-gutter:modified-sign "▐") 
+ '(git-gutter:added-sign "▐")    
  '(git-gutter:deleted-sign "▐"))
  '(git-gutter:update-interval 2)
  '(git-gutter:visual-line t)
@@ -1056,3 +813,5 @@ Repeated invocations toggle between the two most recently open buffers."
  '(git-gutter:added    ((t (:foreground "#40883F"))))
  '(git-gutter:modified ((t (:foreground "#AF8700"))))
  '(git-gutter:deleted  ((t (:foreground "#FF5555")))))
+
+;; (setq vc-handled-backends "Git")

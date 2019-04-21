@@ -523,7 +523,7 @@
 	    [(2012 4 7)
 	     nil "replace a word with a synonym looked up in a web service." single])
  (theme-looper .
-	       [(20190330 2359)
+	       [(20190417 2359)
 		((cl-lib
 		  (0 5)))
 		"Loop thru the available color-themes" single])
