@@ -394,7 +394,7 @@ Repeated invocations toggle between the two most recently open buffers."
 
 (global-set-key [f4] 'fci-mode)
 (global-set-key [f5] 'search-my-notes)
-(global-set-key [f6] 'linum-relative-mode)
+(global-set-key [f6] 'display-line-numbers-mode)
 
 (use-package neotree)
 (global-set-key [f8] 'neotree-toggle)
@@ -470,10 +470,6 @@ Repeated invocations toggle between the two most recently open buffers."
     (when (and file (equal (file-name-directory file) "~/Dropbox/Notes"))
     (org-mode)))))
 
-(use-package linum-off
-  :config
-  (add-to-list 'linum-disabled-modes-list "org-mode"))
-
 (add-to-list 'org-latex-classes
              '("article"
                "\\documentclass{article}"
@@ -502,7 +498,7 @@ Repeated invocations toggle between the two most recently open buffers."
   (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
 
 (setq org-ellipsis "…")
-(setq 
+(setq
       ;; org-fontify-whole-heading-line t
       org-fontify-done-headline t
       org-fontify-quote-and-verse-blocks t)
@@ -574,15 +570,9 @@ Repeated invocations toggle between the two most recently open buffers."
 (add-to-list 'company-backends 'company-dabbrev)
 (add-to-list 'company-backends 'company-dabbrev-code)
 
-(require 'linum-relative)
-
-(linum-mode)
-(global-linum-mode)
-(setq linum-format "%3d ")
-(with-eval-after-load 'linum
-(linum-relative-toggle))
-(setq linum-relative-plusp-offset 0)
-(setq linum-relative-current-symbol "")
+(global-display-line-numbers-mode t)
+(setq display-line-numbers-type 'relative)
+(setq display-line-numbers "%4d \u2502 ")
 
 (use-package smooth-scrolling
   :config
@@ -933,10 +923,10 @@ Repeated invocations toggle between the two most recently open buffers."
 (use-package git-gutter)
 
 ;; If you enable global minor mode
-(global-git-gutter-mode t)
+(global-git-gutter-mode +1)
 
 ;; If you would like to use git-gutter.el and linum-mode
-(git-gutter:linum-setup)
+;; (git-gutter:linum-setup)
 
 (global-set-key (kbd "C-x C-g") 'git-gutter)
 (global-set-key (kbd "C-x v =") 'git-gutter:popup-hunk)
@@ -958,6 +948,9 @@ Repeated invocations toggle between the two most recently open buffers."
  '(git-gutter:modified-sign "▐") ;; two space
  '(git-gutter:added-sign "▐")    ;; multiple character is OK
  '(git-gutter:deleted-sign "▐"))
+ '(git-gutter:update-interval 2)
+ '(git-gutter:visual-line t)
+
 
 (custom-set-faces
  '(git-gutter:added    ((t (:foreground "#48d245"))))

@@ -365,7 +365,7 @@ I use some diminsh functions I got from [[https://github.com/hrs][hrs]]. This le
   (diminish-major-mode 'markdown-mode-hook ".md")
 
 #+END_SRC
-d
+
 * evil-mode
 
 I prefer the Vim keybindings and use them wherever possible in Emacs. I recently made a switch to HJKL from IJKL when I learned the arrow keys on my =Pok3r= keyboard could be reprogrammed to use HJKL everywhere so I'm currently tring to unlearn my old bad habits.
@@ -395,7 +395,7 @@ I prefer the Vim keybindings and use them wherever possible in Emacs. I recently
     (evil-snipe-override-mode 1))
 
 #+END_SRC
-   
+
 ** Controls
 
    I make a few changes to the =dired= control map to make it more natural when using Vim style navigation. Also I use 'jk' as a quick shortcut to return to =evil-normal-state=.
@@ -412,6 +412,9 @@ I prefer the Vim keybindings and use them wherever possible in Emacs. I recently
   (key-chord-define evil-replace-state-map "jk" 'evil-normal-state)
   (key-chord-define evil-visual-state-map "jk" 'evil-normal-state)
   (key-chord-define evil-motion-state-map "jk" 'evil-normal-state)
+
+  (key-chord-define-global "jk" 'evil-normal-state)
+
   (evil-define-key 'normal dired-mode-map "h" 'dired-up-directory)
   (evil-define-key 'normal dired-mode-map "l" 'dired-find-alternate-file)
   (evil-define-key 'normal dired-mode-map "v" 'dired-toggle-marks)
@@ -547,7 +550,7 @@ I prefer the Vim keybindings and use them wherever possible in Emacs. I recently
 
   (global-set-key [f4] 'fci-mode)
   (global-set-key [f5] 'search-my-notes)
-  (global-set-key [f6] 'linum-relative-mode)
+  (global-set-key [f6] 'display-line-numbers-mode)
 
   (use-package neotree)
   (global-set-key [f8] 'neotree-toggle)
@@ -667,14 +670,6 @@ I want everything in my notes folder to open in =Org-mode= and for .txt files to
       (org-mode)))))
 #+END_SRC
 
-I prefer to turn line numbers off while in =Org-mode=.
-
-#+BEGIN_SRC emacs-lisp
-  (use-package linum-off
-    :config
-    (add-to-list 'linum-disabled-modes-list "org-mode"))
-#+END_SRC
-
 
 #+BEGIN_SRC emacs-lisp
 
@@ -731,7 +726,7 @@ I've given these keywords colors from my current theme.
   Leuven theme has nice looking org defaults so I don't mess with them too much. There are a few things that help though)
 #+BEGIN_SRC emacs-lisp
   (setq org-ellipsis "…")
-  (setq 
+  (setq
         ;; org-fontify-whole-heading-line t
         org-fontify-done-headline t
         org-fontify-quote-and-verse-blocks t)
@@ -847,16 +842,12 @@ I like yasnippet for snippets, but I generally rely on auto-complete to speed up
 I use relative line numbers, which helps with the Vim bindings. I use a 0 offset, so if I want to delete to a line and it says its line 4 I can press =d-4-j=.
 
 #+BEGIN_SRC emacs-lisp
-  (require 'linum-relative)
 
-  (linum-mode)
-  (global-linum-mode)
-  (setq linum-format "%3d ")
-  (with-eval-after-load 'linum
-  (linum-relative-toggle))
-  (setq linum-relative-plusp-offset 0)
-  (setq linum-relative-current-symbol "")
+  (global-display-line-numbers-mode t)
+  (setq display-line-numbers-type 'relative)
+  (setq display-line-numbers "%4d \u2502 ")
 
+  (set-face-attribute 'line-number-current-line nil :weight 'bold)
 #+END_SRC
 
 I use smooth scrolling, it might be a placebo.
@@ -1279,12 +1270,6 @@ Show some images in email messages.
 
 #+END_SRC
 
-
-Convert html emails to text.
-
-#+BEGIN_SRC emacs-lisp
-  (setq mu4e-html2text-command 'mu4e-shr2text)
-#+END_SRC
 * Magit
 
 Magit is Emacs' Git interface.
@@ -1308,6 +1293,105 @@ This is to encrypt my password so I can use it when sending email. If anyone kno
 (require 'doom-modeline)
 (doom-modeline-mode 1)
 
+;; How tall the mode-line should be (only respected in GUI Emacs).
+(setq doom-modeline-height 25)
+
+;; How wide the mode-line bar should be (only respected in GUI Emacs).
+(setq doom-modeline-bar-width 3)
+
+;; Determines the style used by `doom-modeline-buffer-file-name'.
+;;
+;; Given ~/Projects/FOSS/emacs/lisp/comint.el
+;;   truncate-upto-project => ~/P/F/emacs/lisp/comint.el
+;;   truncate-from-project => ~/Projects/FOSS/emacs/l/comint.el
+;;   truncate-with-project => emacs/l/comint.el
+;;   truncate-except-project => ~/P/F/emacs/l/comint.el
+;;   truncate-upto-root => ~/P/F/e/lisp/comint.el
+;;   truncate-all => ~/P/F/e/l/comint.el
+;;   relative-from-project => emacs/lisp/comint.el
+;;   relative-to-project => lisp/comint.el
+;;   file-name => comint.el
+;;   buffer-name => comint.el<2> (uniquify buffer name)
+;;
+;; If you are expereicing the laggy issue, especially while editing remote files
+;; with tramp, please try `file-name' style.
+;; Please refer to https://github.com/bbatsov/projectile/issues/657.
+(setq doom-modeline-buffer-file-name-style 'truncate-upto-project)
+
+;; Whether display icons in mode-line or not.
+(setq doom-modeline-icon t)
+
+;; Whether display the icon for major mode. It respects `doom-modeline-icon'.
+(setq doom-modeline-major-mode-icon t)
+
+;; Whether display color icons for `major-mode'. It respects
+;; `doom-modeline-icon' and `all-the-icons-color-icons'.
+(setq doom-modeline-major-mode-color-icon t)
+
+;; Whether display icons for buffer states. It respects `doom-modeline-icon'.
+(setq doom-modeline-buffer-state-icon t)
+
+;; Whether display buffer modification icon. It respects `doom-modeline-icon'
+;; and `doom-modeline-buffer-state-icon'.
+(setq doom-modeline-buffer-modification-icon t)
+
+;; Whether display minor modes in mode-line or not.
+(setq doom-modeline-minor-modes nil)
+
+;; If non-nil, a word count will be added to the selection-info modeline segment.
+(setq doom-modeline-enable-word-count nil)
+
+;; If non-nil, only display one number for checker information if applicable.
+(setq doom-modeline-checker-simple-format t)
+  
+;; The maximum displayed length of the branch name of version control.
+(setq doom-modeline-vcs-max-length 12)
+
+;; Whether display perspective name or not. Non-nil to display in mode-line.
+(setq doom-modeline-persp-name t)
+
+;; Whether display `lsp' state or not. Non-nil to display in mode-line.
+(setq doom-modeline-lsp t)
+
+;; Whether display github notifications or not. Requires `ghub` package.
+(setq doom-modeline-github nil)
+
+;; The interval of checking github.
+(setq doom-modeline-github-interval (* 30 60))
+
+;; Whether display environment version or not
+(setq doom-modeline-env-version t)
+;; Or for individual languages
+(setq doom-modeline-env-enable-python t)
+(setq doom-modeline-env-enable-ruby t)
+(setq doom-modeline-env-enable-perl t)
+(setq doom-modeline-env-enable-go t)
+(setq doom-modeline-env-enable-elixir t)
+(setq doom-modeline-env-enable-rust t)
+
+;; Change the executables to use for the language version string
+(setq doom-modeline-env-python-executable "python")
+(setq doom-modeline-env-ruby-executable "ruby")
+(setq doom-modeline-env-perl-executable "perl")
+(setq doom-modeline-env-go-executable "go")
+(setq doom-modeline-env-elixir-executable "iex")
+(setq doom-modeline-env-rust-executable "rustc")
+
+;; Whether display mu4e notifications or not. Requires `mu4e-alert' package.
+(setq doom-modeline-mu4e t)
+
+;; Whether display irc notifications or not. Requires `circe' package.
+(setq doom-modeline-irc t)
+
+;; Function to stylize the irc buffer names.
+(setq doom-modeline-irc-stylize 'identity)
+
+;;Visual Customization
+(set-face-attribute 'doom-modeline-buffer-modified nil :foreground "#FF5555" :background "#AEEEEE")
+(set-face-attribute 'doom-modeline-evil-insert-state nil :foreground "#FF5555" :background "#AEEEEE")
+
+
+
 #+END_SRC
 
 * Version Control
@@ -1316,10 +1400,10 @@ This is to encrypt my password so I can use it when sending email. If anyone kno
   (use-package git-gutter)
 
   ;; If you enable global minor mode
-  (global-git-gutter-mode t)
+  (global-git-gutter-mode +1)
 
   ;; If you would like to use git-gutter.el and linum-mode
-  (git-gutter:linum-setup)
+  ;; (git-gutter:linum-setup)
 
   (global-set-key (kbd "C-x C-g") 'git-gutter)
   (global-set-key (kbd "C-x v =") 'git-gutter:popup-hunk)
@@ -1341,10 +1425,13 @@ This is to encrypt my password so I can use it when sending email. If anyone kno
    '(git-gutter:modified-sign "▐") ;; two space
    '(git-gutter:added-sign "▐")    ;; multiple character is OK
    '(git-gutter:deleted-sign "▐"))
+   '(git-gutter:update-interval 2)
+   '(git-gutter:visual-line t)
+
 
   (custom-set-faces
-   '(git-gutter:added    ((t (:foreground "#48d245"))))
-   '(git-gutter:modified ((t (:foreground "#eedd82"))))
-   '(git-gutter:deleted  ((t (:foreground "#d27490")))))
+   '(git-gutter:added    ((t (:foreground "#40883F"))))
+   '(git-gutter:modified ((t (:foreground "#AF8700"))))
+   '(git-gutter:deleted  ((t (:foreground "#FF5555")))))
 #+END_SRC
-  
+

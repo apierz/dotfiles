@@ -1,58 +1,8 @@
-;;;; Emacs Bookmark Format Version 1 ;;;;
+;;;; Emacs Bookmark Format Version 1 ;;;; -*- coding: utf-8-emacs -*- 
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("cic"
- (filename . "~/Documents/dotfiles/emacs.d/config.org")
- (front-context-string . "\n\n\n#+END_SRC\n\nJu")
- (rear-context-string . "blue-yellow t)\n\n")
- (position . 11344))
-("civic-theme.el"
- (filename . "~/Documents/Programming_Projects/nord-theme/civic-theme.el")
- (front-context-string . ";;; civic-theme.")
- (rear-context-string)
- (position . 1))
-("elpa"
- (filename . "~/.emacs.d/elpa/")
- (front-context-string . "anzu-20161017.90")
- (rear-context-string . "04 Nov  1  2016 ")
- (position . 589))
-("feed-reader"
- (filename . "~/Documents/Programming_Projects/fipp/")
- (front-context-string)
- (rear-context-string . "Mar  1 18:08 ..\n")
- (position . 207))
-("nord-theme.el"
- (filename . "~/Documents/Programming_Projects/nord-theme/nord-theme.el")
- (front-context-string . "\n      (nord3  \"")
- (rear-context-string . "ord2  \"#434c5e\")")
- (position . 226))
-("gruvbox-theme.el"
- (filename . "~/Documents/dotfiles/emacs.d/elpa/gruvbox-theme-20161229.1817/gruvbox-theme.el")
- (front-context-string . ";;; gruvbox-them")
- (rear-context-string)
- (position . 1))
-("ap-compsci-theme.el"
- (filename . "~/Documents/Programming_Projects/nord-theme/apcompsci-theme.el")
- (front-context-string . ";;; ap-compsci-t")
- (rear-context-string)
- (position . 1))
-("leuven-theme.el"
- (filename . "~/Documents/dotfiles/emacs.d/elpa/leuven-theme-20170508.1319/")
- (front-context-string . ";;; leuven-theme")
- (rear-context-string)
- (position . 1))
-("scripts"
- (filename . "~/.kwm/scripts/")
- (front-context-string . "compstatus\n  -rw")
- (rear-context-string . "34 Oct 12 08:28 ")
- (position . 225))
-("homepage.html"
- (filename . "~/Sites/homepage/homepage.html")
- (front-context-string . "\n	\n	.block {\n		d")
- (rear-context-string . "margin: auto;\n	}")
- (position . 461))
-("nerdbar.widget"
+(("nerdbar.widget"
  (filename . "~/Documents/Programming_Projects/nerdbar.widget/")
  (front-context-string . " scripts\n  -rw-r")
  (rear-context-string . "714 Mar 20 15:25")
@@ -67,59 +17,14 @@
  (front-context-string . "emacs.d\n  -rw-r-")
  (rear-context-string . "82 Sep 11 13:16 ")
  (position . 756))
-("Python"
- (filename . "~/Documents/Python/")
- (front-context-string . "python_notes.org")
- (rear-context-string . "62 Sep 10 16:51 ")
- (position . 283))
-("MUTDUT"
- (filename . "~/Dropbox (MUTDUT)/MUTDUT Team Folder/Andy (Public)/")
- (front-context-string . "Kickstarter\n  dr")
- (rear-context-string . "04 Aug 31 10:59 ")
- (position . 661))
-("powerline"
- (filename . "~/Documents/Programming_Projects/powerline/")
- (front-context-string . ".git\n  -rw-r--r-")
- (rear-context-string . "42 Aug  1 07:22 ")
- (position . 1))
-("keymap.c"
- (filename . "~/Documents/qmk_firmware/keyboards/planck/keymaps/andykeymap/keymap.c")
- (front-context-string . "#include \"planck")
- (rear-context-string)
- (position . 1))
 ("config"
  (filename . "~/Documents/dotfiles/emacs.d/config.org")
  (front-context-string . "#+Title: config.")
  (rear-context-string)
  (position . 1))
-("simple_cms"
- (filename . "~/Sites/simple_cms/")
- (front-context-string . ".DS_Store\n  drwx")
- (rear-context-string . "96 May 16 07:57 ")
- (position . 230))
-("Bash-Class"
- (filename . "~/Documents/Programming_Projects/Bash-Class/")
- (front-context-string)
- (rear-context-string . "Jun 25 19:02 ..\n")
- (position . 202))
 (".bashrc"
  (filename . "~/.bashrc")
  (front-context-string . "alias emc='LANG=")
- (rear-context-string)
- (position . 1))
-("dracula-theme"
- (filename . "~/Documents/Programming_Projects/dracula-theme/emacs/")
- (front-context-string . "dracula-theme.el")
- (rear-context-string . "08 Jun 12 11:03 ")
- (position . 494))
-("ruby-fles"
- (filename . "~/Documents/Ruby/")
- (front-context-string . " .DS_Store\n  -rw")
- (rear-context-string . "148 May 17 21:09")
- (position . 227))
-("todo.txt"
- (filename . "~/Dropbox/Notes/todo.txt")
- (front-context-string . "-*- mode: org; -")
  (rear-context-string)
  (position . 1))
 ("init.el"
