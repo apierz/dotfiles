@@ -10,7 +10,7 @@ set fish_pager_color_progress	'black' '--bold' '--background=cyan'
 
 set fish_color_user 'black' '--background=yellow'
 set fish_color_user_swap 'yellow' '--background=green'
-set fish_color_host 'black' '--background=green'
+set fish_color_host 'black' '--background=cyan'
 set fish_color_host_swap 'green' '--background=blue'
 set fish_color_cwd  'black' '--background=blue'
 set fish_color_cwd_swap  'blue' '--background=white'

@@ -218,6 +218,30 @@ Repeated invocations toggle between the two most recently open buffers."
       (narrow-to-region start end)
       (while (re-search-forward "[, ]" nil t) (replace-match "" nil t)))))
 
+
+;; recursively find .org files in provided directory
+;; modified from an Emacs Lisp Intro example
+(defun sa-find-org-file-recursively (&optional directory filext)
+  "Return .org and .org_archive files recursively from DIRECTORY.
+If FILEXT is provided, return files with extension FILEXT instead."
+  (interactive "DDirectory: ")
+  (let* (org-file-list
+         (case-fold-search t)         ; filesystems are case sensitive
+         (file-name-regex "^[^.#].*") ; exclude dot, autosave, and backupfiles
+         (filext (or filext "org$\\\|org_archive"))
+         (fileregex (format "%s\\.\\(%s$\\)" file-name-regex filext))
+         (cur-dir-list (directory-files directory t file-name-regex)))
+    ;; loop over directory listing
+    (dolist (file-or-dir cur-dir-list org-file-list) ; returns org-file-list
+      (cond
+       ((file-regular-p file-or-dir)             ; regular files
+        (if (string-match fileregex file-or-dir) ; org files
+            (add-to-list 'org-file-list file-or-dir)))
+       ((file-directory-p file-or-dir)
+        (dolist (org-file (sa-find-org-file-recursively file-or-dir filext)
+                          org-file-list) ; add files found to result
+          (add-to-list 'org-file-list org-file)))))))
+
 (require 'nofrils-acme-theme)
 (load-theme 'nofrils-acme t)
 
@@ -286,6 +310,10 @@ Repeated invocations toggle between the two most recently open buffers."
   :config
   (evil-snipe-mode 1)
   (evil-snipe-override-mode 1))
+(use-package evil-numbers
+:config
+(define-key evil-normal-state-map (kbd "C-c +") 'evil-numbers/inc-at-pt)
+(define-key evil-normal-state-map (kbd "C-c -") 'evil-numbers/dec-at-pt))
 
 (use-package key-chord
   :config
@@ -461,10 +489,10 @@ Repeated invocations toggle between the two most recently open buffers."
 (global-set-key "\C-cb" 'org-iswitchb)
 
 (setq org-export-coding-system 'utf-8)
-(setq org-agenda-files (list "~/Dropbox/Notes"))
-(setq org-agenda-file-regexp "\\`[^.].*\\.txt\\|[0-9]\\{8\\}\\'")
-(add-to-list 'auto-mode-alist '("\\.txt$" . org-mode))
-(setq org-agenda-text-search-extra-files (list nil ))
+(setq org-agenda-files '("~/Dropbox/Notes"))
+(setq org-agenda-text-search-extra-files
+    (append (sa-find-org-file-recursively "~/Dropbox/Notes" "txt")
+            (sa-find-org-file-recursively "~/Dropbox/Notes" "org")))
 
 
 (add-hook 'find-file-hooks
@@ -499,6 +527,26 @@ Repeated invocations toggle between the two most recently open buffers."
   :ensure t
   :config
   (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
+
+(defface org-checkbox-todo-text
+    '((t (:inherit nil)))
+    "Face for the text part of an unchecked org-mode checkbox.")
+
+(font-lock-add-keywords
+ 'org-mode
+ `(("^[ \t]*\\(?:[-+*]\\|[0-9]+[).]\\)[ \t]+\\(\\(?:\\[@\\(?:start:\\)?[0-9]+\\][ \t]*\\)?\\[\\(?: \\|\\([0-9]+\\)/\\2\\)\\][^\n]*\n\\)" 1 'org-checkbox-todo-text prepend))
+ 'append)
+
+(defface org-checkbox-done-text
+    '((t (:inherit 'shadow :bold nil)))
+    "Face for the text part of a checked org-mode checkbox.")
+
+(font-lock-add-keywords
+ 'org-mode
+ `(("^[ \t]*\\(?:[-+*]\\|[0-9]+[).]\\)[ \t]+\\(\\(?:\\[@\\(?:start:\\)?[0-9]+\\][ \t]*\\)?\\[\\(?:X\\|\\([0-9]+\\)/\\2\\)\\][^\n]*\n\\)" 1 'org-checkbox-done-text prepend))
+ 'append)
+
+;; (custom-set-faces '(org-checkbox ((t (:foreground nil :strike-through nil)))))
 
 (setq org-ellipsis "…")
 (setq
@@ -595,14 +643,6 @@ Repeated invocations toggle between the two most recently open buffers."
 (setq flycheck-python-pycompile-executable "python3")
 (setq python-shell-interpreter "python3")
 (setq python-shell-native-complete nil)
-
-(require 'package)
-(add-to-list 'package-archives
-             '("elpy" . "https://jorgenschaefer.github.io/packages/"))
-(package-refresh-contents)
-
-;; will enable Elpy in all future Python buffers
-(elpy-enable)
 
 (add-hook 'python-mode-hook
  (lambda ()
@@ -813,5 +853,3 @@ Repeated invocations toggle between the two most recently open buffers."
  '(git-gutter:added    ((t (:foreground "#40883F"))))
  '(git-gutter:modified ((t (:foreground "#AF8700"))))
  '(git-gutter:deleted  ((t (:foreground "#FF5555")))))
-
-;; (setq vc-handled-backends "Git")

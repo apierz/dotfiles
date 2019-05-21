@@ -36,12 +36,12 @@ macro index,pager P "<change-folder>=/personal/INBOX<enter>" "Archive Message"
 macro index,pager a ":set confirmappend=no delete=yes\n<save-message>=/personal/archive\n<sync-mailbox>:set confirmappend=yes delete=ask-yes\n"
 
 
- color status     white black
+ color status     black brightmagenta
  color indicator  white brightgreen
  color search     white magenta
  color markers    white yellow
  color hdrdefault black brightcyan
- color normal     black brightwhite
+ color normal     black white
 #SMTP
 
 set smtp_url="smtps://andy@andypierz.com@mail.hover.com:465/"
