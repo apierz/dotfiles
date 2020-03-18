@@ -1,0 +1,2 @@
+;;; -*- no-byte-compile: t -*-
+(define-package "fountain-mode" "20200312.1315" "Major mode for screenwriting in Fountain markup" '((emacs "24.5") (seq "2.20")) :commit "92fdd9c8a5e405cd77ee6f338351b9ebc8976038" :keywords '("wp" "text") :authors '(("William Rankin" . "code@william.bydasein.com")) :maintainer '("William Rankin" . "code@william.bydasein.com") :url "https://github.com/rnkn/fountain-mode")
