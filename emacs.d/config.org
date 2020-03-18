@@ -30,6 +30,7 @@ The first thing that gets loaded is =package=, Emacs' package manager. I then ad
 
   (setq package-enable-at-startup nil)
   (package-initialize)
+  (setq package-check-signature nil)
 #+END_SRC
 
 Next I want to set my load paths, it's mostly the standard folders, plus any other working directories.
@@ -58,31 +59,30 @@ Next I want to set my load paths, it's mostly the standard folders, plus any oth
 These are basic Emacs settings. They include inhibiting the startup screen and menu-bar and various small visual preferences.
 
 #+BEGIN_SRC emacs-lisp
-  (setq inhibit-splash-screen t
-        inhibit-startup-message t
-        inhibit-startup-echo-area-message t)
-  (menu-bar-mode -1)
-  (tool-bar-mode -1)
-  (when (boundp 'scroll-bar-mode)
-    (scroll-bar-mode -1))
-  (show-paren-mode nil)
-  (setq visual-line-fringe-indicators '(left-curly-arrow right-curly-arrow))
-  (setq-default left-fringe-width nil)
-  (setq-default indent-tabs-mode nil)
-  ;; (eval-after-load "vc" '(setq vc-handled-backends nil))
-  ;; (setq vc-follow-symlinks t)
-  (setq large-file-warning-threshold nil)
-  (setq split-width-threshold nil)
-  (setq custom-safe-themes t)
-  (put 'narrow-to-region 'disabled nil)
-  (setq global-visual-line-mode t)
-  (setq word-wrap t)
-  (setq initial-major-mode 'org-mode)
-  (setq initial-scratch-message "")
-  (setq-default fill-column 80)
-  (setq-default tab-width 2)
-  (put 'dired-find-alternate-file 'disabled nil)
-
+    (setq inhibit-splash-screen t
+          inhibit-startup-message t
+          inhibit-startup-echo-area-message t)
+    (menu-bar-mode -1)
+    (tool-bar-mode -1)
+    (when (boundp 'scroll-bar-mode)
+      (scroll-bar-mode -1))
+    (show-paren-mode nil)
+    (setq visual-line-fringe-indicators '(left-curly-arrow right-curly-arrow))
+    (setq-default left-fringe-width nil)
+    (setq-default indent-tabs-mode nil)
+    ;; (eval-after-load "vc" '(setq vc-handled-backends nil))
+    ;; (setq vc-follow-symlinks t)
+    (setq large-file-warning-threshold nil)
+    (setq split-width-threshold nil)
+    (setq custom-safe-themes t)
+    (put 'narrow-to-region 'disabled nil)
+    (setq global-visual-line-mode t)
+    (setq word-wrap t)
+    (setq initial-major-mode 'org-mode)
+    (setq initial-scratch-message "")
+    (setq-default fill-column 80)
+    (setq-default tab-width 2)
+    (put 'dired-find-alternate-file 'disabled nil)
 #+END_SRC
 
 ** Title Bar Configuration
@@ -317,7 +317,7 @@ Small utility functions, mostly collected from others.
 * Visual Stuff
 
 
-I used to use Leuven for my color theme and Hack as my font, but I change both all the time.
+I used to use =nofrils-acme= for my color theme and SF Mono as my font, but I change both all the time.
 
 #+BEGIN_SRC emacs-lisp
 
@@ -328,21 +328,6 @@ I used to use Leuven for my color theme and Hack as my font, but I change both a
                         :family "SF Mono" :height 120)
 
         (mac-auto-operator-composition-mode)
-
-        ;; (use-package doom-neotree
-        ;;   :config
-        ;;   (setq doom-neotree-enable-file-icons 'simple)
-        ;;   (setq doom-neotree-enable-dir-icons t)
-        ;;   (setq doom-neotree-enable-dir-chevrons t)
-        ;;   (setq doom-neotree-line-spacing 2))
-
-        ;; (use-package spacemacs-theme)
-        ;; (load-theme 'spacemacs-light t)
-
-        ;; (use-package civic-theme)
-        ;; (load-theme 'civic t)
-
-
 
 #+END_SRC
 
@@ -712,41 +697,39 @@ I want everything in my notes folder to open in =Org-mode= and for .txt files to
 ** Keywords
 
 My todo system is fairly simple.
-- =TODO= = unsorted
-- =ONDECK= = could be done at anytime
+- =TODO= = could be done at anytime
 - =WAITING= = waiting on something out of my control
+- =NEEDED= = someone else is waiting on this
 - =SOMEDAY= = not urgent
-- =CURRENT= = the thing I am currently working on.
+- =DONE= = completed.
 
 I've given these keywords colors from my current theme.
 
 #+BEGIN_SRC emacs-lisp
   (setq org-todo-keywords
-    '((sequence "TODO(t)" "ONDECK(o)" "WAITING(w)" "SOMEDAY(s)" "CURRENT(c)" "|" "DONE(d)")))
+    '((sequence "TODO(t)" "WAITING(w)" "SOMEDAY(s)" "NEEDED(n)" "|" "DONE(d)")))
 
    ;; For Dracula Theme
    (setq org-todo-keyword-faces
-     '(("ONDECK"  . (:foreground "#c77a4b" :weight bold))
-       ("TODO"    . (:foreground "#746db0" :weight bold))
-       ("WAITING" . (:foreground "#7f7f7f" :weight bold))
-       ("CURRENT" . (:foreground "#d3232e" :weight bold))
-       ("DONE"    . (:foreground "#32cf72" :weight bold))
-       ("SOMEDAY" . (:foreground "#5124e3" :weight bold))))
+     '(("TODO"    . (:foreground "#b85c57" :weight bold))
+       ("WAITING" . (:foreground "#8888c8" :weight bold))
+       ("DONE"    . (:foreground "#40883f" :weight bold))
+       ("NEEDED"  . (:background "#f8e8e8" :weight bold))
+       ("SOMEDAY" . (:foreground "#0287c8" :weight bold))))
 
 #+END_SRC
 
-#+RESULTS:
 
 ** Visual Styling
 
    I prefer to use fancy bullets, rather than a row of *s. Though every now and then I like to go back to a simpler style with one font size and regular bullets.
 
 #+BEGIN_SRC emacs-lisp
-  (setq org-hide-leading-stars t)
-  (use-package org-bullets
-    :ensure t
-    :config
-    (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
+  ;; (setq org-hide-leading-stars t)
+  ;; (use-package org-bullets
+  ;;   :ensure t
+  ;;   :config
+  ;;   (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
 #+END_SRC
 
 Makes it so I can customize the appearance of checkbox text.
@@ -773,7 +756,7 @@ Makes it so I can customize the appearance of checkbox text.
 
 #+END_SRC
 
-  Leuven theme has nice looking org defaults so I don't mess with them too much. There are a few things that help though)
+  Acme theme has nice looking org defaults so I don't mess with them too much. There are a few things that help though)
 #+BEGIN_SRC emacs-lisp
   (setq org-ellipsis "…")
   (setq
@@ -793,6 +776,14 @@ Makes it so I can customize the appearance of checkbox text.
 #+BEGIN_SRC emacs-lisp
   (setq org-startup-truncated nil)
 #+END_SRC
+
+   Setting the date color:
+
+#+BEGIN_SRC emacs-lisp
+  (custom-set-faces '(org-date ((t (:foreground nil :background "#e8fce8" )))))
+
+#+END_SRC
+
 
 ** Org Capture
 

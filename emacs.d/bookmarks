@@ -2,7 +2,17 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("nerdbar.widget"
+(("Spending.org"
+ (filename . "~/Dropbox/Notes/Spending.org")
+ (front-context-string . "|   | <2019-05-2")
+ (rear-context-string . "              |\n")
+ (position . 1106))
+("leetcode"
+ (filename . "~/Dropbox/leetcode/")
+ (front-context-string)
+ (rear-context-string . "92 Jun  2 15:35 ")
+ (position . 226))
+("nerdbar.widget"
  (filename . "~/Documents/Programming_Projects/nerdbar.widget/")
  (front-context-string . " scripts\n  -rw-r")
  (rear-context-string . "714 Mar 20 15:25")

@@ -10,6 +10,7 @@
 
 (setq package-enable-at-startup nil)
 (package-initialize)
+(setq package-check-signature nil)
 
 (add-to-list 'load-path (expand-file-name "snippets" user-emacs-directory))
 (add-to-list 'load-path "~/.emacs.d/plugins")
@@ -249,19 +250,6 @@ If FILEXT is provided, return files with extension FILEXT instead."
                       :family "SF Mono" :height 120)
 
       (mac-auto-operator-composition-mode)
-
-      ;; (use-package doom-neotree
-      ;;   :config
-      ;;   (setq doom-neotree-enable-file-icons 'simple)
-      ;;   (setq doom-neotree-enable-dir-icons t)
-      ;;   (setq doom-neotree-enable-dir-chevrons t)
-      ;;   (setq doom-neotree-line-spacing 2))
-
-      ;; (use-package spacemacs-theme)
-      ;; (load-theme 'spacemacs-light t)
-
-      ;; (use-package civic-theme)
-      ;; (load-theme 'civic t)
 
 (prefer-coding-system       'utf-8)
 (set-default-coding-systems 'utf-8)
@@ -511,22 +499,21 @@ If FILEXT is provided, return files with extension FILEXT instead."
                ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
 
 (setq org-todo-keywords
-  '((sequence "TODO(t)" "ONDECK(o)" "WAITING(w)" "SOMEDAY(s)" "CURRENT(c)" "|" "DONE(d)")))
+  '((sequence "TODO(t)" "WAITING(w)" "SOMEDAY(s)" "NEEDED(n)" "|" "DONE(d)")))
 
  ;; For Dracula Theme
  (setq org-todo-keyword-faces
-   '(("ONDECK"  . (:foreground "#c77a4b" :weight bold))
-     ("TODO"    . (:foreground "#746db0" :weight bold))
-     ("WAITING" . (:foreground "#7f7f7f" :weight bold))
-     ("CURRENT" . (:foreground "#d3232e" :weight bold))
-     ("DONE"    . (:foreground "#32cf72" :weight bold))
-     ("SOMEDAY" . (:foreground "#5124e3" :weight bold))))
+   '(("TODO"    . (:foreground "#b85c57" :weight bold))
+     ("WAITING" . (:foreground "#8888c8" :weight bold))
+     ("DONE"    . (:foreground "#40883f" :weight bold))
+     ("NEEDED"  . (:background "#f8e8e8" :weight bold))
+     ("SOMEDAY" . (:foreground "#0287c8" :weight bold))))
 
-(setq org-hide-leading-stars t)
-(use-package org-bullets
-  :ensure t
-  :config
-  (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
+;; (setq org-hide-leading-stars t)
+;; (use-package org-bullets
+;;   :ensure t
+;;   :config
+;;   (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
 
 (defface org-checkbox-todo-text
     '((t (:inherit nil)))
@@ -557,6 +544,8 @@ If FILEXT is provided, return files with extension FILEXT instead."
 (setq org-cycle-separator-lines 0)
 
 (setq org-startup-truncated nil)
+
+(custom-set-faces '(org-date ((t (:foreground nil :background "#e8fce8" )))))
 
 (defun capture-report-date-file (path)
   (let ((name (read-string "Name: ")))
