@@ -521,7 +521,7 @@
 	    [(2012 4 7)
 	     nil "replace a word with a synonym looked up in a web service." single])
  (theme-looper .
-	       [(20190430 2031)
+	       [(20200410 1259)
 		((emacs
 		  (24))
 		 (cl-lib

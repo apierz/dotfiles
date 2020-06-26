@@ -9,7 +9,6 @@
 (add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
 
 (setq package-enable-at-startup nil)
-(package-initialize)
 (setq package-check-signature nil)
 
 (add-to-list 'load-path (expand-file-name "snippets" user-emacs-directory))
@@ -247,7 +246,7 @@ If FILEXT is provided, return files with extension FILEXT instead."
 (load-theme 'nofrils-acme t)
 
       (set-face-attribute 'default nil
-                      :family "SF Mono" :height 120)
+                      :family "Operator Mono" :height 120 :weight 'normal :width 'condensed)
 
       (mac-auto-operator-composition-mode)
 
@@ -354,10 +353,14 @@ If FILEXT is provided, return files with extension FILEXT instead."
     ":"  'eval-expression
     "d"  'delete-window
     "e"  'find-file
-    "f"  'fontify-and-browse
     "h"  'split-window-vertically
+    "I"  'org-clock-in
+    "O"  'org-clock-out
+    "D"  'org-clock-display
+    "R"  'org-clock-report
     "p"  'cycle-powerline-separators
     "b"  'helm-bookmarks
+    "f"  'helm-mini
     "l"  'whitespace-mode       ;; Show invisible characters
     "nn" 'narrow-and-set-normal ;; Narrow to region and enter normal mode
     "nw" 'widen
@@ -499,15 +502,16 @@ If FILEXT is provided, return files with extension FILEXT instead."
                ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
 
 (setq org-todo-keywords
-  '((sequence "TODO(t)" "WAITING(w)" "SOMEDAY(s)" "NEEDED(n)" "|" "DONE(d)")))
+  '((sequence "TODO(t)" "WAITING(w)" "SOMEDAY(s)" "NEEDED(n)" "|" "CANCELLED(c)" "DONE(d)")))
 
- ;; For Dracula Theme
+ ;; For Plan9 Theme
  (setq org-todo-keyword-faces
-   '(("TODO"    . (:foreground "#b85c57" :weight bold))
-     ("WAITING" . (:foreground "#8888c8" :weight bold))
-     ("DONE"    . (:foreground "#40883f" :weight bold))
-     ("NEEDED"  . (:background "#f8e8e8" :weight bold))
-     ("SOMEDAY" . (:foreground "#0287c8" :weight bold))))
+   '(("TODO"         . (:foreground "#b85c57" :weight bold))
+     ("WAITING"      . (:foreground "#8888c8" :weight bold))
+     ("DONE"         . (:foreground "#40883f" :weight bold))
+     ("CANCELLED"    . (:background "#f8e8e8" :foreground "#000000" :weight bold))
+     ("NEEDED"       . (:background "#b85c57" :weight bold))
+     ("SOMEDAY"      . (:foreground "#0287c8" :weight bold))))
 
 ;; (setq org-hide-leading-stars t)
 ;; (use-package org-bullets
@@ -541,11 +545,13 @@ If FILEXT is provided, return files with extension FILEXT instead."
       org-fontify-done-headline t
       org-fontify-quote-and-verse-blocks t)
 
-(setq org-cycle-separator-lines 0)
+(setq org-cycle-separator-lines 2)
 
 (setq org-startup-truncated nil)
 
 (custom-set-faces '(org-date ((t (:foreground nil :background "#e8fce8" )))))
+
+(custom-set-faces '(org-tag ((t (:foreground nil :background "#98ece8" :slant italic)))))
 
 (defun capture-report-date-file (path)
   (let ((name (read-string "Name: ")))
@@ -573,12 +579,8 @@ If FILEXT is provided, return files with extension FILEXT instead."
    (dot . t)
    (gnuplot . t)))
 
-;; Set to the location of your Org files on your local system
-(setq org-directory "~/Dropbox/Notes")
-;; Set to the name of the file where new notes will be stored
-(setq org-mobile-inbox-for-pull "~/Dropbox/Notes/flagged.org")
-;; Set to <your Dropbox root directory>/MobileOrg.
-(setq org-mobile-directory "~/Dropbox/Apps/MobileOrg")
+(setq org-clock-persist 'history)
+(org-clock-persistence-insinuate)
 
 (use-package yasnippet
   :ensure t

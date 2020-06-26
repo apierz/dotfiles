@@ -29,7 +29,6 @@ The first thing that gets loaded is =package=, Emacs' package manager. I then ad
   (add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
 
   (setq package-enable-at-startup nil)
-  (package-initialize)
   (setq package-check-signature nil)
 #+END_SRC
 
@@ -325,7 +324,7 @@ I used to use =nofrils-acme= for my color theme and SF Mono as my font, but I ch
   (load-theme 'nofrils-acme t)
 
         (set-face-attribute 'default nil
-                        :family "SF Mono" :height 120)
+                        :family "Operator Mono" :height 120 :weight 'normal :width 'condensed)
 
         (mac-auto-operator-composition-mode)
 
@@ -474,10 +473,14 @@ I prefer the Vim keybindings and use them wherever possible in Emacs. I recently
       ":"  'eval-expression
       "d"  'delete-window
       "e"  'find-file
-      "f"  'fontify-and-browse
       "h"  'split-window-vertically
+      "I"  'org-clock-in
+      "O"  'org-clock-out
+      "D"  'org-clock-display
+      "R"  'org-clock-report
       "p"  'cycle-powerline-separators
       "b"  'helm-bookmarks
+      "f"  'helm-mini
       "l"  'whitespace-mode       ;; Show invisible characters
       "nn" 'narrow-and-set-normal ;; Narrow to region and enter normal mode
       "nw" 'widen
@@ -492,6 +495,7 @@ I prefer the Vim keybindings and use them wherever possible in Emacs. I recently
 
   (global-evil-leader-mode)
   (andy--config-evil-leader)
+
 
 #+END_SRC
 
@@ -707,15 +711,16 @@ I've given these keywords colors from my current theme.
 
 #+BEGIN_SRC emacs-lisp
   (setq org-todo-keywords
-    '((sequence "TODO(t)" "WAITING(w)" "SOMEDAY(s)" "NEEDED(n)" "|" "DONE(d)")))
+    '((sequence "TODO(t)" "WAITING(w)" "SOMEDAY(s)" "NEEDED(n)" "|" "CANCELLED(c)" "DONE(d)")))
 
-   ;; For Dracula Theme
+   ;; For Plan9 Theme
    (setq org-todo-keyword-faces
-     '(("TODO"    . (:foreground "#b85c57" :weight bold))
-       ("WAITING" . (:foreground "#8888c8" :weight bold))
-       ("DONE"    . (:foreground "#40883f" :weight bold))
-       ("NEEDED"  . (:background "#f8e8e8" :weight bold))
-       ("SOMEDAY" . (:foreground "#0287c8" :weight bold))))
+     '(("TODO"         . (:foreground "#b85c57" :weight bold))
+       ("WAITING"      . (:foreground "#8888c8" :weight bold))
+       ("DONE"         . (:foreground "#40883f" :weight bold))
+       ("CANCELLED"    . (:background "#f8e8e8" :foreground "#000000" :weight bold))
+       ("NEEDED"       . (:background "#b85c57" :weight bold))
+       ("SOMEDAY"      . (:foreground "#0287c8" :weight bold))))
 
 #+END_SRC
 
@@ -768,7 +773,7 @@ Makes it so I can customize the appearance of checkbox text.
    I like some whitespace between my headings.
 
 #+BEGIN_SRC emacs-lisp
-  (setq org-cycle-separator-lines 0)
+  (setq org-cycle-separator-lines 2)
 #+END_SRC
 
    I prefer my text to wrap.
@@ -784,6 +789,13 @@ Makes it so I can customize the appearance of checkbox text.
 
 #+END_SRC
 
+
+   Setting the tag color:
+
+#+BEGIN_SRC emacs-lisp
+  (custom-set-faces '(org-tag ((t (:foreground nil :background "#98ece8" :slant italic)))))
+
+#+END_SRC
 
 ** Org Capture
 
@@ -827,17 +839,14 @@ Makes it so I can customize the appearance of checkbox text.
 #+END_SRC
 
 
-** MobileOrg
-
-MobileOrg for iOS just had a big update with an even bigger one underway. I'm still getting used to how it organizes things but I look forward to the new version.
+** Time Tracking
 
 #+BEGIN_SRC emacs-lisp
-;; Set to the location of your Org files on your local system
-(setq org-directory "~/Dropbox/Notes")
-;; Set to the name of the file where new notes will be stored
-(setq org-mobile-inbox-for-pull "~/Dropbox/Notes/flagged.org")
-;; Set to <your Dropbox root directory>/MobileOrg.
-(setq org-mobile-directory "~/Dropbox/Apps/MobileOrg")
+  (setq org-clock-persist 'history)
+  (org-clock-persistence-insinuate)
+
+  (setq org-clocktable-defaults '(:scope file :maxlevel 8 :block today))
+#+END_SRC
 
 #+END_SRC
 * Programming Stuff
