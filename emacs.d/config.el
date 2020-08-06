@@ -14,10 +14,10 @@
 (add-to-list 'load-path (expand-file-name "snippets" user-emacs-directory))
 (add-to-list 'load-path "~/.emacs.d/plugins")
 (add-to-list 'load-path "~/.emacs.d/plugins/evil-org-mode")
+(add-to-list 'load-path "~/.emacs.d/elpa/hoon-mode.el")
+(add-to-list 'load-path "~/.emacs.d/elpa/colorless-themes.el")
 (add-to-list 'load-path "/usr/local/Cellar/mu/HEAD-1f232b6/bin/mu")
 (add-to-list 'exec-path "/usr/local/bin")
-(add-to-list 'load-path "/Users/Andy/Documents/Programming_Projects/dracula-theme/emacs/")
-(add-to-list 'load-path "/Users/Andy/Documents/Programming_Projects/nord-theme/")
 
 (require 'use-package)
 
@@ -149,7 +149,24 @@ Repeated invocations toggle between the two most recently open buffers."
   `(add-hook ,mode-hook
              (lambda () (setq mode-name ,abbrev))))
 
-(defun search-my-notes (searchforthis)
+(setq andy/themes '(nofrils-acme leuven nofrilsdark dracula))
+    (setq andy/themes-index 0)
+
+    (defun andy/cycle-theme ()
+       (interactive)
+       (setq andy/themes-index (% (1+ andy/themes-index) (length andy/themes)))
+       (andy/load-indexed-theme))
+
+     (defun andy/load-indexed-theme ()
+     (andy/try-load-theme (nth andy/themes-index andy/themes)))
+
+     (defun andy/try-load-theme (theme)
+        (if (ignore-errors (load-theme theme :no-confirm))
+             (mapcar #'disable-theme (remove theme custom-enabled-themes))
+             (message "Unable to find theme file for ‘%s’" theme)))
+
+
+    (defun search-my-notes (searchforthis)
       "Search for SEARCHFORTHIS."
       (interactive "sSearch Query: ")
       (rgrep searchforthis "*.txt"  "~/Dropbox/Notes"))
@@ -244,9 +261,10 @@ If FILEXT is provided, return files with extension FILEXT instead."
 
 (require 'nofrils-acme-theme)
 (load-theme 'nofrils-acme t)
+(andy/load-indexed-theme)
 
       (set-face-attribute 'default nil
-                      :family "Operator Mono" :height 120 :weight 'normal :width 'condensed)
+                      :family "SF Mono" :height 120 :weight 'normal :width 'condensed)
 
       (mac-auto-operator-composition-mode)
 
@@ -417,6 +435,7 @@ If FILEXT is provided, return files with extension FILEXT instead."
 (global-set-key [f4] 'fci-mode)
 (global-set-key [f5] 'search-my-notes)
 (global-set-key [f6] 'display-line-numbers-mode)
+(global-set-key [f7] 'andy/cycle-theme)
 
 (use-package neotree)
 (global-set-key [f8] 'neotree-toggle)
@@ -582,6 +601,8 @@ If FILEXT is provided, return files with extension FILEXT instead."
 (setq org-clock-persist 'history)
 (org-clock-persistence-insinuate)
 
+(setq org-clocktable-defaults '(:scope file :maxlevel 8 :block today))
+
 (use-package yasnippet
   :ensure t
   :defer t
@@ -629,6 +650,37 @@ If FILEXT is provided, return files with extension FILEXT instead."
 ;; (add-hook 'emacs-lisp-mode-hook
 ;;           (lambda ()
 ;;             (rainbow-delimiters-mode)))
+
+;; set prefix for lsp-command-keymap (few alternatives - "C-l", "C-c l")
+(setq lsp-keymap-prefix "s-l")
+
+(use-package lsp-mode
+    :hook (;; replace XXX-mode with concrete major-mode(e. g. python-mode)
+            (hoon-mode . lsp)
+            ;; if you want which-key integration
+            (lsp-mode . lsp-enable-which-key-integration))
+    :commands lsp)
+
+;; optionally
+(use-package lsp-ui :commands lsp-ui-mode)
+;; if you are helm user
+(use-package helm-lsp :commands helm-lsp-workspace-symbol)
+
+;; optionally if you want to use debugger
+(use-package dap-mode)
+;; (use-package dap-LANGUAGE) to load the dap adapter for your language
+
+;; optional if you want which-key integration
+(use-package which-key
+    :config
+    (which-key-mode))
+
+(load "hoon-mode")
+  (add-hook 'hoon-mode
+           (lambda ()
+              (define-key hoon-mode-map (kbd "C-c r") 'hoon-eval-region-in-herb)
+              (define-key hoon-mode-map (kbd "C-c b") 'hoon-eval-buffer-in-herb)))
+(add-hook 'hoon-mode #'lsp)
 
 (setq python-indent-offset 2)
 (setq flycheck-python-pycompile-executable "python3")

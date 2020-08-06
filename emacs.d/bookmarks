@@ -2,7 +2,17 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("personal.org"
+(("gen"
+ (filename . "~/urbit-v0.10.8-darwin/zod/home/gen/")
+ (front-context-string . "help.hoon\n  drwx")
+ (rear-context-string . "90 Jul 27 13:35 ")
+ (position . 1330))
+("work"
+ (filename . "~/Dropbox/Notes/work.org")
+ (front-context-string . "#+TITLE:Work.org")
+ (rear-context-string)
+ (position . 1))
+("personal.org"
  (filename . "~/Dropbox/Notes/personal.org")
  (front-context-string . "* TODO Found a n")
  (rear-context-string . " ] buy ferules\n\n")

@@ -38,10 +38,10 @@ Next I want to set my load paths, it's mostly the standard folders, plus any oth
   (add-to-list 'load-path (expand-file-name "snippets" user-emacs-directory))
   (add-to-list 'load-path "~/.emacs.d/plugins")
   (add-to-list 'load-path "~/.emacs.d/plugins/evil-org-mode")
+  (add-to-list 'load-path "~/.emacs.d/elpa/hoon-mode.el")
+  (add-to-list 'load-path "~/.emacs.d/elpa/colorless-themes.el")
   (add-to-list 'load-path "/usr/local/Cellar/mu/HEAD-1f232b6/bin/mu")
   (add-to-list 'exec-path "/usr/local/bin")
-  (add-to-list 'load-path "/Users/Andy/Documents/Programming_Projects/dracula-theme/emacs/")
-  (add-to-list 'load-path "/Users/Andy/Documents/Programming_Projects/nord-theme/")
 
 #+END_SRC
 
@@ -219,98 +219,115 @@ Small utility functions, mostly collected from others.
 
 #+BEGIN_SRC emacs-lisp
 
-      (defun search-my-notes (searchforthis)
-        "Search for SEARCHFORTHIS."
-        (interactive "sSearch Query: ")
-        (rgrep searchforthis "*.txt"  "~/Dropbox/Notes"))
+        (setq andy/themes '(nofrils-acme leuven nofrils-dark dracula))
+        (setq andy/themes-index 0)
 
-      (eval-after-load "grep"
-        '(grep-compute-defaults))
+        (defun andy/cycle-theme ()
+           (interactive)
+           (setq andy/themes-index (% (1+ andy/themes-index) (length andy/themes)))
+           (andy/load-indexed-theme))
 
-      (defun minibuffer-keyboard-quit ()
-        "Abort recursive edit.
-      In Delete Selection mode, if the mark is active, just deactivate it;
-      then it takes a second \\[keyboard-quit] to abort the minibuffer."
-        (interactive)
-        (if (and delete-selection-mode transient-mark-mode mark-active)
-            (setq deactivate-mark  t)
-          (when (get-buffer "*Completions*") (delete-windows-on "*Completions*"))
-          (abort-recursive-edit)))
+         (defun andy/load-indexed-theme ()
+         (andy/try-load-theme (nth andy/themes-index andy/themes)))
 
-      (defun andy-new-empty-buffer ()
-        "Open a new empty buffer."
-        (interactive)
-        (let ((ξbuf (generate-new-buffer "untitled")))
-          (switch-to-buffer ξbuf)
-          (funcall (and initial-major-mode))
-          (setq buffer-offer-save t)))
-
-  (defun region-to-hexcol ()
-    (interactive)
-    (let
-        ((start (region-beginning))
-         (end (region-end))
-         (text))
-
-      (setq text (buffer-substring-no-properties start end))
-
-      (when (string-match "^[[:digit:]]+$" text)
-        (setq text (format "%02x" (string-to-number text)))
-        (delete-region start end)
-        (insert text))))
-
-  (defun rgb-to-hex ()
-    (interactive)
-
-    (let
-        ((start (region-beginning))
-         (end (region-end)))
-
-      (goto-char start)
-      (set-mark start)
-      (skip-chars-forward "0-9")
-      (region-to-hexcol)
-
-      (skip-chars-forward ", ")
-      (set-mark (point))
-      (skip-chars-forward "0-9")
-      (region-to-hexcol)
-
-      (skip-chars-forward ", ")
-      (set-mark (point))
-      (skip-chars-forward "0-9")
-      (region-to-hexcol)
-
-      (setq end (point))
-      (goto-char start)
-
-      (save-restriction
-        (narrow-to-region start end)
-        (while (re-search-forward "[, ]" nil t) (replace-match "" nil t)))))
+         (defun andy/try-load-theme (theme)
+            (if (ignore-errors (load-theme theme :no-confirm))
+                 (mapcar #'disable-theme (remove theme custom-enabled-themes))
+                 (message "Unable to find theme file for ‘%s’" theme)))
 
 
-  ;; recursively find .org files in provided directory
-  ;; modified from an Emacs Lisp Intro example
-  (defun sa-find-org-file-recursively (&optional directory filext)
-    "Return .org and .org_archive files recursively from DIRECTORY.
-  If FILEXT is provided, return files with extension FILEXT instead."
-    (interactive "DDirectory: ")
-    (let* (org-file-list
-           (case-fold-search t)         ; filesystems are case sensitive
-           (file-name-regex "^[^.#].*") ; exclude dot, autosave, and backupfiles
-           (filext (or filext "org$\\\|org_archive"))
-           (fileregex (format "%s\\.\\(%s$\\)" file-name-regex filext))
-           (cur-dir-list (directory-files directory t file-name-regex)))
-      ;; loop over directory listing
-      (dolist (file-or-dir cur-dir-list org-file-list) ; returns org-file-list
-        (cond
-         ((file-regular-p file-or-dir)             ; regular files
-          (if (string-match fileregex file-or-dir) ; org files
-              (add-to-list 'org-file-list file-or-dir)))
-         ((file-directory-p file-or-dir)
-          (dolist (org-file (sa-find-org-file-recursively file-or-dir filext)
-                            org-file-list) ; add files found to result
-            (add-to-list 'org-file-list org-file)))))))
+        (defun search-my-notes (searchforthis)
+          "Search for SEARCHFORTHIS."
+          (interactive "sSearch Query: ")
+          (rgrep searchforthis "*.txt"  "~/Dropbox/Notes"))
+
+        (eval-after-load "grep"
+          '(grep-compute-defaults))
+
+        (defun minibuffer-keyboard-quit ()
+          "Abort recursive edit.
+        In Delete Selection mode, if the mark is active, just deactivate it;
+        then it takes a second \\[keyboard-quit] to abort the minibuffer."
+          (interactive)
+          (if (and delete-selection-mode transient-mark-mode mark-active)
+              (setq deactivate-mark  t)
+            (when (get-buffer "*Completions*") (delete-windows-on "*Completions*"))
+            (abort-recursive-edit)))
+
+        (defun andy-new-empty-buffer ()
+          "Open a new empty buffer."
+          (interactive)
+          (let ((ξbuf (generate-new-buffer "untitled")))
+            (switch-to-buffer ξbuf)
+            (funcall (and initial-major-mode))
+            (setq buffer-offer-save t)))
+
+    (defun region-to-hexcol ()
+      (interactive)
+      (let
+          ((start (region-beginning))
+           (end (region-end))
+           (text))
+
+        (setq text (buffer-substring-no-properties start end))
+
+        (when (string-match "^[[:digit:]]+$" text)
+          (setq text (format "%02x" (string-to-number text)))
+          (delete-region start end)
+          (insert text))))
+
+    (defun rgb-to-hex ()
+      (interactive)
+
+      (let
+          ((start (region-beginning))
+           (end (region-end)))
+
+        (goto-char start)
+        (set-mark start)
+        (skip-chars-forward "0-9")
+        (region-to-hexcol)
+
+        (skip-chars-forward ", ")
+        (set-mark (point))
+        (skip-chars-forward "0-9")
+        (region-to-hexcol)
+
+        (skip-chars-forward ", ")
+        (set-mark (point))
+        (skip-chars-forward "0-9")
+        (region-to-hexcol)
+
+        (setq end (point))
+        (goto-char start)
+
+        (save-restriction
+          (narrow-to-region start end)
+          (while (re-search-forward "[, ]" nil t) (replace-match "" nil t)))))
+
+
+    ;; recursively find .org files in provided directory
+    ;; modified from an Emacs Lisp Intro example
+    (defun sa-find-org-file-recursively (&optional directory filext)
+      "Return .org and .org_archive files recursively from DIRECTORY.
+    If FILEXT is provided, return files with extension FILEXT instead."
+      (interactive "DDirectory: ")
+      (let* (org-file-list
+             (case-fold-search t)         ; filesystems are case sensitive
+             (file-name-regex "^[^.#].*") ; exclude dot, autosave, and backupfiles
+             (filext (or filext "org$\\\|org_archive"))
+             (fileregex (format "%s\\.\\(%s$\\)" file-name-regex filext))
+             (cur-dir-list (directory-files directory t file-name-regex)))
+        ;; loop over directory listing
+        (dolist (file-or-dir cur-dir-list org-file-list) ; returns org-file-list
+          (cond
+           ((file-regular-p file-or-dir)             ; regular files
+            (if (string-match fileregex file-or-dir) ; org files
+                (add-to-list 'org-file-list file-or-dir)))
+           ((file-directory-p file-or-dir)
+            (dolist (org-file (sa-find-org-file-recursively file-or-dir filext)
+                              org-file-list) ; add files found to result
+              (add-to-list 'org-file-list org-file)))))))
 #+END_SRC
 
 * Visual Stuff
@@ -322,9 +339,10 @@ I used to use =nofrils-acme= for my color theme and SF Mono as my font, but I ch
 
   (require 'nofrils-acme-theme)
   (load-theme 'nofrils-acme t)
+  (andy/load-indexed-theme)
 
         (set-face-attribute 'default nil
-                        :family "Operator Mono" :height 120 :weight 'normal :width 'condensed)
+                        :family "SF Mono" :height 120 :weight 'normal :width 'condensed)
 
         (mac-auto-operator-composition-mode)
 
@@ -566,6 +584,7 @@ I prefer the Vim keybindings and use them wherever possible in Emacs. I recently
   (global-set-key [f4] 'fci-mode)
   (global-set-key [f5] 'search-my-notes)
   (global-set-key [f6] 'display-line-numbers-mode)
+  (global-set-key [f7] 'andy/cycle-theme)
 
   (use-package neotree)
   (global-set-key [f8] 'neotree-toggle)
@@ -705,6 +724,7 @@ My todo system is fairly simple.
 - =WAITING= = waiting on something out of my control
 - =NEEDED= = someone else is waiting on this
 - =SOMEDAY= = not urgent
+- =CANCELLED= = no longer needs to be completed
 - =DONE= = completed.
 
 I've given these keywords colors from my current theme.
@@ -922,6 +942,42 @@ A few other useful packages for coding.
   ;; (add-hook 'emacs-lisp-mode-hook
   ;;           (lambda ()
   ;;             (rainbow-delimiters-mode)))
+#+END_SRC
+
+** Hoon
+
+#+BEGIN_SRC emacs-lisp
+   ;; set prefix for lsp-command-keymap (few alternatives - "C-l", "C-c l")
+  (setq lsp-keymap-prefix "s-l")
+
+  (use-package lsp-mode
+      :hook (;; replace XXX-mode with concrete major-mode(e. g. python-mode)
+              (hoon-mode . lsp)
+              ;; if you want which-key integration
+              (lsp-mode . lsp-enable-which-key-integration))
+      :commands lsp)
+
+  ;; optionally
+  (use-package lsp-ui :commands lsp-ui-mode)
+  ;; if you are helm user
+  (use-package helm-lsp :commands helm-lsp-workspace-symbol)
+
+  ;; optionally if you want to use debugger
+  (use-package dap-mode)
+  ;; (use-package dap-LANGUAGE) to load the dap adapter for your language
+
+  ;; optional if you want which-key integration
+  (use-package which-key
+      :config
+      (which-key-mode))
+
+  (load "hoon-mode")
+    (add-hook 'hoon-mode
+             (lambda ()
+                (define-key hoon-mode-map (kbd "C-c r") 'hoon-eval-region-in-herb)
+                (define-key hoon-mode-map (kbd "C-c b") 'hoon-eval-buffer-in-herb)))
+  (add-hook 'hoon-mode #'lsp)
+
 #+END_SRC
 
 ** Python
