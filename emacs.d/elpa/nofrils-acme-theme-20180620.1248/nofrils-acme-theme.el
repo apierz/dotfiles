@@ -29,8 +29,8 @@
 (deftheme nofrils-acme
   "Port of No Frils Acme by Robert Melton.")
 
-(let ((background "#FFFFD7")
-      (foreground "#000000")
+(let ((background "#f3f3d3")
+      (foreground "#424242")
       (comment "#AF8700")
       (error "#FF5555")
       (fringe "#EAFFFF")
@@ -44,7 +44,7 @@
    `(default ((t :background ,background :foreground ,foreground)))
 
    ;; Highlight only comments and errors.
-   `(error ((t :background "white" :foreground ,error)))
+   `(error ((t :background nil :foreground ,error)))
    `(font-lock-builtin-face ((t nil)))
    `(font-lock-comment-face ((t :foreground ,comment)))
    `(font-lock-constant-face ((t nil)))
@@ -73,8 +73,11 @@
    `(mode-line-inactive ((t :background ,fringe)))
 
    ;; Org mode needs to chill.
-   `(org-done ((t :weight bold)))
-   `(org-todo ((t :weight bold)))))
+   `(org-done ((t :foreground ,search :weight bold)))
+   `(org-agenda-date ((t :foreground ,fringe :weight bold)))
+   `(org-document-info ((t :foreground ,status :weight bold)))
+   `(org-agenda-structure ((t :foreground ,selection :weight bold)))
+   `(org-todo ((t :foreground ,error :weight bold)))))
 
 ;;; Footer:
 

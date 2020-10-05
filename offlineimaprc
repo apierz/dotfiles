@@ -22,5 +22,5 @@ remoteport = 993
 ssl = yes
 maxconnections = 2
 realdelete = no
-cert_fingerprint = 29fdbbaa5824282d99bb5cad29a869e1cf19df63
+cert_fingerprint = EC43DDEFC3318314B56388BB55269091C72F6C16
 

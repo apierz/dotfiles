@@ -46,15 +46,19 @@ mpd_crossfade_time = 0
 ## or 44100:16:2 for stereo visualization. Example
 ## configuration (it has to be put into mpd.conf):
 ##
- audio_output {
-        type            "fifo"
-        name            "Visualizer feed"
-        path            "/tmp/mpd.fifo"
-        format          "44100:16:2"
- }
+ # audio_output {
+ #        type            "fifo"
+ #        name            "Visualizer feed"
+ #        path            "/tmp/mpd.fifo"
+ #        format          "44100:16:2"
+ # }
+audio_output {
+  type                  "osx"
+  name                  "CoreAudio"
+  mixer_type            "software"
+}
 
-
-visualizer_fifo_path = /tmp/mpd.fifo
+# visualizer_fifo_path = /tmp/mpd.fifo
 #
 ##
 ## Note: Below parameter is needed for ncmpcpp
@@ -64,12 +68,12 @@ visualizer_fifo_path = /tmp/mpd.fifo
 ## are some problems with it.
 ##
 #
-visualizer_output_name = Visualizer feed
+# visualizer_output_name = Visualizer feed
 #
 ##
 ## If you set format to 44100:16:2, make it 'yes'.
 ##
-visualizer_in_stereo = yes
+# visualizer_in_stereo = yes
 #
 ##
 ## Multiply received samples by given value. Very
@@ -85,7 +89,7 @@ visualizer_in_stereo = yes
 ## Keep in mind that sane values start with >=10.
 ##
 #
-visualizer_sync_interval = 30
+# visualizer_sync_interval = 30
 #
 ##
 ## Note: To enable spectrum frequency visualization
@@ -94,9 +98,9 @@ visualizer_sync_interval = 30
 #
 ## Available values: spectrum, wave.
 ##
-visualizer_type = spectrum
+# visualizer_type = spectrum
 #
-visualizer_look = "∙▋"
+# visualizer_look = "∙▋"
 #
 ##### system encoding #####
 ##
@@ -525,7 +529,7 @@ current_item_suffix = "$/r$(end)"
 progressbar_color = black
 #
 #progressbar_elapsed_color = white
-progressbar_elapsed_color = blue
+progressbar_elapsed_color = black
 
 #statusbar_color = cyan
 statusbar_color = blue

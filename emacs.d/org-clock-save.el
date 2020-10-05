@@ -1,2 +1,2 @@
-;; org-clock-save.el - Compe.local at <2020-08-06 Thu 14:39>
-(setq org-clock-stored-history '(("/Users/Andy/Dropbox/Notes/work.org" . 6331) ("/Users/Andy/Dropbox/Notes/work.org" . 6328) ("/Users/Andy/Dropbox/Notes/work.org" . 167) ("/Users/Andy/Dropbox/Notes/work.org" . 6588) ("/Users/Andy/Dropbox/Notes/work.org" . 7498)))
+;; org-clock-save.el - compe.lan at <2020-10-05 Mon 07:21>
+(setq org-clock-stored-history '(("/Users/Andy/Dropbox/Notes/work.org_archive" . 14915) ("/Users/Andy/Dropbox/Notes/work.org_archive" . 11301) ("/Users/Andy/Dropbox/Notes/work.org" . 1654) ("/Users/Andy/Dropbox/Notes/work.org" . 2478) ("/Users/Andy/Dropbox/Notes/work.org" . 2168)))

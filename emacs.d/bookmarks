@@ -2,53 +2,53 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("gen"
+(("Hooniversity"
+ (filename . "~/Documents/Hooniversity")
+ (front-context-string . ".DS_Store\n  drwx")
+ (rear-context-string . "48 Aug 14 10:52 ")
+ (position . 236))
+("gen"
  (filename . "~/urbit-v0.10.8-darwin/zod/home/gen/")
  (front-context-string . "help.hoon\n  drwx")
  (rear-context-string . "90 Jul 27 13:35 ")
  (position . 1330))
 ("work"
- (filename . "~/Dropbox/Notes/work.org")
+ (filename . "/Users/Andy/Dropbox/Notes/work.org")
  (front-context-string . "#+TITLE:Work.org")
  (rear-context-string)
  (position . 1))
 ("personal.org"
- (filename . "~/Dropbox/Notes/personal.org")
+ (filename . "/Users/Andy/Dropbox/Notes/personal.org")
  (front-context-string . "* TODO Found a n")
  (rear-context-string . " ] buy ferules\n\n")
  (position . 355))
 ("household"
- (filename . "~/Dropbox/Notes/household.org")
+ (filename . "/Users/Andy/Dropbox/Notes/household.org")
  (front-context-string)
  (rear-context-string . "4-09 Thu 16:54]\n")
  (position . 4155))
 ("org-refile-last-stored"
- (filename . "~/Dropbox/Notes/household.org")
+ (filename . "/Users/Andy/Dropbox/Notes/household.org")
  (front-context-string . "** TODO Get dog ")
  (rear-context-string . "ensed for Parks\n")
  (position . 2572))
 ("peronsal"
- (filename . "~/Dropbox/Notes/household.org")
+ (filename . "/Users/Andy/Dropbox/Notes/personal.org")
  (front-context-string . "**** WAITING Ass")
  (rear-context-string . "E Research Reqs\n")
  (position . 1438))
 ("Spending.org"
- (filename . "~/Dropbox/Notes/Spending.org")
+ (filename . "/Users/Andy/Dropbox/Notes/Spending.org")
  (front-context-string . "|   | <2019-05-2")
  (rear-context-string . "              |\n")
  (position . 1106))
-("leetcode"
- (filename . "~/Dropbox/leetcode/")
- (front-context-string)
- (rear-context-string . "92 Jun  2 15:35 ")
- (position . 226))
 ("nerdbar.widget"
  (filename . "~/Documents/Programming_Projects/nerdbar.widget/")
  (front-context-string . " scripts\n  -rw-r")
  (rear-context-string . "714 Mar 20 15:25")
  (position . 1075))
 ("Notes"
- (filename . "~/Dropbox/Notes/")
+ (filename . "/Users/Andy/Dropbox/Notes/")
  (front-context-string . "* Packing list.t")
  (rear-context-string . "22 Aug 17 16:48 ")
  (position . 196))

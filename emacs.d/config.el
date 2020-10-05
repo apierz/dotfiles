@@ -15,6 +15,7 @@
 (add-to-list 'load-path "~/.emacs.d/plugins")
 (add-to-list 'load-path "~/.emacs.d/plugins/evil-org-mode")
 (add-to-list 'load-path "~/.emacs.d/elpa/hoon-mode.el")
+(add-to-list 'load-path "~/Documents/Programming_Projects/nofrils-civic-theme.el")
 (add-to-list 'load-path "~/.emacs.d/elpa/colorless-themes.el")
 (add-to-list 'load-path "/usr/local/Cellar/mu/HEAD-1f232b6/bin/mu")
 (add-to-list 'exec-path "/usr/local/bin")
@@ -45,13 +46,16 @@
 (setq-default fill-column 80)
 (setq-default tab-width 2)
 (put 'dired-find-alternate-file 'disabled nil)
+(when window-system
+ (set-frame-position (selected-frame) 0 0)
+ (set-frame-size (selected-frame) 100 100))
 
 (setq frame-title-format
   '("" invocation-name ": "(:eval (if (buffer-file-name)
                 (abbreviate-file-name (buffer-file-name))
                   "%b"))))
 
-(setq backup-directory-alist '(("." . "~/Dropbox/emacs_backups"))
+(setq backup-directory-alist '(("." . "~/Documents/emacs_backups"))
       backup-by-copying      t  ; Don't de-link hard links
       version-control        t  ; Use version numbers on backups
       delete-old-versions    t  ; Automatically delete excess backups:
@@ -149,7 +153,7 @@ Repeated invocations toggle between the two most recently open buffers."
   `(add-hook ,mode-hook
              (lambda () (setq mode-name ,abbrev))))
 
-(setq andy/themes '(nofrils-acme leuven nofrilsdark dracula))
+(setq andy/themes '(nofrils-acme nofrils-civic leuven dracula))
     (setq andy/themes-index 0)
 
     (defun andy/cycle-theme ()
@@ -169,7 +173,7 @@ Repeated invocations toggle between the two most recently open buffers."
     (defun search-my-notes (searchforthis)
       "Search for SEARCHFORTHIS."
       (interactive "sSearch Query: ")
-      (rgrep searchforthis "*.txt"  "~/Dropbox/Notes"))
+      (rgrep searchforthis "*.txt"  "/Users/Andy/Dropbox/Notes"))
 
     (eval-after-load "grep"
       '(grep-compute-defaults))
@@ -521,16 +525,18 @@ If FILEXT is provided, return files with extension FILEXT instead."
                ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
 
 (setq org-todo-keywords
-  '((sequence "TODO(t)" "WAITING(w)" "SOMEDAY(s)" "NEEDED(n)" "|" "CANCELLED(c)" "DONE(d)")))
+  '((sequence "TODO(t)" "TOREAD(r)" "WAITING(w)" "CURRENT(c)" "SOMEDAY(s)" "NEEDED(n)" "|" "CANCELLED(a)" "DONE(d)")))
 
  ;; For Plan9 Theme
  (setq org-todo-keyword-faces
-   '(("TODO"         . (:foreground "#b85c57" :weight bold))
-     ("WAITING"      . (:foreground "#8888c8" :weight bold))
-     ("DONE"         . (:foreground "#40883f" :weight bold))
-     ("CANCELLED"    . (:background "#f8e8e8" :foreground "#000000" :weight bold))
-     ("NEEDED"       . (:background "#b85c57" :weight bold))
-     ("SOMEDAY"      . (:foreground "#0287c8" :weight bold))))
+   '(("TODO"         . (:inherit org-todo :weight bold :slant normal :height 120 ))
+     ("TOREAD"       . (:inherit org-todo :weight bold :slant normal :height 120 ))
+     ("WAITING"      . (:inherit org-agenda-structure :weight bold :slant normal :height 120 ))
+     ("CURRENT"      . (:inherit org-agenda-structure :weight bold :slant normal :height 120 ))
+     ("DONE"         . (:inherit org-done :weight bold :slant normal :height 120 ))
+     ("CANCELLED"    . (:inherit org-done :weight bold :slant normal :height 120 ))
+     ("NEEDED"       . (:inherit org-todo :weight bold :slant normal :height 120 ))
+     ("SOMEDAY"      . (:inherit org-document-info :weight bold :slant normal :height 120 ))))
 
 ;; (setq org-hide-leading-stars t)
 ;; (use-package org-bullets
@@ -651,46 +657,12 @@ If FILEXT is provided, return files with extension FILEXT instead."
 ;;           (lambda ()
 ;;             (rainbow-delimiters-mode)))
 
-;; set prefix for lsp-command-keymap (few alternatives - "C-l", "C-c l")
-(setq lsp-keymap-prefix "s-l")
-
-(use-package lsp-mode
-    :hook (;; replace XXX-mode with concrete major-mode(e. g. python-mode)
-            (hoon-mode . lsp)
-            ;; if you want which-key integration
-            (lsp-mode . lsp-enable-which-key-integration))
-    :commands lsp)
-
-;; optionally
-(use-package lsp-ui :commands lsp-ui-mode)
-;; if you are helm user
-(use-package helm-lsp :commands helm-lsp-workspace-symbol)
-
-;; optionally if you want to use debugger
-(use-package dap-mode)
-;; (use-package dap-LANGUAGE) to load the dap adapter for your language
-
-;; optional if you want which-key integration
-(use-package which-key
-    :config
-    (which-key-mode))
-
 (load "hoon-mode")
-  (add-hook 'hoon-mode
-           (lambda ()
-              (define-key hoon-mode-map (kbd "C-c r") 'hoon-eval-region-in-herb)
-              (define-key hoon-mode-map (kbd "C-c b") 'hoon-eval-buffer-in-herb)))
-(add-hook 'hoon-mode #'lsp)
 
-(setq python-indent-offset 2)
-(setq flycheck-python-pycompile-executable "python3")
-(setq python-shell-interpreter "python3")
-(setq python-shell-native-complete nil)
-
-(add-hook 'python-mode-hook
- (lambda ()
-   (flycheck-mode)
-   (yas-minor-mode)))
+(add-hook 'hoon-mode
+          (lambda ()
+            (define-key hoon-mode-map (kbd "C-c r") 'hoon-eval-region-in-herb)
+            (define-key hoon-mode-map (kbd "C-c b") 'hoon-eval-buffer-in-herb)))
 
 (add-hook 'sh-mode-hook
           (lambda ()
@@ -857,8 +829,8 @@ If FILEXT is provided, return files with extension FILEXT instead."
 ;; (setq doom-modeline-irc-stylize 'identity)
 
 ;;Visual Customization
-(set-face-attribute 'doom-modeline-buffer-modified nil :foreground "#FF5555" :background "#AEEEEE")
-(set-face-attribute 'doom-modeline-evil-insert-state nil :foreground "#FF5555" :background "#AEEEEE")
+ ;; (set-face-attribute 'doom-modeline-buffer-modified nil :background nil)
+ (set-face-attribute 'doom-modeline-evil-insert-state nil :background nil)
 
 (use-package git-gutter)
 

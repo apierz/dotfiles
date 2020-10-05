@@ -27,6 +27,14 @@
 
 ;;;***
 
+;;;### (autoloads nil "nofrils-civic-theme" "nofrils-civic-theme.el"
+;;;;;;  (23739 13784 988740 574000))
+;;; Generated autoloads from nofrils-civic-theme.el
+
+(when load-file-name (add-to-list 'custom-theme-load-path (file-name-as-directory (file-name-directory load-file-name))))
+
+;;;***
+
 ;;;### (autoloads nil "nofrils-sepia-theme" "nofrils-sepia-theme.el"
 ;;;;;;  (23739 13784 988740 574000))
 ;;; Generated autoloads from nofrils-sepia-theme.el

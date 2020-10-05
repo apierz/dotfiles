@@ -1,12 +1,14 @@
 set fish_greeting ""
 
 set fish_color_autosuggestion 'green'
-set fish_color_error 'yellow'
-set fish_color_command 'green'
-set fish_color_param 'magenta'
+set fish_color_error 'red'
+set fish_color_command 'black'
+set fish_color_param 'black'
+set fish_color_comment 'yellow'
+set fish_color_end 'green'
 
 set fish_pager_color_prefix	'green' '--bold' '--underline'
-set fish_pager_color_progress	'black' '--bold' '--background=cyan'
+set fish_pager_color_progress	'black' '--bold' '--background=black'
 
 set fish_color_user 'black' '--background=yellow'
 set fish_color_user_swap 'yellow' '--background=green'
@@ -162,3 +164,4 @@ function fish_prompt --description 'Write out the prompt'
   echo -n '➤ '
   set_color normal
 end
+set -g fish_user_paths "/usr/local/opt/openssl@1.1/bin" $fish_user_paths

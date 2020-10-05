@@ -374,6 +374,8 @@ autocmd BufNewFile,BufRead *.py setlocal tabstop=4 softtabstop=4 shiftwidth=4 te
 au BufRead,BufNewFile MAINTAINERS set ft=toml
 
 " org settings
+packloadall
+silent! helptags ALL
 let g:org_todo_keywords = [['TODO', 'WAITING', 'REASSIGNED', '|', 'DONE']]
 let g:org_todo_keyword_faces = [['TODO', 'red'],['WAITING', [':foreground magenta', ':weight bold']], ['REASSIGNED', [':foreground magenta', ':weight bold']], ['DONE', 'green']]
 let g:org_indent = 1

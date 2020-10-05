@@ -41,7 +41,7 @@
    `(default ((t :background ,background :foreground ,foreground)))
 
    ;; Highlight only comments and errors.
-   `(error ((t :background ,error)))
+   `(error ((t :background nil :foreground ,error)))
    `(font-lock-builtin-face ((t nil)))
    `(font-lock-comment-face ((t :foreground ,comment)))
    `(font-lock-constant-face ((t nil)))

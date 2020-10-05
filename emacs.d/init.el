@@ -54,6 +54,5 @@
  '(git-gutter:added ((t (:foreground "#40883F"))))
  '(git-gutter:deleted ((t (:foreground "#FF5555"))))
  '(git-gutter:modified ((t (:foreground "#AF8700"))))
- '(org-date ((t (:foreground nil :background "#e8fce8"))))
- '(org-level-4 ((t (:inherit nil))))
+ '(org-date ((t (:underline t))))
  '(org-tag ((t (:foreground nil :background "#98ece8" :slant italic)))))

@@ -39,6 +39,7 @@ Next I want to set my load paths, it's mostly the standard folders, plus any oth
   (add-to-list 'load-path "~/.emacs.d/plugins")
   (add-to-list 'load-path "~/.emacs.d/plugins/evil-org-mode")
   (add-to-list 'load-path "~/.emacs.d/elpa/hoon-mode.el")
+  (add-to-list 'load-path "~/Documents/Programming_Projects/nofrils-civic-theme.el")
   (add-to-list 'load-path "~/.emacs.d/elpa/colorless-themes.el")
   (add-to-list 'load-path "/usr/local/Cellar/mu/HEAD-1f232b6/bin/mu")
   (add-to-list 'exec-path "/usr/local/bin")
@@ -82,6 +83,11 @@ These are basic Emacs settings. They include inhibiting the startup screen and m
     (setq-default fill-column 80)
     (setq-default tab-width 2)
     (put 'dired-find-alternate-file 'disabled nil)
+    (when window-system
+     (set-frame-position (selected-frame) 0 0)
+     (set-frame-size (selected-frame) 100 100))
+
+
 #+END_SRC
 
 ** Title Bar Configuration
@@ -101,7 +107,7 @@ Emacs@hostname is not very useful information for the title bar, so I have it di
 I prefer for Emacs to store automatic backups in a central location, rather than leaving them strewn about.
 
 #+BEGIN_SRC emacs-lisp
-  (setq backup-directory-alist '(("." . "~/Dropbox/emacs_backups"))
+  (setq backup-directory-alist '(("." . "~/Documents/emacs_backups"))
         backup-by-copying      t  ; Don't de-link hard links
         version-control        t  ; Use version numbers on backups
         delete-old-versions    t  ; Automatically delete excess backups:
@@ -219,115 +225,115 @@ Small utility functions, mostly collected from others.
 
 #+BEGIN_SRC emacs-lisp
 
-        (setq andy/themes '(nofrils-acme leuven nofrils-dark dracula))
-        (setq andy/themes-index 0)
+      (setq andy/themes '(nofrils-acme nofrils-civic leuven dracula))
+      (setq andy/themes-index 0)
 
-        (defun andy/cycle-theme ()
-           (interactive)
-           (setq andy/themes-index (% (1+ andy/themes-index) (length andy/themes)))
-           (andy/load-indexed-theme))
+      (defun andy/cycle-theme ()
+         (interactive)
+         (setq andy/themes-index (% (1+ andy/themes-index) (length andy/themes)))
+         (andy/load-indexed-theme))
 
-         (defun andy/load-indexed-theme ()
-         (andy/try-load-theme (nth andy/themes-index andy/themes)))
+       (defun andy/load-indexed-theme ()
+       (andy/try-load-theme (nth andy/themes-index andy/themes)))
 
-         (defun andy/try-load-theme (theme)
-            (if (ignore-errors (load-theme theme :no-confirm))
-                 (mapcar #'disable-theme (remove theme custom-enabled-themes))
-                 (message "Unable to find theme file for ‘%s’" theme)))
-
-
-        (defun search-my-notes (searchforthis)
-          "Search for SEARCHFORTHIS."
-          (interactive "sSearch Query: ")
-          (rgrep searchforthis "*.txt"  "~/Dropbox/Notes"))
-
-        (eval-after-load "grep"
-          '(grep-compute-defaults))
-
-        (defun minibuffer-keyboard-quit ()
-          "Abort recursive edit.
-        In Delete Selection mode, if the mark is active, just deactivate it;
-        then it takes a second \\[keyboard-quit] to abort the minibuffer."
-          (interactive)
-          (if (and delete-selection-mode transient-mark-mode mark-active)
-              (setq deactivate-mark  t)
-            (when (get-buffer "*Completions*") (delete-windows-on "*Completions*"))
-            (abort-recursive-edit)))
-
-        (defun andy-new-empty-buffer ()
-          "Open a new empty buffer."
-          (interactive)
-          (let ((ξbuf (generate-new-buffer "untitled")))
-            (switch-to-buffer ξbuf)
-            (funcall (and initial-major-mode))
-            (setq buffer-offer-save t)))
-
-    (defun region-to-hexcol ()
-      (interactive)
-      (let
-          ((start (region-beginning))
-           (end (region-end))
-           (text))
-
-        (setq text (buffer-substring-no-properties start end))
-
-        (when (string-match "^[[:digit:]]+$" text)
-          (setq text (format "%02x" (string-to-number text)))
-          (delete-region start end)
-          (insert text))))
-
-    (defun rgb-to-hex ()
-      (interactive)
-
-      (let
-          ((start (region-beginning))
-           (end (region-end)))
-
-        (goto-char start)
-        (set-mark start)
-        (skip-chars-forward "0-9")
-        (region-to-hexcol)
-
-        (skip-chars-forward ", ")
-        (set-mark (point))
-        (skip-chars-forward "0-9")
-        (region-to-hexcol)
-
-        (skip-chars-forward ", ")
-        (set-mark (point))
-        (skip-chars-forward "0-9")
-        (region-to-hexcol)
-
-        (setq end (point))
-        (goto-char start)
-
-        (save-restriction
-          (narrow-to-region start end)
-          (while (re-search-forward "[, ]" nil t) (replace-match "" nil t)))))
+       (defun andy/try-load-theme (theme)
+          (if (ignore-errors (load-theme theme :no-confirm))
+               (mapcar #'disable-theme (remove theme custom-enabled-themes))
+               (message "Unable to find theme file for ‘%s’" theme)))
 
 
-    ;; recursively find .org files in provided directory
-    ;; modified from an Emacs Lisp Intro example
-    (defun sa-find-org-file-recursively (&optional directory filext)
-      "Return .org and .org_archive files recursively from DIRECTORY.
-    If FILEXT is provided, return files with extension FILEXT instead."
-      (interactive "DDirectory: ")
-      (let* (org-file-list
-             (case-fold-search t)         ; filesystems are case sensitive
-             (file-name-regex "^[^.#].*") ; exclude dot, autosave, and backupfiles
-             (filext (or filext "org$\\\|org_archive"))
-             (fileregex (format "%s\\.\\(%s$\\)" file-name-regex filext))
-             (cur-dir-list (directory-files directory t file-name-regex)))
-        ;; loop over directory listing
-        (dolist (file-or-dir cur-dir-list org-file-list) ; returns org-file-list
-          (cond
-           ((file-regular-p file-or-dir)             ; regular files
-            (if (string-match fileregex file-or-dir) ; org files
-                (add-to-list 'org-file-list file-or-dir)))
-           ((file-directory-p file-or-dir)
-            (dolist (org-file (sa-find-org-file-recursively file-or-dir filext)
-                              org-file-list) ; add files found to result
-              (add-to-list 'org-file-list org-file)))))))
+      (defun search-my-notes (searchforthis)
+        "Search for SEARCHFORTHIS."
+        (interactive "sSearch Query: ")
+        (rgrep searchforthis "*.txt"  "/Users/Andy/Dropbox/Notes"))
+
+      (eval-after-load "grep"
+        '(grep-compute-defaults))
+
+      (defun minibuffer-keyboard-quit ()
+        "Abort recursive edit.
+      In Delete Selection mode, if the mark is active, just deactivate it;
+      then it takes a second \\[keyboard-quit] to abort the minibuffer."
+        (interactive)
+        (if (and delete-selection-mode transient-mark-mode mark-active)
+            (setq deactivate-mark  t)
+          (when (get-buffer "*Completions*") (delete-windows-on "*Completions*"))
+          (abort-recursive-edit)))
+
+      (defun andy-new-empty-buffer ()
+        "Open a new empty buffer."
+        (interactive)
+        (let ((ξbuf (generate-new-buffer "untitled")))
+          (switch-to-buffer ξbuf)
+          (funcall (and initial-major-mode))
+          (setq buffer-offer-save t)))
+
+  (defun region-to-hexcol ()
+    (interactive)
+    (let
+        ((start (region-beginning))
+         (end (region-end))
+         (text))
+
+      (setq text (buffer-substring-no-properties start end))
+
+      (when (string-match "^[[:digit:]]+$" text)
+        (setq text (format "%02x" (string-to-number text)))
+        (delete-region start end)
+        (insert text))))
+
+  (defun rgb-to-hex ()
+    (interactive)
+
+    (let
+        ((start (region-beginning))
+         (end (region-end)))
+
+      (goto-char start)
+      (set-mark start)
+      (skip-chars-forward "0-9")
+      (region-to-hexcol)
+
+      (skip-chars-forward ", ")
+      (set-mark (point))
+      (skip-chars-forward "0-9")
+      (region-to-hexcol)
+
+      (skip-chars-forward ", ")
+      (set-mark (point))
+      (skip-chars-forward "0-9")
+      (region-to-hexcol)
+
+      (setq end (point))
+      (goto-char start)
+
+      (save-restriction
+        (narrow-to-region start end)
+        (while (re-search-forward "[, ]" nil t) (replace-match "" nil t)))))
+
+
+  ;; recursively find .org files in provided directory
+  ;; modified from an Emacs Lisp Intro example
+  (defun sa-find-org-file-recursively (&optional directory filext)
+    "Return .org and .org_archive files recursively from DIRECTORY.
+  If FILEXT is provided, return files with extension FILEXT instead."
+    (interactive "DDirectory: ")
+    (let* (org-file-list
+           (case-fold-search t)         ; filesystems are case sensitive
+           (file-name-regex "^[^.#].*") ; exclude dot, autosave, and backupfiles
+           (filext (or filext "org$\\\|org_archive"))
+           (fileregex (format "%s\\.\\(%s$\\)" file-name-regex filext))
+           (cur-dir-list (directory-files directory t file-name-regex)))
+      ;; loop over directory listing
+      (dolist (file-or-dir cur-dir-list org-file-list) ; returns org-file-list
+        (cond
+         ((file-regular-p file-or-dir)             ; regular files
+          (if (string-match fileregex file-or-dir) ; org files
+              (add-to-list 'org-file-list file-or-dir)))
+         ((file-directory-p file-or-dir)
+          (dolist (org-file (sa-find-org-file-recursively file-or-dir filext)
+                            org-file-list) ; add files found to result
+            (add-to-list 'org-file-list org-file)))))))
 #+END_SRC
 
 * Visual Stuff
@@ -724,6 +730,7 @@ My todo system is fairly simple.
 - =WAITING= = waiting on something out of my control
 - =NEEDED= = someone else is waiting on this
 - =SOMEDAY= = not urgent
+- =CURRENT= = working on now
 - =CANCELLED= = no longer needs to be completed
 - =DONE= = completed.
 
@@ -731,16 +738,18 @@ I've given these keywords colors from my current theme.
 
 #+BEGIN_SRC emacs-lisp
   (setq org-todo-keywords
-    '((sequence "TODO(t)" "WAITING(w)" "SOMEDAY(s)" "NEEDED(n)" "|" "CANCELLED(c)" "DONE(d)")))
+    '((sequence "TODO(t)" "TOREAD(r)" "WAITING(w)" "CURRENT(c)" "SOMEDAY(s)" "NEEDED(n)" "|" "CANCELLED(a)" "DONE(d)")))
 
    ;; For Plan9 Theme
    (setq org-todo-keyword-faces
-     '(("TODO"         . (:foreground "#b85c57" :weight bold))
-       ("WAITING"      . (:foreground "#8888c8" :weight bold))
-       ("DONE"         . (:foreground "#40883f" :weight bold))
-       ("CANCELLED"    . (:background "#f8e8e8" :foreground "#000000" :weight bold))
-       ("NEEDED"       . (:background "#b85c57" :weight bold))
-       ("SOMEDAY"      . (:foreground "#0287c8" :weight bold))))
+     '(("TODO"         . (:inherit org-todo :weight bold :slant normal :height 120 ))
+       ("TOREAD"       . (:inherit org-todo :weight bold :slant normal :height 120 ))
+       ("WAITING"      . (:inherit org-agenda-structure :weight bold :slant normal :height 120 ))
+       ("CURRENT"      . (:inherit org-agenda-structure :weight bold :slant normal :height 120 ))
+       ("DONE"         . (:inherit org-done :weight bold :slant normal :height 120 ))
+       ("CANCELLED"    . (:inherit org-done :weight bold :slant normal :height 120 ))
+       ("NEEDED"       . (:inherit org-todo :weight bold :slant normal :height 120 ))
+       ("SOMEDAY"      . (:inherit org-document-info :weight bold :slant normal :height 120 ))))
 
 #+END_SRC
 
@@ -945,55 +954,14 @@ A few other useful packages for coding.
 #+END_SRC
 
 ** Hoon
-
-#+BEGIN_SRC emacs-lisp
-   ;; set prefix for lsp-command-keymap (few alternatives - "C-l", "C-c l")
-  (setq lsp-keymap-prefix "s-l")
-
-  (use-package lsp-mode
-      :hook (;; replace XXX-mode with concrete major-mode(e. g. python-mode)
-              (hoon-mode . lsp)
-              ;; if you want which-key integration
-              (lsp-mode . lsp-enable-which-key-integration))
-      :commands lsp)
-
-  ;; optionally
-  (use-package lsp-ui :commands lsp-ui-mode)
-  ;; if you are helm user
-  (use-package helm-lsp :commands helm-lsp-workspace-symbol)
-
-  ;; optionally if you want to use debugger
-  (use-package dap-mode)
-  ;; (use-package dap-LANGUAGE) to load the dap adapter for your language
-
-  ;; optional if you want which-key integration
-  (use-package which-key
-      :config
-      (which-key-mode))
-
+#+begin_src emacs-lisp
   (load "hoon-mode")
-    (add-hook 'hoon-mode
-             (lambda ()
-                (define-key hoon-mode-map (kbd "C-c r") 'hoon-eval-region-in-herb)
-                (define-key hoon-mode-map (kbd "C-c b") 'hoon-eval-buffer-in-herb)))
-  (add-hook 'hoon-mode #'lsp)
-
-#+END_SRC
-
-** Python
-
-#+BEGIN_SRC emacs-lisp
-  (setq python-indent-offset 2)
-  (setq flycheck-python-pycompile-executable "python3")
-  (setq python-shell-interpreter "python3")
-  (setq python-shell-native-complete nil)
-
-  (add-hook 'python-mode-hook
-   (lambda ()
-     (flycheck-mode)
-     (yas-minor-mode)))
-
-#+END_SRC
+ 
+  (add-hook 'hoon-mode
+            (lambda ()
+              (define-key hoon-mode-map (kbd "C-c r") 'hoon-eval-region-in-herb)
+              (define-key hoon-mode-map (kbd "C-c b") 'hoon-eval-buffer-in-herb)))
+#+end_src
 
 ** Shell and bash scripting
 
@@ -1100,7 +1068,7 @@ This is to encrypt my password so I can use it when sending email. If anyone kno
   (require 'epa-file)
   (epa-file-enable)
 #+END_SRC
-* Modeline
+
 
 #+BEGIN_SRC emacs-lisp
   (require 'doom-modeline)
@@ -1203,9 +1171,8 @@ This is to encrypt my password so I can use it when sending email. If anyone kno
   ;; (setq doom-modeline-irc-stylize 'identity)
 
   ;;Visual Customization
-  (set-face-attribute 'doom-modeline-buffer-modified nil :foreground "#FF5555" :background "#AEEEEE")
-  (set-face-attribute 'doom-modeline-evil-insert-state nil :foreground "#FF5555" :background "#AEEEEE")
-
+   ;; (set-face-attribute 'doom-modeline-buffer-modified nil :background nil)
+   (set-face-attribute 'doom-modeline-evil-insert-state nil :background nil)
 
 
 #+END_SRC

@@ -1,2 +1,0 @@
-;;; -*- no-byte-compile: t -*-
-(define-package "rainbow-delimiters" "20191018.1233" "Highlight brackets according to their depth" 'nil :commit "b4ef113712f4713ee5cd0f3a0195d21588cc6510" :keywords '("faces" "convenience" "lisp" "tools") :authors '(("Jeremy Rayman" . "opensource@jeremyrayman.com") ("Fanael Linithien" . "fanael4@gmail.com")) :maintainer '("Fanael Linithien" . "fanael4@gmail.com") :url "https://github.com/Fanael/rainbow-delimiters")

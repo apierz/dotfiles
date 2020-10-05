@@ -17,13 +17,13 @@ if !exists("g:nofrils_strbackgrounds") " {{{
 endif " }}}
 
 " Baseline {{{
-hi Normal		term=NONE	cterm=NONE	ctermfg=11	ctermbg=none	gui=NONE	guifg=#FFFFFF	guibg=#262626
+hi Normal		term=NONE	cterm=NONE	ctermfg=0	ctermbg=none	gui=NONE	guifg=#FFFFFF	guibg=#262626
 " }}}
 
 " Faded {{{
-hi ColorColumn		term=NONE	cterm=NONE	ctermfg=0	ctermbg=240	gui=NONE	guifg=#000000	guibg=#585858
+hi ColorColumn		term=NONE	cterm=NONE	ctermfg=11	ctermbg=240	gui=NONE	guifg=#000000	guibg=#585858
 hi Comment		term=NONE	cterm=NONE	ctermfg=12	ctermbg=15	gui=NONE	guifg=#585858	guibg=NONE
-hi FoldColumn		term=NONE	cterm=NONE	ctermfg=0	ctermbg=240	gui=NONE	guifg=#000000	guibg=#585858
+hi FoldColumn		term=NONE	cterm=NONE	ctermfg=12	ctermbg=240	gui=NONE	guifg=#000000	guibg=#585858
 hi Folded		term=NONE	cterm=NONE	ctermfg=240	ctermbg=NONE	gui=NONE	guifg=#585858	guibg=NONE
 hi LineNr		term=NONE	cterm=NONE	ctermfg=10	ctermbg=7	gui=NONE	guifg=#555555	guibg=#262626
 hi NonText		term=NONE	cterm=NONE	ctermfg=240	ctermbg=NONE	gui=NONE	guifg=#585858	guibg=NONE

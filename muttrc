@@ -5,12 +5,12 @@ set mbox_type   = Maildir
 set folder      = ~/.Maildir
 set spoolfile   = "+/personal/INBOX"
 set postponed   = "+/Drafts"
-set record = "+/personal/Sent\ Items"
+set record = "+/personal/Sent Items"
 set editor="vim"
 
 mailboxes +personal/INBOX
 mailboxes +personal/archive
-mailboxes ="+personal/Sent Items"
+mailboxes ="personal/Sent Items"
 
 # set up the sidebar, default visible
 # set sidebar_width=28
@@ -36,7 +36,7 @@ macro index,pager P "<change-folder>=/personal/INBOX<enter>" "Archive Message"
 macro index,pager a ":set confirmappend=no delete=yes\n<save-message>=/personal/archive\n<sync-mailbox>:set confirmappend=yes delete=ask-yes\n"
 
 
- color status     black brightmagenta
+ color status     black cyan
  color indicator  white brightgreen
  color search     white magenta
  color markers    white yellow
