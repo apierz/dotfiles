@@ -15,7 +15,6 @@
 (add-to-list 'load-path "~/.emacs.d/plugins")
 (add-to-list 'load-path "~/.emacs.d/plugins/evil-org-mode")
 (add-to-list 'load-path "~/.emacs.d/elpa/hoon-mode.el")
-(add-to-list 'load-path "~/Documents/Programming_Projects/nofrils-civic-theme.el")
 (add-to-list 'load-path "~/.emacs.d/elpa/colorless-themes.el")
 (add-to-list 'load-path "/usr/local/Cellar/mu/HEAD-1f232b6/bin/mu")
 (add-to-list 'exec-path "/usr/local/bin")
@@ -268,7 +267,7 @@ If FILEXT is provided, return files with extension FILEXT instead."
 (andy/load-indexed-theme)
 
       (set-face-attribute 'default nil
-                      :family "SF Mono" :height 120 :weight 'normal :width 'condensed)
+                      :family "Fira Code" :height 120 :weight 'regular :width 'condensed)
 
       (mac-auto-operator-composition-mode)
 

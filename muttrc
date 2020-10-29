@@ -10,19 +10,21 @@ set editor="vim"
 
 mailboxes +personal/INBOX
 mailboxes +personal/archive
+mailboxes +personal/starred
+mailboxes +personal/spam
+mailboxes +personal/trash
 mailboxes ="personal/Sent Items"
-
-# set up the sidebar, default visible
-# set sidebar_width=28
-# set sidebar_visible=yes
-
-bind index,pager \CP sidebar-prev
-bind index,pager \CN sidebar-next
-bind index,pager \CO sidebar-open
 
 bind pager j next-line
 bind pager k previous-line
 
+set sidebar_visible
+set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
+set mail_check_stats
+
+bind index,pager \CP sidebar-prev       # Ctrl-Shift-P - Previous Mailbox
+bind index,pager \CN sidebar-next       # Ctrl-Shift-N - Next Mailbox
+bind index,pager \CO sidebar-open       # Ctrl-Shift-O - Open Highlighted Mailbox
 
 macro index c "<change-folder>?<toggle-mailboxes>" "open a different folder"
 

@@ -19,6 +19,7 @@
  '(ansi-color-names-vector
    ["black" "red3" "ForestGreen" "yellow3" "blue" "magenta3" "DeepSkyBlue" "gray50"])
  '(byte-compile-delete-errors t)
+ '(custom-enabled-themes '(nofrils-acme))
  '(git-gutter:added-sign "▐")
  '(git-gutter:deleted-sign "▐")
  '(git-gutter:modified-sign "▐")
@@ -54,5 +55,6 @@
  '(git-gutter:added ((t (:foreground "#40883F"))))
  '(git-gutter:deleted ((t (:foreground "#FF5555"))))
  '(git-gutter:modified ((t (:foreground "#AF8700"))))
- '(org-date ((t (:underline t))))
+ '(org-date ((t (:foreground nil :background "#e8fce8"))))
+ '(org-level-4 ((t (:inherit nil))))
  '(org-tag ((t (:foreground nil :background "#98ece8" :slant italic)))))

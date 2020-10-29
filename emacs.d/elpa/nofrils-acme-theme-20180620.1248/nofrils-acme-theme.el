@@ -74,6 +74,7 @@
 
    ;; Org mode needs to chill.
    `(org-done ((t :foreground ,search :weight bold)))
+   `(org-level-4 ((t :inhereit default)))
    `(org-agenda-date ((t :foreground ,fringe :weight bold)))
    `(org-document-info ((t :foreground ,status :weight bold)))
    `(org-agenda-structure ((t :foreground ,selection :weight bold)))

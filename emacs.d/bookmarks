@@ -2,7 +2,22 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("Hooniversity"
+(("mkIII"
+ (filename . "~/Documents/Hooniversity/mkIII/")
+ (front-context-string)
+ (rear-context-string . "k3-lesson1.hoon\n")
+ (position . 256))
+("nofrils-acme-theme-20180620.1248"
+ (filename . "~/Documents/dotfiles/emacs.d/elpa/nofrils-acme-theme-20180620.1248/")
+ (front-context-string . "nofrils-acme-the")
+ (rear-context-string . "35 Apr 20  2019 ")
+ (position . 281))
+("react-ts-boilerplate-2018"
+ (filename . "~/Documents/Programming_Projects/react-ts-boilerplate-2018/")
+ (front-context-string . ".env\n  drwxr-xr-")
+ (rear-context-string . "39 Oct  7 17:37 ")
+ (position . 282))
+("Hooniversity"
  (filename . "~/Documents/Hooniversity")
  (front-context-string . ".DS_Store\n  drwx")
  (rear-context-string . "48 Aug 14 10:52 ")
