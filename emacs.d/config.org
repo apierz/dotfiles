@@ -338,7 +338,7 @@ Small utility functions, mostly collected from others.
 * Visual Stuff
 
 
-I used to use =nofrils-acme= for my color theme and SF Mono as my font, but I change both all the time.
+I used to use =nofrils-acme= for my color theme and Envy Code R as my font, but I change both all the time.
 
 #+BEGIN_SRC emacs-lisp
 
@@ -347,7 +347,7 @@ I used to use =nofrils-acme= for my color theme and SF Mono as my font, but I ch
   (andy/load-indexed-theme)
 
         (set-face-attribute 'default nil
-                        :family "Fira Code" :height 120 :weight 'regular :width 'condensed)
+                        :family "Envy Code R" :height 120 :weight 'regular :width 'normal)
 
         (mac-auto-operator-composition-mode)
 

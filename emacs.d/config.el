@@ -267,7 +267,7 @@ If FILEXT is provided, return files with extension FILEXT instead."
 (andy/load-indexed-theme)
 
       (set-face-attribute 'default nil
-                      :family "Fira Code" :height 120 :weight 'regular :width 'condensed)
+                      :family "Envy Code R" :height 120 :weight 'regular :width 'normal)
 
       (mac-auto-operator-composition-mode)
 
